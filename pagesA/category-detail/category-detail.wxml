@@ -1,0 +1,36 @@
+<view class="page category-detail-page">
+  <custom-nav title="" back="{{true}}" bg-color="#f6f7f6" text-color="#22262b" shadow="{{false}}" />
+
+  <!-- 分类头部 -->
+  <view wx:if="{{category}}" class="category-header" style="background: {{category.color}}0d;">
+    <view class="category-icon-wrap" style="background: {{category.color}}1f;">
+      <image class="category-glyph" src="/assets/icons/glyph-{{category.id}}.png" mode="aspectFit" />
+    </view>
+    <view class="category-text">
+      <text class="category-title">{{category.name}}</text>
+      <text class="category-desc">{{category.description}}</text>
+    </view>
+  </view>
+
+  <!-- 子分类标签 -->
+  <scroll-view scroll-x class="sub-tabs" show-scrollbar="{{false}}">
+    <view
+      wx:for="{{subCategories}}"
+      wx:key="*this"
+      class="sub-tab {{currentSub === item ? 'active' : ''}}"
+      bindtap="onSubTap"
+      data-name="{{item}}"
+    >{{item}}</view>
+  </scroll-view>
+
+  <!-- 文章列表 -->
+  <article-list
+    list="{{articles}}"
+    loading="{{loading}}"
+    has-more="{{hasMore}}"
+    layout="horizontal"
+    empty-text="该分类下暂无文章"
+    bind:loadMore="loadArticles"
+    bind:favorite="onCardFavorite"
+  />
+</view>

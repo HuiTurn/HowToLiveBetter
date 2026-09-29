@@ -1,0 +1,107 @@
+.favorite-page {
+  min-height: 100vh;
+  background: #f6f7f6;
+}
+
+.favorite-tabs {
+  display: flex;
+  gap: 48rpx;
+  padding: 0 32rpx;
+  background: #ffffff;
+  border-bottom: 1rpx solid #ececec;
+}
+
+.tab-item {
+  position: relative;
+  padding: 20rpx 0 16rpx;
+  font-size: 28rpx;
+  color: #8a8f98;
+}
+
+.tab-item.active {
+  color: #22262b;
+  font-weight: 600;
+}
+
+.tab-underline {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 48rpx;
+  height: 6rpx;
+  border-radius: 3rpx;
+  background: transparent;
+}
+
+.tab-item.active .tab-underline {
+  background: #4ba264;
+}
+
+.tab-content {
+  padding: 24rpx 32rpx 48rpx;
+}
+
+.article-row {
+  margin-bottom: 24rpx;
+}
+
+.article-row:last-child {
+  margin-bottom: 0;
+}
+
+.category-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24rpx;
+}
+
+.category-row {
+  display: flex;
+  align-items: center;
+  padding: 28rpx 24rpx;
+  background: #ffffff;
+  border-radius: 20rpx;
+  box-shadow: 0 4rpx 20rpx rgba(31, 41, 36, 0.04);
+}
+
+.category-icon {
+  width: 88rpx;
+  height: 88rpx;
+  border-radius: 24rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.category-glyph {
+  width: 48rpx;
+  height: 48rpx;
+}
+
+.row-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-left: 24rpx;
+}
+
+.row-name {
+  font-size: 30rpx;
+  font-weight: 600;
+  color: #22262b;
+}
+
+.row-count {
+  font-size: 24rpx;
+  color: #8a8f98;
+  margin-top: 6rpx;
+}
+
+.row-arrow {
+  width: 28rpx;
+  height: 28rpx;
+  opacity: 0.4;
+  flex-shrink: 0;
+}

@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "article-card": "/components/article-card/article-card",
+    "loading": "/components/loading/loading",
+    "empty-state": "/components/empty-state/empty-state"
+  }
+}

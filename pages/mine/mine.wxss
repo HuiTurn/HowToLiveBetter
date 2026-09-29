@@ -1,0 +1,111 @@
+.mine-page {
+  min-height: 100vh;
+  background: #f6f7f6;
+}
+
+.mine-content {
+  padding: 24rpx 32rpx 48rpx;
+}
+
+/* 用户卡片 */
+.user-card {
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+  border-radius: 24rpx;
+  padding: 40rpx 32rpx;
+  margin-bottom: 24rpx;
+  box-shadow: 0 4rpx 20rpx rgba(31, 41, 36, 0.04);
+}
+
+.user-avatar {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  margin-right: 24rpx;
+  flex-shrink: 0;
+  background: #eef0f0;
+}
+
+.user-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.user-name {
+  display: block;
+  font-size: 36rpx;
+  font-weight: 700;
+  color: #22262b;
+  margin-bottom: 12rpx;
+}
+
+.user-bio {
+  display: block;
+  font-size: 26rpx;
+  color: #8a8f98;
+}
+
+.user-edit {
+  width: 40rpx;
+  height: 40rpx;
+  padding: 12rpx;
+  opacity: 0.5;
+  flex-shrink: 0;
+}
+
+/* 菜单 */
+.menu-list {
+  background: #ffffff;
+  border-radius: 24rpx;
+  padding: 0 32rpx;
+  box-shadow: 0 4rpx 20rpx rgba(31, 41, 36, 0.04);
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  padding: 34rpx 0;
+  border-bottom: 1rpx solid #ececec;
+}
+
+.menu-item:last-child {
+  border-bottom: none;
+}
+
+.menu-item-contact {
+  position: relative;
+}
+
+.contact-cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+}
+
+.menu-item-last {
+  border-bottom: none;
+}
+
+.menu-icon {
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 24rpx;
+  flex-shrink: 0;
+}
+
+.menu-label {
+  flex: 1;
+  font-size: 30rpx;
+  color: #22262b;
+}
+
+.menu-arrow {
+  width: 28rpx;
+  height: 28rpx;
+  opacity: 0.4;
+  flex-shrink: 0;
+}

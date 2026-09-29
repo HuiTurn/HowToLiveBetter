@@ -1,0 +1,37 @@
+{
+  "desc": "人生指南小程序站点地图",
+  "rules": [
+    {
+      "action": "allow",
+      "page": "pages/index/index"
+    },
+    {
+      "action": "allow",
+      "page": "pages/home/home"
+    },
+    {
+      "action": "allow",
+      "page": "pages/classify/classify"
+    },
+    {
+      "action": "allow",
+      "page": "pagesA/category-detail/category-detail"
+    },
+    {
+      "action": "allow",
+      "page": "pagesA/article/article"
+    },
+    {
+      "action": "allow",
+      "page": "pages/favorite/favorite"
+    },
+    {
+      "action": "allow",
+      "page": "pages/mine/mine"
+    },
+    {
+      "action": "disallow",
+      "page": "*"
+    }
+  ]
+}

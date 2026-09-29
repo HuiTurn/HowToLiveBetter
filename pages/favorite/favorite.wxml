@@ -1,0 +1,70 @@
+<view class="page favorite-page">
+  <custom-nav title="收藏" align="left" bg-color="#f6f7f6" text-color="#22262b" shadow="{{false}}" />
+
+  <view class="favorite-content">
+    <!-- Tab -->
+    <view class="favorite-tabs">
+      <view
+        wx:for="{{tabs}}"
+        wx:key="key"
+        class="tab-item {{activeTab === item.key ? 'active' : ''}}"
+        bindtap="onTabChange"
+        data-key="{{item.key}}"
+      >
+        <text>{{item.label}}</text>
+        <view class="tab-underline"></view>
+      </view>
+    </view>
+
+    <!-- 文章列表 -->
+    <view wx:if="{{activeTab === 'article'}}" class="tab-content">
+      <view wx:if="{{articles.length > 0}}" class="article-rows">
+        <view wx:for="{{articles}}" wx:key="id" class="article-row">
+          <article-card
+            article="{{item}}"
+            show-category="{{true}}"
+            bind:favorite="onCardFavorite"
+          />
+        </view>
+      </view>
+
+      <empty-state
+        wx:if="{{articles.length === 0 && !loading}}"
+        icon="/assets/icons/star.png"
+        text="还没有收藏文章"
+        button-text="去发现"
+        bind:action="goExplore"
+      />
+    </view>
+
+    <!-- 分类列表 -->
+    <view wx:if="{{activeTab === 'category'}}" class="tab-content">
+      <view wx:if="{{categories.length > 0}}" class="category-list">
+        <view
+          wx:for="{{categories}}"
+          wx:key="id"
+          class="category-row"
+          bindtap="onCategoryTap"
+          data-id="{{item.id}}"
+        >
+          <view class="category-icon" style="background: {{item.bgColor}};">
+            <image class="category-glyph" src="/assets/icons/glyph-{{item.id}}.png" mode="aspectFit" />
+          </view>
+          <view class="row-info">
+            <text class="row-name">{{item.name}}</text>
+            <text class="row-count">{{item.articleCount}} 篇收藏</text>
+          </view>
+          <image class="row-arrow" src="/assets/icons/chevron.png" mode="aspectFit" />
+        </view>
+      </view>
+
+      <empty-state
+        wx:if="{{categories.length === 0 && !loading}}"
+        icon="/assets/icons/category.png"
+        text="还没有收藏分类"
+        button-text="去发现"
+        bind:action="goExplore"
+      />
+    </view>
+  </view>
+</view>

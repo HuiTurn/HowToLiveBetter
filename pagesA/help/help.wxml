@@ -1,0 +1,17 @@
+<view class="page help-page">
+  <custom-nav title="使用说明" back="{{true}}" bg-color="#f6f7f6" text-color="#22262b" shadow="{{false}}" />
+
+  <view class="help-content">
+    <view wx:for="{{sections}}" wx:key="title" class="help-section">
+      <view class="section-title">{{item.title}}</view>
+      <view wx:for="{{item.lines}}" wx:for-item="line" wx:key="*this" class="section-line">
+        <view class="line-dot"></view>
+        <text class="line-text">{{line}}</text>
+      </view>
+    </view>
+
+    <view class="help-tip">
+      <text>所有收藏与浏览记录仅保存在本机，不会上传服务器。</text>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,27 @@
+<view class="article-card {{layout}}" bindtap="onTap">
+  <image class="article-cover" src="{{article.cover}}" mode="aspectFill" lazy-load />
+  <view class="article-content">
+    <text
+      wx:if="{{showCategory && article.categoryName}}"
+      class="article-category"
+      style="color: {{article.categoryColor || '#4ba264'}};"
+    >{{article.categoryName}}</text>
+    <text class="article-title ellipsis">{{article.title}}</text>
+    <text class="article-summary ellipsis-2">{{article.brief || article.summary}}</text>
+    <view class="article-footer">
+      <view class="meta-left">
+        <image wx:if="{{showViews}}" class="meta-icon" src="/assets/icons/eye.png" mode="aspectFit" />
+        <text wx:if="{{showViews}}" class="meta-item">{{formattedViews}}</text>
+        <image wx:if="{{showLikes}}" class="meta-icon gap" src="/assets/icons/heart.png" mode="aspectFit" />
+        <text wx:if="{{showLikes}}" class="meta-item">{{formattedLikes}}</text>
+      </view>
+    </view>
+  </view>
+  <image
+    wx:if="{{showStar}}"
+    class="star-btn {{article.isFavorite ? 'active' : ''}}"
+    src="{{article.isFavorite ? '/assets/icons/star-orange.png' : '/assets/icons/star.png'}}"
+    mode="aspectFit"
+    catchtap="onStar"
+  />
+</view>

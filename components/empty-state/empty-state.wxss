@@ -1,0 +1,28 @@
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 80rpx 48rpx;
+}
+
+.empty-icon {
+  width: 160rpx;
+  height: 160rpx;
+  margin-bottom: 24rpx;
+  opacity: 0.4;
+}
+
+.empty-text {
+  font-size: 28rpx;
+  color: #7f8c8d;
+  margin-bottom: 32rpx;
+}
+
+.empty-btn {
+  padding: 16rpx 48rpx;
+  border-radius: 32rpx;
+  background: #4ba264;
+  color: #ffffff;
+  font-size: 28rpx;
+}

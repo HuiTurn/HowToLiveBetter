@@ -1,0 +1,92 @@
+@import "/styles/variables.wxss";
+
+page {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  font-size: var(--font-size-base);
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  box-sizing: border-box;
+  line-height: 1.6;
+}
+
+view, text, image {
+  box-sizing: border-box;
+}
+
+/* 安全区适配 */
+.safe-bottom {
+  padding-bottom: constant(safe-area-inset-bottom);
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+/* 通用页面容器 */
+.page {
+  min-height: 100vh;
+  background-color: var(--color-bg);
+}
+
+/* 通用卡片 */
+.card {
+  background: #ffffff;
+  border-radius: 24rpx;
+  box-shadow: 0 4rpx 24rpx rgba(0, 0, 0, 0.04);
+}
+
+/* Flex 工具 */
+.flex {
+  display: flex;
+}
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+/* 文本省略 */
+.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.ellipsis-2 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+.ellipsis-3 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+
+/* 按钮重置 */
+button {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: transparent;
+  font-size: inherit;
+  line-height: inherit;
+}
+button::after {
+  border: none;
+}
+
+/* 隐藏滚动条 */
+::-webkit-scrollbar {
+  display: none;
+  width: 0 !important;
+  height: 0 !important;
+  color: transparent;
+}

@@ -1,0 +1,80 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/home/home",
+    "pages/classify/classify",
+    "pages/favorite/favorite",
+    "pages/mine/mine"
+  ],
+  "subpackages": [
+    {
+      "root": "pagesA",
+      "name": "content",
+      "pages": [
+        "category-detail/category-detail",
+        "article/article",
+        "daily/daily",
+        "search/search",
+        "help/help",
+        "about/about",
+        "webview/webview"
+      ]
+    }
+  ],
+  "preloadRule": {
+    "pages/home/home": {
+      "network": "all",
+      "packages": ["content"]
+    }
+  },
+  "window": {
+    "navigationStyle": "custom",
+    "backgroundColor": "#f6f7f6",
+    "backgroundTextStyle": "dark",
+    "enablePullDownRefresh": false
+  },
+  "tabBar": {
+    "custom": false,
+    "color": "#8f9498",
+    "selectedColor": "#4ba264",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "assets/icons/home.png",
+        "selectedIconPath": "assets/icons/home-active.png"
+      },
+      {
+        "pagePath": "pages/classify/classify",
+        "text": "分类",
+        "iconPath": "assets/icons/category.png",
+        "selectedIconPath": "assets/icons/category-active.png"
+      },
+      {
+        "pagePath": "pages/favorite/favorite",
+        "text": "收藏",
+        "iconPath": "assets/icons/favorite.png",
+        "selectedIconPath": "assets/icons/favorite-active.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "assets/icons/mine.png",
+        "selectedIconPath": "assets/icons/mine-active.png"
+      }
+    ]
+  },
+  "usingComponents": {
+    "custom-nav": "/components/custom-nav/custom-nav",
+    "article-card": "/components/article-card/article-card",
+    "article-list": "/components/article-list/article-list",
+    "loading": "/components/loading/loading",
+    "empty-state": "/components/empty-state/empty-state"
+  },
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents",
+  "style": "v2",
+  "requiredBackgroundModes": []
+}

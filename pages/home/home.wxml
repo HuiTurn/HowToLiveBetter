@@ -1,0 +1,73 @@
+<view class="page home-page">
+  <custom-nav title="人生指南库" align="left" bg-color="#f6f7f6" text-color="#22262b" shadow="{{false}}" />
+
+  <view class="home-content">
+    <!-- 搜索框 -->
+    <view class="search-bar">
+      <view class="search-input-wrap">
+        <image class="search-icon" src="/assets/icons/search.png" mode="aspectFit" />
+        <input
+          class="search-input"
+          type="text"
+          placeholder="搜索你关心的生活问题..."
+          value="{{searchKeyword}}"
+          bindinput="onSearchInput"
+          bindconfirm="onSearchConfirm"
+        />
+        <image
+          wx:if="{{searchKeyword}}"
+          class="clear-btn"
+          src="/assets/icons/clear.png"
+          mode="aspectFit"
+          bindtap="onClearSearch"
+        />
+      </view>
+    </view>
+
+    <!-- 搜索结果 -->
+    <view wx:if="{{searching}}" class="search-results">
+      <view wx:if="{{searchResults.length > 0}}" class="result-list">
+        <view
+          wx:for="{{searchResults}}"
+          wx:key="id"
+          class="result-item"
+        >
+          <article-card article="{{item}}" show-category="{{false}}" bind:favorite="onCardFavorite" />
+        </view>
+      </view>
+      <view wx:else class="no-result">
+        <text>未找到相关结果，换个关键词试试</text>
+      </view>
+    </view>
+
+    <!-- 分类网格 -->
+    <view wx:if="{{!searching}}" class="category-grid">
+      <view
+        wx:for="{{categories}}"
+        wx:key="id"
+        class="category-item"
+        bindtap="onCategoryTap"
+        data-id="{{item.id}}"
+      >
+        <view class="category-icon" style="background: {{item.bgColor}};">
+          <image class="category-glyph" src="/assets/icons/glyph-{{item.id}}.png" mode="aspectFit" />
+        </view>
+        <view class="category-info">
+          <text class="category-name">{{item.name}}</text>
+          <text class="category-desc">{{item.shortDesc}}</text>
+        </view>
+      </view>
+    </view>
+
+    <!-- 语录卡片 -->
+    <view wx:if="{{!searching}}" class="quote-card" bindtap="onDailyRead">
+      <image class="quote-bg" src="/assets/images/quote-card.jpg" mode="aspectFill" />
+      <view class="quote-mask"></view>
+      <view class="quote-body">
+        <text class="quote-title">更好的生活</text>
+        <text class="quote-title">是由一个个小的选择组成的。</text>
+        <text class="quote-author-line">—— HowToLiveBetter</text>
+      </view>
+    </view>
+  </view>
+</view>

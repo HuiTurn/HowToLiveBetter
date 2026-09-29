@@ -1,0 +1,18 @@
+<view class="custom-nav {{fixed ? 'fixed' : ''}} {{shadow ? 'shadow' : ''}}" style="background: {{bgColor}};">
+  <view class="status-bar" style="height: {{statusBarHeight}}px;"></view>
+  <view class="nav-bar" style="height: {{navBarHeight}}px; color: {{textColor}};">
+    <view class="nav-left {{back || home ? '' : 'narrow'}}">
+      <view wx:if="{{back}}" class="nav-btn" bindtap="onBack">
+        <view class="back-icon" style="border-color: {{textColor}};"></view>
+      </view>
+      <view wx:if="{{home && !back}}" class="nav-btn" bindtap="onHome">
+        <view class="home-icon" style="border-color: {{textColor}}; color: {{textColor}};">⌂</view>
+      </view>
+    </view>
+    <view class="nav-title {{align === 'left' ? 'left' : ''}}" style="color: {{textColor}};">{{title}}</view>
+    <view class="nav-right" bindtap="onRightTap">
+      <slot name="right"></slot>
+    </view>
+  </view>
+</view>
+<view wx:if="{{fixed && placeholder}}" class="nav-placeholder" style="height: {{statusBarHeight + navBarHeight}}px;"></view>

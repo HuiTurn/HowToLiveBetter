@@ -1,0 +1,8 @@
+{
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "article-card": "/components/article-card/article-card",
+    "empty-state": "/components/empty-state/empty-state",
+    "loading": "/components/loading/loading"
+  }
+}

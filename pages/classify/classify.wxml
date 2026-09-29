@@ -1,0 +1,26 @@
+<view class="page classify-page">
+  <custom-nav title="分类" align="left" bg-color="#f6f7f6" text-color="#22262b" shadow="{{false}}" />
+
+  <!-- 分类标签 -->
+  <scroll-view scroll-x class="sub-tabs" show-scrollbar="{{false}}">
+    <view
+      wx:for="{{tabs}}"
+      wx:key="id"
+      class="sub-tab {{current === item.id ? 'active' : ''}}"
+      bindtap="onTabTap"
+      data-id="{{item.id}}"
+    >{{item.name}}</view>
+  </scroll-view>
+
+  <!-- 文章列表 -->
+  <view class="classify-list">
+    <view wx:if="{{articles.length > 0}}" wx:for="{{articles}}" wx:key="id" class="list-item">
+      <article-card article="{{item}}" show-category="{{false}}" bind:favorite="onCardFavorite" />
+    </view>
+    <empty-state
+      wx:if="{{articles.length === 0}}"
+      icon="/assets/icons/category.png"
+      text="该分类下暂无文章"
+    />
+  </view>
+</view>

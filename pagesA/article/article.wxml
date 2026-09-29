@@ -1,0 +1,85 @@
+<view class="page article-page">
+  <custom-nav title="" back="{{true}}" bg-color="#ffffff" text-color="#22262b" shadow="{{false}}" />
+
+  <view wx:if="{{article}}" class="article-content">
+    <!-- 封面图 -->
+    <image class="article-cover" src="{{article.cover}}" mode="aspectFill" />
+
+    <!-- 标题区 -->
+    <view class="article-header">
+      <text class="article-title">{{article.title}}</text>
+      <view class="article-meta">
+        <view class="meta-left">
+          <image class="meta-icon" src="/assets/icons/eye.png" mode="aspectFit" />
+          <text class="meta-item">{{formattedViews}}</text>
+          <image class="meta-icon gap" src="/assets/icons/star.png" mode="aspectFit" />
+          <text class="meta-item">{{formattedLikes}}</text>
+        </view>
+        <text class="article-date">{{article.date}}</text>
+      </view>
+    </view>
+
+    <!-- 摘要 -->
+    <view class="article-summary-box">
+      <text>{{article.summary}}</text>
+    </view>
+
+    <!-- 正文 -->
+    <view class="article-body">
+      <block wx:if="{{article.content.length > 0}}">
+        <view class="section-title">为什么要这样做？</view>
+        <view wx:for="{{article.content}}" wx:key="index" class="article-paragraph">
+          {{item}}
+        </view>
+      </block>
+
+      <!-- 步骤列表 -->
+      <view wx:if="{{article.steps && article.steps.length > 0}}" class="steps-section">
+        <view class="section-title">具体方法</view>
+        <view wx:for="{{article.steps}}" wx:key="index" class="step-item">
+          <view class="step-index">
+            <text>{{item.index}}</text>
+          </view>
+          <view class="step-content">
+            <text class="step-title">{{item.title}}</text>
+            <text class="step-desc">{{item.desc}}</text>
+          </view>
+        </view>
+      </view>
+
+      <!-- 来源 -->
+      <view wx:if="{{article.source}}" class="source-section">
+        <text class="source-label">来源 / 参考</text>
+        <text class="source-text">{{article.source}}</text>
+      </view>
+    </view>
+
+    <!-- 相关推荐 -->
+    <view wx:if="{{relatedArticles.length > 0}}" class="related-section">
+      <view class="section-title">相关推荐</view>
+      <view wx:for="{{relatedArticles}}" wx:key="id" class="related-item">
+        <article-card article="{{item}}" show-category="{{false}}" bind:favorite="onCardFavorite" />
+      </view>
+    </view>
+  </view>
+
+  <!-- 底部操作栏 -->
+  <view wx:if="{{article}}" class="article-footer safe-bottom">
+    <view class="footer-item">
+      <image class="footer-icon" src="/assets/icons/heart.png" mode="aspectFit" />
+      <text class="footer-text">{{formattedLikes}}</text>
+    </view>
+    <view class="footer-item" bindtap="onFavorite">
+      <image
+        class="footer-icon"
+        src="{{isFavorite ? '/assets/icons/star-orange.png' : '/assets/icons/star.png'}}"
+        mode="aspectFit"
+      />
+      <text class="footer-text {{isFavorite ? 'active' : ''}}">{{isFavorite ? '已收藏' : '收藏'}}</text>
+    </view>
+    <button class="footer-action" open-type="share">
+      <image class="action-icon" src="/assets/icons/share-white.png" mode="aspectFit" />
+      <text>分享</text>
+    </button>
+  </view>
+</view>

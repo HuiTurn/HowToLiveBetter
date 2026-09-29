@@ -1,0 +1,57 @@
+.help-page {
+  min-height: 100vh;
+  background: #f6f7f6;
+}
+
+.help-content {
+  padding: 24rpx 32rpx 64rpx;
+}
+
+.help-section {
+  background: #ffffff;
+  border-radius: 24rpx;
+  padding: 32rpx;
+  margin-bottom: 24rpx;
+  box-shadow: 0 4rpx 20rpx rgba(31, 41, 36, 0.04);
+}
+
+.section-title {
+  font-size: 30rpx;
+  font-weight: 600;
+  color: #22262b;
+  margin-bottom: 20rpx;
+}
+
+.section-line {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 14rpx;
+}
+
+.section-line:last-child {
+  margin-bottom: 0;
+}
+
+.line-dot {
+  width: 10rpx;
+  height: 10rpx;
+  border-radius: 50%;
+  background: #4ba264;
+  margin: 14rpx 16rpx 0 0;
+  flex-shrink: 0;
+}
+
+.line-text {
+  flex: 1;
+  font-size: 26rpx;
+  color: #4a4f56;
+  line-height: 1.7;
+}
+
+.help-tip {
+  margin-top: 8rpx;
+  padding: 0 8rpx;
+  font-size: 24rpx;
+  color: #8a8f98;
+  line-height: 1.7;
+}

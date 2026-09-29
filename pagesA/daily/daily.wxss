@@ -1,0 +1,120 @@
+.daily-page {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: #2b3a4a;
+  overflow: hidden;
+}
+
+.daily-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+}
+
+.daily-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+  background: linear-gradient(180deg, rgba(20, 28, 38, 0.25) 0%, rgba(20, 28, 38, 0) 30%, rgba(20, 28, 38, 0.35) 100%);
+}
+
+.daily-content {
+  position: relative;
+  z-index: 2;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 0 64rpx;
+  padding-bottom: calc(220rpx + constant(safe-area-inset-bottom));
+  padding-bottom: calc(220rpx + env(safe-area-inset-bottom));
+  box-sizing: border-box;
+}
+
+.daily-date {
+  display: flex;
+  flex-direction: column;
+  padding-top: 16rpx;
+}
+
+.date-day {
+  font-family: Georgia, 'Songti SC', serif;
+  font-size: 96rpx;
+  font-weight: 200;
+  color: #ffffff;
+  letter-spacing: 4rpx;
+}
+
+.date-weekday {
+  margin-top: 12rpx;
+  font-size: 26rpx;
+  color: rgba(255, 255, 255, 0.75);
+  letter-spacing: 2rpx;
+}
+
+.daily-quote {
+  margin: auto 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.quote-text {
+  font-size: 40rpx;
+  line-height: 1.7;
+  color: #ffffff;
+  font-weight: 500;
+  letter-spacing: 1rpx;
+}
+
+.quote-author {
+  margin-top: 32rpx;
+  font-size: 26rpx;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.daily-footer {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 3;
+  display: flex;
+  padding: 24rpx 48rpx 40rpx;
+  padding-bottom: calc(40rpx + constant(safe-area-inset-bottom));
+  padding-bottom: calc(40rpx + env(safe-area-inset-bottom));
+}
+
+.footer-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10rpx;
+  flex: 1;
+  width: auto;
+  padding: 0;
+  margin: 0;
+  background: transparent;
+  border: none;
+  line-height: 1;
+}
+
+.footer-btn::after {
+  border: none;
+}
+
+.btn-icon {
+  width: 44rpx;
+  height: 44rpx;
+}
+
+.btn-text {
+  font-size: 24rpx;
+  color: rgba(255, 255, 255, 0.85);
+}

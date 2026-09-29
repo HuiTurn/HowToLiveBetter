@@ -1,0 +1,48 @@
+page {
+  /* 品牌色 */
+  --color-primary: #4ba264;
+  --color-primary-light: #e9f4ec;
+  --color-primary-dark: #3d8b52;
+
+  /* 辅助色 */
+  --color-blue: #2b8ce0;
+  --color-orange: #fa8700;
+  --color-red: #d0353c;
+  --color-yellow: #e6a23c;
+  --color-purple: #9b6ce8;
+  --color-teal: #1f5fd6;
+  --color-pink: #d0353c;
+
+  /* 中性色 */
+  --color-text: #22262b;
+  --color-text-secondary: #8a8f98;
+  --color-text-tertiary: #b6bac0;
+  --color-bg: #f6f7f6;
+  --color-bg-dark: #e9ecef;
+  --color-white: #ffffff;
+  --color-border: #ececec;
+
+  /* 字号 */
+  --font-size-xs: 22rpx;
+  --font-size-sm: 24rpx;
+  --font-size-base: 28rpx;
+  --font-size-md: 30rpx;
+  --font-size-lg: 32rpx;
+  --font-size-xl: 36rpx;
+  --font-size-xxl: 48rpx;
+  --font-size-display: 72rpx;
+
+  /* 间距 */
+  --spacing-xs: 8rpx;
+  --spacing-sm: 16rpx;
+  --spacing-base: 24rpx;
+  --spacing-md: 32rpx;
+  --spacing-lg: 48rpx;
+
+  /* 圆角 */
+  --radius-sm: 8rpx;
+  --radius-base: 16rpx;
+  --radius-lg: 24rpx;
+  --radius-xl: 32rpx;
+  --radius-round: 999px;
+}

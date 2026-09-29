@@ -1,0 +1,20 @@
+<view class="article-list">
+  <view wx:if="{{list.length > 0}}" class="list-content">
+    <view wx:for="{{list}}" wx:key="id" class="list-item">
+      <article-card article="{{item}}" layout="{{layout}}" show-star="{{showStar}}" bind:favorite="onFavorite" />
+    </view>
+  </view>
+
+  <empty-state
+    wx:if="{{list.length === 0 && !loading}}"
+    icon="{{emptyIcon}}"
+    text="{{emptyText}}"
+    button-text="{{emptyButton}}"
+    bind:action="onEmptyAction"
+  />
+
+  <view wx:if="{{list.length > 0}}" class="load-more">
+    <loading wx:if="{{loading}}" />
+    <text wx:elif="{{!hasMore}}" class="no-more">没有更多了</text>
+  </view>
+</view>

@@ -1,0 +1,169 @@
+.home-page {
+  min-height: 100vh;
+  background: #f6f7f6;
+}
+
+.home-content {
+  padding: 16rpx 32rpx 48rpx;
+}
+
+/* 搜索框 */
+.search-bar {
+  margin-bottom: 32rpx;
+}
+
+.search-input-wrap {
+  display: flex;
+  align-items: center;
+  background: #eef0f0;
+  border-radius: 999rpx;
+  padding: 20rpx 32rpx;
+}
+
+.search-icon {
+  width: 32rpx;
+  height: 32rpx;
+  margin-right: 16rpx;
+  flex-shrink: 0;
+}
+
+.search-input {
+  flex: 1;
+  font-size: 28rpx;
+  color: #22262b;
+}
+
+.search-input::placeholder {
+  color: #b6bac0;
+}
+
+.clear-btn {
+  width: 32rpx;
+  height: 32rpx;
+  flex-shrink: 0;
+}
+
+/* 搜索结果 */
+.search-results {
+  min-height: 600rpx;
+}
+
+.result-item {
+  margin-bottom: 24rpx;
+}
+
+.no-result {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 120rpx 48rpx;
+  color: #8a8f98;
+  font-size: 28rpx;
+}
+
+/* 分类网格 */
+.category-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 40rpx;
+}
+
+.category-item {
+  width: 48.6%;
+  display: flex;
+  align-items: center;
+  padding: 28rpx 24rpx;
+  border-radius: 24rpx;
+  background: #ffffff;
+  box-shadow: 0 4rpx 20rpx rgba(31, 41, 36, 0.04);
+  margin-bottom: 24rpx;
+}
+
+.category-icon {
+  width: 88rpx;
+  height: 88rpx;
+  border-radius: 24rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20rpx;
+  flex-shrink: 0;
+}
+
+.category-glyph {
+  width: 46rpx;
+  height: 46rpx;
+}
+
+.category-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.category-name {
+  display: block;
+  font-size: 30rpx;
+  font-weight: 600;
+  color: #22262b;
+  margin-bottom: 8rpx;
+}
+
+.category-desc {
+  display: block;
+  font-size: 22rpx;
+  color: #9aa0a6;
+  line-height: 1.4;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* 语录卡片 */
+.quote-card {
+  position: relative;
+  width: 100%;
+  height: 480rpx;
+  border-radius: 24rpx;
+  overflow: hidden;
+}
+
+.quote-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.quote-mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 62%;
+  background: linear-gradient(180deg, rgba(250, 249, 246, 0.92) 0%, rgba(250, 249, 246, 0.55) 55%, rgba(250, 249, 246, 0) 100%);
+}
+
+.quote-body {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  padding: 48rpx 44rpx;
+}
+
+.quote-title {
+  font-size: 40rpx;
+  color: #4a524e;
+  line-height: 1.55;
+  font-weight: 500;
+  letter-spacing: 2rpx;
+}
+
+.quote-author-line {
+  font-size: 26rpx;
+  color: #7b8480;
+  margin-top: 28rpx;
+  letter-spacing: 1rpx;
+}

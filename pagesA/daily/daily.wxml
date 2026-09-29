@@ -1,0 +1,29 @@
+<view class="page daily-page">
+  <image class="daily-bg" src="/assets/images/daily.jpg" mode="aspectFill" />
+  <view class="daily-overlay"></view>
+
+  <custom-nav title="每日一读" back="{{true}}" bg-color="transparent" text-color="#ffffff" shadow="{{false}}" />
+
+  <view class="daily-content">
+    <view class="daily-date">
+      <text class="date-day">{{dateStr}}</text>
+      <text class="date-weekday">{{weekday}} · {{year}}</text>
+    </view>
+
+    <view class="daily-quote">
+      <text class="quote-text">{{quote.text}}</text>
+      <text class="quote-author">—— {{quote.author}}</text>
+    </view>
+  </view>
+
+  <view class="daily-footer safe-bottom">
+    <view class="footer-btn" bindtap="onChangeQuote">
+      <image class="btn-icon" src="/assets/icons/refresh-white.png" mode="aspectFit" />
+      <text class="btn-text">换一句</text>
+    </view>
+    <button class="footer-btn share" open-type="share">
+      <image class="btn-icon" src="/assets/icons/share-white.png" mode="aspectFit" />
+      <text class="btn-text">分享</text>
+    </button>
+  </view>
+</view>

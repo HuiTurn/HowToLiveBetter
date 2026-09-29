@@ -1,0 +1,99 @@
+<view class="page search-page">
+  <view class="search-header" style="padding-top: {{statusBarHeight + 8}}px;">
+    <view class="search-bar">
+      <view class="search-input-wrap">
+        <image class="search-icon" src="/assets/icons/search.png" mode="aspectFit" />
+        <input
+          class="search-input"
+          type="text"
+          placeholder="搜索你关心的生活问题"
+          placeholder-class="input-placeholder"
+          confirm-type="search"
+          value="{{keyword}}"
+          bindinput="onSearchInput"
+          bindconfirm="onSearchConfirm"
+          focus="{{true}}"
+        />
+        <image wx:if="{{keyword}}" class="clear-icon" src="/assets/icons/clear.png" mode="aspectFit" bindtap="onClear" />
+      </view>
+      <text class="search-cancel" bindtap="onCancel">取消</text>
+    </view>
+  </view>
+  <view class="header-placeholder" style="height: {{statusBarHeight + 8}}px;"></view>
+
+  <view class="search-content">
+    <!-- 结果类型切换 -->
+    <view wx:if="{{hasResult}}" class="result-tabs">
+      <view
+        wx:for="{{tabs}}"
+        wx:key="*this"
+        class="tab-item {{activeTab === item ? 'active' : ''}}"
+        bindtap="onTabTap"
+        data-tab="{{item}}"
+      >
+        <text>{{item}}</text>
+        <view class="tab-underline"></view>
+      </view>
+    </view>
+
+    <!-- 热门搜索 / 最近浏览 -->
+    <block wx:if="{{!hasResult && !loading}}">
+      <view class="search-section">
+        <view class="section-title">热门搜索</view>
+        <view class="tag-list">
+          <view
+            wx:for="{{hotKeywords}}"
+            wx:key="*this"
+            class="tag-item"
+            bindtap="onTagTap"
+            data-text="{{item}}"
+          >{{item}}</view>
+        </view>
+      </view>
+
+      <view wx:if="{{historyArticles.length > 0}}" class="search-section">
+        <view class="section-title">最近浏览</view>
+        <view class="history-list">
+          <view wx:for="{{historyArticles}}" wx:key="id" class="history-item" bindtap="onArticleTap" data-id="{{item.id}}">
+            <image class="history-cover" src="{{item.cover}}" mode="aspectFill" />
+            <text class="history-title">{{item.title}}</text>
+          </view>
+        </view>
+      </view>
+    </block>
+
+    <!-- 搜索结果 -->
+    <block wx:if="{{hasResult && !loading}}">
+      <view wx:if="{{activeTab !== '分类'}}" class="result-section">
+        <view wx:for="{{articles}}" wx:key="id" class="result-item">
+          <article-card article="{{item}}" show-category="{{true}}" bind:favorite="onCardFavorite" />
+        </view>
+      </view>
+
+      <view wx:if="{{activeTab !== '文章'}}" class="result-section">
+        <view wx:for="{{categories}}" wx:key="id" class="category-result" bindtap="onCategoryTap" data-id="{{item.id}}">
+          <view class="category-icon" style="background: {{item.bgColor}};">
+            <image class="category-glyph" src="/assets/icons/glyph-{{item.id}}.png" mode="aspectFit" />
+          </view>
+          <view class="category-info">
+            <text class="category-name">{{item.name}}</text>
+            <text class="category-desc">{{item.description}}</text>
+          </view>
+          <image class="category-arrow" src="/assets/icons/chevron.png" mode="aspectFit" />
+        </view>
+      </view>
+
+      <empty-state
+        wx:if="{{articles.length === 0 && categories.length === 0}}"
+        icon="/assets/icons/search.png"
+        text="未找到相关结果"
+        button-text="换个关键词"
+        bind:action="onClear"
+      />
+    </block>
+
+    <view wx:if="{{loading}}" class="loading-wrap">
+      <loading />
+    </view>
+  </view>
+</view>

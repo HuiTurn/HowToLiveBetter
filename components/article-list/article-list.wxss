@@ -1,0 +1,27 @@
+.article-list {
+  width: 100%;
+}
+
+.list-content {
+  padding: 0 32rpx;
+}
+
+.list-item {
+  margin-bottom: 24rpx;
+}
+
+.list-item:last-child {
+  margin-bottom: 0;
+}
+
+.load-more {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32rpx 0;
+}
+
+.no-more {
+  font-size: 24rpx;
+  color: #b2bec3;
+}

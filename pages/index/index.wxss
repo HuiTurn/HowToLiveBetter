@@ -1,0 +1,132 @@
+.index-page {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #f3e9d8;
+}
+
+.bg-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.bg-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 62%,
+    rgba(31, 41, 36, 0.28) 100%
+  );
+}
+
+.index-content {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  padding: 176rpx 64rpx calc(60rpx + env(safe-area-inset-bottom));
+  opacity: 0;
+  transform: translateY(40rpx);
+  transition: all 0.8s ease;
+}
+
+.index-content.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.index-header {
+  text-align: center;
+}
+
+.index-title {
+  display: block;
+  font-size: 68rpx;
+  font-weight: 700;
+  color: #1a3547;
+  letter-spacing: 10rpx;
+  margin-bottom: 28rpx;
+}
+
+.index-subtitle {
+  display: block;
+  font-size: 28rpx;
+  color: #6d7268;
+  letter-spacing: 3rpx;
+}
+
+.index-spacer {
+  flex: 1;
+}
+
+.index-script {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 96rpx;
+  transform: rotate(-4deg);
+}
+
+.script-text {
+  font-family: 'Kaiti SC', 'STKaiti', 'KaiTi', 'FZKai-Z03S', serif;
+  font-size: 56rpx;
+  color: #ffffff;
+  letter-spacing: 10rpx;
+  text-shadow: 0 2rpx 12rpx rgba(0, 0, 0, 0.25);
+}
+
+.script-line {
+  width: 340rpx;
+  height: 6rpx;
+  border-radius: 3rpx;
+  background: #ffffff;
+  margin-top: 20rpx;
+  box-shadow: 0 2rpx 8rpx rgba(0, 0, 0, 0.2);
+}
+
+.index-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.explore-btn {
+  width: 76%;
+  height: 100rpx;
+  border-radius: 50rpx;
+  background: #4ba264;
+  color: #ffffff;
+  font-size: 32rpx;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10rpx 30rpx rgba(45, 90, 60, 0.35);
+}
+
+.explore-btn .arrow {
+  margin-left: 14rpx;
+  font-size: 32rpx;
+}
+
+.index-footer {
+  margin-top: 44rpx;
+}
+
+.footer-text {
+  font-size: 24rpx;
+  color: rgba(255, 255, 255, 0.92);
+  letter-spacing: 1rpx;
+}

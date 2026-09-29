@@ -1,0 +1,86 @@
+.about-page {
+  min-height: 100vh;
+  background: #f6f7f6;
+}
+
+.about-content {
+  padding: 48rpx 32rpx 64rpx;
+}
+
+.about-hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40rpx;
+}
+
+.about-logo {
+  width: 144rpx;
+  height: 144rpx;
+  border-radius: 36rpx;
+  box-shadow: 0 8rpx 28rpx rgba(31, 41, 36, 0.12);
+}
+
+.about-name {
+  margin-top: 24rpx;
+  font-size: 38rpx;
+  font-weight: 700;
+  color: #22262b;
+  letter-spacing: 2rpx;
+}
+
+.about-version {
+  margin-top: 8rpx;
+  font-size: 24rpx;
+  color: #8a8f98;
+}
+
+.about-card {
+  background: #ffffff;
+  border-radius: 24rpx;
+  padding: 32rpx;
+  margin-bottom: 24rpx;
+  box-shadow: 0 4rpx 20rpx rgba(31, 41, 36, 0.04);
+}
+
+.about-intro {
+  display: block;
+  font-size: 27rpx;
+  color: #4a4f56;
+  line-height: 1.8;
+  margin-bottom: 20rpx;
+}
+
+.about-intro:last-child {
+  margin-bottom: 0;
+}
+
+.row {
+  display: flex;
+  align-items: flex-start;
+  padding: 22rpx 0;
+  border-bottom: 1rpx solid #ececec;
+}
+
+.row.last {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.row:first-child {
+  padding-top: 0;
+}
+
+.row-label {
+  width: 140rpx;
+  font-size: 26rpx;
+  color: #8a8f98;
+  flex-shrink: 0;
+}
+
+.row-value {
+  flex: 1;
+  font-size: 26rpx;
+  color: #22262b;
+  line-height: 1.6;
+}

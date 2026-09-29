@@ -1,0 +1,28 @@
+<view class="page index-page">
+  <image class="bg-image" src="/assets/images/splash.jpg" mode="aspectFill" />
+  <view class="bg-overlay"></view>
+
+  <view class="index-content {{showContent ? 'show' : ''}}">
+    <view class="index-header">
+      <text class="index-title">人生指南</text>
+      <text class="index-subtitle">更好的生活，从每一个选择开始</text>
+    </view>
+
+    <view class="index-spacer"></view>
+
+    <view class="index-script">
+      <text class="script-text">探索更好的自己</text>
+      <view class="script-line"></view>
+    </view>
+
+    <view class="index-actions">
+      <button class="explore-btn" bindtap="onExplore">
+        <text>开始探索</text>
+        <text class="arrow">→</text>
+      </button>
+      <view class="index-footer" bindtap="onOpenSource">
+        <text class="footer-text">基于 HowToLiveBetter 开源项目</text>
+      </view>
+    </view>
+  </view>
+</view>

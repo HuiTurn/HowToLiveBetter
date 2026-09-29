@@ -1,0 +1,35 @@
+<view class="page about-page">
+  <custom-nav title="关于我们" back="{{true}}" bg-color="#f6f7f6" text-color="#22262b" shadow="{{false}}" />
+
+  <view class="about-content">
+    <view class="about-hero">
+      <image class="about-logo" src="/assets/images/splash.jpg" mode="aspectFill" />
+      <text class="about-name">人生指南库</text>
+      <text class="about-version">v{{version}}</text>
+    </view>
+
+    <view class="about-card">
+      <text class="about-intro">
+        人生指南库是一款循证生活指南小程序，围绕生活习惯、学习成长、高效工作、人际关系、心理健康、财务理财、时间管理与生活方式八大主题，把可靠的生活建议整理成可以随时查阅的小卡片。
+      </text>
+      <text class="about-intro">
+        我们希望帮你把「更好的生活」拆成一个个可以执行的小选择，在需要的时候快速找到答案。
+      </text>
+    </view>
+
+    <view class="about-card">
+      <view class="row" bindtap="onOpenSource">
+        <text class="row-label">数据来源</text>
+        <text class="row-value">HowToLiveBetter 开源项目（点击复制链接）</text>
+      </view>
+      <view class="row">
+        <text class="row-label">隐私说明</text>
+        <text class="row-value">收藏与浏览记录仅存于本机</text>
+      </view>
+      <view class="row last">
+        <text class="row-label">内容声明</text>
+        <text class="row-value">内容仅供生活参考，不构成医疗或投资建议</text>
+      </view>
+    </view>
+  </view>
+</view>

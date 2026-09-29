@@ -1,0 +1,77 @@
+.category-detail-page {
+  min-height: 100vh;
+  background: #f6f7f6;
+}
+
+.category-header {
+  display: flex;
+  align-items: center;
+  padding: 24rpx 32rpx 32rpx;
+}
+
+.category-icon-wrap {
+  width: 104rpx;
+  height: 104rpx;
+  border-radius: 52rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 28rpx;
+  flex-shrink: 0;
+}
+
+.category-glyph {
+  width: 52rpx;
+  height: 52rpx;
+}
+
+.category-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.category-title {
+  display: block;
+  font-size: 42rpx;
+  font-weight: 700;
+  color: #22262b;
+  margin-bottom: 10rpx;
+}
+
+.category-desc {
+  display: block;
+  font-size: 26rpx;
+  color: #8a8f98;
+}
+
+/* 子分类标签 */
+.sub-tabs {
+  white-space: nowrap;
+  padding: 8rpx 32rpx 28rpx;
+}
+
+.sub-tab {
+  position: relative;
+  display: inline-block;
+  margin-right: 48rpx;
+  padding: 8rpx 0 16rpx;
+  font-size: 30rpx;
+  color: #8a8f98;
+}
+
+.sub-tab.active {
+  color: #4ba264;
+  font-weight: 600;
+}
+
+.sub-tab.active::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  width: 48rpx;
+  height: 6rpx;
+  border-radius: 3rpx;
+  background: #4ba264;
+}

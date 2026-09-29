@@ -1,0 +1,45 @@
+.classify-page {
+  min-height: 100vh;
+  background: #f6f7f6;
+}
+
+/* 分类标签 */
+.sub-tabs {
+  white-space: nowrap;
+  padding: 8rpx 32rpx 24rpx;
+}
+
+.sub-tab {
+  position: relative;
+  display: inline-block;
+  margin-right: 48rpx;
+  padding: 8rpx 0 16rpx;
+  font-size: 30rpx;
+  color: #8a8f98;
+}
+
+.sub-tab.active {
+  color: #4ba264;
+  font-weight: 600;
+}
+
+.sub-tab.active::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  width: 48rpx;
+  height: 6rpx;
+  border-radius: 3rpx;
+  background: #4ba264;
+}
+
+/* 列表 */
+.classify-list {
+  padding: 0 32rpx 48rpx;
+}
+
+.list-item {
+  margin-bottom: 24rpx;
+}
