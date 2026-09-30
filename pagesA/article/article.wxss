@@ -108,46 +108,196 @@
 }
 
 .step-item {
+  margin-bottom: 40rpx;
+  padding-bottom: 36rpx;
+  border-bottom: 2rpx solid #f2f4f2;
+}
+
+.step-item:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+/* 标题行：序号 + 标题 + 证据等级 */
+.step-head {
   display: flex;
-  margin-bottom: 36rpx;
+  align-items: flex-start;
 }
 
 .step-index {
-  width: 56rpx;
-  height: 56rpx;
+  width: 44rpx;
+  height: 44rpx;
   border-radius: 50%;
   background: #4ba264;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-right: 24rpx;
+  margin-right: 18rpx;
+  margin-top: 6rpx;
   flex-shrink: 0;
 }
 
 .step-index text {
   color: #ffffff;
-  font-size: 28rpx;
+  font-size: 24rpx;
   font-weight: 600;
-}
-
-.step-content {
-  flex: 1;
-  min-width: 0;
 }
 
 .step-title {
-  display: block;
+  flex: 1;
+  min-width: 0;
   font-size: 30rpx;
   font-weight: 600;
   color: #22262b;
-  margin-bottom: 8rpx;
+  line-height: 1.5;
 }
 
-.step-desc {
-  display: block;
-  font-size: 26rpx;
+/* 徽章行 */
+.step-badges {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 16rpx 0 0 62rpx;
+}
+
+.badge {
+  font-size: 22rpx;
+  line-height: 36rpx;
+  padding: 0 16rpx;
+  border-radius: 18rpx;
+  margin: 0 10rpx 10rpx 0;
+  white-space: nowrap;
+}
+
+.badge-plain {
+  background: #f0f1f4;
+  color: #565a5f;
+}
+
+/* 性价比档：作者判断，用蓝色系，与证据等级区分开 */
+.badge-ratio-3 {
+  background: #e9ecfb;
+  color: #3451b2;
+  font-weight: 600;
+}
+
+.badge-ratio-2 {
+  background: #e7f2ec;
+  color: #18794e;
+  font-weight: 600;
+}
+
+.badge-ratio-1 {
+  background: #f0f1f4;
+  color: #565a5f;
+  font-weight: 600;
+}
+
+/* 证据等级：A 绿 / B 橙 / C 灰 */
+.badge-grade-A {
+  background: #e7f2ec;
+  color: #18794e;
+  font-weight: 600;
+}
+
+.badge-grade-B {
+  background: #faf3e3;
+  color: #915930;
+  font-weight: 600;
+}
+
+.badge-grade-C {
+  background: #f0f1f4;
+  color: #565a5f;
+  font-weight: 600;
+}
+
+.badge-danger {
+  background: #fdecec;
+  color: #b8272c;
+  font-weight: 600;
+}
+
+.badge-warn {
+  background: #faf3e3;
+  color: #915930;
+  font-weight: 600;
+}
+
+/* 说人话：条目主体，用浅绿底 + 左边框与下面的元信息区分 */
+.step-plain {
+  margin: 18rpx 0 0 62rpx;
+  padding: 16rpx 22rpx;
+  border-left: 5rpx solid #4ba264;
+  background: #f2f8f3;
+  border-radius: 0 10rpx 10rpx 0;
+  font-size: 28rpx;
+  color: #2f3a33;
+  line-height: 1.75;
+}
+
+/* 成本 / 收益 / 备注 */
+.step-rows {
+  margin: 18rpx 0 0 62rpx;
+}
+
+.step-more {
+  margin: 16rpx 0 0 62rpx;
+  padding: 22rpx 24rpx;
+  background: #fafbfa;
+  border-radius: 12rpx;
+}
+
+.step-row {
+  display: flex;
+  margin-bottom: 12rpx;
+}
+
+.step-row:last-child {
+  margin-bottom: 0;
+}
+
+.row-k {
+  width: 78rpx;
+  flex-shrink: 0;
+  font-size: 24rpx;
   color: #8a8f98;
-  line-height: 1.5;
+  line-height: 1.75;
+}
+
+.row-v {
+  flex: 1;
+  min-width: 0;
+  font-size: 25rpx;
+  color: #5a6069;
+  line-height: 1.75;
+}
+
+.row-note {
+  color: #8a8f98;
+}
+
+/* 展开 / 收起收益与备注 */
+.step-toggle {
+  display: flex;
+  align-items: center;
+  margin: 18rpx 0 0 62rpx;
+  font-size: 24rpx;
+  color: #4ba264;
+}
+
+.step-toggle-arrow {
+  width: 0;
+  height: 0;
+  border-left: 9rpx solid transparent;
+  border-right: 9rpx solid transparent;
+  border-top: 10rpx solid #4ba264;
+  margin-left: 10rpx;
+  transition: transform 0.2s;
+}
+
+.step-toggle-arrow.open {
+  transform: rotate(180deg);
 }
 
 /* 来源 */

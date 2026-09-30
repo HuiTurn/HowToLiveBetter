@@ -37,12 +37,56 @@
       <view wx:if="{{article.steps && article.steps.length > 0}}" class="steps-section">
         <view class="section-title">具体方法</view>
         <view wx:for="{{article.steps}}" wx:key="index" class="step-item">
-          <view class="step-index">
-            <text>{{item.index}}</text>
-          </view>
-          <view class="step-content">
+          <view class="step-head">
+            <view class="step-index">
+              <text>{{item.index}}</text>
+            </view>
             <text class="step-title">{{item.title}}</text>
-            <text class="step-desc">{{item.desc}}</text>
+            <text class="badge badge-grade-{{item.grade}}">{{item.grade}}</text>
+          </view>
+
+          <view class="step-badges">
+            <text class="badge badge-ratio-{{item.ratioKey}}">性价比 {{item.meta.ratio}}</text>
+            <text class="badge badge-grade-{{item.grade}}">证据 {{item.grade}} 级</text>
+            <text wx:if="{{item.lensText}}" class="badge badge-plain">{{item.lensText}}</text>
+            <text
+              wx:for="{{item.costTags}}"
+              wx:for-item="tag"
+              wx:key="*this"
+              class="badge badge-plain"
+            >{{tag}}</text>
+            <text wx:if="{{item.meta.dispute}}" class="badge badge-danger">争议</text>
+            <text wx:if="{{item.meta.todo}}" class="badge badge-warn">含待核实</text>
+          </view>
+
+          <view wx:if="{{item.plain}}" class="step-plain">{{item.plain}}</view>
+
+          <view class="step-rows">
+            <view wx:if="{{item.cost}}" class="step-row">
+              <text class="row-k">成本</text>
+              <text class="row-v">{{item.cost}}</text>
+            </view>
+          </view>
+
+          <view
+            wx:if="{{item.gain || item.note}}"
+            class="step-toggle"
+            bindtap="onToggleStep"
+            data-idx="{{index}}"
+          >
+            <text>{{item.open ? '收起收益与备注' : '展开收益与备注'}}</text>
+            <view class="step-toggle-arrow {{item.open ? 'open' : ''}}"></view>
+          </view>
+
+          <view wx:if="{{item.open}}" class="step-more">
+            <view wx:if="{{item.gain}}" class="step-row">
+              <text class="row-k">收益</text>
+              <text class="row-v">{{item.gain}}</text>
+            </view>
+            <view wx:if="{{item.note}}" class="step-row">
+              <text class="row-k">备注</text>
+              <text class="row-v row-note">{{item.note}}</text>
+            </view>
           </view>
         </view>
       </view>
