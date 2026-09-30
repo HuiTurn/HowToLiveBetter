@@ -89,7 +89,10 @@ const searchAll = (keyword) => {
     (a.content && a.content.some(c => c.toLowerCase().includes(k))) ||
     (a.steps && a.steps.some(s =>
       (s.title && s.title.toLowerCase().includes(k)) ||
-      (s.desc && s.desc.toLowerCase().includes(k))
+      (s.plain && s.plain.toLowerCase().includes(k)) ||
+      (s.cost && s.cost.toLowerCase().includes(k)) ||
+      (s.gain && s.gain.toLowerCase().includes(k)) ||
+      (s.note && s.note.toLowerCase().includes(k))
     ))
   );
   const matchedCategories = categories.filter(c =>
