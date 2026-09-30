@@ -13,6 +13,7 @@ Page({
       { id: 'favorites', icon: 'star', label: '我的收藏' },
       { id: 'history', icon: 'clock', label: '浏览历史' },
       { id: 'help', icon: 'info', label: '使用说明' },
+      { id: 'download', icon: 'download', label: '离线下载' },
       { id: 'about', icon: 'book', label: '关于我们' },
       { id: 'opensource', icon: 'github', label: '开源项目' },
       { id: 'feedback', icon: 'chat', label: '反馈建议' }
@@ -82,6 +83,11 @@ Page({
 
     if (item.id === 'history') {
       wx.navigateTo({ url: '/pagesA/search/search?type=history' });
+      return;
+    }
+
+    if (item.id === 'download') {
+      wx.navigateTo({ url: '/pagesA/download/download' });
       return;
     }
 

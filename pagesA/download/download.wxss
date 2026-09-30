@@ -1,0 +1,136 @@
+.download-page {
+  min-height: 100vh;
+  background: #f6f7f6;
+}
+
+.download-content {
+  padding: 40rpx 32rpx;
+  padding-bottom: calc(200rpx + constant(safe-area-inset-bottom));
+  padding-bottom: calc(200rpx + env(safe-area-inset-bottom));
+}
+
+.dl-card {
+  background: #ffffff;
+  border-radius: 24rpx;
+  padding: 32rpx;
+  margin-bottom: 24rpx;
+  box-shadow: 0 4rpx 20rpx rgba(31, 41, 36, 0.04);
+}
+
+.dl-title {
+  display: block;
+  font-size: 34rpx;
+  font-weight: 700;
+  color: #22262b;
+  margin-bottom: 16rpx;
+}
+
+.dl-intro {
+  display: block;
+  font-size: 27rpx;
+  color: #4a4f56;
+  line-height: 1.8;
+}
+
+.dl-formats {
+  display: flex;
+  gap: 16rpx;
+  margin-top: 24rpx;
+}
+
+.dl-tag {
+  padding: 8rpx 24rpx;
+  border-radius: 999rpx;
+  font-size: 24rpx;
+  color: #4ba264;
+  background: rgba(75, 162, 100, 0.1);
+}
+
+.dl-lock {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 120rpx;
+}
+
+.dl-lock-text {
+  font-size: 26rpx;
+  color: #8a8f98;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.dl-row {
+  display: flex;
+  align-items: flex-start;
+  padding: 22rpx 0;
+  border-bottom: 1rpx solid #ececec;
+}
+
+.dl-row.last {
+  border-bottom: none;
+}
+
+.dl-row-label {
+  width: 140rpx;
+  font-size: 26rpx;
+  color: #8a8f98;
+  flex-shrink: 0;
+}
+
+.dl-row-value {
+  flex: 1;
+  font-size: 26rpx;
+  color: #22262b;
+  line-height: 1.6;
+  word-break: break-all;
+}
+
+.dl-link {
+  color: #2b8ce0;
+}
+
+.dl-code {
+  font-family: 'SFMono-Regular', Consolas, monospace;
+  font-size: 30rpx;
+  font-weight: 700;
+  letter-spacing: 4rpx;
+  color: #fa8700;
+}
+
+.dl-tip {
+  display: block;
+  margin-top: 20rpx;
+  font-size: 24rpx;
+  color: #8a8f98;
+  line-height: 1.6;
+}
+
+.dl-footer {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  padding: 20rpx 32rpx 32rpx;
+  padding-bottom: calc(32rpx + constant(safe-area-inset-bottom));
+  padding-bottom: calc(32rpx + env(safe-area-inset-bottom));
+  background: #f6f7f6;
+  box-shadow: 0 -4rpx 20rpx rgba(31, 41, 36, 0.05);
+}
+
+.dl-btn {
+  width: 100%;
+  height: 88rpx;
+  line-height: 88rpx;
+  text-align: center;
+  border-radius: 999rpx;
+  font-size: 30rpx;
+  font-weight: 600;
+  color: #ffffff;
+  background: #4ba264;
+}
+
+.dl-btn::after {
+  border: none;
+}

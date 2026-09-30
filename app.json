@@ -15,6 +15,7 @@
         "article/article",
         "daily/daily",
         "search/search",
+        "download/download",
         "help/help",
         "about/about",
         "webview/webview"

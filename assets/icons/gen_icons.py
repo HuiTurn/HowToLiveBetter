@@ -253,6 +253,22 @@ def ic_chat(color):
     return im
 
 
+def ic_download(color):
+    im = canvas(); d = ImageDraw.Draw(im)
+    r = ST / 2
+    # 托盘
+    line(d, [(16, 52), (16, 64), (64, 64), (64, 52)], color, caps=False)
+    for x, y in [(16, 52), (64, 52)]:
+        d.ellipse([x * SS - r, y * SS - r, x * SS + r, y * SS + r], fill=color)
+    # 箭头杆
+    line(d, [(40, 14), (40, 46)], color, caps=True)
+    # 箭头头
+    line(d, [(28, 36), (40, 48), (52, 36)], color, caps=False)
+    for x, y in [(28, 36), (52, 36)]:
+        d.ellipse([x * SS - r, y * SS - r, x * SS + r, y * SS + r], fill=color)
+    return im
+
+
 def ic_github(color):
     im = canvas(); d = ImageDraw.Draw(im)
     circle_fill(d, 40, 42, 25, color)
@@ -353,6 +369,7 @@ ICONS = [
     ('menu-book.png', lambda c: ic_book(c), BLUE),
     ('menu-info.png', lambda c: ic_info(c), PURPLE),
     ('menu-github.png', lambda c: ic_github(c), BLACK),
+    ('menu-download.png', lambda c: ic_download(c), GREEN),
     ('menu-chat.png', lambda c: ic_chat(c), SLATE),
     ('home.png', lambda c: ic_home(c), GRAY),
     ('home-active.png', lambda c: ic_home(c, filled=True), GREEN),

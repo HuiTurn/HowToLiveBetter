@@ -1,0 +1,42 @@
+<view class="page download-page">
+  <custom-nav title="离线下载" back="{{true}}" bg-color="#f6f7f6" text-color="#22262b" shadow="{{false}}" />
+
+  <view class="download-content">
+    <!-- 说明 -->
+    <view class="dl-card">
+      <text class="dl-title">人生指南库·完整版</text>
+      <text class="dl-intro">
+        整本合集收录八大主题的全部文章，方便你离线阅读、随时查阅。提供 PDF、HTML、epub 三种格式，可在电脑、手机或电子书阅读器上打开。
+      </text>
+      <view class="dl-formats">
+        <text class="dl-tag">PDF</text>
+        <text class="dl-tag">HTML</text>
+        <text class="dl-tag">epub</text>
+      </view>
+    </view>
+
+    <!-- 未解锁：提示 -->
+    <view wx:if="{{!unlocked}}" class="dl-card dl-lock">
+      <text class="dl-lock-text">下载前需观看一段激励视频，看完即可解锁下载链接。</text>
+    </view>
+
+    <!-- 已解锁：下载链接 -->
+    <view wx:else class="dl-card">
+      <view class="dl-row">
+        <text class="dl-row-label">下载链接</text>
+        <text class="dl-row-value dl-link" user-select="{{true}}">{{url}}</text>
+      </view>
+      <view class="dl-row last">
+        <text class="dl-row-label">提取码</text>
+        <text class="dl-row-value dl-code" user-select="{{true}}">{{password}}</text>
+      </view>
+      <text class="dl-tip">复制后请到手机浏览器打开链接，输入提取码即可下载。</text>
+    </view>
+  </view>
+
+  <!-- 底部操作栏 -->
+  <view class="dl-footer">
+    <button wx:if="{{!unlocked}}" class="dl-btn" bindtap="onUnlock">观看视频解锁下载</button>
+    <button wx:else class="dl-btn" bindtap="onCopyLink">复制下载链接</button>
+  </view>
+</view>

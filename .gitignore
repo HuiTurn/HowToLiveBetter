@@ -4,6 +4,10 @@ node_modules/
 # 系统文件
 .DS_Store
 
+# Python 缓存
+__pycache__/
+*.pyc
+
 # 微信开发者工具本机私有配置
 project.private.config.json
 
