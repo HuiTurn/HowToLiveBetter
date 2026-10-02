@@ -60,14 +60,33 @@ const miniProgram = await automator.connect({ wsEndpoint: WS });
 const info = await miniProgram.systemInfo();
 console.log(`已连接 ${WS} | 机型：${info.model} (${info.system}) ${info.screenWidth}x${info.screenHeight}`);
 
-let ok = 0;
-for (const shot of targets) {
-  try {
+/** 预期路径：去掉前导斜杠和 query */
+const expectPath = (url) => url.replace(/^\//, '').replace(/\?.*$/, '');
+
+/** 导航并确认真的到了目标页，否则重试（偶发会停在启动页 index） */
+async function goto(shot) {
+  for (let attempt = 1; attempt <= 3; attempt++) {
     if (shot.mode === 'reLaunch') await miniProgram.reLaunch(shot.url);
     else if (shot.mode === 'switchTab') await miniProgram.switchTab(shot.url);
     else await miniProgram.navigateTo(shot.url);
 
     await sleep(shot.wait);
+    const page = await miniProgram.currentPage();
+    if (page.path === expectPath(shot.url)) return page;
+    console.warn(`  ! ${shot.name} 第 ${attempt} 次导航后停在 ${page.path}，重试`);
+    await sleep(1000);
+  }
+  return null;
+}
+
+let ok = 0;
+for (const shot of targets) {
+  try {
+    const landed = await goto(shot);
+    if (!landed) {
+      console.error(`✗ ${shot.name} 导航失败，跳过`);
+      continue;
+    }
     await miniProgram.pageScrollTo(0).catch(() => {});
     await sleep(400);
 
