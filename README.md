@@ -114,3 +114,9 @@ docs/                   # 文档配图：小程序码 + 界面截图（packOptio
 - 微信原生小程序
 - 无外部 UI 框架依赖
 - 数据本地 JS 模块 + Storage
+
+## 版权与许可
+
+本小程序的文字内容改编自 [《高性价比人生指南》](https://github.com/eternity4719/HowToLiveBetter)（作者 [eternity4719](https://github.com/eternity4719)），原书以 [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) 授权。
+
+本仓库整体（内容与代码）同样以 [CC BY 4.0](LICENSE) 授权。转载或二次分发时，请按 CC BY 4.0 的要求保留对原书及本项目的署名。
