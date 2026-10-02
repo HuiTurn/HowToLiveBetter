@@ -1,4 +1,4 @@
-const { searchAll, getArticleById, getCategoryById } = require('../../utils/data.js');
+const { searchFull, getArticleById, getCategoryById } = require('../utils/content.js');
 const { getStatusBarHeight } = require('../../utils/util.js');
 const app = getApp();
 
@@ -104,7 +104,7 @@ Page({
     this.setData({ loading: true, activeTab: '全部' });
 
     setTimeout(() => {
-      const { articles, categories } = searchAll(keyword);
+      const { articles, categories } = searchFull(keyword);
       const favorites = app.globalData.favorites || [];
       const enrichedArticles = articles.map(a => ({
         ...a,

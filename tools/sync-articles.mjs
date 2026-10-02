@@ -1,13 +1,21 @@
 /**
- * 把上游 eternity4719/HowToLiveBetter 的 book/*.md 同步进小程序的 data/articles.js
+ * 把上游 eternity4719/HowToLiveBetter 的 book/*.md 同步进小程序的数据文件
  *
  * 用法（在 miniprogram/ 目录下）：
  *   node tools/sync-articles.mjs          # 只对比，不写文件
- *   node tools/sync-articles.mjs --apply  # 写入 data/articles.js
+ *   node tools/sync-articles.mjs --apply  # 写入两个数据文件
  *
  * 说明：
  *   - 需要先有 upstream 远程：git remote add upstream https://github.com/eternity4719/HowToLiveBetter.git
  *   - 解析规则与上游检索页 index.html 的 parseBook() 保持一致，不要自行改动判据
+ *
+ * 产物拆成两个文件，这是为了控制主包体积（微信主包上限 2 MB）：
+ *   data/articles.js        主包索引：元信息 + 导语，不含条目正文（约 60 KB）
+ *   pagesA/data/steps.js    分包正文：{ 文章 id → 条目数组 }（约 1.25 MB）
+ *
+ * 拆分的依据：主包的 4 个 tabBar 页面（首页/分类/收藏/我的）只需要列表元信息，
+ * 只有详情页与搜索页要看条目正文，而这两个页面都在分包 pagesA。
+ * 注意小程序只能「分包引用主包」，反向不行，所以正文必须放在分包侧。
  *
  * 字段映射：
  *   `# N. 标题`            → article.title
@@ -32,6 +40,7 @@ import { execSync } from 'node:child_process';
 
 const REPO = path.resolve(import.meta.dirname, '..');
 const LOCAL = path.join(REPO, 'data', 'articles.js');
+const LOCAL_STEPS = path.join(REPO, 'pagesA', 'data', 'steps.js');
 const REMOTE = 'upstream/main';
 const apply = process.argv.includes('--apply');
 
@@ -105,7 +114,16 @@ function makeBrief(summary) {
 }
 
 /* ---------- 对比并生成 ---------- */
-const local = eval(fs.readFileSync(LOCAL, 'utf8').replace(/^module\.exports\s*=/, ''));
+/* 本地数据是索引与正文两份，先合并成完整对象再对比，这样 diff 逻辑不用改 */
+/* 外面必须套一层括号：steps.js 导出的是对象字面量，裸 eval 会把它当成代码块而报语法错 */
+const readModule = (file) => eval(
+  '(' + fs.readFileSync(file, 'utf8').replace(/^module\.exports\s*=/, '').replace(/;?\s*$/, '') + ')'
+);
+const localIndex = readModule(LOCAL);
+const localStepMap = fs.existsSync(LOCAL_STEPS)
+  ? readModule(LOCAL_STEPS)
+  : (console.log(`提示：${LOCAL_STEPS} 不存在，按空正文处理`), {});
+const local = localIndex.map(a => ({ ...a, steps: localStepMap[a.id] || [] }));
 const files = fs.readdirSync(bookDir).filter(f => f.endsWith('.md')).sort();
 const report = [];
 const anomalies = [];
@@ -179,12 +197,26 @@ console.log(`性价比档：${JSON.stringify(tally(s => s.meta.ratio))}`);
 console.log(`口径：${JSON.stringify(tally(s => s.meta.lens))}`);
 console.log(`争议 ${allSteps.filter(s => s.meta.dispute).length} 条，含待核实 ${allSteps.filter(s => s.meta.todo).length} 条`);
 
+/** 与既有文件的写法保持一致：整体 JSON 缩进后再统一缩进 2 空格 */
+const render = (x) => 'module.exports = [\n' +
+  x.map(a => JSON.stringify(a, null, 2).split('\n').map(l => '  ' + l).join('\n')).join(',\n') +
+  '\n];\n';
+
 if (apply) {
-  const out = 'module.exports = [\n' +
-    output.map(a => JSON.stringify(a, null, 2).split('\n').map(l => '  ' + l).join('\n')).join(',\n') +
-    '\n];\n';
-  fs.writeFileSync(LOCAL, out);
-  console.log(`\n已写入 ${LOCAL}`);
+  /* 索引：剔除 steps，其余字段原样保留；补一个 stepCount 供主包显示条目总数 */
+  const index = output.map(({ steps, ...rest }) => ({ ...rest, stepCount: steps.length }));
+  fs.writeFileSync(LOCAL, render(index));
+
+  /* 正文：{ 文章 id → 条目数组 }，放分包 */
+  const stepMap = {};
+  output.forEach(a => { stepMap[a.id] = a.steps; });
+  fs.mkdirSync(path.dirname(LOCAL_STEPS), { recursive: true });
+  fs.writeFileSync(LOCAL_STEPS,
+    'module.exports = ' + JSON.stringify(stepMap, null, 2).split('\n').map(l => '  ' + l).join('\n').trimStart() + ';\n');
+
+  const kb = (f) => (fs.statSync(f).size / 1024).toFixed(0) + ' KB';
+  console.log(`\n已写入 ${LOCAL}（${kb(LOCAL)}）`);
+  console.log(`已写入 ${LOCAL_STEPS}（${kb(LOCAL_STEPS)}）`);
 } else {
   console.log('\n（dry-run，加 --apply 才会写文件）');
 }

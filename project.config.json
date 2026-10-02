@@ -17,6 +17,10 @@
       {
         "value": ".autotmp",
         "type": "folder"
+      },
+      {
+        "value": "__pycache__",
+        "type": "folder"
       }
     ],
     "include": []

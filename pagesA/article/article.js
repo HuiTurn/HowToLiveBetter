@@ -1,4 +1,4 @@
-const { getArticleById, getCategoryById, getRelatedArticles } = require('../../utils/data.js');
+const { getArticleById, getCategoryById, getRelatedArticles } = require('../utils/content.js');
 const { formatCount } = require('../../utils/util.js');
 const app = getApp();
 
