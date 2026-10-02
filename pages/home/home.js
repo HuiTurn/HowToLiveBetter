@@ -1,4 +1,4 @@
-const { getCategories, searchAll, getCategoryById } = require('../../utils/data.js');
+const { getCategories, searchAll, getCategoryById, getTotalStepCount } = require('../../utils/data.js');
 const app = getApp();
 
 const CATEGORY_TINTS = {
@@ -17,11 +17,14 @@ Page({
     categories: [],
     searchKeyword: '',
     searchResults: [],
-    searching: false
+    searching: false,
+    totalSteps: 0
   },
 
   onLoad() {
     this.loadCategories();
+    /* 条目正文在分包，主包只取索引上的计数用于文案 */
+    this.setData({ totalSteps: getTotalStepCount() });
   },
 
   loadCategories() {
@@ -51,6 +54,16 @@ Page({
   },
 
   onSearchConfirm() {
+    this.onFullSearch();
+  },
+
+  /**
+   * 跳搜索页做全文检索
+   *
+   * 首页这里只匹配篇目标题/摘要/导语，条目正文在分包拿不到。
+   * 想按条目内容找（比如搜「安全带」）就得进搜索页，那边能扫全部条目。
+   */
+  onFullSearch() {
     const keyword = this.data.searchKeyword;
     if (!keyword) return;
     wx.navigateTo({

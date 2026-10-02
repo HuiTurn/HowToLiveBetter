@@ -34,9 +34,14 @@
         >
           <article-card article="{{item}}" show-category="{{false}}" bind:favorite="onCardFavorite" />
         </view>
+        <view class="result-more" bindtap="onFullSearch">
+          <text class="result-more-text">在全部 {{totalSteps}} 条建议中搜索「{{searchKeyword}}」</text>
+          <text class="result-more-arrow">›</text>
+        </view>
       </view>
       <view wx:else class="no-result">
-        <text>未找到相关结果，换个关键词试试</text>
+        <text class="no-result-text">篇名里没有，条目正文里可能有</text>
+        <view class="no-result-action" bindtap="onFullSearch">在 {{totalSteps}} 条建议中搜索 →</view>
       </view>
     </view>
 

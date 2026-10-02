@@ -54,11 +54,43 @@
 
 .no-result {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 120rpx 48rpx;
+  padding: 100rpx 48rpx;
+}
+
+.no-result-text {
   color: #8a8f98;
   font-size: 28rpx;
+}
+
+.no-result-action {
+  margin-top: 24rpx;
+  padding: 16rpx 36rpx;
+  border-radius: 40rpx;
+  background: #eef7f0;
+  color: #4ba264;
+  font-size: 27rpx;
+}
+
+/* 索引层只匹配篇名，底部给一个进全文检索的入口 */
+.result-more {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 28rpx 0 12rpx;
+}
+
+.result-more-text {
+  color: #4ba264;
+  font-size: 26rpx;
+}
+
+.result-more-arrow {
+  margin-left: 6rpx;
+  color: #4ba264;
+  font-size: 30rpx;
 }
 
 /* 分类网格 */
