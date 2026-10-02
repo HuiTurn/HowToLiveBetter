@@ -12,7 +12,7 @@
 .category-icon-wrap {
   width: 104rpx;
   height: 104rpx;
-  border-radius: 52rpx;
+  border-radius: 28rpx;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -57,6 +57,11 @@
   padding: 8rpx 0 16rpx;
   font-size: 30rpx;
   color: #8a8f98;
+  transition: color 0.2s ease;
+}
+
+.sub-tab:last-child {
+  margin-right: 0;
 }
 
 .sub-tab.active {

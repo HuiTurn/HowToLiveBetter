@@ -16,6 +16,11 @@
   padding: 8rpx 0 16rpx;
   font-size: 30rpx;
   color: #8a8f98;
+  transition: color 0.2s ease;
+}
+
+.sub-tab:last-child {
+  margin-right: 0;
 }
 
 .sub-tab.active {

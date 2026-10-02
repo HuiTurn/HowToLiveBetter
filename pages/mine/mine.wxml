@@ -18,6 +18,7 @@
         <view
           wx:if="{{item.id === 'feedback'}}"
           class="menu-item menu-item-last menu-item-contact"
+          hover-class="hover-press"
         >
           <image class="menu-icon" src="/assets/icons/menu-{{item.icon}}.png" mode="aspectFit" />
           <text class="menu-label">{{item.label}}</text>
@@ -27,6 +28,7 @@
         <view
           wx:else
           class="menu-item"
+          hover-class="hover-press"
           bindtap="onMenuTap"
           data-item="{{item}}"
         >

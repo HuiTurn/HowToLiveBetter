@@ -2,7 +2,7 @@
   <custom-nav title="分类" align="left" bg-color="#f6f7f6" text-color="#22262b" shadow="{{false}}" />
 
   <!-- 分类标签 -->
-  <scroll-view scroll-x class="sub-tabs" show-scrollbar="{{false}}">
+  <scroll-view scroll-x class="sub-tabs" show-scrollbar="{{false}}" bounces="{{false}}">
     <view
       wx:for="{{tabs}}"
       wx:key="id"

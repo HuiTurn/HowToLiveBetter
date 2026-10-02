@@ -1,13 +1,17 @@
-<view class="article-card {{layout}}" bindtap="onTap">
+<view class="article-card {{layout}}" hover-class="hover-press" bindtap="onTap">
   <image class="article-cover" src="{{article.cover}}" mode="aspectFill" lazy-load />
   <view class="article-content">
     <text
-      wx:if="{{showCategory && article.categoryName}}"
+      wx:if="{{showCategory && !categoryBelow && article.categoryName}}"
       class="article-category"
       style="color: {{article.categoryColor || '#4ba264'}};"
     >{{article.categoryName}}</text>
     <text class="article-title ellipsis">{{article.title}}</text>
-    <text class="article-summary ellipsis-2">{{article.brief || article.summary}}</text>
+    <text
+      wx:if="{{showCategory && categoryBelow && article.categoryName}}"
+      class="article-category-below"
+    >{{article.categoryName}}</text>
+    <text wx:if="{{showSummary}}" class="article-summary ellipsis-2">{{article.brief || article.summary}}</text>
     <view class="article-footer">
       <view class="meta-left">
         <image wx:if="{{showViews}}" class="meta-icon" src="/assets/icons/eye.png" mode="aspectFit" />
@@ -19,7 +23,7 @@
   </view>
   <image
     wx:if="{{showStar}}"
-    class="star-btn {{article.isFavorite ? 'active' : ''}}"
+    class="star-btn {{article.isFavorite ? 'active' : ''}} {{starPop ? 'pop' : ''}}"
     src="{{article.isFavorite ? '/assets/icons/star-orange.png' : '/assets/icons/star.png'}}"
     mode="aspectFit"
     catchtap="onStar"

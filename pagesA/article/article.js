@@ -28,6 +28,7 @@ Page({
     article: null,
     category: null,
     isFavorite: false,
+    starPop: false,
     relatedArticles: [],
     formattedLikes: '',
     formattedViews: ''
@@ -120,8 +121,10 @@ Page({
     this.setData({
       isFavorite: !isFavorite,
       'article.likes': newLikes,
-      formattedLikes: formatCount(newLikes)
+      formattedLikes: formatCount(newLikes),
+      starPop: true
     });
+    setTimeout(() => this.setData({ starPop: false }), 320);
   },
 
   onShareAppMessage() {

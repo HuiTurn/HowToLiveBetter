@@ -113,15 +113,15 @@
       <image class="footer-icon" src="/assets/icons/heart.png" mode="aspectFit" />
       <text class="footer-text">{{formattedLikes}}</text>
     </view>
-    <view class="footer-item" bindtap="onFavorite">
+    <view class="footer-item" bindtap="onFavorite" hover-class="hover-press">
       <image
-        class="footer-icon"
+        class="footer-icon {{starPop ? 'pop' : ''}}"
         src="{{isFavorite ? '/assets/icons/star-orange.png' : '/assets/icons/star.png'}}"
         mode="aspectFit"
       />
       <text class="footer-text {{isFavorite ? 'active' : ''}}">{{isFavorite ? '已收藏' : '收藏'}}</text>
     </view>
-    <button class="footer-action" open-type="share">
+    <button class="footer-action" open-type="share" hover-class="hover-press">
       <image class="action-icon" src="/assets/icons/share-white.png" mode="aspectFit" />
       <text>分享</text>
     </button>

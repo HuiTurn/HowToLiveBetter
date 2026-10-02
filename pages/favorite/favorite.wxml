@@ -23,6 +23,8 @@
           <article-card
             article="{{item}}"
             show-category="{{true}}"
+            category-below="{{true}}"
+            show-summary="{{false}}"
             bind:favorite="onCardFavorite"
           />
         </view>
@@ -44,6 +46,7 @@
           wx:for="{{categories}}"
           wx:key="id"
           class="category-row"
+          hover-class="hover-press"
           bindtap="onCategoryTap"
           data-id="{{item.id}}"
         >

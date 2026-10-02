@@ -16,10 +16,11 @@
   padding: 20rpx 0 16rpx;
   font-size: 28rpx;
   color: #8a8f98;
+  transition: color 0.2s ease;
 }
 
 .tab-item.active {
-  color: #22262b;
+  color: #4ba264;
   font-weight: 600;
 }
 
@@ -61,7 +62,7 @@
   align-items: center;
   padding: 28rpx 24rpx;
   background: #ffffff;
-  border-radius: 20rpx;
+  border-radius: 24rpx;
   box-shadow: 0 4rpx 20rpx rgba(31, 41, 36, 0.04);
 }
 

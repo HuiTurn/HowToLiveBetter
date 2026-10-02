@@ -51,6 +51,7 @@
         wx:for="{{categories}}"
         wx:key="id"
         class="category-item"
+        hover-class="hover-press"
         bindtap="onCategoryTap"
         data-id="{{item.id}}"
       >
@@ -65,7 +66,7 @@
     </view>
 
     <!-- 语录卡片 -->
-    <view wx:if="{{!searching}}" class="quote-card" bindtap="onDailyRead">
+    <view wx:if="{{!searching}}" class="quote-card" hover-class="hover-press" bindtap="onDailyRead">
       <image class="quote-bg" src="/assets/images/quote-card.jpg" mode="aspectFill" />
       <view class="quote-mask"></view>
       <view class="quote-body">

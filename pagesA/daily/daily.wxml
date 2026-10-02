@@ -17,11 +17,11 @@
   </view>
 
   <view class="daily-footer safe-bottom">
-    <view class="footer-btn" bindtap="onChangeQuote">
+    <view class="footer-btn" hover-class="hover-press" bindtap="onChangeQuote">
       <image class="btn-icon" src="/assets/icons/refresh-white.png" mode="aspectFit" />
       <text class="btn-text">换一句</text>
     </view>
-    <button class="footer-btn share" open-type="share">
+    <button class="footer-btn share" open-type="share" hover-class="hover-press">
       <image class="btn-icon" src="/assets/icons/share-white.png" mode="aspectFit" />
       <text class="btn-text">分享</text>
     </button>

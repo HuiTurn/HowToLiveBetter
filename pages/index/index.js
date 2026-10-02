@@ -1,9 +1,23 @@
+const { getStatusBarHeight } = require('../../utils/util.js');
+
 Page({
   data: {
-    showContent: false
+    showContent: false,
+    topPadding: 88
+  },
+
+  onLoad() {
+    this.setData({ topPadding: getStatusBarHeight() + 128 });
+    if (wx.getStorageSync('splashSeen')) {
+      this.redirecting = true;
+      wx.switchTab({ url: '/pages/home/home' });
+      return;
+    }
+    wx.setStorageSync('splashSeen', 1);
   },
 
   onShow() {
+    if (this.redirecting) return;
     setTimeout(() => {
       this.setData({ showContent: true });
     }, 100);

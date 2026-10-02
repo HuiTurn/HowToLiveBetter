@@ -7,9 +7,11 @@ page {
   background-color: var(--color-bg);
   box-sizing: border-box;
   line-height: 1.6;
+  /* 横向滑动只允许出现在 scroll-x 组件（如分类标签栏）内，页面文档本身禁止横滑 */
+  overflow-x: hidden;
 }
 
-view, text, image {
+view, text, image, scroll-view, button, input, textarea {
   box-sizing: border-box;
 }
 
@@ -30,6 +32,11 @@ view, text, image {
   background: #ffffff;
   border-radius: 24rpx;
   box-shadow: 0 4rpx 24rpx rgba(0, 0, 0, 0.04);
+}
+
+/* 按压反馈 */
+.hover-press {
+  opacity: 0.85;
 }
 
 /* Flex 工具 */

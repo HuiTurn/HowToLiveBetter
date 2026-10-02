@@ -15,9 +15,10 @@
 .search-input-wrap {
   display: flex;
   align-items: center;
+  height: 76rpx;
   background: #eef0f0;
   border-radius: 999rpx;
-  padding: 20rpx 32rpx;
+  padding: 0 28rpx;
 }
 
 .search-icon {
@@ -40,6 +41,8 @@
 .clear-btn {
   width: 32rpx;
   height: 32rpx;
+  padding: 8rpx;
+  margin-right: -8rpx;
   flex-shrink: 0;
 }
 

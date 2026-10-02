@@ -353,12 +353,20 @@ def ic_coffee(color):
     return im
 
 
+def ic_arrow_right(color):
+    im = canvas(); d = ImageDraw.Draw(im)
+    line(d, [(14, 40), (60, 40)], color)
+    line(d, [(42, 22), (60, 40), (42, 58)], color, closed=False)
+    return im
+
+
 ICONS = [
     ('eye.png', lambda c: ic_eye(c), GRAY),
     ('heart.png', lambda c: ic_heart(c), GRAY),
     ('star.png', lambda c: ic_star(c), GRAY),
     ('star-orange.png', lambda c: ic_star(c, filled=True), ORANGE),
     ('share-white.png', lambda c: ic_share(c), WHITE),
+    ('arrow-white.png', lambda c: ic_arrow_right(c), WHITE),
     ('refresh-white.png', lambda c: ic_refresh(c), WHITE),
     ('search.png', lambda c: ic_search(c), GRAY),
     ('clear.png', lambda c: ic_clear(c), LIGHT),

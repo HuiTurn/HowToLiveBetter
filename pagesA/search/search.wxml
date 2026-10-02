@@ -45,6 +45,7 @@
             wx:for="{{hotKeywords}}"
             wx:key="*this"
             class="tag-item"
+            hover-class="hover-press"
             bindtap="onTagTap"
             data-text="{{item}}"
           >{{item}}</view>
@@ -54,7 +55,7 @@
       <view wx:if="{{historyArticles.length > 0}}" class="search-section">
         <view class="section-title">最近浏览</view>
         <view class="history-list">
-          <view wx:for="{{historyArticles}}" wx:key="id" class="history-item" bindtap="onArticleTap" data-id="{{item.id}}">
+          <view wx:for="{{historyArticles}}" wx:key="id" class="history-item" hover-class="hover-press" bindtap="onArticleTap" data-id="{{item.id}}">
             <image class="history-cover" src="{{item.cover}}" mode="aspectFill" />
             <text class="history-title">{{item.title}}</text>
           </view>
@@ -66,12 +67,12 @@
     <block wx:if="{{hasResult && !loading}}">
       <view wx:if="{{activeTab !== '分类'}}" class="result-section">
         <view wx:for="{{articles}}" wx:key="id" class="result-item">
-          <article-card article="{{item}}" show-category="{{true}}" bind:favorite="onCardFavorite" />
+          <article-card article="{{item}}" show-category="{{false}}" bind:favorite="onCardFavorite" />
         </view>
       </view>
 
       <view wx:if="{{activeTab !== '文章'}}" class="result-section">
-        <view wx:for="{{categories}}" wx:key="id" class="category-result" bindtap="onCategoryTap" data-id="{{item.id}}">
+        <view wx:for="{{categories}}" wx:key="id" class="category-result" hover-class="hover-press" bindtap="onCategoryTap" data-id="{{item.id}}">
           <view class="category-icon" style="background: {{item.bgColor}};">
             <image class="category-glyph" src="/assets/icons/glyph-{{item.id}}.png" mode="aspectFit" />
           </view>

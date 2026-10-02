@@ -13,7 +13,7 @@
   </view>
 
   <!-- 子分类标签 -->
-  <scroll-view scroll-x class="sub-tabs" show-scrollbar="{{false}}">
+  <scroll-view scroll-x class="sub-tabs" show-scrollbar="{{false}}" bounces="{{false}}">
     <view
       wx:for="{{subCategories}}"
       wx:key="*this"

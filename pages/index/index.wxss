@@ -35,7 +35,7 @@
   display: flex;
   flex-direction: column;
   height: 100vh;
-  padding: 176rpx 64rpx calc(60rpx + env(safe-area-inset-bottom));
+  padding: 0 64rpx calc(60rpx + env(safe-area-inset-bottom));
   opacity: 0;
   transform: translateY(40rpx);
   transition: all 0.8s ease;
@@ -52,11 +52,11 @@
 
 .index-title {
   display: block;
-  font-size: 68rpx;
+  font-size: 76rpx;
   font-weight: 700;
   color: #1a3547;
   letter-spacing: 10rpx;
-  margin-bottom: 28rpx;
+  margin-bottom: 36rpx;
 }
 
 .index-subtitle {
@@ -87,12 +87,11 @@
 }
 
 .script-line {
-  width: 340rpx;
-  height: 6rpx;
-  border-radius: 3rpx;
-  background: #ffffff;
-  margin-top: 20rpx;
-  box-shadow: 0 2rpx 8rpx rgba(0, 0, 0, 0.2);
+  width: 320rpx;
+  height: 28rpx;
+  border-bottom: 5rpx solid #ffffff;
+  border-radius: 50%;
+  margin-top: 16rpx;
 }
 
 .index-actions {
@@ -104,8 +103,8 @@
 
 .explore-btn {
   width: 76%;
-  height: 100rpx;
-  border-radius: 50rpx;
+  height: 88rpx;
+  border-radius: 44rpx;
   background: #4ba264;
   color: #ffffff;
   font-size: 32rpx;
@@ -116,9 +115,10 @@
   box-shadow: 0 10rpx 30rpx rgba(45, 90, 60, 0.35);
 }
 
-.explore-btn .arrow {
+.arrow-icon {
+  width: 36rpx;
+  height: 36rpx;
   margin-left: 14rpx;
-  font-size: 32rpx;
 }
 
 .index-footer {

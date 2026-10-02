@@ -5,6 +5,8 @@ Component({
     article: { type: Object, value: {} },
     layout: { type: String, value: 'horizontal' }, // horizontal | vertical
     showCategory: { type: Boolean, value: false },
+    categoryBelow: { type: Boolean, value: false },
+    showSummary: { type: Boolean, value: true },
     showLikes: { type: Boolean, value: true },
     showViews: { type: Boolean, value: true },
     showStar: { type: Boolean, value: true },
@@ -13,7 +15,8 @@ Component({
 
   data: {
     formattedViews: '',
-    formattedLikes: ''
+    formattedLikes: '',
+    starPop: false
   },
 
   observers: {
@@ -38,6 +41,8 @@ Component({
     onStar() {
       const { article } = this.data;
       if (!article || !article.id) return;
+      this.setData({ starPop: true });
+      setTimeout(() => this.setData({ starPop: false }), 320);
       this.triggerEvent('favorite', { id: article.id });
     }
   }

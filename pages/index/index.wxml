@@ -2,9 +2,9 @@
   <image class="bg-image" src="/assets/images/splash.jpg" mode="aspectFill" />
   <view class="bg-overlay"></view>
 
-  <view class="index-content {{showContent ? 'show' : ''}}">
+  <view class="index-content {{showContent ? 'show' : ''}}" style="padding-top: {{topPadding}}px;">
     <view class="index-header">
-      <text class="index-title">人生指南</text>
+      <text class="index-title">人生指南库</text>
       <text class="index-subtitle">更好的生活，从每一个选择开始</text>
     </view>
 
@@ -16,9 +16,9 @@
     </view>
 
     <view class="index-actions">
-      <button class="explore-btn" bindtap="onExplore">
+      <button class="explore-btn" bindtap="onExplore" hover-class="hover-press">
         <text>开始探索</text>
-        <text class="arrow">→</text>
+        <image class="arrow-icon" src="/assets/icons/arrow-white.png" mode="aspectFit" />
       </button>
       <view class="index-footer" bindtap="onOpenSource">
         <text class="footer-text">基于 HowToLiveBetter 开源项目</text>
