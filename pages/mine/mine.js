@@ -1,4 +1,5 @@
 const app = getApp();
+const { getSystemInfo } = require('../../utils/util.js');
 
 const DEFAULT_USER = {
   nickname: '人生探索者',
@@ -12,6 +13,7 @@ Page({
     menuList: [
       { id: 'favorites', icon: 'star', label: '我的收藏' },
       { id: 'history', icon: 'clock', label: '浏览历史' },
+      { id: 'desktop', icon: 'desktop', label: '添加到桌面' },
       { id: 'help', icon: 'info', label: '使用说明' },
       { id: 'download', icon: 'download', label: '离线下载' },
       { id: 'about', icon: 'book', label: '关于我们' },
@@ -86,6 +88,11 @@ Page({
       return;
     }
 
+    if (item.id === 'desktop') {
+      this.addToDesktop();
+      return;
+    }
+
     if (item.id === 'download') {
       wx.navigateTo({ url: '/pagesA/download/download' });
       return;
@@ -95,6 +102,37 @@ Page({
       wx.navigateTo({ url: `/pagesA/${item.id}/${item.id}` });
       return;
     }
+  },
+
+  addToDesktop() {
+    if (getSystemInfo().platform === 'ios') {
+      wx.showModal({
+        title: '添加到桌面',
+        content: 'iOS 系统限制，小程序无法添加到桌面。可点右上角「···」选择「添加到我的小程序」，之后在微信首页下拉就能快速找到。',
+        showCancel: false,
+        confirmText: '知道了'
+      });
+      return;
+    }
+
+    if (typeof wx.addToDesktop === 'function') {
+      wx.addToDesktop({
+        success: () => wx.showToast({ title: '已添加到桌面', icon: 'success' }),
+        fail: () => this.showDesktopGuide()
+      });
+      return;
+    }
+
+    this.showDesktopGuide();
+  },
+
+  showDesktopGuide() {
+    wx.showModal({
+      title: '添加到桌面',
+      content: '点右上角「···」按钮，选择「添加到桌面」，即可把本小程序放到手机桌面，下次一键打开。',
+      showCancel: false,
+      confirmText: '知道了'
+    });
   },
 
   onShareAppMessage() {

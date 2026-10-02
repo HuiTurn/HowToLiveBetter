@@ -353,6 +353,14 @@ def ic_coffee(color):
     return im
 
 
+def ic_desktop(color):
+    im = canvas(); d = ImageDraw.Draw(im)
+    rrect(d, (22, 12, 58, 68), 8, color)
+    line(d, [(40, 30), (40, 50)], color)
+    line(d, [(30, 40), (50, 40)], color)
+    return im
+
+
 def ic_arrow_right(color):
     im = canvas(); d = ImageDraw.Draw(im)
     line(d, [(14, 40), (60, 40)], color)
@@ -378,6 +386,7 @@ ICONS = [
     ('menu-info.png', lambda c: ic_info(c), PURPLE),
     ('menu-github.png', lambda c: ic_github(c), BLACK),
     ('menu-download.png', lambda c: ic_download(c), GREEN),
+    ('menu-desktop.png', lambda c: ic_desktop(c), GREEN),
     ('menu-chat.png', lambda c: ic_chat(c), SLATE),
     ('home.png', lambda c: ic_home(c), GRAY),
     ('home-active.png', lambda c: ic_home(c, filled=True), GREEN),
