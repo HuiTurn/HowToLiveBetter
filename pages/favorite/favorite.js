@@ -95,7 +95,7 @@ Page({
 
   onShareAppMessage() {
     return {
-      title: '人生指南 - 发现让生活更好的选择',
+      title: '发现让生活更好的选择丨人生指南库',
       path: '/pages/home/home',
       imageUrl: '/assets/images/splash.jpg'
     };

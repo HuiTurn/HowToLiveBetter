@@ -109,13 +109,13 @@ Page({
     const { category } = this.data;
     if (!category) {
       return {
-        title: '人生指南 - 更好的生活，从每一个选择开始',
+        title: '更好的生活，从每一个选择开始丨人生指南库',
         path: '/pages/index/index',
         imageUrl: '/assets/images/splash.jpg'
       };
     }
     return {
-      title: `${category.name} - 人生指南`,
+      title: `${category.name}丨人生指南库`,
       path: `/pagesA/category-detail/category-detail?id=${category.id}`,
       imageUrl: '/assets/images/splash.jpg'
     };
@@ -123,9 +123,9 @@ Page({
 
   onShareTimeline() {
     const { category } = this.data;
-    if (!category) return { title: '人生指南' };
+    if (!category) return { title: '人生指南库' };
     return {
-      title: `${category.name} - 人生指南`,
+      title: `${category.name}丨人生指南库`,
       query: `id=${category.id}`,
       imageUrl: '/assets/images/splash.jpg'
     };

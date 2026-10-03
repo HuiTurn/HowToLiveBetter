@@ -49,7 +49,7 @@ Page({
 
   onShareAppMessage() {
     return {
-      title: '人生指南库 - 离线下载完整版',
+      title: '离线下载完整版丨人生指南库',
       path: '/pages/index/index',
       imageUrl: '/assets/images/splash.jpg'
     };

@@ -41,7 +41,7 @@ Page({
 
   onShareAppMessage() {
     return {
-      title: '人生指南库 - 使用说明',
+      title: '使用说明丨人生指南库',
       path: '/pages/index/index',
       imageUrl: '/assets/images/splash.jpg'
     };

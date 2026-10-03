@@ -28,7 +28,7 @@
  *   `- 证据等级： A/B/C`    → step.grade
  *   `<!-- 成本标签: … -->`  → step.meta 的 money/time/will/gain/lens
  *   id 按文件名序号匹配（book/01-xxx.md → b01）
- *   categoryId / subCategory / cover / views / likes / date 等小程序自有字段保留不动
+ *   categoryId / subCategory / cover / date 等小程序自有字段保留不动
  *
  * 性价比档 meta.ratio 由「收益量级 + 三项成本」合成，规则照抄上游 CLAUDE.md，
  * 与证据等级无关，也不跨口径比较。

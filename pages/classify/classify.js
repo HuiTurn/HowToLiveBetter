@@ -61,7 +61,7 @@ Page({
 
   onShareAppMessage() {
     return {
-      title: '人生指南 - 全部分类',
+      title: '全部分类丨人生指南库',
       path: '/pages/classify/classify',
       imageUrl: '/assets/images/splash.jpg'
     };
@@ -69,7 +69,7 @@ Page({
 
   onShareTimeline() {
     return {
-      title: '人生指南 - 全部分类',
+      title: '全部分类丨人生指南库',
       imageUrl: '/assets/images/splash.jpg'
     };
   }

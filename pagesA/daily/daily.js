@@ -36,7 +36,7 @@ Page({
   onShareAppMessage() {
     const { quote } = this.data;
     return {
-      title: quote.text,
+      title: `${quote.text}丨人生指南库`,
       path: '/pagesA/daily/daily',
       imageUrl: '/assets/images/daily.jpg'
     };
@@ -45,7 +45,7 @@ Page({
   onShareTimeline() {
     const { quote } = this.data;
     return {
-      title: quote.text,
+      title: `${quote.text}丨人生指南库`,
       imageUrl: '/assets/images/daily.jpg'
     };
   }

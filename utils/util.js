@@ -13,14 +13,6 @@ const formatTime = date => {
   return [year, month, day].map(formatNumber).join('/') + ' ' + [hour, minute, second].map(formatNumber).join(':');
 };
 
-const formatCount = num => {
-  if (!num && num !== 0) return '0';
-  if (num >= 1000) {
-    return (num / 1000).toFixed(1) + 'k';
-  }
-  return num.toString();
-};
-
 const formatDate = dateStr => {
   if (!dateStr) return '';
   const date = new Date(dateStr);
@@ -82,7 +74,6 @@ const getNavBarHeight = () => {
 
 module.exports = {
   formatTime,
-  formatCount,
   formatDate,
   debounce,
   throttle,

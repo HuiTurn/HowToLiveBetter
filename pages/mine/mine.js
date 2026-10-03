@@ -137,7 +137,7 @@ Page({
 
   onShareAppMessage() {
     return {
-      title: '人生指南 - 更好的生活，从每一个选择开始',
+      title: '更好的生活，从每一个选择开始丨人生指南库',
       path: '/pages/index/index',
       imageUrl: '/assets/images/splash.jpg'
     };

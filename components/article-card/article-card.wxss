@@ -70,35 +70,8 @@
   font-size: 24rpx;
   color: #8a8f98;
   line-height: 1.5;
-  margin-bottom: 16rpx;
   max-height: 72rpx;
   overflow: hidden;
-}
-
-.article-footer {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.meta-left {
-  display: flex;
-  align-items: center;
-}
-
-.meta-icon {
-  width: 28rpx;
-  height: 28rpx;
-  margin-right: 8rpx;
-}
-
-.meta-icon.gap {
-  margin-left: 24rpx;
-}
-
-.meta-item {
-  font-size: 22rpx;
-  color: #b6bac0;
 }
 
 .star-btn {

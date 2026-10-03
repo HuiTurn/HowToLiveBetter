@@ -12,14 +12,6 @@
       class="article-category-below"
     >{{article.categoryName}}</text>
     <text wx:if="{{showSummary}}" class="article-summary ellipsis-2">{{article.brief || article.summary}}</text>
-    <view class="article-footer">
-      <view class="meta-left">
-        <image wx:if="{{showViews}}" class="meta-icon" src="/assets/icons/eye.png" mode="aspectFit" />
-        <text wx:if="{{showViews}}" class="meta-item">{{formattedViews}}</text>
-        <image wx:if="{{showLikes}}" class="meta-icon gap" src="/assets/icons/heart.png" mode="aspectFit" />
-        <text wx:if="{{showLikes}}" class="meta-item">{{formattedLikes}}</text>
-      </view>
-    </view>
   </view>
   <image
     wx:if="{{showStar}}"
