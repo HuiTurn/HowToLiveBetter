@@ -19,6 +19,7 @@ BLACK = (36, 41, 47, 255)
 SLATE = (91, 107, 122, 255)
 LIGHT = (196, 201, 206, 255)
 WHITE = (255, 255, 255, 255)
+RED = (244, 63, 94, 255)
 
 CATEGORY_COLORS = {
     'lifestyle': (61, 139, 64, 255),
@@ -121,13 +122,6 @@ def rotate_paste(base, layer):
 
 
 # ---------- 图标绘制 ----------
-
-def ic_eye(color):
-    im = canvas(); d = ImageDraw.Draw(im)
-    d.ellipse([12 * SS, 26 * SS, 68 * SS, 54 * SS], outline=color, width=ST)
-    circle_fill(d, 40, 40, 8, color)
-    return im
-
 
 def ic_heart(color, filled=False):
     im = canvas(); d = ImageDraw.Draw(im)
@@ -368,9 +362,46 @@ def ic_arrow_right(color):
     return im
 
 
+def ic_moments(color):
+    """朋友圈光圈图标：实心圆 + 6 片白色风车叶片。"""
+    im = canvas(); d = ImageDraw.Draw(im)
+    circle_fill(d, 40, 40, 27, color)
+    for i in range(6):
+        a = math.radians(i * 60)
+        x1, y1 = 40 + 8 * math.cos(a), 40 + 8 * math.sin(a)
+        b = math.radians(i * 60 + 62)
+        x2, y2 = 40 + 27 * math.cos(b), 40 + 27 * math.sin(b)
+        line(d, [(x1, y1), (x2, y2)], WHITE, width=int(4 * SS), caps=False)
+    return im
+
+
+def ic_arrow_curve(color):
+    """引导用弧形箭头：贝塞尔曲线 + 末端实心箭头。"""
+    im = canvas(); d = ImageDraw.Draw(im)
+    p0, p1, p2 = (14, 66), (56, 60), (58, 20)
+    pts = []
+    for i in range(25):
+        t = i / 24
+        x = (1 - t) ** 2 * p0[0] + 2 * (1 - t) * t * p1[0] + t * t * p2[0]
+        y = (1 - t) ** 2 * p0[1] + 2 * (1 - t) * t * p1[1] + t * t * p2[1]
+        pts.append((x, y))
+    line(d, pts, color, caps=False)
+    dx = pts[-1][0] - pts[-3][0]
+    dy = pts[-1][1] - pts[-3][1]
+    ang = math.atan2(dy, dx)
+    L, w = 15, math.radians(28)
+    tip = pts[-1]
+    a1, a2 = ang + math.pi - w, ang + math.pi + w
+    poly(d, [tip,
+             (tip[0] + L * math.cos(a1), tip[1] + L * math.sin(a1)),
+             (tip[0] + L * math.cos(a2), tip[1] + L * math.sin(a2))],
+         color, fill=color)
+    return im
+
+
 ICONS = [
-    ('eye.png', lambda c: ic_eye(c), GRAY),
     ('heart.png', lambda c: ic_heart(c), GRAY),
+    ('heart-red.png', lambda c: ic_heart(c, filled=True), RED),
     ('star.png', lambda c: ic_star(c), GRAY),
     ('star-orange.png', lambda c: ic_star(c, filled=True), ORANGE),
     ('share-white.png', lambda c: ic_share(c), WHITE),
@@ -387,6 +418,8 @@ ICONS = [
     ('menu-github.png', lambda c: ic_github(c), BLACK),
     ('menu-download.png', lambda c: ic_download(c), GREEN),
     ('menu-desktop.png', lambda c: ic_desktop(c), GREEN),
+    ('moments-green.png', lambda c: ic_moments(c), GREEN),
+    ('arrow-curve-white.png', lambda c: ic_arrow_curve(c), WHITE),
     ('menu-chat.png', lambda c: ic_chat(c), SLATE),
     ('home.png', lambda c: ic_home(c), GRAY),
     ('home-active.png', lambda c: ic_home(c, filled=True), GREEN),

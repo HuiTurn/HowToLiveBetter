@@ -1,7 +1,7 @@
 <view class="page article-page">
   <custom-nav title="" back="{{true}}" bg-color="#ffffff" text-color="#22262b" shadow="{{false}}" />
 
-  <view wx:if="{{article}}" class="article-content">
+  <view wx:if="{{article}}" class="article-content" bindtap="onContentTap">
     <!-- 封面图 -->
     <image class="article-cover" src="{{article.cover}}" mode="aspectFill" />
 
@@ -10,10 +10,7 @@
       <text class="article-title">{{article.title}}</text>
       <view class="article-meta">
         <view class="meta-left">
-          <image class="meta-icon" src="/assets/icons/eye.png" mode="aspectFit" />
-          <text class="meta-item">{{formattedViews}}</text>
-          <image class="meta-icon gap" src="/assets/icons/star.png" mode="aspectFit" />
-          <text class="meta-item">{{formattedLikes}}</text>
+          <image class="meta-icon" src="{{isLiked ? '/assets/icons/heart-red.png' : '/assets/icons/heart.png'}}" mode="aspectFit" />
         </view>
         <text class="article-date">{{article.date}}</text>
       </view>
@@ -71,7 +68,7 @@
           <view
             wx:if="{{item.gain || item.note}}"
             class="step-toggle"
-            bindtap="onToggleStep"
+            catchtap="onToggleStep"
             data-idx="{{index}}"
           >
             <text>{{item.open ? '收起收益与备注' : '展开收益与备注'}}</text>
@@ -105,25 +102,58 @@
         <article-card article="{{item}}" show-category="{{false}}" bind:favorite="onCardFavorite" />
       </view>
     </view>
+
+    <!-- 双击点赞爆心 -->
+    <view wx:if="{{burstShow}}" class="like-burst" style="left:{{burstX}}px; top:{{burstY}}px;">
+      <image class="like-burst-icon" src="/assets/icons/heart-red.png" mode="aspectFit" />
+    </view>
   </view>
 
   <!-- 底部操作栏 -->
   <view wx:if="{{article}}" class="article-footer safe-bottom">
-    <view class="footer-item">
-      <image class="footer-icon" src="/assets/icons/heart.png" mode="aspectFit" />
-      <text class="footer-text">{{formattedLikes}}</text>
-    </view>
-    <view class="footer-item" bindtap="onFavorite" hover-class="hover-press">
+    <view class="footer-fav" bindtap="onFavorite" hover-class="hover-press">
       <image
         class="footer-icon {{starPop ? 'pop' : ''}}"
         src="{{isFavorite ? '/assets/icons/star-orange.png' : '/assets/icons/star.png'}}"
         mode="aspectFit"
       />
-      <text class="footer-text {{isFavorite ? 'active' : ''}}">{{isFavorite ? '已收藏' : '收藏'}}</text>
+      <text class="footer-fav-text {{isFavorite ? 'active' : ''}}">{{isFavorite ? '已收藏' : '收藏'}}</text>
     </view>
-    <button class="footer-action" open-type="share" hover-class="hover-press">
-      <image class="action-icon" src="/assets/icons/share-white.png" mode="aspectFit" />
-      <text>分享</text>
+    <button class="footer-btn footer-btn-solid" open-type="share" hover-class="hover-press">
+      <image class="footer-btn-icon" src="/assets/icons/share-white.png" mode="aspectFit" />
+      <text>转发好友</text>
     </button>
+    <view class="footer-btn footer-btn-outline" bindtap="onShowTimelineGuide" hover-class="hover-press">
+      <image class="footer-btn-icon" src="/assets/icons/moments-green.png" mode="aspectFit" />
+      <text>朋友圈</text>
+    </view>
+  </view>
+
+  <!-- 分享到朋友圈引导蒙层 -->
+  <view wx:if="{{showGuide}}" class="guide-mask" catchtap="onCloseGuide"></view>
+  <view wx:if="{{showGuide}}" class="guide-layer" catchtap="onCloseGuide">
+    <view class="guide-ring" style="top:{{ringTop}}px; left:{{ringLeft}}px; width:{{ringSize}}px; height:{{ringSize}}px;"></view>
+    <image
+      class="guide-arrow"
+      src="/assets/icons/arrow-curve-white.png"
+      mode="aspectFit"
+      style="top:{{arrowTop}}px; right:{{arrowRight}}px;"
+    />
+    <view class="guide-steps">
+      <view class="guide-step">
+        <view class="guide-num">1</view>
+        <text class="guide-step-text">点击右上角「···」</text>
+      </view>
+      <view class="guide-step">
+        <view class="guide-num">2</view>
+        <text class="guide-step-text">选择「分享到朋友圈」</text>
+      </view>
+    </view>
+    <view class="guide-tile">
+      <image class="guide-tile-icon" src="/assets/icons/moments-green.png" mode="aspectFit" />
+      <text class="guide-tile-text">分享到朋友圈</text>
+    </view>
+    <text class="guide-tagline">让朋友也能发现这份精彩</text>
+    <view class="guide-know">我知道了</view>
   </view>
 </view>

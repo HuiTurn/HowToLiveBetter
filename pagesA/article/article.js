@@ -1,5 +1,4 @@
 const { getArticleById, getCategoryById, getRelatedArticles } = require('../utils/content.js');
-const { formatCount } = require('../../utils/util.js');
 const app = getApp();
 
 /* 标签文案映射，与上游检索页 index.html 的 LABEL / LENS_LABEL 保持一致 */
@@ -28,10 +27,18 @@ Page({
     article: null,
     category: null,
     isFavorite: false,
+    isLiked: false,
+    burstShow: false,
+    burstX: 0,
+    burstY: 0,
     starPop: false,
-    relatedArticles: [],
-    formattedLikes: '',
-    formattedViews: ''
+    showGuide: false,
+    ringTop: 0,
+    ringLeft: 0,
+    ringSize: 0,
+    arrowTop: 0,
+    arrowRight: 0,
+    relatedArticles: []
   },
 
   onLoad(options) {
@@ -66,10 +73,37 @@ Page({
       article,
       category,
       isFavorite: favorites.includes(id),
-      relatedArticles: related,
-      formattedLikes: formatCount(article.likes),
-      formattedViews: formatCount(article.views)
+      isLiked: (wx.getStorageSync('likedArticles') || []).includes(id),
+      relatedArticles: related
     });
+  },
+
+  /* 双击正文点赞：300ms 内两次 tap 视为双击 */
+  onContentTap(e) {
+    const now = Date.now();
+    if (this._lastTap && now - this._lastTap < 300) {
+      this._lastTap = 0;
+      this.onDoubleLike(e);
+    } else {
+      this._lastTap = now;
+    }
+  },
+
+  onDoubleLike(e) {
+    const { article, isLiked } = this.data;
+    if (!article) return;
+
+    const p = (e.detail && e.detail.clientX != null) ? e.detail : ((e.touches && e.touches[0]) || {});
+    this.setData({ burstShow: true, burstX: p.clientX || 0, burstY: p.clientY || 0 });
+    setTimeout(() => this.setData({ burstShow: false }), 700);
+
+    if (isLiked) return;
+    const liked = wx.getStorageSync('likedArticles') || [];
+    if (liked.includes(article.id)) return;
+    liked.push(article.id);
+    wx.setStorageSync('likedArticles', liked);
+
+    this.setData({ isLiked: true });
   },
 
   /* 展开/收起某条目的「收益与备注」，只更新这一条的字段 */
@@ -103,16 +137,13 @@ Page({
     if (!article) return;
 
     const favorites = [...app.globalData.favorites];
-    let newLikes = article.likes;
 
     if (isFavorite) {
       const idx = favorites.indexOf(article.id);
       if (idx > -1) favorites.splice(idx, 1);
-      newLikes = Math.max(0, newLikes - 1);
       wx.showToast({ title: '已取消收藏', icon: 'none' });
     } else {
       favorites.push(article.id);
-      newLikes += 1;
       wx.showToast({ title: '已收藏', icon: 'none' });
     }
 
@@ -120,24 +151,41 @@ Page({
 
     this.setData({
       isFavorite: !isFavorite,
-      'article.likes': newLikes,
-      formattedLikes: formatCount(newLikes),
       starPop: true
     });
     setTimeout(() => this.setData({ starPop: false }), 320);
+  },
+
+  onShowTimelineGuide() {
+    const rect = wx.getMenuButtonBoundingClientRect();
+    const { windowWidth } = wx.getSystemInfoSync();
+    const centerX = rect.left + rect.height / 2;
+    const ringSize = rect.height + 12;
+    this.setData({
+      showGuide: true,
+      ringSize,
+      ringTop: rect.top + rect.height / 2 - ringSize / 2,
+      ringLeft: centerX - ringSize / 2,
+      arrowTop: rect.top + rect.height + 42,
+      arrowRight: windowWidth - centerX - 2
+    });
+  },
+
+  onCloseGuide() {
+    this.setData({ showGuide: false });
   },
 
   onShareAppMessage() {
     const { article } = this.data;
     if (!article) {
       return {
-        title: '人生指南 - 更好的生活，从每一个选择开始',
+        title: '更好的生活，从每一个选择开始丨人生指南库',
         path: '/pages/index/index',
         imageUrl: '/assets/images/splash.jpg'
       };
     }
     return {
-      title: article.title,
+      title: `${article.title}丨人生指南库`,
       path: `/pagesA/article/article?id=${article.id}`,
       imageUrl: article.cover
     };
@@ -145,9 +193,9 @@ Page({
 
   onShareTimeline() {
     const { article } = this.data;
-    if (!article) return { title: '人生指南' };
+    if (!article) return { title: '人生指南库' };
     return {
-      title: article.title,
+      title: `${article.title}丨人生指南库`,
       query: `id=${article.id}`,
       imageUrl: article.cover
     };

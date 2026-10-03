@@ -43,15 +43,6 @@
   margin-right: 10rpx;
 }
 
-.meta-icon.gap {
-  margin-left: 28rpx;
-}
-
-.meta-item {
-  font-size: 24rpx;
-  color: #b6bac0;
-}
-
 .article-date {
   font-size: 24rpx;
   color: #b6bac0;
@@ -336,19 +327,70 @@
   bottom: 0;
   left: 0;
   right: 0;
-  height: 112rpx;
   background: #ffffff;
   display: flex;
   align-items: center;
-  padding: 0 32rpx;
+  gap: 16rpx;
+  padding: 12rpx 32rpx;
   box-shadow: 0 -4rpx 24rpx rgba(31, 41, 36, 0.06);
   z-index: 100;
 }
 
-.footer-item {
+.footer-fav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 88rpx;
+  flex: none;
+}
+
+.footer-fav .footer-icon {
+  margin-right: 0;
+}
+
+.footer-fav-text {
+  font-size: 20rpx;
+  color: #8a8f98;
+  margin-top: 4rpx;
+}
+
+.footer-fav-text.active {
+  color: #fa8700;
+}
+
+.footer-btn {
+  flex: 1;
+  height: 80rpx;
+  border-radius: 40rpx;
   display: flex;
   align-items: center;
-  margin-right: 56rpx;
+  justify-content: center;
+  font-size: 30rpx;
+  font-weight: 500;
+}
+
+.footer-btn-solid {
+  background: #4ba264;
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-btn-solid::after {
+  border: none;
+}
+
+.footer-btn-outline {
+  background: #ffffff;
+  color: #4ba264;
+  border: 2rpx solid #4ba264;
+}
+
+.footer-btn-icon {
+  width: 32rpx;
+  height: 32rpx;
+  margin-right: 12rpx;
 }
 
 .footer-icon {
@@ -373,36 +415,150 @@
   }
 }
 
-.footer-text {
-  font-size: 26rpx;
-  color: #8a8f98;
+/* 分享到朋友圈引导：暗罩在导航之下（导航保持亮），内容层在导航之上 */
+.guide-mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 900;
 }
 
-.footer-text.active {
-  color: #fa8700;
+.guide-layer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1100;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.footer-action {
-  flex: 1;
-  height: 80rpx;
-  border-radius: 40rpx;
-  background: #4ba264;
-  color: #ffffff;
-  font-size: 30rpx;
-  font-weight: 500;
+.guide-ring {
+  position: absolute;
+  border: 4rpx solid #6ee7b0;
+  border-radius: 50%;
+  box-shadow: 0 0 24rpx rgba(110, 231, 176, 0.8);
+}
+
+.guide-arrow {
+  position: absolute;
+  width: 164rpx;
+  height: 164rpx;
+}
+
+.guide-steps {
+  margin-top: 320rpx;
+  width: 100%;
+  padding: 0 110rpx;
+}
+
+.guide-step {
+  display: flex;
+  align-items: center;
+  margin-bottom: 56rpx;
+}
+
+.guide-num {
+  flex: none;
+  width: 56rpx;
+  height: 56rpx;
+  border-radius: 50%;
+  background: #6ee7b0;
+  color: #0f2b1c;
+  font-size: 32rpx;
+  font-weight: 700;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0;
-  padding: 0;
+  margin-right: 28rpx;
 }
 
-.footer-action::after {
-  border: none;
+.guide-step-text {
+  font-size: 40rpx;
+  color: #ffffff;
+  font-weight: 700;
 }
 
-.action-icon {
-  width: 32rpx;
-  height: 32rpx;
-  margin-right: 12rpx;
+.guide-tile {
+  width: 250rpx;
+  background: #f7f8f7;
+  border-radius: 24rpx;
+  padding: 32rpx 0 24rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 8rpx 32rpx rgba(0, 0, 0, 0.25);
+}
+
+.guide-tile-icon {
+  width: 88rpx;
+  height: 88rpx;
+}
+
+.guide-tile-text {
+  font-size: 26rpx;
+  color: #1f2924;
+  margin-top: 16rpx;
+}
+
+.guide-tagline {
+  font-size: 28rpx;
+  color: rgba(255, 255, 255, 0.9);
+  margin-top: 40rpx;
+}
+
+.guide-know {
+  margin-top: 64rpx;
+  height: 88rpx;
+  padding: 0 88rpx;
+  border-radius: 44rpx;
+  border: 2rpx solid rgba(255, 255, 255, 0.9);
+  color: #ffffff;
+  font-size: 32rpx;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 双击点赞 */
+.like-burst {
+  position: fixed;
+  z-index: 300;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+}
+
+.like-burst-icon {
+  position: absolute;
+  left: -60rpx;
+  top: -60rpx;
+  width: 120rpx;
+  height: 120rpx;
+  animation: like-pop 0.7s ease forwards;
+}
+
+@keyframes like-pop {
+  0% {
+    transform: scale(0.4);
+    opacity: 0;
+  }
+  30% {
+    transform: scale(1.25);
+    opacity: 1;
+  }
+  60% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.1) translateY(-40rpx);
+    opacity: 0;
+  }
 }

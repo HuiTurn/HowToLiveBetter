@@ -28,7 +28,8 @@ Page({
   },
 
   onLoad(options) {
-    const { keyword, type } = options || {};
+    const { type } = options || {};
+    const keyword = options && options.keyword ? decodeURIComponent(options.keyword) : '';
     this.setData({
       statusBarHeight: getStatusBarHeight(),
       historyArticles: this.buildHistory()
@@ -160,7 +161,7 @@ Page({
   onShareAppMessage() {
     const { keyword } = this.data;
     return {
-      title: keyword ? `人生指南 - 搜索「${keyword}」` : '人生指南 - 搜索',
+      title: keyword ? `搜索「${keyword}」丨人生指南库` : '搜索丨人生指南库',
       path: `/pagesA/search/search?keyword=${encodeURIComponent(keyword)}`,
       imageUrl: '/assets/images/splash.jpg'
     };
@@ -169,7 +170,7 @@ Page({
   onShareTimeline() {
     const { keyword } = this.data;
     return {
-      title: keyword ? `人生指南 - 搜索「${keyword}」` : '人生指南 - 搜索',
+      title: keyword ? `搜索「${keyword}」丨人生指南库` : '搜索丨人生指南库',
       query: `keyword=${encodeURIComponent(keyword)}`,
       imageUrl: '/assets/images/splash.jpg'
     };
