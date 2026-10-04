@@ -1,6 +1,6 @@
 .help-page {
   min-height: 100vh;
-  background: #f6f7f6;
+  background: var(--color-bg);
 }
 
 .help-content {
@@ -8,17 +8,17 @@
 }
 
 .help-section {
-  background: #ffffff;
+  background: var(--color-surface);
   border-radius: 24rpx;
   padding: 32rpx;
   margin-bottom: 24rpx;
-  box-shadow: 0 4rpx 20rpx rgba(31, 41, 36, 0.04);
+  box-shadow: 0 4rpx 20rpx var(--color-shadow, rgba(31, 41, 36, 0.04));
 }
 
 .section-title {
   font-size: 30rpx;
   font-weight: 600;
-  color: #22262b;
+  color: var(--color-text);
   margin-bottom: 20rpx;
 }
 
@@ -36,7 +36,7 @@
   width: 10rpx;
   height: 10rpx;
   border-radius: 50%;
-  background: #4ba264;
+  background: var(--color-primary);
   margin: 14rpx 16rpx 0 0;
   flex-shrink: 0;
 }
@@ -44,7 +44,7 @@
 .line-text {
   flex: 1;
   font-size: 26rpx;
-  color: #4a4f56;
+  color: var(--color-text-secondary);
   line-height: 1.7;
 }
 
@@ -52,6 +52,6 @@
   margin-top: 8rpx;
   padding: 0 8rpx;
   font-size: 24rpx;
-  color: #8a8f98;
+  color: var(--color-text-secondary);
   line-height: 1.7;
 }

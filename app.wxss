@@ -29,7 +29,7 @@ view, text, image, scroll-view, button, input, textarea {
 
 /* 通用卡片 */
 .card {
-  background: #ffffff;
+  background: var(--color-surface);
   border-radius: 24rpx;
   box-shadow: 0 4rpx 24rpx rgba(0, 0, 0, 0.04);
 }

@@ -1,5 +1,5 @@
 <view class="page home-page">
-  <custom-nav title="人生指南库" align="left" bg-color="#f6f7f6" text-color="#22262b" shadow="{{false}}" />
+  <custom-nav title="人生指南库" align="left" bg-color="var(--color-bg, #f6f7f6)" text-color="var(--color-text, #22262b)" shadow="{{false}}" />
 
   <view class="home-content">
     <!-- 搜索框 -->

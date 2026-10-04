@@ -10,8 +10,8 @@ Component({
     align: { type: String, value: 'center' }, // center | left
     back: { type: Boolean, value: false },
     home: { type: Boolean, value: false },
-    bgColor: { type: String, value: '#ffffff' },
-    textColor: { type: String, value: '#2c3e50' },
+    bgColor: { type: String, value: 'var(--color-surface, #ffffff)' },
+    textColor: { type: String, value: 'var(--color-text, #22262b)' },
     fixed: { type: Boolean, value: true },
     placeholder: { type: Boolean, value: true },
     shadow: { type: Boolean, value: true }

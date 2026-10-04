@@ -1,5 +1,5 @@
 <view class="page category-detail-page">
-  <custom-nav title="" back="{{true}}" bg-color="#f6f7f6" text-color="#22262b" shadow="{{false}}" />
+  <custom-nav title="" back="{{true}}" bg-color="var(--color-bg, #f6f7f6)" text-color="var(--color-text, #22262b)" shadow="{{false}}" />
 
   <!-- 分类头部 -->
   <view wx:if="{{category}}" class="category-header" style="background: {{category.color}}0d;">

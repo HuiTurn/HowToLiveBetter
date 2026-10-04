@@ -1,6 +1,6 @@
 .article-page {
   min-height: 100vh;
-  background: #ffffff;
+  background: var(--color-surface);
   padding-bottom: 160rpx;
 }
 
@@ -9,7 +9,7 @@
   height: 340rpx;
   border-radius: 24rpx;
   margin: 8rpx 32rpx 0;
-  background: #eef0f0;
+  background: var(--color-placeholder);
 }
 
 /* 标题区 */
@@ -21,7 +21,7 @@
   display: block;
   font-size: 44rpx;
   font-weight: 700;
-  color: #22262b;
+  color: var(--color-text);
   line-height: 1.4;
   margin-bottom: 24rpx;
 }
@@ -45,18 +45,18 @@
 
 .article-date {
   font-size: 24rpx;
-  color: #b6bac0;
+  color: var(--color-text-tertiary);
 }
 
 /* 摘要框 */
 .article-summary-box {
   margin: 32rpx 32rpx 0;
   padding: 26rpx 30rpx;
-  background: #edf5ee;
-  border-left: 8rpx solid #4ba264;
+  background: var(--badge-green-bg);
+  border-left: 8rpx solid var(--color-primary);
   border-radius: 12rpx;
   font-size: 28rpx;
-  color: #4a7a58;
+  color: var(--badge-green-text);
   line-height: 1.7;
 }
 
@@ -69,7 +69,7 @@
   position: relative;
   font-size: 34rpx;
   font-weight: 700;
-  color: #22262b;
+  color: var(--color-text);
   margin-bottom: 28rpx;
   padding-left: 22rpx;
 }
@@ -82,12 +82,12 @@
   bottom: 8rpx;
   width: 8rpx;
   border-radius: 4rpx;
-  background: #4ba264;
+  background: var(--color-primary);
 }
 
 .article-paragraph {
   font-size: 30rpx;
-  color: #3a3f45;
+  color: var(--color-text);
   line-height: 1.9;
   margin-bottom: 32rpx;
   text-align: justify;
@@ -101,7 +101,7 @@
 .step-item {
   margin-bottom: 40rpx;
   padding-bottom: 36rpx;
-  border-bottom: 2rpx solid #f2f4f2;
+  border-bottom: 2rpx solid var(--color-surface-2);
 }
 
 .step-item:last-child {
@@ -120,7 +120,7 @@
   width: 44rpx;
   height: 44rpx;
   border-radius: 50%;
-  background: #4ba264;
+  background: var(--color-primary);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -140,7 +140,7 @@
   min-width: 0;
   font-size: 30rpx;
   font-weight: 600;
-  color: #22262b;
+  color: var(--color-text);
   line-height: 1.5;
 }
 
@@ -161,57 +161,57 @@
 }
 
 .badge-plain {
-  background: #f0f1f4;
-  color: #565a5f;
+  background: var(--color-surface-2);
+  color: var(--color-text-secondary);
 }
 
 /* 性价比档：作者判断，用蓝色系，与证据等级区分开 */
 .badge-ratio-3 {
-  background: #e9ecfb;
-  color: #3451b2;
+  background: var(--badge-blue-bg);
+  color: var(--badge-blue-text);
   font-weight: 600;
 }
 
 .badge-ratio-2 {
-  background: #e7f2ec;
-  color: #18794e;
+  background: var(--color-primary-light);
+  color: var(--badge-green-text);
   font-weight: 600;
 }
 
 .badge-ratio-1 {
-  background: #f0f1f4;
-  color: #565a5f;
+  background: var(--color-surface-2);
+  color: var(--color-text-secondary);
   font-weight: 600;
 }
 
 /* 证据等级：A 绿 / B 橙 / C 灰 */
 .badge-grade-A {
-  background: #e7f2ec;
-  color: #18794e;
+  background: var(--color-primary-light);
+  color: var(--badge-green-text);
   font-weight: 600;
 }
 
 .badge-grade-B {
-  background: #faf3e3;
-  color: #915930;
+  background: var(--badge-yellow-bg);
+  color: var(--badge-yellow-text);
   font-weight: 600;
 }
 
 .badge-grade-C {
-  background: #f0f1f4;
-  color: #565a5f;
+  background: var(--color-surface-2);
+  color: var(--color-text-secondary);
   font-weight: 600;
 }
 
 .badge-danger {
-  background: #fdecec;
-  color: #b8272c;
+  background: var(--badge-red-bg);
+  color: var(--badge-red-text);
   font-weight: 600;
 }
 
 .badge-warn {
-  background: #faf3e3;
-  color: #915930;
+  background: var(--badge-yellow-bg);
+  color: var(--badge-yellow-text);
   font-weight: 600;
 }
 
@@ -219,11 +219,11 @@
 .step-plain {
   margin: 18rpx 0 0 62rpx;
   padding: 16rpx 22rpx;
-  border-left: 5rpx solid #4ba264;
-  background: #f2f8f3;
+  border-left: 5rpx solid var(--color-primary);
+  background: var(--color-primary-light);
   border-radius: 0 10rpx 10rpx 0;
   font-size: 28rpx;
-  color: #2f3a33;
+  color: var(--color-text);
   line-height: 1.75;
 }
 
@@ -235,7 +235,7 @@
 .step-more {
   margin: 16rpx 0 0 62rpx;
   padding: 22rpx 24rpx;
-  background: #fafbfa;
+  background: var(--color-surface-2);
   border-radius: 12rpx;
 }
 
@@ -252,7 +252,7 @@
   width: 78rpx;
   flex-shrink: 0;
   font-size: 24rpx;
-  color: #8a8f98;
+  color: var(--color-text-secondary);
   line-height: 1.75;
 }
 
@@ -260,12 +260,12 @@
   flex: 1;
   min-width: 0;
   font-size: 25rpx;
-  color: #5a6069;
+  color: var(--color-text-secondary);
   line-height: 1.75;
 }
 
 .row-note {
-  color: #8a8f98;
+  color: var(--color-text-secondary);
 }
 
 /* 展开 / 收起收益与备注 */
@@ -274,7 +274,7 @@
   align-items: center;
   margin: 18rpx 0 0 62rpx;
   font-size: 24rpx;
-  color: #4ba264;
+  color: var(--color-primary);
 }
 
 .step-toggle-arrow {
@@ -282,7 +282,7 @@
   height: 0;
   border-left: 9rpx solid transparent;
   border-right: 9rpx solid transparent;
-  border-top: 10rpx solid #4ba264;
+  border-top: 10rpx solid var(--color-primary);
   margin-left: 10rpx;
   transition: transform 0.2s;
 }
@@ -295,20 +295,20 @@
 .source-section {
   margin-top: 48rpx;
   padding-top: 32rpx;
-  border-top: 2rpx solid #ececec;
+  border-top: 2rpx solid var(--color-border);
 }
 
 .source-label {
   display: block;
   font-size: 26rpx;
-  color: #8a8f98;
+  color: var(--color-text-secondary);
   margin-bottom: 12rpx;
 }
 
 .source-text {
   display: block;
   font-size: 26rpx;
-  color: #3a3f45;
+  color: var(--color-text);
   line-height: 1.5;
 }
 
@@ -327,7 +327,7 @@
   bottom: 0;
   left: 0;
   right: 0;
-  background: #ffffff;
+  background: var(--color-surface);
   display: flex;
   align-items: center;
   gap: 16rpx;
@@ -355,12 +355,12 @@
 
 .footer-fav-text {
   font-size: 20rpx;
-  color: #8a8f98;
+  color: var(--color-text-secondary);
   margin-top: 4rpx;
 }
 
 .footer-fav-text.active {
-  color: #fa8700;
+  color: var(--color-orange);
 }
 
 .footer-btn {
@@ -375,7 +375,7 @@
 }
 
 .footer-btn-solid {
-  background: #4ba264;
+  background: var(--color-primary);
   color: #ffffff;
   margin: 0;
   padding: 0;
@@ -386,9 +386,9 @@
 }
 
 .footer-btn-outline {
-  background: #ffffff;
-  color: #4ba264;
-  border: 2rpx solid #4ba264;
+  background: var(--color-surface);
+  color: var(--color-primary);
+  border: 2rpx solid var(--color-primary);
 }
 
 .footer-btn-icon {
@@ -490,7 +490,7 @@
 
 .guide-tile {
   width: 250rpx;
-  background: #f7f8f7;
+  background: var(--color-surface-2);
   border-radius: 24rpx;
   padding: 32rpx 0 24rpx;
   display: flex;
@@ -506,7 +506,7 @@
 
 .guide-tile-text {
   font-size: 26rpx;
-  color: #1f2924;
+  color: var(--color-text);
   margin-top: 16rpx;
 }
 

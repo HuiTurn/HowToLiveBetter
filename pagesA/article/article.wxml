@@ -1,5 +1,5 @@
 <view class="page article-page">
-  <custom-nav title="" back="{{true}}" bg-color="#ffffff" text-color="#22262b" shadow="{{false}}" />
+  <custom-nav title="" back="{{true}}" bg-color="var(--color-surface, #ffffff)" text-color="var(--color-text, #22262b)" shadow="{{false}}" />
 
   <view wx:if="{{article}}" class="article-content" bindtap="onContentTap">
     <!-- 封面图 -->

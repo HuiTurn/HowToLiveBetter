@@ -23,5 +23,5 @@
 
 .no-more {
   font-size: 24rpx;
-  color: #b2bec3;
+  color: var(--color-text-secondary, #8a8f98);
 }

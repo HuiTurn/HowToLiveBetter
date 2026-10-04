@@ -22,6 +22,22 @@ page {
   --color-white: #ffffff;
   --color-border: #ececec;
 
+  /* 表面色：卡片、弹层、次要底色、占位底 —— 深浅模式下语义不同，勿直接写死 */
+  --color-surface: #ffffff;
+  --color-surface-2: #f7f8f7;
+  --color-placeholder: #eef0f0;
+  --color-shadow: rgba(31, 41, 36, 0.04);
+
+  /* 徽章：证据等级 / 成本档用的成对底色 + 文字色 */
+  --badge-green-bg: #edf5ee;
+  --badge-green-text: #4a7a58;
+  --badge-blue-bg: #e9ecfb;
+  --badge-blue-text: #3451b2;
+  --badge-yellow-bg: #faf3e3;
+  --badge-yellow-text: #915930;
+  --badge-red-bg: #fdecec;
+  --badge-red-text: #b8272c;
+
   /* 字号 */
   --font-size-xs: 22rpx;
   --font-size-sm: 24rpx;
@@ -45,4 +61,46 @@ page {
   --radius-lg: 24rpx;
   --radius-xl: 32rpx;
   --radius-round: 999px;
+}
+
+/* 深色模式：只覆盖颜色变量，页面里凡是引用 var() 的地方自动跟随系统切换 */
+@media (prefers-color-scheme: dark) {
+  page {
+    /* 品牌色在深底上需要提亮，否则发灰 */
+    --color-primary: #5cb476;
+    --color-primary-light: rgba(92, 180, 118, 0.18);
+    --color-primary-dark: #7cc795;
+
+    /* 辅助色同步提亮 */
+    --color-blue: #56a9ef;
+    --color-orange: #ffa53d;
+    --color-red: #e35b62;
+    --color-yellow: #f0b95f;
+    --color-purple: #b48ef2;
+    --color-teal: #4f83ea;
+    --color-pink: #e35b62;
+
+    --color-text: #e8eaed;
+    --color-text-secondary: #9aa1a9;
+    --color-text-tertiary: #6b7280;
+    --color-bg: #15171a;
+    --color-bg-dark: #0f1113;
+    --color-white: #ffffff;
+    --color-border: #2b3038;
+
+    --color-surface: #1c2025;
+    --color-surface-2: #242930;
+    --color-placeholder: #2a2e34;
+    --color-shadow: rgba(0, 0, 0, 0.36);
+
+    /* 徽章改成半透明底 + 亮字，避免深色卡片上出现刺眼的浅色块 */
+    --badge-green-bg: rgba(92, 180, 118, 0.18);
+    --badge-green-text: #7cc795;
+    --badge-blue-bg: rgba(79, 131, 234, 0.18);
+    --badge-blue-text: #8fb0f7;
+    --badge-yellow-bg: rgba(240, 185, 95, 0.18);
+    --badge-yellow-text: #f0b95f;
+    --badge-red-bg: rgba(227, 91, 98, 0.18);
+    --badge-red-text: #e35b62;
+  }
 }

@@ -30,16 +30,16 @@
   },
   "window": {
     "navigationStyle": "custom",
-    "backgroundColor": "#f6f7f6",
-    "backgroundTextStyle": "dark",
+    "backgroundColor": "@bgColor",
+    "backgroundTextStyle": "@bgTxtStyle",
     "enablePullDownRefresh": false
   },
   "tabBar": {
     "custom": false,
-    "color": "#8f9498",
-    "selectedColor": "#4ba264",
-    "backgroundColor": "#ffffff",
-    "borderStyle": "white",
+    "color": "@tabFontColor",
+    "selectedColor": "@tabSelectedColor",
+    "backgroundColor": "@tabBgColor",
+    "borderStyle": "@tabBorderStyle",
     "list": [
       {
         "pagePath": "pages/home/home",
@@ -75,6 +75,8 @@
     "empty-state": "/components/empty-state/empty-state"
   },
   "sitemapLocation": "sitemap.json",
+  "darkmode": true,
+  "themeLocation": "theme.json",
   "lazyCodeLoading": "requiredComponents",
   "style": "v2",
   "requiredBackgroundModes": []

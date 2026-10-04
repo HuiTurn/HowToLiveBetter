@@ -1,6 +1,6 @@
 .home-page {
   min-height: 100vh;
-  background: #f6f7f6;
+  background: var(--color-bg);
 }
 
 .home-content {
@@ -16,7 +16,7 @@
   display: flex;
   align-items: center;
   height: 76rpx;
-  background: #eef0f0;
+  background: var(--color-placeholder);
   border-radius: 999rpx;
   padding: 0 28rpx;
 }
@@ -31,11 +31,11 @@
 .search-input {
   flex: 1;
   font-size: 28rpx;
-  color: #22262b;
+  color: var(--color-text);
 }
 
 .search-input::placeholder {
-  color: #b6bac0;
+  color: var(--color-text-tertiary);
 }
 
 .clear-btn {
@@ -64,7 +64,7 @@
 }
 
 .no-result-text {
-  color: #8a8f98;
+  color: var(--color-text-secondary);
   font-size: 28rpx;
 }
 
@@ -72,8 +72,8 @@
   margin-top: 24rpx;
   padding: 16rpx 36rpx;
   border-radius: 40rpx;
-  background: #eef7f0;
-  color: #4ba264;
+  background: var(--color-primary-light);
+  color: var(--color-primary);
   font-size: 27rpx;
 }
 
@@ -86,13 +86,13 @@
 }
 
 .result-more-text {
-  color: #4ba264;
+  color: var(--color-primary);
   font-size: 26rpx;
 }
 
 .result-more-arrow {
   margin-left: 6rpx;
-  color: #4ba264;
+  color: var(--color-primary);
   font-size: 30rpx;
 }
 
@@ -110,8 +110,8 @@
   align-items: center;
   padding: 28rpx 24rpx;
   border-radius: 24rpx;
-  background: #ffffff;
-  box-shadow: 0 4rpx 20rpx rgba(31, 41, 36, 0.04);
+  background: var(--color-surface);
+  box-shadow: 0 4rpx 20rpx var(--color-shadow, rgba(31, 41, 36, 0.04));
   margin-bottom: 24rpx;
 }
 
@@ -140,14 +140,14 @@
   display: block;
   font-size: 30rpx;
   font-weight: 600;
-  color: #22262b;
+  color: var(--color-text);
   margin-bottom: 8rpx;
 }
 
 .category-desc {
   display: block;
   font-size: 22rpx;
-  color: #9aa0a6;
+  color: var(--color-text-secondary);
   line-height: 1.4;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -190,7 +190,7 @@
 
 .quote-title {
   font-size: 40rpx;
-  color: #4a524e;
+  color: var(--color-text);
   line-height: 1.55;
   font-weight: 500;
   letter-spacing: 2rpx;
@@ -198,7 +198,7 @@
 
 .quote-author-line {
   font-size: 26rpx;
-  color: #7b8480;
+  color: var(--color-text-secondary);
   margin-top: 28rpx;
   letter-spacing: 1rpx;
 }

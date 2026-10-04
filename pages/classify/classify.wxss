@@ -1,6 +1,6 @@
 .classify-page {
   min-height: 100vh;
-  background: #f6f7f6;
+  background: var(--color-bg);
 }
 
 /* 分类标签 */
@@ -15,7 +15,7 @@
   margin-right: 48rpx;
   padding: 8rpx 0 16rpx;
   font-size: 30rpx;
-  color: #8a8f98;
+  color: var(--color-text-secondary);
   transition: color 0.2s ease;
 }
 
@@ -24,7 +24,7 @@
 }
 
 .sub-tab.active {
-  color: #4ba264;
+  color: var(--color-primary);
   font-weight: 600;
 }
 
@@ -37,7 +37,7 @@
   width: 48rpx;
   height: 6rpx;
   border-radius: 3rpx;
-  background: #4ba264;
+  background: var(--color-primary);
 }
 
 /* 列表 */

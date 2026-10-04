@@ -15,14 +15,14 @@
 
 .empty-text {
   font-size: 28rpx;
-  color: #7f8c8d;
+  color: var(--color-text-secondary, #8a8f98);
   margin-bottom: 32rpx;
 }
 
 .empty-btn {
   padding: 16rpx 48rpx;
   border-radius: 32rpx;
-  background: #4ba264;
+  background: var(--color-primary, #4ba264);
   color: #ffffff;
   font-size: 28rpx;
 }

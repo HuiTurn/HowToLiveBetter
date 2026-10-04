@@ -7,8 +7,8 @@
 .spinner {
   width: 32rpx;
   height: 32rpx;
-  border: 4rpx solid #e8e8e8;
-  border-top-color: #4ba264;
+  border: 4rpx solid var(--color-border, #ececec);
+  border-top-color: var(--color-primary, #4ba264);
   border-radius: 50%;
   animation: spin 0.8s linear infinite;
 }
@@ -16,7 +16,7 @@
 .loading-text {
   margin-left: 12rpx;
   font-size: 24rpx;
-  color: #7f8c8d;
+  color: var(--color-text-secondary, #8a8f98);
 }
 
 .loading-small .spinner {

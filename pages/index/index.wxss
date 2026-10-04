@@ -105,7 +105,7 @@
   width: 76%;
   height: 88rpx;
   border-radius: 44rpx;
-  background: #4ba264;
+  background: var(--color-primary);
   color: #ffffff;
   font-size: 32rpx;
   font-weight: 500;

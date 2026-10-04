@@ -1,6 +1,6 @@
 .search-page {
   min-height: 100vh;
-  background: #ffffff;
+  background: var(--color-surface);
 }
 
 .search-header {
@@ -9,7 +9,7 @@
   left: 0;
   right: 0;
   z-index: 100;
-  background: #ffffff;
+  background: var(--color-surface);
 }
 
 .search-bar {
@@ -24,7 +24,7 @@
   align-items: center;
   height: 76rpx;
   padding: 0 28rpx;
-  background: #eef0f0;
+  background: var(--color-placeholder);
   border-radius: 999rpx;
 }
 
@@ -37,11 +37,11 @@
 .search-input {
   flex: 1;
   font-size: 28rpx;
-  color: #22262b;
+  color: var(--color-text);
 }
 
 .input-placeholder {
-  color: #b6bac0;
+  color: var(--color-text-tertiary);
 }
 
 .clear-icon {
@@ -54,26 +54,26 @@
 .search-cancel {
   margin-left: 24rpx;
   font-size: 28rpx;
-  color: #4ba264;
+  color: var(--color-primary);
 }
 
 .result-tabs {
   display: flex;
   gap: 48rpx;
   padding: 0 32rpx;
-  border-bottom: 1rpx solid #ececec;
+  border-bottom: 1rpx solid var(--color-border);
 }
 
 .tab-item {
   position: relative;
   padding: 20rpx 0 16rpx;
   font-size: 28rpx;
-  color: #8a8f98;
+  color: var(--color-text-secondary);
   transition: color 0.2s ease;
 }
 
 .tab-item.active {
-  color: #4ba264;
+  color: var(--color-primary);
   font-weight: 600;
 }
 
@@ -89,7 +89,7 @@
 }
 
 .tab-item.active .tab-underline {
-  background: #4ba264;
+  background: var(--color-primary);
 }
 
 .search-content {
@@ -103,7 +103,7 @@
 .section-title {
   font-size: 30rpx;
   font-weight: 600;
-  color: #22262b;
+  color: var(--color-text);
   margin-bottom: 24rpx;
 }
 
@@ -115,10 +115,10 @@
 
 .tag-item {
   padding: 12rpx 28rpx;
-  background: #eef0f0;
+  background: var(--color-placeholder);
   border-radius: 30rpx;
   font-size: 26rpx;
-  color: #4a4f56;
+  color: var(--color-text-secondary);
 }
 
 .history-list {
@@ -137,14 +137,14 @@
   width: 96rpx;
   height: 96rpx;
   border-radius: 12rpx;
-  background: #eef0f0;
+  background: var(--color-placeholder);
   flex-shrink: 0;
 }
 
 .history-title {
   flex: 1;
   font-size: 28rpx;
-  color: #22262b;
+  color: var(--color-text);
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -162,9 +162,9 @@
   display: flex;
   align-items: center;
   padding: 28rpx 24rpx;
-  background: #ffffff;
+  background: var(--color-surface);
   border-radius: 24rpx;
-  box-shadow: 0 4rpx 20rpx rgba(31, 41, 36, 0.04);
+  box-shadow: 0 4rpx 20rpx var(--color-shadow, rgba(31, 41, 36, 0.04));
   margin-bottom: 24rpx;
 }
 
@@ -194,12 +194,12 @@
 .category-name {
   font-size: 30rpx;
   font-weight: 600;
-  color: #22262b;
+  color: var(--color-text);
 }
 
 .category-desc {
   font-size: 24rpx;
-  color: #8a8f98;
+  color: var(--color-text-secondary);
   margin-top: 6rpx;
   overflow: hidden;
   text-overflow: ellipsis;
