@@ -131,6 +131,10 @@
   background: #4ba264;
 }
 
+.dl-btn.disabled {
+  opacity: 0.5;
+}
+
 .dl-btn::after {
   border: none;
 }

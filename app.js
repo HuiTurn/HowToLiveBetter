@@ -2,7 +2,9 @@ App({
   globalData: {
     userInfo: null,
     favorites: [],
-    readHistory: []
+    readHistory: [],
+    // 本次启动内是否已看完激励视频解锁下载链接（不落盘，下次启动重新解锁）
+    downloadUnlocked: false
   },
 
   onLaunch() {
