@@ -1,6 +1,6 @@
 .about-page {
   min-height: 100vh;
-  background: #f6f7f6;
+  background: var(--color-bg);
 }
 
 .about-content {
@@ -25,28 +25,28 @@
   margin-top: 24rpx;
   font-size: 38rpx;
   font-weight: 700;
-  color: #22262b;
+  color: var(--color-text);
   letter-spacing: 2rpx;
 }
 
 .about-version {
   margin-top: 8rpx;
   font-size: 24rpx;
-  color: #8a8f98;
+  color: var(--color-text-secondary);
 }
 
 .about-card {
-  background: #ffffff;
+  background: var(--color-surface);
   border-radius: 24rpx;
   padding: 32rpx;
   margin-bottom: 24rpx;
-  box-shadow: 0 4rpx 20rpx rgba(31, 41, 36, 0.04);
+  box-shadow: 0 4rpx 20rpx var(--color-shadow, rgba(31, 41, 36, 0.04));
 }
 
 .about-intro {
   display: block;
   font-size: 27rpx;
-  color: #4a4f56;
+  color: var(--color-text-secondary);
   line-height: 1.8;
   margin-bottom: 20rpx;
 }
@@ -59,7 +59,7 @@
   display: flex;
   align-items: flex-start;
   padding: 22rpx 0;
-  border-bottom: 1rpx solid #ececec;
+  border-bottom: 1rpx solid var(--color-border);
 }
 
 .row.last {
@@ -74,13 +74,15 @@
 .row-label {
   width: 140rpx;
   font-size: 26rpx;
-  color: #8a8f98;
+  color: var(--color-text-secondary);
   flex-shrink: 0;
 }
 
 .row-value {
   flex: 1;
   font-size: 26rpx;
-  color: #22262b;
+  color: var(--color-text);
   line-height: 1.6;
+  /* 仓库名为长串英文，放不下时允许在任意字符处换行，避免溢出 */
+  word-break: break-all;
 }

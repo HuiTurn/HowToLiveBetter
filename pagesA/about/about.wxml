@@ -1,5 +1,5 @@
 <view class="page about-page">
-  <custom-nav title="关于我们" back="{{true}}" bg-color="#f6f7f6" text-color="#22262b" shadow="{{false}}" />
+  <custom-nav title="关于我们" back="{{true}}" bg-color="var(--color-bg, #f6f7f6)" text-color="var(--color-text, #22262b)" shadow="{{false}}" />
 
   <view class="about-content">
     <view class="about-hero">
@@ -18,9 +18,13 @@
     </view>
 
     <view class="about-card">
+      <view class="row" bindtap="onCopyRepo">
+        <text class="row-label">项目源码</text>
+        <text class="row-value">HuiTurn/HowToLiveBetter</text>
+      </view>
       <view class="row" bindtap="onOpenSource">
         <text class="row-label">数据来源</text>
-        <text class="row-value">HowToLiveBetter 开源项目（点击复制链接）</text>
+        <text class="row-value">eternity4719/HowToLiveBetter</text>
       </view>
       <view class="row">
         <text class="row-label">隐私说明</text>
