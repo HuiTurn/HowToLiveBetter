@@ -39,4 +39,32 @@
       </block>
     </view>
   </view>
+
+  <!-- 添加到桌面引导蒙层（与朋友圈引导同款） -->
+  <view wx:if="{{showGuide}}" class="guide-mask" catchtap="onCloseGuide"></view>
+  <view wx:if="{{showGuide}}" class="guide-layer" catchtap="onCloseGuide">
+    <view class="guide-ring" style="top:{{ringTop}}px; left:{{ringLeft}}px; width:{{ringSize}}px; height:{{ringSize}}px;"></view>
+    <image
+      class="guide-arrow"
+      src="/assets/icons/arrow-curve-white.png"
+      mode="aspectFit"
+      style="top:{{arrowTop}}px; right:{{arrowRight}}px;"
+    />
+    <view class="guide-steps">
+      <view class="guide-step">
+        <view class="guide-num">1</view>
+        <text class="guide-step-text">点击右上角「···」</text>
+      </view>
+      <view class="guide-step">
+        <view class="guide-num">2</view>
+        <text class="guide-step-text">{{guideStep2}}</text>
+      </view>
+    </view>
+    <view class="guide-tile">
+      <image class="guide-tile-icon" src="/assets/icons/menu-desktop.png" mode="aspectFit" />
+      <text class="guide-tile-text">{{guideTileText}}</text>
+    </view>
+    <text class="guide-tagline">{{guideTagline}}</text>
+    <view class="guide-know">我知道了</view>
+  </view>
 </view>

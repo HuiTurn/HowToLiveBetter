@@ -109,3 +109,114 @@
   opacity: 0.4;
   flex-shrink: 0;
 }
+
+/* 添加到桌面引导：与「分享到朋友圈」同款，暗罩在导航之下，内容层在导航之上 */
+.guide-mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 900;
+}
+
+.guide-layer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1100;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.guide-ring {
+  position: absolute;
+  border: 4rpx solid #6ee7b0;
+  border-radius: 50%;
+  box-shadow: 0 0 24rpx rgba(110, 231, 176, 0.8);
+}
+
+.guide-arrow {
+  position: absolute;
+  width: 164rpx;
+  height: 164rpx;
+}
+
+.guide-steps {
+  margin-top: 320rpx;
+  width: 100%;
+  padding: 0 110rpx;
+}
+
+.guide-step {
+  display: flex;
+  align-items: center;
+  margin-bottom: 56rpx;
+}
+
+.guide-num {
+  flex: none;
+  width: 56rpx;
+  height: 56rpx;
+  border-radius: 50%;
+  background: #6ee7b0;
+  color: #0f2b1c;
+  font-size: 32rpx;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 28rpx;
+}
+
+.guide-step-text {
+  font-size: 40rpx;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.guide-tile {
+  width: 250rpx;
+  background: #f7f8f7;
+  border-radius: 24rpx;
+  padding: 32rpx 0 24rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 8rpx 32rpx rgba(0, 0, 0, 0.25);
+}
+
+.guide-tile-icon {
+  width: 88rpx;
+  height: 88rpx;
+}
+
+.guide-tile-text {
+  font-size: 26rpx;
+  color: #1f2924;
+  margin-top: 16rpx;
+}
+
+.guide-tagline {
+  font-size: 28rpx;
+  color: rgba(255, 255, 255, 0.9);
+  margin-top: 40rpx;
+}
+
+.guide-know {
+  margin-top: 64rpx;
+  height: 88rpx;
+  padding: 0 88rpx;
+  border-radius: 44rpx;
+  border: 2rpx solid rgba(255, 255, 255, 0.9);
+  color: #ffffff;
+  font-size: 32rpx;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

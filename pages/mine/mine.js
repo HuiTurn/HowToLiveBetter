@@ -1,10 +1,16 @@
 const app = getApp();
-const { getSystemInfo } = require('../../utils/util.js');
 
 const DEFAULT_USER = {
   nickname: '人生探索者',
   avatar: '/assets/images/avatar.jpg',
   bio: '更好的生活，从现在开始'
+};
+
+// 右上角「···」菜单里的入口名称，各平台统一为「添加到桌面」
+const DESKTOP_GUIDE = {
+  step2: '选择「添加到桌面」',
+  tileText: '添加到桌面',
+  tagline: '之后从手机桌面一键打开，随时查阅'
 };
 
 Page({
@@ -21,7 +27,17 @@ Page({
       { id: 'feedback', icon: 'chat', label: '反馈建议' }
     ],
     favoriteCount: 0,
-    historyCount: 0
+    historyCount: 0,
+    // 添加到桌面引导蒙层
+    showGuide: false,
+    guideStep2: '',
+    guideTileText: '',
+    guideTagline: '',
+    ringTop: 0,
+    ringLeft: 0,
+    ringSize: 0,
+    arrowTop: 0,
+    arrowRight: 0
   },
 
   onLoad() {
@@ -70,7 +86,7 @@ Page({
 
     if (item.id === 'opensource') {
       wx.setClipboardData({
-        data: 'https://github.com/eternity4719/HowToLiveBetter',
+        data: 'https://github.com/HuiTurn/HowToLiveBetter',
         success: () => {
           wx.showToast({ title: '项目链接已复制', icon: 'none' });
         }
@@ -89,7 +105,7 @@ Page({
     }
 
     if (item.id === 'desktop') {
-      this.addToDesktop();
+      this.showDesktopGuide();
       return;
     }
 
@@ -104,35 +120,35 @@ Page({
     }
   },
 
-  addToDesktop() {
-    if (getSystemInfo().platform === 'ios') {
-      wx.showModal({
-        title: '添加到桌面',
-        content: 'iOS 系统限制，小程序无法添加到桌面。可点右上角「···」选择「添加到我的小程序」，之后在微信首页下拉就能快速找到。',
-        showCancel: false,
-        confirmText: '知道了'
-      });
-      return;
-    }
+  // 与「分享到朋友圈」同款：高亮右上角胶囊，两步引导
+  showDesktopGuide() {
+    const { windowWidth } = wx.getSystemInfoSync();
 
-    if (typeof wx.addToDesktop === 'function') {
-      wx.addToDesktop({
-        success: () => wx.showToast({ title: '已添加到桌面', icon: 'success' }),
-        fail: () => this.showDesktopGuide()
-      });
-      return;
-    }
+    // 兜底：个别环境取不到胶囊位置
+    const rect = (wx.getMenuButtonBoundingClientRect && wx.getMenuButtonBoundingClientRect()) || {
+      top: 48,
+      height: 32,
+      left: windowWidth - 96
+    };
 
-    this.showDesktopGuide();
+    const centerX = rect.left + rect.height / 2;
+    const ringSize = rect.height + 12;
+
+    this.setData({
+      showGuide: true,
+      guideStep2: DESKTOP_GUIDE.step2,
+      guideTileText: DESKTOP_GUIDE.tileText,
+      guideTagline: DESKTOP_GUIDE.tagline,
+      ringSize,
+      ringTop: rect.top + rect.height / 2 - ringSize / 2,
+      ringLeft: centerX - ringSize / 2,
+      arrowTop: rect.top + rect.height + 42,
+      arrowRight: windowWidth - centerX - 2
+    });
   },
 
-  showDesktopGuide() {
-    wx.showModal({
-      title: '添加到桌面',
-      content: '点右上角「···」按钮，选择「添加到桌面」，即可把本小程序放到手机桌面，下次一键打开。',
-      showCancel: false,
-      confirmText: '知道了'
-    });
+  onCloseGuide() {
+    this.setData({ showGuide: false });
   },
 
   onShareAppMessage() {
