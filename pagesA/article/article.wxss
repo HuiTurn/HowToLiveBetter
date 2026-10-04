@@ -332,6 +332,10 @@
   align-items: center;
   gap: 16rpx;
   padding: 12rpx 32rpx;
+  /* 按钮下方留出避开屏幕圆角/小横条的基础空白，再叠加系统安全区高度。
+     iPhone 的 safe-area-inset-bottom 本身就接近手势条高度，基础值按最小可用取，避免底栏显得空 */
+  padding-bottom: calc(12rpx + constant(safe-area-inset-bottom));
+  padding-bottom: calc(12rpx + env(safe-area-inset-bottom));
   box-shadow: 0 -4rpx 24rpx rgba(31, 41, 36, 0.06);
   z-index: 100;
 }

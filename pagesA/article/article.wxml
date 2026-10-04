@@ -125,7 +125,7 @@
     </button>
     <view class="footer-btn footer-btn-outline" bindtap="onShowTimelineGuide" hover-class="hover-press">
       <image class="footer-btn-icon" src="/assets/icons/moments-green.png" mode="aspectFit" />
-      <text>朋友圈</text>
+      <text>转发到朋友圈</text>
     </view>
   </view>
 
