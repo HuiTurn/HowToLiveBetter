@@ -1,5 +1,5 @@
 <view class="page download-page">
-  <custom-nav title="离线下载" back="{{true}}" bg-color="#f6f7f6" text-color="#22262b" shadow="{{false}}" />
+  <custom-nav title="离线下载" back="{{true}}" bg-color="var(--color-bg, #f6f7f6)" text-color="var(--color-text, #22262b)" shadow="{{false}}" />
 
   <view class="download-content">
     <!-- 说明 -->
@@ -23,6 +23,7 @@
 
     <!-- 已解锁：下载链接 -->
     <view wx:else class="dl-card">
+      <view wx:if="{{adFailed}}" class="dl-adfail">广告暂时不可用，已直接为你提供下载链接</view>
       <view class="dl-row">
         <text class="dl-row-label">下载链接</text>
         <text class="dl-row-value dl-link" user-select="{{true}}">{{url}}</text>
