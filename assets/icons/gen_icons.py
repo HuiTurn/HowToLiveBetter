@@ -399,6 +399,25 @@ def ic_arrow_curve(color):
     return im
 
 
+def ic_official_account(color):
+    """公众号：圆角卡片 + 人像 + 右下角对话气泡。"""
+    im = canvas()
+    d = ImageDraw.Draw(im)
+    rrect(d, (12, 12, 68, 68), 12, color)
+    # 人像：头 + 肩
+    circle_fill(d, 38, 32, 10, color)
+    im = rotate_paste(im, half_ellipse(None, (20, 46, 56, 74), color, mode='fill'))
+    d = ImageDraw.Draw(im)
+    # 右下角气泡
+    rrect_fill(d, (42, 40, 70, 60), 6, color)
+    poly(d, [(50, 60), (46, 70), (58, 60)], color, fill=color)
+    # 气泡内三条横线
+    line(d, [(48, 47), (64, 47)], WHITE, width=int(3 * SS))
+    line(d, [(48, 53), (60, 53)], WHITE, width=int(3 * SS))
+    # 气泡盖住人像右肩后补一下卡片右下角描边
+    return im
+
+
 ICONS = [
     ('heart.png', lambda c: ic_heart(c), GRAY),
     ('heart-red.png', lambda c: ic_heart(c, filled=True), RED),
@@ -421,6 +440,7 @@ ICONS = [
     ('moments-green.png', lambda c: ic_moments(c), GREEN),
     ('arrow-curve-white.png', lambda c: ic_arrow_curve(c), WHITE),
     ('menu-chat.png', lambda c: ic_chat(c), SLATE),
+    ('menu-account.png', lambda c: ic_official_account(c), GREEN),
     ('home.png', lambda c: ic_home(c), GRAY),
     ('home-active.png', lambda c: ic_home(c, filled=True), GREEN),
     ('category.png', lambda c: ic_grid(c), GRAY),

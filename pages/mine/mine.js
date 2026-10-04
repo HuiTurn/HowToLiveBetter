@@ -13,6 +13,14 @@ const DESKTOP_GUIDE = {
   tagline: '之后从手机桌面一键打开，随时查阅'
 };
 
+// 作者公众号名称（复制搜索用）
+const OFFICIAL_ACCOUNT = 'HuiTurn';
+
+// 公众号原始 ID，形如 gh_xxxxxxxxxxxx（公众号后台「设置 → 账号详情」可查）。
+// 填上后点「去关注」会直接打开公众号主页；留空则回退为复制名称引导搜索。
+// 注意：跳转的公众号需与小程序为同主体或关联主体，否则会失败并回退。
+const OFFICIAL_ACCOUNT_ID = 'gh_5af98cf72f8e';
+
 Page({
   data: {
     userInfo: { ...DEFAULT_USER },
@@ -23,11 +31,15 @@ Page({
       { id: 'help', icon: 'info', label: '使用说明' },
       { id: 'download', icon: 'download', label: '离线下载' },
       { id: 'about', icon: 'book', label: '关于我们' },
-      { id: 'opensource', icon: 'github', label: '开源项目' },
       { id: 'feedback', icon: 'chat', label: '反馈建议' }
     ],
     favoriteCount: 0,
     historyCount: 0,
+    // 公众号关注：官方组件加载成功后隐藏兜底卡片
+    accountName: OFFICIAL_ACCOUNT,
+    // 能否直接打开公众号主页（需原始 ID + 基础库 3.7.10+）
+    canJump: !!OFFICIAL_ACCOUNT_ID && typeof wx.openOfficialAccountProfile === 'function',
+    oaReady: false,
     // 添加到桌面引导蒙层
     showGuide: false,
     guideStep2: '',
@@ -84,16 +96,6 @@ Page({
     const { item } = e.currentTarget.dataset;
     if (!item) return;
 
-    if (item.id === 'opensource') {
-      wx.setClipboardData({
-        data: 'https://github.com/HuiTurn/HowToLiveBetter',
-        success: () => {
-          wx.showToast({ title: '项目链接已复制', icon: 'none' });
-        }
-      });
-      return;
-    }
-
     if (item.id === 'favorites') {
       wx.switchTab({ url: '/pages/favorite/favorite' });
       return;
@@ -149,6 +151,41 @@ Page({
 
   onCloseGuide() {
     this.setData({ showGuide: false });
+  },
+
+  // official-account 组件加载成功：隐藏兜底卡片，用官方关注组件
+  onOaLoad() {
+    this.setData({ oaReady: true });
+  },
+
+  // 组件不可用（未关联公众号 / 未在后台开启 / 场景值不支持等），保留兜底卡片即可
+  onOaError(e) {
+    console.warn('公众号关注组件不可用', e && e.detail);
+  },
+
+  // 优先直接打开公众号主页，失败/不支持时回退为复制名称引导搜索
+  onFollowAuthor() {
+    if (!this.data.canJump) {
+      this.copyAccountName();
+      return;
+    }
+
+    wx.openOfficialAccountProfile({
+      username: OFFICIAL_ACCOUNT_ID,
+      fail: (err) => {
+        console.warn('打开公众号主页失败，回退复制名称', err);
+        this.copyAccountName();
+      }
+    });
+  },
+
+  copyAccountName() {
+    wx.setClipboardData({
+      data: OFFICIAL_ACCOUNT,
+      success: () => {
+        wx.showToast({ title: '公众号名已复制，去微信搜索关注', icon: 'none' });
+      }
+    });
   },
 
   onShareAppMessage() {

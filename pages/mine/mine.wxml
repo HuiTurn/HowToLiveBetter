@@ -1,5 +1,5 @@
 <view class="page mine-page">
-  <custom-nav title="我的" align="left" bg-color="#f6f7f6" text-color="#22262b" shadow="{{false}}" />
+  <custom-nav title="我的" align="left" bg-color="var(--color-bg, #f6f7f6)" text-color="var(--color-text, #22262b)" shadow="{{false}}" />
 
   <view class="mine-content">
     <!-- 用户信息 -->
@@ -37,6 +37,20 @@
           <image class="menu-arrow" src="/assets/icons/chevron.png" mode="aspectFit" />
         </view>
       </block>
+    </view>
+
+    <!-- 关注作者公众号：官方组件仅扫码/最近使用等场景展示，其余场景显示下方兜底卡片 -->
+    <view class="follow-section">
+      <official-account bind:load="onOaLoad" bind:error="onOaError"></official-account>
+      <view wx:if="{{!oaReady}}" class="follow-card" hover-class="hover-press" bindtap="onFollowAuthor">
+        <image class="follow-icon" src="/assets/icons/menu-account.png" mode="aspectFit" />
+        <view class="follow-info">
+          <text class="follow-title">关注作者公众号</text>
+          <text wx:if="{{canJump}}" class="follow-desc">打开公众号主页，点关注即可</text>
+          <text wx:else class="follow-desc">复制「{{accountName}}」，在微信搜索关注</text>
+        </view>
+        <view class="follow-btn">去关注</view>
+      </view>
     </view>
   </view>
 

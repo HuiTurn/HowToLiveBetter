@@ -1,6 +1,6 @@
 .mine-page {
   min-height: 100vh;
-  background: #f6f7f6;
+  background: var(--color-bg);
 }
 
 .mine-content {
@@ -11,11 +11,11 @@
 .user-card {
   display: flex;
   align-items: center;
-  background: #ffffff;
+  background: var(--color-surface);
   border-radius: 24rpx;
   padding: 40rpx 32rpx;
   margin-bottom: 24rpx;
-  box-shadow: 0 4rpx 20rpx rgba(31, 41, 36, 0.04);
+  box-shadow: 0 4rpx 20rpx var(--color-shadow, rgba(31, 41, 36, 0.04));
 }
 
 .user-avatar {
@@ -24,7 +24,7 @@
   border-radius: 50%;
   margin-right: 24rpx;
   flex-shrink: 0;
-  background: #eef0f0;
+  background: var(--color-placeholder);
 }
 
 .user-info {
@@ -36,14 +36,14 @@
   display: block;
   font-size: 36rpx;
   font-weight: 700;
-  color: #22262b;
+  color: var(--color-text);
   margin-bottom: 12rpx;
 }
 
 .user-bio {
   display: block;
   font-size: 26rpx;
-  color: #8a8f98;
+  color: var(--color-text-secondary);
 }
 
 .user-edit {
@@ -56,17 +56,17 @@
 
 /* 菜单 */
 .menu-list {
-  background: #ffffff;
+  background: var(--color-surface);
   border-radius: 24rpx;
   padding: 0 32rpx;
-  box-shadow: 0 4rpx 20rpx rgba(31, 41, 36, 0.04);
+  box-shadow: 0 4rpx 20rpx var(--color-shadow, rgba(31, 41, 36, 0.04));
 }
 
 .menu-item {
   display: flex;
   align-items: center;
   padding: 34rpx 0;
-  border-bottom: 1rpx solid #ececec;
+  border-bottom: 1rpx solid var(--color-border);
 }
 
 .menu-item:last-child {
@@ -100,7 +100,7 @@
 .menu-label {
   flex: 1;
   font-size: 30rpx;
-  color: #22262b;
+  color: var(--color-text);
 }
 
 .menu-arrow {
@@ -108,6 +108,56 @@
   height: 28rpx;
   opacity: 0.4;
   flex-shrink: 0;
+}
+
+/* 关注作者公众号 */
+.follow-section {
+  margin-top: 24rpx;
+}
+
+.follow-card {
+  display: flex;
+  align-items: center;
+  background: var(--color-surface);
+  border-radius: 24rpx;
+  padding: 32rpx;
+  box-shadow: 0 4rpx 20rpx var(--color-shadow, rgba(31, 41, 36, 0.04));
+}
+
+.follow-icon {
+  width: 72rpx;
+  height: 72rpx;
+  margin-right: 24rpx;
+  flex-shrink: 0;
+}
+
+.follow-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.follow-title {
+  display: block;
+  font-size: 30rpx;
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: 8rpx;
+}
+
+.follow-desc {
+  display: block;
+  font-size: 24rpx;
+  color: var(--color-text-secondary);
+}
+
+.follow-btn {
+  flex-shrink: 0;
+  padding: 14rpx 32rpx;
+  border-radius: 999rpx;
+  background: var(--color-primary);
+  color: #ffffff;
+  font-size: 26rpx;
+  font-weight: 600;
 }
 
 /* 添加到桌面引导：与「分享到朋友圈」同款，暗罩在导航之下，内容层在导航之上 */
@@ -181,7 +231,7 @@
 
 .guide-tile {
   width: 250rpx;
-  background: #f7f8f7;
+  background: var(--color-surface-2);
   border-radius: 24rpx;
   padding: 32rpx 0 24rpx;
   display: flex;
@@ -197,7 +247,7 @@
 
 .guide-tile-text {
   font-size: 26rpx;
-  color: #1f2924;
+  color: var(--color-text);
   margin-top: 16rpx;
 }
 
