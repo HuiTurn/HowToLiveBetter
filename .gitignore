@@ -13,3 +13,9 @@ project.private.config.json
 
 # 本地自动化临时脚本
 .autotmp/
+
+# 未使用的引导图（代码无引用，占主包体积）
+vibe_images/
+
+# Cloudflare Workers 本地构建缓存
+.wrangler/
