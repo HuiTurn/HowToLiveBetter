@@ -16,7 +16,6 @@ on:
 permissions:
   contents: write        # commit README count refresh
   issues: write
-  administration: write  # update repo About description
 
 jobs:
   sync:
@@ -106,7 +105,10 @@ jobs:
       - name: Refresh counts in README and About
         continue-on-error: true
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # A PAT with repo scope: PATCHing the repo About description is an
+          # admin endpoint the workflow GITHUB_TOKEN cannot reach. Git push of
+          # README uses the checkout-persisted GITHUB_TOKEN (contents: write).
+          GH_TOKEN: ${{ secrets.HTLB_SYNC_TOKEN }}
         run: |
           set -e
           META=$(curl -sS --max-time 15 "$API/api/meta")
