@@ -68,7 +68,10 @@ const outIdx = process.argv.indexOf('--out');
  * 微信打包会把目录里所有文件算进包体积，JSON 产出留在里面会顶爆主包。
  * CI 里 OUT 在 checkout 目录外也能写（同一工作区），路径不受影响。
  */
-const OUT_DIR = path.resolve(REPO, '..', outIdx > 0 ? process.argv[outIdx + 1] : 'dist/api');
+// 默认产到仓库上一级 dist/api（不进小程序包）；传 --out X 时 X 相对仓库根解析（CI 用 dist/api，落在 checkout 目录内供 curl 读取）
+const OUT_DIR = outIdx > 0
+  ? path.resolve(REPO, process.argv[outIdx + 1])
+  : path.resolve(REPO, '..', 'dist/api');
 
 /* 成本分权重与性价比档，数值必须与上游 index.html 的 COST_W / e.ratio 两行一致 */
 const COST_W = { money: { '0': 0, '少': 1, '多': 2 }, time: { '少': 0, '中': 1, '多': 2 }, will: { '否': 0, '些': 1, '是': 2 } };
