@@ -108,6 +108,137 @@
   color: var(--color-orange);
 }
 
+/* 文件清单：每行一个格式，右侧独立复制按钮 */
+.dl-file {
+  display: flex;
+  align-items: center;
+  padding: 24rpx 0;
+  border-bottom: 1rpx solid var(--color-border);
+}
+
+.dl-file:last-of-type {
+  border-bottom: none;
+}
+
+.dl-file-main {
+  flex: 1;
+  min-width: 0;
+}
+
+.dl-file-head {
+  display: flex;
+  align-items: center;
+  gap: 16rpx;
+}
+
+.dl-file-badge {
+  padding: 4rpx 18rpx;
+  border-radius: 8rpx;
+  font-size: 22rpx;
+  font-weight: 600;
+  color: var(--color-primary);
+  background: rgba(75, 162, 100, 0.1);
+}
+
+/* 次要信息用 secondary 而非 tertiary：深色模式下 tertiary 过暗，小字看不清 */
+.dl-file-size {
+  font-size: 24rpx;
+  color: var(--color-text-secondary);
+}
+
+.dl-file-desc {
+  display: block;
+  margin-top: 10rpx;
+  font-size: 26rpx;
+  color: var(--color-text);
+  line-height: 1.5;
+}
+
+.dl-file-name {
+  display: block;
+  margin-top: 4rpx;
+  font-size: 22rpx;
+  color: var(--color-text-secondary);
+  word-break: break-all;
+}
+
+.dl-file-act {
+  flex-shrink: 0;
+  margin-left: 20rpx;
+  padding: 12rpx 28rpx;
+  border-radius: 999rpx;
+  font-size: 24rpx;
+  color: var(--color-primary);
+  border: 1rpx solid var(--color-border);
+}
+
+.dl-file-act:active {
+  background: rgba(75, 162, 100, 0.08);
+}
+
+/* 下载中：进度数字，占固定宽度避免按钮宽度跳动 */
+.dl-file-busy {
+  min-width: 130rpx;
+  text-align: center;
+  color: var(--color-text-secondary);
+}
+
+/* 加速源和直链都失败后露出的备用地址 */
+.dl-fallback {
+  padding: 16rpx 20rpx;
+  margin-bottom: 16rpx;
+  border-radius: 12rpx;
+  background: var(--color-surface-2);
+}
+
+.dl-fallback-hint {
+  display: block;
+  font-size: 22rpx;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  margin-bottom: 10rpx;
+}
+
+.dl-fallback-row {
+  display: flex;
+  align-items: center;
+}
+
+/* 备用链接行：和上一行拉开一点，视觉上区分主次 */
+.dl-fallback-row-sub {
+  margin-top: 14rpx;
+  padding-top: 14rpx;
+  border-top: 1rpx dashed var(--color-border);
+}
+
+.dl-fallback-url {
+  flex: 1;
+  min-width: 0;
+  font-size: 22rpx;
+  color: var(--color-text-secondary);
+  word-break: break-all;
+  line-height: 1.5;
+}
+
+.dl-fallback-copy {
+  flex-shrink: 0;
+  margin-left: 16rpx;
+  font-size: 24rpx;
+  color: var(--color-primary);
+}
+
+/* 微信原始报错：字号更小、颜色更浅，只是排查用，不打扰正常阅读 */
+.dl-fallback-err {
+  display: block;
+  margin-top: 10rpx;
+  padding-top: 10rpx;
+  border-top: 1rpx solid var(--color-border);
+  font-size: 20rpx;
+  color: var(--color-text-tertiary);
+  word-break: break-all;
+  line-height: 1.5;
+}
+
 .dl-tip {
   display: block;
   margin-top: 20rpx;

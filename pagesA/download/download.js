@@ -1,15 +1,21 @@
 const app = getApp();
-const { REWARDED_AD_UNIT_ID, DOWNLOAD_URL, DOWNLOAD_PASSWORD } = require('../../utils/download-config.js');
+const { REWARDED_AD_UNIT_ID, DOWNLOAD_FILES } = require('../../utils/download-config.js');
 
 Page({
   data: {
-    url: DOWNLOAD_URL,
-    password: DOWNLOAD_PASSWORD,
+    files: DOWNLOAD_FILES,
     unlocked: false,
     // 广告拉取中，用于页面上的等待态文案
     loading: false,
     // 广告没播成而放行的，页面上给一句说明
-    adFailed: false
+    adFailed: false,
+    // 正在下载的文件 key + 进度（0-100）
+    downloadingKey: '',
+    progress: 0,
+    // 两个源都下载失败的文件，露出 GitHub 地址让用户复制
+    failedKey: '',
+    // 失败时微信返回的原始错误，显示出来方便定位（如 url not in domain list）
+    lastErrMsg: ''
   },
 
   onLoad() {
@@ -92,10 +98,162 @@ Page({
     this.playAd();
   },
 
-  onCopyLink() {
-    // 链接 + 提取码一起复制，方便用户到浏览器粘贴
+  /*
+   * 单个文件的主操作：三个格式都支持真下载（加速源优先，失败退回 GitHub 直链）。
+   * 下载完成后的交付方式按格式分：
+   *   - PDF → 直接打开预览
+   *   - EPUB / HTML → 小程序打不开，转发给文件传输助手让用户存到本地
+   */
+  onFileAction(e) {
+    const index = Number(e.currentTarget.dataset.index);
+    const file = this.data.files[index];
+    if (!file || this.data.downloadingKey) return;
+
+    this.startDownload(file);
+  },
+
+  /* 下载：加速源优先，失败自动退回 GitHub 直链，都失败才露出地址 */
+  startDownload(file) {
+    const sources = [file.mirrorUrl, file.url].filter(Boolean);
+    this.lastErr = '';
+    this.setData({ downloadingKey: file.key, progress: 0, failedKey: '', lastErrMsg: '' });
+    this.downloadFrom(file, sources, 0);
+  },
+
+  downloadFrom(file, sources, i) {
+    const url = sources[i];
+    if (!url) {
+      this.onAllSourcesFailed(file);
+      return;
+    }
+
+    const task = wx.downloadFile({
+      url,
+      success: res => {
+        if (res.statusCode !== 200) {
+          this.lastErr = 'HTTP ' + res.statusCode;
+          this.downloadFrom(file, sources, i + 1);
+          return;
+        }
+        this.setData({ downloadingKey: '', progress: 0 });
+        this.openFile(file, res.tempFilePath);
+      },
+      fail: err => {
+        // 记下来，全失败时据此判断是不是域名白名单没配
+        this.lastErr = (err && err.errMsg) || '';
+        console.warn('downloadFile 失败', url, this.lastErr);
+
+        /* 域名白名单报错时，下一个源若是境外域名（github.com / githubusercontent），
+           它同样不可能进白名单，再试一次只会让用户多等一个超时 */
+        const next = sources[i + 1];
+        if (this.isDomainErr() && next && /githubusercontent\.com|github\.com/.test(next)) {
+          this.onAllSourcesFailed(file);
+          return;
+        }
+        this.downloadFrom(file, sources, i + 1);
+      }
+    });
+
+    if (task && task.onProgressUpdate) {
+      task.onProgressUpdate(r => this.setData({ progress: r.progress }));
+    }
+  },
+
+  /*
+   * 所有源都拿不到文件。真机上九成是 downloadFile 合法域名没配 dl.aipalnet.cn
+   * （微信报错形如 "downloadFile:fail url not in domain list"）。
+   * 这种情况再点多少次都不会成功，所以直接把链接复制到剪贴板，别让用户白等。
+   */
+  onAllSourcesFailed(file) {
+    this.setData({
+      downloadingKey: '',
+      progress: 0,
+      failedKey: file.key,
+      lastErrMsg: this.lastErr || ''
+    });
+    this.copy(file.copyUrl || file.url, file.label);
+    wx.showToast({
+      title: this.isDomainErr() ? '未配置下载域名，链接已复制' : '下载失败，链接已复制',
+      icon: 'none',
+      duration: 3000
+    });
+  },
+
+  // 微信域名白名单报错形如 "downloadFile:fail url not in domain list"
+  isDomainErr() {
+    return /domain|合法域名/i.test(this.lastErr || '');
+  },
+
+  openFile(file, filePath) {
+    /* PDF：直接打开，右上角可「用其他应用打开」存到本地 */
+    if (file.openType) {
+      wx.openDocument({
+        filePath,
+        fileType: file.openType,
+        showMenu: true,
+        fail: () => {
+          this.setData({ failedKey: file.key });
+          wx.showToast({ title: '无法打开，已显示备用链接', icon: 'none' });
+        }
+      });
+      return;
+    }
+
+    /* EPUB / HTML：转发给文件传输助手，用户存下来就能导入阅读器 */
+    if (!wx.shareFileMessage) {
+      // 低版本基础库没有这个 API，退回复制链接
+      this.copy(file.copyUrl || file.url, file.label);
+      return;
+    }
+
+    const isDevtools =
+      (wx.getDeviceInfo ? wx.getDeviceInfo().platform : '') === 'devtools';
+
+    wx.shareFileMessage({
+      filePath,
+      fileName: file.name,
+      fail: err => {
+        const msg = (err && err.errMsg) || '';
+        if (msg.includes('cancel')) return; // 用户自己取消，不算失败
+
+        /* 开发者工具不支持 shareFileMessage（真机正常），不能当失败处理，
+           否则会出现"明明 200 了还提示下载失败"的误报 */
+        if (isDevtools || msg.includes('not support') || msg.includes('not yet')) {
+          this.copy(file.copyUrl || file.url, file.label);
+          wx.showToast({ title: '请用真机体验下载，链接已复制备用', icon: 'none' });
+          return;
+        }
+
+        this.setData({ failedKey: file.key });
+        wx.showToast({ title: '无法发送，已显示备用链接', icon: 'none' });
+      }
+    });
+  },
+
+  copy(url, label) {
     wx.setClipboardData({
-      data: `${DOWNLOAD_URL}\n提取码：${DOWNLOAD_PASSWORD}`,
+      data: url,
+      success: () => wx.showToast({ title: `${label} 链接已复制`, icon: 'none' })
+    });
+  },
+
+  // 兜底块第一行：复制首选链接（加速源）
+  onCopyFallback(e) {
+    const file = this.data.files[Number(e.currentTarget.dataset.index)];
+    if (file) this.copy(file.copyUrl || file.url, file.label);
+  },
+
+  // 兜底块第二行：加速源也不通时才用的 GitHub 备用
+  onCopyBackup(e) {
+    const file = this.data.files[Number(e.currentTarget.dataset.index)];
+    if (file) this.copy(file.url, file.label);
+  },
+
+  // 底部按钮：三个格式一起复制（优先加速源）
+  onCopyLink() {
+    const text = this.data.files.map(f => `${f.label}：${f.copyUrl || f.url}`).join('\n');
+    wx.setClipboardData({
+      data: text,
       success: () => wx.showToast({ title: '链接已复制，请到浏览器打开', icon: 'none' })
     });
   },

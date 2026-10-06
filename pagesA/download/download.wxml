@@ -21,18 +21,44 @@
       <text wx:else class="dl-lock-text">下载前需观看一段激励视频，看完即可解锁下载链接。</text>
     </view>
 
-    <!-- 已解锁：下载链接 -->
+    <!-- 已解锁：文件清单（GitHub Release 直链，固定 tag 自动跟进最新版本） -->
     <view wx:else class="dl-card">
       <view wx:if="{{adFailed}}" class="dl-adfail">广告暂时不可用，已直接为你提供下载链接</view>
-      <view class="dl-row">
-        <text class="dl-row-label">下载链接</text>
-        <text class="dl-row-value dl-link" user-select="{{true}}">{{url}}</text>
-      </view>
-      <view class="dl-row last">
-        <text class="dl-row-label">提取码</text>
-        <text class="dl-row-value dl-code" user-select="{{true}}">{{password}}</text>
-      </view>
-      <text class="dl-tip">复制后请到手机浏览器打开链接，输入提取码即可下载。</text>
+
+      <block wx:for="{{files}}" wx:key="key">
+        <view class="dl-file">
+          <view class="dl-file-main">
+            <view class="dl-file-head">
+              <text class="dl-file-badge">{{item.label}}</text>
+              <text class="dl-file-size">{{item.size}}</text>
+            </view>
+            <text class="dl-file-desc">{{item.desc}}</text>
+            <text class="dl-file-name" user-select="{{true}}">{{item.name}}</text>
+          </view>
+
+          <!-- 下载中：显示进度，避免大文件看起来像卡住了 -->
+          <view wx:if="{{downloadingKey === item.key}}" class="dl-file-act dl-file-busy">{{progress}}%</view>
+          <view wx:else class="dl-file-act" data-index="{{index}}" bindtap="onFileAction">下载</view>
+        </view>
+
+        <!-- 加速源和直链都失败时，才把 GitHub 地址露出来 -->
+        <view wx:if="{{failedKey === item.key}}" class="dl-fallback">
+          <text class="dl-fallback-hint">小程序内下载未成功，链接已复制，请在浏览器打开：</text>
+          <view class="dl-fallback-row">
+            <text class="dl-fallback-url" user-select="{{true}}">{{item.copyUrl}}</text>
+            <text class="dl-fallback-copy" data-index="{{index}}" bindtap="onCopyFallback">复制</text>
+          </view>
+          <!-- 加速源也不通时（Worker 挂了），再给一条 GitHub 备用 -->
+          <view wx:if="{{item.mirrorUrl}}" class="dl-fallback-row dl-fallback-row-sub">
+            <text class="dl-fallback-url" user-select="{{true}}">{{item.url}}</text>
+            <text class="dl-fallback-copy" data-index="{{index}}" bindtap="onCopyBackup">复制</text>
+          </view>
+          <!-- 微信原始报错，方便定位（常见：url not in domain list = 下载域名没配） -->
+          <text wx:if="{{lastErrMsg}}" class="dl-fallback-err">{{lastErrMsg}}</text>
+        </view>
+      </block>
+
+      <text class="dl-tip">PDF 下载后直接打开（右上角可保存到本地）；EPUB、HTML 下载后转发给文件传输助手即可保存。下载优先走加速源，失败会自动改用 GitHub 直链。</text>
     </view>
   </view>
 
