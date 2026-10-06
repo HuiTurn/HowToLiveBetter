@@ -22,7 +22,10 @@ const arg = (name, def) => {
   const i = process.argv.indexOf(`--${name}`);
   return i > 0 ? process.argv[i + 1] : def;
 };
-const DIR = path.resolve(REPO, '..', arg('dir', 'dist/api'));   // 与 sync --emit-json 的默认产出位置一致（仓库上一级）
+// 默认在仓库上一级 dist/api（与 sync --emit-json 默认一致）；传 --dir X 时 X 相对仓库根解析（CI 用 dist/api，落在 checkout 目录内）
+const DIR = arg('dir')
+  ? path.resolve(REPO, arg('dir'))
+  : path.resolve(REPO, '..', 'dist/api');
 const PREV_STEPS = Number(arg('prev-steps', 0) || 0);
 
 const fail = (msg) => { console.error('✗ ' + msg); process.exitCode = 1; };
