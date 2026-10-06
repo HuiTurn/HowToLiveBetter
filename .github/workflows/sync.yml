@@ -34,7 +34,7 @@ jobs:
       - name: 拉取上游
         run: |
           git remote add upstream https://github.com/eternity4719/HowToLiveBetter.git 2>/dev/null || true
-          git fetch upstream main --depth=0
+          git fetch upstream main
           UPSTREAM_SHA=$(git rev-parse upstream/main)
           echo "UPSTREAM_SHA=$UPSTREAM_SHA" >> $GITHUB_ENV
           echo "上游 HEAD：${UPSTREAM_SHA:0:7}"
@@ -107,4 +107,7 @@ jobs:
           gh issue create \
             --title "数据同步失败 $(date -u +%F' '%H:%M)Z" \
             --body "工作流 ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }} 失败，未发布。请检查上游 md 格式是否变动或 /api/publish 是否可用。" \
-            --label "sync-failure" || echo "开 issue 失败（可能没有 sync-failure 标签），忽略"
+            --label "sync-failure" 2>/dev/null || \
+          gh issue create \
+            --title "数据同步失败 $(date -u +%F' '%H:%M)Z" \
+            --body "工作流 ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }} 失败，未发布。请检查上游 md 格式是否变动或 /api/publish 是否可用。"
