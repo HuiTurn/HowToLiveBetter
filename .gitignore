@@ -19,3 +19,9 @@ vibe_images/
 
 # Cloudflare Workers 本地构建缓存
 .wrangler/
+
+# --emit-json 产出的接口数据（体积大且每次同步都变，只在 CI 里临时生成）
+dist/
+
+# 后端 Cloudflare Worker 源码（本地部署，不上 GitHub）
+tools/mp-jump/
