@@ -26,7 +26,7 @@
       <block wx:if="{{article.content.length > 0}}">
         <view class="section-title">为什么要这样做？</view>
         <view wx:for="{{article.content}}" wx:key="index" class="article-paragraph">
-          {{item}}
+          <text wx:for="{{item}}" wx:for-item="run" wx:key="index" class="{{run.b ? 'para-bold' : ''}}">{{run.t}}</text>
         </view>
       </block>
 
@@ -78,11 +78,11 @@
           <view wx:if="{{item.open}}" class="step-more">
             <view wx:if="{{item.gain}}" class="step-row">
               <text class="row-k">收益</text>
-              <text class="row-v">{{item.gain}}</text>
+              <text class="row-v"><block wx:for="{{item.gainRuns}}" wx:for-item="run" wx:key="index"><text class="{{run.b ? 'row-bold' : ''}}">{{run.t}}</text></block></text>
             </view>
             <view wx:if="{{item.note}}" class="step-row">
               <text class="row-k">备注</text>
-              <text class="row-v row-note">{{item.note}}</text>
+              <text class="row-v row-note"><block wx:for="{{item.noteRuns}}" wx:for-item="run" wx:key="index"><text class="{{run.b ? 'row-bold' : ''}}">{{run.t}}</text></block></text>
             </view>
           </view>
         </view>

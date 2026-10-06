@@ -10,6 +10,19 @@ const COST_LABEL = {
 };
 const RATIO_KEY = { '极高': 3, '高': 2, '一般': 1 };
 
+/*
+ * 上游 md 的 **加粗** 标记：拆成 runs 交给 WXML 用嵌套 <text> 渲染，
+ * 奇数下标是加粗段。数据文件保留原始星号（全文检索要能匹配原文），
+ * 只在渲染这一层解析。
+ */
+const parseRuns = (text) => {
+  if (!text || text.indexOf('**') === -1) return [{ t: text || '' }];
+  return text
+    .split('**')
+    .map((seg, i) => ({ t: seg, b: i % 2 === 1 }))
+    .filter(run => run.t !== '');
+};
+
 /* 把数据层的档位翻成可直接渲染的文案，顺带挂上折叠状态 */
 const decorateSteps = steps => (steps || []).map(s => {
   const m = s.meta || {};
@@ -18,7 +31,9 @@ const decorateSteps = steps => (steps || []).map(s => {
     open: false,
     lensText: LENS_LABEL[m.lens] || m.lens || '',
     costTags: [COST_LABEL.money[m.money], COST_LABEL.time[m.time], COST_LABEL.will[m.will]].filter(Boolean),
-    ratioKey: RATIO_KEY[m.ratio] || 1
+    ratioKey: RATIO_KEY[m.ratio] || 1,
+    gainRuns: parseRuns(s.gain),
+    noteRuns: parseRuns(s.note)
   };
 });
 
@@ -56,7 +71,12 @@ Page({
       wx.showToast({ title: '文章不存在', icon: 'none' });
       return;
     }
-    const article = { ...raw, steps: decorateSteps(raw.steps) };
+    const article = {
+      ...raw,
+      steps: decorateSteps(raw.steps),
+      /* 导语段里的 **加粗** 同样在渲染层解析 */
+      content: (raw.content || []).map(parseRuns)
+    };
 
     const category = getCategoryById(article.categoryId);
     const favorites = app.globalData.favorites || [];

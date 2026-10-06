@@ -93,6 +93,11 @@
   text-align: justify;
 }
 
+/* 导语段里上游 md 的 **加粗** 片段 */
+.para-bold {
+  font-weight: 600;
+}
+
 /* 步骤列表 */
 .steps-section {
   margin-top: 48rpx;
@@ -266,6 +271,11 @@
 
 .row-note {
   color: var(--color-text-secondary);
+}
+
+/* 收益/备注里上游 md 的 **加粗** 片段 */
+.row-bold {
+  font-weight: 600;
 }
 
 /* 展开 / 收起收益与备注 */
