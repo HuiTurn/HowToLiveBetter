@@ -117,6 +117,13 @@
   color: var(--color-text-tertiary);
 }
 
+/* 「离线下载」行右侧的数据更新时间：小字、次要色，顶对齐到主标题行，避免与两行说明挤在一起 */
+/* 「离线下载」行第三行：数据更新时间（并入描述区，右对齐的旧方案已废弃） */
+.menu-data-updated {
+  display: block;
+  margin-top: 4rpx;
+}
+
 .menu-arrow {
   width: 28rpx;
   height: 28rpx;

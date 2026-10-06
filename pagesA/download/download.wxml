@@ -15,10 +15,13 @@
       </view>
     </view>
 
-    <!-- 未解锁：等待 / 重试提示（进页面会自动拉起激励视频） -->
+    <!-- 未解锁：引导用户自己点按钮看视频（不自动播放） -->
     <view wx:if="{{!unlocked}}" class="dl-card dl-lock">
-      <text wx:if="{{loading}}" class="dl-lock-text">正在准备激励视频，看完即可获得下载链接…</text>
-      <text wx:else class="dl-lock-text">下载前需观看一段激励视频，看完即可解锁下载链接。</text>
+      <text wx:if="{{loading}}" class="dl-lock-text">正在准备激励视频…</text>
+      <block wx:else>
+        <text class="dl-lock-text">下载前需看一段激励视频，看完即解锁全部下载链接。</text>
+        <text class="dl-lock-hint">点下方「看视频解锁下载」按钮开始，不会自动播放。</text>
+      </block>
     </view>
 
     <!-- 已解锁：文件清单（GitHub Release 直链，固定 tag 自动跟进最新版本） -->
@@ -64,7 +67,7 @@
 
   <!-- 底部操作栏 -->
   <view class="dl-footer">
-    <button wx:if="{{!unlocked}}" class="dl-btn" disabled="{{loading}}" bindtap="onRetryAd">{{loading ? '视频加载中…' : '重新观看视频解锁'}}</button>
+    <button wx:if="{{!unlocked}}" class="dl-btn" disabled="{{loading}}" bindtap="onWatchAd">{{loading ? '视频加载中…' : '看视频解锁下载'}}</button>
     <button wx:else class="dl-btn" bindtap="onCopyLink">复制下载链接</button>
   </view>
 </view>

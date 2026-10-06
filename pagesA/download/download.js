@@ -1,5 +1,6 @@
 const app = getApp();
-const { REWARDED_AD_UNIT_ID, DOWNLOAD_FILES } = require('../../utils/download-config.js');
+const { DOWNLOAD_FILES } = require('../../utils/download-config.js');
+const { playAd, preloadAd } = require('../../utils/rewarded-ad.js');
 
 Page({
   data: {
@@ -19,55 +20,31 @@ Page({
   },
 
   onLoad() {
-    // 本次启动已经解锁过，直接展示链接，不再重复播放广告
+    // 已从「我的」页看完视频进来（或本次启动已解锁），直接展示链接
     if (app.globalData.downloadUnlocked) {
-      this.setData({ unlocked: true });
+      this.setData({ unlocked: true, adFailed: !!app.globalData.downloadAdFailed });
       return;
     }
 
-    this.initAd();
-    // 进页面即自动播放：留一帧让页面先渲染出来，避免广告盖在白屏上
-    this.adTimer = setTimeout(() => this.playAd(), 300);
+    /*
+     * ⚠️ 这里只预热，绝不 show()。平台红线：激励视频必须由用户主动点击触发，
+     *    进页面自动播放会被驳回（微信实测驳回过一次）。
+     *    正常路径的广告在「我的」页点菜单时就播完了；下面那个按钮是给
+     *    扫码 / 分享直接落到本页的兜底路径。
+     */
+    preloadAd();
   },
 
-  onUnload() {
-    if (this.adTimer) clearTimeout(this.adTimer);
-  },
-
-  initAd() {
-    if (!wx.createRewardedVideoAd) {
-      console.warn('当前环境不支持激励视频广告');
-      this.failOpen();
-      return;
-    }
-
-    this.rewardedAd = wx.createRewardedVideoAd({ adUnitId: REWARDED_AD_UNIT_ID });
-
-    this.rewardedAd.onClose(res => {
-      // res.isEnded 为 true 表示完整看完，才解锁
-      if (res && res.isEnded) {
-        app.globalData.downloadUnlocked = true;
-        this.setData({ unlocked: true });
-        wx.showToast({ title: '已解锁下载', icon: 'success' });
-      } else {
-        wx.showToast({ title: '需看完视频才能解锁', icon: 'none' });
-      }
-      // 播完预加载下一条，避免下次 show 时还没就绪（正式环境常见 2005）
-      this.rewardedAd.load().catch(() => {});
-    });
-
-    this.rewardedAd.onError(err => {
-      console.error('激励视频出错', err);
-      this.setData({ loading: false });
-      // 1004 无填充 / 1005 审核中 / 1006 被驳回 / 1008 已关闭 等，一律放行，不能让用户拿不到链接
-      this.failOpen(err && err.errCode);
-    });
+  unlock() {
+    app.globalData.downloadUnlocked = true;
+    this.setData({ unlocked: true });
   },
 
   // 广告没播成（环境不支持 / 无填充 / 加载失败）时兜底放行，保证下载功能可用
   failOpen(code) {
     if (this.data.unlocked) return;
     app.globalData.downloadUnlocked = true;
+    app.globalData.downloadAdFailed = true;
     this.setData({ unlocked: true, loading: false, adFailed: true });
     wx.showToast({
       title: code ? `广告不可用(${code})，已直接解锁` : '广告未就绪，已直接解锁',
@@ -75,27 +52,34 @@ Page({
     });
   },
 
-  // 自动播放 / 按钮重试共用
-  playAd() {
-    if (!this.rewardedAd) {
-      this.failOpen();
-      return;
-    }
+  /* 兜底路径：扫码/分享直接进到本页时，用户点按钮才播（不能自动播） */
+  onWatchAd() {
+    wx.showLoading({ title: '正在准备视频…', mask: true });
 
-    this.setData({ loading: true });
-    // 正式环境必须先 load 完成再 show，直接 show 容易返回 2005（广告未就绪）
-    this.rewardedAd.load()
-      .then(() => this.rewardedAd.show())
-      .then(() => this.setData({ loading: false }))
-      .catch(err => {
-        // onError 会同步触发一次，这里只负责收尾，避免重复放行/toast
+    playAd({
+      onStart: () => {
+        wx.hideLoading();
         this.setData({ loading: false });
-        if (!this.data.unlocked) this.failOpen(err && (err.errCode || err.errMsg));
-      });
-  },
+      },
 
-  onRetryAd() {
-    this.playAd();
+      onClose: (ended) => {
+        wx.hideLoading();
+        this.setData({ loading: false });
+        if (ended) {
+          this.unlock();
+          wx.showToast({ title: '已解锁下载', icon: 'success' });
+        } else {
+          wx.showToast({ title: '需看完视频才能解锁', icon: 'none' });
+        }
+        // 播完预加载下一条，避免下次 show 时还没就绪（正式环境常见 2005）
+        preloadAd();
+      },
+
+      onUnavailable: (err) => {
+        wx.hideLoading();
+        this.failOpen(err && (err.errCode || err.errMsg));
+      }
+    });
   },
 
   /*

@@ -1,3 +1,23 @@
+<!-- 富文本 runs 模板：普通文本 / **加粗** / 条号上标（点击跳转） -->
+<template name="rich-runs">
+  <block wx:for="{{runs}}" wx:for-item="run" wx:key="index">
+    <text
+      wx:if="{{run.ref}}"
+      class="cite-sup"
+      catchtap="onCiteTap"
+      data-step="{{run.ref.step}}"
+      data-to="{{run.ref.to}}"
+    >{{run.t}}</text>
+    <text
+      wx:elif="{{run.term}}"
+      class="term {{run.b ? boldCls : ''}}"
+      catchtap="onTermTap"
+      data-k="{{run.t}}"
+    >{{run.t}}</text>
+    <text wx:else class="{{run.b ? boldCls : ''}}">{{run.t}}</text>
+  </block>
+</template>
+
 <view class="page article-page">
   <custom-nav title="" back="{{true}}" bg-color="var(--color-surface, #ffffff)" text-color="var(--color-text, #22262b)" shadow="{{false}}" />
 
@@ -9,16 +29,18 @@
     <view class="article-header">
       <text class="article-title">{{article.title}}</text>
       <view class="article-meta">
-        <view class="meta-left">
-          <image class="meta-icon" src="{{isLiked ? '/assets/icons/heart-red.png' : '/assets/icons/heart.png'}}" mode="aspectFit" />
+        <view class="article-date">
+          <image class="date-icon" src="/assets/icons/clock-gray.png" mode="aspectFit" />
+          <text wx:if="{{article.updatedAt}}" class="date-upd">更新于 {{article.updatedAt}}</text>
+          <text class="date-sep">·</text>
+          <text class="date-pub">发布于 {{article.publishedAt || article.date}}</text>
         </view>
-        <text class="article-date">{{article.date}}</text>
       </view>
     </view>
 
     <!-- 摘要 -->
     <view class="article-summary-box">
-      <text>{{article.summary}}</text>
+      <template is="rich-runs" data="{{runs: article.summaryRuns, boldCls: ''}}" />
     </view>
 
     <!-- 正文 -->
@@ -26,14 +48,14 @@
       <block wx:if="{{article.content.length > 0}}">
         <view class="section-title">为什么要这样做？</view>
         <view wx:for="{{article.content}}" wx:key="index" class="article-paragraph">
-          <text wx:for="{{item}}" wx:for-item="run" wx:key="index" class="{{run.b ? 'para-bold' : ''}}">{{run.t}}</text>
+          <template is="rich-runs" data="{{runs: item, boldCls: 'para-bold'}}" />
         </view>
       </block>
 
       <!-- 步骤列表 -->
       <view wx:if="{{article.steps && article.steps.length > 0}}" class="steps-section">
         <view class="section-title">具体方法</view>
-        <view wx:for="{{article.steps}}" wx:key="index" class="step-item">
+        <view wx:for="{{article.steps}}" wx:key="index" id="step-{{item.index}}" class="step-item {{item.flash ? 'flash' : ''}}">
           <view class="step-head">
             <view class="step-index">
               <text>{{item.index}}</text>
@@ -56,33 +78,64 @@
             <text wx:if="{{item.meta.todo}}" class="badge badge-warn">含待核实</text>
           </view>
 
-          <view wx:if="{{item.plain}}" class="step-plain">{{item.plain}}</view>
+          <view wx:if="{{item.plain}}" class="step-plain">
+            <template is="rich-runs" data="{{runs: item.plainRuns, boldCls: ''}}" />
+          </view>
 
-          <view class="step-rows">
-            <view wx:if="{{item.cost}}" class="step-row">
-              <text class="row-k">成本</text>
-              <text class="row-v">{{item.cost}}</text>
+          <!-- 成本：独立展开/收起，默认展开（与收益/备注同款交互） -->
+          <view wx:if="{{item.cost}}" class="fold-toggle" catchtap="onToggleFold" data-idx="{{index}}" data-field="costOpen">
+            <view class="fold-arrow {{item.costOpen ? 'open' : ''}}"></view>
+            <text>成本</text>
+          </view>
+          <view wx:if="{{item.cost && item.costOpen}}" class="step-rows">
+            <view class="step-row">
+              <text class="row-v row-v-only"><template is="rich-runs" data="{{runs: item.costRuns, boldCls: 'row-bold'}}" /></text>
             </view>
           </view>
 
-          <view
-            wx:if="{{item.gain || item.note}}"
-            class="step-toggle"
-            catchtap="onToggleStep"
-            data-idx="{{index}}"
-          >
-            <text>{{item.open ? '收起收益与备注' : '展开收益与备注'}}</text>
-            <view class="step-toggle-arrow {{item.open ? 'open' : ''}}"></view>
+          <!-- 收益：独立展开/收起，默认展开 -->
+          <view wx:if="{{item.gain}}" class="fold-toggle" catchtap="onToggleFold" data-idx="{{index}}" data-field="gainOpen">
+            <view class="fold-arrow {{item.gainOpen ? 'open' : ''}}"></view>
+            <text>收益</text>
+          </view>
+          <view wx:if="{{item.gain && item.gainOpen}}" class="step-rows">
+            <view class="step-row">
+              <text class="row-v row-v-only"><template is="rich-runs" data="{{runs: item.gainRuns, boldCls: 'row-bold'}}" /></text>
+            </view>
           </view>
 
-          <view wx:if="{{item.open}}" class="step-more">
-            <view wx:if="{{item.gain}}" class="step-row">
-              <text class="row-k">收益</text>
-              <text class="row-v"><block wx:for="{{item.gainRuns}}" wx:for-item="run" wx:key="index"><text class="{{run.b ? 'row-bold' : ''}}">{{run.t}}</text></block></text>
+          <!-- 备注：独立展开/收起，默认展开 -->
+          <view wx:if="{{item.note}}" class="fold-toggle" catchtap="onToggleFold" data-idx="{{index}}" data-field="noteOpen">
+            <view class="fold-arrow {{item.noteOpen ? 'open' : ''}}"></view>
+            <text>备注</text>
+          </view>
+          <view wx:if="{{item.note && item.noteOpen}}" class="step-rows">
+            <view class="step-row">
+              <text class="row-v row-v-only row-note"><template is="rich-runs" data="{{runs: item.noteRuns, boldCls: 'row-bold'}}" /></text>
             </view>
-            <view wx:if="{{item.note}}" class="step-row">
-              <text class="row-k">备注</text>
-              <text class="row-v row-note"><block wx:for="{{item.noteRuns}}" wx:for-item="run" wx:key="index"><text class="{{run.b ? 'row-bold' : ''}}">{{run.t}}</text></block></text>
+          </view>
+
+          <!-- 参考文献：默认收起，点开看文献与链接 -->
+          <view wx:if="{{item.source}}" class="fold-toggle" catchtap="onToggleFold" data-idx="{{index}}" data-field="refsOpen">
+            <view class="fold-arrow {{item.refsOpen ? 'open' : ''}}"></view>
+            <text>来源</text>
+            <text class="fold-cnt">（{{item.refCount}} 条文献）</text>
+          </view>
+          <view wx:if="{{item.source && item.refsOpen}}" class="src-body">
+            <view
+              wx:for="{{item.refList}}"
+              wx:for-item="ref"
+              wx:for-index="ri"
+              wx:key="ri"
+              class="src-line"
+            >
+              <text class="src-idx">[{{ri + 1}}]</text>
+              <view class="src-line-txt">
+                <block wx:for="{{ref.runs}}" wx:for-item="run" wx:key="index">
+                  <text wx:if="{{run.url}}" class="src-url" catchtap="onCopyRefUrl" data-url="{{run.t}}">{{run.t}}</text>
+                  <text wx:else>{{run.t}}</text>
+                </block>
+              </view>
             </view>
           </view>
         </view>
@@ -155,5 +208,25 @@
     </view>
     <text class="guide-tagline">让朋友也能发现这份精彩</text>
     <view class="guide-know">我知道了</view>
+  </view>
+
+  <!-- 名词解释：点正文关键词弹出的底部小窗 -->
+  <view wx:if="{{termShow}}" class="term-mask" bindtap="onCloseTerm" catchtouchmove="onNoop">
+    <view class="term-sheet" catchtap="onNoop">
+      <view class="term-grip"></view>
+      <view class="term-head">
+        <text class="term-k">{{term.k}}</text>
+        <view class="term-close" catchtap="onCloseTerm">
+          <text class="term-close-x">✕</text>
+        </view>
+      </view>
+      <scroll-view scroll-y class="term-body">
+        <text class="term-d">{{term.d}}</text>
+      </scroll-view>
+      <view class="term-foot">
+        <text class="term-from">本书术语表 · 读懂数字</text>
+        <view class="term-btn" catchtap="onCloseTerm">知道了</view>
+      </view>
+    </view>
   </view>
 </view>

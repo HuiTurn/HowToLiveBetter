@@ -1,4 +1,4 @@
-const { searchFull, getArticleById, getCategoryById } = require('../utils/content.js');
+const { searchRemote, getArticleById, getCategoryById } = require('../utils/content.js');
 const { getStatusBarHeight } = require('../../utils/util.js');
 const app = getApp();
 
@@ -104,24 +104,29 @@ Page({
   doSearch(keyword) {
     this.setData({ loading: true, activeTab: '全部' });
 
+    /*
+     * 全文检索走服务端（/api/search）：否则要把 1.8 MB 正文全量拉下来才能搜，得不偿失。
+     * 接口不可用会自动回落本地扫描，返回结构一致，页面不用分两套逻辑。
+     */
     setTimeout(() => {
-      const { articles, categories } = searchFull(keyword);
-      const favorites = app.globalData.favorites || [];
-      const enrichedArticles = articles.map(a => ({
-        ...a,
-        isFavorite: favorites.includes(a.id),
-        categoryName: getCategoryById(a.categoryId)?.name || ''
-      }));
-      const enrichedCategories = categories.map(c => ({
-        ...c,
-        bgColor: CATEGORY_TINTS[c.id] || '#f5f5f5'
-      }));
+      searchRemote(keyword).then(({ articles, categories }) => {
+        const favorites = app.globalData.favorites || [];
+        const enrichedArticles = articles.map(a => ({
+          ...a,
+          isFavorite: favorites.includes(a.id),
+          categoryName: getCategoryById(a.categoryId)?.name || ''
+        }));
+        const enrichedCategories = categories.map(c => ({
+          ...c,
+          bgColor: CATEGORY_TINTS[c.id] || '#f5f5f5'
+        }));
 
-      this.setData({
-        articles: enrichedArticles,
-        categories: enrichedCategories,
-        hasResult: true,
-        loading: false
+        this.setData({
+          articles: enrichedArticles,
+          categories: enrichedCategories,
+          hasResult: true,
+          loading: false
+        });
       });
     }, 300);
   },

@@ -7,6 +7,7 @@ module.exports = {
         "cost": "不花钱。每次上车多花 2 秒。",
         "gain": "美国交通安全主管部门（NHTSA）估计，系安全带能让轿车前排乘员受致命伤的风险下降 45%。轻型卡车前排下降 60%。2022 年美国死在乘用车（载人的小汽车）里的人当中，能查到系没系带的，有 50% 没系。世界卫生组织（WHO）的口径是，安全带让车内人员的死亡风险最多降低 50%。WHO 估计中国 2021 年死于道路交通事故的有 248,099 人，相当于每 10 万人里死 17.4 人",
         "note": "后排也要系。同一份报告里，第二排被撞死的人有 60% 没系带。45%、60% 这两个数，是美国交通安全主管部门（NHTSA）拿事故数据库算出来的估计（引 Kahane 2015），不是随机分组的试验。WHO 那个中国死亡人数是推算出来的，比公安交管登记的数字高好几倍。两边统计的范围不一样，这里只用 WHO 的口径。",
+        "source": "NHTSA (2024). Occupant Protection in Passenger Vehicles: 2022 Data (DOT HS 813 573). <https://crashstats.nhtsa.dot.gov/Api/Public/ViewPublication/813573> ; WHO (2025). Road traffic injuries fact sheet. <https://www.who.int/news-room/fact-sheets/detail/road-traffic-injuries> ; WHO GHO RS_196/RS_198 (China, 2021). <https://ghoapi.azureedge.net/api/RS_196?$filter=SpatialDim%20eq%20%27CHN%27>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -26,6 +27,7 @@ module.exports = {
         "cost": "买一顶 100 到 300 元。每次戴上花 5 秒。",
         "gain": "Cochrane 把多项研究合起来一起算。摩托车骑行者戴头盔，死亡风险下降 42%。原值 OR 0.58，可信范围 95% CI 0.50 到 0.68。头部损伤下降 69%（OR 0.31，95% CI 0.25 到 0.38）",
         "note": "头盔要把扣带扣好，挂在车把上不算戴。上面的数据来自摩托车。电动自行车没有直接研究，是照着推过来的，因为撞上以后头部受伤的方式相同。",
+        "source": "Liu BC 等 (2008). Helmets for preventing injury in motorcycle riders. Cochrane Database of Systematic Reviews. <https://doi.org/10.1002/14651858.CD004333.pub3>",
         "grade": "A",
         "meta": {
           "money": "少",
@@ -45,6 +47,7 @@ module.exports = {
         "cost": "烟雾报警器一个 30 到 100 元。一氧化碳报警器一个 50 到 150 元。装好以后每年换一次电池。",
         "gain": "美国北卡罗来纳州研究了一批住宅火灾，回头比对出事和没出事的家庭。家里有一个能正常工作的烟雾报警器，死亡风险下降约六成。原值 OR 0.39，可信范围 95% CI 0.18 到 0.83。美国 2018 到 2020 年，有人住的住宅里发生的致死火灾，24% 家里没有烟雾报警器，41% 起火时人在睡觉。中国 2018 年报告一氧化碳中毒死亡 11,523 例。这些死亡里，12 月有 72.59%、1 月有 67.42%、2 月有 66.48% 发生在家中",
         "note": "给 B 的原因：烟雾报警器这边只有一项研究，做法是回头比对出事和没出事的家庭，不是随机分组的试验。一氧化碳报警器本身没有降低死亡率的研究。这里的收益是按「中毒死亡集中在冬季、集中在家中」推出来的。",
+        "source": "Marshall SW 等 (1998). Fatal residential fires: who dies and who survives? JAMA. <https://doi.org/10.1001/jama.279.20.1633> ; USFA (2022). Fatal Fires in Residential Buildings (2018-2020), Topical Fire Report Series 22(2). <https://www.usfa.fema.gov/downloads/pdf/statistics/v22i2.pdf> ; You J 等 (2020). Number of Deaths due to Carbon Monoxide Poisoning by Month and by Place of Death — China, 2018. China CDC Weekly. <https://doi.org/10.46234/ccdcw2020.008>",
         "grade": "B",
         "meta": {
           "money": "少",
@@ -64,6 +67,7 @@ module.exports = {
         "cost": "一根合规的燃气软管几十元。灶具几年换一次。换的时候顺手看一眼有没有过期。",
         "gain": "条例把「及时更换国家明令淘汰或者使用年限已届满的燃气燃烧器具、连接管」写成了用户的义务：灶具和软管到了年限或者被国家淘汰了，你就要换。条例还把「擅自安装、改装、拆除户内燃气设施和燃气计量装置」列为禁止行为，自己动手改管道、拆燃气表都在里面。条例同时明确，燃气经营者不得要求用户购买它指定的产品，也不得要求用户接受它提供的服务",
         "note": "条例原文能逐字核对，但它只说明到期换管是你的义务，不说明换了能少出多少事故。按年限换管能把燃气事故降多少，没找到官方统计数字，所以只给 C 级。有人以「安检」名义上门，检查完就推销自闭阀和报警器。条例第二十条第六项不许燃气公司要求你买它指定的产品，你可以拒绝，也可以投诉。闻到燃气味，先关燃气总阀，瓶装气关钢瓶阀门。再开门开窗通风，别开排气扇。电灯、抽油烟机这些电器一律别开也别关，打火机也别碰。然后人撤出去，离开现场再打燃气公司的报警电话。一氧化碳中毒是另一件事，见第 13 节。",
+        "source": "国务院 (2010). 城镇燃气管理条例（国务院令第 583 号）第二十七条：「燃气用户应当遵守安全用气规则，使用合格的燃气燃烧器具和气瓶，及时更换国家明令淘汰或者使用年限已届满的燃气燃烧器具、连接管等」；第二十八条禁止行为含「（一）擅自操作公用燃气阀门」「（二）将燃气管道作为负重支架或者接地引线」「（四）擅自安装、改装、拆除户内燃气设施和燃气计量装置」；第二十条燃气经营者不得「（六）要求燃气用户购买其指定的产品或者接受其提供的服务」；第二十九条用户可就收费、服务向燃气管理等部门投诉，「有关部门应当自收到投诉之日起15个工作日内予以处理」. <http://www.gov.cn/gongbao/content/2010/content_1758214.htm>；深圳市住房和建设局 (2024). 安全用气小知识（二）：「立即关闭家里的燃气总阀门」「迅速开门、开窗进行通风」「一定不要开、关家里的电灯、抽油烟机等电器」「人员应该迅速撤离，转移到安全的地方，并且及时拨打燃气公司的报警电话」. <https://zjj.sz.gov.cn/zcjzts/content/post_11882410.html>；张家港市应急管理局 (2024). 燃气安全使用知识：「不要情急之下打开排气扇进行通风」「应远离现场之后才能打电话求助」. <https://www.zjg.gov.cn/zjgszwz/yjaqzs/202411/72b4fad7399c48378302460c6ce2d55b.shtml>",
         "grade": "C",
         "meta": {
           "money": "少",
@@ -83,6 +87,7 @@ module.exports = {
         "cost": "不花钱。难的地方是放弃一种季节性的野味。",
         "gain": "中国疾控中心 2025 年调查了 828 起蘑菇中毒事件，涉及 2165 人，死亡 13 人。病死率 0.6%，指中毒的人里有 0.6% 死亡。2019 到 2024 年每年 276 到 676 起，病死率在 0.87% 到 2.86% 之间。光 2025 年就鉴定出 138 种有毒蘑菇，其中 34 种是国内第一次记录到会引起中毒",
         "note": "吃错了就立刻催吐，然后带上剩下的蘑菇或者拍的照片去医院。毒蘑菇中毒分好几种类型，认出是哪一种蘑菇直接决定医生怎么治。每年都有新种类被记录到能毒人，所以「本地人认得清」这个前提本身站不住。银针验毒、和大蒜同煮、虫子吃过就没毒、颜色鲜艳才有毒，这些说法全都不成立。",
+        "source": "Mushroom Poisoning Outbreaks — China, 2025. China CDC Weekly (2026)：「In 2025, China CDC investigated 828 mushroom poisoning incidents across 27 provincial-level administrative divisions (PLADs), affecting 2,165 individuals and causing 13 deaths - a case fatality rate of 0.6%, the lowest of the past six years. In total, 138 poisonous mushroom species were identified, including 34 newly recorded in poisoning incidents in China.」「From 2019 to 2024, the annual number of incidents ranged from 276 to 676, and the case fatality rate ranged from 0.87% to 2.86%.」<https://doi.org/10.46234/ccdcw2026.120>；同刊 2024 年度报告 <https://doi.org/10.46234/ccdcw2025.106>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -102,6 +107,7 @@ module.exports = {
         "cost": "不花钱。难的地方是每次都停到楼下的集中充电点，多走几十米。",
         "gain": "应急管理部的规章明文禁止：「禁止在高层民用建筑公共门厅、疏散走道、楼梯间、安全出口停放电动自行车或者为电动自行车充电」。楼门厅、走道、楼梯间、安全出口这几处，既不能停车也不能充电。拒不改正的，不做生意的单位和个人罚 500 至 1000 元，做生意的罚 2000 至 10000 元",
         "note": "别买改装电池，别用杂牌充电器，别整夜充着不管。锂电池一旦起火，几十秒里就整片烧开，同时冒出剧毒的烟。车停在楼道里起火，烧的就是你唯一的逃生通道。应急管理部公布的数字是，2021 年全国电动自行车火灾 1.8 万起，死 65 人。其中烧在建筑物里的 3782 起，死了 60 人，死者几乎都在室内。2024 年整治之后，火灾起数比上年降了 42.2%，伤亡降了九成以上，那一年的绝对数没有公布。",
+        "source": "应急管理部 (2021). 高层民用建筑消防安全管理规定（应急管理部令第 5 号，第三十七条、第四十七条）. <https://www.gov.cn/zhengce/zhengceku/2021-08/01/content_5628815.htm>；应急管理部 (2023). 关于政协第十三届全国委员会第五次会议第00969号提案答复的函：「2021年，全国共接报电动自行车火灾1.8万起，造成65人死亡、222人受伤，直接财产损失达2.21亿元，其中发生在建筑物内3782起，造成60人死亡、175人受伤」. <https://www.mem.gov.cn/gk/jytabljggk/zxwytadfzy/2022zx/202301/t20230119_440918.shtml>；应急管理部 (2025). 2025年1月15日新闻发布会：「火灾起数同比下降42.2%，伤亡人数下降超过90%」. <https://www.mem.gov.cn/xw/xwfbh/2025n01y15xwfbh_6337/>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -121,6 +127,7 @@ module.exports = {
         "cost": "电子血压计 100 到 200 元。量一次 1 分钟。降压药多数每月几元到几十元。难的地方是没症状也要接着吃。",
         "gain": "把 123 项试验、61 万余人合起来一起算。收缩压每降 10 mmHg，主要心血管事件低约两成。原值 RR 0.80，可信范围 95% CI 0.77 到 0.83。收缩压就是血压两个数里高的那个。卒中（中风）低约 27%（RR 0.73）。心力衰竭低约 28%（RR 0.72）。总死亡率下降 13%（RR 0.87，95% CI 0.84 到 0.91）。中国给 35 到 75 岁的 170 万人做过筛查：44.7% 有高血压。这些人里，知道自己有的占 44.7%，在治疗的占 30.1%，控制住的只有 7.2%",
         "note": "先去量一次血压。中国 10 个高血压的人里只有不到 1 个控制住了，所以量这一次是本书里性价比最高的动作之一。降到多少算达标（130 还是 140）还有讨论，但「知道自己高血压并把它降下来」这件事本身没有争议。",
+        "source": "Ettehad D 等 (2016). Blood pressure lowering for prevention of cardiovascular disease and death: a systematic review and meta-analysis. Lancet. <https://doi.org/10.1016/S0140-6736(15)01225-8> ; Lu J 等 (2017). Prevalence, awareness, treatment, and control of hypertension in China (China PEACE Million Persons Project). Lancet. <https://doi.org/10.1016/S0140-6736(17)32478-9>",
         "grade": "A",
         "meta": {
           "money": "少",
@@ -140,6 +147,7 @@ module.exports = {
         "cost": "空腹血糖十几元。糖化血红蛋白几十元。去医院抽一次血就行。",
         "gain": "美国预防服务工作组是美国官方给筛查建议的机构。它现在的建议是：对 35 到 70 岁、超重或肥胖的成年人筛查糖尿病前期和 2 型糖尿病，哪怕一点症状都没有。超重指体重指数 ≥25，肥胖指 ≥30。对亚裔美国人，它建议把界线降到体重指数 ≥23，因为同样的体重指数下，亚裔的糖尿病风险更高。中国的行业标准是：体重指数 24.0 到 28.0 之间算超重，≥28.0 算肥胖。这条建议的推荐等级是 B。它还写明：「对血糖正常的成年人，每 3 年筛查一次是合理的做法」",
         "note": "查出糖尿病前期不等于就要吃药。相当一部分人光靠改生活方式就能把它扭回去。中国成人里，知道自己有糖尿病的一直是少数，很多人是等到出了并发症才发现",
+        "source": "US Preventive Services Task Force (2021). Screening for Prediabetes and Type 2 Diabetes. <https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/screening-for-prediabetes-and-type-2-diabetes>：「at a lower BMI (≥23) if the patient is Asian American」；国家卫生健康委办公厅 (2024). 居民体重管理核心知识（2024 年版）释义：「根据《成年人体重判定》（WS/T 428-2013）行业标准……24.0≤BMI＜28.0 为超重，BMI≥28.0 为肥胖」. <https://www.gov.cn/zhengce/zhengceku/202407/P020240703481519509521.pdf>",
         "grade": "A",
         "meta": {
           "money": "少",
@@ -159,6 +167,7 @@ module.exports = {
         "cost": "不花钱。开慢一点，一趟多花几分钟。难的地方是饭局上少喝。",
         "gain": "世界卫生组织（WHO）的说法：平均车速每升高 1%，出人命的事故风险升高 4%。酒驾的风险，从很低的血液酒精浓度起就开始上升",
         "note": "速度和死亡的那组 1%、4%，是按事故模型推算出来的，不是随机分组的试验。酒驾这边 WHO 只给了方向，没给数字。「喝多少、风险涨多少」这个问题，本节没有核实过原始文献。",
+        "source": "WHO (2025). Road traffic injuries fact sheet. <https://www.who.int/news-room/fact-sheets/detail/road-traffic-injuries>",
         "grade": "B",
         "meta": {
           "money": "0",
@@ -178,6 +187,7 @@ module.exports = {
         "cost": "一个 300 到 2000 元，能用几年。每次上车多花 1 分钟把孩子绑好。",
         "gain": "美国交通安全主管部门（NHTSA）估计，用安全座椅能让轿车里 1 岁以下婴儿受致命伤的风险下降 71%。1 到 4 岁的幼儿下降 54%。世界卫生组织（WHO）的口径是婴儿死亡下降 71%",
         "note": "按说明书把座椅固定好，装错等于没装。1 岁以下要反向安装，让孩子面朝车尾。上面的数字是美国官方拿事故数据估出来的。",
+        "source": "NHTSA (2024). Occupant Protection in Passenger Vehicles: 2022 Data (DOT HS 813 573). <https://crashstats.nhtsa.dot.gov/Api/Public/ViewPublication/813573> ; WHO (2025). Road traffic injuries fact sheet. <https://www.who.int/news-room/fact-sheets/detail/road-traffic-injuries>",
         "grade": "A",
         "meta": {
           "money": "多",
@@ -197,6 +207,7 @@ module.exports = {
         "cost": "一副窗户限位器或者儿童安全锁几十元。装上去十分钟。",
         "gain": "纽约市从 1972 年起办了一个叫「孩子不会飞」的项目，在高风险城区免费发窗户护栏，还上门讲解。布朗克斯区上报的坠落数，1973 到 1975 年下降 50%。此后纽约市修改卫生法典，强制房东为住有 10 岁及以下儿童的公寓安装窗户护栏",
         "note": "窗边和阳台边不要放床、沙发、箱子这类小孩能爬上去的东西。纱窗只挡蚊子，一推就掉，别把它当护栏。也不是只有住高层才要装：美国那份数据里，多数坠落发生在二层或者更低。",
+        "source": "Spiegel CN, Lindaman FC (1977). Children can't fly: a program to prevent childhood morbidity and mortality from window falls. American Journal of Public Health：「Significant reduction in falls resulted, particularly in the Bronx, where reported falls declined 50 percent from 1973 to 1975」，1976 年纽约市卫生法典修订「to require that landlords provide window guards in apartments where children ten years old and younger reside」. <https://doi.org/10.2105/AJPH.67.12.1143>；(2021). Unintentional Window Falls in Children and Adolescents. Academic Pediatrics：2007 年 1 月至 2017 年 8 月全国电子伤害监测系统 38,840 例急诊就诊，「The majority of falls occurred in children under the age of 6 and were related to falls from a second story or below」. <https://doi.org/10.1016/j.acap.2020.07.008>",
         "grade": "B",
         "meta": {
           "money": "少",
@@ -216,6 +227,7 @@ module.exports = {
         "cost": "救生衣 50 到 200 元。另外要搭上看着孩子的那份注意力。",
         "gain": "用美国海岸警卫队的数据做的研究，把条件相近的人配成对来比。坐休闲船只落水的人，穿着救生衣的溺亡风险低约一半。原值是校正后 RR 0.51，可信范围 95% CI 0.35 到 0.74。中国 20 岁以下的溺水死亡率，从 2013 年的每 10 万人 6.60 人降到 2021 年的每 10 万人 3.28 人。农村约为城市的 2 倍。溺水仍然是 1 到 14 岁儿童的头号死因。2021 年 0 到 19 岁的伤害死亡里，溺水占 31.1%，道路交通占 27.9%",
         "note": "A 级只对应救生衣这一半。「不离视线」是大家的共识，单算只有 C 级，没有随机试验，以后也不会有。中国的溺水死亡集中在农村、夏季，以及 15 到 19 岁的男性。冬天上冰面玩，见第 41 条（野外冰面先量厚度）。",
+        "source": "Cummings P 等 (2011). Association between wearing a personal floatation device and death by drowning among recreational boaters. Injury Prevention. <https://doi.org/10.1136/ip.2010.028688> ; Li Z 等 (2023). Unintentional Drowning Mortality Among Individuals Under Age 20 — China, 2013–2021. China CDC Weekly. <https://doi.org/10.46234/ccdcw2023.198> ; Zhou J 等 (2024). Injury Mortality of Children and Adolescents Aged 0–19 Years — China, 2010–2021. China CDC Weekly. <https://doi.org/10.46234/ccdcw2024.057>",
         "grade": "A",
         "meta": {
           "money": "少",
@@ -235,6 +247,7 @@ module.exports = {
         "cost": "每周练 2 到 3 次，每次 30 分钟太极或者平衡训练。浴室防滑垫、扶手、夜灯几十到几百元。难的地方是要长期练下去。",
         "gain": "Cochrane 把 108 项试验、23,407 人合起来一起算。运动让老年人跌倒的次数下降 23%。原值是跌倒率之比 RaR 0.77，可信范围 95% CI 0.71 到 0.83。摔过的人数下降 15%（RR 0.85）。请人到家里做安全评估和改造，跌倒率下降约两成（RR 0.81，95% CI 0.68 到 0.97）。练太极，跌倒风险低约 29%（RR 0.71）。在中国，跌倒是 65 岁以上老人因伤害死亡的头号原因。2018 年监测到的老年人跌倒，55.97% 发生在家中",
         "note": "这条适用于住在自己家里、不在养老院的 60 岁以上老人。上面的研究数的是跌倒次数，不是死亡人数。老人从跌倒到髋部骨折、再到死亡，这段路很短。看不清路也会多摔，白内障影响看路的见第 17 节第 9 条（白内障手术）。骨头经不经得起摔，见本节第 39 条（骨密度检查）。",
+        "source": "Sherrington C 等 (2019). Exercise for preventing falls in older people living in the community. Cochrane Database of Systematic Reviews. <https://doi.org/10.1002/14651858.CD012424.pub2> ; Gillespie LD 等 (2012). Interventions for preventing falls in older people living in the community. Cochrane Database of Systematic Reviews. <https://doi.org/10.1002/14651858.CD007146.pub3> ; Lu Z 等 (2021). Characteristics of Falls Among Older People — China, 2018. China CDC Weekly. <https://doi.org/10.46234/ccdcw2021.013>",
         "grade": "A",
         "meta": {
           "money": "少",
@@ -254,6 +267,7 @@ module.exports = {
         "cost": "查一次几十元。成人乙肝疫苗 3 针合起来 100 到 300 元。半年之内打完。",
         "gain": "启东那项试验按群体随机分组，不是按个人分组，跟踪了 30 年。新生儿接种乙肝疫苗，原发性肝癌下降 84%。可信范围是 95% CI 23% 到 97%。乙肝表面抗原 HBsAg 阳性率下降 72%（95% CI 68% 到 75%），这个阳性率就是查出身上带着病毒的人所占的比例。中国全人群的 HBsAg 阳性比例，1992 到 2014 年下降 52%，5 岁以下下降 97%",
         "note": "这条适用于 1992 年前出生、没打过疫苗或者抗体已经消失的成人。肝癌下降 84% 那个数来自一出生就打的人。同一项试验里，到青少年才补打的，防住病毒携带的效力只有 21%。成人打主要图的是不再被感染，不能直接套那个 84%。已经感染的人打疫苗没用，要去肝病科定期复查。怎么算已经感染：化验单上乙肝表面抗原 HBsAg 那一项是阳性。",
+        "source": "Qu C 等 (2014). Efficacy of neonatal HBV vaccination on liver cancer and other liver diseases over 30-year follow-up of the Qidong hepatitis B intervention study. PLoS Medicine. <https://doi.org/10.1371/journal.pmed.1001774> ; Cui F 等 (2017). Prevention of Chronic Hepatitis B after 3 Decades of Escalating Vaccination Policy, China. Emerging Infectious Diseases. <https://doi.org/10.3201/eid2305.161477>",
         "grade": "A",
         "meta": {
           "money": "少",
@@ -273,6 +287,7 @@ module.exports = {
         "cost": "挂号加处理伤口几十元。医生说要打的话，疫苗或者免疫球蛋白几十到几百元。",
         "gain": "美国的破伤风病例里，大约每 10 例死 1 例。深的伤口、被泥土污染的伤口，风险更高。中国 2024 年的诊疗规范把伤口分成两档。6 小时内处理、没沾泥土粪便和动物口水的浅伤口，算低风险。超过 6 小时才处理、沾了这些东西，或者是扎伤、撕脱伤、挤压伤、烧烫伤、冻伤、伤口里留着异物的，算高风险。打过 3 针以上、最后一针不到 5 年的，什么都不用打。5 到 10 年的，高风险伤口加强 1 针。满 10 年的，不管哪档都加强 1 针。没打全 3 针或者记不清的，要把疫苗补全，高风险伤口还要同时打被动免疫制剂（免疫球蛋白或抗毒素这类直接给抗体的针）",
         "note": "到了医院让医生判断，别自己拿主意，也别嫌麻烦不问。不是所有伤口都要打。医生会看伤口属于哪一档，再问你上一次打针是什么时候，然后决定。「小时候打过就一辈子有效」是错的。伤口脏的话，离上一针满 5 年就要加强。所以去之前想一想自己最后一次打破伤风针是哪一年。",
+        "source": "美国疾病控制与预防中心. 破伤风：「Tetanus bacteria can get into someone's body through broken skin, usually through injuries.」「Tetanus can lead to death (1 in 10 cases in the United States are fatal).」「People who didn't complete the primary series or who aren't up to date with their 10-year tetanus booster shots are also at increased risk.」「Vaccination also helps prevent tetanus in people with wounds, depending on their tetanus vaccination history.」<https://www.cdc.gov/tetanus/about/index.html>；国家卫生健康委办公厅 (2024). 关于印发非新生儿破伤风诊疗规范（2024 年版）的通知（国卫办医急函〔2024〕381 号，风险分级见附件第 16 页，表 4 见第 20 页）. <https://www.gov.cn/zhengce/zhengceku/202410/content_6982262.htm>；附件 PDF（扫描件）. <https://www.gov.cn/zhengce/zhengceku/202410/P020241023483425528555.pdf>",
         "grade": "B",
         "meta": {
           "money": "少",
@@ -292,6 +307,7 @@ module.exports = {
         "cost": "国产二价约 300 多元一针，进口九价约 1300 元一针。一共打 2 到 3 针。每次跑一趟，半天。",
         "gain": "瑞典跟踪了 167 万名女性做统计：打过疫苗的人，浸润性宫颈癌的发病率比没打的低。17 岁以前接种的低约 88%（IRR 0.12，95% CI 0.00 到 0.34，括号里是原值和它的可信范围）。17 到 30 岁接种的低约 53%（IRR 0.47，95% CI 0.27 到 0.75）",
         "note": "9 到 14 岁打收益最大。17 到 30 岁打，还有一半以上的下降。30 岁以后打，收益就一路变小。打过疫苗也还是要做宫颈癌筛查，疫苗替代不了筛查，见第 18 条（30 岁以上女性做宫颈癌筛查）。",
+        "source": "Lei J 等 (2020). HPV Vaccination and the Risk of Invasive Cervical Cancer. New England Journal of Medicine. <https://doi.org/10.1056/NEJMoa1917338>",
         "grade": "A",
         "meta": {
           "money": "多",
@@ -311,6 +327,7 @@ module.exports = {
         "cost": "钼靶每次两三百元。很多地区有免费筛查项目。每两年花半天。",
         "gain": "美国预防服务工作组是美国官方给筛查建议的机构。它现在的建议是：「建议 40 至 74 岁女性每两年做一次筛查性乳腺 X 线摄影」。乳腺 X 线摄影就是平时说的钼靶。这条建议的推荐等级是 B。对 75 岁及以上的女性，以及给致密型乳腺补做超声、磁共振，它都判定为「现有证据不足」",
         "note": "从几岁开始查，各国不一样，中国有些指南和地方项目是从 45 岁起。父母、子女或者亲兄弟姐妹得过乳腺癌的，以及带有 BRCA 突变的，属于高危，要单独找医生定方案，本条不适用",
+        "source": "US Preventive Services Task Force (2024). Breast Cancer: Screening. <https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/breast-cancer-screening>",
         "grade": "A",
         "meta": {
           "money": "少",
@@ -330,6 +347,7 @@ module.exports = {
         "cost": "HPV 检测一次 100 到 300 元。结果阴性的，5 年查一次就行。取样几分钟。",
         "gain": "印度农村那项试验按群体随机分组，不是按个人分组。对象是 30 到 59 岁的女性。只做一次 HPV 检测筛查，死于宫颈癌的风险就低约 48%。原值 HR 0.52，可信范围 95% CI 0.33 到 0.83。查出晚期宫颈癌的风险低约 53%（HR 0.47，95% CI 0.32 到 0.69）",
         "note": "打过 HPV 疫苗的人也要筛查，因为疫苗盖不住全部的病毒型别。这项研究少见的地方是：它是随机分组的筛查试验，直接拿死亡人数当结果，而且只筛了一轮。",
+        "source": "Sankaranarayanan R 等 (2009). HPV screening for cervical cancer in rural India. New England Journal of Medicine. <https://doi.org/10.1056/NEJMoa0808516>",
         "grade": "A",
         "meta": {
           "money": "少",
@@ -349,6 +367,7 @@ module.exports = {
         "cost": "粪便检测几十元，每 1 到 2 年做一次。肠镜几百到一千多元，结果阴性的 10 年做一次就行。做肠镜前要留出一天清肠。",
         "gain": "Cochrane 把多项研究合起来一起算。做粪便隐血筛查的人，死于结直肠癌的风险低约 16%。原值 RR 0.84，可信范围 95% CI 0.78 到 0.90。至少参加过一轮的人低约 25%（RR 0.75）。再看 NordICC 那项随机试验。被邀请去做肠镜的人，10 年里结直肠癌的发病从 1.20% 降到 0.98%。原值 RR 0.82，可信范围 95% CI 0.70 到 0.93",
         "note": "争议。NordICC 是按「被邀请去做肠镜」的人来算的，结直肠癌死亡 0.28% 对 0.31%（RR 0.90，95% CI 0.64 到 1.16），差别还在误差范围内。这说明肠镜对死亡率的好处以前被高估过。粪便检测在死亡率上的证据反而更硬。从几岁开始查，各国指南在 45 到 50 岁之间。家里有人得过这个病的要更早开始。",
+        "source": "Hewitson P 等 (2007). Screening for colorectal cancer using the faecal occult blood test, Hemoccult. Cochrane Database of Systematic Reviews. <https://doi.org/10.1002/14651858.CD001216.pub2> ; Bretthauer M 等 (2022). Effect of Colonoscopy Screening on Risks of Colorectal Cancer and Related Death. New England Journal of Medicine. <https://doi.org/10.1056/NEJMoa2208375>",
         "grade": "A",
         "meta": {
           "money": "少",
@@ -368,6 +387,7 @@ module.exports = {
         "cost": "一针 50 到 150 元。每年秋天打一次。",
         "gain": "一项试验在心肌梗死之后做，2571 人随机分组。医生和病人都不知道打的是哪一针。打流感疫苗的人，12 个月里的总死亡率是 2.9%。打安慰剂的是 4.9%。原值 HR 0.59，可信范围 95% CI 0.39 到 0.89。安慰剂就是不含有效成分的对照针。心血管死亡的 HR 是 0.59。另一项研究把多项研究合起来一起算。打流感疫苗的人主要心血管事件为 3.6%，对照为 5.4%。原值 RR 0.66，可信范围 95% CI 0.53 到 0.83。心血管死亡 RR 0.74（95% CI 0.42 到 1.30，这点差别还在误差范围内，算不上有统计学意义）",
         "note": "争议。A 级只对应有心血管病的人。对本来健康的老年人，Cochrane 综述只给出一个结论：一季流感的发病从 6% 降到 2.4%。它把这条证据的可信度评为「低」，死亡率方面的证据评为「极低」。综述出处是 Demicheli V 等 2018 年那篇。",
+        "source": "Fröbert O 等 (2021). Influenza Vaccination After Myocardial Infarction: A Randomized, Double-Blind, Placebo-Controlled, Multicenter Trial. Circulation. <https://doi.org/10.1161/CIRCULATIONAHA.121.057042> ; Behrouzi B 等 (2022). Association of Influenza Vaccination With Cardiovascular Risk: A Meta-analysis. JAMA Network Open. <https://doi.org/10.1001/jamanetworkopen.2022.8873>；Demicheli V 等 (2018). Vaccines for preventing influenza in the elderly. Cochrane Database of Systematic Reviews. <https://doi.org/10.1002/14651858.CD004876.pub4>（备注里说的那份 Cochrane 汇总）",
         "grade": "A",
         "meta": {
           "money": "少",
@@ -387,6 +407,7 @@ module.exports = {
         "cost": "重组带状疱疹疫苗要打两针，合计约 3000 到 4000 元。这笔钱全部自己出。",
         "gain": "一项三期试验跨 18 个国家，有 1.54 万人。试验把人随机分成两组，一组打疫苗，一组打对照针，平均跟踪 3.2 年。结果疫苗组 6 例、安慰剂组 210 例发生带状疱疹。换算成每千人年是 0.3 对 9.1，每千人年的意思是 1000 个人观察一年里出现的例数。原文写「疫苗对带状疱疹的总体效力为 97.2%（95% CI 93.7–99.0，P<0.001）」。各年龄组的效力在 96.6% 到 97.9% 之间",
         "note": "它在性价比上排得靠后，原因是贵。带状疱疹本身很少要命，麻烦在带状疱疹后神经痛，可能疼上几个月到几年。打完疫苗，打针的地方疼、发烧的比例都不低。其中最重的那一档（三级症状）是 17.0% 对 3.2%",
+        "source": "Lal H, Cunningham AL, Godeaux O, et al. (2015). Efficacy of an adjuvanted herpes zoster subunit vaccine in older adults. New England Journal of Medicine, 372(22), 2087-2096. <https://doi.org/10.1056/NEJMoa1501184>",
         "grade": "A",
         "meta": {
           "money": "多",
@@ -406,6 +427,7 @@ module.exports = {
         "cost": "几百元。部分地区对老年人免费。",
         "gain": "荷兰把 8.45 万名 65 岁以上老人随机分成两组来比。用的是 13 价肺炎球菌结合疫苗。它对疫苗覆盖型肺炎的效力是 45.6%。可信范围是 95.2% CI 21.8–62.5。疫苗覆盖型就是这支疫苗管得住的那几个菌型。对侵袭性肺炎球菌病的效力是 75.0%（95% CI 41.4–90.8），这是最凶险的那一类感染。对全部原因加在一起的肺炎，它没有效果",
         "note": "它只防疫苗覆盖的那几个型别，不是打了就不得肺炎。中国老年人常打的是 23 价多糖疫苗，和这项试验用的 13 价结合疫苗不是同一种，上面的效力数据不能直接套过去",
+        "source": "Bonten MJ, Huijts SM, Bolkenbaas M, et al. (2015). Polysaccharide conjugate vaccine against pneumococcal pneumonia in adults. New England Journal of Medicine, 372(12), 1114-1125. <https://doi.org/10.1056/NEJMoa1408544>",
         "grade": "A",
         "meta": {
           "money": "少",
@@ -425,6 +447,7 @@ module.exports = {
         "cost": "碳 13 或碳 14 呼气试验 100 到 200 元。根除要同时吃四种药，两周药费 200 到 500 元。难的地方是这两周的药要按点吃满。",
         "gain": "山东临朐那项随机分组的试验跟踪了 22 年。做过幽门螺杆菌根除治疗的人，得胃癌的风险低约一半。原值 OR 0.48，可信范围 95% CI 0.32 到 0.71。死于胃癌的风险低约 38%（HR 0.62，95% CI 0.39 到 0.99）",
         "note": "根除以后还可能再感染，所以家里人一起查、一起治。这项试验的人群是胃癌高发区的居民。住在低发区的人，实际拿到的好处会小得多。",
+        "source": "Li WQ 等 (2019). Effects of Helicobacter pylori treatment and vitamin and garlic supplementation on gastric cancer incidence and mortality: follow-up of a randomized intervention trial. BMJ. <https://doi.org/10.1136/bmj.l5016>",
         "grade": "A",
         "meta": {
           "money": "少",
@@ -444,6 +467,7 @@ module.exports = {
         "cost": "一次 200 到 400 元，10 分钟做完。另外要算上虚惊一场之后的复查，和那段时间的提心吊胆。",
         "gain": "美国 NLST 随机试验收了 53,454 人，都是 55 到 74 岁、吸烟史 30 包年以上、戒烟不超过 15 年的人。包年是算烟量的单位，每天一包抽一年算一包年。结果是这样。做低剂量 CT 的人比只拍胸片的人，肺癌死亡相对下降 20.0%。可信范围 95% CI 6.8 到 26.7。总死亡率相对下降 6.7%，可信范围 95% CI 1.2 到 13.6",
         "note": "这条只适用于高危吸烟者。同一项试验里，做低剂量 CT 的人有 24.2% 查出可疑结果，这些人里 96.4% 是虚惊一场（假阳性）。不吸烟的人做这项检查，等于花钱买焦虑。",
+        "source": "National Lung Screening Trial Research Team (2011). Reduced Lung-Cancer Mortality with Low-Dose Computed Tomographic Screening. New England Journal of Medicine. <https://doi.org/10.1056/NEJMoa1102873>",
         "grade": "A",
         "meta": {
           "money": "少",
@@ -463,6 +487,7 @@ module.exports = {
         "cost": "不花钱。打一个电话。另外把药锁起来，农药不放在家里。",
         "gain": "一篇把近 10 年的研究系统梳理了一遍的综述：限制人拿到致死手段，这方面的证据一直在增强。管控镇痛药以后，和镇痛药有关的自杀下降 43%。常有人跳楼的地点加了防护之后，下降 86%（79% 到 91%，括号里是这个数的可信范围）。学校里开展的认知类项目，让自杀未遂低约 55%（OR 0.45，95% CI 0.24 到 0.85）。治抑郁的药物和心理治疗，是预防自杀的重要一环。中国从 2025 年 5 月 1 日起，全国拨 12356 都能接通心理援助热线，每天开通不少于 18 小时",
         "note": "给 B 的原因：限制手段那边的证据多数是生态学研究，做法是比较政策出台前后的数字；热线本身没有降低死亡率的证据。自杀的冲动往往只持续几分钟到几小时，把能致死的东西挪远一步，本身就是干预。这个时间尺度的数据，以及未遂之后的长期结局，见本节第 32 条（自杀念头一冒出来先告诉身边的一个人）。被救回来之后会留下什么，见本节第 33 条。",
+        "source": "Zalsman G 等 (2016). Suicide prevention strategies revisited: 10-year systematic review. Lancet Psychiatry. <https://doi.org/10.1016/S2215-0366(16)30030-X> ; 国家卫生健康委 (2024). 关于应用\"12356\"全国统一心理援助热线电话号码的通知（国卫医政函〔2024〕259 号）. <https://www.gov.cn/zhengce/zhengceku/202412/content_6994470.htm>",
         "grade": "B",
         "meta": {
           "money": "0",
@@ -482,6 +507,7 @@ module.exports = {
         "cost": "灭火器、灭火毯、每人一只呼吸面罩，再加一个急救包，一套几百元。买一次就行，以后每年花十分钟检查一遍。",
         "gain": "应急管理部的《全国基础版家庭应急物资储备建议清单》一共 11 样。其中「灭火器和灭火毯」用于「初起火灾的扑救」，清单还写明「灭火毯可披覆在身上逃生」。「呼吸面罩」指的是「消防过滤式自救呼吸器，用于火灾逃生使用」。「外用药品」是「止血粉、止血贴、纱布绷带等，用于处理伤口」。Cochrane 把 98 项研究、2,605,044 人合起来一起算。家庭安全干预让伤害发生率降到 IRR 0.89。可信范围是 95% CI 0.78 到 1.01。其中上门开展的干预，伤害发生率低约 25%（IRR 0.75，95% CI 0.62 到 0.91）",
         "note": "争议。同一份 Cochrane 汇总里，不发装备的那一类干预，受伤率低约两成。原值 IRR 0.78，可信范围 95% CI 0.66 到 0.92。发了装备的那一组并没有做得更好。降低伤害的主要是入户教育和改造，所以装备的收益记「中」，不记「大」。买灭火器认准 CCC 标志，贮压式的指针要停在绿区。烟雾报警器和一氧化碳报警器见本节第 3 条。止血带的用法见第 13 节第 12 条。每样东西怎么选、放在哪里、几年换一次，见 [docs/家庭应急装备清单.md](../docs/家庭应急装备清单.md)",
+        "source": "应急管理部 (2020). 全国基础版家庭应急物资储备建议清单. <https://www.mem.gov.cn/kp/shaq/202011/t20201129_372149.shtml> ; Kendrick D 等 (2012). Home safety education and provision of safety equipment for injury prevention. Cochrane Database of Systematic Reviews. <https://doi.org/10.1002/14651858.CD005014.pub3> ; 武胜县市场监督管理局 (2025). 手提式灭火器、防火门（窗）、点型感温（烟）火灾探测器消费提示. <https://www.wusheng.gov.cn/gasylbzj/c109568/zzzq/content/content_1988424970198126592.html>",
         "grade": "B",
         "meta": {
           "money": "少",
@@ -501,6 +527,7 @@ module.exports = {
         "cost": "尿常规几十元，泌尿系超声一两百元。医生认为需要的话，再加一个膀胱镜，千元上下。",
         "gain": "英国拿社区全科门诊（初级医疗）的电子病历做了一项研究，4915 例膀胱癌对 21718 例对照。出现肉眼血尿的人里，最后真查出膀胱癌的比例是这样。60 岁以上是 2.8%，可信范围 95% CI 2.5 到 3.1。40 到 59 岁是 1.2%，可信范围 0.6 到 2.3。这个比例的学名叫阳性预测值。只有在显微镜下才看得见的血尿，同样有意义。比值比 20，可信范围 95% CI 12 到 33。60 岁以上这个比例为 1.6%，可信范围 1.2 到 2.1",
         "note": "「不疼」是关键。结石和感染引起的血尿，多半同时腰腹绞痛，或者尿频、尿急、尿痛。肿瘤引起的往往一点感觉都没有，而且会自己停几天再出现，很多人就这么放过了。正在吃抗凝药，不是可以不查的理由。剧烈运动之后、女性经期前后的血尿，可以先复查一次再定。收益记「小」，是因为只有检出率，没有「早查能降低多少死亡」的效应量。",
+        "source": "Price SJ, Shephard EA, Stapley SA, Barraclough K, Hamilton WT (2014). Non-visible versus visible haematuria and bladder cancer risk: a study of electronic records in primary care. British Journal of General Practice, 64(626), e584-e589. <https://doi.org/10.3399/bjgp14X681409>",
         "grade": "B",
         "meta": {
           "money": "少",
@@ -520,6 +547,7 @@ module.exports = {
         "cost": "挂号几十元。量血压、抽血查血糖和血脂，一两百元。跑一趟医院，等几天结果。",
         "gain": "一篇荟萃分析把 14 项跟踪研究合起来算，共 92,757 名男性，平均跟踪 6.1 年。和没有勃起功能障碍的人相比，有这个问题的人后来的风险是这样。总的心血管事件高约 44%（RR 1.44，95% CI 1.27 到 1.63，这是可信范围）。心梗高约 62%（RR 1.62，1.34 到 1.96）。脑血管事件高约 39%（RR 1.39，1.23 到 1.57）。全因死亡高约 25%（RR 1.25，1.12 到 1.39）。心血管死亡那一项没有拉开差距（RR 1.19，0.97 到 1.46）。年龄越轻，倍数越高。本来心血管风险属于中等的那批人，倍数比高风险和低风险的人都高。用问卷判定的研究，算出来的倍数是 1.61（1.38 到 1.86）。只问一句话的研究是 1.27（1.18 到 1.37）",
         "note": "这 14 项都是跟踪一群人看结果的研究，不是随机分组试验。所以「多四成」是关联，不能当成因果。偶尔一两次不算数，持续三个月以上才按问题看。要查的东西和本节第 7、8 条是同一批：量血压、查空腹血糖，再加血脂、吸烟和腰围。别在网上买「壮阳」保健品。正规的那类药是处方药，说明书把硝酸酯类列为禁忌，正在用硝酸甘油这类药的人不能吃，一起用会让血压骤降。怎么改善见本节第 29 条（减重、戒烟能让勃起功能好转）。收益记「中」不记「大」：44% 是两群人的风险差距，不是「去查一次能降多少死亡」。也不记「小」：本节第 27 条（尿里出现肉眼看得见的血）那种信号只有检出率，而这里查出来的高血压、糖尿病、血脂异常都有现成的治疗办法。",
+        "source": "Vlachopoulos CV, Terentes-Printzios DG, Ioakeimidis NK, Aznaouridis KA, Stefanadis CI (2013). Prediction of cardiovascular events and all-cause mortality with erectile dysfunction: a systematic review and meta-analysis of cohort studies. Circulation: Cardiovascular Quality and Outcomes, 6(1), 99-109. <https://doi.org/10.1161/CIRCOUTCOMES.112.966903>；DailyMed（美国国立医学图书馆的药品说明书库）. VIAGRA (sildenafil citrate) tablet, CONTRAINDICATIONS. <https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=d905dc8d-917f-4ea3-a4ee-a1ecf6967d4e>",
         "grade": "A",
         "meta": {
           "money": "少",
@@ -539,6 +567,7 @@ module.exports = {
         "cost": "不花钱，还可能省钱。难的是长期坚持：管住吃、动起来、把烟戒掉。",
         "gain": "一篇荟萃分析把 6 项随机对照试验、740 名男性合起来算。干预是改生活方式，或者用药控制心血管危险因素，随访至少 6 周。结果：勃起功能问卷（IIEF-5）的评分平均提高 2.66 分（95% CI 1.86 到 3.47，这是可信范围）。把其中用他汀的 2 项试验（143 人）去掉，剩下 4 项纯靠改生活方式的（597 人）仍然提高 2.40 分（1.19 到 3.61）。IIEF-5 是一份 5 个问题的问卷，总分 5 到 25 分。原文按得分分成五档，22 到 25 分算没有障碍，5 到 7 分算重度",
         "note": "这 6 项试验的干预不一样，有的是减重加运动，有的是用药控血压血脂。总共只有 740 人。所以方向明确，具体能好多少因人而异。收益记「小」，是因为终点只有问卷评分，没有「后来少得多少病」的数字。同样这几个动作在别处是有硬终点的：戒烟见第 2 节第 1 条（戒烟，越早越好），减重见第 2 节第 32 条（把 BMI 控制在 20–25），血压见本节第 7 条（量血压，高了就吃药）。吃药本身不是禁区，前提是医生开的处方药。网上卖的「保健品」常偷加这类成分，剂量不明，怎么分辨见第 28 节第 4 条（不买承诺快速瘦的减肥药）。",
+        "source": "Gupta BP, Murad MH, Clifton MM, Prokop L, Nehra A, Kopecky SL (2011). The effect of lifestyle modification and cardiovascular risk factor reduction on erectile dysfunction: a systematic review and meta-analysis. Archives of Internal Medicine, 171(20), 1797-1803. <https://doi.org/10.1001/archinternmed.2011.440>；Rosen RC, Cappelleri JC, Smith MD, Lipsky J, Peña BM (1999). Development and evaluation of an abridged, 5-item version of the International Index of Erectile Function (IIEF-5) as a diagnostic tool for erectile dysfunction. International Journal of Impotence Research, 11(6), 319-326. <https://doi.org/10.1038/sj.ijir.3900472>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -558,6 +587,7 @@ module.exports = {
         "cost": "一只一两元。难的地方不在钱，在于每一次都用，而且从一开始就戴上。",
         "gain": "一项研究把 25 项研究、10676 对异性伴侣合起来一起算。这些伴侣都是一方感染 HIV、一方没感染，学名叫血清不一致。和从来不用的人相比，坚持每次都用安全套的人，HIV 传播风险低约 71%。原值 RR 0.29，可信范围 95% CI 0.20 至 0.43。和用得断断续续的人相比，低约 77%（RR 0.23，95% CI 0.13 至 0.40）。作者的结论是，安全套虽然不完美，但「坚持使用可使 HIV 传播降低 70% 以上」。同一层保护还覆盖梅毒、淋病、衣原体等其他性传播感染",
         "note": "「不规律使用」和「不用」的差距很小，要每次、全程都用才有效。共用针具是另一条独立的高效传播途径，和性行为无关，注射毒品、纹身、穿孔都算。高风险人群还可以用暴露前预防（PrEP），就是事先吃药挡住感染。把 18 项研究合起来算，凡是超过七成人按时吃药的试验，吃 PrEP 的人感染 HIV 的风险比吃安慰剂的低约七成。原值是风险比 0.30，可信范围 95% CI 0.21 至 0.45。按时吃药的人少的那些试验，则看不到保护效果。PrEP 是处方药，去感染科或者疾控问，别自己网购。已经暴露之后怎么办见第 13 节",
+        "source": "Giannou FK, Tsiara CG, Nikolopoulos GK, et al. (2016). Condom effectiveness in reducing heterosexual HIV transmission: a systematic review and meta-analysis of studies on HIV serodiscordant couples. Expert Review of Pharmacoeconomics & Outcomes Research, 16(4), 489-499. <https://doi.org/10.1586/14737167.2016.1102635>；Fonner VA 等 (2016). Effectiveness and safety of oral HIV preexposure prophylaxis for all populations. AIDS. <https://doi.org/10.1097/QAD.0000000000001145>（暴露前预防 PrEP）",
         "grade": "A",
         "meta": {
           "money": "少",
@@ -577,6 +607,7 @@ module.exports = {
         "cost": "不花钱。跑一趟疾控或者指定的医疗机构，抽一管血。难的地方是开口去查这一步。",
         "gain": "《艾滋病防治条例》第二十三条写明。县级以上地方人民政府卫生主管部门会指定一些医疗卫生机构。这些机构「应当为自愿接受艾滋病咨询、检测的人员免费提供咨询和初筛检测」。查得早有实际用处：现在的抗病毒治疗能把病毒压到检测不到。世界卫生组织的口径是「接受抗病毒治疗且病毒载量检测不到的感染者不会把 HIV 传染给性伴侣」。PARTNER 研究跟踪了 782 对同性伴侣，每对都是一方感染、一方没感染，学名叫血清不一致。合计 1593 对年（每对跟踪年数相加）。期间共 76088 次无套性行为，出现 15 例新感染。比对病毒基因做系统发育分析之后，这 15 例全部不来自伴侣，伴侣间传播为零。《艾滋病防治条例》第三十九条规定：「未经本人或者其监护人同意，任何单位或者个人不得公开艾滋病病毒感染者、艾滋病病人及其家属的姓名、住址、工作单位、肖像、病史资料以及其他可能推断出其具体身份的信息。」",
         "note": "窗口期决定什么时候查才算数。广东省疾控中心的口径是：核酸检测约 1 周、第四代抗原抗体联合检测约 2 周、第三代抗体检测约 3 周可以检出。建议至少 2 周后再查，间隔 2 至 4 周复查一次。最后一次高危行为满 3 个月后，99.99% 以上可以排除感染。自测试剂显示阳性不等于确诊，必须去疾控或者正规机构复核。条例第三条写明，任何单位和个人不得歧视感染者及其家属，婚姻、就业、就医、入学等权益受法律保护。第三十八条同时规定，感染者有义务「将感染或者发病的事实及时告知与其有性关系者」。孕期的三病筛查和母婴阻断见第 27 节",
+        "source": "国务院 (2006). 艾滋病防治条例（第三、二十三、三十八、三十九条）. <https://wjw.beijing.gov.cn/zwgk_20040/zcwj2022/flfg/202304/t20230408_2992986.html>（北京市卫生健康委员会转载）；Rodger AJ, Cambiano V, Bruun T, et al. (2019). Risk of HIV transmission through condomless sex in serodifferent gay couples with the HIV-positive partner taking suppressive antiretroviral therapy (PARTNER): final results of a multicentre, prospective, observational study. The Lancet, 393(10189), 2428-2438. <https://doi.org/10.1016/S0140-6736(19)30418-0>；广东省疾病预防控制中心. 艾滋病检测窗口期科普. <https://web.archive.org/web/20260915151957/https://cdcp.gd.gov.cn/jkjy/kpydjwjxz/content/post_3441820.html>（窗口期那个数字；原页面已下线，链接为 2026-09-15 的网页存档）",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -596,6 +627,7 @@ module.exports = {
         "cost": "不花钱。难的地方是当时开口，以及承认自己这几个小时不能一个人待着。",
         "gain": "82 名自杀未遂者在入院 3 天内接受访谈：47.6%（39 人）说，从这一次第一次冒出自杀念头到真的动手，不超过 10 分钟。这个过程拖得长一些的人，自杀意图评分明显更高。冲动性量表的得分和过程长短没有关系。76.8%（63 人）说，在这段时间里和伴侣、家人或者朋友有过某种接触。作者的结论是：能干预的时间窗通常很短，专业人员在这个阶段能介入的余地有限，所以要把识别信号和干预办法普及到普通人。另有一篇系统综述汇总了 90 项随访研究。因自伤就诊的人，1 年后再次自伤但没死的比例取中间值为 16%。1 年后死于自杀的为 2%。随访 9 年以上的，约 7% 死于自杀",
         "note": "给 B 的原因：Deisenhammer 那项只有 82 人，出自一家医院，靠当事人事后回忆。Owens 那篇给的是 90 项做法各异的研究取中间的那个比例，不是把它们合成一个数。同一篇里还明确写着，自伤者的自杀风险仍是普通人群的几百倍。所以「绝大多数人后来没有死于自杀」说的是这批人整体的情况，不能当成对某一个人的保证，该看的病还是要看。把致死手段挪远和 12356 见本节第 25 条。情绪低落时先做的几件事见第 3 节第 18 条。救回来之后的后遗症见本节第 33 条。身边人流露出这种念头时你能做什么，见第 8 节第 15 条",
+        "source": "Deisenhammer EA, Ing CM, Strauss R, Kemmler G, Hinterhuber H, Weiss EM (2009). The duration of the suicidal process: how much time is left for intervention between consideration and accomplishment of a suicide attempt? Journal of Clinical Psychiatry, 70(1), 19-24. <https://doi.org/10.4088/JCP.07m03904>；Owens D, Horrocks J, House A (2002). Fatal and non-fatal repetition of self-harm: systematic review. British Journal of Psychiatry, 181, 193-199. <https://doi.org/10.1192/bjp.181.3.193>",
         "grade": "B",
         "meta": {
           "money": "0",
@@ -615,6 +647,7 @@ module.exports = {
         "cost": "不花钱。只是先知道这件事。",
         "gain": "一篇百草枯中毒的系统综述：病死率极高，原因是它本身毒性强，又缺乏有效治疗。它被逆着浓度差主动搬进肺组织，学名叫逆浓度梯度主动摄取，结果是肺炎和肺纤维化，同时还造成肾损伤和肝损伤。综述写明：不应进行洗胃。血液透析和血液灌流不大可能改变临床病程。激素与免疫抑制剂的疗效证据很弱。综述还写了一句：「所有中心的病死率都很高，尽管治疗差异很大」。孟加拉 10 家三级医院 2013 至 2024 年收了 1420 例，其中可分析的 257 例：病死率 43.2%。常见表现是急性肾衰引起的下肢肿胀 71.2%、呕吐 65.8%、腹痛 58.0%。急性一氧化碳中毒的试验是双盲随机分组，两组各 76 人。医生和病人都不知道进的是哪一组。六周时留下认知后遗症的，高压氧组 19/76（25.0%）。常压氧组 35/76（46.1%），P=0.007。把其他因素校正之后 OR 0.45（95% CI 0.22 至 0.92，括号里是这个数的可信范围）。另一项研究连续观察了 73 例：30% 有认知后遗症，12% 出现脑白质高信号。中国自 2014 年 7 月 1 日起撤销百草枯水剂的登记和生产许可，并停止生产。2016 年 7 月 1 日起，水剂在国内停止销售和使用。2020 年 9 月 26 日起，禁止可溶胶剂在境内销售、使用。文件写明，「致使服用百草枯自杀事件时有发生」是加强监管的直接原因",
         "note": "给 B 的原因：这几项研究的对象是中毒病人，不是单一的自杀未遂人群，一氧化碳那项试验里还含意外中毒的人。所以上面的后遗症比例，不能直接当成「自杀未遂者的后果概率」。能确定的是，没有哪一种方式能不留后遗症。一氧化碳的现场处置见第 13 节第 19 条。误服农药和药物先别催吐、带上瓶子就医，见第 13 节第 20 条。家里不囤农药和安眠药见本节第 25 条。本书不比较不同方式的致死率，也不写任何具体做法",
+        "source": "Gawarammana IB, Buckley NA (2011). Medical management of paraquat ingestion. British Journal of Clinical Pharmacology, 72(5), 745-757. <https://doi.org/10.1111/j.1365-2125.2011.04026.x>；Chowdhury FR 等 (2026). Clinical and Laboratory Profile of Paraquat Poisoning: A Toxicological Crisis in Bangladesh. American Journal of Tropical Medicine and Hygiene, 115, 176-182. <https://doi.org/10.4269/ajtmh.25-0719>；Weaver LK, Hopkins RO, Chan KJ, et al. (2002). Hyperbaric oxygen for acute carbon monoxide poisoning. New England Journal of Medicine, 347(14), 1057-1067. <https://doi.org/10.1056/NEJMoa013121>；Parkinson RB, Hopkins RO, Cleavinger HB, et al. (2002). White matter hyperintensities and neuropsychological outcome following carbon monoxide poisoning. Neurology, 58(10), 1525-1532. <https://doi.org/10.1212/wnl.58.10.1525>；农业农村部办公厅 (2018). 关于切实加强百草枯监督管理的通知（农办农〔2018〕17 号）. <https://www.gov.cn/zhengce/zhengceku/2018-12/31/content_5442594.htm>",
         "grade": "B",
         "meta": {
           "money": "0",
@@ -634,6 +667,7 @@ module.exports = {
         "cost": "不花钱。只是先把这笔账看清。",
         "gain": "新疆南部一家创伤 ICU（重症监护病房）做过统计。从 2020 年 4 月到 2024 年 7 月，这里共收了 289 例高处坠落。这批人平均年龄 40.3 岁。坠落高度中位数 3 米，26.6% 从 5 米以上坠落，11.4% 从 10 米以上坠落。伤情评分 ISS 中位数 24，这套评分越高伤得越重，63.3% 的人 ISS 大于 20。47.1% 伤及 3 个以上部位，18.3% 伤及 4 个以上。36% 需要上呼吸机（机械通气），上机时长中位 103.5 小时。在 ICU 住院中位 8 天，最短 1 天，最长 132 天。院内或 30 天死亡率 5.5%（16/289）。德国一家创伤中心收了 84 例 ISS ≥ 25 的多发伤病人，多发伤就是同时伤到多个部位。随访期内重返工作的比例为 58%。年龄、ICU 治疗时长和自评健康是预测因素。2024 年全国医院次均住院费用（平均每次住院花的钱）9870.0 元，按当年价格比上年下降 4.3%。同年全国卫生总费用 90895.5 亿元，其中个人卫生支出 25007.5 亿元，占 27.5%",
         "note": "给 B 的原因：坠落那一组是一家医院翻旧病历统计出来的，没有分开意外和自伤。重返工作那一组只有 84 人，而且在德国。两组都不能当成「跳楼之后一个人会怎么样」。次均住院费用是拿全国所有住院算出来的平均数，不是坠落伤的费用，引它只为给一个可以核对的下限。原文只给了这批人的高度分布，所以这里不写高度与后果的对应关系。长期卧床期间最该盯的压疮见第 17 节第 8 条。深静脉血栓与肺栓塞见第 13 节第 11 条（一条腿突然肿起来）。念头冒出来时怎么办见本节第 32 条。中毒的后果见本节第 33 条（别把「救回来」当成兜底）。下面是作者本人的经历：从四楼坠落，事前以为「十几天就好」，实际住院一年、四处手术、上了钢板、半年不能自己翻身坐起，家里为此借钱",
+        "source": "Chen Y, Li W, Wang X, Zhong Q, Abudurexiti A, Qiu Q, Li J, Luo J (2025). Clinical features and prognostic predictors for patients admitted to trauma intensive care unit due to fall from height in South Xinjiang. International Journal of Emergency Medicine, 18, 142. <https://doi.org/10.1186/s12245-025-00959-4>；Simmel S, Wurm S, Drisch S, Woltmann A, Coenen M (2020). Prädiktion der Rückkehr zur Arbeit nach Polytrauma bei Patienten mit einem ISS von mindestens 25. Die Rehabilitation, 59(2), 95-103. <https://doi.org/10.1055/a-0977-6853>；国家卫生健康委 (2025). 2024 年我国卫生健康事业发展统计公报解读. <https://www.gov.cn/zhengce/202512/content_7050025.htm>",
         "grade": "B",
         "meta": {
           "money": "0",
@@ -653,6 +687,7 @@ module.exports = {
         "cost": "不花钱。只是先把这笔账看清。",
         "gain": "美国把 96,217 名活体捐肾者和 20,024 名条件相当的健康未捐者作了比较。后者来自美国全国健康与营养调查（NHANES III）。再看捐后 15 年走到尿毒症的估计风险。捐献者为每万人 30.8 人，可信范围 95% CI 24.3–38.5。健康未捐者为每万人 3.9 人，可信范围 95% CI 0.8–8.9，P<0.001。尿毒症的学名是终末期肾病 ESRD，到了这一步得靠透析或移植维持。估计一辈子走到 ESRD 的风险：捐献者每万人 90 人，未经筛查的一般人群每万人 326 人，健康未捐者每万人 14 人。挪威也做过一次比较。一边是 1901 名捐肾者，中位随访 15.1 年。另一边是 32,621 名符合捐献条件的对照，中位随访 24.9 年。捐肾者的全因死亡高约三成（HR 1.30，95% CI 1.11–1.52）。心血管死亡高约四成（HR 1.40，1.03–1.91）。走到 ESRD 高十倍上下（HR 11.38，4.37–29.6）。这批捐献者的 ESRD 总发生率为每百万人 302 例。美国另有 3698 名捐肾者，其中 11 人发生 ESRD，相当于每百万人观察一年里 180 例，同期一般人群是 268 例。这批人里有 255 人在捐后平均 12.2±9.2 年回来复查。其中 85.5% 的肾滤过功能 GFR ≥ 60 ml/min/1.73 m²。60 是临床正常下限。32.1% 有高血压。12.7% 有蛋白尿（尿里漏出蛋白）。印度金奈调查了 305 名卖肾者，平均在卖肾 6 年后接受调查：96% 为还债而卖，平均拿到 1070 美元。切肾后家庭平均收入下降三分之一（P<0.001），生活在贫困线以下的人数增加，四分之三在调查时仍负债。86% 报告健康状况较切肾前变差，79% 不建议他人卖肾",
         "note": "争议：Ibrahim 那项拿普通人当比较对象，结论是捐肾者的存活、以及走到尿毒症（ESRD）的风险，都和普通人相仿。Muzaale 和 Mjøen 把比较对象换成「同样健康、同样够格捐肾」的人之后，风险就明显高出来。分歧在拿谁来比，不在捐献者身上。三项研究都同意绝对风险不大（15 年 30.8/万，即一万人里 30.8 个）。所以重点不在「捐肾很危险」，要看的是另外两件事。剩下那个肾确实在付代价，高血压和蛋白尿的比例摆在那里。这些数字全都出自术前经过筛查、术后有人复查、出事能回医院的人群，黑市卖肾这三样一样都没有，印度那份回访给出的是另一种结局。原始研究只给到自述健康变差、蛋白尿、高血压和尿毒症发生率，没有「多少人卧床」这类数字，这里不替它补。合法捐献的亲属限制、罚款与刑责见第 9 节第 22 条（不卖自己的器官）。已经要透析的，跨省直接结算和长期用药见第 16 节第 1、2 条（药按医嘱吃满、门诊慢特病异地备案）",
+        "source": "Muzaale AD, Massie AB, Wang MC, Montgomery RA, McBride MA, Wainright JL, Segev DL (2014). Risk of end-stage renal disease following live kidney donation. JAMA, 311(6), 579-586. <https://doi.org/10.1001/jama.2013.285141>；Mjøen G, Hallan S, Hartmann A, et al. (2014). Long-term risks for kidney donors. Kidney International, 86(1), 162-167. <https://doi.org/10.1038/ki.2013.460>；Ibrahim HN, Foley R, Tan L, et al. (2009). Long-term consequences of kidney donation. New England Journal of Medicine, 360(5), 459-469. <https://doi.org/10.1056/NEJMoa0804883>；Goyal M, Mehta RL, Schneiderman LJ, Sehgal AR (2002). Economic and health consequences of selling a kidney in India. JAMA, 288(13), 1589-1593. <https://doi.org/10.1001/jama.288.13.1589>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -672,6 +707,7 @@ module.exports = {
         "cost": "不花钱。看见不认识的金属圆柱、铅罐、从设备上拆下来的部件就绕开，不捡、不拆、不放进口袋。",
         "gain": "截至 2025 年，全国约有 17.8 万枚在用放射源和 35.5 万台（套）射线装置。放射源辐射事故的年发生率稳定在每万枚 1 起以下。分级是这样的。Ⅰ类、Ⅱ类放射源丢失、被盗、失控，就构成重大辐射事故。Ⅲ类为较大辐射事故。Ⅳ类、Ⅴ类丢失被盗，或者导致人员受到超过年剂量限值的照射，为一般辐射事故。官方案例：2020 年 6 月，宁夏钢铁集团炼铁厂在高炉管道改造项目上做 γ 射线探伤作业。一枚 Ⅱ 类铱-192 放射源使三名作业人员受到照射。陈某某左手急性放射性皮肤损伤 Ⅲ 度。刘某某左手拇指、食指 Ⅳ 度，中指、无名指、小指 Ⅲ 度。樊某某左手 Ⅰ-Ⅱ 度。三人受照剂量均严重超过国家标准规定的剂量限值，两家责任单位被吊销辐射安全许可证并罚款 7 万元。国际案例：1987 年巴西戈亚尼亚，废弃诊所的远距离治疗机被拆解，取出了里面 50.8 TBq 的铯-137 放射源，还弄破了装源的密封囊。约 112,000 人接受监测。其中 249 人受到体内或体外污染。这 249 人里，129 人为中度至重度污染，50 人需密切医学监护。最后 4 人死亡（全国 / 国际）",
         "note": "真遇到了：离远点，记住位置，别搬动，打 110。条例要求向生态环境主管部门、公安部门、卫生主管部门报告。距离和时间是唯一有效的防护，隔着口袋或者塑料袋没有任何用。X 光机、CT 这类靠通电产生射线的装置，断电之后不残留放射性。真正危险的是设备里那枚密封放射源。医院的放疗机、管道和锅炉上的 γ 探伤机、测井仪、料位计都含源。拆开外壳就是把源暴露出来。而它们的外观和普通金属件没有区别。所以别指望认出放射源，来路不明的设备部件一律不拆、不卖、不带回家。国内也出过有人不知情捡起放射源的事。2014 年 5 月，南京化工园区一家工厂里，探伤作业丢了一枚铱-192 放射源。一名仓库管理员巡检时把它捡起来，装进了工作服口袋。他后来被诊断为轻度急性放射病和右腿急性放射性皮肤损伤，住院治了一年，几年后仍要拄双拐走路。另有两名工人说见过它，其中一人在上班路上以为是项链，拿起来看过又扔了。丢源的是天津宏迪工程检测发展有限公司。此事没有找到官方事故通报。捡源者的伤情取自江苏省疾控中心医生发表的随访论文，捡起又扔掉那段只有《中国环境报》的记者报道。废品回收、拆解、五金和工地这几行的人，风险比一般人高得多，工地上见到画着三叶草标志的警戒区就绕行。核电站泄漏是另一类事故，普通人遇到的概率更低。受益人主要是你自己和同在现场的家人。",
+        "source": "生态环境部 (2025). 2024 中国生态环境状况公报. <https://www.mee.gov.cn/ywgz/sthjjcgl/hjzljcypj/202506/t20250605_1120773.shtml>；国家核安全局 (2026). 2025 年我国核与辐射安全监管工作成效. <https://nnsa.mee.gov.cn/tpxw/202601/t20260107_1140062.html>；生态环境部 (2021). 关于一起 γ 射线探伤作业违法违规造成辐射事故案件处理情况的通报. <https://www.mee.gov.cn/xxgk2018/xxgk/xxgk06/202101/t20210121_818216.html>；国务院 (2019). 放射性同位素与射线装置安全和防护条例（2019 年修订，第三十四、四十二、六十八条）. <https://www.mee.gov.cn/ywgz/fgbz/xzfg/201909/t20190918_734315.shtml>；环境保护部 (2009). 关于建立放射性同位素与射线装置辐射事故分级处理和报告制度的通知（辐射事故分级标准）. <https://www.mee.gov.cn/gkml/zj/wj/200910/t20091022_172414.htm>；International Atomic Energy Agency (1988). The Radiological Accident in Goiânia. IAEA, Vienna. <https://www-pub.iaea.org/MTCD/Publications/PDF/Pub815_web.pdf>；王福如, 王进, 余宁乐, 等 (2019). 南京“5.7”放射源丢失事故受照者照后医学随访观察. 中华放射医学与防护杂志, 39(11), 859-863. <https://doi.org/10.3760/cma.j.issn.0254-5098.2019.11.011>；中国环境报 (2014-05-15). 放射源丢失的48小时（徐小怗、邵艺、褚方樵、汤景茹）. <http://nnsa.mee.gov.cn/ztzl/haqshmhsh/hjbzl/202406/P020240624472937009953.pdf>（网页存档 <https://web.archive.org/web/20261005044102/http://nnsa.mee.gov.cn/ztzl/haqshmhsh/hjbzl/202406/P020240624472937009953.pdf>）",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -691,6 +727,7 @@ module.exports = {
         "cost": "不花钱。打一个电话。把银行卡、支付密码和借贷 App 交给家人管。难在要先承认自己控制不住。",
         "gain": "瑞典一项全国登记研究，找出 2005 到 2016 年在专科被诊断为赌博障碍的 2099 人。赌博障碍就是控制不住地赌、赌到影响生活。和同龄的瑞典人比，20 到 74 岁这些人的总死亡率是 1.8 倍，自杀死亡率是 15 倍（这两个数是标准化死亡比 SMR）。随访期间 67 人死亡，其中 21 人死于自杀。能预测自杀死亡的是抑郁。作者 2023 年发了更正：男性自杀是 12.1 倍，女性是 16.1 倍。中国从 2025 年 5 月 1 日起，全国拨 12356 能接通心理援助热线，每天开通不少于 18 小时（瑞典 / 全国）",
         "note": "给 B 是因为只有一项研究，而且只算了去专科看过病的人。这些人病情偏重，所以 15 倍不能套到所有打牌的人身上。把钱交给家人管是经验做法，没有直接研究，单算是 C 级。赌博的法律红线见第 9 节第 13 条（不抽头、不玩网络赌博）。家里人欠了赌债该不该替他还，见第 8 节第 44 条（赌债不算夫妻共同债务）。自杀念头冒出来之后怎么办，见本节第 32 条（先告诉身边的一个人）。受益人主要是你自己，家人发现苗头时也可以拉着他照这条办。",
+        "source": "Karlsson A, Håkansson A. (2018). Gambling disorder, increased mortality, suicidality, and associated comorbidity: A longitudinal nationwide register study. Journal of Behavioral Addictions, 7(4), 1091–1099. <https://doi.org/10.1556/2006.7.2018.112>；Karlsson A, Håkansson A. (2023). Corrigendum to: Gambling disorder, increased mortality, suicidality, and associated comorbidity. Journal of Behavioral Addictions, 12(1), 302. <https://doi.org/10.1556/2006.2023.10000>；国家卫生健康委 (2024). 关于应用\"12356\"全国统一心理援助热线电话号码的通知（国卫医政函〔2024〕259 号）. <https://www.gov.cn/zhengce/zhengceku/202412/content_6994470.htm>",
         "grade": "B",
         "meta": {
           "money": "0",
@@ -710,6 +747,7 @@ module.exports = {
         "cost": "这是处方药，多数地方自费，价格从几百到几千元不等。开药前要查 HIV、肾功能和乙肝。之后每 3 个月复查一次。难的是天天按时吃。",
         "gain": "这种药是恩曲他滨加替诺福韦的复方片。iPrEx 试验让 2499 名男男性行为者和跨性别女性每天吃药或者吃安慰剂。吃药组感染少了 44%（95% CI 15–63）。血里测得到药的人，保护效果强得多。英国的 PROUD 试验有 544 名男男性行为者。立刻吃药的一组比推迟一年的一组感染少 86%（90% CI 64–96，90% 可信范围）。法国的 IPERGAY 试验在性行为前后按需吃药，感染少 86%（95% CI 40–98）。世界卫生组织用的一篇荟萃分析把各项试验合起来。总体 RR 0.49（0.33–0.73，低约 51%）。吃药率超过七成的试验，RR 0.30（0.21–0.45，低约 70%）。吃药率不到四成的，RR 0.95，基本无效。国家药监局 2020 年 8 月批准这个药用于暴露前预防。成人和体重至少 35 公斤的青少年可以用（多国 / 中国）",
         "note": "试验里的人主要是男男性行为者，所以最该去问的是这群人。其他有高危性行为的人，也可以去问医生合不合适。开药前必须先确认没感染，已经感染的人吃它会让病毒耐药，自测试纸的结果不能当依据。有乙肝的人停药可能让肝炎发作，所以开药前要查。世界卫生组织只对男男性行为者推荐按需吃，适合平均每周少于 2 次的人。吃法是性行为前 2 到 24 小时吃 2 片，之后 24 小时、48 小时各吃 1 片。女性和有乙肝的人只能每天吃。按需吃的试验里，吃药组胃肠道和肾脏的不良反应比安慰剂组多，所以复查不能省。国内 2019 年起在男男性行为人群里试点，2024 年的规划写的是「规范实施」。全国免费的政策没有查到。去当地艾滋病定点医院的感染科或性病艾滋病门诊开，先打当地疾控电话问哪家能开。它不防梅毒、淋病这些性病，安全套照样要用，见本节第 30 条（性行为全程用安全套）。已经发生了高危行为，补救见第 13 节第 38 条（72 小时内拿阻断药）。受益人主要是你自己，也护住你的伴侣。",
+        "source": "Grant RM, Lama JR, Anderson PL, et al. (2010). Preexposure chemoprophylaxis for HIV prevention in men who have sex with men. New England Journal of Medicine, 363(27), 2587–2599. <https://doi.org/10.1056/NEJMoa1011205>；McCormack S, Dunn DT, Desai M, et al. (2016). Pre-exposure prophylaxis to prevent the acquisition of HIV-1 infection (PROUD): effectiveness results from the pilot phase of a pragmatic open-label randomised trial. The Lancet, 387(10013), 53–60. <https://doi.org/10.1016/S0140-6736(15)00056-2>；Molina JM, Capitant C, Spire B, et al. (2015). On-demand preexposure prophylaxis in men at high risk for HIV-1 infection. New England Journal of Medicine, 373(23), 2237–2246. <https://doi.org/10.1056/NEJMoa1506273>；Fonner VA, Dalglish SL, Kennedy CE, et al. (2016). Effectiveness and safety of oral HIV preexposure prophylaxis for all populations. AIDS, 30(12), 1973–1983. <https://doi.org/10.1097/QAD.0000000000001145>；Xu JJ, Huang XJ, Liu XC, et al. (2020). Consensus statement on human immunodeficiency virus pre-exposure prophylaxis in China. Chinese Medical Journal, 133(23), 2840–2846. <https://doi.org/10.1097/CM9.0000000000001181>（中文版《中国 HIV 暴露前预防用药专家共识》）；World Health Organization (2019). What's the 2+1+1? Event-driven oral pre-exposure prophylaxis to prevent HIV for men who have sex with men (WHO/CDS/HIV/19.8). <https://www.who.int/publications/i/item/what-s-the-2-1-1-event-driven-oral-pre-exposure-prophylaxis-to-prevent-hiv-for-men-who-have-sex-with-men>；国务院办公厅 (2024). 中国遏制与防治艾滋病规划（2024—2030 年）. <https://www.gov.cn/zhengce/zhengceku/202412/content_6992033.htm>",
         "grade": "A",
         "meta": {
           "money": "多",
@@ -729,6 +767,7 @@ module.exports = {
         "cost": "去医院做一次双能 X 线骨密度检查（简称 DXA），查腰椎和髋部，躺着几分钟就做完。自费一般一两百元，各地价格不同。体检里踩一脚的跟骨超声只能初筛，不能确诊。",
         "gain": "美国预防服务工作组 2025 年发的推荐是：65 岁及以上的女性做骨质疏松筛查（B 级推荐）。绝经后、不到 65 岁、但按风险评估骨折风险高的女性，也推荐筛查（B 级）。男性证据不足，没有表态。给这份推荐做的证据综述合并了 3 项随机试验、42009 名欧洲老年女性。筛查的做法是先评估骨折风险，风险高的再查骨密度，查出高风险就用药。筛查组髋部骨折低约 17%。原值 RR 0.83，可信范围 95% CI 0.73 到 0.93。折成绝对数，每 1000 人筛查少 5 例髋部骨折。其中英国 SCOOP 试验找了 12483 名 70 到 85 岁的女性，筛查组髋部骨折低约 28%（HR 0.72，95% CI 0.59 到 0.89），死亡率没有看出差别。中华医学会 2017 年版诊疗指南建议：女性 65 岁以上、男性 70 岁以上做骨密度检查。不到这个年龄、但有一个或多个骨质疏松危险因素的，也建议查。2017 到 2018 年的全国调查里，40 岁以上女性骨质疏松的患病率是 20.6%，男性是 5.0%（中国）",
         "note": "争议：SCOOP 事先定的主要结果是所有骨质疏松性骨折，筛查组并没有明显减少（HR 0.94，95% CI 0.85 到 1.03），少的只是髋部骨折。三项试验都是「先评估风险、再查骨密度」，没有一项单独比较只查骨密度。证据综述还估计，查出来的人里有 11.8% 到 24.1% 属于过度诊断，也就是这辈子本来不会因此骨折的人。男性要不要查，美国说证据不足，中国指南定在 70 岁以上，按医生的建议走。这条管的是骨头经不经得起摔，少摔一跤靠第 13 条（平衡和腿部力量），两条一起做。查出骨质疏松之后怎么办，见第 40 条（查出骨质疏松就用药）。受益人主要是你自己，也包括你的父母。",
+        "source": "US Preventive Services Task Force, Nicholson WK, Silverstein M, et al. (2025). Screening for Osteoporosis to Prevent Fractures: US Preventive Services Task Force Recommendation Statement. JAMA. <https://doi.org/10.1001/jama.2024.27154> ; Kahwati LC, Kistler CE, Booth G, et al. (2025). Screening for Osteoporosis to Prevent Fractures: A Systematic Evidence Review for the US Preventive Services Task Force. JAMA. <https://doi.org/10.1001/jama.2024.21653> ; Shepstone L, Lenaghan E, Cooper C, et al. (2018). Screening in the community to reduce fractures in older women (SCOOP): a randomised controlled trial. The Lancet. <https://doi.org/10.1016/S0140-6736(17)32640-5> ; 中华医学会骨质疏松和骨矿盐疾病分会 (2017). 原发性骨质疏松症诊疗指南(2017). 中华骨质疏松和骨矿盐疾病杂志, 10(5), 413-443（表 5 骨密度测量的临床指征）. <https://html.rhhz.net/GUSS/html/cc825127-29a3-47c1-9a95-7a212fdcce55.htm> ; Wang L, Yu W, Yin X, et al. (2021). Prevalence of Osteoporosis and Fracture in China: The China Osteoporosis Prevalence Study. JAMA Network Open. <https://doi.org/10.1001/jamanetworkopen.2021.21106>",
         "grade": "A",
         "meta": {
           "money": "少",
@@ -748,6 +787,7 @@ module.exports = {
         "cost": "要开处方，连着用几年。常用的有每周吃一次的口服药，也有每年输一次液的针剂。刚开始用药要每年复查骨密度，稳定后每 1 到 2 年查一次。难的是没感觉也要坚持用。",
         "gain": "脆性骨折，是受到轻微外伤或日常活动中就发生的骨折。中华医学会 2017 年版指南认定的用药对象有三类。一是脊柱或髋部发生过脆性骨折的人。二是骨密度 T 值在 -2.5 及以下的人，不管有没有骨折过。三是骨量偏低、又在手腕、上臂或骨盆有过脆性骨折，或者算出来骨折风险高的人。指南还写明「目前尚无充分证据表明单纯补钙可以替代其他抗骨质疏松药物治疗」。Cochrane 2025 年更新了阿仑膦酸钠的综述。在已有骨质疏松或骨折的绝经后女性里，用药组髋部骨折低约 51%。原值 RR 0.49，可信范围 95% CI 0.25 到 0.96。有症状的脊柱骨折低约 55%（RR 0.45，95% CI 0.28 到 0.73）。HORIZON 试验找了 2127 名髋部骨折做过手术的人，平均 74.5 岁。手术后 90 天内开始每年输一次唑来膦酸，跟踪的中位数是 1.9 年。新的骨折从 13.9% 降到 8.6%，少了约 35%。死亡从 13.3% 降到 9.6%，少了约 28%。指南写到，髋部骨折后一年内约 20% 的人死于各种并发症。2017 到 2018 年的全国调查里，确诊骨质疏松或骨折过的女性只有 1.4% 在用药，男性只有 0.3%（中国）",
         "note": "争议：一篇合并了 38 项试验的荟萃分析没有看出这类药能降低总死亡率（RR 0.98，95% CI 0.91 到 1.05）。单看唑来膦酸也不显著（RR 0.88，95% CI 0.68 到 1.13）。作者的结论是，这类药只该为了少骨折而用。Cochrane 那几个数字的可信度也被评为低到中等。还没骨折、骨折风险较低的女性，阿仑膦酸钠对髋部骨折没看出明显作用（RR 0.76，95% CI 0.43 到 1.32）。下颌骨坏死、不典型股骨骨折这类少见的副作用，几年的试验看不全，所以要按时复查、不自己加药停药。有的人适合打针，有的人适合吃药，选哪种由医生定。怎么查出骨质疏松，见第 39 条（骨密度检查）。受益人主要是你自己，也包括你的父母。",
+        "source": "中华医学会骨质疏松和骨矿盐疾病分会 (2017). 原发性骨质疏松症诊疗指南(2017). 中华骨质疏松和骨矿盐疾病杂志, 10(5), 413-443（表 10 抗骨质疏松症药物治疗适应证；钙剂一节；疗效监测一节）. <https://html.rhhz.net/GUSS/html/cc825127-29a3-47c1-9a95-7a212fdcce55.htm> ; Wells GA, Hsieh SC, Peterson J, et al. (2025). Alendronate for the primary and secondary prevention of osteoporotic fractures in postmenopausal women. Cochrane Database of Systematic Reviews. <https://doi.org/10.1002/14651858.CD001155.pub3> ; Lyles KW, Colón-Emeric CS, Magaziner JS, et al. (2007). Zoledronic acid and clinical fractures and mortality after hip fracture. New England Journal of Medicine. <https://doi.org/10.1056/NEJMoa074941> ; Cummings SR, Lui LY, Eastell R, Allen IE (2019). Association Between Drug Treatments for Patients With Osteoporosis and Overall Mortality Rates: A Meta-analysis. JAMA Internal Medicine. <https://doi.org/10.1001/jamainternmed.2019.2779> ; Kahwati LC, Kistler CE, Booth G, et al. (2025). Screening for Osteoporosis to Prevent Fractures: A Systematic Evidence Review for the US Preventive Services Task Force. JAMA. <https://doi.org/10.1001/jama.2024.21653> ; Wang L, Yu W, Yin X, et al. (2021). Prevalence of Osteoporosis and Fracture in China: The China Osteoporosis Prevalence Study. JAMA Network Open. <https://doi.org/10.1001/jamanetworkopen.2021.21106>",
         "grade": "A",
         "meta": {
           "money": "少",
@@ -767,6 +807,7 @@ module.exports = {
         "cost": "最省事的是去有人管的正规冰场，不用多花钱。非要上野外的冰，就带冰钻或冰镩打孔量厚度。再买一对救生冰锥，就是两根带握柄的尖钉，挂在胸前。这些加起来几十到一两百元。每走一段量一次，要多花些时间。",
         "gain": "中国气象局的科普说，冰层厚度达到 15 厘米，成年人可以上去滑冰。露天冰场的冰层也要达到 15 厘米才能开放。北京市水务局说，正规天然冰场要冰厚 15 厘米，之后一周气温保持在 -8℃ 到 1℃、没有大风，才能开放。野冰上常有钓鱼的人凿的冰洞，凿开后很难再冻结实。美国明尼苏达州自然资源部的指南只针对新结的透明冰：不到 4 英寸（约 10 厘米）别上，4 英寸可以步行和冰钓。积雪化了又冻上的白冰，结实程度只有透明冰的一半左右，厚度要按两倍算。同一片水面，冰可能这里一英尺厚，几英尺外只有一两英寸。流水上的冰通常危险，溪流、桥和涵洞附近尤其如此。岸边的冰也可能比远处薄。美国国家气象局给的步行、冰钓、滑冰门槛也是 4 英寸。加拿大职业健康与安全中心转述加拿大红十字会的建议：几个人一起滑冰、步行要 15 厘米，人多的滑冰聚会要 20 厘米。这些都是安全指南，没有研究算过照着做能少死多少人（全国 / 美国、加拿大）",
         "note": "官方指南都说没有百分之百安全的冰，量够了厚度只是门槛，不是保证。刚上冻的初冬和开始化冰的初春最危险。真掉进去了，别脱衣服，厚衣服里存着空气能帮你浮着。转身朝来的方向，那边的冰最结实。手臂搭上冰面，把冰锥扎进冰里，脚往后蹬，把身子拖上来。上来后别站起来，平躺着滚离冰洞，再尽快取暖，冻得厉害的要去医院。看见别人掉进冰窟窿，别跑过去拉，做法见第 13 节第 25 条（看到有人溺水自己不下水）：先叫人、打 110，再递杆子、抛绳子。受益人主要是你自己和带去玩冰的孩子。",
+        "source": "中国气象局 (2019). 想要冰上健步走，多厚的冰才安全？ <https://www.cma.gov.cn/kppd/kppdqxyr/kppdtyqx/201901/t20190124_513302.html>；北京市水务局 (2024). 北京正规河湖冰场还未达开放标准，别冒险滑「野冰」. <https://swj.beijing.gov.cn/swdt/ztzl/fnsbaqztxc/fnszlxx/202412/t20241226_3973959.html>；Minnesota Department of Natural Resources. General ice thickness guidelines. <https://www.dnr.state.mn.us/safety/ice/thickness.html>；Minnesota Department of Natural Resources. Ice safety. <https://www.dnr.state.mn.us/safety/ice/index.html>；Minnesota Department of Natural Resources. Steps for surviving immersion. <https://www.dnr.state.mn.us/safety/ice/survival.html>；National Weather Service. Winter Weather Safety: Ice and Frost. <https://www.weather.gov/safety/winter-ice-frost>；Canadian Centre for Occupational Health and Safety. Working on or near Ice Covered Water - Basic Information. <https://www.ccohs.ca/oshanswers/hsprograms/work_ice.html>",
         "grade": "C",
         "meta": {
           "money": "少",
@@ -786,6 +827,7 @@ module.exports = {
         "cost": "一副护目镜加一个面屏，几十元。每次开机前看一眼护罩和片子，换片前拔掉插头，多花一两分钟。难在嫌麻烦时也不拆护罩、不单手干活。",
         "gain": "加拿大职业健康与安全中心和澳大利亚昆士兰州的安全机构列的做法如下。开机前检查护罩和片子，有裂纹、缺口、变形的不用。片子上标的最高转速，不能低于机器上标的转速。片子的直径和中间的孔要和机器配套。换片前断开电源。要磨要切的东西先固定住。戴防护眼镜或护目镜，外面再加面屏。双手握住两个手柄，脚下站稳。切割片不能拿来打磨，那样片子更容易碎。片子完全停转之前不把机器放下。火花和碎屑朝向没人的地方，周围不放易燃的东西。昆士兰的通报说，切割片边缘的设计速度约为每秒 70 米。把 356 毫米的大片装到 230 毫米的机器上，边缘速度至少到每秒 120 米，片子容易碎。2016 年 2 月，当地一名工人用 230 毫米的角磨机时被碎片击中胸部，内伤死亡。国内有两份事故调查报告。2019 年哈尔滨一名工人把切割片换成带齿锯片，没装护罩就去切木板。锯片卷住裤子，割断大腿动脉，失血死亡。2024 年深圳福田一名工人用装着木工锯片、没装护罩和辅助手柄的角磨机切木门框。机器反弹，割破颈动脉死亡。报告引用的国家标准写着「不要附装上锯链、木雕刀片或带齿锯片」。韩国 2011 到 2018 年的急诊伤害监测里，被高速旋转的切割工具弄伤的有 8697 人次，其中 4603 人次在用砂轮机这一类工具。他们伤在手上的占 46.4%，伤在头部的占 23.0%。和其他同类工具比，砂轮机伤成重伤的可能高约一倍（OR 2.07，95% CI 1.88–2.29）。四川绵阳一家医院两年收治 36 名角磨机伤眼的住院病人。手术后戴上眼镜的最好视力仍低于 0.05 的有 10 人。土耳其一家医院一年的 742 例手和前臂急性外伤里，角磨机造成 82 例。除 8 例外都不是上班时伤的，44% 是退休的人。日本一家创伤中心 2017 到 2018 年的 15 名角磨机伤者里，9 人是装上锯片切木头这类错用。其中 2 人整根手指断掉，1 人断了一截（加拿大、澳大利亚 / 中国 / 韩国、土耳其、日本）",
         "note": "给 C 是因为这些做法来自安全机构的指南和事故调查，没有研究算过照做能少伤多少人。伤情数据只说明伤得多重，而且都是一家医院或一个国家的病例。收益量级定为中，凭的是判断：后果可以是死亡、失明、断指，但只落在用角磨机的人身上。哈尔滨那台机器的说明书本来就写着不要装带齿锯片、必须装护罩。那名工人手边就有手锯，切木头该用它这类木工工具。宽松衣服、垂下来的首饰和长头发都要收好，会被卷进去。磨的时候粉尘和噪声都大，口罩和耳塞的讲究见第 19 节第 10 条（防护用品单位必须给）。真割破了大血管，先死死压住伤口，见第 13 节第 12 条（大出血先用手死死压住伤口）。受益人主要是你自己，也护住站在旁边帮忙的家人。",
+        "source": "Canadian Centre for Occupational Health and Safety (2025). Abrasive Wheels - Use of Portable Grinders. <https://www.ccohs.ca/oshanswers/safety_haz/abrasive_wheels/safeuse1.html>；Canadian Centre for Occupational Health and Safety (2025). Powered Hand Tools - Use of Grinder Attachments. <https://www.ccohs.ca/oshanswers/safety_haz/power_tools/powered-hand-tools-use-of-grinder-attachments.html>；Workplace Health and Safety Queensland (2017). Guards and discs on angle grinders. <https://www.worksafe.qld.gov.au/news-and-events/alerts/workplace-health-and-safety-alerts/2017/guards-and-discs-on-angle-grinders>；哈尔滨市松北区人民政府 (2019). 哈尔滨三发装卸运输有限公司「8.28」机械伤害事故调查报告. <https://www.songbei.gov.cn/hebsbq/tzgg/201910/c01_797872.shtml>；福田区人民政府沙头新洲南村房屋装修工程「3·14」一般机械伤害事故调查组 (2024). 沙头新洲南村房屋装修工程「3·14」一般机械伤害事故调查报告（引 GB 3883.3-2007 第 8.12.1.102 条 a、e 项）. <https://www.szft.gov.cn/attachment/1/1507/1507749/11317197.pdf>；Song J, Jeon YB, Jang JH, Cho JS, Choi JY, Choi WS. (2023). Severity of grinder injuries and related factors compared with other high-rotation cutting tool injuries: a multicenter retrospective study from 2011 to 2018. Journal of Trauma and Injury, 36(1), 32-38. <https://doi.org/10.20408/jti.2021.0057>；Ke W, Gu K, Zhu S, Wu J, Dai Y. (2025). Prognostics Factors to Avoid Eye Injuries in Angle Grinders. Journal of Craniofacial Surgery, 36(6), e629-e631. <https://doi.org/10.1097/scs.0000000000011108>；Sozbilen MC, Dastan AE, Gunay H, Kucuk L. (2018). A prospective study of angle grinder injuries in the hands and forearms during a one-year period. Hand Surgery and Rehabilitation, 37(5), 300-304. <https://doi.org/10.1016/j.hansur.2018.07.002>；Tsumura T, Matsumoto T, Matsushita M, Kishimoto K, Shiode H. (2021). Do Not Cut Wood with an Angle Grinder, or You Might Lose a Finger: A Retrospective Study. Journal of Hand Surgery Asian-Pacific Volume. <https://doi.org/10.1142/s2424835521500053>",
         "grade": "C",
         "meta": {
           "money": "少",
@@ -803,10 +845,11 @@ module.exports = {
       {
         "index": 1,
         "title": "戒烟，越早越好",
-        "plain": "吸烟的人平均比不吸烟的人少活十年以上。40 岁前戒掉，能把接着吸烟带来的死亡风险抹掉九成左右。戒得越早，捡回来的越多。",
+        "plain": "吸烟的人平均比不吸烟的人少活十年以上。40 岁前戒掉，能把接着吸烟带来的死亡风险抹掉九成左右。戒得越早，捡回来的越多。骨折以后接着抽，骨头长不上的几率约是不抽的 2.3 倍，所以骨头没长好之前别抽。",
         "cost": "不花钱，反过来还省钱。一天一包烟约 20–30 元，戒了这笔钱就留下了。难在戒断期要熬，一般是几周到几个月。",
-        "gain": "美国一项跟踪一群人的研究（只记录、不分组）发现：现在还吸烟的人，比从不吸烟的人预期寿命短 10 年以上。40 岁前戒掉，可以消除继续吸烟所带来死亡风险的约 90%。25–34 岁戒烟约多活 10 年，35–44 岁约多活 9 年，45–54 岁约多活 6 年（原文以寿命年报告）。中国的同类研究：2010 年代，城市男性吸烟者的死亡风险是不吸烟者的 1.65 倍（RR 1.65），农村男性是 1.22 倍。主动戒烟满 10 年后，吸烟带来的这部分风险接近消失。",
-        "note": "吸别人的烟同样会死人：2004 年全球约有 60.3 万人死于二手烟，占当年全球总死亡的约 1%。自己不吸，也要躲开别人的烟，尤其别让孩子吸到。怎么戒，具体办法在后面四条：第 3 条（戒烟药）、第 4 条（定一个戒烟日）、第 5 条（去戒烟门诊）、第 6 条（电子烟）",
+        "gain": "美国一项跟踪一群人的研究（只记录、不分组）发现：现在还吸烟的人，比从不吸烟的人预期寿命短 10 年以上。40 岁前戒掉，可以消除继续吸烟所带来死亡风险的约 90%。25–34 岁戒烟约多活 10 年，35–44 岁约多活 9 年，45–54 岁约多活 6 年（原文以寿命年报告）。中国的同类研究：2010 年代，城市男性吸烟者的死亡风险是不吸烟者的 1.65 倍（RR 1.65），农村男性是 1.22 倍。主动戒烟满 10 年后，吸烟带来的这部分风险接近消失。骨折之后也一样。19 项只记录、不分组的研究合起来算，吸烟的人骨折不愈合（骨头长不上）的几率约是不吸烟者的 2.3 倍（OR 2.32，95% CI 1.76–3.06，已扣除其他因素）。小腿胫骨骨折和开放性骨折里同样偏高。瑞典一项随机试验里，骨折急诊手术后参加 6 周戒烟项目的 50 人，20% 出现至少一种术后并发症。没参加的 55 人是 38%。提前约好的手术，可以在术前 4 到 8 周开始戒烟，每周有人辅导，配尼古丁替代品。这样做术后并发症低约 58%（RR 0.42，95% CI 0.27–0.65，2 项试验、210 人）。",
+        "note": "吸别人的烟同样会死人：2004 年全球约有 60.3 万人死于二手烟，占当年全球总死亡的约 1%。自己不吸，也要躲开别人的烟，尤其别让孩子吸到。怎么戒，具体办法在后面四条：第 3 条（戒烟药）、第 4 条（定一个戒烟日）、第 5 条（去戒烟门诊）、第 6 条（电子烟）。骨不愈合那个数字来自只记录、不分组的研究，吸烟的人在别的方面也可能和不吸烟的人不同，没法全部扣干净。骨折后那项戒烟试验只有 105 人，换一种算法差别就不显著。",
+        "source": "Jha P 等 (2013). 21st-century hazards of smoking and benefits of cessation in the United States. NEJM. <https://doi.org/10.1056/NEJMsa1211128>；Chen Z 等 (2015). Contrasting male and female trends in tobacco-attributed mortality in China: evidence from successive nationwide prospective cohort studies. Lancet. <https://doi.org/10.1016/S0140-6736(15)00340-2>；Oberg M 等 (2011). Worldwide burden of disease from exposure to second-hand smoke: a retrospective analysis of data from 192 countries. Lancet. <https://doi.org/10.1016/S0140-6736(10)61388-8>（二手烟那两个数字）；Scolaro JA 等 (2014). Cigarette smoking increases complications following fracture: a systematic review. J Bone Joint Surg Am. <https://doi.org/10.2106/JBJS.M.00081>；Nåsell H 等 (2010). Effect of smoking cessation intervention on results of acute fracture surgery: a randomized controlled trial. J Bone Joint Surg Am. <https://doi.org/10.2106/JBJS.I.00627>；Thomsen T 等 (2014). Interventions for preoperative smoking cessation. Cochrane Database Syst Rev. <https://doi.org/10.1002/14651858.CD002294.pub4>（骨折和手术那几个数字）",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -826,6 +869,7 @@ module.exports = {
         "cost": "不花钱，也不占时间。难在要开口，让家人和客人别在家里抽。",
         "gain": "2004 年全球有 603,000 人死于二手烟，约占全球死亡的 1.0%，其中 28% 是儿童。把 57 项研究合起来算：吸到二手烟的人得高血压的机会，约为没吸到的人的 1.28 倍（比值比）。心脏病是 1.39 倍，心肌梗死是 1.50 倍，卒中是 1.36 倍。在家里吸到二手烟的风险，高于在家外吸到的",
         "note": "先管家里，因为在家待得久，而且多项研究合起来看，在家吸到的二手烟比在家外危害更大。二手烟造成的健康损失里，61% 落在孩子身上。自己戒烟见本节第 1 条。",
+        "source": "Öberg M, Jaakkola MS, Woodward A, Peruga A, Prüss-Ustün A (2011). Worldwide burden of disease from exposure to second-hand smoke: a retrospective analysis of data from 192 countries. Lancet：「603,000 deaths were attributable to second-hand smoke in 2004, which was about 1·0% of worldwide mortality. 47% of deaths from second-hand smoke occurred in women, 28% in children, and 26% in men」，「61% of DALYs were in children」. <https://doi.org/10.1016/S0140-6736(10)61388-8>；(2026). The Associations Between Secondhand Smoke Exposure and Various Cardiovascular Diseases: A Meta-Analysis. Nicotine & Tobacco Research：57 项研究，「hypertension (OR: 1.28, 95% CI: 1.15 to 1.40), heart disease (OR: 1.39, 95% CI: 1.28 to 1.50), myocardial infarction (OR: 1.50, 95% CI: 1.17 to 1.84), stroke (OR: 1.36, 95% CI: 1.18 to 1.54)」「Home exposure has a higher risk of CVD than non-home exposure」. <https://doi.org/10.1093/ntr/ntaf111>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -845,6 +889,7 @@ module.exports = {
         "cost": "尼古丁贴片和咀嚼胶是非处方药，药店柜台就能买。一个疗程 8 到 12 周，几百元到一千多元。伐尼克兰和安非他酮是处方药，要去戒烟门诊或者呼吸内科开。这笔钱和同期少买的烟大致抵消。",
         "gain": "41 项随机试验、17395 人合起来算，伐尼克兰组的戒烟成功率是安慰剂组的 2.32 倍（RR 2.32，95% CI 2.15–2.51，这是可信范围；高确定性证据）。伐尼克兰也高于安非他酮（RR 1.36，高约 36%）和单用一种尼古丁替代品（RR 1.25，高约 25%）。尼古丁替代品和不用药比：133 项试验、64640 人，成功率高约 55%（RR 1.55，95% CI 1.49–1.61）。贴片再加一种见效快的剂型（咀嚼胶、含片），比只用一种高约 27%（RR 1.27，95% CI 1.17–1.37，16 项试验、12169 人，高确定性证据）。",
         "note": "国内在卖的戒烟药就上面三类，只有尼古丁替代品是非处方药。伐尼克兰常见的反应是恶心、多梦、睡不好，有精神科病史的要跟医生说明。尼古丁替代品的疗程一般 8 到 12 周，别自己突然停，按医生说的减量。药只解决戒断那几周的难受，不解决「想抽」的场合，所以要和本节第 4 条（定一个戒烟日）、第 5 条（去戒烟门诊）一起用。",
+        "source": "Livingstone-Banks J, Fanshawe TR, Thomas KH, et al. (2023). Nicotine receptor partial agonists for smoking cessation. Cochrane Database of Systematic Reviews, 5, CD006103. <https://doi.org/10.1002/14651858.CD006103.pub8>；Hartmann-Boyce J, Chepkin SC, Ye W, Bullen C, Lancaster T (2018). Nicotine replacement therapy versus control for smoking cessation. Cochrane Database of Systematic Reviews, 5, CD000146. <https://doi.org/10.1002/14651858.CD000146.pub5>；Theodoulou A, Chepkin SC, Ye W, et al. (2023). Different doses, durations and modes of delivery of nicotine replacement therapy for smoking cessation. Cochrane Database of Systematic Reviews, 6, CD013308. <https://doi.org/10.1002/14651858.CD013308.pub2>；上海市卫生健康委员会 (2021). 选对药物，让戒烟轻松一点：「市场上可见的戒烟药物主要有三种，即尼古丁替代疗法药物、安非他酮、伐尼克兰」，「尼古丁替代疗法药物属于非处方药（OTC），可通过药店柜台购买；而安非他酮、伐尼克兰属于处方药，须到医院戒烟门诊或呼吸内科就诊，凭医师处方经药师调配后才能得到」. <https://wsjkw.sh.gov.cn/jtyx/20211119/df50681e01ba49f896d54f771d8176ae.html>",
         "grade": "A",
         "meta": {
           "money": "少",
@@ -864,6 +909,7 @@ module.exports = {
         "cost": "不花钱。就是在日历上挑一天，提前告诉家里人和同事。",
         "gain": "英国 697 名吸烟者随机分成两组。一组在戒烟日当天一次停掉，一组在戒烟日前两周先把烟量减掉 75%。两组都有护士的行为支持，戒烟日前后都用尼古丁替代品。第 4 周时，一次停那组 49.0%（95% CI 43.8–54.2，这是可信范围）没复吸，慢慢减那组 39.2%（34.0–44.4），相对风险比 0.80（0.66–0.93）。到第 6 个月，一次停那组 22.0%（18.0–26.6），慢慢减那组 15.5%（12.0–19.7），相对风险比 0.71（0.46–0.91）。原本就偏好慢慢减的人，第 4 周的成功率也低于偏好一次停的人（38.3% 对 52.2%）。",
         "note": "争议。Cochrane 原先有一篇专门比这两种办法的综述，结论是两者差不多（RR 0.94，95% CI 0.79–1.13，10 项试验、3760 人），但那篇已于 2019 年撤回、不再更新。所以眼下最好的证据是上面这项随机试验，方向支持一次停。另外那项试验里两组都在戒烟日之前就开始用尼古丁替代品，这个做法本身也有证据：提前用比戒烟日当天才开始，成功率高约 25%（RR 1.25，95% CI 1.08–1.44，9 项试验、4395 人，中等确定性证据）。所以合理的排法是先定日子，提前两周贴上，到日子一次停。",
+        "source": "Lindson-Hawley N, Banting M, West R, Michie S, Shinkins B, Aveyard P (2016). Gradual Versus Abrupt Smoking Cessation: A Randomized, Controlled Noninferiority Trial. Annals of Internal Medicine, 164(9), 585–592. <https://doi.org/10.7326/M14-2805>；Theodoulou A, Chepkin SC, Ye W, et al. (2023). Different doses, durations and modes of delivery of nicotine replacement therapy for smoking cessation. Cochrane Database of Systematic Reviews, 6, CD013308（提前用尼古丁替代品那一段）. <https://doi.org/10.1002/14651858.CD013308.pub2>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -883,6 +929,7 @@ module.exports = {
         "cost": "挂一次号几元到几十元。行为支持一般是 4 到 8 次面谈，每次半小时到一小时，加起来多在 5 小时以内。打热线不花钱。",
         "gain": "52 项试验、19488 人合起来算，药物加行为支持组的戒烟成功率是常规照护或简短建议组的 1.83 倍（RR 1.83，95% CI 1.68–1.98，这是可信范围；高质量证据）。在医疗机构招募的那 43 项试验里是 1.97 倍（1.79–2.18）。电话咨询单独算：在自己打过戒烟热线的人里，接受多次主动回访的比只拿到材料或只谈一次的高约 38%（RR 1.38，95% CI 1.19–1.61，14 项试验、32484 人）；没主动打过热线、由研究方提供电话咨询的，高约 25%（RR 1.25，95% CI 1.15–1.35，65 项试验、41233 人）。两项都是中等确定性证据。",
         "note": "国内怎么找：微信搜「中国戒烟平台」小程序，里面有各地戒烟热线和戒烟门诊的名单；也可以打 12320 问当地有没有戒烟门诊。上面的试验多数在国外做，各地戒烟门诊的服务强度差别很大，数字只能当方向看。要配的药见本节第 3 条（戒烟药）。",
+        "source": "Stead LF, Koilpillai P, Fanshawe TR, Lancaster T (2016). Combined pharmacotherapy and behavioural interventions for smoking cessation. Cochrane Database of Systematic Reviews, 3, CD008286. <https://doi.org/10.1002/14651858.CD008286.pub3>；Matkin W, Ordóñez-Mena JM, Hartmann-Boyce J (2019). Telephone counselling for smoking cessation. Cochrane Database of Systematic Reviews, 5, CD002850. <https://doi.org/10.1002/14651858.CD002850.pub4>；中国疾病预防控制中心 (2021). 「中国戒烟平台」微信小程序正式上线：「在健康中国行动控烟行动工作组指导下中国疾病预防控制中心和世界卫生组织驻华代表处联合制作了中国权威戒烟资源库『中国戒烟平台』微信小程序。小程序内容主要包括：戒烟热线、戒烟门诊详细信息，以及线上戒烟服务资源等」；同一站点页脚标注「健康咨询电话：12320」. <https://www.chinacdc.cn/jkyj/yckz/gzdt/202203/t20220310_296389.html>",
         "grade": "A",
         "meta": {
           "money": "少",
@@ -902,6 +949,7 @@ module.exports = {
         "cost": "设备加烟弹每月几十到几百元。国内只能买烟草口味的，而且只能在有烟草专卖零售许可证的店里买。",
         "gain": "一份持续更新的综述纳入 80 项随机试验、29861 人。含尼古丁的电子烟和尼古丁替代疗法比，戒烟成功率高约 61%（RR 1.61，95% CI 1.23–2.12，这是可信范围；高确定性证据，11 项试验、4114 人）。换成绝对数，大约是每 100 人里多 4 人戒成（多 1 到 7 人）。严重不良事件的发生比例两组大致相当（风险差 0.01，95% CI −0.01 到 0.02，中等确定性证据）。和只有行为支持或没有支持比，高约 75%（RR 1.75，95% CI 1.39–2.20，低确定性证据）。",
         "note": "争议。世界卫生组织不推荐把电子烟当戒烟手段。理由是长期安全数据不够，还会让年轻人开始接触尼古丁。英国则把它放进了戒烟服务。国内不是全面禁售电子烟，但管得很严，规矩写在《电子烟管理办法》里。只准卖烟草口味的，果味的和能自己加烟油的都不准卖。只能在拿了烟草专卖零售许可证的实体店买。除了国家统一的电子烟交易管理平台，在别的网站、网店和社交软件上卖都不合法。也不准卖给未成年人。所以还能买到的水果味电子烟走的是非法渠道，不在监管之内。掺了合成大麻素的「上头电子烟」就是这么流出来的，见第 22 节第 4 条（不接别人递的烟弹）。综述里测的都是受监管的含尼古丁产品，来路不明的烟油不在其内。顺序上先试本节第 3 条（戒烟药），那边的证据更硬、也更便宜。",
+        "source": "Lindson N, Livingstone-Banks J, Butler AR, et al. (2026). Electronic cigarettes for smoking cessation. Cochrane Database of Systematic Reviews, 8, CD010216. <https://doi.org/10.1002/14651858.CD010216.pub11>；国家烟草专卖局 (2022). 电子烟管理办法（国家烟草专卖局公告 2022 年第 1 号，2022 年 5 月 1 日施行）第十八条：从事电子烟零售业务，要向烟草专卖行政主管部门申领烟草专卖零售许可证。第二十二条：「禁止向未成年人出售电子烟产品。」第二十三条第二款：「任何个人、法人或者其他组织不得通过本办法规定的电子烟交易管理平台以外的信息网络销售电子烟产品、雾化物和电子烟用烟碱等。」第二十六条：「禁止销售除烟草口味外的调味电子烟和可自行添加雾化物的电子烟。」. <http://www.gov.cn/gongbao/content/2022/content_5697988.htm>",
         "grade": "A",
         "meta": {
           "money": "少",
@@ -921,6 +969,7 @@ module.exports = {
         "cost": "不花钱，也不占时间。换成白水或无糖茶还省钱。难在要改掉喝甜饮料的习惯，包括无糖的。",
         "gain": "美国有两项跟踪一群人的大型研究。这两项只记录、不分组，约 11.8 万人、3.6 万例死亡。每天喝 2 份以上的人，死亡风险比每月不到 1 份的人高约 21%（HR 1.21）。每天喝 1–2 份的，高约 14%（HR 1.14）。欧洲 EPIC 跟踪研究只记录、不分组，有 45 万人、10 个国家。每天喝 2 杯以上的人和每月不到 1 杯的人比：含糖软饮这项高约 8%（HR 1.08，95% CI 1.01–1.16）。人工甜味剂饮料（无糖版）高约 26%（HR 1.26，1.16–1.35）。所有软饮合起来算，高约 17%（HR 1.17，1.11–1.22）。",
         "note": "争议在无糖饮料上。代糖饮料的关联反而比含糖的更强，这很可能是因果反过来了：已经超重或者得了糖尿病的人，才改喝无糖版。所以别据此说代糖更毒。但它至少说明，「换成无糖就没事」这个说法没有证据支持。换成白水或者无糖茶最稳妥。另外，这类研究只是跟踪记录，没做分组试验，喝甜饮料多的人本来生活方式就更差，所以数字可能偏大。",
+        "source": "Malik VS 等 (2019). Long-Term Consumption of Sugar-Sweetened and Artificially Sweetened Beverages and Risk of Mortality in US Adults. Circulation. <https://doi.org/10.1161/CIRCULATIONAHA.118.037401>；Mullee A, Romaguera D, Pearson-Stuttard J, et al. (2019). Association Between Soft Drink Consumption and Mortality in 10 European Countries. JAMA Internal Medicine, 179(11), 1479-1490. <https://doi.org/10.1001/jamainternmed.2019.2478>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -940,6 +989,7 @@ module.exports = {
         "cost": "不花钱，也不占时间，还省下买槟榔的钱。难在要戒掉嚼的习惯。",
         "gain": "把 17 项亚洲研究、38.8 万人合起来算。嚼槟榔的人死亡风险比不嚼的人高约 21%（相对风险 1.21，P=0.02）。死亡这一项算的是其中的 17.96 万人。得糖尿病的风险高约 47%（1.47）。得代谢综合征的风险高约 51%（1.51）。槟榔本身也是口腔癌和食管癌的已知危险因素",
         "note": "嚼的年头越长、每天嚼得越多，口腔癌风险越高。戒了以后，风险会随时间往下走。含烟草的槟榔更危险",
+        "source": "Yamada T, Hara K, Kadowaki T (2013). Chewing betel quid and the risk of metabolic disease, cardiovascular disease, and all-cause mortality: a meta-analysis. PLoS One, 8(8), e70679. <https://doi.org/10.1371/journal.pone.0070679>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -959,6 +1009,7 @@ module.exports = {
         "cost": "一袋比普通盐贵几元。买的时候顺手换，不额外占时间。口味几乎不变。",
         "gain": "一项把人随机分成两组的试验，在中国农村做的，20995 人，都是得过卒中的人或者 60 岁以上的高血压病人，跟踪了 4.74 年。结果：用低钠盐的那组比用普通盐的那组，死亡风险低约 12%（RR 0.88）。卒中低约 14%（RR 0.86）。主要心血管事件低约 13%（RR 0.87）。血钾过高的事件，两组没看出统计上的差别。",
         "note": "争议。PURE 这项研究只长期跟踪记录，不分组。它报告：一天排钠不到 3 g 的人，死亡加心血管事件的风险高约 27%。一天排钠 7 g 以上的人，高约 15%。按它的结果，吃太少和吃太多都不好，中间最好。但本条引的那项中国农村随机试验里，低钠盐只是替换掉一部分，不会把钠压得那么低。另外要注意，试验对象是高危老人。健康年轻人换盐得到的好处要小得多。肾功能不全的人，或者正在吃保钾类药物的人，换盐前先问医生。",
+        "source": "Neal B 等 (2021). Effect of Salt Substitution on Cardiovascular Events and Death. NEJM. <https://doi.org/10.1056/NEJMoa2105675>；O'Donnell M 等 (2014). Urinary sodium and potassium excretion, mortality, and cardiovascular events. NEJM. <https://doi.org/10.1056/NEJMoa1311889>（争议方 PURE）",
         "grade": "A",
         "meta": {
           "money": "少",
@@ -978,6 +1029,7 @@ module.exports = {
         "cost": "牙线或牙缝刷一年几十元，洗牙每次一两百元。每天多花两三分钟。难在要把清牙缝变成每天都做的事。",
         "gain": "日本有一项研究，9676 人，跟踪 6 年。用牙缝清洁工具的人，死亡风险低约 11%（风险比 0.89）。用舌苔清洁工具的人，低约 23%（0.77）。另外把多项研究合起来算，对象是住在社区的老人。一颗牙都没有的人，死亡的机会约为 1.87 倍（比值比，95% CI 1.35–2.59，这是可信范围）。牙齿少于 20 颗的，约为 2.04 倍（1.67–2.49）",
         "note": "争议。这类研究只是跟踪记录。牙不好的人，往往整体健康和经济状况也差。到底是牙拖累了身体，还是身体不好连累了牙，说不清。但这件事成本极低，而且牙周炎和缺牙本身就影响吃东西。种一颗牙要花多少、看牙哪些项目医保报，见第 24 节第 12 条（种牙之前先问清包干价）",
+        "source": "Wang K, Matsuyama Y, Kiuchi S, et al. (2026). Routine oral health practices and all-cause mortality. Journal of Dentistry. <https://doi.org/10.1016/j.jdent.2026.106789>；Ko MJ, Seo S, So JS, et al. (2026). Deteriorated oral health and function as risk factors for physical disability and mortality in community-dwelling older adults: a systematic review and meta-analysis. European Geriatric Medicine. <https://doi.org/10.1007/s41999-025-01319-4>",
         "grade": "B",
         "meta": {
           "money": "少",
@@ -997,6 +1049,7 @@ module.exports = {
         "cost": "不花钱。按步数算，每天走 60–90 分钟，可以拆进上下班和买菜里。按运动时间算，每天 20–45 分钟。难在要长期坚持下来。",
         "gain": "把 15 项跟踪一群人的研究合起来算，只记录、不分组。这 15 项共 47471 人、3013 例死亡。按每天步数把人分成四档，最低那档中位是 3553 步/天。另外三档的中位是 5801、7842、10901 步/天。这三档的死亡风险比最低档分别低约 40%、45%、53%（HR 0.60、0.55、0.47）。60 岁以上的人走到 6000–8000 步以后，再多走收益就趋平了。60 岁以下的人是在 8000–10000 步以后趋平。另有一项分析把多项研究合起来算：从约 3867 步/天开始有效。之后每多走 1000 步/天，死亡风险降约 15%。按运动时间算：把多项跟踪研究汇总到一起算（只记录、不分组），运动量达到指南下限 1–2 倍的人，死亡风险比不运动的人低约 31%（HR 0.69）。这个量是 7.5–15 MET·h/周，大约合快走 150–300 分钟/周。没达到下限的人也低约 20%（HR 0.80）。达到下限 3–5 倍的人低约 39%（HR 0.61），这是降幅的顶点。再往上加不会更低，但也没害处（10 倍以上是 HR 0.69）。另一项用加速度计测量的汇总研究：中高强度活动最多的那四分之一人，比最少的那四分之一死亡风险低约 48%（HR 0.52）。加速度计是戴在身上实测活动量的仪器。",
         "note": "步数和运动时间说的是同一件事，只是换了个数法，达标一个就行。从 4000 步加到 7000 步这一段最划算，不必非要凑一万步。要注意这类研究只是跟踪记录：走得最少、动得最少的那批人里，混着本来就病着走不动的。他们是快不行了才动得少，不是因为少动才早死。所以算出的差距常常偏大。用仪器实测活动量的那几项，跟踪时间短，参与者偏老，真实好处没有「风险降到 0.52 倍」那么大。但越动越好的趋势是清楚的。",
+        "source": "Paluch AE 等 (2022). Daily steps and all-cause mortality: a meta-analysis of 15 international cohorts. Lancet Public Health. <https://doi.org/10.1016/S2468-2667(21)00302-9>；Banach M 等 (2023). The association between daily step count and all-cause and cardiovascular mortality: a meta-analysis. European Journal of Preventive Cardiology. <https://doi.org/10.1093/eurjpc/zwad229>；Arem H 等 (2015). Leisure time physical activity and mortality: a detailed pooled analysis of the dose-response relationship. JAMA Internal Medicine. <https://doi.org/10.1001/jamainternmed.2015.0533>；Ekelund U 等 (2019). Dose-response associations between accelerometry measured physical activity and sedentary time and all cause mortality: systematic review and harmonised meta-analysis. BMJ. <https://doi.org/10.1136/bmj.l4570>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -1016,6 +1069,7 @@ module.exports = {
         "cost": "集采的降压药和他汀每月几元到几十元。每天吃一次，花不了多少时间。难在要一直吃下去，不能觉得没事了就停。",
         "gain": "把多项随机分组试验合起来算：收缩压每降 10 mmHg，死亡风险低约 13%（RR 0.87）。收缩压就是血压里的高压。主要心血管事件低约 20%（RR 0.80）。卒中低约 27%（RR 0.73）。心衰低约 28%（RR 0.72）。吃他汀让低密度脂蛋白胆固醇（LDL）往下降。LDL 每降 1.0 mmol/L，死亡风险低约 10%（RR 0.90）。同样这一降，主要血管事件低约 22%（RR 0.78）。另外把多项跟踪研究合起来算，只记录、不分组。按医嘱吃到 ≥80% 的人，死亡风险比经常漏吃的人低。他汀这一项低约 45%（RR 0.55）。降压药这一项低约 29%（RR 0.71）。",
         "note": "只有医生判断该吃药的人才照这个做，健康人不用吃。「坚持吃药」那组数字来自跟踪记录，能坚持吃药的人本身也更自律，所以会把好处说大。前面两组随机分组试验的数字更可靠。本节没有单独列控制血糖这一条：把血糖压得更低对总死亡率的好处，证据不像血压、血脂那样一致。",
+        "source": "Ettehad D 等 (2016). Blood pressure lowering for prevention of cardiovascular disease and death: a systematic review and meta-analysis. Lancet. <https://doi.org/10.1016/S0140-6736(15)01225-8>；Cholesterol Treatment Trialists' (CTT) Collaboration (2010). Efficacy and safety of more intensive lowering of LDL cholesterol: a meta-analysis of data from 170 000 participants in 26 randomised trials. Lancet. <https://doi.org/10.1016/S0140-6736(10)61350-5>；Chowdhury R 等 (2013). Adherence to cardiovascular therapy: a meta-analysis of prevalence and clinical consequences. European Heart Journal. <https://doi.org/10.1093/eurheartj/eht295>",
         "grade": "A",
         "meta": {
           "money": "少",
@@ -1035,6 +1089,7 @@ module.exports = {
         "cost": "不花钱。要拿出时间来睡，多数人是把刷手机的时间换成睡觉。难在要把上床和起床的点固定住。",
         "gain": "把 16 项跟踪研究合起来算，只记录、不分组，138 万人、11.3 万例死亡。睡得短的人死亡风险高约 12%（RR 1.12）。睡得长的人高约 30%（RR 1.30）。另一项汇总按睡眠时长分档：7 小时那档风险最低。少于 7 小时的，每少 1 小时高约 6%（RR 1.06）。多于 7 小时的，每多 1 小时高约 13%（RR 1.13）。英国生物银行有约 6.1 万人的腕表记录，只记录、不分组。把人按作息规律程度分成五档。较规律的那四档比最不规律的那档，死亡风险低 20%–48%。作息规不规律，比睡多久更能预测死亡。另有一项英国生物银行的研究，用腕表测了 51,562 人的睡眠时刻，其间 3,853 人新发心血管病。社会时差指工作日和周末的睡眠中点差多少。社会时差达到 2 小时以上的人，心血管病风险高约 30%（HR 1.30，95% CI 1.11–1.54）。这个关联在睡眠时长正常的人里同样存在。",
         "note": "要改的是睡得太少和作息乱这两样，不必刻意去压缩睡眠时间。睡得长的人风险高，多半是因果反过来了：抑郁、慢性病、睡眠呼吸暂停会让人睡得多。另外，作息规律这一点目前有两项跟踪研究支持，都是只记录、不分组的，单独看属于 B 级证据。熬夜之后怎么补见本节第 38 条（熬夜之后第二天晚上就补觉）。",
+        "source": "Cappuccio FP 等 (2010). Sleep duration and all-cause mortality: a systematic review and meta-analysis of prospective studies. Sleep. <https://doi.org/10.1093/sleep/33.5.585>；Yin J 等 (2017). Relationship of Sleep Duration With All-Cause Mortality and Cardiovascular Events: A Systematic Review and Dose-Response Meta-Analysis of Prospective Cohort Studies. JAHA. <https://doi.org/10.1161/JAHA.117.005947>；Windred DP 等 (2024). Sleep regularity is a stronger predictor of mortality risk than sleep duration: A prospective cohort study. Sleep. <https://doi.org/10.1093/sleep/zsad253>；Kumar N, Krishnamurthy S (2026). Social jet lag is associated with incident cardiovascular disease independent of sleep duration and cardiac genetic risk. Journal of Internal Medicine. <https://doi.org/10.1111/joim.70133>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -1054,6 +1109,7 @@ module.exports = {
         "cost": "场地费每次几十元。每周约 2 小时。难在要凑齐人和场地，还得每周都去。",
         "gain": "英国一项 8.03 万人的跟踪研究，比的是做某项运动的人和不做这项运动的人。打球拍类运动的人，死亡风险低约 47%（风险比 0.53，95% CI 0.40–0.69，可信范围）。心血管死亡低约 56%（0.44，0.24–0.83）。球拍类指网球、羽毛球、乒乓球。游泳的人这两个数分别是 0.72 和 0.59，有氧操是 0.73 和 0.64，骑车是 0.85。跑步和足球没看出统计上的差别",
         "note": "争议。这类研究只是跟踪记录。打球的人本身就更健康，社交也更多。跑步那组看不出差别，也说明起作用的可能是「什么样的人挑了什么运动」。别因为这条就认为跑步没用，本节另有按运动总量算的条目",
+        "source": "Oja P, Kelly P, Pedisic Z, et al. (2017). Associations of specific types of sports and exercise with all-cause and cardiovascular-disease mortality: a cohort study of 80 306 British adults. British Journal of Sports Medicine, 51(10), 812-817. <https://doi.org/10.1136/bjsports-2016-096822>",
         "grade": "A",
         "meta": {
           "money": "少",
@@ -1073,6 +1129,7 @@ module.exports = {
         "cost": "不花钱，也不用额外挤出锻炼时间。难在要记着走楼梯、走快些，别图省事。",
         "gain": "英国生物银行有一项研究，对象是 2.52 万名平时不专门锻炼的人。平均跟踪 6.9 年，其中 852 人去世。有的人每天有 3 次、每次 1–2 分钟的零碎剧烈活动。和完全没有的人比，他们的死亡风险和癌症死亡风险降低 38%–40%。心血管死亡风险降低 48%–49%。每天这类活动累计 4.4 分钟的人，死亡风险和癌症死亡风险降低 26%–30%。心血管死亡风险降低 32%–34%",
         "note": "争议。这项研究用可穿戴设备实测活动量，比让人填问卷回忆可靠。但它仍然只是跟踪记录，没有做分组试验，而且只跟了 6.9 年。研究对象是完全不锻炼的人，已经在规律运动的人不适用这一条",
+        "source": "Stamatakis E, Ahmadi MN, Gill JMR, et al. (2022). Association of wearable device-measured vigorous intermittent lifestyle physical activity with mortality. Nature Medicine, 28, 2521-2529. <https://doi.org/10.1038/s41591-022-02100-x>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -1092,6 +1149,7 @@ module.exports = {
         "cost": "徒手深蹲、俯卧撑不花钱。每周练 1–2 次，每次 20–30 分钟。难在要把它排进每周的日程里。",
         "gain": "把多项跟踪研究合起来算（只记录、不分组）：做力量训练的人比不做的人，死亡风险低 10%–17%。不是练得越多越好，每周约 30–60 分钟时降幅最大，约 10%–20%，再多练不会多出好处。力量和有氧都做的人，比两样都不做的人死亡风险更低。",
         "note": "这类研究只是跟踪记录，运动量还是参与者自己报的。「练过头反而变差」那一段的证据很弱，不必为此限制训练量。力量训练对老年人还有防跌倒、保住肌肉的好处，那些写在第 1 节。",
+        "source": "Momma H 等 (2022). Muscle-strengthening activities are associated with lower risk and mortality in major non-communicable diseases: a systematic review and meta-analysis of cohort studies. British Journal of Sports Medicine. <https://doi.org/10.1136/bjsports-2021-105061>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -1111,6 +1169,7 @@ module.exports = {
         "cost": "不花钱，起身几下也用不了多少时间。难在坐进去就忘了时间，得设个提醒。",
         "gain": "美国有一项跟踪研究，只记录、不分组，用加速度计实测。把人按每天久坐总时长分成四份。久坐最多的那份人，死亡风险是最少那份的 2.63 倍（HR 2.63）。再按一次连着坐多久分成四份：连坐最久的那份人，是连坐最短那份的 1.96 倍（HR 1.96）。所以坐的总量和一次连坐多久，各自单独相关。另一项汇总把上百万人的研究合起来算，只记录、不分组。每天坐 8 小时以上、又几乎不运动的人，死亡风险是另一类人的 1.59 倍（HR 1.59）。另一类人是每天坐不到 4 小时、又最活跃的。每天约 60–75 分钟中等强度活动，可以抵消久坐多出来的风险。最活跃那组即使每天坐 8 小时以上，HR 也只有 1.04，没看出统计上的差别。",
         "note": "可靠的结论是：坐多久不如动多少重要，运动量够的时候久坐的风险基本消失。要注意这类研究只是跟踪记录，坐得最多的人里有大量本来就病着的，「风险高到 2.63 倍」里明显含着「先病了才久坐」。另外同一份汇总里，每天看电视 3 小时以上的风险在各个运动量的人身上都存在，最活跃那组只是把这个起点推到 5 小时。",
+        "source": "Diaz KM 等 (2017). Patterns of Sedentary Behavior and Mortality in U.S. Middle-Aged and Older Adults: A National Cohort Study. Annals of Internal Medicine. <https://doi.org/10.7326/M17-0212>；Ekelund U 等 (2016). Does physical activity attenuate, or even eliminate, the detrimental association of sitting time with mortality? A harmonised meta-analysis of data from more than 1 million men and women. Lancet. <https://doi.org/10.1016/S0140-6736(16)30370-1>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -1130,6 +1189,7 @@ module.exports = {
         "cost": "不花钱，甚至省钱，也不占时间。难在要少吃自己爱吃的那口。",
         "gain": "把多项跟踪研究合起来算（只记录、不分组）：加工肉吃得最多的那组，比吃得最少的那组死亡风险高约 23%（RR 1.23）。红肉合计高约 29%（RR 1.29）。没加工的红肉高约 10%（RR 1.10），但这一项没看出统计上的差别。另一项汇总是按每天吃的量算的。加工肉每天多吃 1 份，死亡风险高约 23%（RR 1.23）。红肉每天多吃 1 份，高约 10%（RR 1.10）。",
         "note": "争议。NutriRECS 指南用一套通行的证据打分法（GRADE），把这些研究评为「不太靠得住」。它只给了一句很弱的建议：照现在这么吃就行。双方争的是证据够不够硬，不是方向。没有研究说加工肉有好处。没加工的红肉影响小，也看不出统计上的差别。要管住的是加工肉。",
+        "source": "Larsson SC, Orsini N (2014). Red meat and processed meat consumption and all-cause mortality: a meta-analysis. American Journal of Epidemiology. <https://doi.org/10.1093/aje/kwt261>；Schwingshackl L 等 (2017). Food groups and risk of all-cause mortality: a systematic review and meta-analysis of prospective studies. American Journal of Clinical Nutrition. <https://doi.org/10.3945/ajcn.117.153148>；Johnston BC 等 (2019). Unprocessed Red Meat and Processed Meat Consumption: Dietary Guideline Recommendations From the NutriRECS Consortium. Annals of Internal Medicine. <https://doi.org/10.7326/M19-1621>（争议方 NutriRECS 指南）",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -1149,6 +1209,7 @@ module.exports = {
         "cost": "不花钱，还省钱，也不占时间。难在社交场合推酒时的一点尴尬。",
         "gain": "把 83 项往后跟踪的研究合起来算，只记录、不分组，60 万名在喝酒的人。死亡风险的最低点，在每周不超过 100 g 纯酒精。这个量大约是 5% 的啤酒 2.5 L，或者 40 度白酒 300 mL。40 岁时每周喝 100–200 g 的人，预期寿命少约 6 个月。每周喝 200–350 g 的少 1–2 年。超过 350 g 的少 4–5 年。以上三项原文以寿命年报告。全球疾病负担研究 GBD 2016 把各类健康损失合起来算，风险最低的饮酒量是 0 杯/周。还有一项汇总把研究设计上的偏差校正过了。每天喝 1.3–24 g 的人和一辈子不喝的人比，死亡风险低约 7%（RR 0.93）。但这一项没看出统计上的差别。每天喝 45–64 g 的高约 19%（RR 1.19）。每天 65 g 以上的高约 35%（RR 1.35）。",
         "note": "争议。认为「少喝有好处」的一方，是一份 34 项长期跟踪研究的汇总。它报告：少量饮酒的人总死亡率最多低 17%–18%。它给的量是男性每天不超过 4 杯、女性不超过 2 杯。在这个量以内，喝得多的人死亡率反而低。反方认为，「不喝酒」那一组里混进了因病戒酒的人和本来身体就差的人。有一项汇总专门把这些干扰扣掉，做完以后保护作用就没了。全球疾病负担研究也给出 0 最安全。稳妥的读法是：少喝不会明显伤寿命，多喝一定伤。「为了健康开始喝酒」没有依据。想少喝怎么办见本节第 21 条（先数杯数再找医生）。天天喝的人不能自己硬戒，见本节第 20 条（别自己硬戒）",
+        "source": "Wood AM 等 (2018). Risk thresholds for alcohol consumption: combined analysis of individual-participant data for 599 912 current drinkers in 83 prospective studies. Lancet. <https://doi.org/10.1016/S0140-6736(18)30134-X>；GBD 2016 Alcohol Collaborators (2018). Alcohol use and burden for 195 countries and territories, 1990–2016: a systematic analysis for the Global Burden of Disease Study 2016. Lancet. <https://doi.org/10.1016/S0140-6736(18)31310-2>；Zhao J 等 (2023). Association Between Daily Alcohol Intake and Risk of All-Cause Mortality: A Systematic Review and Meta-analyses. JAMA Network Open. <https://doi.org/10.1001/jamanetworkopen.2023.6185>；Di Castelnuovo A 等 (2006). Alcohol dosing and total mortality in men and women: an updated meta-analysis of 34 prospective studies. Archives of Internal Medicine. <https://doi.org/10.1001/archinte.166.22.2437>（争议方）",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -1168,6 +1229,7 @@ module.exports = {
         "cost": "挂一次精神科或者成瘾医学科的号，几元到几十元。严重的要住几天院。",
         "gain": "一篇 2026 年的临床综述写明：长期大量饮酒的人在突然停酒或者大幅减量之后会出现戒断综合征，表现包括震颤、自主神经兴奋、焦虑、失眠、感知异常、癫痫发作和震颤谵妄，在普通内科诊疗中「常见且可能危及生命」。挪威的全国登记队列纳入 2009 到 2015 年诊断为酒精依赖、酒精戒断状态或震颤谵妄的 36287 人：震颤谵妄组的年死亡率 8.0%，戒断状态组 5.0%，酒精依赖组 3.6%。震颤谵妄组的标准化死亡比 9.8（95% CI 8.9–10.7，这是可信范围），意思是死亡风险约为同龄一般人群的 9.8 倍。",
         "note": "自己怎么判断：几乎天天喝、一天不喝就手抖出汗心慌睡不着、早上要喝一点才舒服，占一条就别自己硬停。医院的常规做法是用苯二氮䓬类药物把这几天顶过去，同时补硫胺素（维生素 B1）。定 B 级是因为挪威那份队列说的是「得过震颤谵妄的人后来怎么样」，不是「自己硬戒会怎么样」，两者之间是推断。酒还是要戒，只是换成去医院戒。每周喝多少算多见本节第 19 条（少喝或不喝酒），想少喝怎么办见本节第 21 条（先数杯数再找医生）。",
+        "source": "Caputo F, Lungaro L, Costanzini A, De Giorgio R, Addolorato G (2026). Alcohol withdrawal syndrome in hospitalized patients: a practical review. European Journal of Internal Medicine, 107103. <https://doi.org/10.1016/j.ejim.2026.107103>；Bramness JG, Heiberg IH, Høye A, Rossow I (2023). Mortality and alcohol-related morbidity in patients with delirium tremens, alcohol withdrawal state or alcohol dependence in Norway: A register-based prospective cohort study. Addiction, 118(12), 2352–2359. <https://doi.org/10.1111/add.16297>",
         "grade": "B",
         "meta": {
           "money": "少",
@@ -1187,6 +1249,7 @@ module.exports = {
         "cost": "不花钱。数杯数每天记一笔就行。在门诊顺口问一句也不额外花钱。",
         "gain": "34 项随机试验、15197 人合起来算，接受简短干预的人在一年后比只接受最少干预或不干预的人每周少喝 20 克纯酒精（95% CI 少 12 到 28 克，这是可信范围；中等质量证据）。这些研究里受试者的基线饮酒量平均是每周 244 克。简短干预指的是不超过 5 次、总时长不到 60 分钟的建议或生活方式咨询；谈得更久并没有多出好处。药物方面：122 项随机试验、22803 人合起来算，阿坎酸每治疗 12 人（95% CI 8 到 26）可多让 1 人不再回到任何饮酒；口服纳曲酮每天 50 毫克，每治疗 12 人（8 到 26）可多让 1 人不再回到重度饮酒。",
         "note": "收益量级定「小」，是因为这两份证据量到的都是喝了多少，不是死亡率，按本书的规矩只有替代终点就记「小」。药物那部分的试验多在国外做，受试者多数已达到酒精依赖的诊断标准，而且试验里都同时给了心理社会干预，数字是「在这个基础上额外多出来的好处」。这两种药在国内的适应症和能不能开，以医生和药品说明书为准，别自行网购。已经出现戒断反应的见本节第 20 条（别自己硬戒）。",
+        "source": "Kaner EF, Beyer FR, Muirhead C, et al. (2018). Effectiveness of brief alcohol interventions in primary care populations. Cochrane Database of Systematic Reviews, 2, CD004148. <https://doi.org/10.1002/14651858.CD004148.pub4>；Jonas DE, Amick HR, Feltner C, et al. (2014). Pharmacotherapy for adults with alcohol use disorders in outpatient settings: a systematic review and meta-analysis. JAMA, 311(18), 1889–1900. <https://doi.org/10.1001/jama.2014.3628>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -1206,6 +1269,7 @@ module.exports = {
         "cost": "每天吃 28 克，一年约两三百元。顺手就吃，不占时间。",
         "gain": "两项美国跟踪研究，11.9 万人，300 多万人年。人年就是人数乘以各自跟踪的年数。和不吃坚果的人比：每周吃不到 1 次的人死亡风险低约 7%（风险比 0.93，95% CI 0.90–0.96，这是可信范围）。每周吃 1 次的低约 11%（0.89，0.86–0.93）。每周 2–4 次的低约 13%（0.87，0.83–0.90）。每周 5–6 次的低约 15%（0.85，0.79–0.91）。每周 7 次以上的低约 20%（0.80，0.73–0.86）",
         "note": "买原味不加盐的。坚果热量不低，别当零食敞开吃。要注意这类研究只是长期跟踪一群人，吃坚果的人整体生活方式更好，所以数字要打个折",
+        "source": "Bao Y, Han J, Hu FB, et al. (2013). Association of nut consumption with total and cause-specific mortality. New England Journal of Medicine, 369(21), 2001-2011. <https://doi.org/10.1056/NEJMoa1307352>",
         "grade": "A",
         "meta": {
           "money": "少",
@@ -1225,6 +1289,7 @@ module.exports = {
         "cost": "不花钱，也不占时间。这是把肉换一种，不是多买。难在要改点口味偏好。",
         "gain": "把美国 6 项跟踪研究、近 3 万人合起来算。每周多吃两份加工肉，死亡风险高约 3%（风险比 1.03，95% CI 1.02–1.05，可信范围）。每周多吃两份没加工的红肉，也高约 3%（1.03，1.01–1.05）。同样的吃法换成禽肉，是 0.99（0.97–1.02）；换成鱼，是 0.99（0.97–1.01）。这两项都没看出统计上的差别",
         "note": "每周两份带来的差别很小，别指望靠换肉多活几年。同样花钱吃肉，可以优先挑鱼和禽肉",
+        "source": "Zhong VW, Van Horn L, Greenland P, et al. (2020). Associations of Processed Meat, Unprocessed Red Meat, Poultry, or Fish Intake With Incident Cardiovascular Disease and All-Cause Mortality. JAMA Internal Medicine, 180(4), 503-512. <https://doi.org/10.1001/jamainternmed.2019.6969>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -1244,6 +1309,7 @@ module.exports = {
         "cost": "糙米、燕麦、全麦面比精米白面贵一点，不占时间。难在口感要慢慢适应。",
         "gain": "把多项跟踪研究合起来算（只记录、不分组）：全谷物每天多吃 90 g，死亡风险低约 17%（RR 0.83）。90 g 大约是 3 份。这份好处一直持续到每天 210–225 g。另一项汇总里，每天多吃 1 份低约 8%（RR 0.92）。",
         "note": "不必全换成全谷物，换一半就已经在好处最明显的那一段了。要注意这类研究只是跟踪记录，吃全谷物的人本来就更健康，数字偏大。各项研究之间的结果差得也远（I² 83%，这个数越大说明各研究结论越不一致）。",
+        "source": "Aune D 等 (2016). Whole grain consumption and risk of cardiovascular disease, cancer, and all cause and cause specific mortality: systematic review and dose-response meta-analysis of prospective studies. BMJ. <https://doi.org/10.1136/bmj.i2716>；Schwingshackl L 等 (2017). Food groups and risk of all-cause mortality: a systematic review and meta-analysis of prospective studies. American Journal of Clinical Nutrition. <https://doi.org/10.3945/ajcn.117.153148>",
         "grade": "A",
         "meta": {
           "money": "少",
@@ -1263,6 +1329,7 @@ module.exports = {
         "cost": "一年几十到几百元。泡一杯几分钟，不占什么时间。",
         "gain": "中国一项 10.09 万人的研究（China-PAR），其中一半人跟踪满了 7.3 年。有喝茶习惯的人，死亡风险低约 15%（风险比 0.85，95% CI 0.79–0.90，这是可信范围）。以 50 岁为起点算：有喝茶习惯的人，没得动脉粥样硬化性心血管病的年数多 1.41 年，预期寿命多 1.26 年",
         "note": "争议在于：这类研究只是跟踪记录，中国男性喝茶的人里抽烟喝酒的比例高。作者已经扣掉一部分这类影响，但扣不干净。还有一点，别喝滚烫的，热饮温度见本节关于热饮温度的一条。有人担心茶叶里有霉菌毒素。国内查过 158 份黑茶，有 2 份检出黄曲霉毒素，按喝茶的量算，吃进去的量低于国际上的可接受值。另一项查了 352 份茶、16 种霉菌毒素，只有黑茶里的赭曲霉毒素 A 平均含量超过限量。按国人喝茶的量算，两项都没算出膳食风险。茶叶放在干燥的地方，受潮发霉的别喝。绿茶提取物胶囊不一样：高浓度的儿茶素一次大量吞下去会伤肝，冲泡的茶没有这个问题。所以这里说的只是泡的茶，别拿提取物保健品代替",
+        "source": "Wang X, Liu F, Li J, et al. (2020). Tea consumption and the risk of atherosclerotic cardiovascular disease and all-cause mortality: The China-PAR project. European Journal of Preventive Cardiology, 27(18), 1956-1963. <https://doi.org/10.1177/2047487319894685>；茶叶霉菌毒素：Cui P 等 (2020). Quantitative analysis and dietary risk assessment of aflatoxins in Chinese post-fermented dark tea. Food and Chemical Toxicology. <https://doi.org/10.1016/j.fct.2020.111830>；Zhou H 等 (2022). Mycotoxins in Tea (Camellia sinensis (L.) Kuntze): Contamination and Dietary Exposure Profiling in the Chinese Population. Toxins. <https://doi.org/10.3390/toxins14070452>；绿茶提取物与肝损伤：Hu J 等 (2018). The safety of green tea and green tea extract consumption in adults - Results of a systematic review. Regulatory Toxicology and Pharmacology. <https://doi.org/10.1016/j.yrtph.2018.03.019>",
         "grade": "A",
         "meta": {
           "money": "少",
@@ -1282,6 +1349,7 @@ module.exports = {
         "cost": "自己冲每天一两元。冲一杯几分钟，不占什么时间。",
         "gain": "一篇综述把 201 项汇总研究的结果又合到一起算，这些汇总底下的原始研究都只记录、不分组。结果：每天喝 3–4 杯咖啡的人和不喝的人比，死亡风险低 17%（相对风险 0.83，95% CI 0.79–0.88，这是可信范围）",
         "note": "争议在于：原作者写明证据几乎全来自跟踪记录，还说「需要可靠的随机对照试验才能判断是否为因果」。意思是要把人随机分成两组来比，光看跟踪记录断不了因果。做的时候喝黑咖啡，加糖加奶盖会把好处抵消掉。孕妇，还有心律失常、焦虑、失眠的人，不适用这一条",
+        "source": "Poole R, Kennedy OJ, Roderick P, et al. (2017). Coffee consumption and health: umbrella review of meta-analyses of multiple health outcomes. BMJ, 359, j5024. <https://doi.org/10.1136/bmj.j5024>",
         "grade": "A",
         "meta": {
           "money": "少",
@@ -1301,6 +1369,7 @@ module.exports = {
         "cost": "每天几元到十几元。每天要花点时间洗和切。难在要天天买、天天吃够量。",
         "gain": "把多项跟踪研究合起来算（只记录、不分组）：每天多吃 200 g 果蔬，死亡风险低约 10%（RR 0.90）。这份好处一直持续到每天 800 g。美国两项大型跟踪研究加上 26 项研究的汇总：每天吃够 5 份的人，比只吃 2 份的人死亡风险低约 13%（HR 0.87）。最好的搭配是 2 份水果加 3 份蔬菜，再多不再降。",
         "note": "吃够 5 份就行，不用凑到 10 份，两项研究在这一点上的答案一致。要注意这类研究只是跟踪记录，干扰明显：吃菜多的人，收入、教育、运动都和别人不一样。所以「风险低约 10%」已经是上限了。",
+        "source": "Aune D 等 (2017). Fruit and vegetable intake and the risk of cardiovascular disease, total cancer and all-cause mortality: a systematic review and dose-response meta-analysis of prospective studies. International Journal of Epidemiology. <https://doi.org/10.1093/ije/dyw319>；Wang DD 等 (2021). Fruit and Vegetable Intake and Mortality: Results From 2 Prospective Cohort Studies of US Men and Women and a Meta-Analysis of 26 Cohort Studies. Circulation. <https://doi.org/10.1161/CIRCULATIONAHA.120.048996>",
         "grade": "A",
         "meta": {
           "money": "少",
@@ -1320,6 +1389,7 @@ module.exports = {
         "cost": "不花钱，换着买而已。要自己做饭，或者花时间挑没怎么加工过的食材，每天都得占些时间。难在要长期对抗「方便就好」的惯性。",
         "gain": "一篇综述把多项汇总研究又合到一起算，这些汇总底下的原始研究都只记录、不分组。结果：超加工食品吃得多的人比吃得少的人，死亡风险高约 21%（RR 1.21），心血管病死亡高约 50%（RR 1.50）。这两项的证据分级分别是「高度提示」和「令人信服」。但按通行的证据打分法（GRADE）评，确定性是低或极低。",
         "note": "争议在三点。一是这套分类（NOVA）把营养差别很大的食物划成了一类。二是它和含糖饮料、加工肉（第 7、18 条）大量重叠，分不清到底是哪一项在起作用。三是按通行的证据打分法（GRADE）评，等级也低。所以做到那两条之后，这一条还能多带来多少好处，说不准。反方的证据就是同一篇综述给出的低评级本身，目前没有得出相反结论的原始研究。所以先把第 7、18 条（不喝含糖饮料、少吃加工肉）做到，再看这一条。",
+        "source": "Lane MM 等 (2024). Ultra-processed food exposure and adverse health outcomes: umbrella review of epidemiological meta-analyses. BMJ. <https://doi.org/10.1136/bmj-2023-077310>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -1339,6 +1409,7 @@ module.exports = {
         "cost": "农村家庭要换灶具，加上燃料费，一年几百到上千元。换一次就完事，不长期占时间。城里人基本已经是电或燃气了。",
         "gain": "中国有一项慢性病往后跟踪的研究，只记录、不分组，27.1 万名没有心血管病的成人。做饭用煤柴这类固体燃料的人，死亡风险比用电或燃气的人高约 11%（HR 1.11）。取暖用固体燃料的人高约 14%（HR 1.14）。已经从固体燃料换成清洁燃料的人，和还在烧的人比，做饭这项低约 13%（HR 0.87）。取暖这项低约 33%（HR 0.67）。室外的 PM2.5 另有一笔账。把 104 项跟踪研究合起来算，长期吸到的浓度每高 10 µg/m³，自然原因死亡风险高约 8%（RR 1.08）。自然原因就是非意外的病死。",
         "note": "这类研究只是跟踪记录。换了燃料的家庭往往也更富裕，「风险降到 0.67 倍」这个数里混着家境的影响。至于室外的 PM2.5，个人能做的有限，无非是搬家、戴口罩、用净化器。空气净化器没有以死亡率为终点的研究，所以本节不给数字。",
+        "source": "Yu K 等 (2018). Association of Solid Fuel Use With Risk of Cardiovascular and All-Cause Mortality in Rural China. JAMA. <https://doi.org/10.1001/jama.2018.2151>；Chen J, Hoek G (2020). Long-term exposure to PM and all-cause and cause-specific mortality: A systematic review and meta-analysis. Environment International. <https://doi.org/10.1016/j.envint.2020.105974>",
         "grade": "A",
         "meta": {
           "money": "多",
@@ -1358,6 +1429,7 @@ module.exports = {
         "cost": "不花钱，每次多等两三分钟。难在嘴馋的时候忍住不喝。",
         "gain": "在伊朗北部的食管癌高发区，拿 300 名患者和 571 名没得病的人对比。下面都和喝温茶的人比。喝「热」茶的人，得食管鳞癌的机会约为 2.07 倍（比值比，95% CI 1.28–3.35，可信范围）。喝「很热」的约为 8.16 倍（3.93–16.9）。倒出后不到 2 分钟就喝的人，约为等 4 分钟以上再喝的人的 5.41 倍（2.63–11.1）",
         "note": "国际癌症研究机构把 65 ℃ 以上的热饮列为 2A 类，意思是很可能致癌。同一份评估认定咖啡本身不致癌。中国的潮汕、太行山一带食管癌高发，和趁烫喝的习惯有关",
+        "source": "Islami F, Pourshams A, Nasrollahzadeh D, et al. (2009). Tea drinking habits and oesophageal cancer in a high risk area in northern Iran: population based case-control study. BMJ, 338, b929. <https://doi.org/10.1136/bmj.b929>；Loomis D, Guyton KZ, Grosse Y, et al. (2016). Carcinogenicity of drinking coffee, mate, and very hot beverages. Lancet Oncology, 17(7), 877-878. <https://doi.org/10.1016/S1470-2045(16)30239-X>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -1377,6 +1449,7 @@ module.exports = {
         "cost": "不花钱。每天十几分钟，上下班路上和午休就够了。",
         "gain": "瑞典一项研究，2.95 万名女性，跟踪 20 年。和晒太阳最多的那组比，刻意回避晒太阳的人预期寿命少 0.6 到 2.1 年。作者写道「不吸烟但回避晒太阳的人，预期寿命与晒太阳最多组里的吸烟者相当」",
         "note": "争议在于：瑞典纬度高、日照少，结论不能直接搬到中国。而且回避晒太阳的人，可能本来就体弱、不爱出门。另外别晒到晒伤，正午强光下还是要遮挡，因为晒太阳会增加皮肤癌风险",
+        "source": "Lindqvist PG, Epstein E, Nielsen K, et al. (2016). Avoidance of sun exposure as a risk factor for major causes of death: a competing risk analysis of the Melanoma in Southern Sweden cohort. Journal of Internal Medicine, 280(4), 375-387. <https://doi.org/10.1111/joim.12496>",
         "grade": "B",
         "meta": {
           "money": "0",
@@ -1396,6 +1469,7 @@ module.exports = {
         "cost": "不花钱。饮食加运动每天都要占时间。这是全节最费毅力的一条：要长期管住嘴、迈开腿，减下来之后维持比减更难。",
         "gain": "把 239 项往后跟踪的研究的个人数据合起来算（只记录、不分组）。这份分析只留了三类人：从不吸烟的、入组时没有慢性病的、入组后又活过 5 年的。结果：死亡风险在 BMI 20–25 最低。BMI 25–27.5 高约 7%（HR 1.07）。27.5–30 高约 20%（HR 1.20）。30–35 高约 45%（HR 1.45）。35–40 高约 94%（HR 1.94）。40–60 是 2.76 倍（HR 2.76）。BMI 25 以上的人每高 5 kg/m²，东亚人群的风险高约 39%（HR 1.39）。",
         "note": "争议。有一方认为「胖一点反而活得久」。他们汇总后得到：超重的人死亡风险低约 6%，轻度肥胖的低约 5%。双方分歧主要在要不要把三类数据剔掉：抽烟的人、已经得病的人、刚入组头几年的数据。之所以要剔，是因为重病的人会先瘦下来。那项汇总 239 项研究的分析把这三类剔掉之后，超重带来的风险又出现了。另外还要注意，没有随机试验证明减重本身能降低总死亡率。上面的收益是拿不同胖瘦的人横着比出来的，不代表减掉就能降这么多。要减重的人不必在吃饭时间上下功夫，早餐和 16:8 轻断食都没有额外好处，见第 6 节第 26 条（不要指望吃早餐或 16:8 帮你控制体重）",
+        "source": "Global BMI Mortality Collaboration (2016). Body-mass index and all-cause mortality: individual-participant-data meta-analysis of 239 prospective studies in four continents. Lancet. <https://doi.org/10.1016/S0140-6736(16)30175-1>；Flegal KM 等 (2013). Association of all-cause mortality with overweight and obesity using standard body mass index categories: a systematic review and meta-analysis. JAMA. <https://doi.org/10.1001/jama.2012.113905>（争议方）",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -1415,6 +1489,7 @@ module.exports = {
         "cost": "不花钱，也不占时间。",
         "gain": "意大利一项 2.28 万人的研究，其中一半人跟踪满了 8.2 年，共 1236 人去世。每周吃辣椒 4 次以上的人，死亡风险比很少吃的人低约 23%（风险比 0.77，95% CI 0.66–0.90，可信范围）。心血管死亡低约 34%（0.66，0.50–0.86）",
         "note": "争议在于：这是在地中海饮食的背景下做的跟踪记录，吃辣的人可能整体饮食更接近当地的传统吃法。还要注意，有胃食管反流、痔疮、肠易激的人，吃辣会加重症状，不必勉强",
+        "source": "Bonaccio M, Di Castelnuovo A, Costanzo S, et al. (2019). Chili Pepper Consumption and Mortality in Italian Adults. Journal of the American College of Cardiology, 74(25), 3139-3149. <https://doi.org/10.1016/j.jacc.2019.09.068>",
         "grade": "B",
         "meta": {
           "money": "0",
@@ -1434,6 +1509,7 @@ module.exports = {
         "cost": "每天几元，不占时间。",
         "gain": "PURE 跟踪研究覆盖 21 个国家、13.6 万人，平均跟踪 9.1 年，共 6796 人去世。每天吃两份以上奶制品的人，死亡风险比不吃的人低约 17%（风险比 0.83，95% CI 0.72–0.96，可信范围），趋势 P=0.0052",
         "note": "争议在于：PURE 纳入了大量中低收入国家，在那里能天天喝奶本身就说明家境不错，这层干扰很难排干净。另外乳糖不耐受的人改喝酸奶或者低乳糖奶，不必硬喝牛奶",
+        "source": "Dehghan M, Mente A, Rangarajan S, et al. (2018). Association of dairy intake with cardiovascular disease and mortality in 21 countries from five continents (PURE): a prospective cohort study. Lancet, 392(10161), 2288-2297. <https://doi.org/10.1016/S0140-6736(18)31812-9>",
         "grade": "B",
         "meta": {
           "money": "少",
@@ -1453,6 +1529,7 @@ module.exports = {
         "cost": "不花钱，也不占时间。",
         "gain": "美国一项 52.1 万人的跟踪研究，共 12.9 万人去世。每天多吃半个全蛋，死亡风险高约 7%（风险比 1.07，95% CI 1.06–1.08，这是可信范围）。把这半个全蛋换成等量的蛋清、禽肉、鱼、奶制品或者坚果豆类，死亡风险会更低，心血管、癌症、呼吸系统这三项的死亡风险也都更低",
         "note": "争议很大：也有长期跟踪大批人的研究，以及多项研究的汇总，没发现鸡蛋和死亡率有关。美国膳食指南已经取消了胆固醇的每日上限。要避免的只是每天吃三四个，一天一个不必担心",
+        "source": "Zhuang P, Wu F, Mao L, et al. (2021). Egg and cholesterol consumption and mortality from cardiovascular and different causes in the United States: A population-based cohort study. PLoS Medicine, 18(2), e1003508. <https://doi.org/10.1371/journal.pmed.1003508>",
         "grade": "B",
         "meta": {
           "money": "0",
@@ -1472,6 +1549,7 @@ module.exports = {
         "cost": "多花些水费电费。每次半小时。",
         "gain": "日本一项 3.0 万人的研究，跟踪 19 年，共 2097 例心血管事件。几乎每天泡澡的人，比每周泡不超过两次的人心血管事件风险低约 28%（风险比 0.72，95% CI 0.62–0.84，这是可信范围）。冠心病低约 35%（0.65，0.45–0.94）。脑卒中低约 26%（0.74，0.62–0.87）。脑出血低约 46%（0.54，0.40–0.73）",
         "note": "争议在于：这是在日本人群和浴缸文化下做出的结果，中国多数家庭没有条件天天泡。另外水别太烫，也别泡太久。对老年人和有心脑血管病的人，水温过高、泡得太久反而危险，日本每年有大量老人在浴缸里猝死",
+        "source": "Ukai T, Iso H, Yamagishi K, et al. (2020). Habitual tub bathing and risks of incident coronary heart disease and stroke. Heart, 106(10), 732-737. <https://doi.org/10.1136/heartjnl-2019-315752>",
         "grade": "B",
         "meta": {
           "money": "少",
@@ -1491,6 +1569,7 @@ module.exports = {
         "cost": "不花钱。睡前定个闹钟就行，几乎不用毅力。",
         "gain": "一篇伞形综述汇总了 16 篇荟萃分析、244 个健康结局。伞形综述就是把已有的汇总研究再汇总一遍。结论是：午睡少于 60 分钟的人，总死亡率和慢性病风险都没有升高，脑力改善也最明显（SMD 0.69，95% CI 0.37–1.00，这是可信范围）。20 到 30 分钟的短午睡对运动表现的改善最大（SMD 0.99，0.67–1.31）。午睡超过 60 分钟的人，冠心病风险高约 30%，糖尿病和肥胖风险高约 20%。另一项研究让 1338 名 56 岁以上的老人戴腕表实测午睡，不靠自己填问卷。跟踪最长 19 年，期间 926 人去世。午睡每多 1 小时，死亡风险高约 13%（HR 1.13，95% CI 1.04–1.23）。每天多睡一次，高约 7%（HR 1.07，1.02–1.13）。在上午睡的人，比在下午早些时候睡的人高约 30%（HR 1.30，1.03–1.64）。",
         "note": "争议。上面两项都是只记录、不分组的研究。午睡时间长的人，本来就更可能有睡眠呼吸暂停、贫血、甲状腺功能减退、抑郁或者别的慢性病。所以「睡得久的人死得多」里有多少是午睡本身造成的，说不清。用基因做的因果推断（孟德尔随机化，45.3 万人加 54.1 万人）只支持一件事：午睡越频繁，血压和腰围越高一点。它没有查到午睡对冠心病和糖尿病有因果影响。所以别把「少睡午觉」当成降死亡率的手段。「去查原因」那半是作者建议，属于 C 级：白天困到必须长睡，先查夜里的睡眠，打呼噜和睡觉憋气要查睡眠呼吸暂停，再查血常规和甲状腺。短午睡怎么提神见第 3 节第 11 条（下午困了睡 10 分钟）。夜间睡多久见本节第 13 条（每晚睡 7 小时）。",
+        "source": "Du P, Li J, Hua Z, 等 (2026). Multiple Health Outcomes of Daytime Napping: A Comprehensive Umbrella Review. Public Health Reviews. <https://doi.org/10.3389/phrs.2026.1609013>；Gao C, Cai R, Zheng X, 等 (2026). Objectively Measured Daytime Napping Patterns and All-Cause Mortality in Older Adults. JAMA Network Open. <https://doi.org/10.1001/jamanetworkopen.2026.7938>；Dashti HS 等 (2021). Genetic determinants of daytime napping and effects on cardiometabolic health. Nature Communications. <https://doi.org/10.1038/s41467-020-20585-3>",
         "grade": "B",
         "meta": {
           "money": "0",
@@ -1510,6 +1589,7 @@ module.exports = {
         "cost": "不花钱。补的那一两个小时本来就想睡。",
         "gain": "英国生物银行 85,618 人，平均年龄 61.8 岁，戴腕表记录逐日睡眠，中位随访 8 年。研究先按每个人自己的睡眠需求算出「少睡的夜」，指比自己需要的少睡 2.5 小时以上。少睡那段之后的第一晚算「补觉夜」，这一晚比自己需要的多睡就算补上了。按这个分成五种模式。和作息规律的人相比，少睡又不补的全因死亡风险高约 15%（HR 1.15，95% CI 1.01–1.31，这是可信范围）。累计少睡超过 3.5 小时又不补的高约 42%（HR 1.42，1.24–1.63）。补上了的两组都没有显著关联，其中少睡后补是 HR 1.12（0.98–1.28）。本来就睡得短的人里，少睡不补高约 19%（1.19，1.01–1.40），严重少睡不补高约 38%（1.38，1.17–1.63）。这个结果在另一批 4,586 人的美国健康调查里也重复出来了。",
         "note": "这是只记录、不分组的研究。补不上的人可能本来就更忙、身体更差，这一层排不干净。「补上了的两组看不出风险升高」只是没查出差别，它们的点估计仍然大于 1，补了也不等于没事。所以熬了夜要尽快还上，也不能因此随便熬夜。这项研究里的补觉指少睡之后第一晚多睡一会儿，不包括攒到周末一次补。把「工作日熬、周末补」固定成每周的节奏，叫社会时差，本身和心血管病有关，见本节第 13 条（每晚睡 7 小时左右，作息固定）。周末也固定起床那条见第 3 节第 2 条（固定起床时间，周末也一样），和本条不冲突：本条让你当晚早点上床，不是让你第二天睡到中午。",
+        "source": "Li X, Zhang M, Li Z, 等 (2026). Acute sleep rebound following sleep restriction is associated with reduced mortality risk. Nature Communications. <https://doi.org/10.1038/s41467-026-72461-1>",
         "grade": "B",
         "meta": {
           "money": "0",
@@ -1529,6 +1609,7 @@ module.exports = {
         "cost": "转岗或换工作可能少拿钱，夜班津贴也没了。找工作要花时间，下决心也难。如果是挑工作的时候把这笔账算进去，成本是零。",
         "gain": "把 23 项跟踪研究合起来算，只记录、不分组。上夜班的人心血管事件风险高约 13%（RR 1.13，95% CI 1.10–1.16，这是可信范围）。心血管死亡高约 27%（RR 1.27，1.18–1.36）。按年数看：每多上 5 年夜班，心血管病发生率再高约 7%（RR 1.07，1.04–1.09），心血管死亡再高约 5%（RR 1.05，1.03–1.06）。分病看，冠心病发生高约 22%（1.22，1.16–1.28），冠心病死亡高约 22%（1.22，1.10–1.36），缺血性心脏病死亡高约 39%（1.39，1.06–1.84），卒中死亡高约 49%（1.49，1.04–2.12）。卒中的发生率那一项不显著（1.06，0.95–1.18）。",
         "note": "这些都是只记录、不分组的研究。上夜班的人在吸烟、体重、收入上本来就和别人不一样，校正不干净。夜班致癌这件事，证据比流传的说法软得多。汇总 12 项研究、12,132 例乳腺癌的分析里，干过夜班的人风险只高约 5%，可信范围跨过了 1（RR 1.05，0.96–1.14）。干满 20 年那一档高约 25%（1.25，1.01–1.55），但作者做影响分析后这一项就不显著了，校正可能的发表偏倚后接近 1，原话是这个关联「远未确立」。另一项跟踪中国男性 16.1 年、8,202 例癌症的研究里，夜班和总癌症及多数常见癌都没有关联，只有胰腺癌在累计干 11 到 20 年那一档高约 59%（HR 1.59，1.09–2.31）。所以这条按心血管算账，不按癌症。不是谁都该离开夜班岗位，按年数算的这笔账要你自己算。已经在干的，先把能改的改掉：戒烟见本节第 1 条（戒烟，越早越好），血压血脂见本节第 12 条（有高血压、高血脂就按医嘱规律吃药），夜班之后的觉怎么补见本节第 38 条（熬夜之后第二天晚上就补觉）。另有两条能试的对策：把进食集中在白天，以及用强光加白天严格遮光把生物钟搬过去。后者是唯一被证明真能搬动生物钟的办法。普通室内照明下连上六个夜班，生物钟纹丝不动；换成 7000 到 12000 勒克斯的强光加白天近乎全黑，四天就整个倒了过来。**夜里的光要够亮、白天睡觉要严格遮光、下班路上戴墨镜挡晨光，三样缺一不可**，漏掉最后一样等于白做。两条对策的终点都只到代谢指标和睡眠，没有试验测过照做能不能把心血管风险降下来。休息日过回白天的生活，钟还会被打回去。剂量、原始数字和其余来源，连同身体怎么认时间，都在 [docs/生物钟和夜班.md](../docs/生物钟和夜班.md)。",
+        "source": "Xi J, Ma W, Tao Y, 等 (2025). Association between night shift work and cardiovascular disease: a systematic review and dose-response meta-analysis. Frontiers in Public Health. <https://doi.org/10.3389/fpubh.2025.1668848>；Esposito G, Bravi F, Santucci C, 等 (2025). Night shift work and breast cancer risk in healthcare workers: a systematic review and meta-analysis. Occupational Medicine. <https://doi.org/10.1093/occmed/kqaf040>；Shen QM, Li ZY, Tan YT, 等 (2026). Night shift work and risk of total and site-specific cancer: results from a prospective cohort study among Chinese men. Scandinavian Journal of Work, Environment & Health. <https://doi.org/10.5271/sjweh.4290>；Czeisler CA, Johnson MP, Duffy JF, 等 (1990). Exposure to bright light and darkness to treat physiologic maladaptation to night work. New England Journal of Medicine, 322(18), 1253-1259. <https://doi.org/10.1056/NEJM199005033221801>",
         "grade": "A",
         "meta": {
           "money": "多",
@@ -1548,6 +1629,7 @@ module.exports = {
         "cost": "换个地方买，钱差不多。看一眼包装上有没有 SC 开头的食品生产许可编号就行。难在说服习惯买自榨油的长辈。",
         "gain": "黄曲霉毒素是国际癌症研究机构定的 1 类致癌物（确定能让人得癌），主要是肝癌。广州一项研究测了 2010 到 2022 年小作坊自榨花生油里的黄曲霉毒素 B1。中位数 1.29 μg/kg，中间一半样品在 0.12 到 6.58 之间。当地出台小作坊管理条例后，油里的毒素马上降了 2.865 μg/kg，之后每年再降 2.593。常吃自榨油那片居民的肝功能异常比例随之下降（PR 0.650，95% CI 0.469–0.902，可信范围），低约 35%。广西一项跟踪 1611 名孕妇的研究里，81.7% 吃自榨花生油。吃的人孩子低出生体重的风险高约九成（aOR 1.9，1.1–3.2），早产高约八成（aOR 1.8，1.1–3.0）。",
         "note": "两项研究都只是跟踪记录、没有分组对照。广州那项的终点是肝功能化验，不是肝癌和死亡。自榨油的毒素中位数其实低于国标对花生油的限量 20 μg/kg，风险来自长年吃和个别高的批次。国标限量对所有花生油都适用，但预包装油要过生产许可和出厂检验，小作坊按各省的管理办法管，抽检少得多。本条受益人主要是你和一起吃饭的家人。",
+        "source": "Lei J, Li Y, Wang Y, 等 (2024). The impact of small food workshops management regulations on aflatoxin B1 in home-made peanut oil and the liver function of high-consumption area residents: an interrupted time series study in Guangzhou, China. Frontiers in Public Health, 12. <https://doi.org/10.3389/fpubh.2024.1484414>；Zhong Y, Lu H, Jiang Y, 等 (2024). Effect of homemade peanut oil consumption during pregnancy on low birth weight and preterm birth outcomes: a cohort study in Southwestern China. Global Health Action, 17. <https://doi.org/10.1080/16549716.2024.2336312>；IARC (2012). Chemical Agents and Related Occupations. IARC Monographs on the Evaluation of Carcinogenic Risks to Humans, Vol 100F. <https://publications.iarc.fr/123>；国家卫生计生委、国家食品药品监督管理总局 (2017). 食品安全国家标准 食品中真菌毒素限量（GB 2761-2017）",
         "grade": "B",
         "meta": {
           "money": "0",
@@ -1567,6 +1649,7 @@ module.exports = {
         "cost": "不多花钱。植物油本来就是大多数家庭的主力。难在改掉用猪油炒菜、拌饭的口味习惯。",
         "gain": "Cochrane 汇总了 15 项随机试验、56,675 人，每项至少做两年。少吃饱和脂肪，心血管事件合计低约 17%（RR 0.83，0.70–0.98）。总死亡率几乎不变（RR 0.96，0.90–1.03），心血管死亡也不变（RR 0.95，0.80–1.12）。换成多不饱和脂肪（大豆油、玉米油的主要成分）和换成碳水，效果没看出差别。换成单不饱和脂肪（菜籽油、橄榄油的主要成分）的数据太少，说不清。另一篇 Cochrane 汇总 19 项随机试验、6461 人，多吃 omega-6（亚油酸）对总死亡率 RR 1.00（0.88–1.12），对心血管事件 RR 0.97（0.81–1.15），看不出好处也看不出害处。第三篇汇总 86 项随机试验、162,796 人，多吃植物来源的 omega-3（亚麻籽油、紫苏油的主要成分），总死亡率 RR 1.01（0.84–1.20），冠心病事件 RR 1.00（0.82–1.22），基本没有作用。",
         "note": "争议：有人主张大豆油、玉米油里的 omega-6 太多会促炎，所以要少吃、换油。上面 omega-6 那篇的随机试验没看出害处，证据质量作者自评为低。收益量级按心血管事件低 17% 定为中，总死亡率没变。哪种油都要控制用量，膳食指南建议每人每天烹调油 25 到 30 克。",
+        "source": "Hooper L, Martin N, Jimoh OF, 等 (2020). Reduction in saturated fat for cardiovascular disease. Cochrane Database of Systematic Reviews, (5), CD011737. <https://doi.org/10.1002/14651858.CD011737.pub3>；Hooper L, Al-Khudairy L, Abdelhamid AS, 等 (2018). Omega-6 fats for the primary and secondary prevention of cardiovascular disease. Cochrane Database of Systematic Reviews, (11), CD011094. <https://doi.org/10.1002/14651858.CD011094.pub4>；Abdelhamid AS, Brown TJ, Brainard JS, 等 (2020). Omega-3 fatty acids for the primary and secondary prevention of cardiovascular disease. Cochrane Database of Systematic Reviews, (3), CD003177. <https://doi.org/10.1002/14651858.CD003177.pub5>；中国营养学会 (2022). 中国居民膳食指南（2022）. 人民卫生出版社",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -1586,6 +1669,7 @@ module.exports = {
         "cost": "家里装了抽油烟机的，只多花一点电费。没装的，买一台连安装要几百到上千元。难在每次开火都记得开，别嫌吵就关掉。",
         "gain": "把 10 项病例对照研究合起来算，对象都是不吸烟的中国女性。病例对照是拿肺癌病人和没病的人比，回头问过去的习惯。接触做饭油烟的人，得肺癌的机会约为 1.74 倍（比值比，95% CI 1.57–1.94，可信范围）。其中 4 项比的是接触油烟又不用抽油烟机的人，约为 2.11 倍（1.54–2.89）。台湾一项研究拿 1302 名不吸烟的女性肺癌病人，和 1302 名没病的人对比。只看做饭十年以上的人。三分之二以上的年头都开抽油烟机的，和三分之一以下的比，风险低约一半（比值比 0.49，0.32–0.76）。上海有一项往后跟踪的研究，7.1 万名不吸烟的女性，从 1996 年跟到 2009 年，查出 429 例肺癌。自己说住过厨房通风差的房子的，得肺癌的风险高约 49%（HR 1.49，1.15–1.95）。烧煤又通风差 20 年以上的，约为 2.03 倍（HR 2.03，1.35–3.05）。单看烧没烧过煤，没看出差别（HR 1.03，0.84–1.26）。炒菜用哪种油，也没看出差别。",
         "note": "争议：支持开抽油烟机的数字主要来自病例对照研究。病人确诊后回忆过去，容易少报开抽油烟机的次数，数字可能偏大。上海那项往后跟踪的研究里，风险升高主要落在烧煤又通风差的人家。只烧燃气的人家开不开差多少，那项研究给不出单独的数。所以证据等级只给 B，收益按约两倍的风险差定为大。做饭不烧煤柴见本节第 29 条（做饭、取暖不烧煤和柴）。本条受益人主要是家里常掌勺的人。",
+        "source": "Xue Y, Jiang Y, Jin S, Li Y (2016). Association between cooking oil fume exposure and lung cancer among Chinese nonsmoking women: a meta-analysis. OncoTargets and Therapy, 9, 2987-2992. <https://doi.org/10.2147/OTT.S100949>；Chen TY, Fang YH, Chen HL, 等 (2020). Impact of cooking oil fume exposure and fume extractor use on lung cancer risk in non-smoking Han Chinese women. Scientific Reports, 10, 6774. <https://doi.org/10.1038/s41598-020-63656-7>；Kim C, Gao YT, Xiang YB, 等 (2015). Home kitchen ventilation, cooking fuels, and lung cancer risk in a prospective cohort of never smoking women in Shanghai, China. International Journal of Cancer, 136(3), 632-638. <https://doi.org/10.1002/ijc.29020>",
         "grade": "B",
         "meta": {
           "money": "0",
@@ -1607,6 +1691,7 @@ module.exports = {
         "cost": "不花钱。花几分钟改一下设置，几乎不需要毅力。",
         "gain": "只是收到一条通知，不看也不碰，注意力任务的成绩就明显变差。变差的幅度和真的接打电话、发短信相当。这是实验室里做的，受试者是大学生。另有两项实验显示：即便成功克制住不去看手机，自己的手机搁在旁边，也会让脑子能用的余量变少。手机依赖强的人下降最多。",
         "note": "这些都是实验室里的单次任务。天天这样累积下来是什么结果，没人测过。真正需要随叫随到的岗位，可以只留少数几个联系人的通知。",
+        "source": "Stothart, Mitchum & Yehnert (2015). The attentional cost of receiving a cell phone notification. Journal of Experimental Psychology: Human Perception and Performance. <https://doi.org/10.1037/xhp0000100>；Ward, Duke, Gneezy & Bos (2017). Brain Drain: The Mere Presence of One's Own Smartphone Reduces Available Cognitive Capacity. Journal of the Association for Consumer Research. <https://doi.org/10.1086/691462>",
         "grade": "B",
         "meta": {
           "money": "0",
@@ -1626,6 +1711,7 @@ module.exports = {
         "cost": "不花钱。周末要少睡懒觉，需要一点毅力。",
         "gain": "61 名大学生记录了 30 天。作息最不规律的五分之一，生物钟（昼夜节律）比最规律的五分之一晚约 2.5 小时。具体是褪黑素开始分泌的时刻 00:08 对 21:32。最困、最想睡的时段也晚约 1.8 小时。作息越规律，学业成绩越好（相关系数 r = 0.37）。",
         "note": "只有这一项研究，人数少，也没有分组对照。研究者推算，生物钟的差别主要来自每天晒到的光不一样。所以固定起床时间要配合早上见光，才有效果。偶尔熬夜之后怎么补，见第 2 节第 38 条（熬夜之后第二天晚上就补觉）：办法是当晚早点上床，不是第二天睡到中午。",
+        "source": "Phillips et al. (2017). Irregular sleep/wake patterns are associated with poorer academic performance and delayed circadian and sleep/wake timing. Scientific Reports. <https://doi.org/10.1038/s41598-017-03171-4>",
         "grade": "B",
         "meta": {
           "money": "0",
@@ -1645,6 +1731,7 @@ module.exports = {
         "cost": "不花钱。每天要多留 1 到 2 小时给睡眠。早一点上床，需要一点毅力。",
         "gain": "48 名 21 到 38 岁的健康成人，连续 14 天每晚只睡 6 小时。他们的脑力表现累计下降，掉到相当于连续 2 晚完全不睡的水平。而自己打分的困倦程度只在头几天上升，之后几乎不再增加。6 小时组和 4 小时组的自评困倦没有差别。这是把人随机分成两组做的对照试验（RCT）。另外，短时间不睡（急性睡眠剥夺，不超过 48 小时）对简单注意力走神的效果大小 g = -0.776，对推理准确率 g = -0.125。这部分是把 70 项研究合起来算的。",
         "note": "「自己觉得不困」不是睡够了的证据。长期睡 6 小时的人只是感觉上习惯了，表现并没有跟上。汇总多项研究的那部分说的是整夜不睡。「长期少睡」只有一项随机对照试验支持。睡多久和死亡风险的关系另算，见第 2 节第 13 条（每晚睡 7 小时左右）：那边按死亡率算，7 小时那档风险最低。",
+        "source": "Van Dongen, Maislin, Mullington & Dinges (2003). The cumulative cost of additional wakefulness. Sleep. <https://doi.org/10.1093/sleep/26.2.117>；Lim & Dinges (2010). A meta-analysis of the impact of short-term sleep deprivation on cognitive variables. Psychological Bulletin. <https://doi.org/10.1037/a0018883>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -1664,6 +1751,7 @@ module.exports = {
         "cost": "不花钱。习惯下午喝咖啡的人，要忍住不喝，需要一点毅力。",
         "gain": "睡前 6 小时喝 400 mg 咖啡因，仪器测到的总睡眠时间比喝安慰剂少 1.1 到 1.2 小时。安慰剂就是不含咖啡因的对照饮料。可是受试者自己写的睡眠日记没有报出差别，自己察觉不到。把多项研究合起来算（荟萃分析）：咖啡因平均让总睡眠时间减少 45 分钟。躺在床上真正睡着的比例（睡眠效率）下降 7%。一杯咖啡（107 mg）要在睡前 8.8 小时以上喝完，才不影响睡眠。",
         "note": "Drake 那项只有一个实验室做过，用的 400 mg 偏大，大约两三杯咖啡。咖啡因代谢慢的人，截止时间还要更早。少喝咖啡因换回来的是睡眠时长，和第 3 条（每晚睡够 7 到 8 小时）叠加。",
+        "source": "Drake, Roehrs, Shambroom & Roth (2013). Caffeine effects on sleep taken 0, 3, or 6 hours before going to bed. Journal of Clinical Sleep Medicine. <https://doi.org/10.5664/jcsm.3170>；Gardiner et al. (2023). The effect of caffeine on subsequent sleep: A systematic review and meta-analysis. Sleep Medicine Reviews. <https://doi.org/10.1016/j.smrv.2023.101764>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -1683,6 +1771,7 @@ module.exports = {
         "cost": "不花钱。要花点时间跟同事说清楚你多久回一次。忍住不随时翻邮件，需要一点毅力。",
         "gain": "124 名成年人，两周里同一批人前后对比（自身对照）。限制为每天查 3 次邮件的那周，日常压力明显低于不限次数那周（效果大小 Cohen's d = 0.37）。两周收到和回复的邮件数量并没有差别。一开始不加限制时，人们平均每天查邮件 15.5 次。",
         "note": "只有一项研究，效果中等偏小，量的是压力，不是干出来的活。即时消息没人直接研究过，这里只是照着推的。",
+        "source": "Kushlev & Dunn (2015). Checking email less frequently reduces stress. Computers in Human Behavior. <https://doi.org/10.1016/j.chb.2014.11.005>",
         "grade": "B",
         "meta": {
           "money": "0",
@@ -1702,6 +1791,7 @@ module.exports = {
         "cost": "不花钱。关上门，戴上耳机，或者挂一个「勿扰」牌。",
         "gain": "平均 2.8 秒的打断，会让按顺序一步步做的任务（序列任务）步骤出错率翻倍。4.4 秒的打断让它翻三倍。这是实验室里做的。另一项是对 24 名办公室白领（信息工作者）的现场观察。他们平均每 11 分钟切换一次工作主题。57% 的工作主题被打断。当天回到被打断的那件事上，平均要 25 分 26 秒。中间还插了 2.26 件别的事。还有一项 48 人的实验：被打断的人做得更快，但报告的压力、挫败感、时间压力和费劲程度都更高。",
         "note": "那项现场研究把打断分成两类：一类是别人来找你的，一类是自己点开的。关门只挡得住前一类。后一类要配合第 1 条（关掉非必要通知）和第 5 条（批量处理消息）一起用。",
+        "source": "Altmann, Trafton & Hambrick (2014). Momentary interruptions can derail the train of thought. Journal of Experimental Psychology: General. <https://doi.org/10.1037/a0030986>；Mark, Gonzalez & Harris (2005). No task left behind? Examining the nature of fragmented work. CHI 2005. <https://doi.org/10.1145/1054972.1055017>；Mark, Gudith & Klocke (2008). The cost of interrupted work: More speed and stress. CHI 2008. <https://doi.org/10.1145/1357054.1357072>",
         "grade": "B",
         "meta": {
           "money": "0",
@@ -1721,6 +1811,7 @@ module.exports = {
         "cost": "不花钱。开会时忍住不回消息，需要一点毅力。",
         "gain": "任务切换以后，反应明显更慢，也更容易出错。这部分来自多项研究的综述。另一项实验室研究的受试者是大学生。经常同时用好几种媒体的人（重度媒体多任务者）更容易被不相干的东西和不相干的记忆带跑。他们在任务切换测试上反而表现更差。",
         "note": "来回切换要多费多少，随干的活差别很大，这里不给统一数字。Ophir 那项是同一时间点的比较，分不清是「多任务让注意力变差」，还是「注意力差的人更爱多任务」。",
+        "source": "Monsell (2003). Task switching. Trends in Cognitive Sciences. <https://doi.org/10.1016/S1364-6613(03)00028-7>；Ophir, Nass & Wagner (2009). Cognitive control in media multitaskers. PNAS. <https://doi.org/10.1073/pnas.0903620106>",
         "grade": "B",
         "meta": {
           "money": "0",
@@ -1740,6 +1831,7 @@ module.exports = {
         "cost": "不花钱。睡前一小时放下手机，要长期对抗惯性，需要毅力。",
         "gain": "实验室里让同一批人两种条件轮着做（交叉试验）。睡前读发光的电子书，比读纸书入睡慢约 10 分钟（25.7 分钟对 15.8 分钟）。晚间褪黑素被压低 55%。第二天的生物钟（昼夜节律）推迟超过 1.5 小时，褪黑素开始分泌的时刻是 22:31 对 21:01。第二天早上更困，要更长时间才完全清醒。",
         "note": "人数少，是实验室里控好条件做的。按日常的手机亮度和使用时长，影响可能没这么大。手机的夜间模式管多大用，这项研究没测。",
+        "source": "Chang, Aeschbach, Duffy & Czeisler (2015). Evening use of light-emitting eReaders negatively affects sleep, circadian timing, and next-morning alertness. PNAS. <https://doi.org/10.1073/pnas.1418490112>",
         "grade": "B",
         "meta": {
           "money": "0",
@@ -1759,6 +1851,7 @@ module.exports = {
         "cost": "不花钱。难在长期对抗「再看一集」的惯性。手机不进卧室最省力。",
         "gain": "2025 年我国居民夜间平均睡眠 6.97 小时，平均入睡时间 0:10（中国睡眠研究会）。睡前用便携设备的人，睡不够的可能性约为 2.17 倍（OR 2.17）。睡眠质量差约 1.46 倍（OR 1.46）。白天犯困约 2.72 倍（OR 2.72）。设备只是放在卧室里、并不使用，数字也差不多，约 1.79、1.53、2.27 倍（OR 1.79/1.53/2.27）。这部分是把 20 项同一时间点的调查、125198 名儿童青少年合起来算的。另一项同一时间点的调查：844 名 18 到 94 岁成人中，关灯后仍用手机的人入睡更慢，躺在床上真正睡着的比例更低，白天更疲劳。",
         "note": "争议。熬夜本身的代价见本节第 3 条（每晚睡够 7 到 8 小时）。色情内容对普通人的精力和脑力有什么影响，目前没有可靠证据说得清是不是它造成的。一项把多项研究汇总起来的分析认为，所谓「色情问题」更多来自一个人的观念和自己的行为对不上，而不在内容本身。另一项研究汇总了 280 名男性的数据。结果是看的时长和跟伴侣性生活时的勃起功能没有关系。本条针对的只是它挤占睡眠时间。6.97 小时和 0:10 两个数，中国睡眠研究会官网没有挂出发布稿（2026 年 9 月查），以福建省卫健委转载的健康报报道为准。",
+        "source": "Carter et al. (2016). Association Between Portable Screen-Based Media Device Access or Use and Sleep Outcomes. JAMA Pediatrics. <https://doi.org/10.1001/jamapediatrics.2016.2341>；Exelmans & Van den Bulck (2016). Bedtime mobile phone use and sleep in adults. Social Science & Medicine. <https://doi.org/10.1016/j.socscimed.2015.11.037>；中国睡眠研究会 (2026). 2026 中国睡眠健康研究白皮书（福建省卫健委转载健康报报道）. <https://wjw.fujian.gov.cn/jggk/csxx/xcc/mtbd/202603/t20260323_7114382.htm>；Grubbs JB 等 (2018). Pornography Problems Due to Moral Incongruence: An Integrative Model with a Systematic Review and Meta-Analysis. Archives of Sexual Behavior. <https://doi.org/10.1007/s10508-018-1248-x>（备注里的争议方之一）；Prause N, Pfaus J (2015). Viewing Sexual Stimuli Associated with Greater Sexual Responsiveness, Not Erectile Dysfunction. Sexual Medicine. <https://doi.org/10.1002/sm2.58>（备注里的争议方之二）",
         "grade": "B",
         "meta": {
           "money": "0",
@@ -1778,6 +1871,7 @@ module.exports = {
         "cost": "不花钱。只是把事情推到睡醒之后再办。",
         "gain": "34 名健康人在 49.5 小时不睡之后，做爱荷华赌博任务。这是一种衡量风险决策的实验。休息充足时，他们能很快学会避开高风险选项。缺觉之后，反而更多地选高风险选项。年纪大的人受影响更大。这是一项实验，只有这一项研究。",
         "note": "研究的是连续两晚不睡的极端情况。普通人熬到凌晨两点会怎样，没有直接测过。「不发消息」那半是作者经验（C 级），第二天再发也不迟。",
+        "source": "Killgore, Balkin & Wesensten (2006). Impaired decision making following 49 h of sleep deprivation. Journal of Sleep Research. <https://doi.org/10.1111/j.1365-2869.2006.00487.x>",
         "grade": "B",
         "meta": {
           "money": "0",
@@ -1797,6 +1891,7 @@ module.exports = {
         "cost": "不花钱。花 10 分钟，再找一个能躺下或者趴着的地方。",
         "gain": "在前一晚没睡够之后，10 分钟的小睡能立刻改善困倦、疲劳、精力和脑力表现，一部分好处维持到 155 分钟以后。睡 5 分钟几乎没有好处。睡 20 分钟的好处要等 35 分钟以后才出现。睡 30 分钟以后先有一段睡眠惰性：刚醒那阵表现反而更差，之后才改善。",
         "note": "只有一项实验室研究，受试者都是健康年轻人。睡不着也不必勉强。闭着眼躺 10 分钟有没有用，没有研究支持。午睡睡过一小时反而和更高的死亡率、冠心病风险连在一起，见第 2 节第 37 条（午睡控制在半小时内）。",
+        "source": "Brooks & Lack (2006). A brief afternoon nap following nocturnal sleep restriction: Which nap duration is most recuperative? Sleep. <https://doi.org/10.1093/sleep/29.6.831>",
         "grade": "B",
         "meta": {
           "money": "0",
@@ -1816,6 +1911,7 @@ module.exports = {
         "cost": "耳塞几十元。预订安静的会议室要花点时间。",
         "gain": "让学生在模拟的开放式办公室里工作。背景噪音从 39 分贝升到 51 分贝（dB，LAeq）时，他们记住的词更少，自己评分更疲劳，也更不想干活。休息时看带声音的自然影片，比只听河流声或者办公室噪音，更能把精力评分拉回来。",
         "note": "只有一项实验室研究。噪音里最碍事的是能听清内容的说话声。白噪音耳机对这一点有帮助，但这项研究没测过耳机。",
+        "source": "Jahncke, Hygge, Halin, Green & Dimberg (2011). Open-plan office noise: Cognitive performance and restoration. Journal of Environmental Psychology. <https://doi.org/10.1016/j.jenvp.2011.07.002>",
         "grade": "B",
         "meta": {
           "money": "少",
@@ -1835,6 +1931,7 @@ module.exports = {
         "cost": "可能少拿一些加班费。也可能要花力气和上级谈。",
         "gain": "一战时期英国军工厂工人的产出记录：每周 49 小时以内，产出与工时成正比。超过 49 小时，产出的增速开始变慢。大约 63 小时达到最大。干 70 小时的产出与干 56 小时几乎没有差别，多干的 14 小时等于白干。",
         "note": "数据来自一百年前的工厂，干的是体力活，工人以女性为主。这道坎搬到脑力工作上不一定一样，作者自己也说别的工种可能更高或更低。可靠的是方向：过了某个点，再多干也几乎不多出活。49 这个具体数字不可靠。",
+        "source": "Pencavel (2015). The Productivity of Working Hours. The Economic Journal. <https://doi.org/10.1111/ecoj.12166>",
         "grade": "B",
         "meta": {
           "money": "少",
@@ -1854,6 +1951,7 @@ module.exports = {
         "cost": "不花钱。难在要先察觉自己正在反复回想（这叫反刍），察觉本身就要练。",
         "gain": "多项研究的综述说，反复回想同一件糟心事（反刍思维）会加重抑郁。它还会强化负面思考，削弱解决问题的能力。它会妨碍实际行动，还会把身边愿意听你说的人耗光。它与焦虑、暴食、酗酒、自伤相关。",
         "note": "综述只给了方向，没有数字。「换个活」是作者自己的做法。文献能撑住的只有一句：把注意力岔开，好过接着在原地绕。至于换成什么活，没人比较过。",
+        "source": "Nolen-Hoeksema, Wisco & Lyubomirsky (2008). Rethinking Rumination. Perspectives on Psychological Science. <https://doi.org/10.1111/j.1745-6924.2008.00088.x>",
         "grade": "B",
         "meta": {
           "money": "0",
@@ -1873,6 +1971,7 @@ module.exports = {
         "cost": "不花钱。难在把这种念头当成症状看，而不是当成事实。",
         "gain": "澳大利亚 2978 名 50 岁以上的双生子，平均跟踪 20 年，其间有 1068 人死亡。悲观量表每高 1 个标准差，同期死亡的风险高约 13%（风险比 1.134）。这个数字的可信范围是 95% CI 1.065–1.207，P=8.85×10⁻⁵。心血管死亡高约 20%（1.196，1.045–1.368，P=0.0093）。与癌症死亡无关。乐观得分与死亡率也没有明显关联。",
         "note": "争议。这只是观察，没有分组。有人会说「其实是先有病才悲观」，作者反驳说，真那样的话癌症死亡也该相关。但仍然可能有没测到的因素。乐观并没有保护作用，所以不必强迫自己「积极思考」。要做的是别把悲观预期当成对未来的准确预测。",
+        "source": "Whitfield JB, Zhu G, Landers JG, Martin NG (2020). Pessimism is associated with greater all-cause and cardiovascular mortality, but optimism is not protective. Scientific Reports, 10, 12609. <https://doi.org/10.1038/s41598-020-69388-y>",
         "grade": "B",
         "meta": {
           "money": "0",
@@ -1892,6 +1991,7 @@ module.exports = {
         "cost": "不花钱。短期内会有社交摩擦，可能失去一部分关系。开口拒绝需要相当的毅力。",
         "gain": "对 120 名 60 到 89 岁丧偶女性的调查：让人难受的来往和心理幸福感的关联，比让人舒服的来往更一致、也更强。按这个结果，一个消耗你的人造成的损失，大于一个支持你的人带来的好处。",
         "note": "受访人群特殊，而且是一次性问卷，看不出先后。量的是幸福感，不是精力。放在本节是作者的推断。哪些关系算「消耗」没有客观标准，只能自己判断。",
+        "source": "Rook (1984). The negative side of social interaction: Impact on psychological well-being. Journal of Personality and Social Psychology. <https://doi.org/10.1037/0022-3514.46.5.1097>",
         "grade": "C",
         "meta": {
           "money": "0",
@@ -1911,6 +2011,7 @@ module.exports = {
         "cost": "不花钱。当场要忍住不回嘴，转身走开，事后再决定要不要处理。这需要一点练习。",
         "gain": "把 306 组实验比较合起来算（荟萃分析）：换个角度解释发生的事（认知重评）对情绪的效果大小 d = 0.36。站到对方立场看 d = 0.45。转移注意 d = 0.27。硬压住感受无效（d = -0.04）。另有三项实验显示：惩罚冒犯者的人，事后反而更久地反复想对方；不惩罚的人更快「翻篇」。人们事先高估了报复带来的痛快。",
         "note": "汇总多项研究的那部分量的是情绪强度，不是精力，效果小到中等。报复那部分只有一组实验，所以定 B。「空船」是庄子《山木》里的寓言：空船撞过来不生气，船上有人才生气，可撞的是同一下。这是类比，不是证据。真有损失，就走第 8 节和第 9 节的法律路径，比当场发作便宜得多。",
+        "source": "Webb TL, Miles E, Sheeran P (2012). Dealing with feeling: A meta-analysis of the effectiveness of strategies derived from the process model of emotion regulation. Psychological Bulletin. <https://doi.org/10.1037/a0027600>；Carlsmith KM, Wilson TD, Gilbert DT (2008). The paradoxical consequences of revenge. Journal of Personality and Social Psychology. <https://doi.org/10.1037/a0012165>",
         "grade": "B",
         "meta": {
           "money": "0",
@@ -1930,6 +2031,7 @@ module.exports = {
         "cost": "不花钱，或者花很少。每周几次快走、慢跑或者力量训练。白天出门晒太阳。作息固定下来。想不开时打一个电话。",
         "gain": "把 218 项随机分组的对照试验、14170 人合起来算（网络荟萃分析）。对照组是同样在做别的活动的人。和他们相比，步行或慢跑对抑郁的效果大小 g = -0.62（95% 可信区间 -0.80 到 -0.45）。瑜伽 -0.55，力量训练 -0.49。强度越大效果越好。把多项光照治疗研究合起来算：季节性抑郁效果大小 0.84（0.60 到 1.08），非季节性抑郁 0.53（0.18 到 0.89）。还有一项分析，把各项研究逐个病人的数据合起来算。它看的是互联网认知行为疗法（网上自助课程）。有人指导和无人指导，都比对照组好。中重度（PHQ-9 大于 9 分）的时候，有人指导的更好。12356 是全国心理援助热线，每日开通不少于 18 小时。",
         "note": "这些都是轻中度抑郁的辅助手段。中重度、有自杀念头的要去就医，先打 12356（见第 1 节第 25 条）。运动试验大多人数少，又没法像试药那样瞒住谁在运动。光照研究只到 2003 年，人数也少。「按时睡」「找人说」是作者经验，没有单列文献。别把「动起来」当成对抑郁者的要求，能走十分钟就算数。",
+        "source": "Noetel M 等 (2024). Effect of exercise for depression: systematic review and network meta-analysis of randomised controlled trials. BMJ. <https://doi.org/10.1136/bmj-2023-075847>；Golden RN 等 (2005). The efficacy of light therapy in the treatment of mood disorders: a review and meta-analysis of the evidence. American Journal of Psychiatry. <https://doi.org/10.1176/appi.ajp.162.4.656>；Karyotaki E 等 (2021). Internet-Based Cognitive Behavioral Therapy for Depression: A Systematic Review and Individual Patient Data Network Meta-analysis. JAMA Psychiatry. <https://doi.org/10.1001/jamapsychiatry.2020.4364>；国家卫生健康委 (2024). 关于应用\"12356\"全国统一心理援助热线电话号码的通知（国卫医政函〔2024〕259 号）. <https://www.gov.cn/zhengce/zhengceku/202412/content_6994470.htm>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -1949,6 +2051,7 @@ module.exports = {
         "cost": "不花钱。改的是你的预期和动作顺序。第一次要忍住「把道理讲到对方认同」的冲动。",
         "gain": "把和机构打交道的动作换一换：从「求人、生气、反复复述委屈」，换成「拿文书、记期限、按渠道申诉」。省下的是重复沟通和反复回想的时间。这属于一次性的观念调整，不是每天都省时间。能拿来核对的是这些期限本身，它们都写在文件里。治安案件从受理那天算起，办案期限不超过 30 日；案情重大复杂的，经上一级公安机关批准可以延长 30 日。有控告人的案件决定不予立案的，不予立案通知书要在 3 日以内送达。控告人 7 日以内可以申请复议，公安机关 30 日以内作出决定。不服的，再 7 日以内向上一级申请复核。",
         "note": "定 C 的理由：「很多人把窗口后面的人当成一个角色、不当成上班的人」这个判断本身没有文献可引。能引的只有规则那一半：期限、文书和救济渠道都是明文的。本条引的数字全部来自第 8 节第 39 条（报警之后的流程）那两份公安部规章。按流程走管不了「对方态度差」，也不保证一定办成，改的只是你的预期和第一步动作。银行柜员、政务窗口也一样：他们操作留痕、要复核、出错要追责。所以该做的是留凭条、要回单、按渠道投诉，别凭「他会不会坑我」瞎猜。合法的优先级都写在明处，比如急诊按病情分级，不按先来后到（第 24 节第 7 条，急诊预检分诊）。想谢救过你的医生，就走感谢信和满意度评价，见第 24 节第 11 条。想「送点东西让人家多上点心」，对办案执法的人就是行贿罪，而且是明文从重的，见第 8 节第 40 条。遇到明显的区别对待，该投诉就投诉，别当成潜规则去模仿。",
+        "source": "公安部 (2020). 公安机关办理刑事案件程序规定（公安部令第 159 号修正后，第一百七十一、一百七十八、一百七十九条）. <http://www.gov.cn/gongbao/content/2020/content_5549884.htm>；公安部 (2013/2019 修正). 公安机关办理行政案件程序规定（公安部令第 125 号、第 149 号）. <http://www.gov.cn/gongbao/content/2013/content_2321117.htm>",
         "grade": "C",
         "meta": {
           "money": "0",
@@ -1968,6 +2071,7 @@ module.exports = {
         "cost": "不花钱。给应用设限时，或者把账号停掉，都是几分钟的事。难的是之后不再打开，要长期对抗惯性。",
         "gain": "把多项研究合起来算（荟萃分析）：54 个独立样本、94 个效应量、N = 36,583，用的是三层随机效应模型。网上向上社会比较与心理适应不良的平均相关 r = 0.330（95% CI 0.289–0.370，可信范围）。按具体结果分开看。怕被人看轻这类社会评价性的负面情绪 0.438，焦虑 0.382。抑郁 0.306，幸福感偏低 0.268，自尊偏低 0.263。年龄、文化背景、数据采集年份都不影响这个关联的强弱。长期跟踪的研究得出的结果，也不比同一时间点的调查更强。另有一项随机分组的对照试验，受试者是 2,743 名美国 Facebook 用户。其中 61% 的人愿意以低于 102 美元接受停用。这些人被随机分为停用四周组与对照组。停用为普通受试者每天空出 60 分钟。主观幸福感指数提高 0.09 个标准差。分项是生活满意度 0.12、焦虑 0.10、抑郁 0.09、快乐 0.08。把多次比较碰巧的成分扣掉后，这些仍然算数。作者给了一个参照，是让人变积极的心理干预。这类干预对主观幸福感约 +0.34 个标准差，对抑郁约 -0.23 个标准差。所以这个效应约为常规心理干预的 25% 到 40%。同期的代价是：时事知识指数下降 0.19 个标准差，政治立场对立程度下降 0.16 个标准差。实验结束后，停用组的 Facebook 使用仍比对照低 12 分钟/天（0.31 个标准差，降幅 23%）。还有一项随机分组的对照试验，受试者是 143 名本科生，被随机分成两组。一组把 Facebook、Instagram、Snapchat 每个平台每天限 10 分钟，另一组照常使用。三周后，限时组的孤独与抑郁明显下降。两组的焦虑与错失恐惧都比一开始低。",
         "note": "「相关」那一半只说明两件事一起出现，不能读成谁导致谁，作者自己也说还需要更多长期跟踪的研究。随机分组那一半能说因果，但受试者是 2018 年美国中期选举前的 Facebook 用户，搬到中国的平台上属于硬套。Hunt 那项只有 143 名本科生，而且就这一项。效应量都不大，别指望关掉应用就能解决情绪问题。要拦的是「看别人过得怎么样」这一类使用，和家人朋友联系、查信息、找工作不在内。真按不住，就先从关推送、关「可能认识的人」和首页推荐入手。总屏幕时间的账见第 4 节第 15、16 条（短视频硬上限、不看滚动新闻）。情绪低落时先做什么，见本节第 18 条（动起来、晒太阳、按时睡）。靠买东西找回身份感见第 6 节第 23 条。为了「往上挪一档」多花钱见第 6 节第 24 条。",
+        "source": "Lei Y, Hu S, Sun Y, Zheng L (2026). \"Looking up\" linked to feeling down: a meta-analysis of online upward social comparison and psychological maladjustment. Frontiers in Psychology. <https://doi.org/10.3389/fpsyg.2026.1825169>；Allcott H, Braghieri L, Eichmeyer S, Gentzkow M (2020). The Welfare Effects of Social Media. American Economic Review, 110(3), 629–676. <https://doi.org/10.1257/aer.20190658>；Allcott H, Braghieri L, Eichmeyer S, Gentzkow M (2019). The Welfare Effects of Social Media. NBER Working Paper No. 25514（本条引用的具体数字按这一版逐字核对，刊出版的摘要不含数字）. <https://www.nber.org/papers/w25514>；Hunt MG, Marx R, Lipson C, Young J (2018). No More FOMO: Limiting Social Media Decreases Loneliness and Depression. Journal of Social and Clinical Psychology, 37(10), 751–768. <https://doi.org/10.1521/jscp.2018.37.10.751>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -1987,6 +2091,7 @@ module.exports = {
         "cost": "不花钱。只是在紧张的时候多问自己一句：他们真的看见了吗。",
         "gain": "实验一：让参与者穿上印有 Barry Manilow 头像的 T 恤，走进有其他参与者的房间。穿的人平均估计 46% 的旁观者能正确指出衣服上的人是谁。旁观者实际正确率 23%，估计值恰为实际值的两倍。逐场把估计值减去实际值，平均高估 23 个百分点（95% CI 9–38，可信范围）。剔除只有两名和三名旁观者的那两场之后，为 27 个百分点（11–43）。实验二：改穿参与者自选的、自认为正面的 T 恤。平均估计 48%，旁观者实际正确率 8%，为六倍。另一系列研究有三种场景：陌生人配对交谈、大学新生室友、成人工作坊。结果是人们系统性低估交谈对象对自己的喜欢程度，也低估对方对这次交谈的享受程度。作者称之为「喜欢差」。不同长度的交谈中都存在，在新生室友之间持续数月。",
         "note": "定 B 的理由：都是人数不多的实验室与校园研究，场景是穿衣服和跟陌生人聊天。搬到「被同事议论」「在会上说错话」上，没有直接证据。这些数字只说明高估的方向和大致倍数，没法当系数套。别人的看法也不是都不重要。真正在评价你的场合，比如面试、答辩、考核、体检报告，评价是实打实的，该准备就准备。要打折的只是日常里那种「所有人都在看我」的感觉，那部分要对付的是你自己的估计偏差。",
+        "source": "Gilovich T, Medvec VH, Savitsky K (2000). The spotlight effect in social judgment: An egocentric bias in estimates of the salience of one's own actions and appearance. Journal of Personality and Social Psychology, 78(2), 211–222. <https://doi.org/10.1037/0022-3514.78.2.211>；Boothby EJ, Cooney G, Sandstrom GM, Clark MS (2018). The Liking Gap in Conversations: Do People Like Us More Than We Think? Psychological Science, 29(11), 1742–1756. <https://doi.org/10.1177/0956797618783714>",
         "grade": "B",
         "meta": {
           "money": "0",
@@ -2006,6 +2111,7 @@ module.exports = {
         "cost": "不花钱。难的是把这种念头当成需要处理的东西，而不是当成对别人真实要求的准确测量。",
         "gain": "把多项研究合起来算（荟萃分析）：45 项研究、N = 11,747，人群为本科生、医学生、社区成人与精神科患者，用的是随机效应模型。下面是与自杀念头的加权平均相关。完美主义担忧 r = .28（95% CI .24–.32，可信范围；42 项研究、7,936 人）。完美主义担忧是一个合集，包括社会规定型完美主义、在意犯错、对行动的怀疑、现实与标准的落差等。其中社会规定型完美主义单独算，也是 r = .28（.25–.32，30 项研究、3,640 人）。完美主义追求 r = .10（.07–.13，31 项研究、4,588 人），它是自我导向的完美主义与个人标准的合集。父母批评 r = .20（.11–.29）。再看与自杀未遂的关系。完美主义担忧 r = .12（.07–.17，15 项研究、5,275 人）。社会规定型完美主义 r = .19（.08–.29，8 项研究、689 人）。跟踪一段时间的那部分：把一开始就有的自杀念头扣除后，社会规定型完美主义仍与后来随访时的自杀念头同向变化，幅度不大。自我导向与他人导向的完美主义都看不出关联。",
         "note": "定 B 的理由：纳入的研究多数是一次性问卷，看不出先后。相关强度中等（r 约 .28），大致只解释几个到一成的差异。量的是自杀念头和自杀未遂，不是死亡本身，所以收益量级按「只有替代终点」记小。作者自己也说，完美主义担忧与自杀未遂这一组像是有发表偏倚。发表偏倚指结果不好看的研究没被发出来。把估算的缺失研究补回去后，结论方向不变。高标准本身不是问题，也不必因此降低要求。区别在于标准从哪来，以及达不到时会不会觉得「我这个人就完了」。它和第 15 条（把「事情肯定会更糟」这类念头当症状看）里的悲观预期一样，是可以当症状处理的东西。有自杀念头先打 12356、把致死手段挪远，见第 1 节第 25 条。身边人流露出这种念头时你能做什么，见第 8 节第 15 条。孩子的抑郁筛查见第 30 节第 8 条。",
+        "source": "Smith MM, Sherry SB, Chen S, Saklofske DH, Mushquash C, Flett GL, Hewitt PL (2018). The perniciousness of perfectionism: A meta-analytic review of the perfectionism-suicide relationship. Journal of Personality, 86(3), 522–542. <https://doi.org/10.1111/jopy.12333>",
         "grade": "B",
         "meta": {
           "money": "0",
@@ -2025,6 +2131,7 @@ module.exports = {
         "cost": "不花钱。气头上改做几分钟让心跳慢下来的事：慢慢呼吸，坐下来，静一静。难在当时最想做的恰恰是发泄。",
         "gain": "把 154 项研究合起来算（荟萃分析），共 184 组样本、10,189 人。让身体平静下来的办法，比如深呼吸、正念、冥想，能降低怒气和攻击性。效果大小 g = -0.63，95% CI -0.82 到 -0.43（可信范围）。这个结果在不同性别、种族、年龄和文化的人里都稳定。让身体更兴奋的办法，比如打沙袋、慢跑、骑车，整体无效。它的效果大小 g = -0.02，95% CI -0.13 到 0.09。作者的结论是：发泄怒气、去跑一圈，都不是管用的消气办法。",
         "note": "量的是怒气和攻击性，不是精力。口径记成时间，是作者的归类：少吵一架，就少收拾一次残局。当场能用的办法见第 22 节第 8 条（循环叹息），还有本节第 17 条（生气时先离场）。跑步不是没用。长期看，它对情绪低落有效，见第 22 节第 6 条（心情差就去走或者跑）。它只是不适合拿来当场消气。气头上别开车，别发消息，别做决定。如果是有人在打你，先离开、报警。那时要处理的不是你的情绪，见第 8 节第 43 条（被家暴了）。",
+        "source": "Kjærvik SL, Bushman BJ (2024). A meta-analytic review of anger management activities that increase or decrease arousal: What fuels or douses rage? Clinical Psychology Review. <https://doi.org/10.1016/j.cpr.2024.102414>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -2044,6 +2151,7 @@ module.exports = {
         "cost": "不花钱。研究里常见的做法是写 3 到 4 次，每次 15 到 20 分钟。写一件让你难受的事，写你最深的想法和感受。",
         "gain": "一项分析汇总了 146 项随机分组的研究（荟萃分析）。研究里的人把对自己重要的事写下来或者说出来。平均效果是正的，也显著，但很小，效果大小 r = .075。另一项汇总只收随机对照试验，30 项试验合起来算，身体健康和心理健康两方面都没有显著效果。针对癌症病人和康复者的 16 项随机试验合起来算，心理、身体、生活质量三方面都不显著。其中心理方面 g = 0.04，95% CI -0.06 到 0.14（可信范围）。",
         "note": "争议。支持的一方是 146 项研究的汇总，效果为正但很小。反对的一方是两项只收随机对照试验的汇总，都没算出显著效果。成本栏里写几次、每次多久，来自最早的实验设计，Mogk 那篇汇总的摘要里写了。它几乎不花钱，也不花多少时间，一个人就能做。不想找人说、身边也没人可说的时候，可以用它。量的不是精力，口径记成时间是作者的归类。写着写着越来越难受，就停下，改打 12356，见第 1 节第 25 条（12356）。",
+        "source": "Frattaroli J (2006). Experimental disclosure and its moderators: a meta-analysis. Psychological Bulletin. <https://doi.org/10.1037/0033-2909.132.6.823>；Mogk C, Otte S, Reinhold-Hurley B, Kröner-Herwig B (2006). Health effects of expressive writing on stressful or traumatic experiences - a meta-analysis. Psycho-Social Medicine. <https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2736499/>；Zachariae R, O'Toole MS (2015). The effect of expressive writing intervention on psychological and physical health outcomes in cancer patients--a systematic review and meta-analysis. Psycho-Oncology. <https://doi.org/10.1002/pon.3802>",
         "grade": "B",
         "meta": {
           "money": "0",
@@ -2065,6 +2173,7 @@ module.exports = {
         "cost": "不花钱。每件事花 1 到 2 分钟，写一句「如果……就……」。比如「周二早 8 点坐到书桌前就先写引言」。",
         "gain": "把 94 项独立检验合起来算，先把打算写成「如果……就……」的人，目标达成率更高。这种写法在心理学里叫实施意图。效果大小 d = 0.65，算中到大。管用的环节有三个：开始动手、被打扰的时候顶住、从注定做不成的事上撤出来。",
         "note": "这招只对你自己真想做的事有效。目标本身你就不想要，写再多句也没用。另外，这些研究找的多是学生，看的多是健康方面的习惯，搬到工作场景不一定同样管用。",
+        "source": "Gollwitzer, P. M., & Sheeran, P. (2006). Implementation intentions and goal achievement: A meta-analysis of effects and processes. Advances in Experimental Social Psychology, 38, 69–119. <https://doi.org/10.1016/S0065-2601(06)38002-1>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -2084,6 +2193,7 @@ module.exports = {
         "cost": "不花钱。开工的时候花 5 分钟，写清「到某月某日没达到某个指标就停」。难在到了那天要认账，当着人停手有点丢面子。",
         "gain": "把多项实施意图研究合起来算，结果是：事先定好的「如果……就……」，同样能帮人从注定做不成的事上撤出来。原文的说法是 disengagement from failing courses of action。省下的时间，就是你本来还会继续投进去的那些。",
         "note": "退出条件要在刚开工、情绪还冷静的时候定。事后再定会被已经投进去的成本带偏。判断时只看未来投入和未来回报，见第 3 条。另外，「肯撤出」只是多项研究汇总里的一个分项结论，没有人单独算过它能省下多少时间。",
+        "source": "Gollwitzer, P. M., & Sheeran, P. (2006). Implementation intentions and goal achievement: A meta-analysis of effects and processes. Advances in Experimental Social Psychology, 38, 69–119. <https://doi.org/10.1016/S0065-2601(06)38002-1>",
         "grade": "B",
         "meta": {
           "money": "0",
@@ -2103,6 +2213,7 @@ module.exports = {
         "cost": "不花钱。难在要接受一件事：之前投进去的时间已经没了，拿不回来。",
         "gain": "已经投入的钱、精力和时间，会让人更想继续做下去。这在心理学里叫沉没成本效应。把 98 组数据合起来算，分析确认这种倾向稳定存在。避开这种倾向，就不会为了「不想浪费」继续往里投时间。",
         "note": "Arkes 和 Blumer 那项剧院实验是这样做的。俄亥俄大学剧院卖季票，随机给买票的人原价 15 美元、便宜 2 美元、便宜 7 美元三种价。前半季，原价那组平均看了 4.11 场，另两组是 3.32 和 3.29 场。后半季三组就没有明显差别了。Roth 等人发现，这种影响会随时间变淡，年纪大的人受影响更小。",
+        "source": "Arkes, H. R., & Blumer, C. (1985). The psychology of sunk cost. Organizational Behavior and Human Decision Processes, 35, 124–140. <https://doi.org/10.1016/0749-5978(85)90049-4>；Roth, S., Robbert, T., & Straus, L. (2015). On the sunk-cost effect in economic decision-making: A meta-analytic review. Business Research, 8(1), 99–138. <https://doi.org/10.1007/s40685-014-0014-8>",
         "grade": "B",
         "meta": {
           "money": "0",
@@ -2122,6 +2233,7 @@ module.exports = {
         "cost": "不花钱。估之前花几分钟，翻一下上次同类的事实际做了多久。",
         "gain": "学生预计 33.9 天完成论文，实际用了 55.5 天。只有 29.7% 的人按自己的估计按时完成。研究者要求另一组人先把过去的经历和眼下这件事挂上钩，再去估。这一组按时完成的比例，从对照组的 29.3% 升到 60.0%。把工期往少了估的那种乐观，在这一组身上不再出现。",
         "note": "Buehler 那项只找了加拿大大学生，是单独一项研究，人也少，37 人和每组约 40 人。照同类项目的历史数据来估，这种做法叫参考类预测，工程上具体怎么做见 Flyvbjerg。Halkjelsvik 汇总多项研究后指出，估少比估多更常见，但差多少随任务和研究方法变化很大。",
+        "source": "Buehler, R., Griffin, D., & Ross, M. (1994). Exploring the \"planning fallacy\": Why people underestimate their task completion times. Journal of Personality and Social Psychology, 67(3), 366–381. <https://doi.org/10.1037/0022-3514.67.3.366>；Flyvbjerg, B. (2006). From Nobel Prize to project management: Getting risks right. Project Management Journal, 37(3), 5–15. <https://doi.org/10.1177/875697280603700302>；Halkjelsvik, T., & Jørgensen, M. (2012). From origami to software development: A review of studies on judgment-based predictions of performance time. Psychological Bulletin, 138(2), 238–271. <https://doi.org/10.1037/a0025996>",
         "grade": "B",
         "meta": {
           "money": "0",
@@ -2141,6 +2253,7 @@ module.exports = {
         "cost": "不花钱。组织者会前花 5 到 10 分钟写一份议程。站着开会要参会者配合。",
         "gain": "两项调查分别有 958 人和 292 人。结果是：会前发了议程的会，参会者更容易觉得这个会有效果，这个关系在统计上站得住。另一项实验里 55 组坐着开会，56 组站着开会，坐着开的时长多 34%。两种开法做出的决定，质量没有差别。",
         "note": "站会那项实验做的是 5 人小组在实验室里的任务。长会和大型会议不能照搬这个结论。Leach 测的是参会者自己觉得效果如何，不是实际干出了多少活。",
+        "source": "Leach, D. J., Rogelberg, S. G., Warr, P. B., & Burnfield, J. L. (2009). Perceived meeting effectiveness: The role of design characteristics. Journal of Business and Psychology, 24(1), 65–76. <https://doi.org/10.1007/s10869-009-9092-6>；Bluedorn, A. C., Turban, D. B., & Love, M. S. (1999). The effects of stand-up and sit-down meeting formats on meeting outcomes. Journal of Applied Psychology, 84(2). <https://doi.org/10.1037/0021-9010.84.2.277>",
         "grade": "B",
         "meta": {
           "money": "0",
@@ -2160,6 +2273,7 @@ module.exports = {
         "cost": "不花钱。要同事和上级配合。难在写清楚一段文字，比张嘴说一句费精力。",
         "gain": "两项调查找的是每周工作 35 小时以上的员工，分别有 676 人和 304 人。开会占掉多少时间，对工作态度和幸福感的影响不是固定的，要看两件事：会开得好不好，这个岗位干活有多依赖别人。另一项研究让人连记一周日记，结果是当天开会次数越多，疲劳和自己感觉到的工作量越高。省下的时间，等于你砍掉的会议时长本身。",
         "note": "争议：Rogelberg 2006 发现，会议多少和幸福感之间不是一边倒。工作上高度依赖别人的岗位，会议多反而不算坏事。另外，没有研究把「改用文字异步沟通」和开会直接比过，这条是作者自己的推论。",
+        "source": "Rogelberg, S. G., Leach, D. J., Warr, P. B., & Burnfield, J. L. (2006). \"Not another meeting!\" Are meeting time demands related to employee well-being? Journal of Applied Psychology, 91(1). <https://doi.org/10.1037/0021-9010.91.1.83>；Luong, A., & Rogelberg, S. G. (2005). Meetings and more meetings: The relationship between meeting load and the daily well-being of employees. Group Dynamics: Theory, Research, and Practice, 9(1). <https://doi.org/10.1037/1089-2699.9.1.58>",
         "grade": "B",
         "meta": {
           "money": "0",
@@ -2179,6 +2293,7 @@ module.exports = {
         "cost": "不花钱。拆分本身花 5 到 15 分钟。",
         "gain": "人们估工期时，不会自己把一件有好几头的任务拆成几块。比如写文献综述、写讨论、整理参考文献，这本来就是几件事。先把子任务列出来再估，能少犯把工期估短的毛病，这个毛病叫规划谬误。拆开之后，每一小步都成了一个可以立刻开始的动作，拖延也跟着变少。研究里最能预示拖延的因素，包括对这件事的厌恶感，以及任务本身被往后推。",
         "note": "拆到什么程度合适：以「每个子任务能在一次坐下来的时间里做完」为准，拆得过细本身也耗时间。另外，Kruger 和 Evans 那项只从摘要核实到方向，具体百分比没核到原文。",
+        "source": "Kruger, J., & Evans, M. (2004). If you don't want to be late, enumerate: Unpacking reduces the planning fallacy. Journal of Experimental Social Psychology, 40(5), 586–598. <https://doi.org/10.1016/j.jesp.2003.11.001>；Steel, P. (2007). The nature of procrastination: A meta-analytic and theoretical review of quintessential self-regulatory failure. Psychological Bulletin, 133(1). <https://doi.org/10.1037/0033-2909.133.1.65>",
         "grade": "B",
         "meta": {
           "money": "0",
@@ -2198,6 +2313,7 @@ module.exports = {
         "cost": "不花钱。难在定了就要认，到了那天不当回事就等于没定。",
         "gain": "有外部截止日期的学生，80.6% 在截止前完成。而在自己预计的时间内完成的，只有 38.7%。什么时候做完，几乎跟着截止日期走，相关系数 r = 0.82，这个数越接近 1 说明跟得越紧。和自己的预计只有很弱的关系。",
         "note": "把自己定的日期告诉别人，它就更接近别人定的那一种。要说明的是，研究验证的是别人定的截止日期管用。自己给自己定的那种，比如时间盒、番茄钟，没人直接测过，这里是照着推的。",
+        "source": "Buehler, R., Griffin, D., & Ross, M. (1994). Exploring the \"planning fallacy\": Why people underestimate their task completion times. Journal of Personality and Social Psychology, 67(3), 366–381. <https://doi.org/10.1037/0022-3514.67.3.366>",
         "grade": "B",
         "meta": {
           "money": "0",
@@ -2217,6 +2333,7 @@ module.exports = {
         "cost": "不花钱。改的只是判断方向：先问这件事哪里让你难受，再想办法。",
         "gain": "一份汇总了 691 个相关系数的荟萃分析发现，和拖延关系强而稳定的有几样：任务让人厌恶的程度、离截止还有多远、自我效能感（觉得自己做得成）、冲动性，以及尽责性和它下面的自控、易分心、条理性、成就动机。而神经质、叛逆、寻求刺激和拖延只有很弱的关联。作者用时间动机理论来解释这组结果：一件事现在的吸引力，随着回报变远而快速变小。",
         "note": "收益量级记「中」，因为这些研究只指出方向，没有量过能省下多少小时。具体动作在本节第 1 条（写成「几点、在哪、遇到什么就做什么」）、第 7 条（把大任务拆成子任务）、第 8 条（给没有外部截止的事定一个日期）。这些是相关研究的汇总，看不出谁导致谁。",
+        "source": "Steel P (2007). The nature of procrastination: a meta-analytic and theoretical review of quintessential self-regulatory failure. Psychological Bulletin, 133(1), 65–94. <https://doi.org/10.1037/0033-2909.133.1.65>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -2236,6 +2353,7 @@ module.exports = {
         "cost": "不花钱，一次几分钟。把手机放到另一个房间，把书和电脑摊在桌上。",
         "gain": "一份纳入 24 项随机试验的 Cochrane 综述。把食物放得更远，吃掉的量下降，标准化均数差 −0.60（95% CI −0.84 到 −0.36，这是可信范围；12 项研究、1098 人，低确定性证据），属于中等效应。把可选项减少，选择该食物的下降更明显，标准化均数差 −1.13（95% CI −1.90 到 −0.37，3 项研究、154 人，低确定性证据）。回归分析显示：放得越远、可选项越单一，效果越强。",
         "note": "定 B 级的理由：这份综述收进来的 24 项研究全部是食物，酒和烟一项都没有；14 项在实验室做，全部来自高收入国家。所以「挪远就少碰」搬到手机和游戏上属于顺推，没有直接试验。把手机放到视线之外这一件事有人直接测过，见第 3 节第 1 条（关掉非必要通知，工作时把手机放到视线之外）。",
+        "source": "Hollands GJ, Carter P, Anwer S, et al. (2019). Altering the availability or proximity of food, alcohol, and tobacco products to change their selection and consumption. Cochrane Database of Systematic Reviews, 9, CD012573. <https://doi.org/10.1002/14651858.CD012573.pub3>",
         "grade": "B",
         "meta": {
           "money": "0",
@@ -2255,6 +2373,7 @@ module.exports = {
         "cost": "押金式的方案要先拿出一笔自己的钱，做不到就没收。试验里押的是 150 美元。",
         "gain": "美国一项 2538 人的随机试验，把员工和他们的亲友随机分到四种激励方案或常规照护。奖励型（做到给约 800 美元）的接受率 90.0%，押金型（先交 150 美元，另加 650 美元奖励）13.7%。六个月的持续戒烟率：四种激励方案在 9.4% 到 16.0% 之间，常规照护 6.0%。奖励型 15.7%，押金型 10.2%。但在只算「两种都肯参加」的那 13.7% 的人里，押金型的六个月戒烟率比奖励型高 13.2 个百分点（95% CI 3.1 到 22.8，这是可信范围）。",
         "note": "这个试验测的是戒烟，搬到写论文、健身这类事上属于顺推，所以收益量级记「中」。选方案时先看自己会不会真的用它。多数人不肯接受的办法，效果再强，对这些人也没有用。所以先挑你肯接受的那种，押小一点也比不押强。戒烟本身怎么戒见第 2 节第 3 条（戒烟药）。",
+        "source": "Halpern SD, French B, Small DS, et al. (2015). Randomized trial of four financial-incentive programs for smoking cessation. New England Journal of Medicine, 372(22), 2108–2117. <https://doi.org/10.1056/NEJMoa1414293>",
         "grade": "A",
         "meta": {
           "money": "少",
@@ -2274,6 +2393,7 @@ module.exports = {
         "cost": "不花钱。要的是在同一个场景下每天重复同一个动作，持续几个月。",
         "gain": "96 名志愿者各挑一个吃、喝或者活动方面的动作，在固定场景下（比如「早饭后」）每天做，持续 12 周，每天给自己的自动化程度打分。82 人的数据够用来分析，模型在 62 人身上拟合成功。达到各自自动化上限 95% 所需的天数，范围是 18 天到 254 天。研究还发现，漏掉一次执行机会对习惯养成过程没有实质影响。",
         "note": "只有这一项研究，96 人，做的都是简单动作（比如饭后吃一份水果）。复杂的事要多久，比如每周跑三次、每天写作，没人测过。所以两周后还很费劲，不能当成失败的证据。要让重复真的发生，把动作绑在一个固定场景上，见本节第 1 条（写成「几点、在哪、遇到什么就做什么」）。",
+        "source": "Lally P, van Jaarsveld CHM, Potts HWW, Wardle J (2010). How are habits formed: Modelling habit formation in the real world. European Journal of Social Psychology, 40(6), 998–1009. <https://doi.org/10.1002/ejsp.674>",
         "grade": "B",
         "meta": {
           "money": "0",
@@ -2293,6 +2413,7 @@ module.exports = {
         "cost": "一本自助书几十元，有的免费。要投入十周左右，每周读一节、做一次练习。",
         "gain": "150 人随机分成三组：有治疗师指导的自助、无指导的自助、等待名单对照。十周后，纯拖延量表上的组间效应量，有指导组 d = 0.70（95% CI 0.29–1.10，这是可信范围），无指导组 d = 0.50（0.10–0.90）；非理性拖延量表上分别是 0.81（0.40–1.22）和 0.69（0.29–1.09）。达到临床意义改善的比例：有指导组 31.3% 到 40.0%，无指导组 24.0% 到 36.0%。两组在任何一项结果上都没有显著差别。",
         "note": "受试者是瑞典成年人，用的是瑞典语材料，中文里没有现成的同一套，所以收益量级记「中」。材料里的成分就是常见那几样：行为激活、行为实验、刺激控制、关于动机和工作方法的讲解。刺激控制那一样在本节第 10 条（把不想碰的挪远）。拖延同时伴着明显的情绪低落或者焦虑，先按第 3 节第 18 条（动起来、晒太阳、按时睡、找人说、打 12356）来。",
+        "source": "Rozental A, Forsell E, Svensson A, Andersson G, Carlbring P (2015). Internet-based cognitive-behavior therapy for procrastination: A randomized controlled trial. Journal of Consulting and Clinical Psychology, 83(4), 808–824. <https://doi.org/10.1037/ccp0000023>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -2312,6 +2433,7 @@ module.exports = {
         "cost": "要花一笔外包的钱，多少看你买的是什么服务。另外要先花一次时间，把自己的时薪算清楚。",
         "gain": "中国居民做家务每天平均 1 小时 17 分钟。只算做了家务的人，平均 1 小时 59 分钟。这是 2024 年的调查，覆盖 3.85 万户、10.7 万人。另一项研究取了四个国家 6271 人的样本，花钱买时间的人生活满意度更高。研究者还在真实生活里做了实验：同一笔钱，花在买时间上比买实物带来更高的当下幸福感。",
         "note": "先算时薪，算法是一个月税后收入 ÷ 一个月实际工作小时。再看这项家务外包要多少钱。外包单价低于你的时薪，而且省下的时间你确实会用在挣钱或者休息上，就外包。每个人的时薪和外包价都不同，结论要自己算。另外，Whillans 测的是花钱买时间之后人开不开心，不是省下了多少小时。",
+        "source": "Whillans, A. V., Dunn, E. W., Smeets, P., Bekkers, R., & Norton, M. I. (2017). Buying time promotes happiness. Proceedings of the National Academy of Sciences. <https://doi.org/10.1073/pnas.1706541114>；国家统计局 (2024). 第三次全国时间利用调查公报（第二号）. <https://www.stats.gov.cn/sj/zxfb/202410/t20241031_1957216.html>",
         "grade": "B",
         "meta": {
           "money": "多",
@@ -2331,6 +2453,7 @@ module.exports = {
         "cost": "不花钱。动作只要几分钟：关掉推送，删掉应用，或者给应用设一个每天的时间上限。难在管住手，忍住不点开。",
         "gain": "中国居民上网每天平均 5 小时 37 分钟。只算当天真上了网的人，平均 6 小时 3 分钟。当天用过网的人占 92.9%。这些是 2024 年的数字。2018 年按同样算法只有 2 小时 42 分钟。这是本节里数字最大的一项。每天砍掉其中一小时，等于每年多出 365 小时。另据中国互联网络信息中心，到 2025 年 6 月，网民平均每周上网 30.6 小时，比半年前多 1.9 小时。短视频用户有 10.68 亿人，占网民的 95.1%。",
         "note": "上网时间里包含工作、学习和社交，不全是浪费。定成 C 级，是因为没有研究算过「限制之后省回多少、这些时间又用到了哪里」，手上只有总量统计。其中「刷别人过得怎么样」这一类，有随机试验测过省回多少、情绪变了多少，见第 3 节第 20 条。",
+        "source": "国家统计局 (2024). 第三次全国时间利用调查公报（第二号）. <https://www.stats.gov.cn/sj/zxfb/202410/t20241031_1957216.html>；国家统计局 (2019). 2018年全国时间利用调查公报. <https://www.stats.gov.cn/sj/zxfb/202302/t20230203_1900224.html>；中国互联网络信息中心 (2025). 第 56 次《中国互联网络发展状况统计报告》. <https://www.cnnic.net.cn/NMediaFile/2025/0730/MAIN1753846666507QEK67ZS9DH.pdf>",
         "grade": "C",
         "meta": {
           "money": "0",
@@ -2350,6 +2473,7 @@ module.exports = {
         "cost": "不花钱。难在改掉随手打开的习惯，还可能错过一些即时消息。",
         "gain": "美国 15 岁以上的人每天看电视 2.6 小时。他们全部休闲时间是 5.2 小时，看电视占掉一半。这是 2025 年的数字。中国居民看电视每天平均 1 小时 40 分钟，75 到 84 岁的人 3 小时 16 分钟。这是 2018 年的数字。",
         "note": "手上只有总量统计。没有研究算过，少看电视和新闻之后，省下的时间被用到了哪里。「集中看」这个做法是作者经验。",
+        "source": "U.S. Bureau of Labor Statistics (2026). American Time Use Survey — 2025 Results. <https://www.bls.gov/news.release/atus.nr0.htm>；国家统计局 (2019). 2018年全国时间利用调查公报. <https://www.stats.gov.cn/sj/zxfb/202302/t20230203_1900224.html>",
         "grade": "C",
         "meta": {
           "money": "0",
@@ -2369,6 +2493,7 @@ module.exports = {
         "cost": "不花钱。要一次性投入几小时到几十小时去学。难在刚上手那阵子比用鼠标还慢。",
         "gain": "研究看了 251 名有经验的 Word 用户，多数人很少用更快的快捷键，还是以点图标工具栏为主。分组对比的实验确认，菜单、图标、快捷键这三种方式里，快捷键最快。省回的时间随每天操作次数一点点累积。长期做同一类工作的人，收益最大。",
         "note": "只学你每天要用到十次以上的操作，学得太全是另一种浪费。要说明的是，那项效率实验只有 6 名参与者，摘要也没有给出每次操作节省的秒数。",
+        "source": "Lane, D. M., Napier, H. A., Peres, S. C., & Sándor, A. (2005). Hidden costs of graphical user interfaces: Failure to make the transition from menus and icon toolbars to keyboard shortcuts. International Journal of Human-Computer Interaction. <https://doi.org/10.1207/s15327590ijhc1802_1>",
         "grade": "B",
         "meta": {
           "money": "0",
@@ -2388,6 +2513,7 @@ module.exports = {
         "cost": "成本高。可能要付更高的房租，或者换一套更小的房子。搬家本身也要花时间。",
         "gain": "中国居民每天花在交通上平均 50 分钟。只算当天有出行的人，是 1 小时 2 分钟。这是 2024 年的数字。德国长期跟踪同一批人的数据显示，通勤越长的人主观幸福感（自己觉得过得好不好）稳定地更低。而且这笔损失没有在收入或住房上得到补偿。把多项研究梳理到一起的综述也确认，通勤时间越长，人对通勤越不满意，这一点和用什么交通方式无关。单程少 30 分钟，每周约省 5 小时。",
         "note": "争议：Chatterjee 等人汇总多项研究后指出，通勤长短和整体生活满意度之间还看不出稳定的关系。他们认为，人们大体上能用更好的工作或住房，把长通勤的损失换回来。还要注意，交通活动的统计算的是所有出行，不只是通勤。另外能错峰上下班的话，同样一段路也能跑得更短。",
+        "source": "Stutzer, A., & Frey, B. S. (2008). Stress that doesn't pay: The commuting paradox. Scandinavian Journal of Economics, 110(2), 339–366. <https://doi.org/10.1111/j.1467-9442.2008.00542.x>；Chatterjee, K., et al. (2020). Commuting and wellbeing: A critical overview of the literature with implications for policy and future research. Transport Reviews, 40(1), 5–34. <https://doi.org/10.1080/01441647.2019.1649317>；国家统计局 (2024). 第三次全国时间利用调查公报（第二号）. <https://www.stats.gov.cn/sj/zxfb/202410/t20241031_1957216.html>",
         "grade": "B",
         "meta": {
           "money": "多",
@@ -2409,6 +2535,7 @@ module.exports = {
         "cost": "不花钱。把支付宝、微信、苹果、安卓的「自动扣款」列表翻一遍，一次 10 到 20 分钟。以后每次续费，要自己多点一次。",
         "gain": "省下的钱，等于你已经不用、却还在扣费的那些订阅加起来的钱。每个人不一样，没有统一数字。监管要求商家在续费前明显提醒你，还要给你一个「简便的随时取消」的选项，取消不用另外花钱（中国，2021 年起施行）",
         "note": "你确实经常用的服务，年付一般比月付便宜，留着自动续费反而划算。要关的是你早就忘了、却还在扣钱的那些。",
+        "source": "国家市场监督管理总局 (2021, 2025 修正). 网络交易监督管理办法（总局令第 37 号，第十八条）. <https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/fgs/art/2025/art_4b47c79b8d994a42bba4835997688faa.html>",
         "grade": "C",
         "meta": {
           "money": "0",
@@ -2428,6 +2555,7 @@ module.exports = {
         "cost": "不花钱。在「个人所得税」App 上办，十几分钟就完了。",
         "gain": "把工资薪金、劳务报酬、稿酬、特许权使用费这四项合起来算一次总账。多交的退给你，少交的要补上。有两种情况可以不办：你一年的综合所得收入不超过 12 万元，或者要补的税不超过 400 元。这两条是国家税务总局 2023 年公告定的，管到 2027 年 12 月 31 日。反过来，下面这几种人办下来通常能退到钱：全年只有几个月有收入的，年中换过工作的，有子女教育、房贷、房租、赡养老人等扣除没填的",
         "note": "该补税的人也要办，不办是违法的。专项附加扣除一共七项：子女教育、继续教育、大病医疗、住房贷款利息、住房租金、赡养老人、3 岁以下婴幼儿照护。其中房贷和房租只能选一样，不能两样都填",
+        "source": "国家税务总局 (2025). 个人所得税综合所得汇算清缴管理办法（第六条）及其解读. <https://www.gov.cn/zhengce/202502/content_7006465.htm>；财政部、税务总局 (2023). 关于延续实施个人所得税综合所得汇算清缴有关政策的公告. <https://www.gov.cn/zhengce/zhengceku/202308/content_6900594.htm>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -2447,6 +2575,7 @@ module.exports = {
         "cost": "不花钱。去办一次提取手续就行。",
         "gain": "修改后的条例把可以提取的情况列到九项。其中包括：支付房租，装修自己住的房子，支付自己住的房子的物业费。公积金管理中心要从受理你申请那天算起，3 日内作出准予提取或者不准提取的决定",
         "note": "账户里的钱是你自己的工资，加上单位给你配的那一部分。这笔钱放着不动，只按很低的利率算利息。条例还写明：职工死亡，或者被宣告死亡的，继承人和受遗赠人可以提取账户余额。办理要交哪些材料、具体怎么办，各地由当地公积金管理中心定。跑之前先查一下本地中心的办事指南。",
+        "source": "国务院 (2026). 国务院关于修改《住房公积金管理条例》的决定（国务院令第 844 号，2026 年 7 月 31 日国务院第 93 次常务会议通过，「自2026年9月20日起施行」）：修改后第二十四条「职工有下列情形之一的，可以提取职工住房公积金账户内的存储余额：（一）支付房租的；（二）购买、建造、翻建、大修自住住房的；（三）偿还购房贷款本息的；（四）装修自住住房的；（五）支付自住住房物业费的；（六）离休、退休的；（七）完全丧失劳动能力，并与单位终止劳动关系的；（八）出境定居的；（九）国务院批准的其他住房消费情形。」；第二十五条「住房公积金管理中心应当自受理申请之日起3日内作出准予提取或者不准提取的决定」；第十八条缴存比例「均不得低于职工上一年度月平均工资的5％」. <https://www.gov.cn/gongbao/2026/issue_12946/202608/content_7079363.html>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -2466,6 +2595,7 @@ module.exports = {
         "cost": "不花钱。查一次账单，十几分钟。难的是要顶住客服不给你降档。",
         "gain": "工信部的规章写明，运营商不得「无正当理由拒绝、阻止、拖延向用户提供携号转网服务」。也不得「采取拦截、限制等技术手段影响携号转网用户的通信服务质量」。还不得「为携号转网用户设置专项资费方案和营销方案」。老套餐往往比现在在售的套餐贵几十元。一直不换，就是每年白扔几百元",
         "note": "先在营业厅 App 里查你近半年实际用了多少流量和通话，再按这个用量去选套餐。客服要是说「降档得到营业厅办」「合约期内不能改」，你就要求他给出书面依据。他给不出，就打 12300 投诉",
+        "source": "工业和信息化部 (2019). 携号转网服务管理规定（工信部信管〔2019〕242 号）. <http://www.gov.cn/zhengce/zhengceku/2019-11/13/content_5451483.htm>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -2485,6 +2615,7 @@ module.exports = {
         "cost": "不花钱。不买就是省钱。",
         "gain": "财政部规定了奖金占销售额的最低比例：乐透型和数字型彩票 50%，即开型 65%，竞猜型 73%。双色球按销售额的 51% 提奖金，每卖 100 元只拿出 51 元当奖金。换算到你身上，每投入 1 元，长期平均只能拿回 0.51 元，亏掉 49%。2024 年全国彩票卖了 6234.86 亿元，其中 1610.31 亿元进了公益金，没有回到买彩票的人手里（中国，2024 年）",
         "note": "长期平均下来一定亏，这是制度定死的，和运气无关。要买也行，但只能当成 2 元一次的娱乐花销，不能当成理财。",
+        "source": "财政部 (2015). 关于规范和加强彩票资金构成比例管理的通知（财综〔2015〕94 号）. <http://m.mof.gov.cn/czxw/201511/t20151113_1560814.htm>；财政部 (2025). 财政部公告 2025 年第 8 号（2024 年彩票公益金筹集分配情况）. <http://zhs.mof.gov.cn/zhengcefabu/202508/t20250828_3970977.htm>；中国福利彩票双色球游戏规则（第十四条）. <https://mzj.nc.gov.cn/ncsmzj/flcp/202111/5dccc1a5da89434e94a62f8ea0e5887e.shtml>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -2504,6 +2635,7 @@ module.exports = {
         "cost": "不花钱。听到这几个词的时候停一下就行。",
         "gain": "原银保监会主席 2018 年在陆家嘴论坛上说过一句话。原话是：「收益率超过 6% 的就要打问号，超过 8% 的就很危险，10% 以上就要准备损失全部本金」。资管新规要求金融机构「不得承诺保本保收益」，还要求「出现兑付困难时，金融机构不得以任何形式垫资兑付」。所以正规理财已经没有保本这一说。参与非法集资的损失「由集资参与人自行承担」，出事以后没有人替你赔（中国，2018、2021 年）",
         "note": "6%、8%、10% 这三条线是监管者按经验画的，不是法律条文。原话是在讲打击非法集资时说的，针对的是承诺高回报的理财产品和投资公司。不构成投资建议。",
+        "source": "郭树清 (2018). 防范化解金融风险 奋力跨越重大关口（第十届陆家嘴论坛讲话，国家金融监督管理总局官网）：「在打击非法集资过程中，努力通过多种方式让人民群众认识到，高收益意味着高风险，收益率超过6%的就要打问号，超过8%的就很危险，10%以上就要准备损失全部本金」. <https://www.nfra.gov.cn/cn/view/pages/ItemDetail.html?docId=182418>；天津市地方金融管理局转载. <https://jrgz.tj.gov.cn/ztlm/ztzl/jrjfwphjr/202006/t20200625_2744709.html>；中国人民银行等 (2018). 关于规范金融机构资产管理业务的指导意见（银发〔2018〕106 号，第二条、第六条）. <https://www.gov.cn/gongbao/content/2018/content_5323101.htm>；国务院 (2021). 防范和处置非法集资条例（国务院令第 737 号，第二十五条）. <https://www.gov.cn/gongbao/content/2021/content_5588815.htm>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -2523,6 +2655,7 @@ module.exports = {
         "cost": "不花钱。要在账单日之前留够全额还款的现金。难的是忍住不用分期把大额开销摊薄。非借不可时，花几分钟问清每笔贷款的年化利率。",
         "gain": "信用卡透支利率在 2020 年以前有上下限：上限是「日利率万分之五」，下限是上限的 0.7 倍。万分之五折合成一年是 18.25%，这是单利：按一年 18.25% 算，利息不再滚进本金里。2021 年起改成由发卡机构和持卡人自己商量定价。用了最低还款以后，没还的那部分本金每天全额算利息，免息期同时作废。央行已经要求发卡机构用明显的方式展示年化利率（按整年折算的利率），「不得仅展示日利率、日还款额」。2021 年起，所有放贷的机构做广告、签合同，都要明显写出年化利率。日利率、月利率可以一起写，但不能比年化利率更显眼。年化利率要把利息和跟贷款直接有关的各种费用都算进去。分期还本的，按每期还完后剩下的本金算你实际用了多少钱。人民银行给过一个算例：借 10 万元，分 12 个月还，每月交最初本金的 0.5% 作分期费。借款当时还要交 1000 元服务费。按单利算，年化约 12.80%。按复利算（内部收益率法），年化约 13.58%。光看费率，会以为一年只花 0.5% × 12 + 1% = 7%。实际差不多是它的两倍，因为本金每月在减少，分期费却一直按 10 万元收。照同样的算法，信用卡分 12 期、每期手续费 0.6%、没有别的费用，名义上是一年 7.2%。按复利算，年化约 13.8%，是名义数字的 1.9 倍左右。分 6 到 36 期，都在 1.8 到 2 倍之间。借给你钱的是个人或普通公司，就是民间借贷。约定的利率超过签合同时一年期 LPR 4 倍，法院不支持超出的部分。2026 年 8 月 20 日的一年期 LPR 是 3.0%，4 倍就是 12%。先从借款里扣掉的利息，法院按实际到手的钱算本金。这条线管不到银行、消费金融公司这些持牌金融机构。小额贷款公司、典当行、融资租赁公司等七类地方金融组织也不适用。所以不能拿 12% 去套它们的贷款，要看合同上写的年化利率（中国，2020、2021 年）",
         "note": "18.25% 是拿「万分之五 × 365」直接乘出来的，没有算利滚利。真按月滚起来还要更高。个别银行有折扣，以你自己账单上写明的年化利率为准。真周转不开的时候，优先去找利率更低的正规渠道借，不要拖着最低还款滚利息。比两笔贷款时，让对方给按复利算的年化利率。对方给的是单利，按规定要写明「单利」，单利会比复利低一些。13.8% 和 1.8 到 2 倍是本书照人民银行的算法自己算的，算法写在核实记录里。民间借贷别碰高利贷，另见第 7 节第 15 条（不借高利贷）。",
+        "source": "中国人民银行 (2020). 关于推进信用卡透支利率市场化改革的通知（银发〔2020〕327 号）. <https://xining.pbc.gov.cn/zhengwugongkai/4081330/4406346/4693549/4159909/index.html>；中国人民银行 (2021). 中国人民银行公告〔2021〕第 3 号（第一、三、四条，附件《采用内部收益率法计算贷款年化利率示例》第三例）. <https://www.gov.cn/zhengce/zhengceku/2021-03/31/content_5597156.htm>；最高人民法院 (2020 年第二次修正). 关于审理民间借贷案件适用法律若干问题的规定（第一、二十五、二十六条）. <http://gongbao.court.gov.cn/Details/94b6623974526df7d2430a3c73f050.html>（最高人民法院公报）；最高人民法院 (2020). 关于新民间借贷司法解释适用范围问题的批复（法释〔2020〕27 号）. <https://www.court.gov.cn/fabu/xiangqing/285171.html>；全国银行间同业拆借中心受中国人民银行授权 (2026). 2026 年 8 月 20 日贷款市场报价利率（LPR）公告. <https://www.chinamoney.com.cn/chinese/rdgz/20260820/3399885.html>",
         "grade": "C",
         "meta": {
           "money": "0",
@@ -2542,6 +2675,7 @@ module.exports = {
         "cost": "不花钱。花几分钟做三件事：关掉免密支付，设好单笔和每日限额，把平台里绑的支付方式删掉。难的是当场忍住不点那一下。",
         "gain": "这是一笔很大的支出。2024 年国内游戏市场实际销售收入 3257.83 亿元，用户 6.74 亿人，人均约 480 元（这是拿前面两个数相除算出来的）。花出去的钱基本追不回来。只有一种情况例外：限制民事行为能力人（这里指未成年人）没经过监护人同意的打赏和充值，监护人要求退钱时「人民法院应予支持」。成年人自己的打赏和充值，没有这样的规定。另外，未成年人玩网络游戏本来就只能在周五、周六、周日和法定节假日玩，每天 20 时至 21 时这 1 小时（中国，2020、2021 年）",
         "note": "定成 B 级，是因为没有人直接测过「不打赏能省多少钱」，只有游戏行业的总量数字。关免密、设限额这两招是经验做法，单算是 C 级。民法典第十九条、第一百四十五条的原文，已经在第 9 条（孩子用手机充值打赏）里逐字引出来了。不构成投资建议。",
+        "source": "国家新闻出版署 (2024). 今年中国游戏市场收入超 3257 亿元创新高（中国音数协游戏工委《2024 年中国游戏产业报告》）. <https://www.nppa.gov.cn/xxfb/ywdt/202412/t20241216_877445.html>；最高人民法院 (2020). 关于依法妥善审理涉新冠肺炎疫情民事案件若干问题的指导意见（二）（法发〔2020〕17 号，第 9 条）. <https://www.court.gov.cn/zixun/xiangqing/230181.html>；国家新闻出版署 (2021). 关于进一步严格管理 切实防止未成年人沉迷网络游戏的通知（国新出发〔2021〕14 号）. <https://www.nppa.gov.cn/xxfb/tzgs/202108/t20210830_666285.html>",
         "grade": "B",
         "meta": {
           "money": "0",
@@ -2561,6 +2695,7 @@ module.exports = {
         "cost": "不花钱。要花时间收集证据、跟平台交涉，平台通常先拒绝、后退款。谈不拢就只能起诉，那是几个月起步的事，律师费要自己出。所以先把材料备齐，走平台和 12315 更划算。难的是孩子不肯说，你得耐着性子问清楚。",
         "gain": "八周岁以上的未成年人是限制民事行为能力人，意思是他只能自己做和年龄、智力相称的事。和他年龄、智力不相称的民事法律行为，要经过法定代理人同意或者追认才有效：家长要事先点头，或者事后认账。不满八周岁的孩子是无民事行为能力人，自己做不了主，他的事由法定代理人代他办。法定代理人没有表示的，视为拒绝追认：家长一直不吭声，就算作不认这笔账",
         "note": "关键在举证：你要拿出证据，证明操作手机的是孩子，不是你。有用的材料有这几样：充值时间集中在上课时段或者家长上班时段，设备的使用记录，孩子的聊天记录和游戏记录，还有孩子本人的说明。「与年龄智力相适应」没有统一的金额线，几十元的游戏皮肤和几万元的打赏不是一回事。事前防住更省力：给支付方式设免密上限，开启青少年模式，别把支付密码告诉孩子。你自己冲动打赏充值的情况，见本节「不给主播打赏、不给游戏充值、不冲动下单」那条。",
+        "source": "全国人大 (2020). 民法典. 最高人民检察院转载全文. <https://www.spp.gov.cn/spp/fl/202006/t20200602_463888.shtml> 第十九条：「八周岁以上的未成年人为限制民事行为能力人，实施民事法律行为由其法定代理人代理或者经其法定代理人同意、追认；但是，可以独立实施纯获利益的民事法律行为或者与其年龄、智力相适应的民事法律行为。」第二十条：「不满八周岁的未成年人为无民事行为能力人，由其法定代理人代理实施民事法律行为。」第一百四十五条：「限制民事行为能力人实施的纯获利益的民事法律行为或者与其年龄、智力、精神健康状况相适应的民事法律行为有效；实施的其他民事法律行为经法定代理人同意或者追认后有效。」「法定代理人未作表示的，视为拒绝追认。」",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -2580,6 +2715,7 @@ module.exports = {
         "cost": "不花钱。给孩子把下面六类讲一遍，再和他约定一句「被骗了先跟我说，我不骂你」。同时把支付设上免密上限，开青少年模式，支付密码不告诉孩子。难的是真被骗了以后你要忍住不发火。",
         "gain": "泉州市反诈骗中心联合泉州市教育局，拆了六类专门骗青少年的骗局。它们套路各不相同，但最后一步是同一个动作：让孩子拿家长的手机转账。第一类，游戏账号和装备低价私下交易。小王私下转了 260 元，对方说「未成年人转账违规，账号要冻结」，他用爸爸的手机点了「核查链接」，账户里 3 万多元被转走。第二类，「解除防沉迷」。对方威胁「不转账取消，你家长要坐牢」，孩子用妈妈的手机转了 7000 元。原文写明防沉迷是官方设定的，「根本没有『私下解锁』渠道」。第三类，打赏退款。骗子冒充「官方客服」，说未成年人打赏可以退，要求「用家长支付宝给指定直播间刷礼物才能退款」，妈妈账户里 7.3 万元被打赏出去，人被拉黑。原文说「有人加你让你『刷礼物退款』，100% 是诈骗」。第四类，冒充同学或者老师。骗子盗了号，发语音报出名字来借钱。开学季还混进班级群冒充老师，发「交学杂费 500 元」，头像和昵称都和真老师一样，还安排「托」在群里说「已交」。第五类，追星。骗子把孩子拉进「明星粉丝群，领 888 元红包」。先让孩子转 48.88 元「验证」。再吓唬说「未成年人参与违规，平台要冻结 8 万，家长要坐牢」。一共骗走 1.6 万元。原文说「真警察、律师绝不会在网上联系未成年人调查，更不会要家长手机操作」。第六类，二手平台上用低价商品把人引出平台，私下转账。同一份材料还列了三条孩子自己别踩的红线。一是银行卡和电话卡不借、不卖、不租，卡被用去转移赃款，可能构成帮助信息网络犯罪活动罪，留下案底会影响考研和考公。二是「手机口」兼职是违法犯罪。三是境外的「高薪招聘」，人可能一到境外就被控制住（全国，2025 年 10 月）",
         "note": "定成 B 级，是因为官方给的是骗子话术的拆解和个案，没有发案率，也没有防范效果的统计数字。要和第 9 条（孩子用手机充值打赏）分清楚：孩子自己充值打赏花掉的钱，可以按民法典要求退。被骗子骗走的钱不适用那一条，只能按第 8 节第 2 条报警止付。能不能追回来，要看钱还在不在账上。骗子吓唬孩子的核心话术是「你违规了、你家长要坐牢」。事先就跟孩子说清楚，这句话本身就是骗局的标志，比事后追问管用。「被骗了先说、我不骂你」这句要真做到。孩子怕挨骂、瞒着不说，是这几个案例里损失越滚越大的共同原因。冒充熟人的成人版，还有 AI 换脸，见第 8 节第 3、4 条（反诈硬规则、涉及转账先挂断）。大人也一样，验证码和刷脸不替任何人做，见第 8 节第 45 条（念验证码）。",
+        "source": "泉州市反诈骗中心 (2025). 开学第一课｜反诈是青少年的必修课，这 6 大陷阱一定要避开！<http://gat.fujian.gov.cn/ztzl/fjjffpzxrx/spjq/202510/t20251028_7026836.htm>（福建省公安厅转载）",
         "grade": "B",
         "meta": {
           "money": "0",
@@ -2599,6 +2735,7 @@ module.exports = {
         "cost": "不花钱。代价是保修期过了以后，万一要修，得自己掏钱，不过这种事概率不大。",
         "gain": "延保的定价通常是商品原价的 10% 到 50%。研究里引用的行业估计说，延保的平均毛利率是 50% 到 60%：卖出去 100 元，有 50 到 60 元是赚的。这大约是普通商品毛利率的 18 倍。2003 年，延保只占百思买营收的 3% 到 4%，却贡献了超过 50% 的利润（美国，2000 年代零售数据）。碰上价格远低于这个区间的延保，可以自己算一笔：延保价 ÷ 修一次要花的钱 = 回本需要的故障概率。你估计延保那几年里至少坏一次的可能比这个数大，才值得买。比如 25 元的延保，假设修一次 300 元，至少坏一次的可能要超过约 8% 才回本。这里的 300 元只是举例，不是统计数字。算之前先扣掉国家规定已经保了的部分。国家规定的三包期从开发票那天算：洗衣机和电冰箱整机 1 年，主要部件 3 年。洗衣机的主要部件是电机、定时器、程控器和电容器，电冰箱是压缩机、温控器等。延保和三包重叠的那段，等于花钱买了本来就有的东西（全国，1995 年起）",
         "note": "毛利率那个数字是论文引用别人的行业估算（Business Week 2004），不是论文自己测出来的。上面的算法适用于自己掏得起一次维修费的普通人。靠一台设备吃饭、又没有备用机的人，要另外算。手机碎屏险这一类也要单独算：先估自己多久摔一次，再看保费划不划算。很便宜的延保买了也亏不了几十元，买之前看清三样：从哪天开始算（从买的那天算的，头几年和三包重叠），是商家、品牌还是第三方公司在保，上门费和换件费另不另收。也先看说明书和保修卡，品牌自己承诺的保修期可能比三包长。",
+        "source": "Chen T, Kalra A, Sun B (2009). Why Do Consumers Buy Extended Service Contracts? Journal of Consumer Research 36(4):611-623. <https://doi.org/10.1086/605298>；国家经贸委等 (1995). 部分商品修理更换退货责任规定（国经贸〔1995〕458 号，第八条三包有效期自开具发票之日起计算；附件《实施三包的部分商品目录（第一批）》洗衣机、家用电冰箱整机 1 年、主要部件 3 年）. 国家市场监督管理总局行政规范性文件. <https://www.samr.gov.cn/zw/zfxxgk/zc/xzgfxwj/art/2019/art_f943e66de125437d92df701e1654c47c.html>",
         "grade": "B",
         "meta": {
           "money": "0",
@@ -2618,6 +2755,7 @@ module.exports = {
         "cost": "不花钱。医生开药、你去买药的时候，多问一句「有没有集采的、通用名的药」。",
         "gain": "国家组织的药品集采，第二批平均降价 53%，最高降 93%。截至 2026 年 4 月，已经开展了 11 批，覆盖 490 种药品。通过或者视同通过一致性评价的药品达到 1695 个。这大约占临床常用化学药的 2/3（中国，2020 到 2026 年官方数据）",
         "note": "争议：常有人说「一致性评价只比成分，不比疗效」。这话对了一半。过评的做法是找健康人来吃药，抽血看药进到血液里以后的浓度曲线，再拿这条曲线和原研药的比，落在 80% 到 125% 之间就算过关。剂量差一点就出事的那类药，要求更严。辅料指有效成分之外的填充和包衣，允许和原研药不一样。法规只要求有效成分、剂型、吃法和治疗作用相同。所以它确实不是「找病人吃一段时间，看病好没好」。病人身上的效果由另一套研究来回答。国家医保局组织医院做过真实世界研究。到 2024 年 12 月，覆盖了 63 种集采药、近百家三甲医院、30 多万病人。结果都是和原研药没差别。比如二甲双胍，糖化血红蛋白达标率是仿制组 83.4%、原研组 78.9%；空腹血糖达标率反过来，仿制组 83.8%、原研组 87.6%。两组互有高低。2025 年 1 月，有医生公开说集采药「血压不降、麻药不睡、泻药不泻」。医保和药监去上海 7 家医院查过，结论是这些说法多半来自转述和个人感觉，其中被点名的那种泻药当时还没开始在医院用。同一次也承认确实抽到过问题药。前 9 批 1600 多个中选产品里，有 9 个因为质量风险被取消资格。这 9 个里，6 个是进口药（含 3 个原研药），3 个是国产药。有两件事你能落实。一是想继续用原研药，通常还是开得到的：集采只占医院采购量的 60% 到 80%，剩下的由医院自己定，原研药没有被禁，代价是自己多掏钱。二是慢病换了药以后别凭感觉判断，按第 16 节第 3 条（把每次指标记在同一个本子上）盯住血压、血糖、糖化。真变差了就去找医生，请医生上报药品不良反应，别自己停药。",
+        "source": "国家医疗保障局 (2020). 第二批国家组织药品集中采购和使用工作答记者问. <https://www.nhsa.gov.cn/art/2020/1/17/art_38_2264.html>；国家医疗保障局 (2026). 国务院政策例行吹风会：健全全周期全渠道药品价格形成机制. <http://www.nhsa.gov.cn/art/2026/4/15/art_14_20221.html>；国务院办公厅 (2016). 关于开展仿制药质量和疗效一致性评价的意见（国办发〔2016〕8 号）. <https://www.gov.cn/zhengce/zhengceku/2016-03/05/content_5049364.htm>；国家食品药品监督管理总局 (2016). 关于发布普通口服固体制剂参比制剂选择和确定等 3 个技术指导原则的通告（2016 年第 61 号）附件 1、附件 3，海南省药品监督管理局转载. <https://amr.hainan.gov.cn/himpa/ztzl/fzy/201607/t20160720_1591587.html>；国家医疗保障局 (2024). 集采药品质量严格监管，企业检查和品种抽检两个「全覆盖」. <https://www.nhsa.gov.cn/art/2024/12/30/art_52_15287.html>；国家医疗保障局 (2025). 医保部门、药监部门有关同志就集采药品相关问题接受人民日报健康客户端记者采访. <https://www.nhsa.gov.cn/art/2025/2/9/art_14_15647.html>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -2637,6 +2775,7 @@ module.exports = {
         "cost": "不花钱。在参保地的医保 App 上，或者去经办机构，办一次家庭共济绑定。",
         "gain": "个人账户里的钱，可以用来支付你本人和你的配偶、父母、子女在定点医疗机构看病时自己要掏的那部分医疗费。也可以用来支付在定点零售药店买药品、医疗器械、医用耗材时自己要掏的那部分钱。文件还提出，要探索把个人账户用于给家人交城乡居民医保的个人缴费",
         "note": "很多人的个人账户里躺着几千元，同时家里老人在自费买药。绑定一次以后长期有效。各地大多叫「家庭共济」，在本地医保 App 里就能办。注意反过来的一条红线：个人账户不能用于健身、养生保健这类消费。拿它去药店买保健品套现，属于骗保。",
+        "source": "国务院办公厅 (2021). 关于建立健全职工基本医疗保险门诊共济保障机制的指导意见（国办发〔2021〕14 号）第（五）项：「个人账户主要用于支付参保人员在定点医疗机构或定点零售药店发生的政策范围内自付费用。可以用于支付参保人员本人及其配偶、父母、子女在定点医疗机构就医发生的由个人负担的医疗费用，以及在定点零售药店购买药品、医疗器械、医用耗材发生的由个人负担的费用。探索个人账户用于配偶、父母、子女参加城乡居民基本医疗保险等的个人缴费。个人账户不得用于公共卫生费用、体育健身或养生保健消费等不属于基本医疗保险保障范围的支出。」<https://www.gov.cn/zhengce/zhengceku/2021-04/22/content_5601280.htm>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -2656,6 +2795,7 @@ module.exports = {
         "cost": "买一个水壶。每次烧水要花一点时间，还有少量燃气费或者电费。",
         "gain": "北京居民第一阶梯水价是 5 元一立方米，折合 0.005 元一升。瓶装水如果按 1 元 500 毫升算，就是每升 2 元，是自来水的 400 倍。生活饮用水执行的是强制性国家标准 GB 5749-2022。这个标准 2022 年 3 月 15 日发布，2023 年 4 月 1 日起施行。主管部门是国家疾控局（中国，2015 年水价与 2022 年标准）",
         "note": "争议在于，所谓「达标」查的是水厂出来的水和管道末端的水。水源或者管网出问题的时候，会短暂失守。2025 年 7 月 16 日，杭州余杭仁和水厂进的原水气味不对，仁和、良渚部分小区的自来水发臭。官方结论是藻类在缺氧条件下分解，产生了硫醚类物质。换了水源以后，出厂水的总大肠菌群、大肠埃希氏菌都没有检出，全部项目符合生活饮用水标准 GB 5749-2022。事后 7 名干部被问责，7 月水费全免，还免费换了滤芯。但同一个水源的粪大肠菌群，事发前已经连着几个月往上走。苕溪永胜取水口 4 月是 10 个/L，5 月 7300 个/L，6 月 16000 个/L。地表水标准 GB 3838 Ⅲ 类的限值是 10000 个/L。同月四岭水库 28000 个/L、馒头山水库 24000 个/L 也超了。烧开只能杀微生物，除不掉气味物质，也除不掉溶在水里的化学物。闻到异味，或者水发黄发浑，就停下来别喝，向供水企业和 12345 反映，临时改喝瓶装水，别指望多煮几分钟压过去。但这是局部的偶发事故，当地也按次赔了，仍然不构成常年买瓶装水的理由。网上传的「粪水管接错」是伪造的警情通报，发布者已经被刑事拘留（见第 9 节）。瓶装水 1 元 500 毫升是为了算账设的假设价，你按自己所在城市的实际价格重算。老旧小区的二次供水设施不达标的，可以加装过滤，或者只在这种情况下买水喝。各地水价不同，北京这个数字只用来看个量级。",
+        "source": "北京市发展和改革委员会. 居民用水价格表. <https://fgw.beijing.gov.cn/bmcx/djcx/jzldj/202003/t20200331_1752796.htm>；国家市场监督管理总局 国家标准全文公开系统. GB 5749-2022 生活饮用水卫生标准. <https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=99E9C17E3547A3C0CE2FD1FFD9F2F7BE>；杭州市联合调查组 (2025). 关于杭州市余杭区部分小区供水异常调查情况通报（2025 年 7 月 23 日），新华网转载 <http://www.news.cn/20250723/1be62dac3b0b4461a643791ff552e93d/c.html>；杭州市余杭区人民政府. 余杭区 2025 年 4 月／5 月／6 月水源水水质监测数据（杭州余杭水务控股集团公开，检测单位杭州嘉澍环境监测有限公司，附件 PDF 表 1 第 24 项「粪大肠菌群」） <https://www.yuhang.gov.cn/art/2025/5/8/art_1229204072_59140140.html>、<https://www.yuhang.gov.cn/art/2025/6/5/art_1229204072_59142885.html>、<https://www.yuhang.gov.cn/art/2025/7/3/art_1229204072_59146464.html>；公安部网络安全保卫局 (2025). 编造虚假「警情通报」，捏造「粪水」谣言，邵某豪被刑事拘留 <http://www.news.cn/politics/20250722/3178b3bd189c4eb4b293982e92aab438/c.html>",
         "grade": "C",
         "meta": {
           "money": "0",
@@ -2675,6 +2815,7 @@ module.exports = {
         "cost": "不花钱。难的是看到消息就想动手，别人都在赚钱时想跟着加码，要忍住。",
         "gain": "这项研究看的是 66,465 个美国折扣券商的家庭账户，时间是 1991 到 1996 年。交易最频繁的那一组，年化收益 11.4%，也就是平均每年赚 11.4%。同期整个市场是 17.9%，平均一个家庭是 16.4%。平均一个家庭一年的换手率是 75%，一年里把手上的股票换掉了四分之三。频繁交易的那组和不频繁的那组，毛收益（扣手续费前赚的钱）差别很小，所以差距主要来自买卖时付掉的交易成本（美国，1991 到 1996 年）。国内的数据：研究用的是上海证券交易所的逐日账户数据，覆盖全部约 4000 万个账户。样本期是 2014 年 7 月到 2015 年 12 月，共 18 个月。这 18 个月里上证综指先涨了 150% 以上。它在 2015 年 6 月 12 日见顶 5166.35 点，到 12 月底又跌了 40%。家庭账户按期初市值分成四档。最小的一档占全部家庭账户的 85%，最大的一档占 0.5%。两档期初的股票总市值差不多，分别是 8800 亿元和 8080 亿元。结果是最小的那 85% 因为主动交易损失 2500 亿元，最大的那 0.5% 赚到 2540 亿元。这里的「损失」是和同一段行情里一直持有不动、什么都不做相比。两个数各约相当于本组期初股票市值的三成，前者 28%，后者 31%。作为对照，2014 年 6 月之前的两年半市场较平静。那段时间任取 18 个月，同类差额只有期初市值的 1% 到 3%。这轮行情里，家庭账户平均约三周就把手上的股票换一遍，一年近 18 次（中国上海，2014 到 2015 年；对照期 2012 到 2014 年）",
         "note": "美国那份数据是 1990 年代的，A 股的佣金和印花税结构和它不一样，但「换手越高、到手收益越低」这个道理是一样的。国内那项研究没有说别买股票。它算的是同一段行情里，账户小的那一头越主动交易，钱越往对手盘走。赚走这笔钱的也不是机构，是账户最大的那一批个人：这段时间上交所约九成成交量来自散户账户。网上流传的「九成散户亏钱」找不到可核对的官方统计，本条不用这个数字。换手率可以对照着看：这轮行情里国内家庭账户一年换近 18 次，美国那批家庭一年只换掉四分之三。平静的年份里国内这个差距只有百分之一到三，所以最该忍住的是行情最热的时候。不构成投资建议。",
+        "source": "Barber BM, Odean T (2000). Trading Is Hazardous to Your Wealth: The Common Stock Investment Performance of Individual Investors. The Journal of Finance 55(2):773-806. <https://doi.org/10.1111/0022-1082.00226>；An L, Lou D, Shi D (2022). Wealth redistribution in bubbles and crashes. Journal of Monetary Economics 126:134-153. <https://doi.org/10.1016/j.jmoneco.2022.01.001>；同文作者公开的工作论文稿（2021 年 10 月，国内数字按它逐字核对）. <https://personal.lse.ac.uk/loud/AnLouShi.pdf>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -2694,6 +2835,7 @@ module.exports = {
         "cost": "不花钱。难的是行情好的时候，要忍住不去想「借点钱多赚一点」。",
         "gain": "杠杆就是借钱来买，它会把亏损放大。你用融资买入以后，抵押物的市值可能跌到维持担保比例线以下。这条线是券商划的，管的是你抵押在它那里的东西。跌破了这条线，你又没能追加担保把它补回来，就会被强制平仓，由券商直接替你卖掉。账面上的亏损当场变成真亏，没有「等它涨回来」的机会。监管规定，「从事证券交易时间不足半年、缺乏风险承担能力、最近 20 个交易日日均证券类资产低于 50 万元」的客户，不得开立信用账户。这个门槛本身就说明，它不是给普通人用的工具（中国，2015 年）",
         "note": "「看不懂的不买」这句没有直接的文献支持，属于共识，单算是 C 级。用消费贷或者信用卡套现去投资，也是变相的杠杆，它们的利率见本节第 7 条（不用信用卡最低还款）。不构成投资建议。",
+        "source": "中国证监会 (2015). 证券公司融资融券业务管理办法（证监会令第 117 号，第十二条）. <https://www.csrc.gov.cn/csrc/c106256/c1654005/content.shtml>；上海证券交易所. 《上海证券交易所融资融券交易实施细则》解读（投资者教育材料）. <https://www.sse.com.cn/services/tradingservice/margin/edu/c/10074042/files/a1f1c4833302451fb9130dbb94116c56.pdf>",
         "grade": "B",
         "meta": {
           "money": "0",
@@ -2713,6 +2855,7 @@ module.exports = {
         "cost": "不花钱。代价是你放弃了「选中明星基金经理」的可能。难的是指数跌的时候，你也要跟着一起承受，不能中途跑掉。",
         "gain": "美国主动股票型基金的整体组合接近市场组合：这些基金合起来持有的股票，和整个市场差不多。但主动管理的高成本原封不动地变成了投资者更低的净回报（扣完费用后到手的收益）。研究用了自助法模拟，把业绩反复随机重排，看单凭运气能做到什么程度。结果显示，很少有基金能产生足以覆盖成本的超额收益：基金比市场多赚的那部分，够不上它收的那笔费（美国，2010 年发表）。标普道琼斯指数公司每年统计一次：2024 年，美国主动管理的大盘股票基金有 65% 跑输标普 500。它统计了 24 年，平均每年有 64% 跑输。截至 2024 年底的 15 年里，所有类别中都没有哪一类是多数主动基金跑赢的",
         "note": "争议：有一篇文章重新检验过这个结论。它指出，Fama-French 那套反复重抽样本的检验方法抽得不够。照它的算法，就算一只基金多赚的那部分确实很明显，也可能被判成「和运气分不出区别」。所以「几乎没有基金有技能」这个结论可能下得过重了。中国的数字没有美国那么一边倒。标普道琼斯截至 2025 年 6 月的统计，A 股大盘主动基金跑输标普中国 A 股 300 指数的比例，1 年是 60.5%，3 年是 69.6%，5 年是 50.8%。这份统计只算到 5 年，拿不出更长的数。所以在中国，主动基金长期跑不赢指数还没有定论，但指数基金费率低这一点照样成立。不构成投资建议。",
+        "source": "Fama EF, French KR (2010). Luck versus Skill in the Cross-Section of Mutual Fund Returns. The Journal of Finance 65(5):1915-1947. <https://doi.org/10.1111/j.1540-6261.2010.01598.x>；S&P Dow Jones Indices (2025). SPIVA U.S. Scorecard Year-End 2024. <https://www.spglobal.com/spdji/en/spiva/article/spiva-us/>（官网拒绝自动抓取，数字按 2025-05-12 的存档核对：<https://web.archive.org/web/20250512071051/https://www.spglobal.com/spdji/en/spiva/article/spiva-us/>）；S&P Dow Jones Indices (2025). SPIVA Asia Ex-Japan Scorecard Mid-Year 2025（Report 1a，China Large-Cap 对 S&P China A 300 的跑输比例：1 年 60.5%、3 年 69.6%、5 年 50.8%）. <https://web.archive.org/web/20251103165922/https://www.spglobal.com/spdji/en/documents/spiva/spiva-asia-ex-japan-mid-year-2025.pdf>（官网拒绝自动抓取，按存档核对）；Harvey CR, Liu Y (2022). Luck versus Skill in the Cross Section of Mutual Fund Returns: Reexamining the Evidence. The Journal of Finance, 77(3). <https://doi.org/10.1111/jofi.13123>（争议方）",
         "grade": "B",
         "meta": {
           "money": "0",
@@ -2732,6 +2875,7 @@ module.exports = {
         "cost": "不花钱。买之前多看一眼「管理费 + 托管费 + 销售服务费」这三项加起来是多少。",
         "gain": "费率的差别会按复利一点点吃掉本金，意思是每年被扣掉的那一点会年年叠加。一年的费率高 1 个百分点，20 年后的终值少 0.99^20 ≈ 18.2%，终值就是到那时候账户里剩下的钱；30 年后少约 26%。中国从 2023 年起推行公募基金费率改革，下调了主动权益类基金（主要买股票、由基金经理挑股的那种）的费率上限。从 2023 年 7 月 7 日起，新注册的这类基金管理费率不超过 1.2%，托管费率不超过 0.2%。136 家基金公司把旗下老产品的这两项也降到了这条线以下",
         "note": "这个算式只是照公式算出来的，前提是两只基金扣费之前赚得一样多。实际还要算上申购费、赎回费，以及 C 类份额的销售服务费。不构成投资建议。",
+        "source": "中国证监会 (2023). 证监会有关部门负责人就公募基金费率改革答记者问. <http://www.csrc.gov.cn/csrc/c100028/c7418692/content.shtml>；厦门证监局 (2024). 「新注册的主动权益类基金统一执行\"管理费率不超过1.2%、托管费率不超过0.2%\"的上限标准」. <http://www.csrc.gov.cn/xiamen/c105636/c7511608/content.shtml>；Fama EF, French KR (2010). 见第 11 条. <https://doi.org/10.1111/j.1540-6261.2010.01598.x>",
         "grade": "C",
         "meta": {
           "money": "0",
@@ -2751,6 +2895,7 @@ module.exports = {
         "cost": "不花钱。难的是要接受一件事：你不会正好押中最赚的那一个。",
         "gain": "只要几项资产不是完全同涨同跌，把钱分开放，预期收益（平均能赚到的）不变，波动（账户上下起伏）却更小。这是 Markowitz 1952 年提出的组合选择基本结论，此后几十年一直沿用。反过来说，钱全押在一只股票或者一个平台上，它的方差就是你全部的方差，它涨跌多少你就跟着涨跌多少。出事的时候没有任何对冲，也就没有别的资产能帮你补回来",
         "note": "定成 B 级，是因为那篇经典文献是纯数学推导，没有算出「分散能少亏多少钱」的实际数字。分散只能让账户的涨跌小一些，不保证你不亏。买宽基指数基金（见本节第 17 条）本身就是最省事的分散办法。不构成投资建议。",
+        "source": "Markowitz, H. (1952). Portfolio Selection. The Journal of Finance, 7(1), 77–91. <https://doi.org/10.1111/j.1540-6261.1952.tb01525.x>",
         "grade": "B",
         "meta": {
           "money": "0",
@@ -2770,6 +2915,7 @@ module.exports = {
         "cost": "开户不花钱。真正的代价是这笔钱会锁到你退休，中途取不出来。",
         "gain": "交进去的钱，每年最多 12000 元，可以从综合所得或者经营所得里如实扣掉：你存进去多少，就能从要交税的收入里减掉多少。这笔钱在账户里投资赚到的收益，暂时不收个人所得税。将来领出来的时候不并进综合所得，单独按 3% 计税。所以你省下的是「你的边际税率减去 3%」乘以你实际交进去的钱。边际税率就是你每多赚一元要按的那一档税率。算下来：边际税率 10% 的人每年最多省 840 元，20% 的省 2040 元，30% 的省 3240 元。本来就不用交个税的人（年综合所得扣完各项后没到起征点），交钱的时候一分没省，领的时候反而要按 3% 交，是净亏。边际税率只有 3% 的人也不划算。全年综合所得扣完各项后不超过 36000 元，就落在这一档。这些人交钱时省 3%，领钱时再交 3%，正好抵消，钱却白白锁到退休。每月工资被扣了个税，不等于你就在 10% 那一档，要看全年扣完各项后的数。每年的缴费额度按自然年度累计，第二年重新算，当年没交满的不能结转到下一年。这项政策从 2024 年 12 月 15 日起在全国实施（全国）",
         "note": "这个账户是「封闭运行」的，钱交进去就取不出来。只有四种情况能领：达到领取基本养老金的年龄、完全丧失劳动能力、出国（境）定居、国家规定的其他情形。所以它不是理财，是一笔要锁很多年的税务安排。省下的税只拿一次，钱却要锁到退休，离退休越远，摊到每年的好处越小。粗算一下：税率 10% 的人每存一元省 7 分钱，离退休还有 30 年，摊到每年才 0.2% 多一点。税率 20% 的人每存一元省 1 角 7 分，离退休还有 10 年，摊到每年约 1.7%。先算清楚自己每多赚一元要交多少税，再决定交多少。别为了「薅羊毛」把应急金锁进去（应急金见第 27 条）。账户里的钱还要你自己选产品去投资，是会亏的。选产品的规则和本节第 17、18 条（宽基指数基金、优先选费率低的）一样。扣除凭证由个人养老金信息管理服务平台出具。抵扣的时机你可以选：一种是当年发工资代扣税的时候就扣，另一种是第二年汇算的时候再扣（汇算见第 2 条）。",
+        "source": "财政部、税务总局 (2024). 关于在全国范围实施个人养老金个人所得税优惠政策的公告（财政部 税务总局公告 2024 年第 21 号，2024 年 12 月 12 日）. <https://www.gov.cn/zhengce/zhengceku/202412/content_6992498.htm>；人力资源社会保障部等五部门 (2022). 个人养老金实施办法（第七、八、九、十二、十三条）. <https://www.gov.cn/zhengce/zhengceku/2022-11/05/content_5724783.htm>；全国人民代表大会常务委员会 (2018). 中华人民共和国个人所得税法（2018 年第七次修正，个人所得税税率表一）. <http://www.npc.gov.cn/zgrdw/npc/xinwen/2018-09/05/content_2060671.htm>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -2789,6 +2935,7 @@ module.exports = {
         "cost": "按次买，单次价格比年卡摊下来贵一些。你要老实估计自己一个月到底去几次。",
         "gain": "这项研究看的是美国 3 家健身俱乐部 7,752 名会员 3 年的数据。选月费超过 70 美元合同的会员，平均每月只去 4.3 次，折合每次超过 17 美元。而 10 次卡只要每次 10 美元。这些人在会籍期间平均多付了 600 美元。另外，月付会员超过一年还没退卡的比例，比年付会员高 17%（美国，三年面板数据）",
         "note": "这只是一项研究，用的是美国数据。但背后的道理很普遍：人会高估自己将来的自控力。如果你已经有连续一年、每周去两次以上的记录，那年卡确实更便宜。",
+        "source": "DellaVigna S, Malmendier U (2006). Paying Not to Go to the Gym. American Economic Review 96(3):694-719. <https://doi.org/10.1257/aer.96.3.694>",
         "grade": "B",
         "meta": {
           "money": "少",
@@ -2808,6 +2955,7 @@ module.exports = {
         "cost": "不花钱。难的是当场坚持要一份书面合同，不接受「先充了再说」。",
         "gain": "条例规定，商家收预付款必须订立书面合同，并且在合同里约定退款方式。商家出现重大经营风险的，应当停止收取预付款。商家决定停业或者搬迁的，应当提前告知消费者。消费者有权要求它继续履行，或者退还没消费完的余额。违反的，可以处违法所得 1 到 10 倍的罚款；没有违法所得的，处 50 万元以下罚款",
         "note": "条例给的是事后打官司的依据，事前防不住。商家真跑了，钱多半已经不在账上了。所以先按本节「健身房按次付费或短周期付费」那条少充一点，真出事了再靠这个条例去维权。同一个条例第二十七条还规定，商家收押金必须事先约定好退还的方式、程序和时限，不得对退还设置不合理的条件。",
+        "source": "国务院 (2024). 中华人民共和国消费者权益保护法实施条例（国务院令第 778 号，2024 年 7 月 1 日施行）. <https://www.gov.cn/zhengce/zhengceku/202403/content_6940159.htm> 第二十二条：「经营者以收取预付款方式提供商品或者服务的，应当与消费者订立书面合同，约定商品或者服务的具体内容、价款或者费用、预付款退还方式、违约责任等事项。」「经营者未按照约定提供商品或者服务的，应当按照消费者的要求履行约定或者退还预付款。」「经营者出现重大经营风险，有可能影响经营者按照合同约定或者交易习惯正常提供商品或者服务的，应当停止收取预付款。经营者决定停业或者迁移服务场所的，应当提前告知消费者……消费者……有权要求经营者继续履行提供商品或者服务的义务，或者要求退还未消费的预付款余额。」；第五十条罚则",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -2827,6 +2975,7 @@ module.exports = {
         "cost": "不花钱。想要的东西要晚一天才拿到。退货的运费通常要你自己出。难的是当天忍住不下单。",
         "gain": "省下来的是冲动买的东西里「第二天就不想要了」的那部分。这部分占多少，给不出统一的比例。网上买的商品，从收到那天算起七日内可以无理由退货。有四类除外：定做的、鲜活易腐的、已经拆封的数字商品、报刊（中国，2017 年起施行）",
         "note": "「冷静期」本身是经验做法，没有直接的文献支持。冷静期没拦住的，还有七日无理由退货这条制度可用。退货之前先确认两件事：这件商品在不在不能退的清单里，包装还完不完好。",
+        "source": "国家市场监督管理总局 (2020 修订). 网络购买商品七日无理由退货暂行办法（总局令第 31 号）. <https://www.gov.cn/zhengce/zhengceku/2020-11/03/content_5557118.htm>",
         "grade": "C",
         "meta": {
           "money": "0",
@@ -2846,6 +2995,7 @@ module.exports = {
         "cost": "不花钱。代价是有些真折扣你也放过了。你得记住自己常买那几样东西的日常价。难的是大促当天忍住不囤。",
         "gain": "人的判断会被最先看到的数字定住，之后再调整通常调不够。所以「原价 999 现价 499」会系统性地抬高你对「便宜了多少」的估计。监管规定，折价的基准应当是促销前七日内同一家店的最低成交价，打几折要拿这家店促销前七天里实际卖出去的最低价当参照。划掉的那个价格，不一定真的卖过（中国，2020 年起施行）",
         "note": "锚定效应是实验室里得出的结论，没有人算过囤货实际亏多少钱。囤货还有几笔你不会记在账上的成本：东西过期，占地方，以及「反正家里有，那就多用点」。只囤这三种都满足的东西：保质期长，确定会用完，单价确实比以前的价格低。",
+        "source": "Tversky A, Kahneman D (1974). Judgment under Uncertainty: Heuristics and Biases. Science 185(4157):1124-1131. <https://doi.org/10.1126/science.185.4157.1124>；国家市场监督管理总局 (2020). 规范促销行为暂行规定（总局令第 32 号，第二十一条）. <https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/fgs/art/2023/art_cae53a080be2401e8f91c6d6291539f8.html>",
         "grade": "C",
         "meta": {
           "money": "0",
@@ -2865,6 +3015,7 @@ module.exports = {
         "cost": "消费型保险到期不返钱，心里会觉得「这钱白花了」。存钱的事要你自己安排。难的就是接受这笔钱拿不回来。",
         "gain": "监管规则要求，分红型产品的说明书要用加粗字体提示「未来的保单红利为非保证利益，其红利分配是不确定的」。红利演示就是保险公司给你看的那张分红测算表，它的利差上限是 4.5% 减去产品预定利率。预定利率就是合同里定死的那一档收益率。返还型和分红型多交的那部分保费，相当于交给保险公司代管的储蓄。它收益不保证，流动性也差，想取出来不容易（中国，2023 年起施行）",
         "note": "争议：对完全存不下钱的人来说，返还型保险逼着你按期交钱，这个作用有实际价值。上面的建议针对的是能管住自己的普通人。「买消费型，把省下的保费自己拿去投资」比「买返还型」到底好多少，要看具体产品，本节没有可以引用的系统性数据。不构成投资建议。",
+        "source": "中国银保监会 (2022). 一年期以上人身保险产品信息披露规则（银保监规〔2022〕24 号）. <https://www.gov.cn/zhengce/zhengceku/2023-01/04/content_5735014.htm>",
         "grade": "C",
         "meta": {
           "money": "0",
@@ -2884,6 +3035,7 @@ module.exports = {
         "cost": "商业第三者责任险一年几百到上千元。保额买得越高，平摊到每一元保额上的保费反而越便宜。",
         "gain": "交强险在全国范围内实行统一的责任限额。限额分成四项分别计算：死亡伤残、医疗费用、财产损失，以及你没有责任时的赔偿。2020 年车险综合改革以后，现行的总责任限额是 20 万元。这 20 万元里，死亡伤残 18 万元、医疗费用 1.8 万元、财产损失 0.2 万元。你没有责任的时候，死亡伤残 1.8 万元、医疗费用 1800 元、财产损失 100 元。超出限额的部分由侵权人自己承担，撞了人的一方要自己掏钱。没投交强险的，车辆会被扣留，还要罚应缴保险费的 2 倍",
         "note": "限额由金融监管部门定，会调整。这组数字是 2020 年 9 月车险综合改革以后的现行值，买保险前可以再核一次。关键是它的结构：交强险按项目分开赔，一项没赔完，剩下的额度不能挪去补另一项。撞伤人的赔偿总额可以远远超过它，超出的差额没有任何保险替你出。三者险保额到底买多少，本书不给数字。但它是这本书里少数几处「多花几百元，换掉一件概率很小、真摊上能压垮一个家的事」。",
+        "source": "国务院 (2006, 2012 修订). 机动车交通事故责任强制保险条例（国务院令第 462 号，第 618 号令修改）第二十三条：「机动车交通事故责任强制保险在全国范围内实行统一的责任限额。责任限额分为死亡伤残赔偿限额、医疗费用赔偿限额、财产损失赔偿限额以及被保险人在道路交通事故中无责任的赔偿限额。」「责任限额由保监会会同国务院公安部门、国务院卫生主管部门、国务院农业主管部门规定。」第二十一条限额内赔偿；第三十九条未投保的「由公安机关交通管理部门扣留机动车……处依照规定投保最低责任限额应缴纳的保险费的2倍罚款」. <http://www.gov.cn/gongbao/content/2012/content_2131962.htm>；中国银行保险监督管理委员会 (2020). 关于实施车险综合改革的指导意见（银保监发〔2020〕41 号，四（四）：「将交强险总责任限额从12.2万元提高到20万元，其中死亡伤残赔偿限额从11万元提高到18万元，医疗费用赔偿限额从1万元提高到1.8万元，财产损失赔偿限额维持0.2万元不变」）. <https://www.gov.cn/gongbao/content/2020/content_5567758.htm>（国务院公报）",
         "grade": "A",
         "meta": {
           "money": "多",
@@ -2903,6 +3055,7 @@ module.exports = {
         "cost": "不花钱。代价是这笔钱要放弃更高的收益，只能放在活期、货币基金，或者随时能取的存款里。难的是攒的过程中忍住不动它。",
         "gain": "有了应急金，失业或者生病的时候你就不用去借钱，也不用亏着把投资卖掉。消费贷和信用卡最低还款按年算的利率，见本节第 7 条（不用信用卡最低还款）。存在银行里的钱受存款保险保护，同一家银行最高偿付 50 万元（中国，2015 年）",
         "note": "「3 到 6 个月」是大家通行的经验，没有找到官方或者学术上的原始出处，所以标成 C 级。金额按你自己每月的固定支出来算，不按收入算。不构成投资建议。",
+        "source": "国务院 (2015). 存款保险条例（国务院令第 660 号，第五条）. <https://www.gov.cn/zhengce/content/2015-03/31/content_9562.htm>",
         "grade": "C",
         "meta": {
           "money": "0",
@@ -2922,6 +3075,7 @@ module.exports = {
         "cost": "不花钱。花半小时算一笔账。你要老实估计自己能拿到的、扣完税以后的稳定收益率。",
         "gain": "算法是这样。先设房贷年利率为 r，按你的合同来。2026 年 8 月 20 日 5 年期以上 LPR 为 3.5%，实际执行的利率是在 LPR 上加点或者减点。再设 g 为你可选的另一种投资扣完税后的年化收益：这笔钱换个地方投，平均每年能赚到的比例。提前还款的确定收益率就是 r，每还掉一笔，就等于稳稳赚到了 r。如果 g 稳定大于 r，钱留在投资里更划算。如果 g 小于 r，或者 g 根本说不准，那提前还款就等于锁定一笔无风险的 r。等额本息前几年你还进去的钱里，利息占得多，所以越早还省下的利息越多。这一点用银行 App 的「提前还款试算」直接看数字（中国，2026 年利率）",
         "note": "这里只给算法，不下结论。投资收益能稳定超过房贷利率的情况是少数。但不管你选哪一边，都要先留够应急现金。另外注意看合同里有没有提前还款违约金的条款。不构成投资建议。",
+        "source": "全国银行间同业拆借中心受中国人民银行授权 (2026). 2026 年 8 月 20 日贷款市场报价利率（LPR）公告. <https://www.chinamoney.com.cn/chinese/rdgz/20260820/3399885.html>",
         "grade": "C",
         "meta": {
           "money": "0",
@@ -2941,6 +3095,7 @@ module.exports = {
         "cost": "不花钱。下单前多看一眼售后条款和定金规则。收到货以后，把订单、直播回放截图和聊天记录都留好。难的是不被主播的气氛带着走。",
         "gain": "经营者有欺诈行为的，按价款的三倍赔偿，不足 500 元的按 500 元算。平台明知道或者应该知道卖家侵权却不处理的，要承担连带责任，这笔赔偿你可以直接找平台要。直播间和主播不得虚构交易、关注、浏览、点赞这些流量，也不得发布虚假信息，造成损害的要承担民事责任。组织虚假交易、虚假评价帮人刷宣传的，罚 100 万元以下；情节严重的罚 100 万到 200 万元，还可以吊销执照。定金不得超过合同标的额的 20%。你不履行合同，定金不退；卖家不履行，要双倍返还给你。用个人信息做自动化决策的，不得在交易价格等条件上搞不合理的差别待遇，这就是俗称的大数据杀熟（全国）",
         "note": "「哪个平台性价比最高、不容易买到劣质品」这件事，没有可以引用的官方对比数据，所以本书不给平台排名。能查到的只有整体的抽查结果（见第 32 条，查国家抽检通报）。反不正当竞争法 2025 年修订以后，虚假宣传从旧的第八条改到了第九条。罚则从第二十条改到了第二十五条。新法 2025 年 10 月 15 日起施行。写材料时别抄旧条号。山东那批案例里，有一家公司组织「刷手」做了 75 笔虚假交易、本金 68 万余元，被查处了，罚款数字通报里没有写。七日无理由退货见本节第 23 条（网购善用七日无理由退货）。",
+        "source": "全国人大常委会 (2013 修正). 消费者权益保护法（第四十四、五十五条）. <https://www.samr.gov.cn/zfjcj/tzgg/art/2023/art_615af9ed6bcd4974bf853dd2e02bc663.html>（市场监管总局转载）；国家网信办等七部门 (2021). 网络直播营销管理办法（试行）（第十八、二十八条）. <https://www.gov.cn/zhengce/zhengceku/2021-04/23/content_5601682.htm>；全国人大常委会 (2025 修订). 反不正当竞争法（第九、二十五条）. <https://www.ssf.gov.cn/portal/rootfiles/2025/09/01/1758444945285569-1758444945303119.pdf>（全国社保基金理事会转载）；全国人大 (2020). 民法典（第五百八十六、五百八十七条）. <https://www.court.gov.cn/zixun/xiangqing/233181.html>；全国人大常委会 (2021). 个人信息保护法（第二十四条）. <https://www.stats.gov.cn/gk/tjfg/xgfxfg/202503/t20250310_1958923.html>（国家统计局转载）；山东省市场监管局 (2025). 六起网络不正当竞争典型案例. <https://www.samr.gov.cn/jjj/fbzdjz/art/2025/art_cbaed1c006584baeb6823a6b01325ba4.html>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -2960,6 +3115,7 @@ module.exports = {
         "cost": "不花钱。向平台提出要求就行。",
         "gain": "发生消费争议的时候，直播营销平台的经营者应当按照消费者的要求，提供直播间运营者、直播营销人员的相关信息，以及相关的经营活动记录。直播维权最常见的难处是找不到该告谁，拿到这些信息就知道该告谁了",
         "note": "下单之前把直播画面和主播的承诺录屏留下来。出了问题先向平台要卖家和带货人的信息，再决定是投诉还是起诉。同一个条例还规定了三件事。一是商家不得自己扩大「不适用七日无理由退货」的商品范围。二是不得把「不适用无理由退货」设成默认选项。三是没有经过你确认，不得拒绝你退货。",
+        "source": "国务院 (2024). 中华人民共和国消费者权益保护法实施条例（国务院令第 778 号，2024 年 7 月 1 日施行）. <https://www.gov.cn/zhengce/zhengceku/202403/content_6940159.htm>：「经营者通过网络直播等方式提供商品或者服务的，应当依法履行消费者权益保护相关义务。直播营销平台经营者应当建立健全消费者权益保护制度，明确消费争议解决机制。发生消费争议的，直播营销平台经营者应当根据消费者的要求提供直播间运营者、直播营销人员相关信息以及相关经营活动记录等必要信息。」「直播间运营者、直播营销人员发布的直播内容构成商业广告的，应当依照《中华人民共和国广告法》的有关规定履行广告发布者、广告经营者或者广告代言人的义务。」",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -2979,6 +3135,7 @@ module.exports = {
         "cost": "不花钱。把食品、包装、小票留着，别扔也别洗，当场拍照。先找商家或者平台，谈不成就打 12315。真走到起诉，要几个月。难的是忍住别把东西先扔了。",
         "gain": "因为不符合食品安全标准的食品受到损害的，你可以向经营者要求赔偿损失，也可以向生产者要求。接到你赔偿要求的那一方实行首负责任制，要先行赔付、不得推诿。意思是你找的是谁，谁就得先把钱赔了，不能把你推给另一方。除了要求赔偿损失，你还可以要求对方支付价款十倍或者损失三倍的赔偿金，而且「增加赔偿的金额不足一千元的，为一千元」。但有一处例外：「食品的标签、说明书存在不影响食品安全且不会对消费者造成误导的瑕疵的除外」。司法解释还定了几条。第一，要同时满足三个条件。购买者是因为个人或者家庭生活消费需要买的。食品不符合食品安全标准。又没有证据证明他买的时候就知道。满足了就「以其实际支付价款为基数计算价款十倍的惩罚性赔偿金」。第二，明知不符合标准还是买、然后索赔的，人民法院只「在合理生活消费需要范围内」支持。连续购买、反复起诉的，按多次购买的总数放在同一个范围内认定。第三，有几种瑕疵法院不支持惩罚性赔偿，前提是它不会让消费者对食品安全产生误解。这几种瑕疵是：文字字号不规范，有错别字、多字漏字。还有净含量与规格的标示方式不规范。还有对没有特殊贮存条件要求的食品没有标示贮存条件（全国）",
         "note": "证据的顺序比金额更重要。先拍照录像，把包装、生产日期、异物、购买记录都拍进去，再去联系商家或者平台。别在沟通之前就把东西扔了或者洗了。12315 做的是调解，不是裁决。商家咬死不认，就只剩起诉这条路，小额诉讼怎么算见第 8 节第 22 条（网购、二手交易被骗）。还要注意：吃出头发、虫子这类异物，要不要按「不符合食品安全标准」定性，通常得由市场监管部门认定或者做鉴定，不是你说了算。所以「吃出一根头发就稳拿一千元」这话不成立。普通商品的欺诈按三倍赔、不足 500 元按 500 元算，见本节第 29 条（网购认平台规则和法条）。自己做食品去卖的，要办哪些证、标签怎么写、为什么不许说能治病，这些都另有规定。细节见第 12 节第 8 到 11 条（食品的许可、标签、疗效红线和刑事线）。反过来说，把索赔做成一门生意有明确的红线。一是恶意制造出商家违法生产经营的假象，再拿投诉、起诉来要挟索取赔偿金的，涉嫌敲诈勒索，法院要把线索和材料移送公安。二是拿制造出来的假象去起诉的，法院驳回诉讼请求；构成虚假诉讼的，按情节轻重罚款、拘留，商家还可以反过来告你侵害名誉权。这一条的受益人是自己和家人这一档。",
+        "source": "全国人大常委会 (2025 年第三次修正). 食品安全法（第一百四十八条）. <https://flk.npc.gov.cn/detail?id=7b5a76d0461745a08d3f964916b87ef3>（国家法律法规数据库，2025 年 12 月 1 日起施行）；最高人民法院 (2024). 关于审理食品药品惩罚性赔偿纠纷案件适用法律若干问题的解释（法释〔2024〕9 号，第一、六、七、八、十二、十三、十四、十五、十六条，2024 年 8 月 22 日起施行）. <http://gongbao.court.gov.cn/Details/bf531a70471f10d377788f28d3d8f8.html>（最高人民法院公报）",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -2998,6 +3155,7 @@ module.exports = {
         "cost": "不花钱。花几分钟，在市场监管总局和认监委的官网上查一下。",
         "gain": "2024 年国家监督抽查了 25250 批次产品，不合格率 14.3%。其中电商渠道抽了 7297 批次，不合格率 23.5%，比上一年升了 1.8 个百分点。实体店抽了 8055 批次，不合格率 15.1%。强制性产品认证（3C）的证书，可以在认监委官网的「认证结果」栏里查真伪。能效标识按产品目录强制管理，标识上必须有能效等级、能效指标和能效信息码。伪造、冒用能效标识，或者该标不标的，按节约能源法处罚（全国）",
         "note": "抽查是监管部门挑一部分货来检，结果不等于整个市场的合格率，也不能拿它给平台排名。「查一下能少买到多少劣质品」这件事没有研究，所以定成 B 级。认监委的查询平台 cx.cnca.cn，本节核实的时候打不开，入口以 cnca.gov.cn 首页为准。抽查通报的数字每年更新，用的时候查最新一期。",
+        "source": "市场监管总局 (2025). 关于 2024 年产品质量国家监督抽查情况的通报. <https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/zljds/art/2025/art_02676c16ac634fd9a48ec6ea10eb000d.html>；国家认监委. 官网「认证结果」查询入口. <https://www.cnca.gov.cn/> ；国家发展改革委、国家质检总局 (2016). 能源效率标识管理办法（令第 35 号，第三、七、二十七条）. <https://www.gov.cn/zhengce/2021-11/30/content_5713245.htm>",
         "grade": "B",
         "meta": {
           "money": "0",
@@ -3017,6 +3175,7 @@ module.exports = {
         "cost": "不花钱。只是别把「以后能升值」算进你买它的理由里。难的是忍住不为「保值」加预算。",
         "gain": "先看买入这一头。《消费税税目税率表》定的税率是这样的。「高档手表」20%。「贵重首饰及珠宝玉石」里，金银首饰、铂金首饰、钻石及钻石饰品 5%。其他贵重首饰和珠宝玉石 10%。「高档手表」的口径是「销售价格（不含增值税）每只在 10000 元（含）以上的各类手表」。再看变现这一头，依据是《典当管理办法》。第三十六条：典当期限最长不得超过 6 个月。第三十七条讲的是当金利率，指典当行借给你那笔钱的利息。这个利息按中国人民银行公布的 6 个月期法定贷款利率和典当期限折算。利息不得预扣，不能从给你的钱里先扣走。第三十八条：动产质押典当（押手表玉石这类东西）的月综合费率，不得超过当金的 42‰，每月另收的综合费用不超过借款额的 4.2%。房地产抵押是 27‰，财产权利质押是 24‰。第四十条：期限到了以后 5 日内既不赎当也不续当，就算绝当，东西不再等你来赎。第四十三条：估价金额 3 万元以上的绝当物，可以委托拍卖。拍卖收入要先扣掉拍卖费用和当金本息。剩下的退还给当户，不够的部分还要向当户追索（全国）",
         "note": "押给典当行要算清楚：每月的综合费用上限是借款额的 42‰，一年就是借款额的五成左右，借款的利息还要另算。这个「一年五成」是拿月费率直接乘 12 算的粗账，用来看个量级，不是精确的一年利率。税率和费率都是明文写着的数字。但「这类东西长期能不能升值」没有可以引用的官方统计，本书不做预测，也不点评任何品类。要拦的只是把消费当投资的那部分理由：喜欢、戴着高兴，按消费买没问题；以「保值」「以后能卖更高」为理由把预算加上去，才是亏钱的地方。黄金也分两头：按克重买卖的投资性金条，和按件卖的首饰不是一回事。首饰的价钱里含设计费和工费，回收的时候通常不算这部分。二手平台上的挂牌价不是成交价，别当行情看。",
+        "source": "国务院 (2008). 中华人民共和国消费税暂行条例（国务院令第 539 号，附《消费税税目税率表》）. <https://www.gov.cn/zhengce/zhengceku/2008-11/14/content_1795.htm>；财政部、国家税务总局 (2006). 关于调整和完善消费税政策的通知（财税〔2006〕33 号）. <http://www.mof.gov.cn/zhengwuxinxi/zhengcefabu/2006zcfb/200805/t20080524_34758.htm>；商务部、公安部 (2005). 典当管理办法（2005 年第 8 号令，第三十六、三十七、三十八、四十、四十三条）. <https://www.gov.cn/gongbao/content/2005/content_93074.htm>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -3036,6 +3195,7 @@ module.exports = {
         "cost": "不花钱。下单之前查一次出证机构的资质，几分钟就够。",
         "gain": "先看规则，依据是《检验检测机构资质认定管理办法》。第二条：资质认定，是对「向社会出具具有证明作用的数据、结果」的检验检测机构做的评价许可：先审查它，再发给它出证书的资格。第十五条：资质认定标志由 CMA 图案和资质认定证书编号两部分组成。第二十一条：机构对外出具有证明作用的数据、结果的，应当在检验检测报告上标注资质认定标志。第二十二条：资质认定部门应当在官方网站上公布取得资质认定的机构信息，并注明证书状态。第三十四条：没有依法取得资质认定就擅自对外出具有证明作用的数据、结果的，处 3 万元罚款。第三十七条：伪造、变造、冒用资质认定证书或者标志的，处 3 万元以下罚款。再看官方案例，出自市场监管总局 2026 年 6 月 4 日公布的传统工艺市场「打假清源」典型案例。一，江苏东海一个直播间宣称，卖的是「天然的、无酸洗、无优化、缅甸的 A 货」。直播间还配了「国检证书」。送检结果却是石英岩玉（染色）、翡翠（处理）、玻璃和塑料。那张证书是当事人自己联系人做出来的。二，同一个县还有一案，扣押了 469 件疑似假冒的天然水晶制品，检出 210 件是天然水晶、259 件是合成水晶。三，河南镇平一家店铺私自做了一块展板，用于直播。展板上写的是「GIA CMA 中玉珠宝玉石鉴定中心认证合作单位」。这家店还从网上买了 181 只「国家珠宝玉石质量监督检验中心」的合格证标识。这些标识配着手镯一起卖（全国）",
         "note": "珠宝玉石的名称有国家标准。检测结论写出来是「石英岩玉（染色）」「翡翠（处理）」这种带括号的形式，括号里那两个字就是差价所在。「A 货」「老坑」「无优化」是卖家的话术，不是鉴定结论。前面那家卖染色石英岩玉的直播间，用的就是这套词。同一批案例里还有别的花样：伪造矿区现场、安排人扮成「矿工」直播，安排水军在直播间烘托气氛，编「急用钱」「亲人重病」的剧本。还有宣称商品能「防治风湿病、提高免疫力、改善睡眠质量、疏通血管」的，这一类按虚假宣传查处。买大件的通用查法见本节第 32 条（查抽检通报和 3C 认证）。直播间出了事该找谁，见第 29、30 条（网购认平台规则、直播间出问题找平台要信息）。",
+        "source": "国家质量监督检验检疫总局 (2015 公布，2021 修改). 检验检测机构资质认定管理办法（第二、十五、二十一、二十二、三十四、三十七条）. <https://www.gov.cn/zhengce/2021-04/22/content_5723677.htm>；国家市场监督管理总局 (2026). 市场监管总局公布一批传统工艺市场「打假清源」典型案例. <https://www.samr.gov.cn/xw/zj/art/2026/art_1529399cfe874b8780c4496eb0158020.html>；国家标准化管理委员会. GB/T 16552—2017《珠宝玉石 名称》（现行，2018 年 5 月 1 日实施）. <https://openstd.samr.gov.cn/bzgk/gb/newGbInfo?hcno=18FFB042811998A0309E05CF452B2438>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -3055,6 +3215,7 @@ module.exports = {
         "cost": "不花钱。只是买之前把预算定死。难的是没抽到想要的那个，还要停手。",
         "gain": "依据是《盲盒经营行为规范指引（试行）》。第九条列了一串关键信息，应当以显著方式对外公示，保证消费者买之前就知道。这些信息是：商品名称、种类、样式、抽取规则、商品分布、限量商品投放数量、抽取概率、商品价值范围。同一条还规定了三件不许做的事。一是不得通过后台操纵改变抽取结果、随意调整抽取概率等方式变相诱导消费。二是不得用折现、回购、换购等方式拒绝或者故意拖延发放盲盒。三是不得设置空盒。第十一条只是「鼓励」经营者建立保底机制，通过设定抽取时间、抽取金额上限和次数上限等方式引导理性消费。第十七条管的是以互联网形式卖的盲盒商品。经营者充分告知提示了，消费者也在单次购买时确认了，这种盲盒拆封后可以不适用七日无理由退货。经营者不得用默认勾选的方式替代消费者的确认环节。第二十一条：不得以盲盒的名义从事或者变相从事赌博活动。第二十三条：不得向未满 8 周岁的未成年人销售盲盒；向 8 周岁及以上的未成年人销售，应当依法确认已经取得相关监护人的同意（全国）",
         "note": "这份文件是指引，管的是经营者该怎么做，它本身不是处罚依据。真出了事，按产品质量法、反不正当竞争法、消费者权益保护法处理。有三种情况是你能投诉的具体事由：概率没公示，公示的概率和实际对不上，买到空盒。投诉之前，先把页面上的规则和开箱的过程录屏留下来。拆封后不适用七日无理由退货有个前提：商家充分告知了，你在单次购买时也确认了，而且不得用默认勾选替你确认。卖给未成年人另有规定：不满 8 周岁的孩子商家不得卖给他，8 周岁及以上的要先确认已经取得监护人同意。孩子拿手机充值打赏怎么退款，见本节第 9 条（孩子用手机充值打赏）。大额非必需购买的 24 小时冷静期，见第 23 条（大额非必需购买设冷静期）。「买到手就淡了、于是接着买」这个循环，见第 6 节第 23 条（别指望买东西改善心情）。",
+        "source": "市场监管总局 (2023). 盲盒经营行为规范指引（试行）（国市监稽发〔2023〕39 号，第九、十一、十七、二十一、二十三条）. <https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/zfjcs/art/2023/art_e2facd76a7fb4e90b03912cffb5e7d53.html>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -3074,6 +3235,7 @@ module.exports = {
         "cost": "不花钱。同样的东西，预包装的通常比散装贵一点。看一眼配料表，几秒钟。",
         "gain": "食品安全法第六十七条规定，预包装食品的包装上应当有标签。标签必须标明九项内容。其中第二项是「成分或者配料表」，第七项是「所使用的食品添加剂在国家标准中的通用名称」。第六十八条对散装食品的要求少得多。原文是：食品经营者销售散装食品，应当在散装食品的容器、外包装上标明「食品的名称、生产日期或者生产批号、保质期以及生产经营者名称、地址、联系方式等内容」。这一条没有提配料表，也没有提添加剂。冷冻水产品是这个差别最明显的地方。GB 2760—2024 允许在冷冻水产品里用磷酸及磷酸盐做水分保持剂，俗称保水剂。最大使用量是 5.0 g/kg，以磷酸根计。在这个量以内用是合法的。出问题的是超量用和包冰增重。2025 年央视 3·15 晚会曝光虾仁「违规超量添加保水剂（复合磷酸盐）及包冰增重」之后，市场监管部门要求企业「产品标签应明确标注保水剂（如磷酸盐）成分、净含量（扣除冰衣重量）、配料表」（全国，食品安全法 2025 年第三次修正，2025 年 12 月 1 日起施行）",
         "note": "「没标」不等于「没加」，只等于法律没要求标。想知道成分，就买预包装的那一版。冻虾仁、冻鱼块这类，预包装上的净含量是扣掉冰衣之后的重量。按它算单价才是真实价格。散装的按标价算，解冻后可能缩掉一大截。保水剂在限量内是合法的，也不是安全问题，别把它当毒。超量添加和包冰增重是钱的问题：你按水产品的价钱买了水。反过来，散装柜台该标的那四样也可能没标。名称、生产日期、保质期、生产经营者的名称地址电话，少一样就违反第六十八条。可以不买，也可以打 12315。你自己开店卖装袋食品时该怎么标，见第 12 节第 9 条（预包装食品标签）。这条的受益人是你自己和家人，属于最高的两档。",
+        "source": "全国人大常委会 (2025 年第三次修正). 中华人民共和国食品安全法（第六十七、六十八条，2025 年 9 月 12 日公布，2025 年 12 月 1 日施行）. <https://flk.npc.gov.cn/detail?id=7b5a76d0461745a08d3f964916b87ef3>；国家卫生健康委员会、国家市场监督管理总局 (2024). 食品安全国家标准 食品添加剂使用标准（GB 2760—2024，附录 A 表 A.1「磷酸及磷酸盐」项下食品分类号 09.02.01 冷冻水产品；A.3 规定表 A.1 列出的食品添加剂按照规定的使用范围和最大使用量使用）. <https://www.gov.cn/zhengce/zhengceku/202403/content_7001729.htm>；六安市市场监督管理局 (2025). 关于水产制品及使用保水剂的相关企业提醒告诫函（2025 年 3 月 24 日）. <https://scjgj.luan.gov.cn/zwzx/tzgg/5414606.html>",
         "grade": "A",
         "meta": {
           "money": "少",
@@ -3093,6 +3255,7 @@ module.exports = {
         "cost": "不花钱。难的是承认这一笔已经亏了，然后把它卖掉。",
         "gain": "这项研究看的是美国一家折扣券商 10,000 个账户 1987 到 1993 年的全部交易记录。盈利股被卖出的比例（PGR）是 0.148。亏损股被卖出的比例（PLR）是 0.098。两者相差 0.050，t 值超过 35。按天算，涨了的股票被卖掉的可能性比跌了的高 50% 以上。同一批账户给亏损股加仓也更积极。亏损股被再买一次的比例是 0.135，盈利股是 0.094，t 值 19。研究还检验了「留着的会涨回来」这个想法。结果是反的：卖掉的盈利股在此后一年的超额收益，平均比留着没卖的亏损股高 3.4 个百分点。超额收益指的是比市场指数多出来的那一部分。作者还按平均值算过一个例子。同样卖掉 1000 美元的股票，卖亏损的那只比卖盈利的那只，此后一年回报高约 4.4%。这 4.4% 里含了卖亏损股提前抵税省下的钱。抵税是按美国的税制算的（美国，1987 到 1993 年）",
         "note": "这一条管的是「卖不卖」，第 15 条（不频繁交易股票）管的是「别老动手」，两条不冲突。事先定好规则再照着执行，动手次数反而更少。往下补仓摊平成本，算术上没错，多买一点平均成本就是低一点。错的是把它当成翻身的办法，它的实际效果是把你押在这一只股票上的钱变多了，见第 19 条（别把钱押在一只股票）。抵税那一段是按美国税制算的，中国不照搬，其余部分仍然成立。这是美国 1980 到 1990 年代的账户数据，A 股的交易成本和税制都不一样。不构成投资建议。",
+        "source": "Odean T (1998). Are Investors Reluctant to Realize Their Losses? The Journal of Finance 53(5):1775-1798. <https://doi.org/10.1111/0022-1082.00072>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -3112,6 +3275,7 @@ module.exports = {
         "cost": "不花钱。在自己的银行或证券 App 里就能买 QDII 基金，几分钟。代价是能买的品种比境外券商少。",
         "gain": "2026 年 5 月 22 日，证监会、工业和信息化部、公安部、中国人民银行、市场监管总局、金融监管总局、国家网信办、国家外汇局八个部门印发《综合整治非法跨境证券期货基金经营活动实施方案》。总体要求是「经过2年集中整治，全面取缔境外证券期货基金经营机构非法跨境经营活动」。境外机构不得在境内开展营销招揽，不得「提供相关开户、处理交易指令、资金划转等交易服务」。对已经开了户的人，方案写的是「禁止境外机构为存量投资者在境内非法提供买入交易、转入资金等服务，只允许单向卖出交易并转出资金」。两年期满后，「全面关停境内网站、交易软件及配套服务器」。同一天证监会通报，拟没收老虎、富途、长桥境内外相关主体全部违法所得，并依法严厉处罚。配套的答记者问写明，要「引导境内投资者通过港股通、合格境内机构投资者（QDII）及跨境理财通等合法渠道开展境外投资」。换汇这头，国家外汇局的《个人购汇申请书》写明，个人购汇「不得用于境外买房、证券投资、购买人寿保险和投资性返还分红类保险等尚未开放的资本项目」。违规的人列入「关注名单」，「当年及之后连续 2 年不享有个人便利化额度」，还会被行政处罚、移送反洗钱调查，信息纳入个人征信记录（全国，2026 年 5 月起）",
         "note": "这几份文件管的是境外机构，没有写对投资者本人的处罚。已经在境外券商有账户的，两年内卖出、把钱转回来即可。三条合法渠道各有开通条件，先在自己的银行或券商问清楚。美股过去涨得多，不代表以后也会。买 QDII 同样按第 17 条（宽基指数基金）和第 19 条（别把钱押在一只股票、一个平台、一套房上）的办法，挑宽基指数，别押在单一市场上。境外取现另有额度，见第 21 节第 6 条（境外取现）。不构成投资建议。",
+        "source": "中国证监会 (2026-05-22). 中国证监会等八部门联合印发《综合整治非法跨境证券期货基金经营活动实施方案》. <https://www.csrc.gov.cn/csrc/c100028/c7634324/content.shtml>；中国证监会 (2026-05-22). 中国证监会有关部门负责人就《综合整治非法跨境证券期货基金经营活动实施方案》答记者问. <https://www.csrc.gov.cn/csrc/c100028/c7634328/content.shtml>；中国证监会 (2026-05-22). 证监会严肃查处老虎等机构非法跨境展业案件. <https://www.csrc.gov.cn/csrc/c100028/c7634330/content.shtml>；国家外汇管理局 (2021). 个人购汇申请书（附件 1）. <https://www.safe.gov.cn/safe/file/file/20210402/30fab7a9646f417ca9d2f67ff4c1e5f0.pdf>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -3131,6 +3295,7 @@ module.exports = {
         "cost": "不花钱。要做的是把家里可能遇到的大损失列一遍，看哪几样存款扛不住。一次半小时。",
         "gain": "保险公司收上来的保费，只有一部分会作为赔款付出去。剩下的要付销售和运营的费用，还有公司的利润。监管要求卖个人短期健康险的公司，每半年在官网公布一次「综合赔付率」。它大致是赔出去的钱占保费的比例，想知道一家公司赔出去多少，可以去它官网查。所以对一件损失来说，买保险长期平均是亏一点钱。换来的是把一次能压垮家里的大额支出，摊成每年一笔小钱。损失越小、你越掏得起，这笔交换越不划算。按这个标准，书里已经写过的几样是值得买的。一年期医疗险见第 7 节第 20 条（一年期医疗险）。有车的人见本节第 26 条（三者险）。出国的人见第 21 节第 4 条（境外医疗）。家里有人靠你的收入过日子的，见本节第 40 条（定期寿险）（全国，2021 年起）",
         "note": "定 C 级，是因为没有官方数字能算出哪种保险买了划算，这里给的是取舍的办法。碎屏险、航班延误险这类，损失几百元，自己掏得起，按这个标准可以不买。重疾险赔的是生病停工那几年的收入，存款够撑一两年停工的人，可以考虑不买。基本医保是社会保险，不按这个办法取舍，照样要交，见第 7 节第 9 条（居民医保）。小损失靠什么兜，见本节第 27 条（应急金）。这条的受益人是你自己和家人。",
+        "source": "中国银保监会办公厅 (2021). 关于规范短期健康保险业务有关问题的通知（银保监办发〔2021〕7 号，综合赔付率按半年在公司官网披露）. <https://www.gov.cn/zhengce/zhengceku/2021-01/12/content_5579193.htm>",
         "grade": "C",
         "meta": {
           "money": "0",
@@ -3150,6 +3315,7 @@ module.exports = {
         "cost": "一年几百到几千元，看年龄、保额和保多少年（作者粗估，无官方数字）。投保前要如实告知健康状况，一次性花半小时。",
         "gain": "监管对寿险的定义是：以人的寿命为保险标的的人身保险，分定期寿险、终身寿险、两全保险等。定期寿险以被保险人死亡为给付保险金的条件，保险期间是固定的年数。终身寿险保到终身。意外伤害保险只在意外事故导致身故、残疾时才赔，生病去世不赔，代替不了寿险。以死亡为给付条件的合同，要经被保险人本人同意并认可保额，否则合同无效。父母给未成年子女投保死亡保险不受这条限制，但因孩子死亡给付的保险金总和，不得超过监管机构规定的限额。寿险保额通常在数十万元级，收益因此定为大。保额买多少没有官方口径。作者的算法是：没还完的房贷，加上孩子长到成年前的开销，再加几年的家用（全国，2015 年修正）",
         "note": "定 C 级，是因为官方只有定义和限额，「先保大人」是按「谁的收入断了家里过不下去」推出来的。孩子出事，家里并不会少一份收入。家里挣钱的人走了，房贷和孩子的开销还在。钱有限时，先给挣钱的人买定期寿险和一年期医疗险，再轮到孩子的医疗险。如实告知和保证续保怎么看，见第 7 节第 20 条（一年期医疗险）。这条的受益人落在第 ② 档，是你的配偶和孩子。",
+        "source": "中国保险监督管理委员会 (2011). 人身保险公司保险条款和保险费率管理办法（保监会令 2011 年第 3 号，第八、十二条）. <http://www.gov.cn/gongbao/content/2012/content_2163594.htm>；全国人大常委会 (2015 修正). 中华人民共和国保险法第三十三、三十四条. <https://flk.npc.gov.cn/detail?id=2c909fdd678bf17901678bf7c4060811>",
         "grade": "C",
         "meta": {
           "money": "多",
@@ -3169,6 +3335,7 @@ module.exports = {
         "cost": "不花钱。打保险公司的客服电话或者去柜台办，十几分钟。难的是签完以后，在 15 天里静下心把合同读一遍。",
         "gain": "保险期间超过一年的人身险，监管要求写明犹豫期从哪天算、有几天。投保人在犹豫期里有什么权利，也要写明。长期健康险的犹豫期不得少于 15 天。在银行买的、保险期间超过一年的保险，合同里一律约定 15 日犹豫期。它从你收到保单并书面签收那天算起，按自然日算。这类保单的封面上要印这句提示：「您在收到保险合同后15日内有全额退保（扣除不超过10元的工本费）的权利。超过15日退保有损失。」过了犹豫期，你仍然可以随时解除合同。保险公司要在 30 日内，按合同约定退还保单的现金价值（保单里能退的那部分钱）。金融监管部门的风险提示说，长期人身险犹豫期后退保，现金价值往往低于已交的总保费。一年以上的人身险新单，保险公司要在犹豫期内回访你。回访要确认你知不知道退保的损失和犹豫期的权利（全国，2010、2019 年起）",
         "note": "犹豫期是给一年以上人身险定的规矩。一年期的医疗险、意外险，规定里没要求，有没有要看条款。不在银行买的，天数以合同写的为准，拿到保单先翻「犹豫期」那一条。储蓄型、分红型保险交的钱多，犹豫期最值得用上，见本节第 25 条（消费型）。收益定「中」，是因为能省下的是交的保费和现金价值之间的差，常见在数百到数千元，没有官方统计。这条的受益人是你自己。",
+        "source": "中国银保监会办公厅 (2019). 商业银行代理保险业务管理办法（银保监办发〔2019〕179 号，第三十六、六十七、六十八条）. <https://www.gov.cn/zhengce/zhengceku/2019-12/03/content_5457853.htm>；中国银保监会 (2019). 健康保险管理办法（银保监会令 2019 年第 3 号，第十五条）. <https://www.gov.cn/zhengce/zhengceku/2019-12/04/content_5458542.htm>；中国银保监会 (2022). 一年期以上人身保险产品信息披露规则（银保监规〔2022〕24 号，产品说明书要列明犹豫期的起算时间、天数和权利）. <https://www.gov.cn/zhengce/zhengceku/2023-01/04/content_5735014.htm>；中国保险监督管理委员会 (2010). 人身保险业务基本服务规定（保监会令 2010 年第 4 号，第十五条）. <http://www.gov.cn/gongbao/content/2010/content_1702219.htm>；全国人大常委会 (2015 修正). 中华人民共和国保险法第十五、四十七条. <https://flk.npc.gov.cn/detail?id=2c909fdd678bf17901678bf7c4060811>；宁夏金融监管局 (2026-06-16). 关于防范非法代理退保的风险提示. <https://www.nfra.gov.cn/branch/ningxia/view/pages/common/ItemDetail.html?docId=1261442&itemId=2188>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -3188,6 +3355,7 @@ module.exports = {
         "cost": "不花钱。签字前多看两分钟合同封面。",
         "gain": "规定写明，银行不得把保险和储蓄存款、基金、银行理财混在一起卖。不得把保险的收益和存款简单类比，不得把不确定的收益说成保证收益。保险单证和宣传材料不许用银行的名称和标识，不许出现「存款」「储蓄」「与银行共同推出」这类字样。保险单封面要用不小于 72 号的字印「保险合同」，用不小于二号的字印保险公司名称。有三种人买保险，原则上只能卖保单利益确定的产品：投保人超过 65 周岁的；买期缴产品、投保人超过 60 周岁的；填的年收入低于当地居民人均可支配收入的。这三种人的保单还要转给保险公司人工核保，不许在网点自动出单。保险公司的人不许在银行网点里卖保险。银行卖的一年以上保险，有 15 日犹豫期，过了犹豫期退保就有损失（全国，2019 年 10 月起）",
         "note": "定 B 级，是因为规定写得很清楚，但没有「被误导的人亏了多少」的官方数字。家里老人在银行存钱时最容易碰上，陪他们去的时候帮着看一眼封面。已经签了的，在 15 天内按本节第 41 条（犹豫期）退掉。觉得被误导了怎么投诉，见本节第 43 条（代理退保）。这条的受益人是你自己和家里老人。",
+        "source": "中国银保监会办公厅 (2019). 商业银行代理保险业务管理办法（银保监办发〔2019〕179 号，第三十、三十一、三十二、三十六、四十二、四十九条）. <https://www.gov.cn/zhengce/zhengceku/2019-12/03/content_5457853.htm>",
         "grade": "B",
         "meta": {
           "money": "0",
@@ -3207,6 +3375,7 @@ module.exports = {
         "cost": "不花钱。自己打保险公司客服电话或者去柜台，比交给中介多跑一两趟。",
         "gain": "2026 年 2 月，金融监管总局、中央网信办、公安部、中国人民银行、中国证监会联合发了风险提示。它说「全额退保」这类说法属于不实信息，和保险法等法律法规不符。「代理维权」的人会收高额服务费，你中途想退出，还可能因为「违约」吃官司。他们还会收集你的手机卡、银行卡、保单、家庭住址、孩子的学校这些信息。这些信息被倒卖，你可能碰上电信诈骗和盗刷。宁夏金融监管局 2026 年 6 月的提示写得更细。这类中介约定退保成功后，收退保金额 30% 到 50% 的代理费，中途不干了要交高额违约金。他们教人编造销售误导、代签名这类理由去投诉。照做的人可能违反治安管理处罚法，严重的可能涉嫌诬告陷害或敲诈勒索的共同犯罪。退保后保险责任马上终止。以后再买同类保险，可能因为年纪大了、身体查出问题，而涨价或者被拒保。真被误导了，先找保险公司官方客服投诉协商，谈不拢打 12378 银行保险消费者投诉维权热线，全程免费。只是一时交不起保费，可以先问保险公司能不能办减额交清、保单贷款这类服务。减额交清就是以后不再交钱，保额按比例降下来（全国，2026 年）",
         "note": "湖南金融监管局 2025 年通报过一个案例。一位女士被「朋友」劝去代理退保，交了「咨询费」，最后还是按现金价值退的保。退保 3 个月后，她确诊乳腺癌，那份重疾险已经没了。退不退要自己算：保障还用得上的，交不起就先问减额交清。自己在犹豫期里退，见本节第 41 条（犹豫期）。这条的受益人是你自己。",
+        "source": "金融监管总局、中央网信办、公安部、中国人民银行、中国证监会 (2026-02-06). 关于警惕不法「代理维权」短视频及直播陷阱的风险提示（中央网信办官网转载）. <https://www.cac.gov.cn/2026-02/06/c_1772110875635198.htm>；宁夏金融监管局 (2026-06-16). 关于防范非法代理退保的风险提示. <https://www.nfra.gov.cn/branch/ningxia/view/pages/common/ItemDetail.html?docId=1261442&itemId=2188>；湖南金融监管局 (2025-07-23). 关于防范非法「代理退保」黑灰产的风险提示. <https://www.nfra.gov.cn/branch/hunan/view/pages/common/ItemDetail.html?docId=1218753&itemId=1480>",
         "grade": "B",
         "meta": {
           "money": "0",
@@ -3226,6 +3395,7 @@ module.exports = {
         "cost": "不花钱。投保时填一次，以后改受益人要书面通知保险公司。",
         "gain": "保险法规定，受益人由被保险人或者投保人指定。投保人指定的，要经被保险人同意。有三种情况，保险金算被保险人的遗产，按继承的规矩给。一是没指定受益人，或者指定得不清楚。二是受益人死在被保险人前面，又没有别的受益人。三是受益人依法丧失或者放弃受益权，又没有别的受益人。受益人和被保险人在同一件事里去世、分不清先后的，推定受益人先死。算作遗产的钱，要先清偿去世的人欠的税和债，剩下的才分。最高法的解释写明：受益人写成「姓名加身份关系」，出事时身份关系变了，算没指定受益人。改受益人没通知保险公司的，对保险公司不生效。领钱的诉讼时效，人寿保险是 5 年，其他保险是 2 年，都从知道或者应当知道出事那天算起。寿险保额通常在数十万元级，收益因此定为大（全国，2015 年修正、2021 年起）",
         "note": "诉讼时效过了，保险公司可以拒绝给钱，打官司也很难要回来。所以家里人至少要知道你在哪几家公司买过保险。离婚、再婚、孩子出生以后，回头把受益人改一次。人走了以后逐个去取各处的钱，见第 25 节第 9 条（逐个去取）。用死还债这条路走不通，见第 29 节第 13 条（还债）。这条的受益人落在第 ② 档，是你的配偶和孩子。",
+        "source": "全国人大常委会 (2015 修正). 中华人民共和国保险法第二十六、三十九、四十一、四十二条. <https://flk.npc.gov.cn/detail?id=2c909fdd678bf17901678bf7c4060811>；最高人民法院 (2020 修正). 关于适用《中华人民共和国保险法》若干问题的解释（三）第九条第二款第三项、第十条. <https://flk.npc.gov.cn/detail?id=ff808181799df4000179ac03d7f21115>；全国人大 (2020). 中华人民共和国民法典第一千一百五十九条. <https://flk.npc.gov.cn/detail?id=ff808081729d1efe01729d50b5c500bf>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -3245,6 +3415,7 @@ module.exports = {
         "cost": "不花钱。不买币，不进「带单」「稳赚」的币圈群。代价是币价上涨的时候赚不到。",
         "gain": "2026 年 2 月，人民银行等八个部门发了银发〔2026〕42 号通知。通知写明，比特币、以太币、泰达币这类虚拟货币「不具有法偿性，不应且不能作为货币在市场上流通使用」。人民币换币、币换币、发币融资，都属于非法金融活动，「一律严格禁止」。境外机构也不许给境内的人提供这类服务。个人投资这一头，通知原话是：「任何单位和个人投资虚拟货币、现实世界资产代币及相关金融产品，违背公序良俗的，相关民事法律行为无效，由此引发的损失由其自行承担」。2021 年的银发〔2021〕237 号通知同时废止，这句话在新通知里保留了。法院案例：汤某 2018 年 2 月到 2019 年 7 月，向两个自称平台商户的人买泰达币，付了约 44.8 万元（精确值 448000 元）。后来平台提不了现，也登不上。他起诉要回这笔钱。法院认为用人民币换虚拟货币，这个投资行为无效，损失由他自己承担，驳回了起诉，二审维持（江苏宜兴，2025 年 3 月发布）。被偷是另一回事：有人账户里价值 400 余万元的虚拟币被「黑客」盗走，其中一名盗窃者被以盗窃罪判 7 年，罚 2 万元（河南郑州）",
         "note": "「损失自己承担」管的是你和卖币、带单的人之间的钱款纠纷，法院不帮你把投资款要回来，所以别指望事后起诉。被人偷走、骗走属于刑事案子，照样报警。已经有币的人还要防扫码盗币。江苏涟水有人和对方见面扫了一个码，钱包里约 5.7 万个泰达币被转走。这些币价值约 39.4 万元（精确值 393665.461434 元），人民法院报刊文认为应按盗窃罪处理。美国联邦调查局 2022 年警示过一种类似手法：钱包里弹出一串权限，你点了同意，对方就能不限数额地转走你的币。它给的防法是：拿不准的网站不连钱包，定期用第三方的授权查询工具，看看钱包给过哪些网站转币权限。用自己的银行卡替别人收钱、买币、转币，是另一件事，可能被判刑，见第 9 节第 5 条（「兼职」要你用自己的卡收钱）。承诺高回报的「理财」怎么认，见第 6 条（看到「高收益」「保本」「稳赚」直接走开）。想买海外资产的合法渠道，见第 38 条（买美股走 QDII 基金或港股通）。不构成投资建议。",
+        "source": "中国人民银行、国家发展改革委、工业和信息化部、公安部、市场监管总局、金融监管总局、中国证监会、国家外汇局 (2026). 关于进一步防范和处置虚拟货币等相关风险的通知（银发〔2026〕42 号，第一、十九条）. <https://www.csrc.gov.cn/csrc/c100028/c7614318/content.shtml>（中国证监会发布）；宜兴市人民法院 (2025). 投资虚拟货币受损 风险责任自行承担. <https://yx.wxfy.gov.cn/article/detail/2025/09/id/8970543.shtml>；【新时代检察好故事】偷了虚拟币 被判盗窃罪 (2024). <https://www.yw.gov.cn/art/2024/2/2/art_1229143073_59471301.html>（义乌市人民政府网转载）；人民法院报 (2024). 非法窃取虚拟货币行为的刑法定性. <http://www.sdcourt.gov.cn/jningzcfy/386500/386502/31441533/index.html>（邹城市人民法院网转载）；Federal Bureau of Investigation (2022). Scammers Target and Exploit Owners of Cryptocurrencies in Liquidity Mining Scam (Alert Number I-072122-PSA). <https://www.ic3.gov/PSA/2022/PSA220721>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -3266,6 +3437,7 @@ module.exports = {
         "cost": "一天约 0.5 到 2 元，一年 200 到 700 元。吃它不费时间，一粒的事。吃久了容易产生依赖，觉得哪天没吃就像少做了点什么。",
         "gain": "PHS II 试验找了 14,641 名男医生，跟踪了 11.2 年（这是中位数，一半人比它长、一半人比它短）。吃的人和不吃的人，心脏血管出大事的比例一样。主要心血管事件 HR 1.01（HR 是风险比，1 就是两边一个样）。95% CI 0.91–1.10 是这个数的可信范围。死亡也一样，全因死亡 HR 0.94（0.88–1.02）。美国给预防措施打分的机构 USPSTF，2022 年把 9 项随机分组的对照试验、51,550 人合起来算，结果是多维片和总死亡没有关联。评级 I，意思是证据不够、说不清。它看起来划算，是因为「一片补齐所有营养」听着顺，而且一天只要几毛钱",
         "note": "争议：同一批男医生里还看过癌症。吃的人得癌症的比例低约 8%（0.86–0.998，P=0.04，勉强够上「不像碰巧」的线）。因为癌症死掉的比例低约 12%（0.77–1.01）。这个范围跨过了 1，所以可能只是偶然。这点好处很小，而且只在男医生身上看到过。查出来确实缺营养的人、孕妇（补叶酸）、平时吃得实在很偏的人，不算在内，按医生说的补",
+        "source": "Sesso HD et al. (2012). Multivitamins in the prevention of cardiovascular disease in men: the Physicians' Health Study II randomized controlled trial. JAMA. <https://doi.org/10.1001/jama.2012.14805>；US Preventive Services Task Force (2022). Vitamin, Mineral, and Multivitamin Supplementation to Prevent Cardiovascular Disease and Cancer. JAMA. <https://doi.org/10.1001/jama.2022.8970>；Gaziano JM 等 (2012). Multivitamins in the Prevention of Cancer in Men. JAMA. <https://doi.org/10.1001/jama.2012.14641>（备注里那项癌症结果）",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -3285,6 +3457,7 @@ module.exports = {
         "cost": "一天约 1 到 3 元，一年 400 到 1000 元。吃它不费时间。",
         "gain": "VITAL 试验找了 25,871 人，每天吃 1 克鱼油，跟踪了 5.3 年（中位数）。心脏血管出大事和死亡，两边都没看出差别。主要心血管事件 HR 0.92（HR 是风险比，1 就是两边一个样）。95% CI 0.80–1.06 是这个数的可信范围。它跨过了 1，说明看不出差别。全因死亡 HR 1.02（0.90–1.15）。ASCEND 试验找了 15,480 名糖尿病患者，也是每天 1 克，平均跟踪 7.4 年，同样没看出差别。严重血管事件 RR 0.97（0.87–1.08）。全因死亡 RR 0.95（0.86–1.05）。它看起来划算，是因为很多人把「吃鱼有好处」直接当成了「吃鱼油胶囊有好处」",
         "note": "争议：有一项试验是有效的。REDUCE-IT 试验找了 8,179 人，他们本来就有心血管病或糖尿病，都在吃他汀，甘油三酯还偏高（135–499 mg/dL）。他们每天吃 4 g 纯 EPA 的处方药，出事的比例 17.2% 对 22.0%。风险低约四分之一（HR 0.75，0.68–0.83）。但那是给高危病人开的大剂量处方药，不等于普通人吃保健品鱼油。这里说的也不包括吃鱼本身",
+        "source": "Manson JE et al. (2019). Marine n-3 Fatty Acids and Prevention of Cardiovascular Disease and Cancer. NEJM. <https://doi.org/10.1056/NEJMoa1811403>；ASCEND Study Collaborative Group (2018). Effects of n-3 Fatty Acid Supplements in Diabetes Mellitus. NEJM. <https://doi.org/10.1056/NEJMoa1804989>；Bhatt DL 等 (2019). Cardiovascular Risk Reduction with Icosapent Ethyl for Hypertriglyceridemia. New England Journal of Medicine. <https://doi.org/10.1056/NEJMoa1812792>（备注里那项高纯度处方鱼油试验）",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -3304,6 +3477,7 @@ module.exports = {
         "cost": "一天约 0.2 到 0.5 元，一年 100 到 200 元。钱不算多，真正的代价是以为自己已经做了预防。",
         "gain": "VITAL 试验找了 25,871 人，每天吃 2000 IU，跟踪了 5.3 年（中位数）。癌症、心脏血管的毛病和死亡都没看出差别。会扩散的那类癌 HR 0.96（HR 是风险比，1 就是两边一个样；95% CI 0.88–1.06 是可信范围）。主要心血管事件 HR 0.97（0.85–1.12）。全因死亡 HR 0.99（0.87–1.12）。D-Health 试验找了 21,315 名 60 岁以上的澳大利亚人。他们每月吃 60,000 IU，跟踪 5 年。这一项也没看出差别，全因死亡 HR 1.04（0.93–1.18）。死亡的比例是 5.3% 对 5.1%。它看起来划算，是因为有些研究只跟踪记录、不做任何干预，发现维 D 水平低的人死得多，这被误读成了「补上就管用」",
         "note": "争议：这两项试验都没有特意去招真正缺维生素 D 的人，所以结论只管「本来就不缺的人」。查出确实缺的人、有骨质疏松的人、长期晒不到太阳的人、婴幼儿，还是按医生说的补。这里只看了总死亡和癌症、心脏血管这几件事，别的没看",
+        "source": "Manson JE et al. (2019). Vitamin D Supplements and Prevention of Cancer and Cardiovascular Disease. NEJM. <https://doi.org/10.1056/NEJMoa1809944>；Neale RE et al. (2022). The D-Health Trial: a randomised controlled trial of the effect of vitamin D on mortality. Lancet Diabetes Endocrinol. <https://doi.org/10.1016/S2213-8587(21)00345-4>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -3323,6 +3497,7 @@ module.exports = {
         "cost": "一天约 0.5 到 2 元。对吸烟的人来说，真正的成本是肺癌风险跟着往上走。",
         "gain": "Cochrane 把 78 项随机分组的对照试验、296,707 人合起来算。吃抗氧化补剂的人，总死亡 RR 1.02（RR 是风险比，1 就是两边一个样；95% CI 0.98–1.05 是可信范围）。只看设计更严谨、不容易跑偏的那批试验，RR 1.04（1.01–1.07），略高一点。单看 β 胡萝卜素 RR 1.05（1.01–1.09），单看维生素 E RR 1.03（1.00–1.05）。ATBC 试验找了 29,133 名男性吸烟者，每天吃 20 mg，得肺癌的比例高 18%（3%–36%），总死亡高 8%（1%–16%）。CARET 试验找了 18,314 名吸烟者或者接触过石棉的人。他们得肺癌的风险高约 28%（RR 1.28，1.04–1.57）。死亡风险高约 17%（全因死亡 RR 1.17，1.03–1.33）。它看起来划算，是因为「抗氧化就是抗衰老，抗衰老就能防癌」这条推理链，每一步听上去都像常识",
         "note": "美国那个负责给预防措施打分的官方机构 USPSTF，2022 年给 β 胡萝卜素和维生素 E 评了 D 级，意思是建议别用。吸烟的人和接触过石棉的人已经因此受了害。蔬菜水果里本身含的抗氧化物不算在内，照吃",
+        "source": "Bjelakovic G et al. (2012). Antioxidant supplements for prevention of mortality in healthy participants and patients with various diseases. Cochrane Database Syst Rev. <https://doi.org/10.1002/14651858.CD007176.pub2>；The Alpha-Tocopherol, Beta Carotene Cancer Prevention Study Group (1994). The effect of vitamin E and beta carotene on the incidence of lung cancer and other cancers in male smokers. NEJM. <https://doi.org/10.1056/NEJM199404143301501>；Omenn GS et al. (1996). Effects of a combination of beta carotene and vitamin A on lung cancer and cardiovascular disease. NEJM. <https://doi.org/10.1056/NEJM199605023341802>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -3342,6 +3517,7 @@ module.exports = {
         "cost": "一天约 2 到 5 元，一年 700 到 1800 元。",
         "gain": "GAIT 试验找了 1,583 名膝骨关节炎患者，吃 24 周。吃安慰剂（假药）的人里，也有 60.1% 说疼痛缓解了。氨糖只比它高 3.9 个百分点（P=0.30）。软骨素高 5.3 个百分点（P=0.17）。两样一起吃高 6.5 个百分点（P=0.09）。这几个差距都太小，不能排除只是碰巧。同一个试验里用来做对照的真药塞来昔布，高 10.0 个百分点（P=0.008）。它看起来划算，是因为「补软骨的原料」听起来正好对症，而且光吃假药就有六成人说有效",
         "note": "争议：同一个试验里，一开始就疼得厉害的那批人，两样一起吃的有效比例是 79.2%，对照组 54.3%（P=0.002）。但作者说这是事后从数据里翻出来的，只能当线索，不能当结论。膝关节炎真正有证据的做法是减重和练肌肉，见第 2 节",
+        "source": "Clegg DO et al. (2006). Glucosamine, chondroitin sulfate, and the two in combination for painful knee osteoarthritis. NEJM. <https://doi.org/10.1056/NEJMoa052771>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -3361,6 +3537,7 @@ module.exports = {
         "cost": "泡腾片一片约 1 到 2 元，一年 300 到 700 元。",
         "gain": "Cochrane 把 29 项对照试验、11,306 人合起来算。普通人天天吃维 C，基本不减少得感冒的次数。得感冒的比例 RR 0.97（RR 是风险比，1 就是两边一个样）。95% CI 0.94–1.00 是可信范围。感冒之后才开始吃的那些试验，原文说「未见一致效应」：有的试验有效，有的没有。同一篇综述里，长期天天吃能把感冒难受的时间缩短约 8%（成人，95% CI 3%–12%），儿童缩短 14%（7%–21%）。马拉松运动员、滑雪的人和在寒冷地区行军的士兵是例外。5 项试验、598 人里，得感冒的人少约一半。发生率 RR 0.48（95% CI 0.35–0.64）。它看起来划算，是因为便宜、酸甜好喝，而且「维 C 防感冒」这个说法已经传了半个世纪",
         "note": "争议：同一篇综述里，天天吃确实能缩短感冒难受的时间。成人缩短约 8%（3%–12%），儿童缩短 14%（7%–21%）。算下来一次感冒少病半天左右。马拉松运动员、滑雪的人、在寒冷地区行军的士兵是例外。5 项试验、598 人里，得感冒的人少了约一半（RR 0.48，0.35–0.64）。绝大多数人不属于这两类",
+        "source": "Hemilä H, Chalker E (2013). Vitamin C for preventing and treating the common cold. Cochrane Database Syst Rev. <https://doi.org/10.1002/14651858.CD000980.pub4>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -3380,6 +3557,7 @@ module.exports = {
         "cost": "全身 PET-CT 一次约 7000 到 10000 元，还要挨一次电离辐射。肿瘤标志物套餐几百元。真正的成本在后面：查出来一处「异常」，其实是虚惊一场（这叫假阳性），接下来的复查、取组织化验、开刀，钱和罪都在这一段。",
         "gain": "美国那个给预防措施打分的机构 USPSTF，对没有症状的女性用 CA-125 和超声筛查卵巢癌给了 D 级，意思是建议不做。依据是 PLCO 试验。因卵巢癌死亡的比例，筛查组 0.34%、常规组 0.29%。RR 1.18（95% CI 0.82–1.71）。查了没有好处。因为查错了（假阳性）而白挨一刀的比例，各试验里是 0.2%–3.25%，这些人里最多 15% 出现严重的手术并发症。另一项研究给 1,192 名没有症状的人做全身 CT 筛查。其中 86% 至少查出一处「异常」，37% 被建议进一步检查。原文说「大多数发现按描述是良性的」。它看起来划算，是因为「一次查全身、早发现早治疗」太符合直觉",
         "note": "肿瘤标志物那部分有随机对照试验撑着。全身 CT 和 PET-CT 那部分只有「看做过的人后来怎么样」这类跟踪记录，没有分组对照，证据要弱一档，相当于 B 级。真正有证据的那几项筛查，像结直肠癌、宫颈癌、乳腺癌、高危的人做低剂量胸部 CT，是另一回事，见第 1 节。已经有症状的人，或者已经确诊癌症的人做 PET-CT，那是看病不是筛查，另当别论",
+        "source": "US Preventive Services Task Force (2018). Screening for Ovarian Cancer: US Preventive Services Task Force Recommendation Statement. JAMA（同一份建议另有 USPSTF 官方页）. <https://doi.org/10.1001/jama.2017.21926>、<https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/ovarian-cancer-screening>；Furtado CD et al. (2005). Whole-body CT screening: spectrum of findings and recommendations in 1192 patients. Radiology. <https://doi.org/10.1148/radiol.2372041741>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -3399,6 +3577,7 @@ module.exports = {
         "cost": "设备 200 到 2000 元。另外每天还要分神去看那些数据。",
         "gain": "IDEA 试验找了 471 名超重或肥胖的成年人，跟了 24 个月。大家做的饮食和运动安排是一样的，区别只在戴不戴可穿戴设备。戴的那组减重 3.5 公斤（95% CI 2.6–4.5，这是可信范围）。不戴的那组减了 5.9 公斤（5.0–6.8），反而更多。两组差 2.4 公斤（1.0–3.7，P=0.002）。它看起来划算，是因为「量化才能管理」这句话听着有道理，而且设备买一次就完事",
         "note": "这只有一项试验，用的还是 2010 年代初戴在胳膊上的设备，不能据此说「所有可穿戴设备都没用」。运动本身是有效的，见第 2 节。结论只有一句：想减重，设备不是必须花的钱",
+        "source": "Jakicic JM et al. (2016). Effect of Wearable Technology Combined With a Lifestyle Intervention on Long-term Weight Loss: The IDEA Randomized Clinical Trial. JAMA. <https://doi.org/10.1001/jama.2016.12858>",
         "grade": "B",
         "meta": {
           "money": "0",
@@ -3418,6 +3597,7 @@ module.exports = {
         "cost": "一般是同类普通食品价格的 1 到 3 倍。",
         "gain": "有一篇系统综述，把 17 项在人身上做的研究和 223 项测食品成分的研究合起来看。结论是「缺乏有力证据表明有机食品比常规食品显著更有营养」。这里面只有 3 项研究看的是人吃了以后健康怎么样（看的是过敏和有症状的感染），两边没看出差别。有机农产品被检出农药残留的比例低 30 个百分点，但检出不等于超标。它看起来划算，是因为「没农药就更安全，更安全就更健康」，每一步听上去都像常识",
         "note": "直接看人吃了以后健康怎么样的研究非常少。所以结论是「没有证据说它更好」，不是「已经证明它没好处」。对环境的影响、动物福利、口味好不好，这里不管。多吃蔬菜水果本身有效，是不是有机的不影响这一点",
+        "source": "Smith-Spangler C et al. (2012). Are organic foods safer or healthier than conventional alternatives?: a systematic review. Ann Intern Med. <https://doi.org/10.7326/0003-4819-157-5-201209040-00007>",
         "grade": "B",
         "meta": {
           "money": "0",
@@ -3437,6 +3617,7 @@ module.exports = {
         "cost": "从几百元到上万元不等。做成礼品装之后，价钱常常翻好几倍。",
         "gain": "换回的是省下的这笔钱。理由在本节前 6 条：保健品里最常见的几种成分，多维、鱼油、维 D、抗氧化剂、氨糖、维 C，在随机分组对照试验里都没看出预期的好处，各自的数字在那 6 条的收益栏里。监管规定只说明它能宣称什么，不能当成它没用的证据。国家市场监管总局规定，保健食品包装的正面必须用不小于 20% 的面积标上一句话：「保健食品不是药物，不能代替药物治疗疾病」。同一份规定还把保健食品的用途框死在「补充膳食营养物质、维持改善机体健康状态或者降低疾病发生风险因素」这个范围里。它看起来划算，是因为「不治病，只调理」这句话怎么说都不算错，谁也没办法证明它是假的。而且送礼时掏这笔钱，靠的是人情，不是证据",
         "note": "结论是「没有证据支持」，不是「已经证明无效」，所以只给 C 级。成分写得明确的产品，按前几条去查对应的研究。查出确实缺营养的人、正在治病的人，按医生说的来。要否掉的是产品，不是心意。老人自己买了、已经在吃的，只要没拿它顶替正在吃的药、也没吃出问题，就不必上门去争这一场，把该打的疫苗和该做的筛查安排上更要紧。同样的钱换成下面这些，每一项在书里都能翻到出处。陪老人去打每年的流感疫苗，见第 1 节第 20 条。50 岁以后的带状疱疹疫苗见第 1 节第 21 条。65 岁以上的肺炎球菌疫苗见第 1 节第 22 条。买个血压计，盯着他把降压药按医嘱吃满、把血压降到达标，见第 1 节第 7 条。把家里的浴室和楼梯改一改，陪他练平衡和腿部力量，见第 1 节第 13 条。到了年纪的癌症筛查，陪他去做一次，见第 1 节第 17 到 19 条。老人已经长期卧床的，压疮防护和长期护理保险见第 17 节第 7、8 条。要提东西上门，换成水果、米面、他爱吃的东西，比膏方实在。真正要拦的是两类：一类是先交钱的投资养老，一类是会顶替掉药的，见第 17 节第 5 条",
+        "source": "国家市场监督管理总局 (2019). 市场监管总局就《保健食品标注警示用语指南》和《保健食品原料目录与保健功能目录管理办法》有关情况举办专题新闻发布会. <https://www.samr.gov.cn/tssps/sjdt/tpxw/art/2023/art_4b658b824b1b4b0ba57c09a56cc93aad.html>",
         "grade": "C",
         "meta": {
           "money": "0",
@@ -3456,6 +3637,7 @@ module.exports = {
         "cost": "一天约 2 到 5 元，一年 700 到 1800 元。",
         "gain": "一篇综述把 45 项在健康成年人身上做的试验合起来看，结论是「未能支持益生菌能引起肠道菌群的持久改变，也未能改善健康成人的血脂」。肠道里的菌确实会变，但只是暂时的，停了就回去。它看起来划算，是因为「肠道健康」这个说法足够宽、怎么套都不算错，而且每天一瓶单价很低",
         "note": "同一篇综述也说健康人身上有一些小的改善，比如大便更成形、软硬合适，女性阴道里的乳杆菌变多。吃抗生素引起的腹泻，以及某一个特定菌株用在某一种特定的病上，各自有单独的证据，另当别论。这里只针对健康人每天当保健品吃",
+        "source": "Khalesi S et al. (2019). A review of probiotic supplementation in healthy adults: helpful or hype? Eur J Clin Nutr. <https://doi.org/10.1038/s41430-018-0135-9>",
         "grade": "B",
         "meta": {
           "money": "0",
@@ -3475,6 +3657,7 @@ module.exports = {
         "cost": "不花钱。每天要难受 30 到 90 秒，冬天想坚持得靠毅力。有心血管病的人还要当心，冷刺激对他们有风险。",
         "gain": "荷兰做过一项随机分组对照试验，3,018 人，洗完热水澡之后再冲 30 秒、60 秒或 90 秒冷水。这些人请病假的次数少了 29%（IRR 0.71，这是次数之比）。但原文写明「病假天数没有显著组间差异」：总共病了多少天，两边一样。生活质量、工作效率、焦虑也都没看出有意义的差别。2025 年一篇系统综述把 11 项随机分组试验、3,177 人合起来算。泡完冷水的当下和 1 小时后，身体发炎的指标反而升高。免疫指标没变化。压力只在 12 小时那个时间点降低。作者自己说证据「受限于 RCT 少、样本小」，意思是这类随机分组试验数量太少、每项人也不多。它看起来划算，是因为不花钱，而且「吃苦就有效」这个直觉太顺",
         "note": "争议：请病假的次数确实少了 29%，这个差距不像是碰巧。但生病的总天数并没有少，所以更像是「病了也照常去上班」，而不是真的少生病。运动员训练完之后用冷水帮助恢复，那是另一个问题，这里不管。冷水澡本身对健康人没有害处，只是别把它当成健康投资",
+        "source": "Buijze GA et al. (2016). The Effect of Cold Showering on Health and Work: A Randomized Controlled Trial. PLOS ONE. <https://doi.org/10.1371/journal.pone.0161749>；Cain T et al. (2025). Effects of cold-water immersion on health and wellbeing: A systematic review and meta-analysis. PLOS ONE. <https://doi.org/10.1371/journal.pone.0317615>",
         "grade": "B",
         "meta": {
           "money": "0",
@@ -3494,6 +3677,7 @@ module.exports = {
         "cost": "几百到几千元。靠饿肚子来「排毒」的那种，还可能把血糖饿低、把营养搞缺。",
         "gain": "那篇综述的结论是「尽管排毒产业蓬勃发展，支持这些饮食的临床证据非常少」，而且「没有针对商业排毒饮食的随机对照试验」。另一篇系统综述专门查饮食的酸碱、碱性水和癌症有没有关系：翻了 8,278 篇文献，只有 1 篇够格收进来，结果也没看出关联。作者写的是「向公众推广碱性饮食和碱性水用于癌症预防或治疗是不合理的」。它看起来划算，是因为「身体里有毒素要排出来」「体质发酸会致癌」这两个前提听上去很像生理学",
         "note": "只能说「没有证据支持」，所以只给 C 级。把身体代谢产生的废物清出去，本来就是肝和肾在干的活。只要这两个器官没有生病，就不需要额外做什么「排毒」",
+        "source": "Klein AV, Kiat H (2015). Detox diets for toxin elimination and weight management: a critical review of the evidence. J Hum Nutr Diet. <https://doi.org/10.1111/jhn.12286>；Fenton TR, Huang T (2016). Systematic review of the association between dietary acid load, alkaline water and cancer. BMJ Open. <https://doi.org/10.1136/bmjopen-2015-010438>",
         "grade": "C",
         "meta": {
           "money": "0",
@@ -3513,6 +3697,7 @@ module.exports = {
         "cost": "不花钱。要花一点时间和精力去记着喝，晚上起夜也会变多。",
         "gain": "有一篇文献回顾专门查「8×8」这个说法，指的是每天 8 杯、每杯 8 盎司水。它的结论是「未找到任何支持 8×8 的科学研究」。它还写道，「对数千名成年人的食物与液体摄入调查强烈提示不需要如此大量」，因为食物和其他饮品已经提供了大量水分。这个说法看起来划算，是因为水不要钱、8 这个数字又整齐，而且「多喝水」这话在任何场合说出来都显得没坏处",
         "note": "要否掉的是「每天必须喝够几杯」这个数字，不是说多喝水有害。渴了就喝，看看尿的颜色，这样就够了。在高温下干活的人、剧烈运动的人、得过肾结石的人，以及上年纪之后不太觉得渴的人要主动喝，另当别论",
+        "source": "Valtin H (2002). \"Drink at least eight glasses of water a day.\" Really? Is there scientific evidence for \"8 x 8\"? Am J Physiol Regul Integr Comp Physiol. <https://doi.org/10.1152/ajpregu.00365.2002>",
         "grade": "C",
         "meta": {
           "money": "0",
@@ -3532,6 +3717,7 @@ module.exports = {
         "cost": "不花钱。难的是放弃一条拿主意的捷径，以后得自己想。",
         "gain": "经典课堂实验：学生做完性格测验后拿到的「个人分析」其实人人都一样，却普遍认为很准。作者的结论是「被本人或分析者接受，不能证明解释正确」。39 个学生按 0 到 5 分给这份分析打准确度分，34 人打了 4 分或 5 分，按表里的分布算平均约 4.26 分。这就解释了算命为什么总显得准，这个现象叫巴纳姆效应。占星术也做过双盲检验，结果发表在 Nature 上。占星师要从三份性格测验结果里挑出和星盘对得上的那一份。116 份里挑中 40 份，纯靠瞎猜也能挑中 38.5 份，占星师事先自己预计能挑中 58.5 份。官方案例：河南息县检察院通报过一个网络算命诈骗团伙，先用免费看手相把人引进来，再收「香火钱」和最高 3888 元的「供养套餐」。被害人 50 余人，追回赃款 200 余万元，主犯判有期徒刑十一年，并处罚金 10 万元",
         "note": "这两篇都只是单独的一项研究。Forer 那篇原文没有直接写平均分，4.26 是按原文表 1 的分布算出来的。这里只说「它预测不准」，不评价任何信仰。当娱乐花几十块钱不算在内，拿它来定辞职、结婚、投资才是亏钱的地方。",
+        "source": "Forer BR (1949). The fallacy of personal validation: A classroom demonstration of gullibility. Journal of Abnormal and Social Psychology 44(1):118-123（表 1 评分分布：2 分 1 人、3 分 4 人、4 分 18 人、5 分 16 人，N=39）. <https://doi.org/10.1037/h0059240>；Carlson S (1985). A double-blind test of astrology. Nature 318:419-425（表 2：首选 116 份，挑中 40 份，随机期望 38.5，占星师预计 58.5；「The data are consistent with chance, inconsistent with astrological hypothesis」）. <https://doi.org/10.1038/318419a0>，第二作者主页全文 <https://muller.lbl.gov/papers/Astrology-Carlson.pdf>；最高人民检察院 (2026). 河南息县：历经三年持续追踪打掉一批网络算命诈骗团伙. <https://www.spp.gov.cn/zdgz/202607/t20260728_732935.shtml>",
         "grade": "B",
         "meta": {
           "money": "0",
@@ -3551,6 +3737,7 @@ module.exports = {
         "cost": "不花钱，还能省下镜片上那几百到上千元的加价。",
         "gain": "Cochrane 2023 年的系统综述收了 17 项随机分组的对照试验，每项 5 到 156 人，跟踪时间从不到 1 天到 5 周不等。因为数据太少、各项试验招的人差别大、跟踪时间又不一致，作者没有把它们合起来算一个总数。下面的结果都是和不带蓝光过滤的镜片相比。跟踪不到一周时，自己报告的眼疲劳程度「可能没有差别」，证据确定性低。其中一项 120 人的试验，两组相差 9.76 个单位。这个差值的可信范围是 95% CI −33.95 到 53.47。范围横跨正负，说明看不出差别。临界闪烁融合频率是一项衡量眼睛疲劳的客观指标，两组「可能几乎没有差别」，确定性低。配上眼镜矫正之后能看到的最好视力「大概没有影响」。两组相差 0.00 logMAR（95% CI −0.02 到 0.02）。这一项只有 1 项研究、156 人，确定性中等。对白天清醒程度有没有影响说不清（2 项试验、42 人，确定性极低）。这篇综述也没有找到支持它保护眼底黄斑的证据",
         "note": "看屏幕带来的是视疲劳和干眼，表现是眼酸、发干、看久了发糊。休息一下、多眨眼就能缓解。它是能缓过来的，不等于「把眼睛看坏了」。这句话是眼科的共识，不是来源栏那篇 Cochrane 综述的结论，所以只算 C 级。真正会在短时间里造成不可逆眼损伤的，是电焊弧光、紫外线、激光这类强光源。被电焊弧光伤到眼睛叫「电光性眼炎」，是法定的职业病。挡它靠的是护目镜和面罩，不是防蓝光镜片，见第 19 节第 10 条（粉尘噪声化学毒物的防护）。熬夜通宵盯着屏幕要防的不是屏幕本身，是一个例外：眼睛胀痛发红、看灯有一圈彩虹、还头痛恶心呕吐，那是急性闭角型青光眼发作，几天之内就能把视神经压坏，当天就要去眼科急诊，见第 13 节第 6 条（眼科急诊）。暗处瞳孔散大、长时间低头又把晶状体往前顶，这两件事是它的诱因，高危的是 50 岁以上、远视、前房浅的人。屏幕带来的干眼拖久了也会变成要看医生的慢性病，不是睡一觉就没了。眼睛一直不舒服，或者视力真的在往下掉，去眼科查清原因，别自己换个镜片就算完。儿童青少年怎么防近视，见第 30 节第 4、12、9 条（每天户外 2 小时、散瞳验光、不买「治愈近视」的产品）。",
+        "source": "Singh S, Downie LE, Anderson AJ, Keller PR, White SJ, Ang M, Wolffsohn JS (2023). Blue-light filtering spectacle lenses for visual performance, sleep, and macular health in adults. Cochrane Database of Systematic Reviews, 8, CD013244. <https://doi.org/10.1002/14651858.CD013244.pub2>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -3570,6 +3757,7 @@ module.exports = {
         "cost": "不花钱。一次献血，填表、采血加上留下观察休息，大约要一小时。之后几周，身体一直在把丢掉的铁补回来。",
         "gain": "芬兰 Kuopio 研究跟踪了 2862 名 42 至 60 岁的男性，平均将近 9 年。开始统计之前的 24 个月里献过血的有 153 人，其中 1 人（0.7%）发生了急性心梗。没献过的 2529 人里有 316 人（12.5%）发生（两个比例的差异 P<0.0001）。把年龄和其他冠心病危险因素的影响扣掉之后，献过血的人心梗风险低约 88%。相对风险 0.12（95% CI 0.02–0.86，P=0.035）。但这只是跟踪记录出来的，没有分组对照。北欧 SCANDAT 数据库里有 1,182,495 名献血者，累计跟踪 9,526,627 人年，其中 15,401 人死亡。只扣掉年龄性别这类特征时，每年多献一次血，死亡率低 18.6%（95% CI 16.8%–20.4%）。再把「一直健康才一直被允许献血」这一层也扣掉，降幅只剩 7.5%（5.7%–9.4%）。作者的结论是「不能解释为有益健康的确凿证据」。FeAST 随机分组对照试验找了 1277 名有症状的下肢动脉疾病患者，随机分成两组，一组每 6 个月定期放血减铁，一组做对照。主要看的是全因死亡，125/636（20%）对 148/641（23%）。HR 0.85（HR 是风险比，1 就是两边一个样）。95% CI 0.67–1.08，P=0.17。死亡加上没死的心梗与卒中合起来算，是 180（28%）对 205（32%），HR 0.88（0.72–1.07，P=0.20）。两项都没看出差别。INTERVAL 随机分组试验找了 45,263 名献全血的人。这些人分成三种献血间隔。男性是 12 周、10 周、8 周，女性是 16 周、14 周、12 周。间隔缩短之后，两年内采到的血明显更多（男性 8 周组比 12 周组多 1.69 单位，95% CI 1.59–1.80）。生活质量、体力活动、认知功能各组都没看出差别。但献血带来的不适更多，包括乏力、气短、眩晕、头晕和不宁腿（夜里腿难受得躺不住）。同时血红蛋白与铁蛋白的平均值更低，因为血红蛋白低而被推迟献血的次数也更多（各项 P<0.0001）。缺铁会影响身体产热：10 名缺铁性贫血的女性、8 名铁储备已经耗光但还没贫血的人、12 名对照女性，在 28 ℃ 的水里泡 100 分钟。贫血那组直肠温度 36.0±0.2 ℃，对照组 36.2±0.1 ℃（P=0.001）。耗氧量 5.28±0.26 对 5.99±0.29 mL·min⁻¹·kg⁻¹（P=0.04）。甲状腺素和三碘甲状腺原氨酸这两种甲状腺激素也更低（P<0.002）。这个说法看起来成立，是因为献血的人本来就是被反复筛查过的健康人，而「把铁放掉就能护心」这个假说在随机试验里没验出来",
         "note": "要否掉的是「为了自己的身体去献血」，不是献血这件事本身。血是给别人用的，按本书的受益人分档落在第④档（陌生人）。真正能回到你自己这边的，是制度给的那一份。《献血法》第十四条规定，无偿献血的人自己在医院用血，采集、储存、分离、检验这几笔费用都免交，配偶和直系亲属可以按省级政府的规定免交或者少交。国家卫健委 2024 年 1 月的通知写明，28 个省份已经做到无偿献血者和亲属在省内医院用血的费用出院时直接减免。拿到无偿献血奉献奖的人，还可以按当地的「三免」政策免费坐公共交通、免费逛政府投资主办的公园、免交公立医院的普通门诊诊察费。要献就按法定间隔来。《献血法》第九条规定，每次一般 200 毫升，最多不超过 400 毫升。两次之间间隔不少于 6 个月。提倡的年龄是 18 至 55 周岁。别为了凑荣誉或者团体指标，把间隔压到最短。女性、体重偏低的人、月经量多的人，身体里的铁本来就紧张，反复献血的人可以自费查一次铁蛋白。献完之后如果一直乏力、怕冷，或者晚上躺下腿里难受得忍不住要动（这叫不宁腿），别自己猜是「元气伤了」，去查血常规和铁蛋白。查出缺铁就按医生说的补铁，同时把献血间隔拉长。怕冷那一段的人体证据只有 10 个人，用来解释为什么会这样，不是说有多少人会这样",
+        "source": "Salonen JT, Tuomainen TP, Salonen R, Lakka TA, Nyyssönen K (1998). Donation of blood is associated with reduced risk of myocardial infarction. The Kuopio Ischaemic Heart Disease Risk Factor Study. American Journal of Epidemiology, 148(5), 445-451. <https://doi.org/10.1093/oxfordjournals.aje.a009669>；Ullum H, Rostgaard K, Kamper-Jørgensen M, et al. (2015). Blood donation and blood donor mortality after adjustment for a healthy donor effect. Transfusion, 55(10), 2479-2485. <https://doi.org/10.1111/trf.13205>；Zacharski LR, Chow BK, Howes PS, et al. (2007). Reduction of iron stores and cardiovascular outcomes in patients with peripheral arterial disease: a randomized controlled trial. JAMA, 297(6), 603-610. <https://doi.org/10.1001/jama.297.6.603>；Di Angelantonio E, Thompson SG, Kaptoge S, et al. (2017). Efficiency and safety of varying the frequency of whole blood donation (INTERVAL): a randomised trial of 45 000 donors. Lancet, 390(10110), 2360-2371. <https://doi.org/10.1016/S0140-6736(17)31928-1>；Beard JL, Borel MJ, Derr J (1990). Impaired thermoregulation and thyroid function in iron-deficiency anemia. American Journal of Clinical Nutrition, 52(5), 813-819. <https://doi.org/10.1093/ajcn/52.5.813>；全国人大常委会 (1997). 中华人民共和国献血法（第二、九、十四条）. <https://flk.npc.gov.cn/detail?id=2c909fdd678bf17901678bf5e71801f9>；国家卫生健康委等 (2024-01-08). 关于进一步做好无偿献血者激励奖励工作的通知. <https://www.gov.cn/zhengce/zhengceku/202401/content_6924875.htm>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -3589,6 +3777,7 @@ module.exports = {
         "cost": "不花钱，还省下每年几百到几千元的套餐费。换来的义务是自己记住该查哪几项、各隔多久查一次。",
         "gain": "Cochrane 系统综述 2019 年更新版收了 17 项随机分组的对照试验。算总死亡率时，合并了其中 11 项试验、233,298 名参与者、21,535 例死亡。做通用健康检查的那组和对照组一样，RR 1.00。RR 是风险比，1 就是两边一个样。95% CI 0.97–1.03 是可信范围。算因心血管病死亡时，合并 9 项试验、170,227 人、6,237 例死亡，RR 1.05（95% CI 0.94–1.16）。算因癌症死亡时，合并 8 项试验、139,290 人、3,663 例死亡，RR 1.01（95% CI 0.92–1.12）。这两项也都没看出差别。作者的结论是「通用健康检查不大可能有益」。国家基本公共卫生服务项目给 35 岁及以上的常住居民每年免费测量一次血压，给 65 岁及以上的老年人每年免费提供一次健康体检。这次免费体检包含体格检查、血常规、尿常规、空腹血糖和心电图。肝功能查谷草转氨酶、谷丙转氨酶、总胆红素。肾功能查血清肌酐、血尿素。血脂查总胆固醇、甘油三酯、低密度脂蛋白胆固醇、高密度脂蛋白胆固醇。最后还有肝胆胰脾的腹部 B 超（全国）",
         "note": "要否掉的是「拿年度套餐当防病手段」，不是说所有检查都别做。另外，35 岁以上每年免费测一次血压、65 岁以上每年一次免费体检，本来就是国家基本公共卫生服务项目给的，不用自己掏钱。有理由该查的项目照查。血压、血糖、乙肝见第 1 节第 7、8、14 条。乳腺、宫颈、结直肠见第 1 节第 17、18、19 条。幽门螺杆菌和低剂量 CT 见第 1 节第 23、24 条。65 岁以上女性的骨密度检查，见第 1 节第 39 条（骨密度检查）。有过高危行为就去查，见第 1 节第 31 条。从几岁开始查、隔多久查一次都写在那里。单位组织的、别人付钱的体检照去，要拦的是自己花钱买套餐和自己加项目。已经有慢性病的人、有症状的人，或者医生按病情开的检查，不算在内，那是看病不是筛查。套餐里最常见的没有证据的项目是肿瘤标志物和全身影像，见本节第 7 条（全身 PET-CT 和肿瘤标志物套餐）。查出来尿酸高但从没痛过、胆囊结石但从没疼过怎么办，见本节第 19 条（无症状的尿酸高）和第 20 条（无症状的胆囊结石）。另外，Cochrane 收进来的试验多数是在高收入国家做的，那里本来看病就方便，医疗资源紧张的地区不宜直接照搬这个结论。",
+        "source": "Krogsbøll LT, Jørgensen KJ, Gøtzsche PC (2019). General health checks in adults for reducing morbidity and mortality from disease. Cochrane Database of Systematic Reviews, 1, CD009009. <https://doi.org/10.1002/14651858.CD009009.pub3>；国家卫生计生委 (2017). 国家基本公共卫生服务规范（第三版）（老年人健康管理服务、高血压患者健康管理服务）. <https://www.nhc.gov.cn/ewebeditor/uploadfile/2017/04/20170417104506514.pdf>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -3608,6 +3797,7 @@ module.exports = {
         "cost": "不花钱，还省下长期的药费和定期复查的钱，也免掉一次没必要的用药风险。",
         "gain": "美国风湿病学会 2020 年的痛风指南讲到无症状高尿酸血症。它指的是血尿酸 >6.8 mg/dL，而且以前没发作过痛风、皮下也没长痛风石。指南有条件地建议这些人不要开始吃任何降尿酸药。药包括别嘌醇、非布司他、丙磺舒。证据确定性评为「高」。表下面的脚注写明「按归因风险计算，需治疗 24 名患者 3 年才能预防一次痛风发作」。CKD-FIX 随机分组对照试验找了 363 人。他们是 3 期或 4 期慢性肾病，没有痛风史但有恶化风险。一组每天吃 100–300 mg 别嘌醇，一组吃安慰剂。试验做了 104 周。eGFR 是反映肾功能的指标，单位是 mL/min/1.73 m²。一组每年变化 -3.33（95% CI -4.11 到 -2.55）。另一组每年变化 -3.23（-3.98 到 -2.47）。两组相差 -0.10（-1.18 到 0.97），P=0.85，肾功能下降的速度一样快。严重不良事件 46% 对 44%。PERL 随机分组对照试验找了 530 名 1 型糖尿病合并早中期糖尿病肾病的人，吃 3 年别嘌醇，再停药 2 个月把药效洗掉。别嘌醇确实把血尿酸从 6.1 降到了 3.9 mg/dL。但停药之后，两组的肾功能指标 GFR 只差 0.001 mL/min/1.73 m²。这个差值的可信范围是 95% CI -1.9 到 1.9，P=0.99。尿里漏出的白蛋白，在吃别嘌醇那组反而高 40%（0 到 80）。它看起来划算，是因为「指标超标就该吃药压下去」这个直觉太顺",
         "note": "要否掉的是「从没发作过就开始终身吃降尿酸药」，不是说尿酸高无所谓。同一份指南也列了例外。下面这几种情况可以考虑开始吃。一是第一次发作的同时还有 3 期及以上的慢性肾病。二是血尿酸 >9 mg/dL（约 535 µmol/L）。三是长过尿路结石。已经发作过的人、长了痛风石的人、片子上看到骨头已经被侵蚀的人，该吃药。具体见第 16 节第 9 条（确诊痛风就长期吃降尿酸药）。汉族人里约 7.4% 的人带一个叫 HLA-B\\*5801 的基因型，白人只有 0.7%。带这个型的人吃别嘌醇，更容易起会要命的严重药疹，亚裔出现超敏综合征的风险是白人的 3 倍。这本来就是可以先不吃的药，没必要多冒这一次风险。真要开始吃之前，先去查这个基因型，见第 16 节第 9 条（确诊痛风就长期吃降尿酸药）。那两项肾脏试验做的是慢性肾病和 1 型糖尿病的病人，不能直接推广成「高尿酸对肾完全无害」。它们否掉的只是「吃药降尿酸能护肾」这一个做法",
+        "source": "FitzGerald JD, Dalbeth N, Mikuls T, et al. (2020). 2020 American College of Rheumatology Guideline for the Management of Gout. Arthritis Care & Research, 72(6), 744-760（表 1 及其脚注）. <https://doi.org/10.1002/acr.24180>；Badve SV, Pascoe EM, Tiku A, et al. (2020). Effects of Allopurinol on the Progression of Chronic Kidney Disease. New England Journal of Medicine, 382(26), 2504-2513. <https://doi.org/10.1056/NEJMoa1915833>；Doria A, Galecki AT, Spino C, et al. (2020). Serum Urate Lowering with Allopurinol and Kidney Function in Type 1 Diabetes. New England Journal of Medicine, 382(26), 2493-2503. <https://doi.org/10.1056/NEJMoa1916624>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -3627,6 +3817,7 @@ module.exports = {
         "cost": "不花钱，还省下一次全身麻醉的手术和一次住院。换来的义务是记住哪几个信号一出现就得马上去医院。",
         "gain": "意大利 MICOL 人群普查给 11,229 名 29 至 69 岁的人做了超声。查出 856 人有胆结石，其中 580 人没有症状，平均跟踪 8.7 年。这 580 人里，453 人（78.1%）一直没症状，61 人（10.5%）出现轻症状，66 人（11.4%）出现重症状。跟踪期内一共做了 189 例胆囊切除，其中 41.3% 做在没有症状的人身上。作者的结论是「期待治疗对多数患者仍是有效的处理方式」，期待治疗的意思是先观察、不动手术。美国一家 HMO 做过跟踪统计，HMO 是一种管理式医疗机构，691 名确诊胆结石的人，平均跟踪 78±61.6 个月。其中 135 名没有症状的人跟踪了 58±50.2 个月（中位数 46.3 个月），只有 10% 出现了胆结石的症状，7% 接受了手术。全组 50 例死亡里只有 2 例和胆道有关，而且都在有症状的那一组。作者的结论是「有无声结石的患者不需要在出现症状前手术」，无声结石就是不吭声、不发作的石头。英国 NICE 指南 CG188 第 1.2.1 条是这么写的。「对胆囊和胆道均正常、偶然发现无症状胆囊结石的人，应告知其在出现症状前不需要治疗」。欧洲肝病学会 2016 年的胆结石指南把两边的风险放在一起写。没症状的人每年约 0.7% 到 2.5% 出现症状。每年出急性胆囊炎、急性胰腺炎、梗阻性黄疸（胆道堵住、人发黄）或胆管炎的，是 0.1% 到 0.3%。第一次绞痛之后，并发症才升到每年 1% 到 3%，所以多数人出大事前会先疼一次。手术这边，瑞典全国登记的 51041 例胆囊切除里，1.5% 伤到了胆管。其中约五分之一（0.3%）是胆管部分或完全断开。伤到胆管的人一年内死亡率 3.9%，没伤到的是 1.1%。指南还写，切完以后有 10% 到 40% 的病人仍有不适，或者好了一阵又回来。指南的结论是：没症状的人做手术，不管开腹还是腹腔镜，都不延长寿命，因为手术本身的死亡和并发症风险超过了不切的风险。等出了症状再处理，总花费也更低。1983 年的一项测算给过具体数：30 岁男性预防性切除，比先观察平均少活 4 天，50 岁少活 18 天。切和不切，至今没有一项随机分组的试验比较过。预防性切除看起来划算，是因为「早晚要疼，不如趁年轻一次切了」这个直觉",
         "note": "争议。国内胆道外科 2021 版的专家共识，把一部分无症状胆囊结石列进了手术指征。同一本杂志的解读文章写明，争议的核心之一就在这里。共识全文要订阅，具体是哪几种情形没核到原文（TODO：待核实）。另一处反方意见是小石头：5 毫米以内的小结石和胰腺炎更相关。荷兰一项测算说，这类人预防性切除可能多活也可能少活，取决于胰腺炎有多常见、有多致命。欧洲指南也列了例外：胆囊壁钙化（瓷化胆囊）、同时有 1 厘米以上的胆囊息肉，这两种该切。要做别的腹部大手术时，可以考虑顺带切掉。这条说的只是一种情形：石头长在胆囊里，而且从来没疼过。**胆总管里的石头是另一回事**。同一份指南第 1.3.1 条明确写着，胆总管结石不管有没有症状，都要把胆管里的石头清掉，并且切除胆囊。出现下面这些情况要当天就去医院，别拿这个结论硬扛：右上腹或者上腹一直绞痛、发热打寒战、眼白或皮肤发黄、小便颜色变深。医生看过影像之后建议手术时，问清楚他是基于哪一条理由，比如胆管受了累、同时长了息肉、胆囊壁有异常，别拿这个结论去反驳他。它挡的只是「没有任何理由、单纯因为查出石头就切」。上面两项研究都是跟着一群人往后看，没有分组对照。但它们要回答的是「不去动它会怎么样」，而不是「哪种治疗更好」，用在这里合适。另外这两项跟踪的年头是 4 到 9 年，年头再长一些，出症状的比例会往上走",
+        "source": "Festi D, Reggiani ML, Attili AF, et al. (2010). Natural history of gallstone disease: Expectant management or active treatment? Results from a population-based cohort study. Journal of Gastroenterology and Hepatology, 25(4), 719-724. <https://doi.org/10.1111/j.1440-1746.2009.06146.x>；McSherry CK, Ferstenberg H, Calhoun WF, Lahman E, Virshup M (1985). The natural history of diagnosed gallstone disease in symptomatic and asymptomatic patients. Annals of Surgery, 202(1), 59-63. <https://doi.org/10.1097/00000658-198507000-00009>；National Institute for Health and Care Excellence (2014). Gallstone disease: diagnosis and management. NICE guideline CG188，第 1.2.1、1.3.1 条. <https://www.nice.org.uk/guidance/cg188/chapter/Recommendations>；European Association for the Study of the Liver (2016). EASL Clinical Practice Guidelines on the prevention, diagnosis and treatment of gallstones. Journal of Hepatology, 65(1), 146-181. <https://doi.org/10.1016/j.jhep.2016.03.005>；Törnqvist B, Strömberg C, Persson G, Nilsson M (2012). Effect of intended intraoperative cholangiography and early detection of bile duct injury on survival after cholecystectomy: population based cohort study. BMJ, 345, e6457. <https://doi.org/10.1136/bmj.e6457>；Ransohoff DF, Gracie WA, Wolfenson LB, Neuhauser D (1983). Prophylactic cholecystectomy or expectant management for silent gallstones. A decision analysis to assess survival. Annals of Internal Medicine, 99(2), 199-204. <https://doi.org/10.7326/0003-4819-99-2-199>；Gurusamy KS, Samraj K (2007). Cholecystectomy versus no cholecystectomy in patients with silent gallstones. Cochrane Database of Systematic Reviews, CD006230. <https://doi.org/10.1002/14651858.CD006230.pub2>；反方：Venneman NG, Buskens E, Besselink MG, et al. (2005). Small gallstones are associated with increased risk of acute pancreatitis: potential benefits of prophylactic cholecystectomy? American Journal of Gastroenterology, 100(11), 2540-2550. <https://doi.org/10.1111/j.1572-0241.2005.00317.x>；中华医学会外科学分会胆道外科学组, 中国医师协会外科医师分会胆道外科医师委员会 (2022). 胆囊良性疾病外科治疗的专家共识（2021版）. 中华外科杂志, 60(1), 4-9. <https://doi.org/10.3760/cma.j.cn112139-20210811-00373>（全文需订阅，未取得）；同上 (2022). 《胆囊良性疾病外科治疗的专家共识（2021版）》解读. 中华外科杂志, 60(4), 337-342. <https://doi.org/10.3760/cma.j.cn112139-20220119-00031>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -3646,6 +3837,7 @@ module.exports = {
         "cost": "不花钱。反过来还省事，不用天天提防哪些东西含钙。",
         "gain": "有一项做了 5 年的随机分组对照试验，找了 120 名反复长草酸钙结石、同时尿里钙又偏高（叫特发性高钙尿）的男性。他们被随机分成两组。一组正常吃钙，每天 30 mmol。这一组同时少吃动物蛋白（每天 52 g）、少吃盐（每天 50 mmol 氯化钠）。另一组吃传统的低钙饮食，每天 10 mmol。5 年里复发的是 12/60 对 23/60。没做校正的相对风险 0.49（95% CI 0.24–0.98，这是可信范围），P=0.04，正常吃钙那组的复发风险只有一半。跟踪期间，两组尿里的钙都降了大约每天 170 mg。但尿里排出的草酸不一样。低钙组平均每天升高 5.4 mg，正常钙组平均每天下降 7.2 mg。英国 NICE 指南 NG118 第 1.8.1 条写明，不要限制每天吃进去的钙。成年人保持每天 700 到 1,200 mg。儿童青少年按年龄每天 350 到 1,000 mg。戒钙看起来划算，是因为「结石是钙做的，那就少吃钙」这个直觉",
         "note": "争议：这项试验只做在男性身上，而且这些人都是反复长草酸钙结石、尿里钙又偏高的，不能直接套到所有类型的结石上。另外试验组同时改了三样，正常吃钙、少吃动物蛋白、少吃盐，所以不能把全部好处都记在「不戒钙」这一件事上，低盐和少动物蛋白同样在起作用。要否掉的是「主动把含钙的东西戒掉」，不是说「应该多补钙」。这里改的是一日三餐里的钙，钙补充剂是另一回事，长过结石的人要不要吃补充剂，问主治医生。多喝水那条见第 16 节第 8 条（肾结石后把水喝到每天 2.5–3 升）",
+        "source": "Borghi L, Schianchi T, Meschi T, et al. (2002). Comparison of two diets for the prevention of recurrent stones in idiopathic hypercalciuria. New England Journal of Medicine, 346(2), 77-84. <https://doi.org/10.1056/NEJMoa010369>；National Institute for Health and Care Excellence (2019). Renal and ureteric stones: assessment and management. NICE guideline NG118，第 1.8.1 条. <https://www.nice.org.uk/guidance/ng118/chapter/Recommendations>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -3665,6 +3857,7 @@ module.exports = {
         "cost": "不花钱。要做的只是别把「转运」「养人」算进买它的理由里。难在别人都在戴、都在说灵的时候，自己不跟。",
         "gain": "经典课堂实验显示，人人拿到的都是同一份笼统的「个人分析」，却普遍认为很准，这个现象叫巴纳姆效应。它解释了「戴上之后确实顺了」这种体验是从哪来的。那位作者的结论是「被本人接受不能证明解释正确」。官方案例：市场监管总局 2026 年 6 月 4 日公布了一批传统工艺市场「打假清源」典型案例。其中广东四会有一家珠宝店，在直播间里编造商品材质。它还假称商品有「防治风湿病、提高免疫力、改善睡眠质量、疏通血管」等功效。这家店靠编剧本演戏来误导、欺骗消费者。这违反了反不正当竞争法第九条第一款（全国）",
         "note": "结论只有一个：它的功效无从核查，也测不出任何预测能力。不评价任何信仰或者习俗，也不针对送礼、纪念、传家这些用途。要分清两件事：商家宣称的功效有明文规定可依，能去投诉；而「转运」这类说法既没有研究，也没法证明它是假的，只能靠自己划预算管住。买之前先把它当成普通饰品，问自己一句「如果它什么都不改变，这个价钱我还买吗」。材质和证书怎么查、把它当投资为什么不划算，见第 5 节第 33、34 条（手串名表按花掉的钱算、珠宝玉石认 CMA 报告）。花钱算命见本节第 15 条（算命塔罗星座）。",
+        "source": "Forer BR (1949). The fallacy of personal validation: A classroom demonstration of gullibility. Journal of Abnormal and Social Psychology. <https://doi.org/10.1037/h0059240>；国家市场监督管理总局 (2026). 市场监管总局公布一批传统工艺市场「打假清源」典型案例. <https://www.samr.gov.cn/xw/zj/art/2026/art_1529399cfe874b8780c4496eb0158020.html>",
         "grade": "B",
         "meta": {
           "money": "0",
@@ -3684,6 +3877,7 @@ module.exports = {
         "cost": "不花钱。难的是心情差的时候忍住不下单。",
         "gain": "一项荟萃分析（把很多项研究合起来算）共 259 项独立样本、753 个效应量。结果是：越看重物质的人，自己报告的幸福感越低。在最常用的那种多维量表上，相关系数 r = -0.19（校正后 ρ = -0.24）。只测「重视金钱」这一个方面的量表上，关联更弱，r = -0.08 到 -0.11。按看的是哪种结果分开看，强弱不一样。和冒险的健康与消费行为、对自己的负面评价关联最强，r = -0.28 到 -0.44。和生活满意度、负面情绪关联最弱，r = -0.13 到 -0.15。作者还做了中介分析（查中间通过什么传过去），结果提示这种负向关联可能是因为心理上的需要没有得到满足。另一项研究：两次面向不同人群的调查中，受访者都说为获得一段生活经历而花的钱比买东西更让自己快乐。随后的实验室实验里，回想一次为经历花钱之后的好心情，也高于回想一次买东西（全国口径不适用，这两项用的都是国外样本）",
         "note": "争议：收进来的研究大多是在同一个时间点问一批人，看两件事同不同步，分不出谁先谁后。作者自己在结论里也说，要看清方向还得靠更多的实验和长期跟踪研究。所以不能读成「买东西会让人不快乐」，只能读成「靠买东西来变快乐，指望不大」。而且关联很弱：r = -0.19 大概只解释了几个百分点的差异，人和人之间差别很大。两项研究用的都是国外样本，中国人群没有可以引用的同类数据。这里不反对为喜欢的东西花钱，反对的是把购物当成调节情绪的手段，因为那会让你下次心情差时的第一反应还是下单。省钱的具体动作见第 5 节。情绪差的时候真正有证据的做法，见第 22 节后半节和第 29 节。为「比别人强一档」而加的预算，见本节第 24 条（往上挪一档）。",
+        "source": "Dittmar H, Bond R, Hurst M, Kasser T (2014). The relationship between materialism and personal well-being: A meta-analysis. Journal of Personality and Social Psychology, 107(5), 879-924. <https://doi.org/10.1037/a0037409>；Van Boven L, Gilovich T (2003). To do or to have? That is the question. Journal of Personality and Social Psychology, 85(6), 1193-1202. <https://doi.org/10.1037/0022-3514.85.6.1193>",
         "grade": "B",
         "meta": {
           "money": "0",
@@ -3703,6 +3897,7 @@ module.exports = {
         "cost": "不花钱。要做的只是在加预算之前多问一句：这笔加价买的是东西本身，还是我在这群人里的位置。难在周围人都换了的时候，自己不跟。",
         "gain": "美国全国家庭与住户调查（NSFH）两轮回访了同一批人。作者把这份数据和本地平均收入对上。本地平均收入（PUMA）是按 1990 年人口普查 5% 抽样推算出来的。把本人收入和一系列个人特征都扣掉之后，结果是：邻居收入越高，自己报告的幸福感越低。这个效应大，换一种算法也稳，而且高度显著。作者的表述是，「邻居收入上升」和「本人收入下降同样幅度」带来的幸福感下降处于同一数量级。改成同一个人前后自己跟自己比之后（这叫加个体固定效应），系数方向不变、大小也相近，只是显著性降到了 10% 的水平。再限定在同一个州、同一轮调查之间比（这叫加州和调查轮次的固定效应），结果基本不变。这说明它不是「爱搬去穷地方的人本来就更快乐」造成的，也不是州一级某些没测到的因素造成的。效应在常和邻居来往的人身上更强，在只和社区外朋友来往的人身上不显著。租房的人和自己有房的人没有差异，这一点不支持「贵地方房价高，所以实际可花的钱少」这种解释。幸福感只随学历相同的邻居的收入而下降，对学历不同的邻居的收入几乎没有反应。而且它主要是通过「对自己物质处境的满意度」传过去的，不是通过对家庭生活等其他方面的满意度。最后，如果本人和邻居的收入按同样比例一起上升，幸福感仍然上升",
         "note": "定 B 级的理由有几条：数据来自反复回访同一批人的问卷，只有这一项研究，样本又在国外；看的结果是受访者自己报的幸福感，不是钱。作者确实用统计手段排掉了几类干扰，比如同一个人前后比、同一个州同一轮之间比，但终究不是随机试验。中国人群也没有可以引用的同类数据。收益量级定「中」，是沿用本节第 23 条（别指望买东西改善心情）的口径。省下的钱确实可能到万元级。但「省下这笔钱能换来多少幸福感」没有数字支撑，所以不按万元级记成「大」。这里不反对为更大的房子、更安静的小区、更短的通勤花钱，那些买的是东西本身。要拦的是「同事都换了，我不能比他们差」这一个理由。住处该按什么排序见第 4 节第 18 条（选住处时把通勤时长放在前面）。买东西调情绪见本节第 23 条（别指望买东西改善心情）。在网上老往上比见第 3 节第 20 条（别把「别人过得怎么样」当每日必读）",
+        "source": "Luttmer EFP (2005). Neighbors as Negatives: Relative Earnings and Well-Being. The Quarterly Journal of Economics, 120(3), 963–1002. <https://doi.org/10.1093/qje/120.3.963>；Luttmer EFP (2004). Neighbors as Negatives: Relative Earnings and Well-Being. NBER Working Paper No. 10667（本条引用的表述与数量级按这一版逐字核对）. <https://www.nber.org/papers/w10667>",
         "grade": "B",
         "meta": {
           "money": "0",
@@ -3722,6 +3917,7 @@ module.exports = {
         "cost": "不花钱。要改的只是一个说法。",
         "gain": "一项多实验室预注册重复研究，23 个实验室、共 2141 名受试者，按 Sripada 等人的标准化方案重做了序贯任务范式：先做一件消耗自控的任务，再做第二件需要自控的任务。汇总结果显示自我损耗效应很小，而且 95% 可信区间包含 0（d = 0.04，95% CI −0.07 到 0.15）。作者据此讨论了「自控是有限资源」这一模型还成不成立。另一次同样事先登记方案的重做，36 个实验室、3531 人，效果大小 d = 0.06，同样小到不能算数。",
         "note": "要否掉的是「自控是一种会被消耗完的资源」这个模型，不是否掉「人会累」。睡不够、连着干太久会让人效率下降，那是另一回事，按第 3 节的睡眠和工时几条处理。真正有随机试验支持的做法是改环境和改写法，见第 4 节第 10 条（把不想碰的挪远）和第 4 节第 1 条（写成「几点、在哪、遇到什么就做什么」）。把穿什么、吃什么固定下来仍然值得做，因为几乎不花成本。它省下的是那几分钟和几次纠结，不是意志力，别指望它让你下午判断得更好。本节其他条目算的是钱，这里算的是时间和精力，两者不做换算。",
+        "source": "Hagger MS, Chatzisarantis NLD, Alberts H, et al. (2016). A Multilab Preregistered Replication of the Ego-Depletion Effect. Perspectives on Psychological Science, 11(4), 546–573. <https://doi.org/10.1177/1745691616652873>；Vohs et al. (2021). A Multisite Preregistered Paradigmatic Test of the Ego-Depletion Effect. Psychological Science. <https://doi.org/10.1177/0956797621989733>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -3741,6 +3937,7 @@ module.exports = {
         "cost": "不花钱。省下的是每天跟吃饭时间较劲的那点心力。",
         "gain": "先看「不吃早餐会让人后面吃更多」这个说法。一篇荟萃分析把 13 项随机试验合起来算。被分到吃早餐那组的人，每天摄入比不吃早餐那组多 259.79 kcal（95% CI 78.87–440.71，这是可信范围）。体重高 0.44 kg（0.07–0.82）。不吃早餐的人并没有在午饭晚饭补回来。这些试验跟踪时间都很短，看体重的平均 7 周，看摄入的平均 2 周。再看 16:8 这类只在固定几小时内吃饭的做法。一项让 116 名超重成人做 12 周。只在中午 12 点到晚上 8 点吃饭的那组，和每天规律吃三顿的那组，体重差 −0.26 kg（−1.30 到 0.78），不显著。另一项在广州做，139 名肥胖患者，跟踪 12 个月。限时进食加控制热量，比单纯控制热量多减 1.8 kg（−4.0 到 0.4），也不显著。最后看长期不吃早餐有没有害。238 万人的汇总里，不吃早餐的人心血管病风险高约 17%（OR 1.17，1.09–1.26），心血管死亡高约 49%（OR 1.49，1.20–1.84）。但这些是只记录、不分组的研究。跟踪 17 到 23 年的那项原始研究里，全因死亡的风险比是 1.19，可信范围 0.99 到 1.42，跨过了 1，算不上有差别。",
         "note": "争议。心血管那 17% 来自只记录、不分组的研究。不吃早餐的人本来就更可能吸烟、喝酒、久坐、收入低，这些因素校正不干净。所以那 17% 里有多少是早餐本身造成的，说不清。全因死亡那一项本来就跨过了 1。16:8 也有争议：汇总 30 项试验、1341 人，在两组吃一样多的前提下，限时进食那组多减 1.46 kg（−2.65 到 −0.26），代价是多掉 0.41 kg 瘦体重。但这些试验多数很短，最长最严的那项十二个月试验说没差别。长时间空腹还和胆囊有关。一项 6,547 人的横断面调查里，一天中第一餐每晚一小时，查出胆结石的比例高约 5%（OR 1.05，1.02–1.08）；第一餐拖到 9 点至 14 点的人比更早吃的高约 49%（OR 1.49，1.24–1.77）。机制是胆汁在胆囊里存得越久越容易析出结石。但这是同一时点的调查，也可能是先有了胆囊问题才改的吃饭习惯。中国开滦队列跟踪 5.6 年、369 例消化道癌：不吃早餐的人结直肠癌风险 2.32 倍（1.34–4.01），胆囊和肝外胆管癌 5.43 倍（1.34–21.93）。后一个数的可信范围宽到 21.93，说明事件太少，只能当线索看。合起来看，就控制体重而言，吃饭时间的影响很小，别为它花心力。至于长期完全不吃早餐好不好，现有证据全是关联、不能证明因果，但方向一致偏不利，想稳妥就正常吃，只是别指望它帮你减重。胃炎和胃溃疡的主因不是空腹，是幽门螺杆菌和长期吃止痛药，该查的见第 1 节第 23 条（查幽门螺杆菌，阳性就根除）。体检查出胆囊结石但从没疼过该怎么办，见本节第 20 条（体检查出胆囊结石但从没疼过，不要预防性切胆囊）。想控制体重，真正有证据的是吃什么和吃多少，见第 2 节第 27 条（每天吃够 5 份水果蔬菜）、第 2 节第 28 条（少吃超加工食品）和第 2 节第 32 条（把 BMI 控制在 20–25）。糖尿病人、正在吃降糖药或者怀孕的人不适用，漏一顿可能低血糖，按医嘱来。极端断食和催吐是另一回事，见第 28 节第 1 条（不要用极端节食、断食或催吐来控制体重）。",
+        "source": "Sievert K, Hussain SM, Page MJ, 等 (2019). Effect of breakfast on weight and energy intake: systematic review and meta-analysis of randomised controlled trials. BMJ. <https://doi.org/10.1136/bmj.l42>；Lowe DA, Wu N, Rohdin-Bibby L, 等 (2020). Effects of Time-Restricted Eating on Weight Loss and Other Metabolic Parameters in Women and Men With Overweight and Obesity. JAMA Internal Medicine. <https://doi.org/10.1001/jamainternmed.2020.4153>；Liu D, Huang Y, Huang C, 等 (2022). Calorie Restriction with or without Time-Restricted Eating in Weight Loss. New England Journal of Medicine. <https://doi.org/10.1056/NEJMoa2114833>；Zhang H, Zhang S, Liu Y, 等 (2025). The association between skipping breakfast and cardiovascular disease: a meta analysis. Frontiers in Cardiovascular Medicine. <https://doi.org/10.3389/fcvm.2025.1565806>；Rong S, Snetselaar LG, Xu G, 等 (2019). Association of Skipping Breakfast With Cardiovascular and All-Cause Mortality. Journal of the American College of Cardiology. <https://doi.org/10.1016/j.jacc.2019.01.065>；Fernandes-Alves D, Teixeira GP, Guimarães KC, Crispim CA (2026). Systematic Review and Meta-analysis of Randomized Clinical Trials Comparing Time-Restricted Eating With and Without Caloric Restriction for Weight Loss. Nutrition Reviews. <https://doi.org/10.1093/nutrit/nuaf053>；Sun T, Zhang L, Lu Y, 等 (2024). Non-linear relationship between the first meal time of the day and gallstone incidence in American adults. Frontiers in Nutrition. <https://doi.org/10.3389/fnut.2024.1521707>；Liu T, Wang Y, Wang X, 等 (2023). Habitually Skipping Breakfast Is Associated with the Risk of Gastrointestinal Cancers: Evidence from the Kailuan Cohort Study. Journal of General Internal Medicine. <https://doi.org/10.1007/s11606-023-08094-7>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -3760,6 +3957,7 @@ module.exports = {
         "cost": "不花钱。省下的是买「补肾」偏方和「戒色」课程的钱，还有长期自责的那份焦虑。",
         "gain": "先看身体。美国一项研究跟踪了 31925 名男性，到 2010 年。每个人自己报告每月射精几次，再按次数分组。和每月 4 到 7 次的人比，每月 21 次以上的人前列腺癌 HR 0.81（95% CI 0.72–0.92，低约 19%），这是按 20 到 29 岁时的次数算的。按 40 到 49 岁时的次数算，HR 0.78（0.69–0.89，低约 22%）。少掉的主要是低危的前列腺癌。反方是英国一项病例对照研究，比了 431 名 60 岁前确诊的患者和 409 名对照。二三十岁时手淫频繁的人风险偏高，五十多岁时频繁的人风险偏低。再看色情内容。一篇系统综述加荟萃分析认为，很多人觉得自己「上瘾了」，更多是行为和自己信的道理对不上，不只是看得多（美国 / 英国）",
         "note": "争议。前列腺癌这两项研究都只是记录、没有分组对照，次数又是本人回忆的，所以结论只能到「没看到伤身的证据」，不能反过来劝人多做。英国那项的作者自己也说，五十多岁那段可能是先病了才次数少。色情那篇的摘要没有给出效应量，所以这里只写方向。收益定成小，是因为降的主要是低危前列腺癌，不是死亡。真正该去精神科或心理科的信号是：为这事熬夜、误工、影响伴侣关系，想停也停不下来。熬夜见第 3 节第 9 条（不为游戏、短视频、色情内容熬夜）。担心看色情看出了勃起问题，先按第 1 节第 28 条（勃起功能出了问题先去查心血管）去查。往群里发、卖资源的法律后果见第 9 节第 4 条（黄色视频自己看归自己）。受益人是你自己。",
+        "source": "Rider JR, Wilson KM, Sinnott JA, et al. (2016). Ejaculation Frequency and Risk of Prostate Cancer: Updated Results with an Additional Decade of Follow-up. European Urology, 70(6), 974–982. <https://doi.org/10.1016/j.eururo.2016.03.027>；Dimitropoulou P, Lophatananon A, Easton D, et al. (2009). Sexual activity and prostate cancer risk in men diagnosed at a younger age. BJU International, 103(2), 178–185. <https://doi.org/10.1111/j.1464-410x.2008.08030.x>；Grubbs JB, Perry SL, Wilt JA, Reid RC. (2019). Pornography Problems Due to Moral Incongruence: An Integrative Model with a Systematic Review and Meta-Analysis. Archives of Sexual Behavior, 48(2), 397–415. <https://doi.org/10.1007/s10508-018-1248-x>",
         "grade": "B",
         "meta": {
           "money": "0",
@@ -3779,6 +3977,7 @@ module.exports = {
         "cost": "不花钱。省下的是矫正机构、心理诊所和「戒同」营收的钱。难的是家里人坚持要送。",
         "gain": "美国心理学会 2009 年的工作组报告说，改变性取向的努力「不太可能成功，并且有一定的伤害风险」。对把未成年人送进强制或住院式的矫正项目，报告建议父母和孩子都不要考虑。美国一项全国代表性调查访问了 1518 名性少数成年人，约 7% 做过矫正，其中八成来自宗教人士。扣除年龄、童年不幸经历等因素后，做过矫正的人一生中有过自杀念头的 OR 1.92（95% CI 1.01–3.64，高约九成）。计划过自杀的 OR 1.75（1.01–3.06）。没受伤或受轻伤的自杀尝试 OR 1.88（1.01–3.50）。另一项研究访问了 245 名 21 到 25 岁的年轻人。青春期没被矫正过的，22.0% 试过自杀。父母自己试图改变孩子性取向的，是 48.1%。父母还把孩子送去找治疗师或宗教人士的，是 62.8%。世界卫生组织的疾病分类 ICD-10 写明：「性取向本身不被视为一种障碍」。2017 年河南驻马店驿城区法院审了一个案子：精神病院以「性偏好障碍」为名强制收治一名男子。法院认为他「病情一般，也无自杀、伤人、毁物等行为或危险，不符合应当强制治疗的条件」。法院判医院公开道歉，赔精神抚慰金 5000 元（美国 / 中国）",
         "note": "争议。Sullins 2022 用同一批数据重算，扣掉了矫正之前就有的自杀念头。这样算下来，矫正和自杀念头不再是正相关（OR 0.44，0.20–0.94）。Sullins 所在的机构立场反对同性恋，原作者也写了回应。所以伤害有多大还有争议，但「改不了」这一点没有看到反方证据。给 B 是因为伤害的数字都来自事后回忆的调查。法律上，住院治疗实行自愿原则，只有严重精神障碍、又有伤害自己或别人的危险，才能强制住院。心理咨询人员不许做心理治疗。故意把不是精神障碍的人送进医院治疗，要承担赔偿责任。2014 年，一名男子在重庆心语飘香心理咨询中心被催眠、电击「治疗」同性恋，事后起诉。北京海淀法院判这家中心公开道歉、赔偿经济损失。据报道，判决书写明同性恋不是精神疾病，中心承诺能治属于虚假宣传。此案只有澎湃新闻的报道，法院官网上没找到判决原文。心里为这件事长期痛苦的，可以去精神科或临床心理科，目标是缓解痛苦。孩子说出来之后家里怎么做，见第 30 节第 15 条（孩子说自己喜欢同性）。受益人是你自己和家里人。",
+        "source": "American Psychological Association Task Force on Appropriate Therapeutic Responses to Sexual Orientation (2009). Report of the Task Force on Appropriate Therapeutic Responses to Sexual Orientation. <https://www.apa.org/pi/lgbt/resources/therapeutic-response.pdf>；Blosnich JR, Henderson ER, Coulter RWS, Goldbach JT, Meyer IH. (2020). Sexual Orientation Change Efforts, Adverse Childhood Experiences, and Suicide Ideation and Attempt Among Sexual Minority Adults, United States, 2016–2018. American Journal of Public Health, 110(7), 1024–1030. <https://doi.org/10.2105/AJPH.2020.305637>；Ryan C, Toomey RB, Diaz RM, Russell ST. (2020). Parent-Initiated Sexual Orientation Change Efforts With LGBT Adolescents: Implications for Young Adult Mental Health and Adjustment. Journal of Homosexuality, 67(2), 159–173. <https://doi.org/10.1080/00918369.2018.1538407>；World Health Organization. ICD-10 Version:2019, F66 Psychological and behavioural disorders associated with sexual development and orientation. <https://icd.who.int/browse10/2019/en#/F66>；全国人大常委会 (2018 年修正). 精神卫生法（第二十三、三十、七十八条）. <https://flk.npc.gov.cn/detail?id=2c909fdd678bf17901678bf7448a066d>；广西壮族自治区人民检察院网站转载新京报 (2017). 驻马店「同性恋强制治疗案」终审. <http://www.gx.jcy.gov.cn/jblm/shgz/201709/t20170920_2068489.shtml>；澎湃新闻 (2014-08-02). 首例“矫正同性恋”案在京审理，诊所被指有“三大罪状”（澎湃见习记者 周辰，实习生 尹瑞涛）. <https://www.thepaper.cn/newsDetail_forward_1259405>（网页存档 <https://web.archive.org/web/20261005044046/https://www.thepaper.cn/newsDetail_forward_1259405>）；澎湃新闻 (2014-12-21). 中国进入多元性别时代：李银河“出柜”与电击中心败诉（澎湃新闻记者 周哲）. <https://www.thepaper.cn/newsDetail_forward_1287582>（网页存档 <https://web.archive.org/web/20261005044046/https://www.thepaper.cn/newsDetail_forward_1287582>）；反方：Sullins DP. (2022). Sexual Orientation Change Efforts Do Not Increase Suicide: Correcting a False Research Narrative. Archives of Sexual Behavior, 51, 3377–3393. <https://doi.org/10.1007/s10508-022-02408-2>；Blosnich JR, Coulter RWS, Henderson ER, et al. (2023). Correcting a False Research Narrative: A Commentary on Sullins (2022). Archives of Sexual Behavior, 52(3), 885–888. <https://doi.org/10.1007/s10508-022-02521-2>",
         "grade": "B",
         "meta": {
           "money": "0",
@@ -3798,6 +3997,7 @@ module.exports = {
         "cost": "不花钱。不用再为搬东西时腰弯没弯较劲，也不用为护腰课和护腰带花钱。要做的是两件事。重的东西拆开搬、用推车或找人一起搬，这只多花几分钟。每周抽几次时间锻炼，这要长期坚持。",
         "gain": "先看培训。Cochrane 系统综述 2011 年版汇总了 9 项随机分组的试验，共 20101 名员工。其中 7 项试验、19317 人的结果是：上过搬运培训的人和什么都没做的人，后来报告的腰痛差不多（OR 1.17，95% CI 0.68–2.02，可信范围跨过 1）。和只看了一段视频的人比，RR 0.93（0.69–1.25），也差不多。证据质量是中等。作者的结论是，搬运建议和培训不管配不配搬运工具，都防不住腰痛和腰痛造成的失能。再看弯腰。2020 年一篇系统综述汇总了搬东西时腰弯多少的研究，证据质量低。唯一一项跟踪研究里，后来腰痛和没腰痛的人，搬东西时腰最多弯的角度只差 1.5 度（−0.7 到 3.7），不显著。11 项研究里有 9 项没看到两组有差别。另有 7 项研究换了一种量法，腰痛的人搬东西时腰反而少弯 6.0 度（−11.2 到 −0.9）。作者的结论是，没有证据说腰弯得多会招来腰痛。最后看该怎么做。一篇荟萃汇总了 8 项跟踪研究：每次搬的东西每重 10 公斤，腰痛风险 OR 1.11（1.05–1.18，高约 11%）。每天每多搬 10 次，OR 1.09（1.03–1.15，高约 9%）。另一篇汇总了 21 项随机试验、30850 人。锻炼加讲解让腰痛发作的风险 RR 0.55（0.41–0.74，低约 45%），证据质量中等。单靠锻炼 RR 0.65（0.50–0.86，低约 35%），证据质量低到很低。单靠讲解 RR 1.03（0.83–1.27），护腰带 RR 1.01（0.71–1.44），都看不出效果。英国健康与安全执行局（HSE）的官方指南也写明：单靠培训保证不了搬运安全，好的搬运手法也替代不了配搬运工具、改进任务和货物。",
         "note": "争议。搬得重、搬得多这一侧说法不一。2010 年一篇系统综述找到 9 项高质量研究，4 项看到关联，5 项没看到。作者认为工作中搬东西不太可能单独导致腰痛。所以「少搬重的」只有关联证据，证明不了因果。弯腰那篇的研究质量低，多数只比了同一时间的两群人。培训那篇的可信范围很宽，它也说没有随机试验看过培训能不能治已有的腰痛。HSE 仍然教一套手法：东西贴近腰，脚站稳，别扭腰，别猛拽。起身时背、髋、膝都微微弯，比完全弯腰或完全蹲下都好。照做没坏处，只是别指望它单独防住腰痛。收益定中，因为按降幅锻炼够得上大，但单靠锻炼的证据质量低，锻炼加讲解也没看出能少请病假，腰痛又不致命。锻炼怎么做见第 2 节第 16 条（每周做 30–60 分钟力量训练）和第 2 节第 11 条（每天走到 7000–8000 步）。受益人是你自己。",
+        "source": "Verbeek JH, Martimo KP, Karppinen J, Kuijer PP, Viikari-Juntura E, Takala EP. (2011). Manual material handling advice and assistive devices for preventing and treating back pain in workers. Cochrane Database of Systematic Reviews, CD005958. <https://doi.org/10.1002/14651858.CD005958.pub3>；Saraceni N, Kent P, Ng L, Campbell A, Straker L, O'Sullivan P. (2020). To Flex or Not to Flex? Is There a Relationship Between Lumbar Spine Flexion During Lifting and Low Back Pain? A Systematic Review With Meta-analysis. Journal of Orthopaedic & Sports Physical Therapy, 50(3), 121–130. <https://doi.org/10.2519/jospt.2020.9218>；Coenen P, Gouttebarge V, van der Burght AS, et al. (2014). The effect of lifting during work on low back pain: a health impact assessment based on a meta-analysis. Occupational and Environmental Medicine, 71(12), 871–877. <https://doi.org/10.1136/oemed-2014-102346>；Steffens D, Maher CG, Pereira LS, et al. (2016). Prevention of Low Back Pain: A Systematic Review and Meta-analysis. JAMA Internal Medicine, 176(2), 199–208. <https://doi.org/10.1001/jamainternmed.2015.7431>；Health and Safety Executive. Manual handling at work: Training; Good handling technique. <https://www.hse.gov.uk/msd/manual-handling/training.htm>；<https://www.hse.gov.uk/msd/manual-handling/good-handling-technique.htm>；反方：Wai EK, Roffey DM, Bishop P, Kwon BK, Dagenais S. (2010). Causal assessment of occupational lifting and low back pain: results of a systematic review. The Spine Journal, 10(6), 554–566. <https://doi.org/10.1016/j.spinee.2010.03.033>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -3806,6 +4006,26 @@ module.exports = {
           "gain": "中",
           "lens": "死亡率",
           "ratio": "一般",
+          "dispute": true,
+          "todo": false
+        }
+      },
+      {
+        "index": 30,
+        "title": "不要指望骨折之后猛补钙、喝骨头汤能让骨头长得更快",
+        "plain": "骨折后补维生素 D 的试验，没有一项看出骨头长得更好。钙和维 D 一起补的研究很少，说不清有没有用。一大碗骨头汤里的钙，只有每天该吃的几十分之一。本来就缺维 D、有骨质疏松的人另说。",
+        "cost": "不花钱，还省下钙片、维生素 D 和天天熬汤的钱和工夫。要做的只是查出缺了再补，不缺就不额外补。",
+        "gain": "先看维生素 D。2023 年一篇系统综述收了 14 项研究、2734 名骨折病人。作者的结论是，单补维生素 D 对骨头愈合、长没长上和恢复后的功能影响很小。看出好处的几项研究，质量普遍偏低。作者写明，只算随机分组的试验，没有一项看出补了有好处。其中一项找了 100 名维 D 偏低的长骨骨折病人。一半人伤后两周内一次吃 10 万 IU，一半人吃安慰剂（假药）。两边各有 2 人骨头没长上，合起来是 4%。另一项找了 102 名 18 到 50 岁的大腿骨或小腿骨骨折病人，分四组吃不同剂量或安慰剂。3 个月和 12 个月时，愈合评分都没看出差别。还有一项找了 32 名手腕骨折的绝经后女性。和不补的人比，每天折合 1800 IU 的大剂量组，骨头的抗压硬度反而更低。再看钙。2014 年一篇系统综述说，维 D 不足或补维 D 对骨折愈合影响的临床研究很少，结论说不清。它找到的两项研究是钙和维 D 一起补，看到的是骨折处骨密度或骨痂（新长出来的骨头）多了，没看愈合快慢。最后看骨头汤。台湾高雄一项测定买了三种骨头汤面食，一份汤 450 到 550 克。每份汤里的钙平均 14 到 39 毫克，占每天 1000 毫克推荐量的 1.4% 到 3.9%。作者的结论是，一份汤的钙不到每天推荐量的 5%。中国的推荐量是 18 到 49 岁每天 800 毫克，50 岁以上 1000 毫克，每天上限 2000 毫克。这份标准写明，长期吃过量的钙会增加得肾结石的风险。美国一项试验找了 36282 名绝经后女性，每天吃 1000 毫克钙加 400 IU 维 D，平均跟踪 7 年。肾结石风险高约 17%（HR 1.17，95% CI 1.02–1.34，可信范围）。髋部骨折低约 12%，但不显著（HR 0.88，0.72–1.08）。它看起来划算，是因为「骨头是钙做的，多吃钙就长得快」这个直觉",
+        "note": "争议：有两处小苗头。丹麦一项试验找了 30 名上臂近肩处骨折的老年女性，她们有骨质疏松或骨量偏低。每天吃 800 IU 维 D 加 1 克钙的人，第 6 周骨折处骨密度更高（0.623 对 0.570 g/cm²）。但它只量了骨密度，没看骨头长没长好，人也太少。那项 102 人的试验事后拆开看，大剂量维 D 的人功能评分略好，作者说还要再做试验确认。本来就缺维 D 的人另说。荷兰一项跟踪记录里，补了以后仍然缺的人，愈合拖慢的占 9.7%。本来不缺的人占 0.3%，补上来的人占 1.7%。这只是跟踪记录，证明不了因果。查出缺了，按医生说的补到正常。已经确诊骨质疏松、或者轻轻一摔就骨折的人，要的是抗骨质疏松药，见第 1 节第 40 条（抗骨质疏松药），钙片代替不了它。不缺维 D 的人长期补没有好处，见本节第 3 条（补维生素 D）。要否掉的是「额外猛补」，不是少吃钙，三餐里的钙照常吃够，见本节第 21 条（防肾结石把钙戒掉）。刚摔了怀疑骨折怎么办，见第 13 节第 41 条（怀疑骨折）。收益定中，是按一年钙片和维 D 的钱算的。受益人是你自己。",
+        "source": "Gatt T, Grech A, Arshad H (2023). The Effect of Vitamin D Supplementation for Bone Healing in Fracture Patients: A Systematic Review. Advances in Orthopedics, 2023, 6236045. <https://doi.org/10.1155/2023/6236045>；Haines N, Kempton LB, Seymour RB, et al. (2017). The effect of a single early high-dose vitamin D supplement on fracture union in patients with hypovitaminosis D: a prospective randomised trial. Bone & Joint Journal, 99-B(11), 1520-1525. <https://doi.org/10.1302/0301-620X.99B11.BJJ-2017-0271.R1>；Slobogean GP, Bzovsky S, O'Hara NN, et al. (2023). Effect of Vitamin D3 Supplementation on Acute Fracture Healing: A Phase II Screening Randomized Double-Blind Controlled Trial. JBMR Plus, 7, e10705. <https://doi.org/10.1002/jbm4.10705>；Heyer FL, de Jong JJ, Willems PC, et al. (2021). The Effect of Bolus Vitamin D3 Supplementation on Distal Radius Fracture Healing: A Randomized Controlled Trial Using HR-pQCT. Journal of Bone and Mineral Research, 36, 1492-1501. <https://doi.org/10.1002/jbmr.4311>；Gorter EA, Hamdy NA, Appelman-Dijkstra NM, Schipper IB (2014). The role of vitamin D in human fracture healing: a systematic review of the literature. Bone, 64, 288-297. <https://doi.org/10.1016/j.bone.2014.04.026>；Hsu DJ, Lee CW, Tsai WC, Chien YC (2017). Essential and toxic metals in animal bone broths. Food & Nutrition Research, 61, 1347478（表 2、表 3）. <https://doi.org/10.1080/16546628.2017.1347478>；国家卫生和计划生育委员会 (2018). WS/T 578.2—2018 中国居民膳食营养素参考摄入量 第 2 部分：常量元素（表 1；定义 3.7）. <https://www.nhc.gov.cn/wjw/yingyang/201805/f2c614be95fe41dba8123c23a6e6fb55/files/1739783539207_73894.pdf>；Jackson RD, LaCroix AZ, Gass M, et al. (2006). Calcium plus vitamin D supplementation and the risk of fractures. New England Journal of Medicine, 354(7), 669-683. <https://doi.org/10.1056/NEJMoa055218>；Doetsch AM, Faber J, Lynnerup N, et al. (2004). The effect of calcium and vitamin D3 supplementation on the healing of the proximal humerus fracture: a randomized placebo-controlled study. Calcified Tissue International, 75, 183-188. <https://doi.org/10.1007/s00223-004-0167-0>（备注里那项）；Gorter EA, Krijnen P, Schipper IB (2017). Vitamin D status and adult fracture healing. Journal of Clinical Orthopaedics and Trauma, 8(1), 34-37. <https://doi.org/10.1016/j.jcot.2016.09.003>（备注里那项）",
+        "grade": "B",
+        "meta": {
+          "money": "0",
+          "time": "少",
+          "will": "否",
+          "gain": "中",
+          "lens": "金钱",
+          "ratio": "高",
           "dispute": true,
           "todo": false
         }
@@ -3819,6 +4039,7 @@ module.exports = {
         "cost": "不花钱。用手机就能交申请，三个入口都行：「掌上 12333」App、微信或支付宝里的电子社保卡小程序、国家社会保险公共服务平台。手上有社保卡或者身份证就能办，多数地区不用跑现场。前提是先办好失业登记。",
         "gain": "要同时满足三个条件。一是单位和你本人交失业保险累计满 1 年。二是不是你自己主动提的辞职（法律叫「非因本人意愿中断就业」）。三是已经办了失业登记，并且有找工作的意愿。能领多久按缴费年限算。累计满 1 年不足 5 年，最长领 12 个月。满 5 年不足 10 年，最长 18 个月。10 年以上，最长 24 个月。每月发多少由省级政府定，各省不一样。金额低于当地最低工资，高于城市低保。国家的目标是逐步提到最低工资标准的 90%。领失业保险金这段时间，你照样参加职工基本医疗保险、享受基本医疗保险待遇。该交的那笔基本医疗保险费从失业保险基金里出，你个人不交（全国，条例 1999 年起施行）",
         "note": "自己主动辞职的，不算「非因本人意愿」，领不了。所以离职时别签「个人原因主动辞职」，见第 19 节第 7 条。失业保险金从办失业登记那天起算，晚办一个月就少拿一个月的钱。走人之后第一件事就是去登记。登记要用单位开的离职证明，见第 19 节第 17 条（离职证明）。竞业协议要不要守、公司不给补偿怎么办，见第 11 节第 12 条（签了竞业协议）。领取期间的职工医保由失业保险替你交。各省金额差得多，以你参保那个地方公布的为准。「最低工资 90%」出自人社部、财政部 2017 年的指导意见（人社部发〔2017〕71 号），原话是「逐步将失业保险金标准提高到最低工资标准的90%」。这是目标，不是现在就按 90% 发。人社部官网的原文页在本机打不开，这句按辽宁省人社厅文件里的引文核对。",
+        "source": "国务院 (1999). 失业保险条例（国务院令第 258 号，第十四、十六、十七、十八条；第十六条：「失业保险金自办理失业登记之日起计算」）. <https://xzfg.moj.gov.cn/front/law/detail?LawID=517>；人力资源社会保障部. 全国人社政务服务平台·失业保险待遇申领办事指南. <https://www.12333.gov.cn/portal/common/bszn/sydysl?pfaId=202105281700000004>；国家发展改革委就业司 (2022). 失业保险金标准，将逐步提高至最低工资的 90%. <https://www.ndrc.gov.cn/fggz/jyysr/jysrsbxf/202206/t20220627_1328819.html>；辽宁省人力资源和社会保障厅 (2019). 关于进一步调整失业保险金标准的通知：「为落实《人力资源社会保障部财政部关于调整失业保险金标准的指导意见》(人社部发〔2017〕71号〕\"逐步将失业保险金标准提高到最低工资标准的90%\"等要求」. <https://rst.ln.gov.cn/rst/zfxx/zc/ywfl/shbx/2024092014161280895/index.shtml>；全国人大常委会 (2010). 社会保险法（第四十八条）. <https://fgk.chinatax.gov.cn/zcfgk/c100009/c5192937/content.html>（国家税务总局政策法规库）",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -3838,6 +4059,7 @@ module.exports = {
         "cost": "不花钱，投诉和仲裁都不收费。要备齐劳动合同、工资条、考勤记录、转账记录和聊天记录，跑人社局或者仲裁委 1 到 3 趟。申请仲裁有 1 年的时限（法律上叫仲裁时效）。人还在这家单位干着、工资被拖欠的，不受这 1 年的限制。已经离职的，从离职那天算起 1 年内必须提出。难在要一趟趟跑、一份份找证据，中间容易泄气。",
         "gain": "第一步是投诉。拨 12333，或者去当地人社局的劳动监察投诉。法律规定立案后 60 个工作日内查完，案情复杂的可以再延 30 个工作日。查实了，能责令公司限期把钱付掉。过了期限还不付的，要按该付金额的 50% 到 100% 再加付一笔赔偿金。2024 年全国监察机构查处 13.7 万件，为 65.4 万人追回工资 86.5 亿元。手上有欠条或者工资表、欠薪事实清楚的，还可以直接向基层法院申请支付令。支付令就是法院给公司下的付款命令，法院受理后 15 日内发出。第二步是申请仲裁。法律规定受理后 45 日内结案，可以再延 15 日。讨工资的可以申请先予执行：不等案子全部审完，先执行一部分。欠的钱不超过当地月最低工资 12 倍的，属于一裁终局：仲裁裁完就算定了，公司不能再起诉。2024 年全国办理 425.7 万件，办结 415.6 万件。结案金额 934.7 亿元。调解成功率 79.6%，仲裁结案率 98.2%，仲裁终结率 73.7%。有人说这事要拖「半年一年」，说的是仲裁之后又打到法院去的那部分案子：一审 6 个月（走简易程序的 3 个月），再加二审 3 个月。2024 年法院审结追索劳动报酬案 8.8 万件、追回 285.4 亿元，998 人因拒不支付劳动报酬罪获刑（全国）",
         "note": "投诉和仲裁有用，但要分清「结案」和「到账」。98.2% 的结案率说的只是程序走完了。公司没财产、老板跑路的，赢了也照样拿不到钱。最高法只公布执行到位的总额（2024 年 2.3 万亿元）和「执行完毕率保持高位」，欠薪案最后有多少真进了当事人口袋，没有官方数据。「仲裁终结率」这个词公报没给定义，本条按「裁决之后没再打到法院去」理解。欠薪到一定数额就够刑事立案了。一种是欠一个人 3 个月以上，金额在 5000 到 2 万元以上。另一种是欠 10 人以上，累计 3 万到 10 万元以上。这两种情况，责令支付后还是不付的，就够立案。各省高院和省检察院在这个幅度内定本省的具体数额并公布，投诉前查一下本省是多少，投诉时当面提出来。工地上的农民工另有工资专用账户和总包先行清偿的规定，找总包比找包工头管用。这两条路的前提是有用人单位。没办执照的作坊、店铺照样算，可以投诉和仲裁。给家庭或个人干私活，比如当保姆，就不算劳动关系，要去法院，见第 22 条（先分清雇你的是谁）。进城务工人员为讨薪申请法律援助的，不查经济困难。劳动合同法、民事诉讼法的原文引自税务总局和贵州省市场监管局的转载页（都是 gov.cn），因为中国人大网的页面打不开。刑法修正案（八）在中国人大网抓取失败，改用 curl 打开核对",
+        "source": "人力资源社会保障部 (2025). 2024 年度人力资源和社会保障事业发展统计公报. <https://www.mohrss.gov.cn/SYrlzyhshbzb/zwgk/szrs/tjgb/202506/W020250616518526345602.pdf>；最高人民法院 (2025). 最高人民法院工作报告. <https://www.gov.cn/yaowen/liebiao/202503/content_7013680.htm>；国务院 (2004). 劳动保障监察条例（国务院令第 423 号，第九、十七、二十六条）. <https://www.gov.cn/gongbao/content/2004/content_63042.htm>；全国人大常委会 (2007). 劳动争议调解仲裁法（主席令第八十号，第二十七、四十三、四十四、四十七、五十、五十三条）. <https://chinajob.mohrss.gov.cn/h5/c/2022-07-15/356212.shtml>；全国人大常委会 (2012 修正). 劳动合同法（第三十、八十五条）. <https://fgk.chinatax.gov.cn/zcfgk/c100009/c5193025/content.html>；全国人大常委会 (2023 修正). 民事诉讼法（第一百零九、一百五十二、一百六十四、一百八十三、二百二十五、二百二十七条）. <https://amr.guizhou.gov.cn/zwgk/xxgkml/jcxxgk/zcfg/fl/202401/t20240129_83645867.html>；全国人大常委会 (2011). 刑法修正案（八）第四十一条，即刑法第二百七十六条之一. <http://www.npc.gov.cn/cwhhdbdh/c6626/c14002/c14003/201905/t20190523_390477.html>；最高人民法院 (2013). 关于审理拒不支付劳动报酬刑事案件适用法律若干问题的解释（法释〔2013〕3 号，第三条）. <https://www.court.gov.cn/fabu/xiangqing/5041.html>；国务院 (2019). 保障农民工工资支付条例（国务院令第 724 号，第十、二十六、三十、三十一、三十二、四十一条）. <https://www.gov.cn/gongbao/content/2020/content_5469641.htm>；全国人大常委会 (2021). 法律援助法（第三十一、四十二条）. <https://www.beijing.gov.cn/zhengce/zhengcefagui/qtwj/202504/t20250402_4053713.html>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -3857,6 +4079,7 @@ module.exports = {
         "cost": "不花钱。法律援助不向被援助的人收一分钱。",
         "gain": "国务院的条例里写明了民事法律援助管哪六类事。条例的原话是：「依法请求国家赔偿的；请求给予社会保险待遇或者最低生活保障待遇的；请求发给抚恤金、救济金的；请求给付赡养费、抚养费、扶养费的；请求支付劳动报酬的；主张因见义勇为行为产生的民事权益的」。说白了就是：要国家赔偿，要社保或低保待遇，要抚恤金救济金，要赡养费抚养费，讨工资，见义勇为受了损失。刑事案件这边，可能判处死刑的被告人，以及盲、聋、哑和未成年的被告人，不看经济状况一律指派律师",
         "note": "法律援助法从 2022 年 1 月 1 日起施行，有一处变化。原来要「提交经济困难证明」。现在改成本人如实说明自己的经济状况就行，不用再回原籍开证明。入口是各地的法律援助中心、公共法律服务中心，也可以打 12348",
+        "source": "国务院 (2003). 法律援助条例（国令第 385 号，第十条、第十一条、第十二条）. <https://www.gov.cn/zhengce/zhengceku/2008-03/28/content_6944.htm>；司法部有关负责人 (2021). 就贯彻实施法律援助法答记者问. <http://www.gov.cn/zhengce/2021-12/29/content_5665114.htm>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -3876,6 +4099,7 @@ module.exports = {
         "cost": "不花钱。自己到当地的救助管理站求助，也可以告诉民警或者民政部门，让他们带你去。进站要如实登记姓名和随身物品。难在要开口跟人说自己没钱、没地方去。",
         "gain": "救助站提供符合卫生要求的食物和住处。在站里突发急病的，送医院治。还会帮你联系亲属和单位。没钱买票回户籍地或者住所地的，发乘车（船）凭证，就是车票船票。户籍地就是老家，住所地就是现在常住的地方。救助期限一般不超过 10 天。等家人来接、等治疗、等安置的，可以延长。公安和其他行政机关的人执行职务时碰上流浪乞讨人员，应当告诉他可以去求助。对残疾人、未成年人、老年人和行动不便的人，要引导护送过去（全国，2003 年起）",
         "note": "自愿求助、自愿离站，不是收容。给的是基本食宿，不发现金。乘车凭证按户籍地或者住所地开，求助前先想清楚要去哪。",
+        "source": "国务院 (2003). 城市生活无着的流浪乞讨人员救助管理办法（国务院令第 381 号，第五、六、七条）. <https://www.gov.cn/gongbao/content/2003/content_62246.htm>；民政部 (2003). 城市生活无着的流浪乞讨人员救助管理办法实施细则（民政部令第 24 号，第十一、十二条）. <https://www.gov.cn/gongbao/content/2003/content_62510.htm>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -3895,6 +4119,7 @@ module.exports = {
         "cost": "不花钱。到县级以上的公共就业服务机构登记，比如就业服务中心、人力资源市场。本地的零工市场也可以登记。不知道地址就拨 12333 问。",
         "gain": "法律规定下面这几样一律免费：就业政策咨询；哪里在招人、哪里缺人的信息；职业指导和职业介绍；办就业登记和失业登记；对就业困难人员的就业援助。这些机构不得从事经营性活动，不许靠这些服务赚钱。零工的求职招聘信息，登记和发布也免费向社会提供，已经纳入公共就业信息服务的范围。对待工时间长的人（就是长期接不到活的）、低收入家庭等困难零工人员，还要加强帮扶（全国）",
         "note": "失业登记是领失业保险金、认定就业困难人员的前置手续，顺手办掉。干零工按天结账的，当场核对工钱，留下对方的联系方式和干活记录。",
+        "source": "全国人大常委会 (2007, 2015 修正). 就业促进法（第三十五条）. <https://www.gov.cn/guoqing/2021-10/29/content_5647636.htm>；人力资源社会保障部等五部门 (2022). 关于加强零工市场建设 完善求职招聘服务的意见（人社部发〔2022〕38 号）. <https://www.gov.cn/zhengce/zhengceku/2022-07/09/content_5700177.htm>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -3914,6 +4139,7 @@ module.exports = {
         "cost": "不花钱。向乡镇政府或者街道办提出申请，说清楚家里出了什么事。比如火灾、交通事故、家人突发重大疾病，或者日常非花不可的开销突然涨上来。审核公示之后，由县级民政部门审批。材料按当地给的清单准备，通常跑 1 到 2 趟。",
         "gain": "两类家庭可以拿临时救助。一类是因为意外事件、家庭成员突发重大疾病这些原因，连吃住看病这些最基本的开销都一时撑不住的家庭。另一类是非花不可的开销突然增加、超出自己承受能力的低保家庭。救哪些事、给多少钱，由县级以上地方政府自己定并公布（全国制度，金额地方定，2014 年起）",
         "note": "不要求你已经是低保户。多是一次性发一笔，金额各地差得很多，以当地当年公布的为准。",
+        "source": "国务院 (2014, 2019 修订). 社会救助暂行办法（国务院令第 649 号，第四十七、四十八、四十九条）. <https://www.gov.cn/gongbao/content/2019/content_5468952.htm>",
         "grade": "B",
         "meta": {
           "money": "0",
@@ -3933,6 +4159,7 @@ module.exports = {
         "cost": "不花钱。由一起过日子的家庭成员，向户口所在地的乡镇政府或者街道办交一份书面申请。自己办不方便的，可以委托村委会、居委会代办。要接受家庭收入和财产核查。通常跑 2 到 3 趟，带上身份证、户口本和收入财产证明。难在要把家底摊开给人查，还要等公示。",
         "gain": "全家收入除以人数，低于当地低保标准，家里财产也在规定范围内的，可以拿低保。2024 年末，全国城市低保平均标准是 798.1 元/人·月，农村是 593.9 元/人·月。城市低保保障 625.0 万人，农村保障 3361.5 万人。低保金按差额按月发：当地低保标准减去家庭人均收入。比如当地标准 798.1 元，家里每人每月收入 500 元，每人每月领的是 298.1 元，不是 798.1 元。低保标准这么定：拿当地上年度居民人均消费支出，乘以一个量化比例，隔一段时间再调一次。说白了就是拿当地上一年平均每人花掉多少钱，打个折算出来（全国平均，各地不同）",
         "note": "低保是最后一道保障，要回户籍地申请。家里的房、车、存款超过当地标准，或者子女有能力赡养你，都可能批不下来。批下来之后还有别的好处：交居民医保有资助（居民医保见第 9 条），看病能走医疗救助（医疗救助见第 10 条），申请法律援助不查经济困难（法律援助见第 3 条）。",
+        "source": "国务院 (2014, 2019 修订). 社会救助暂行办法（国务院令第 649 号，第九、十、十一条；第十二条：「县级人民政府民政部门按照共同生活的家庭成员人均收入低于当地最低生活保障标准的差额，按月发给最低生活保障金」）. <https://www.gov.cn/gongbao/content/2019/content_5468952.htm>；国家统计局 (2025). 社会事业向好发展 民生福祉不断增进——「十四五」以来社会民生统计报告. <https://www.gov.cn/lianbo/bumen/202509/content_7042627.htm>；民政部等四部门 (2024). 关于进一步做好最低生活保障标准确定调整工作的指导意见（民发〔2024〕16 号）. <https://www.gov.cn/zhengce/zhengceku/202403/content_7007237.htm>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -3952,6 +4179,7 @@ module.exports = {
         "cost": "不花钱。带上残疾人证，到街道或者乡镇提交一次申请就行。",
         "gain": "国务院定下了两项补贴。第一项是困难残疾人生活补贴，文件写的对象是「低保家庭中的残疾人，有条件的地方可逐步扩大到低收入残疾人及其他困难残疾人」。意思是先保低保家庭里的残疾人，地方财力允许的可以往外扩。第二项是重度残疾人护理补贴，文件写的对象是「残疾等级被评定为一级、二级且需要长期照护的重度残疾人」。这两项可以同时领",
         "note": "标准由省级政府定，各地差别很大，每月从几十元到几百元不等。申请要带第二代残疾人证。本人不方便的，可以委托家属代办",
+        "source": "国务院 (2015). 关于全面建立困难残疾人生活补贴和重度残疾人护理补贴制度的意见（国发〔2015〕52 号）. <https://www.gov.cn/zhengce/zhengceku/2015-09/25/content_10181.htm>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -3971,6 +4199,7 @@ module.exports = {
         "cost": "自己交的那部分，每人每年不低于 400 元。这是 2024、2025 年的国家标准，各地可以比这个高。要在每年固定的那段集中缴费期里交。特困人员是全额资助，这笔钱全由政府出。低保对象是定额资助，政府出固定的一部分。",
         "gain": "除了自己交的那部分，财政再按人头补一笔。2024 年不低于 670 元，2025 年比上年提高 30 元，不低于 700 元，个人缴费仍是不低于 400 元（医保发〔2025〕22 号，按省级文件转述）。2026 年的政府工作报告里说再提高 24 元。低保对象和特困人员，符合规定的医疗费，医保报完之后剩下的部分，还能按不低于 70% 的比例走医疗救助再报一次。断缴的代价是等待期。没在集中缴费期参保、或者没连着交的，交完之后有 3 个月固定待遇等待期，这段时间看病不给报。每多断 1 年，原则上再加 1 个月（2025 年起，全国）",
         "note": "国家医保局 2025 年那份通知（医保发〔2025〕22 号）没有在医保局官网和中国政府网公开挂出。700 元和 400 元两个数在河北、安徽两省的文件里一致，安徽那份写明是按这份通知定的。领失业保险金那段时间，职工医保由失业保险替你交，不必重复参保。",
+        "source": "国家医保局 (2024). 《关于做好 2024 年城乡居民基本医疗保障有关工作的通知》政策解读（医保发〔2024〕19 号）. <https://www.nhsa.gov.cn/art/2024/8/26/art_105_13634.html>；河北省医疗保障局等 (2025). 关于做好 2025 年城乡居民基本医疗保障有关工作的通知（冀医保发〔2025〕6 号，地方文件）. <https://www.renqiu.gov.cn/renqiu/ybjbmwj/202510/6d90754638a248cba655e94ea518a3bb.shtml>；安徽省医疗保障局等 (2025). 关于做好 2025 年城乡居民基本医疗保障有关工作的通知（淮北市医保局转载）：「按照国家医保局、财政部、国家税务总局《关于做好2025年城乡居民基本医疗保障有关工作的通知》（医保发〔2025〕22号）要求」「居民医保人均财政补助标准较上年提高30元，达到每人每年不低于700元」. <https://ybj.huaibei.gov.cn/zcwj/zcwj/58004084.html>；国务院办公厅 (2021). 关于健全重特大疾病医疗保险和救助制度的意见（国办发〔2021〕42 号）. <https://www.gov.cn/gongbao/content/2021/content_5659514.htm>；国务院办公厅 (2024). 关于健全基本医疗保险参保长效机制的指导意见（国办发〔2024〕38 号）. <https://www.gov.cn/zhengce/content/202408/content_6965741.htm>；国家医保局 (2026). 2026 年政府工作报告提到这些医保工作. <https://www.nhsa.gov.cn/art/2026/3/5/art_14_19809.html>",
         "grade": "A",
         "meta": {
           "money": "少",
@@ -3990,6 +4219,7 @@ module.exports = {
         "cost": "不花钱。顺序是固定的，一步一步来。第一步，跨省住院之前，用「国家医保局」微信公众号里的「国家异地就医备案」小程序备案。第二步，出院时直接结算。第三步，报销之后自己要掏的还是太重，就向乡镇政府或者街道办申请医疗救助。第四步，还在上班的按医疗期请病假，医疗期就是生病停工又不能被辞退的那段时间；属于工伤的走工伤保险。第五步，信用卡还不上，主动找银行协商分期。第六步，实在不够，再上民政部指定的个人求助平台筹款。材料主要是诊断证明、费用清单、结算单，跑 2 到 4 趟。难在人在病中，还要一趟趟跑手续。",
         "gain": "国家把基本医保、大病保险、医疗救助合起来叫「三重制度」，一层一层往下兜。低保对象和特困人员，符合规定的医疗费用按不低于 70% 救助。本来不穷、看病看穷了的重病患者，可以自己提出申请再救助。跨省住院前备了案，就能出院直接结算，不必先垫全款再回参保地报。生病停工有 3 到 24 个月的医疗期，具体多久按工龄长短定。这段时间里，公司不得解除劳动合同，病假工资不得低于当地最低工资的 80%。工伤职工有停工留薪期，就是养伤不上班的那段时间，原来的工资福利照发，由单位按月发，一般不超过 12 个月。信用卡欠款超出还款能力、本人又愿意还的，可以和银行协商个性化分期，把欠款重新排一个还款计划，最长 5 年，签了协议银行就必须停止催收。网上替本人筹钱的个人求助平台，必须经国务院民政部门指定。平台要核验求助信息是不是真的。捐来的钱只能打给求助人本人，或者他提供的账户（全国）",
         "note": "医疗救助报多大比例、一年最多报多少，由你参保的那个地方自己定。医疗期分六档，看你一共工作了几年、在这家单位干了几年。医疗期一过，公司就可能合法跟你解约，提前看清自己在哪一档。急诊抢救的人也在需要备案的名单里。医保局的页面没说急诊算不算自动备案、事后能不能补办，打电话问参保地。网贷和民间高息借款不要碰。法院只保护到一年期 LPR 的 4 倍这条线（不借高利贷见第 15 条）。超出那条线的部分不受保护，本金还是照还。躺在病床上也没精力去打这种官司。急重伤病是另一回事：没钱也要打 120，医院不得拒绝、推诿或者拖延救治，那一段的急救费由疾病应急救助基金付，见第 24 节第 8 条（急诊也必须先救）。劳部发〔1995〕309 号的原文页在人社部官网打不开，内容取自省人社厅的转载。",
+        "source": "国务院办公厅 (2021). 关于健全重特大疾病医疗保险和救助制度的意见（国办发〔2021〕42 号）. <https://www.gov.cn/gongbao/content/2021/content_5659514.htm>；国家医保局 (2025). 跨省异地就医如何直接报销？. <https://www.nhsa.gov.cn/art/2025/3/16/art_14_16010.html>；劳动部 (1994). 企业职工患病或非因工负伤医疗期规定（劳部发〔1994〕479 号，第二、三条）. <https://www.gov.cn/zhengce/2022-08/31/content_5711269.htm>；劳动部 (1995). 关于贯彻执行《劳动法》若干问题的意见（劳部发〔1995〕309 号，第 59 条）. <http://hrss.jl.gov.cn/ldgx/ldyggl/201608/t20160824_2401358.html>（吉林省人社厅转载）；国务院 (2010 修订). 工伤保险条例（国务院令第 586 号，第三十、三十三条）. <https://www.gov.cn/gongbao/content/2011/content_1778064.htm>；银监会 (2011). 商业银行信用卡业务监督管理办法（银监会令 2011 年第 2 号，第七十条）. <https://www.gov.cn/gongbao/content/2011/content_1893974.htm>；全国人大常委会 (2023). 关于修改慈善法的决定（第一百二十四条）. <https://www.gov.cn/yaowen/liebiao/202312/content_6923390.htm>；民政部等五部门 (2024). 个人求助网络服务平台管理办法（令第 75 号，第三、十一、十三、十七条）. <https://www.gov.cn/gongbao/2024/issue_11646/202410/content_6980857.html>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -4009,6 +4239,7 @@ module.exports = {
         "cost": "要交证件工本费。这是法定收费，收多少由国家定，以当地公示的为准。到常住户口所在地的派出所申请，跑 1 趟。",
         "gain": "从你交上《居民身份证申领登记表》那天算起，公安机关要在 60 日内发证。新办、换证、补办的这段时间里，如果急着用证，可以申请一张临时居民身份证。公安机关收到申请后 3 日内发放，有效期 3 个月（全国）",
         "note": "没有身份证，找工作、住宿、开户、领补贴都办不了，这是所有手续的前置条件。身份证法 2011 年有过修正，本条所引的是 2003 年公布的文本，条款以现行的为准。能不能异地办理，以当地公安的公告为准。",
+        "source": "全国人大常委会 (2003). 居民身份证法（主席令第四号，第十二、二十条）. <https://www.gov.cn/gongbao/content/2003/content_62254.htm>；公安部 (2005). 临时居民身份证管理办法（公安部令第 78 号，第二、七、九、十二、十七条）. <https://www.gov.cn/zhengce/2021-12/25/content_5712922.htm>",
         "grade": "A",
         "meta": {
           "money": "少",
@@ -4028,6 +4259,7 @@ module.exports = {
         "cost": "不花钱。到街道或者社区的公共就业服务机构申请认定。认定条件各地不同，常见的有大龄、长期失业、低保家庭、残疾、零就业家庭这几类。要先办好失业登记才能申请。难在得一项项核对自己够不够条件，社保还要先垫钱。",
         "gain": "认定下来之后，没有单位、自己交社保的（这叫灵活就业）可以拿社保补贴。补贴标准原则上不超过你实际交的 2/3，最长拿 3 年。被单位招用、或者被安排到公益性岗位的，单位按实际缴纳的养老、医疗、失业保险费拿补贴。公益性岗位就是政府出钱开发的岗位，它的补贴参照当地最低工资。政府开发的公益性岗位，优先安排就业困难人员。另外还有一次性求职补贴，发给高校毕业生。范围是低保家庭、零就业家庭、特困人员里的毕业生。残疾的、拿过国家助学贷款的毕业生也算。这笔钱在毕业那一学年领（全国框架，认定条件与金额地方定）",
         "note": "公益性岗位工资不高，但有社保，适合过渡。社保补贴多是先交后补，要先垫钱。具体条件问 12333 或者街道。",
+        "source": "财政部、人力资源社会保障部 (2023 修订). 就业补助资金管理办法（财社〔2017〕164 号，2023 年 12 月修订印发）. <https://www.gov.cn/zhengce/zhengceku/202401/content_6926462.htm>；全国人大常委会 (2007, 2015 修正). 就业促进法（第五十二、五十三条）. <https://www.gov.cn/guoqing/2021-10/29/content_5647636.htm>",
         "grade": "B",
         "meta": {
           "money": "0",
@@ -4047,6 +4279,7 @@ module.exports = {
         "cost": "不花钱。培训本身要占掉你不少时间。难在要连着上完课、考出证书，才拿得到补贴。",
         "gain": "财政部、人社部的规章里列了一批就业补助资金项目，就是财政专门拿来补贴就业的那笔钱。参加培训并拿到符合规定的证书，给职业培训补贴，同一个人最多领 3 次。就业困难人员自己交社保（灵活就业）的补贴最长 3 年；离法定退休年龄不到 5 年的，可以延到退休。高校毕业生自己交社保的补贴最长 2 年，被企业招走的最长 1 年。毕业 2 年内没找到工作的高校毕业生，还有 16 至 24 岁的失业青年，可以参加就业见习，见习期间领基本生活费",
         "note": "具体的补贴目录和金额由各省定，先在当地人社局官网查「职业培训补贴目录」。低保家庭、零就业家庭的毕业年度高校毕业生，还有欠着助学贷款的、残疾的，另有一次性求职创业补贴",
+        "source": "财政部、人力资源社会保障部 (2023). 就业补助资金管理办法（第五条、第七条、第十条）. <https://www.gov.cn/zhengce/zhengceku/202401/content_6926462.htm>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -4066,6 +4299,7 @@ module.exports = {
         "cost": "不花钱。每天要花 1 到 2 小时，连着做上几周。付费课程可以不报，用公共就业服务机构的免费职业指导代替。难在没人盯着的时候天天坚持，还要主动开口找人帮忙。",
         "gain": "把 47 项做过对照的求职辅导研究合并起来算。这些研究是实验或者准实验设计，都分了组做比较。结果是：参加辅导的那组，找到工作的几率是没参加那组的 2.67 倍（OR 2.67，即几率之比）。辅导里管用的成分有这几样。一是教求职技巧。二是改善自我呈现（把自己讲清楚）。三是提升自我效能（相信自己做得到）。四是鼓励主动出击。五是设定目标。六是争取社会支持（开口找人帮忙）。既教技能、又能提起劲头的辅导，效果最大",
         "note": "这些研究多数在欧美做，形式是成套的小组课程。搬到中国是拿别处的结果套过来，不是国内测出来的。争取社会支持落到实处，就是让熟人帮着介绍和内推，别不好意思开口。",
+        "source": "Liu S, Huang JL, Wang M (2014). Effectiveness of job search interventions: a meta-analytic review. Psychological Bulletin 140(4): 1009–1041. <https://doi.org/10.1037/a0035923>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -4085,6 +4319,7 @@ module.exports = {
         "cost": "不花钱。遇到「先交钱再上岗」「先培训再安排工作」「拉人头」这三种说法，当场拒绝。留好聊天记录和转账凭证。难在越缺钱越想赌一把，当场说「不」不容易。",
         "gain": "公司不得扣押你的身份证等证件，不得要你找人担保，也不得换个名目收你的钱和物。违反的责令退还，并按每人 500 元以上 2000 元以下罚款。职业中介同样不得扣证件、收押金，工作没介绍成，必须把中介费退给你。打着招聘的名义，诱导你先交培训费或者先贷款，这是人社部等五部门点名提示的「招转培」「培训贷」骗局。靠拉人头算提成、交了钱才能加入的，属于传销，参加的人可罚 2000 元以下。民间借贷的利息，超过签合同时一年期 LPR 4 倍的那部分，法院不支持。这条新规矩取代了原来按 24%、36% 两条线划三段的老办法（全国，2020 年 8 月起）",
         "note": "4 倍 LPR 是法院愿意保护的利息上限，不是「借了可以不还」，本金照还。这份司法解释 2020 年 12 月又改过一次，条文序号有变，以现行文本为准。分期和网贷的手续费怎么换算成年化利率，见第 5 节第 7 条（把利息换成年化利率）。越急着用钱，越容易被这些套路盯上。先走本节前面那几条正规渠道：失业保险金、劳动监察投诉、法律援助、救助站、临时救助。",
+        "source": "全国人大常委会 (2007). 劳动合同法（主席令第六十五号，第九、八十四条）. <https://www.gov.cn/gongbao/content/2007/content_711013.htm>；劳动保障部 (2007). 就业服务与就业管理规定（劳动保障部令第 28 号，第十四、五十五、五十八条）. <https://www.gov.cn/zhengce/2022-11/28/content_5711307.htm>；人力资源社会保障部等五部门 (2026). 警惕「招转培」「培训贷」等风险提示. <https://chinajob.mohrss.gov.cn/h5/c/2026-05-18/543038.shtml>；国务院 (2005). 禁止传销条例（国务院令第 444 号，第二、七、二十四条）. <https://www.gov.cn/gongbao/content/2005/content_80604.htm>；最高人民法院 (2020). 关于修改《关于审理民间借贷案件适用法律若干问题的规定》的决定（法释〔2020〕6 号，第二十六条）. <https://www.court.gov.cn/fabu/xiangqing/249031.html>；最高人民法院 (2020). 民间借贷利率司法保护上限调整为「一年期 LPR 的 4 倍」. <https://www.court.gov.cn/zixun/xiangqing/249051.html>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -4104,6 +4339,7 @@ module.exports = {
         "cost": "申请不收费。向市、县的住房保障部门交材料，还要书面同意他们去核实你报的情况。材料不齐的，他们会一次性告诉你要补哪些。排队等房的期限叫轮候期，一般不超过 5 年。",
         "gain": "三项条件都占上就能申请。一是在本地没有住房，或者住房面积低于规定标准。二是收入和财产低于规定标准。三是外来务工人员要在本地稳定就业满规定年限。具体条件由直辖市和市、县的住房保障部门定了公布。登记上排队名单的人叫轮候对象，住房保障部门应当在轮候期内给他安排房源（全国框架，门槛和租金地方定，2012 年起）",
         "note": "这是远水，解不了近渴，但排队不花钱，早报名早轮到。各地另有保障性租赁住房等别的类型，规则不一样，去当地住建部门的网站查。",
+        "source": "住房和城乡建设部 (2012). 公共租赁住房管理办法（住房和城乡建设部令第 11 号，第七、八、十条）. <https://www.gov.cn/gongbao/content/2012/content_2226147.htm>",
         "grade": "B",
         "meta": {
           "money": "0",
@@ -4123,6 +4359,7 @@ module.exports = {
         "cost": "找房要花 1 到 3 天。押金通常是 1 个月房租（作者粗估）。自己做饭，每天要占 30 到 60 分钟。难在天天自己动手做，忍住不点外卖。",
         "gain": "2025 年，全国居民平均每人一年花掉 29476 元（这叫人均消费支出）。其中食品烟酒 8631 元，占 29.3%。居住 6397 元，占 21.7%。两项加起来过半，所以压这两项最有效。老年助餐服务面向全体老年人开展，形式有老年食堂、老年餐桌、助餐点，困难老人另有差异化补贴。作个参照：截至 2026 年 1 月 1 日，各省第一档月最低工资最低是青海 2080 元，最高是上海 2740 元（全国，2025 至 2026 年）",
         "note": "日租房、钟点房按月算比合租贵得多，这是经验判断，没有官方数字。老年助餐点对不对非老年人开放、价格多少，各地不同。找工作时问清是不是包吃住，包吃住的岗位能把这两大项直接抹掉。人社部的原表页面打不开，数字取自四川省人社厅的转载页。",
+        "source": "国家统计局 (2026). 2025 年居民收入和消费支出情况. <https://www.stats.gov.cn/sj/zxfbhjd/202601/t20260119_1962321.html>；民政部等十一部门 (2023). 积极发展老年助餐服务行动方案（民发〔2023〕58 号）. <https://www.gov.cn/govweb/zhengce/zhengceku/202310/content_6911233.htm>；四川省人力资源和社会保障厅 (2026). 全国各省、自治区、直辖市最低工资标准情况（截至 2026 年 1 月 1 日，转载人社部官网表）. <https://rst.sc.gov.cn/rst/ylbxjwjgzxx/2026/7/10/89a8ef06cc264d29b282d7c62f362a6b.shtml>",
         "grade": "B",
         "meta": {
           "money": "0",
@@ -4141,7 +4378,8 @@ module.exports = {
         "plain": "养老金按累计年限算，不按连续年限算，断了不清零，到退休年龄累计满 15 年就能按月领。职工医保交够年限的，退休后不用再交，各地的年限不一样，打 12393 问参保地。真正受影响的是买房、落户、积分这些要求连续缴费的资格。",
         "cost": "不花钱。居民养老、居民医保可以自己按年交。职工社保断了，不必为了「别断档」去花钱找人挂靠。",
         "gain": "基本养老保险按累计缴费年限算，中间断过也不清零。到法定退休年龄，累计满 15 年就能按月领养老金。不够的，可以接着缴到满 15 年。换个地方就业的（正式说法是跨统筹地区），养老关系跟着人走，缴费年限接着往上累计。职工医保累计缴费达到国家规定年限的，退休后不用再交。居民医保断缴的代价是等待期：重新交上之后，有一段时间看病不给报（居民医保见第 9 条）（全国）",
-        "note": "职工医保退休不用再交的那个年限，法律写的是「国家规定年限」，各地执行的数不一样，男女也常常不同，打 12393 或者问参保地医保局。断缴主要影响当地那些要求连着交满多少个月的资格，比如买房、落户、积分，这些规则各地自己定，去当地查。花钱找人「挂靠」代缴，钱可能打水漂，也有法律风险，不建议。",
+        "note": "职工医保退休不用再交的那个年限，法律写的是「国家规定年限」，各地执行的数不一样，男女也常常不同，打 12393 或者问参保地医保局。断缴主要影响当地那些要求连着交满多少个月的资格，比如买房、落户、积分，这些规则各地自己定，去当地查。花钱找人「挂靠」代缴，钱可能打水漂，也有法律风险，不建议。换城市工作时养老和医保关系怎么转、别办退保，见第 19 节第 19 条（养老和医保关系转到新参保地）。",
+        "source": "全国人大常委会 (2010, 2018 修正). 社会保险法（第十六、十九、二十七条）. <https://www.gov.cn/guoqing/2021-10/29/content_5647616.htm>；国务院办公厅 (2024). 关于健全基本医疗保险参保长效机制的指导意见（国办发〔2024〕38 号）. <https://www.gov.cn/zhengce/content/202408/content_6965741.htm>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -4161,6 +4399,7 @@ module.exports = {
         "cost": "不收手续费。刑满释放的，到户籍地或者居住地的司法所、街道报到，申请安置帮教（政府的安置和帮扶）。上了失信被执行人名单的，把该还的还完，再向执行法院申请把名字删掉。在深圳参保满 3 年的个人，可以申请个人破产。每一步都要准备材料、接受面谈，还有 1 到 3 年的考察期。难在要一遍遍跟人讲过去的事，考察期还得熬。",
         "gain": "刑满释放人员依法享有与其他公民平等的权利，在就业、就学和享受社会保障方面不受歧视。生活困难的，由户籍地或者居住地政府帮助安置、依法救助帮扶（监狱法 2026 年修订，11 月 1 日起施行）。中央 2010 年的文件要求对他们强化职业培训，符合条件的纳入低保，还要建立过渡性安置基地。犯罪时不满 18 岁、并且判刑 5 年以下的，犯罪记录封存，当兵、找工作时不必报告；本人申请无犯罪记录证明的，3 个工作日内出具。上失信名单的期限是 2 年。钱还清了，或者和对方达成和解等情形下，法院应在 3 个工作日内把名字删掉。深圳经济特区个人破产条例是目前唯一的个人破产法规，宣告破产后熬满 3 年考察期，没还完的债可以免掉。企业法人还不上到期的债、欠的又比有的多（这叫资不抵债），可以申请重整、和解或者破产清算，债随着这家企业一并了结（全国，个人破产仅深圳）",
         "note": "成年人的案底不封存。刑法第一百条要求当兵、找工作时必须如实报告自己受过刑事处罚。公务员、法官、律师、教师这些职业和政审另有法定限制。监狱法在 2026 年 11 月 1 日之前的现行文本，对应第三十七、三十八条，条号以生效文本为准。中办发〔2010〕5 号在中央政府网没找到原文页，取自区政府的转载。个人破产的考察期内，不能坐飞机头等舱、不能高消费、不能买房；故意侵害别人人身造成的赔偿等 8 类债务不免除；靠欺诈拿到的免责，还可能被撤销。从失信名单上被删掉，不等于征信记录跟着变干净，那是两套系统。",
+        "source": "全国人大常委会 (2026). 监狱法（2026 年修订，第五十九、六十、六十二条）. <https://www.spp.gov.cn/spp/fl/202604/t20260430_726746.shtml>；中共中央办公厅、国务院办公厅 (2010). 转发《中央社会治安综合治理委员会关于进一步加强刑满释放解除劳教人员安置帮教工作的意见》的通知（中办发〔2010〕5 号）. <http://www.hnziyang.gov.cn/jc_zy/63/84/content_19460.html>（益阳市资阳区政府转载）；全国人大常委会 (2018). 刑事诉讼法（2018 年修正，第二百八十六条）. <https://www.spp.gov.cn/zdgz/201810/t20181027_396818.shtml>；最高人民法院、最高人民检察院、公安部、司法部 (2022). 关于未成年人犯罪记录封存的实施办法（第九、十五条）. <https://gat.hunan.gov.cn/gat/jwgk/zfxxgk/xxgkml/zcfgjjd/zcfg/202205/t20220531_24795836.html>（湖南省公安厅转载）；最高人民法院 (2017 修正). 关于公布失信被执行人名单信息的若干规定（第二、十条）. <https://www.court.gov.cn/fabu/xiangqing/37182.html>；深圳市人大常委会 (2020). 深圳经济特区个人破产条例（第二、二十三、九十五、九十七、一百零三条）. <https://sf.sz.gov.cn/xxgk/xxgkml/zcfg/content/post_8586018.html>；全国人大常委会 (2006). 企业破产法（主席令第五十四号，第二、七条）. <http://www.gov.cn/gongbao/content/2006/content_413952.htm>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -4180,6 +4419,7 @@ module.exports = {
         "cost": "年轻人买一年期的费用补偿型医疗险，每年几百元。费用补偿型就是按你实际花掉的钱报销那种。重疾险每年几千元起（作者粗估，无官方数字）。投保前要如实告知自己的健康状况，一次性花半小时。",
         "gain": "官方把这类产品分成两种。医疗保险按你实际花掉的医疗费报销。疾病保险是一确诊合同里约定的那些病，就按约定的数额直接赔一笔钱。两者补的都是医保报完之后自己要掏的那部分，以及停工的损失。保险期间在一年及以下、条款里又没写保证续保的，属于短期健康险。超过一年的，或者写了保证续保的，才是长期健康险。「保证续保」的意思是：到期续保时，公司必须按原来的条款和约定的费率接着保。保险公司不得诱导同一个人重复买保障功能相同或者类似的费用补偿型医疗险。买两份，同一笔钱也只能报一次。重疾险的疾病定义有行业统一规范，包括 28 种重度疾病和 3 种轻度疾病。恶性肿瘤、急性心肌梗死、脑中风后遗症是核心病种（全国，2019、2020 年起）",
         "note": "定 B 级，是因为官方只给了定义和规则，没有「买了能省多少」的数字。「百万医疗险」是卖的时候的叫法，法规上它算短期健康险。条款里不写「保证续保」的，明年可能停售或者涨价，买之前先在条款里找这四个字。两份按实际花费报销的医疗险，同一笔钱不能报两次，别叠着买。已经有病还投保、又不如实告知的，出事会被拒赔。如实告知有个两年的期限：合同成立满两年，保险公司就不能再以你没如实告知为由解除合同，出了事要赔。两年内被查出故意没告知的，合同解除前出的事不赔，保费也不退。哪些损失值得用保险兜，见第 5 节第 39 条（扛不住的损失）。先把居民医保（第 9 条）交上，再考虑这条。疾病定义规范是行业协会发布、银保监会指导的，不是政府文件。",
+        "source": "银保监会 (2019). 健康保险管理办法（银保监会令 2019 年第 3 号，第二、四、四十一条）. <https://www.gov.cn/zhengce/zhengceku/2019-12/04/content_5458542.htm>；中国保险行业协会、中国医师协会 (2020). 重大疾病保险的疾病定义使用规范（2020 年修订版）答记者问. <https://www.iachina.cn/art/2020/11/5/art_8616_104705.html>；银保监会 (2020). 关于使用《中国人身保险业重大疾病经验发生率表（2020）》有关事项的通知（银保监发〔2020〕51 号）. <https://www.gov.cn/zhengce/zhengceku/2020-11/06/content_5557791.htm>；全国人大常委会 (2015 修正). 中华人民共和国保险法第十六条（如实告知与合同成立二年后不得解除）. <https://flk.npc.gov.cn/detail?id=2c909fdd678bf17901678bf7c4060811>",
         "grade": "B",
         "meta": {
           "money": "少",
@@ -4199,6 +4439,7 @@ module.exports = {
         "cost": "机场、火车站的候车区通常不花钱。快餐店、网吧得花点钱消费。睡不踏实，财物有被偷的风险。难在一整夜都不敢真睡。",
         "gain": "能撑过一夜，有厕所，也能充电。没有官方数字",
         "note": "安全风险是真的存在。财物贴身放好，不接陌生人递的饮料和食物，避开偏僻角落。夜间不要露宿在桥洞、河边、工地。极端天气里露宿会出人命。第 4 条的救助站免费管吃住，先去那里。有些场所半夜会清场，不要和安保起冲突。",
+        "source": "作者经验，无官方文件",
         "grade": "C",
         "meta": {
           "money": "少",
@@ -4218,6 +4459,7 @@ module.exports = {
         "cost": "不花钱。先弄清三件事：对方是不是在开店办厂做生意，活是不是从公司或工地转包下来的，你是不是给人家里干活。对方有没有执照，可以在国家企业信用信息公示系统上查。",
         "gain": "劳动合同法第二条把用人单位限定为企业、个体经济组织、民办非企业单位等组织，自然人不在其中。最高法的劳动争议司法解释列了几种不属于劳动争议的纠纷。一是家庭或者个人与家政服务人员之间的纠纷。二是个体工匠与帮工、学徒之间的纠纷。三是农村承包经营户与受雇人之间的纠纷。这几种要去法院按普通民事纠纷起诉，诉讼时效 3 年。没有营业执照的用人单位不在这个例外里。劳动合同法第九十三条规定，不具备合法经营资格的用人单位，劳动者已经付出劳动的，该单位或者其出资人应当支付劳动报酬、经济补偿、赔偿金。该解释第二十九条规定，劳动者与未办理营业执照、营业执照被吊销或者营业期限届满仍继续经营的用人单位发生争议的，应当将用人单位或者其出资人列为当事人。劳动保障监察条例第三十三条规定，对无营业执照或者已被依法吊销营业执照、有劳动用工行为的，由劳动保障行政部门实施劳动保障监察。个人承包经营违法招用劳动者、给劳动者造成损害的，发包的组织和个人承包经营者承担连带赔偿责任（劳动合同法第九十四条）。建设单位或者施工总承包单位把工程发包、分包给个人或者不具备合法经营资格的单位，导致拖欠农民工工资的，由建设单位或者施工总承包单位清偿（保障农民工工资支付条例第三十六条）（全国）",
         "note": "按这个顺序判断。先看活是不是从公司或工地转下来的，是就找发包的公司或者总包。工地上的工资专用账户和总包先行清偿，见第 2 条（被欠薪先投诉劳动监察）。再看对方是不是在做生意：开店、办厂、开作坊的，有没有执照都走监察和仲裁，仲裁时把老板本人一起列上。剩下给家庭或个人干私活的，才去法院。去法院要自己起诉、自己举证，一审普通程序 6 个月起。律师费不在法院判给输家承担的诉讼费用里，请律师要自己出，打不起可以申请法律援助，见第 3 条（法律援助）。手上有欠条的可以先申请支付令，金额小的走小额诉讼，见第 8 节第 22 条（二手交易被骗、小额诉讼）。诉讼时效 3 年，见第 8 节第 19 条（维权有期限）。走哪条路都不保证钱到账，对方没有财产的，赢了也拿不到。",
+        "source": "全国人大常委会 (2012 修正). 劳动合同法（第二、九十三、九十四条）. <https://fgk.chinatax.gov.cn/zcfgk/c100009/c5193025/content.html>（国家税务总局政策法规库转载）；最高人民法院 (2020). 关于审理劳动争议案件适用法律问题的解释（一）（法释〔2020〕26 号，第二、二十九条）. <https://www.court.gov.cn/fabu/xiangqing/282121.html>；国务院 (2004). 劳动保障监察条例（国务院令第 423 号，第三十三条）. <https://www.gov.cn/gongbao/content/2004/content_63042.htm>；国务院 (2019). 保障农民工工资支付条例（国务院令第 724 号，第三十六条）. <https://www.gov.cn/gongbao/content/2020/content_5469641.htm>；全国人大 (2020). 民法典（第一百八十八条）. <https://www.spp.gov.cn/spp/fl/202006/t20200602_463888.shtml>；国务院 (2006). 诉讼费用交纳办法（国务院令第 481 号，第六、二十九条）. <https://www.gov.cn/ziliao/flfg/2006-12/29/content_483682.htm>；全国人大常委会 (2023 修正). 民事诉讼法（第一百五十二、二百二十五条）. <https://amr.guizhou.gov.cn/zwgk/xxgkml/jcxxgk/zcfg/fl/202401/t20240129_83645867.html>（贵州省市场监管局转载）",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -4239,6 +4481,7 @@ module.exports = {
         "cost": "不花钱。停车、开双闪、救人、打电话报警，等交警最多耗掉一两个小时。小事故要是没人受伤、双方对事实也没争议，就先拍照。再记下对方的姓名、电话、车牌、驾驶证号、保险凭证号和撞到的部位。双方签字后可以先撤离现场，再自己协商。",
         "gain": "跑了的那一方，要承担这次事故的全部责任。只有你能证明对方也有错，责任才可能减轻一点。跑了还要吊销驾驶证，而且这辈子都不能再考。如果这起事故构成交通肇事罪，跑了判 3 到 7 年。如果因为跑了导致人死亡，判 7 年以上。保险也不管：商业车险里的车损险和三者险，遇上「交通肇事逃逸」「故意破坏、伪造现场、毁灭证据」一律不赔，几十万的赔偿要你自己全掏（全国）",
         "note": "有人受伤，先救人，再报警。为了救人必须挪动现场的，先把车和人原来的位置标出来。「撞了一下没感觉就开走」，事后也可能被算成逃逸，拿不准就报警。保险那一条引的是示范条款，它是保险行业的统一模板，你实际能赔到什么，以自己手里的保单为准。",
+        "source": "全国人大常委会 (2021). 道路交通安全法（2021 年修订，第七十、一百零一条）. <https://jtgl.beijing.gov.cn/jgj/jgxx/flfg/fl/205308/index.html>（北京市公安交通管理局转载）；国务院 (2017). 道路交通安全法实施条例（国务院令第 405 号，2017 年修订，第八十六、九十二条）. <http://xzfg.moj.gov.cn/front/law/detail?LawID=75>；全国人大 (1997). 刑法（第一百三十三条）. <https://www.spp.gov.cn/spp/fl/201802/t20180206_364975.shtml>；中国保险行业协会 (2020). 机动车商业保险示范条款（2020 版）（第九、二十二条）. <https://www.iachina.cn/art/2020/9/4/art_24_104621.html>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -4258,6 +4501,7 @@ module.exports = {
         "cost": "不花钱。打一个电话，说清转账的时间、金额和对方的账号。把转账截图和聊天记录留好。",
         "gain": "公安机关有权对涉案的资金做即时查询、紧急止付、快速冻结。银行和支付机构必须配合。冻结住的钱，按程序返还给被害人。钱一旦被转走、分散开，追回的概率大幅下降，所以止付越早越有效。96110 是全国统一的反诈预警热线，来电是警方在劝阻你，务必接（全国，2022 年 12 月起）",
         "note": "凡是自称公检法、让你把钱转到「安全账户」的，都是骗局。法律只写了「建立止付冻结制度」，意思是让银行把钱扣住。能追回多少，要看你报警的时候钱还在不在账上。「国家反诈中心」App 和 96110 的介绍引自福建省公安厅的页面，公安部网站的原文页打不开。",
+        "source": "全国人大常委会 (2022). 反电信网络诈骗法（第二十、三十四条）. <https://www.spp.gov.cn/spp/fl/202209/t20220902_575631.shtml>；福建省公安厅 (2023). 96110 来电，请务必接听. <http://gat.fujian.gov.cn/ztzl/fjjffpzxrx/spjq/202303/t20230306_6126156.htm>（省级公安机关页面）",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -4277,6 +4521,7 @@ module.exports = {
         "cost": "不花钱。把「三不一多」记住，读一遍下面那七类，再装一个「国家反诈中心」App，96110 来电必接。凡是让你转账、共享屏幕、下载陌生 App、点链接、报验证码的，先挂断，再打官方电话核实。难在对方往往催得很急，你要顶住这股催促先挂断。",
         "gain": "法律要求政府和有关部门把各类电信网络诈骗的手法讲给大家。公安机关会同金融、电信、网信部门建立预警劝阻系统，发现可能要被骗的人就及时劝阻。96110 就是这条全国统一的预警劝阻热线，来电要接。公安部 2026 年 6 月通报，最高发的 10 类诈骗占了全部电诈案件的 85%。刷单返利发案最多，占 25%。虚假网络投资理财损失最大，约占全部损失的 40%。福建省公安厅逐类拆解的识别特征如下。刷单返利：「喊你一起赚钱的大概率是想赚你的钱」，任务单做不完就不退本金。虚假投资理财：群里「水军」晒收益，先给小额返利再让你加大投入，提现要「缴税」。网络贷款：「贷款并不需要交保证金、做银行流水账，一旦遇上了，一定是假的」。冒充客服：说你开了会员要自动扣费、影响征信，逼你转账取消。冒充公检法：「公检法机关不存在所谓的『安全账户』，凡是通过电话、QQ、微信、网络等办案、做笔录的『公检法机关』，都是诈骗」。杀猪盘：「对于从未见过面，只见到照片或者视频的『恋人』，不可轻信」，永远不视频不见面却常有急事要钱。色诱刷单：约见面先「做任务」，钱越交越多。事前认出来，比事后止付便宜得多。止付能追回多少，取决于报警时钱还在不在账上，止付怎么做见第 2 条（打 110 或 96110 要求止付）（全国，2022 年 12 月起）",
         "note": "自称公检法、客服、领导、平台风控，要你「配合调查」「取消会员」「刷单返利」「投资内幕」的，都是同一个套路。真贷款不需要交保证金，公检法没有「安全账户」，这两句记住就能挡掉一大半。定 B 级是因为这句口诀只是官方的宣传口径，没有「记住之后少被骗多少」的数字。口诀和七类拆解取自省级公安厅的页面。公安部 2026 年通报的 10 类高发诈骗还包括冒充电商物流客服、贷款征信、网络游戏虚假交易、网络婚恋交友、冒充领导熟人和机票退改签，套路都一样，最后都要你转钱。熟人当面找你「帮忙刷个脸」办贷款，不让你转钱，却让你背债，见第 45 条（帮忙刷个脸）。做生意时撞上的代运营骗局，见第 12 节第 24 条（代运营网店）。",
+        "source": "全国人大常委会 (2022). 反电信网络诈骗法（第八、二十、三十四条）. <https://www.spp.gov.cn/spp/fl/202209/t20220902_575631.shtml>；公安部 (2026). 公安部发布会：通报当前电信网络诈骗犯罪的最新形势、特点提示防范电信网络诈骗要点（2026 年 6 月 12 日）：「以上这10类案件就占了全部电诈案件的85%。其中，刷单返利诈骗发案最高，占所有电诈案件的25%；虚假网络投资理财诈骗损失最高，约占全部电诈案件损失的40%」. <https://www.mps.gov.cn/n2254536/n2254544/n2254552/n10491781/index.html>；福建省公安厅 (2023). 96110 来电，请务必接听. <http://gat.fujian.gov.cn/ztzl/fjjffpzxrx/spjq/202303/t20230306_6126156.htm>（省级公安机关页面，含「来电不轻信，信息不透露，链接不点击，转账多核实」口诀及「警惕 192 开头的诈骗电话」提示）；福建省公安厅 (2023 到 2024). 识骗技巧专栏：刷单 <http://gat.fujian.gov.cn/ztzl/fjjffpzxrx/spjq/202307/t20230703_6196881.htm>；投资理财 <http://gat.fujian.gov.cn/ztzl/fjjffpzxrx/spjq/202312/t20231220_6362145.htm>；贷款 <http://gat.fujian.gov.cn/ztzl/fjjffpzxrx/spjq/202312/t20231207_6326741.htm>；冒充客服 <http://gat.fujian.gov.cn/ztzl/fjjffpzxrx/spjq/202310/t20231020_6279505.htm>；冒充公检法 <http://gat.fujian.gov.cn/ztzl/fjjffpzxrx/spjq/202309/t20230913_6255863.htm>；杀猪盘 <http://gat.fujian.gov.cn/ztzl/fjjffpzxrx/spjq/202308/t20230818_6232030.htm>；色诱刷单 <http://gat.fujian.gov.cn/ztzl/fjjffpzxrx/spjq/202403/t20240307_6410612.htm>",
         "grade": "B",
         "meta": {
           "money": "0",
@@ -4296,6 +4541,7 @@ module.exports = {
         "cost": "不花钱。多打一个电话，多等几分钟。平时少在公开账号上发正脸视频和大段语音。难在对方常常催得很急，你要忍住不当场转账。",
         "gain": "公安部网安局给了三条办法。第一条是动作验证：请对方做一个连贯的转头动作，或者用手掌完全遮住脸再快速移开。原文说「目前的 AI 技术在模拟这些复杂的面部遮挡和光影变化时，容易出现卡顿、模糊或扭曲」。第二条是听声音细节：「AI 生成的语音有时会缺乏自然的呼吸停顿、情感起伏，或者带有轻微的机械感、背景杂音异常」。第三条是多渠道核实。原文说这是「最核心的一招」：「挂断后直接拨打对方常用且你熟悉的电话号码（不要回拨可疑来电号码），或者通过你们共同认识的第三人进行侧面核实」。口诀是「视频语音莫轻信，动作验证多核实」。法律上，换脸换声早就被禁止用于诈骗。人脸生成、人脸替换、合成人声、仿声这几类服务，平台必须打上显著标识。任何组织和个人不得恶意删除、篡改、伪造、隐匿这个标识。但守规矩的是平台，骗子不会加，所以「没看到 AI 标识」不能反过来当成对方是真人的证据。公安部刑侦局公布过一起案件。14 人团伙被查获合成动态人脸视频 5 万多条，公民个人信息 50 多万条。警方还扣押了云服务器 60 台（全国，标识义务自 2025 年 9 月 1 日起）",
         "note": "回拨要用自己通讯录里存的旧号码。不要回拨来电显示的那个号码，也不要用对方在聊天里发来的新号码。对方以「信号不好」「在开会」为由不肯当面视频、不肯做指定动作的，直接当骗局处理。动作验证法只是辅助，AI 一直在变好，唯一稳的是第三条核实。已经转了钱，见本节第 2 条（立刻打 110 要求止付）。防止自己的人脸和声音被采集见第 14 节。定 B 级是因为官方给的是识别办法和案例，没有「按这个方法核实后被骗率下降多少」的数字。公安部官网（mps.gov.cn）这次仍然全站 521 打不开，公安部网安局和刑侦局的原文取自福建省公安厅的转载页。",
+        "source": "公安部网安局 (2025). 眼见≠为实，警惕 AI 新型诈骗！<http://gat.fujian.gov.cn/ztzl/fjjffpzxrx/spjq/202509/t20250922_7013008.htm>（福建省公安厅转载）；国家互联网信息办公室、工业和信息化部、公安部 (2022). 互联网信息服务深度合成管理规定（第六、十六、十七条，2023 年 1 月 10 日施行）. <https://www.gov.cn/zhengce/zhengceku/2022-12/12/content_5731431.htm>；国家互联网信息办公室、工业和信息化部、公安部、国家广播电视总局 (2025). 人工智能生成合成内容标识办法（第十条，2025 年 9 月 1 日施行）. <https://www.cac.gov.cn/2025-03/14/c_1743654684782215.htm>；公安部刑侦局、央视新闻 (2026). 警方查获 5 万多条合成动态人脸视频 谁在「复制」你的脸？<http://gat.fujian.gov.cn/ztzl/fjjffpzxrx/spjq/202603/t20260330_7117146.htm>（福建省公安厅转载）",
         "grade": "B",
         "meta": {
           "money": "0",
@@ -4315,6 +4561,7 @@ module.exports = {
         "cost": "律师费从几千元起。经济困难的可以向法律援助机构申请免费律师。被问话时只回答和本案有关的问题，其余交给律师。难在当场稳住，不急着自己解释。",
         "gain": "从第一次讯问起，或者从被采取强制措施（被限制人身自由）起，你就有权委托律师。案子还在公安手里侦查的这一段，只能委托律师，不能请律师以外的人当辩护人。律师提出会见，看守所最迟 48 小时内安排，会见不被监听。不得强迫任何人证实自己有罪。和本案无关的问题，你有权拒绝回答。传唤、拘传一次最长 12 小时，特别重大复杂的最长 24 小时。传唤是通知你去问话，拘传是强制把你带去问话。不得连着传唤，把人变相关住。捏造事实诬告别人、想让他被追究刑事责任的，判 3 年以下，造成严重后果的判 3 到 10 年。被拘留、逮捕之后又撤案、不起诉或者判无罪的，可以申请国家赔偿，每天按上一年度全国职工日平均工资计算（全国）",
         "note": "不要私下去找对方，也不要去找他家里人。任何「私了」都可能被理解成你认了。聊天记录、通话记录、行程记录是你自证清白的材料，删掉等于把自己的证据也删了。记错了、举报的事后来查下来不成立，不算诬告陷害罪。本条对被指控的人不分男女。展开的三条见本节第 33 条（追究捏造事实的一方）、第 34 条（证据不足应当判无罪与申诉再审）、第 35 条（羁押后的国家赔偿按天算）。",
+        "source": "全国人大常委会 (2018). 刑事诉讼法（2018 年修正，第三十四、三十五、三十九、五十二、一百一十九、一百二十条）. <https://www.spp.gov.cn/zdgz/201810/t20181027_396818.shtml>；全国人大 (1997). 刑法（第二百四十三条）. <https://www.spp.gov.cn/spp/fl/201802/t20180206_364975.shtml>；全国人大常委会 (2012). 国家赔偿法（2012 年修正，第十七、三十三条）. <https://www.stats.gov.cn/gk/tjfg/xgfxfg/202503/t20250306_1958899.html>（国家统计局转载）",
         "grade": "A",
         "meta": {
           "money": "多",
@@ -4334,6 +4581,7 @@ module.exports = {
         "cost": "不花钱。自己去公安机关投案，或者留在原地打电话报警，再把事情如实说一遍。难的是顶住「再等等看，说不定没人查」这个念头。",
         "gain": "刑法第六十七条：犯罪以后自动投案、如实供述自己罪行的，是自首。对自首的，可以从轻或者减轻处罚，其中犯罪较轻的可以免除处罚。没有投案但如实供述自己罪行的（坦白），可以从轻处罚；因如实供述避免特别严重后果发生的，可以减轻处罚。两高的量刑指导意见给了明码幅度。基准刑就是先按案情算出来的那个刑期，下面的百分比都在它之上往下减。自首可以减少基准刑的 40% 以下，犯罪较轻的可以减少 40% 以上或者依法免除处罚。坦白里，如实供述自己罪行的减少 20% 以下，如实供述司法机关尚未掌握的同种较重罪行的减少 10% 到 30%，因如实供述避免特别严重后果发生的减少 30% 到 50%。认罪认罚减少 30% 以下，同时有自首、重大坦白、退赃退赔、赔偿谅解等情节的减少 60% 以下，犯罪较轻的减少 60% 以上或者依法免除处罚。追诉期限按法定最高刑分四档：5 年、10 年、15 年、20 年（刑法第八十七条）。但刑法第八十八条写明，检察院、公安机关、国家安全机关立案侦查，或者法院受理案件以后，逃避侦查或者审判的，不受追诉期限的限制（全国，量刑幅度自 2021 年 7 月 1 日起施行）",
         "note": "这条的受益人是自己。自首只是从轻情节，罪照样要定，减多少由法院定，量刑意见对严重暴力犯罪、毒品犯罪的从宽幅度要求从严掌握。交通事故另有一套算法：留在现场、救人、向公安机关报告的算自动投案，但因为这些本来就是法定义务，从宽幅度要从严掌握；跑了以后再投案也还算自首，只是要按更重的那一档法定刑当基准，再决定减不减、减多少，怎么做见本节第 1 条（出了交通事故先停车、救人、报警）。先请律师和如实供述不冲突，见本节第 5 条（被指控先请律师）：律师帮你核对的是笔录写得对不对，不是帮你编说法。",
+        "source": "全国人大. 中华人民共和国刑法（经刑法修正案十一修正的整合文本）第六十七、八十七、八十八条. <https://flk.npc.gov.cn/detail?id=ff808181796a636a0179822a19640c92>；最高人民法院、最高人民检察院 (2021). 关于常见犯罪的量刑指导意见（试行）（法发〔2021〕21 号，2021 年 7 月 1 日施行）三（六）（七）（十四）. 甘肃省张掖市人民检察院转载全文. <http://www.zhangye.jcy.gov.cn/info/1039/2086.htm>；最高人民法院 (2010). 关于处理自首和立功若干具体问题的意见（法发〔2010〕60 号）一. 最高人民法院公报. <http://gongbao.court.gov.cn/Details/f3089058d37e11cd16d801530934ae.html>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -4353,6 +4601,7 @@ module.exports = {
         "cost": "代驾或者打车几十元。聚会之前先说好今天谁不喝。难在场面上被劝酒时顶回去。",
         "gain": "酒后驾车，暂扣驾驶证 6 个月，罚 1000 到 2000 元。再犯的，拘留 10 日以下并吊销驾驶证。醉驾直接吊销驾驶证，5 年内不得重考，并按危险驾驶罪追究刑事责任，判拘役并罚钱，拘役就是短期关押。开营运车的更重：酒驾拘留 15 日、罚 5000 元、5 年禁驾；醉驾 10 年禁驾，而且这辈子不能再开营运车。酒后或者醉驾造成重大事故、构成犯罪的，终生禁驾。商业车险对饮酒、吸毒后驾车一律不赔（全国）",
         "note": "醉驾是刑事犯罪，会留案底，影响本人政审和一部分职业资格。「饮酒」和「醉酒」按血液里的酒精含量划线，具体界线由国家标准规定。本节没有核实这个数值，别靠感觉估算自己到了哪一档。",
+        "source": "全国人大常委会 (2021). 道路交通安全法（2021 年修订，第九十一条）. <https://jtgl.beijing.gov.cn/jgj/jgxx/flfg/fl/205308/index.html>（北京市公安交通管理局转载）；全国人大常委会 (2015). 刑法修正案（九）（第八条，即刑法第一百三十三条之一）. <https://www.spp.gov.cn/spp/fl/201802/t20180205_364562.shtml>；中国保险行业协会 (2020). 机动车商业保险示范条款（2020 版）（第九、二十二条）. <https://www.iachina.cn/art/2020/9/4/art_24_104621.html>",
         "grade": "A",
         "meta": {
           "money": "少",
@@ -4372,6 +4621,7 @@ module.exports = {
         "cost": "不花钱。有人说「借卡走个账，给你几百块」，拒绝就行。",
         "gain": "出租、出借、买卖电话卡、银行账户、支付账户、互联网账号，这件事本身就是违法。没收违法所得，再罚违法所得的 1 到 10 倍。没有违法所得的，最高罚 20 万元。情节严重的，拘留 15 日以下。还可能被记入信用记录、限制账户功能、停掉非柜面业务（只能去柜台办）。明知别人用网络实施犯罪，还给他提供支付结算这类帮助，情节严重的，构成帮助信息网络犯罪活动罪（简称帮信罪），判 3 年以下并处罚金（全国）",
         "note": "说「我不知道他拿卡去干什么」挡不住。办案时会从外在情形反推你知不知情：收过好处费、流水明显不正常，都可能算你知道。卡被人用来收赃款的，就算你最后不构成犯罪，账户也会被冻结，本人也会被惩戒。替别人刷脸、念验证码过实名核验，罚则和这条相同，见第 45 条（帮忙刷个脸）。",
+        "source": "全国人大常委会 (2022). 反电信网络诈骗法（第三十一、四十四条）. <https://www.spp.gov.cn/spp/fl/202209/t20220902_575631.shtml>；全国人大常委会 (2015). 刑法修正案（九）（第二十九条，即刑法第二百八十七条之二）. <https://www.spp.gov.cn/spp/fl/201802/t20180205_364562.shtml>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -4391,6 +4641,7 @@ module.exports = {
         "cost": "不花钱。在网上查，十分钟就能查完。",
         "gain": "行政法规写着「个人信息主体有权每年两次免费获取本人的信用报告」，你每年可以免费查自己两次。不良信息的保存期限是「自不良行为或者事件终止之日起为 5 年；超过 5 年的，应当予以删除」。对报告有异议的，你可以提出来，征信机构或者提供这条信息的机构应当在收到异议之日起 20 日内书面答复你",
         "note": "身份证被人冒用去网贷、办卡，本人往往要到买房贷款被拒的时候才发现，那时已经拖了好几年。查询的入口是中国人民银行征信中心官网，或者手机银行。别用第三方的「查征信」App，那类 App 本身就在收集你的信息。帮熟人「刷个脸、做个见证」之后，尤其要查一次，见第 45 条（帮忙刷个脸）。",
+        "source": "国务院 (2013). 征信业管理条例（国令第 631 号，第十六条、第十七条、第二十五条）. <https://www.gov.cn/zhengce/zhengceku/2013-01/29/content_2303.htm>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -4410,6 +4661,7 @@ module.exports = {
         "cost": "不花钱。退到人多的地方报警，让对方的动作留在监控里。难在忍住不还嘴、不推搡。",
         "gain": "殴打他人或者故意伤害的，拘留 5 到 10 日，并罚 500 到 1000 元。结伙打、打老人孕妇儿童残疾人、多次打人或者一次打多人的，拘留 10 到 15 日，并罚 1000 到 2000 元。结伙斗殴按寻衅滋事处理，最高拘留 15 日并罚 2000 元，寻衅滋事就是无事生非、起哄闹事。故意伤害他人身体、构成犯罪的，判 3 年以下；把人打成重伤的，判 3 到 10 年。两个人对着打，法律上叫相互斗殴，不算正当防卫。但如果对方先动手、手段又明显过激，或者你已经努力躲开、对方还接着打，你还击一般会被认定为防卫。还手过了头才叫防卫过当，要同时满足两条：明显超过必要限度，并且造成重大损害。就算真的过当，也应当减轻或者免除处罚（全国，治安管理处罚法 2026 年 1 月 1 日起施行）",
         "note": "治安管理处罚法 2025 年修订之后条款号全变了，殴打他人从旧法第四十三条改成了第五十一条，引用旧条号的资料已经过时。「打成轻伤就要判刑」里的轻伤怎么算，由鉴定标准定，本节没有核实。对方已经倒地，或者已经跑了，侵害就算停了，你再追上去打，就不算防卫。为了防身随身带刀、甩棍、电击器，平时被查到就要罚，见第 9 节第 26 条（别为了防身买甩棍、电击器）。",
+        "source": "全国人大常委会 (2025). 治安管理处罚法（2025 年修订，第三十、五十一条）. <https://www.spp.gov.cn/spp/fl/202506/t20250627_699863.shtml>；全国人大 (1997). 刑法（第二十、二百三十四条）. <https://www.spp.gov.cn/spp/fl/201802/t20180206_364975.shtml>；最高人民法院、最高人民检察院、公安部 (2020). 关于依法适用正当防卫制度的指导意见（法发〔2020〕31 号，第 6、9、11、14 条）. <https://www.court.gov.cn/zixun/xiangqing/251611.html>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -4429,6 +4681,7 @@ module.exports = {
         "cost": "律师费几千元起，经济困难的可以申请法律援助。代价主要在事后：常常先被按故意伤害立案，要配合调查，甚至先被关上十几天。难在这段日子里稳住不乱。",
         "gain": "刑法规定了什么算正当防卫。国家、公共利益、自己或者别人的人身、财产和其他权利，正在被不法侵害。这时候动手制止、把正在侵害的人打伤，属于正当防卫，不负刑事责任。同一条还写着：「正当防卫明显超过必要限度造成重大损害的，应当负刑事责任，但是应当减轻或者免除处罚」。另有一款：「对正在进行行凶、杀人、抢劫、强奸、绑架以及其他严重危及人身安全的暴力犯罪，采取防卫行为，造成不法侵害人伤亡的，不属于防卫过当，不负刑事责任」。两高一部的指导意见把边界说得更细。认定防卫过当，要同时具备「明显超过必要限度」和「造成重大损害」两条，缺一不可。「造成重大损害」是指把不法侵害人打成重伤或者打死，造成轻伤以及更轻的伤不算。只有不法侵害人确实已经失去侵害能力，或者确实已经放弃侵害，才算侵害结束。防卫必须针对不法侵害人本人。对显著轻微的不法侵害，在看得出来只是轻微侵害的情况下，直接用足以致人重伤或者死亡的方式制止的，不认定为防卫行为。过程成本有官方案例。检例第 47 号于海明案：2018 年 8 月 27 日当晚，公安以「故意伤害案」立案侦查。9 月 1 日，昆山市公安局依据刑法第二十条第三款认定为正当防卫，撤销了案件。检例第 45 号陈某案：一名学生被 9 人围殴，持刀反击致 3 人重伤。公安以涉嫌故意伤害立案侦查，把他刑事拘留。检察机关认定属于正当防卫，不批准逮捕，公安才把人放了。被拘留之后公安认为需要逮捕的，应当在 3 日内提请检察院审查批准（报检察院批不批捕）。特殊情况可以延长 1 至 4 日。流窜作案、多次作案、结伙作案的重大嫌疑分子，可以延长到 30 日。检察院再在 7 日内作出决定（全国）",
         "note": "默认的动作还是第 10 条说的退开报警（起了冲突先报警不动手）。两个人对着打不算防卫，对方倒地或者跑了你还追着打也不算。只有退无可退的那一刻才考虑还手。事后有三件事要做。第一，报警之后别离开现场。第二，赶紧把监控和目击者保住，指导意见要求公安第一时间去调现场的录像录音、第一时间问目击者。第三，被警察正式问话之前先请律师，见第 5 条（被指控先请律师）。最后案子撤了、不起诉或者判无罪的，被关的那些日子可以按天申请国家赔偿，见第 35 条（羁押后的国家赔偿）。为别人出手防卫，法律上同样允许。但空着手去插手陌生人之间的打斗，风险要另算，见第 13 节第 37 条（撞见一群人打架）。这条的受益人主要是自己和家人。",
+        "source": "全国人大 (1997). 刑法（第二十条）. <https://www.spp.gov.cn/spp/fl/201802/t20180206_364975.shtml>；最高人民法院、最高人民检察院、公安部 (2020). 关于依法适用正当防卫制度的指导意见（法发〔2020〕31 号，第 5、6、7、10、11、13、14、19 条）. <https://www.court.gov.cn/zixun/xiangqing/251611.html>；最高人民检察院 (2018). 第十二批指导性案例（检例第 45 号陈某正当防卫案、检例第 47 号于海明正当防卫案）. <https://www.spp.gov.cn/spp/jczdal/201812/t20181219_402920.shtml>；全国人大常委会 (2018). 刑事诉讼法（2018 年修正，第九十一条）. 宁夏回族自治区人民检察院转载全文 <https://www.nx.jcy.gov.cn/zwsy/qwfb/202011/t20201119_608817.html>",
         "grade": "A",
         "meta": {
           "money": "多",
@@ -4448,6 +4701,7 @@ module.exports = {
         "cost": "不花钱，投诉和仲裁都不收费。要跑一两趟，等上几个月。难在这几个月里忍住不动手。",
         "gain": "法定路径有官方数字。2024 年全国劳动监察查处 13.7 万件，为 65.4 万人追回工资 86.5 亿元。还有 998 人因为拒不支付劳动报酬罪获刑。欠薪怎么投诉劳动监察、怎么申请劳动仲裁，见第 7 节第 2 条。报复路径的价目写在刑法第二百三十二条：「故意杀人的，处死刑、无期徒刑或者十年以上有期徒刑；情节较轻的，处三年以上十年以下有期徒刑」。官方案例：徐某金考试不合格，没拿到毕业证书，又对实习报酬不满。2024 年 11 月 16 日，他回无锡工艺职业技术学院持刀行凶，致 8 人死亡、17 人受伤。一审以故意杀人罪判处死刑、剥夺政治权利终身，2025 年 1 月 20 日经最高人民法院核准执行。他不满的是学校和那笔报酬，受害的却是同学，那笔报酬他也一分没拿到（全国）",
         "note": "还在上学的实习生，一般不算和单位建立了劳动关系。实习报酬要不到，只能找学校协调，或者去法院起诉，走不了劳动仲裁那条路。给家庭或个人干私活被欠了钱，也一样要去法院，见第 7 节第 22 条（先分清雇你的是谁）。被欠工资了具体怎么投诉、怎么仲裁，见第 7 节第 2 条。讨债的红线见第 9 节第 15 条（要债不扣人、不关人）。走法定路径也可能要不回钱，因为案子结了不等于钱到账。去报复，钱照样要不回来，还要自己抵命。",
+        "source": "全国人大 (1997). 刑法（第二百三十二条）. <https://www.spp.gov.cn/spp/fl/201802/t20180206_364975.shtml>；新华社 (2024). 江苏宜兴一校园发生持刀伤人事件致 8 死 17 伤. <http://www.news.cn/20241117/65a18fddb453469ebe91c78eda669893/c.html>（转宜兴警方通报，含伤亡人数与动机原话）；最高人民检察院 (2025). 无锡校园持刀伤人案罪犯徐加金被执行死刑. <https://www.spp.gov.cn/spp/zdgz/202501/t20250120_680197.shtml>；人力资源社会保障部 (2025). 2024 年度人力资源和社会保障事业发展统计公报. <https://www.mohrss.gov.cn/SYrlzyhshbzb/zwgk/szrs/tjgb/202506/W020250616518526345602.pdf>；最高人民法院 (2025). 最高人民法院工作报告（「对驾车冲撞行人的樊维秋、校园持刀行凶的徐加金等判处死刑」）. <https://www.gov.cn/yaowen/liebiao/202503/content_7013680.htm>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -4467,6 +4721,7 @@ module.exports = {
         "cost": "不花钱。难在气头上把这个念头压住。",
         "gain": "刑法第一百一十四条：「放火、决水、爆炸以及投放毒害性、放射性、传染病病原体等物质或者以其他危险方法危害公共安全，尚未造成严重后果的，处三年以上十年以下有期徒刑」。一个人都没伤着，也是三年起。第一百一十五条：致人重伤、死亡，或者使公私财产遭受重大损失的，处十年以上有期徒刑、无期徒刑或者死刑。官方案例：樊维秋因为婚姻破裂、生活失意，又不满离婚财产分割的结果，「决意通过驾车冲撞人群方式发泄私愤」。2024 年 11 月 11 日晚，他驾车冲入珠海市体育中心正在锻炼的人群，致 35 人死亡、43 人受伤。一审以以危险方法危害公共安全罪判处死刑、剥夺政治权利终身，2025 年 1 月 20 日经最高人民法院核准执行。被撞的是他不认识的跑步者（全国）",
         "note": "「反正我也不想活了」在量刑上不是折扣。最高人民法院 2025 年工作报告对这类案件的口径是「对挑战法律和道德底线的罪大恶极者，坚决依法从严从重从快惩处」。只是放话也已经违法。放话要放火、爆炸、投毒这类危害公共安全的事，把公共秩序搅乱了的，拘留 5 到 10 日，还可以罚 1000 元以下。写恐吓信，或者用别的办法威胁别人人身安全，同样违法。这种要拘留 5 日以下，或者罚 1000 元以下（治安管理处罚法 2026 年 1 月 1 日起施行）。念头已经到这一步的，看第 14 条（冒出「拉个垫背的」这种念头当急症处理）。",
+        "source": "全国人大 (1997). 刑法（第一百一十四、一百一十五条）. <https://www.spp.gov.cn/spp/fl/201802/t20180206_364975.shtml>；新华社 (2024). 广东珠海驾车撞人事件造成 35 人死亡 43 人受伤. <http://www.news.cn/20241112/29c6af4f6ee4455b92832f3c2b13a93a/c.html>（转珠海市公安局通报）；最高人民检察院 (2024). 樊维秋以危险方法危害公共安全案一审宣判，判处死刑，剥夺政治权利终身. <https://www.spp.gov.cn/spp/zdgz/202412/t20241227_677757.shtml>；最高人民检察院 (2025). 珠海驾车撞人案罪犯樊维秋被执行死刑. <https://www.spp.gov.cn/spp/zdgz/202501/t20250120_680196.shtml>；全国人大常委会 (2025). 治安管理处罚法（2025 年修订，第二十九、五十条）. <https://www.spp.gov.cn/spp/fl/202506/t20250627_699863.shtml>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -4486,6 +4741,7 @@ module.exports = {
         "cost": "不花钱。难在承认自己此刻不对劲，也难在把东西交到别人手上。",
         "gain": "这类念头到动手的窗口很短。对 82 名自杀未遂者在入院三天内做的访谈里，47.6% 的人说，从第一次冒出念头到实施不超过 10 分钟。一项 10 年系统综述（把十年间的研究合起来梳理一遍）认为，限制致死手段的证据在持续增强。镇痛药管控之后，与之相关的自杀下降 43%。跳楼热点加了防护之后，自杀下降 86%（79% 到 91%）。把方向盘、刀、燃气阀、绳子隔开一步，等的就是这十分钟过去。12356 是全国统一心理援助热线，每天接听不少于 18 小时（全国，2025 年 5 月 1 日起）",
         "note": "定 B 级的原因是，这两项证据都出自研究自杀的文献，套到「想伤害别人的冲动」上并没有直接研究。Deisenhammer 那一项还只有 82 个人，只在一家医院做。状态不对的时候别开车，也别去值那种要替别人安全负责的班，先交班再说。想伤害自己的，见第 1 节第 25 条（有自杀念头时打 12356）。情绪低落时先做什么，见第 3 节第 18 条。",
+        "source": "Deisenhammer EA 等 (2009). The duration of the suicidal process: how much time is left for intervention between consideration and accomplishment of a suicide attempt? Journal of Clinical Psychiatry. <https://doi.org/10.4088/JCP.07m03904>；Zalsman G 等 (2016). Suicide prevention strategies revisited: 10-year systematic review. Lancet Psychiatry. <https://doi.org/10.1016/S2215-0366(16)30030-X>；国家卫生健康委 (2024). 关于应用「12356」全国统一心理援助热线电话号码的通知（国卫医政函〔2024〕259 号）. <https://www.gov.cn/zhengce/zhengceku/202412/content_6994470.htm>",
         "grade": "B",
         "meta": {
           "money": "0",
@@ -4505,6 +4761,7 @@ module.exports = {
         "cost": "挂号和诊查费几十到几百元。陪着跑一趟医院，要花半天到一天。难在开口劝他跟你去。",
         "gain": "精神卫生法第二十八条第二款写着：「疑似精神障碍患者发生伤害自身、危害他人安全的行为，或者有伤害自身、危害他人安全的危险的，其近亲属、所在单位、当地公安机关应当立即采取措施予以制止，并将其送往医疗机构进行精神障碍诊断」。同一条还规定：「医疗机构接到送诊的疑似精神障碍患者，不得拒绝为其作出诊断」。第二十九条要求医院把这类送来的人留在院里，立即指派精神科执业医师诊断，并及时出具结论。第三十条规定，住院治疗以自愿为原则。但有一种例外：诊断结论表明是严重精神障碍患者，而且「已经发生危害他人安全的行为，或者有危害他人安全的危险的」。这一类应当对他实施住院治疗，不以本人同意为前提。扬言伤人本身就可以直接报 110。写恐吓信，或者用其他办法威胁他人人身安全的，拘留 5 日以下或者罚 1000 元以下。扬言要实施放火、爆炸、投放危险物质等危害公共安全的犯罪行为，又把公共秩序搅乱了的，拘留 5 到 10 日，并可以罚 1000 元以下（全国，治安管理处罚法 2026 年 1 月 1 日起施行）",
         "note": "按受益人口径，这条算的是同住的配偶、父母、子女。「谁也别想好过」里通常就包括你，而且法律把送诊的权利给的正是近亲属，外人想管也管不了，只能报警。送诊只用于真实的危险信号，吵架时的气话不算，也不能拿它把不听话的家人关进医院。同一部法律也写着：再查一次或者做了鉴定，认定人没有严重精神障碍的，医院不得留他住院（第三十五条）。分不清就先打 12356 问，或者报 110 让警察到场。德翼 9525 航班的调查结论是：当局和雇主没办法采取任何措施，阻止副驾驶当天飞行。原因是「无论是他本人，还是任何其他人——医生、同事或者家属——都没有告知他们」。机上 150 人全部遇难，其中 2 名飞行员、4 名乘务员、144 名乘客。",
+        "source": "全国人大常委会 (2025). 治安管理处罚法（2025 年修订，第二十九、五十条）. <https://www.spp.gov.cn/spp/fl/202506/t20250627_699863.shtml>；全国人大常委会 (2012，2018 修正). 精神卫生法（第二十八、二十九、三十、三十五条）. <https://www.gov.cn/guoqing/2021-10/29/content_5647635.htm>；法国航空事故调查局 BEA (2016). Final Report BEA2015-0125.en: Accident on 24 March 2015 at Prads-Haute-Bléone to the Airbus A320-211 registered D-AIPX operated by Germanwings. <https://bea.aero/uploads/tx_elydbrapports/BEA2015-0125.en-LR.pdf>",
         "grade": "A",
         "meta": {
           "money": "少",
@@ -4524,6 +4781,7 @@ module.exports = {
         "cost": "不花钱。发之前多想十秒。被攻击时截图、录屏，保存链接和账号 ID，先向平台投诉，再报警。难在被骂的时候忍住不回骂。",
         "gain": "公然侮辱别人，或者捏造事实诽谤别人的，拘留 5 日以下，或者罚 1000 元以下；情节较重的，拘留 5 到 10 日。多次发送侮辱恐吓信息、滋扰纠缠跟踪、偷拍并散布别人隐私的，同样这么罚。故意散布谣言、把公共秩序搅乱了的，拘留 5 到 10 日。情节严重的，构成侮辱罪、诽谤罪，判 3 年以下。通过网络诽谤的，受害人取证有困难，可以请法院要求公安协助（全国，治安管理处罚法 2026 年 1 月 1 日起施行）",
         "note": "侮辱、诽谤这两个罪原则上「告诉的才处理」，就是得你自己去法院告。公安一般不主动立案，证据只能靠自己攒。但有两种例外。一是「严重危害社会秩序和国家利益的除外」，这种公安可以直接办（刑法第二百四十六条第二款）。二是在网上被诽谤、自己取证确实有困难的，法院可以要求公安帮着调查（同一条第三款，刑法修正案九新增）。转发了照样要担责，明知是假的还往外传，同样算「捏造事实」。自己被网暴之后怎么处置，见本节第 37 条（被网暴了先固证再挑路）。侮辱诽谤的条号由旧法第四十二条改成了新法第五十条。",
+        "source": "全国人大常委会 (2025). 治安管理处罚法（2025 年修订，第二十九、五十条）. <https://www.spp.gov.cn/spp/fl/202506/t20250627_699863.shtml>；全国人大 (1997). 刑法（第二百四十六条）. <https://www.spp.gov.cn/spp/fl/201802/t20180206_364975.shtml>；全国人大常委会 (2015). 刑法修正案（九）（第十六条，增加刑法第二百四十六条第三款）. <https://www.spp.gov.cn/spp/fl/201802/t20180205_364562.shtml>；全国人大常委会 (2015). 刑法修正案（九）（第二百四十六条新增第三款）. 国家信访局转载全文 <https://www.gjxfj.gov.cn/gjxfj/fgwj/flfg/webinfo/2017/03/1601761496614423.htm>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -4543,6 +4801,7 @@ module.exports = {
         "cost": "不花钱。多花几分钟，把合同、借条、担保书、入职文件从头读到尾。看不懂的当场问，再拍照留底。难在当着对方的面慢慢看完。",
         "gain": "依法成立的合同受法律保护，对签字的双方都有约束力。签了就要按约定全面履行。民法典第四百九十条写着，用合同书订合同的，双方「签名、盖章或者按指印时合同成立」。按手印和签名、盖章是并列的三种办法，按了手印合同一样成立。「没看清」「以为是别的」在法庭上很难成立。不签，就不会背上不属于自己的债务和责任（全国）",
         "note": "「不替人签字、不签空白纸、身份证复印件写明用途」是经验做法，没有单独的官方文件。它们的目的是一样的：别让你的签名被拼进一份法律上成立、你又不得不认的合同里。电子签、刷脸确认同样算签字。熟人让你帮忙刷脸、签字办贷款的，见第 45 条（帮忙刷个脸）。",
+        "source": "全国人大 (2020). 民法典（第四百六十五、四百九十、五百零九条）. <https://www.spp.gov.cn/spp/fl/202006/t20200602_463888.shtml>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -4562,6 +4821,7 @@ module.exports = {
         "cost": "不花钱。用一张纸写清出借人、借款人、金额、利率、期限和还款方式，双方签名。钱走转账，留下痕迹，不给现金。",
         "gain": "借款合同应当采用书面形式，内容一般包括借款的种类、币种、用途、数额、利率、期限和还款方式。写全了才好起诉。担保合同没写清按哪种方式保证，或者写得不清楚的，按一般保证算。一般保证的担保人可以先等着：要债的人得先去起诉或者仲裁，再申请强制执行借款人的财产，执行完还是还不上，才轮到你替他还。反过来，签了「连带责任保证」就没有这层保护，要债的人可以直接找你要（全国）",
         "note": "借出去的钱，利息超过 4 倍 LPR 的那一部分法院不保护，见第 7 节。借条上写身份证号、注明「借款」是经验做法。担保书上有没有「连带」两个字，决定你是排在借款人后面，还是和他并排被要债，签之前看清楚。说好让你当担保人，实际签的却是借款合同，见第 45 条（借款人是你，不是担保人）。",
+        "source": "全国人大 (2020). 民法典（第六百六十八、六百八十一、六百八十六、六百八十七条）. <https://www.spp.gov.cn/spp/fl/202006/t20200602_463888.shtml>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -4581,6 +4841,7 @@ module.exports = {
         "cost": "不花钱。催款别只在心里催，用微信、短信、邮件或者挂号信留下痕迹。",
         "gain": "民法典规定「向人民法院请求保护民事权利的诉讼时效期间为三年」。起算点是「权利人知道或者应当知道权利受到损害以及义务人之日起计算」，从你知道自己吃了亏、又知道该找谁的那天起算。最长不超过自权利受到损害之日起 20 年。期间届满的，「义务人可以提出不履行义务的抗辩」。法院不会自己去翻时效，但对方在法庭上一提就有效，钱还在，只是要不回来了。有四种事情会让时效中断，一中断就从头重新计算 3 年。一是你向欠你的人提出要他履行。二是对方答应履行。三是你去起诉或者申请仲裁。四是和这些效力相同的其他情形。约定分期还的，从最后一期到期那天起算。有四类要求不受时效限制：要求停止侵害、排除妨碍、消除危险；要回自己的不动产和已经登记的动产；抚养费、赡养费、扶养费；法律规定的其他情形。劳动争议是另一套：仲裁时效 1 年，从知道或者应当知道权利被侵害之日起算。但「劳动关系存续期间因拖欠劳动报酬发生争议的，劳动者申请仲裁不受本条第一款规定的仲裁时效期间的限制；但是，劳动关系终止的，应当自劳动关系终止之日起一年内提出」（全国）",
         "note": "这大概是全书最便宜的一件事：一条留了痕迹的催款消息，就能把 3 年重新起算；什么都不做，就可能白白丢掉打赢官司的资格。事先说好「我不拿时效说事」不算数，两边约定把 3 年改长改短也不算数。反过来，过了期限对方仍然答应还的，就不能再拿时效来拒绝还钱。已经自愿还了的，也不能再要回去。借条和担保见第 18 条（借条和担保）。被执行的阶段见第 20 条（被起诉、被执行了如实报财产）。加班费和未休年休假工资走劳动仲裁那一套，见第 19 节第 1、2 条。",
+        "source": "全国人大 (2020). 民法典（第一百八十八、一百八十九、一百九十二、一百九十三、一百九十五、一百九十六、一百九十七条）. <https://www.spp.gov.cn/spp/fl/202006/t20200602_463888.shtml>；全国人大常委会 (2007). 劳动争议调解仲裁法（第二十七条）. <https://rsj.ankang.gov.cn/Content-2150407.html>（安康市人力资源和社会保障局转载）",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -4600,6 +4861,7 @@ module.exports = {
         "cost": "不花钱。按法院的要求报告财产：现在有什么，收到执行通知那天之前一年里有什么。能还的先还。还不上，就和申请执行人谈和解、谈分期，申请执行人就是要债的那一方。",
         "gain": "转移财产本身就是入罪的情形。全国人大常委会对刑法第三百一十三条作过解释。解释把「被执行人隐藏、转移、故意毁损财产或者无偿转让财产、以明显不合理的低价转让财产，致使判决、裁定无法执行」直接列为「有能力执行而拒不执行，情节严重」。藏钱、转钱、故意砸了自己的东西、白送出去、贱卖出去，让判决没法执行，都算。两高（最高人民法院和最高人民检察院）2024 年的解释又补了十项。其中包括用假和解、假转让的方式处置自己的财产权益。也包括用明显不合理的高价买下别人的财产，替别人的债务做担保。这些都是故意把自己可以用来还债的财产掏空。拒执罪判 3 年以下。情节特别严重的，判 3 到 7 年并处罚金。特别严重指这几种情形：用虚假诉讼、虚假仲裁、虚假公证妨害执行。聚众冲击执行现场。围攻、扣押、殴打执行人员。因为拒不执行导致申请执行人自杀自残。不是案件当事人的外人，明知情况还和他串通、帮着藏钱过户的，按拒执罪的共犯（同伙）论处。被违法处置的财产应当依法追缴（追回）或者责令退赔。在被告收到应诉通知之后、判决生效之前就动手转移的，同样算。民事上，白送和明显不合理的低价转让，要债的人可以请法院把这笔转让撤销。拒绝报告或者虚假报告财产的，法院可以罚款，对个人 10 万元以下，也可以拘留 15 日以下（全国，两高解释 2024 年 12 月起）",
         "note": "网上流传的「把房子挂到公司名下当员工宿舍、钱全转给亲属」不是漏洞，正好是司法解释点名的白送和假转让。帮你操作的亲友和公司按同伙算，该追回的财产照样追回。反过来，真没钱不构成这个罪。判断你是不是「有钱不还」，要先扣掉你自己和你要养的家人过日子必需的开销。在检察院起诉之前把钱还上一部分或者全部、情节又轻的，可以不起诉。一审判决之前还上的，可以从轻甚至免罚。被列入名单、被限制消费之后怎么办，见第 21 条（被限制消费或者被列入失信名单）。履行完之后怎么恢复，见第 7 节第 19 条（上过失信名单之后怎么重来）。",
+        "source": "全国人大常委会 (2002). 关于《中华人民共和国刑法》第三百一十三条的解释. <https://www.gov.cn/gongbao/content/2002/content_61738.htm>；最高人民法院、最高人民检察院 (2024). 关于办理拒不执行判决、裁定刑事案件适用法律若干问题的解释（法释〔2024〕13 号，第三、四、五、六、八、十一、十二条）. 最高法发布页，全文核对自广东省广州监狱转载. <https://www.court.gov.cn/fabu/xiangqing/447931.html>、<http://gzjy.gd.gov.cn/zxxx/content/post_4608108.html>；全国人大常委会 (2015). 刑法修正案（九）（第三十九条，修改刑法第三百一十三条）. <https://www.spp.gov.cn/spp/fl/201802/t20180205_364562.shtml>；全国人大 (2020). 民法典（第五百三十八、五百三十九、五百四十条）. <https://www.spp.gov.cn/spp/fl/202006/t20200602_463888.shtml>；全国人大常委会 (2023 修正). 民事诉讼法（第一百一十四、一百一十八、二百五十二条）. 贵州省市场监管局转载：<https://amr.guizhou.gov.cn/zwgk/xxgkml/jcxxgk/zcfg/fl/202401/t20240129_83645867.html>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -4619,6 +4881,7 @@ module.exports = {
         "cost": "不花钱。去执行法院查清自己是按哪一项纳入的。准备好已经还了钱、已经照判决做了的凭据（履行凭证），或者准备担保材料。生活、经营必需的那笔消费，要一次一申请。难在得自己一趟趟跑、一次次申请。",
         "gain": "纳入失信名单只有六种情形。一是有履行能力而拒不履行。二是以伪造证据、暴力威胁妨碍抗拒执行。三是以虚假诉讼、虚假仲裁或者隐匿转移财产规避执行。四是违反财产报告制度。五是违反限制消费令。六是无正当理由拒不履行执行和解协议。提供了充分有效的担保，或者已经被查封扣押冻结的财产足够清偿的，法院不得按第一项（有履行能力而拒不履行）纳入。被执行人是未成年人的，不得纳入。纳入的期限是 2 年。以暴力威胁妨碍抗拒执行、情节严重的，或者有多项失信行为的，可以延长 1 到 3 年。已经履行完毕、和解协议已经履行完毕、法院裁定终结执行等七种情形，法院应当在 3 个工作日内删除。积极履行或者主动纠正失信行为的，还可以提前删除。被限制消费的自然人不得做九类高消费及非生活和工作必需的消费。一是坐飞机、列车软卧、轮船二等以上舱位。二是在星级以上宾馆、酒店、夜总会、高尔夫球场高消费。三是买不动产，或者新建、扩建、高档装修房屋。四是租高档写字楼、宾馆、公寓办公。五是买非经营必需的车辆。六是旅游、度假。七是子女就读高收费私立学校。八是花高额保费买保险理财产品。九是坐 G 字头动车组列车的任何座位，或者其他动车组列车一等以上座位。因为生活或者经营必需要做其中一项的，应当向法院申请，获得批准才能做。提供确实有效的担保，或者经申请执行人同意的，法院可以解除限高（全国）",
         "note": "限高就是限制高消费。这个规定 2010 年出台，2015 年经法释〔2015〕17 号修改，名称改成了《……及有关消费的若干规定》，本条按修改后的现行文本写。2015 年这次改动有三处要紧。一是加了第九类，高铁全部座位都算。二是删掉了「以其财产支付」这层限定，原来写的是「不得有以下以其财产支付费用的行为」。三是单位被限制消费的，实际控制人也跟着受限，但因私消费、花个人钱的，可以向执行法院申请。失信名单和限制消费是两回事，可能只沾上一样。这两样也都不等于征信有污点，从名单里删掉不会改征信，见第 7 节第 19 条（上过失信名单之后怎么重来）。配偶、子女花自己挣的钱受不受限，现行文本没有写明，碰到了去问执行法院。",
+        "source": "最高人民法院 (2017 修正). 关于公布失信被执行人名单信息的若干规定（第一、二、三、四、十条）. <https://www.court.gov.cn/fabu/xiangqing/37182.html>；最高人民法院 (2015 修正). 关于限制被执行人高消费及有关消费的若干规定（法释〔2015〕17 号，第三、八、九条）：「（九）乘坐G字头动车组列车全部座位、其他动车组列车一等以上座位等其他非生活和工作必需的消费行为」. <https://www.court.gov.cn/fabu/xiangqing/15046.html>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -4638,6 +4901,7 @@ module.exports = {
         "cost": "平台投诉和报警都不花钱。起诉时，争的钱在 1 万元以内，受理费 50 元；走简易程序、调解或者撤诉的，再减半。立案、开庭、执行至少各占半天到一天，网上立案可以省掉跑腿。要保存订单、聊天记录、转账记录和物流单。难在来回折腾时别中途放弃。",
         "gain": "诈骗 3000 元至 1 万元以上，构成诈骗罪的「数额较大」，判 3 年以下，另外罚钱或者只罚钱，各省在这个幅度内定本地标准。不够刑事标准的，按治安管理处罚：拘留 5 到 10 日，或者罚 2000 元以下。情节较重的，拘留 10 到 15 日，并可以罚 3000 元以下。民事上，网购合同纠纷可以在收货地法院起诉，不必跑到卖家所在地。争的钱数在本省上年度就业人员年平均工资 50% 以下的，适用小额诉讼。小额诉讼一审终审（判完就生效、不能上诉）。立案后 2 个月内审结，简易程序 3 个月。民事诉讼可以在网上的平台进行，和线下同等效力（全国，民诉法 2024 年 1 月起，治安管理处罚法 2026 年 1 月起）",
         "note": "值不值得打，可以这样算：拿你的税后时薪乘以要搭进去的时间，再加上法院的受理费。立案、开庭、可能还要申请执行，各按半天到一天算。算出来和你想要回的那笔钱比一比，再打个折扣，估一估赢了能不能真执行到钱。打不打，按这笔账自己定。治安管理处罚法 2025 年修订之后条号全变了，盗窃诈骗从旧法第四十九条改成了第五十八条。民诉法 2023 年修正之后，小额诉讼在第一百六十五条。这两处都别抄旧资料。「平台投诉优先」是经验：平台有保证金和处罚规则，处理最快。法释〔2011〕7 号在检察院官网页面上没有标文号，文号待与最高法原文页核对。",
+        "source": "最高人民法院、最高人民检察院 (2011). 关于办理诈骗刑事案件具体应用法律若干问题的解释（法释〔2011〕7 号，第一条）. <https://www.spp.gov.cn/spp/sfjs/201802/t20180201_363736.shtml>；全国人大 (1997). 刑法（第二百六十六条）. <https://www.spp.gov.cn/spp/fl/201802/t20180206_364975.shtml>；全国人大常委会 (2025). 治安管理处罚法（2025 年修订，第五十八条）. <https://www.spp.gov.cn/spp/fl/202506/t20250627_699863.shtml>；全国人大常委会 (2023 修正). 民事诉讼法（第十六、一百六十四、一百六十五、一百六十八条）. <https://fgw.sh.gov.cn/ys-syjf-zc-2.4.1-h5/20240408/073febdb2b04464390546232d4089f51.html>（上海市发展改革委转载）；最高人民法院 (2022 修正). 关于适用《民事诉讼法》的解释（第二十条）. <https://www.court.gov.cn/zixun/xiangqing/353651.html>；国务院 (2006). 诉讼费用交纳办法（国务院令第 481 号，第十三、十五、十六条）. <https://www.gov.cn/zhengce/zhengceku/2008-03/28/content_6929.htm>",
         "grade": "A",
         "meta": {
           "money": "少",
@@ -4657,6 +4921,7 @@ module.exports = {
         "cost": "不花钱。大额转账之前先想一下：这是借，还是送。是借就写借条，转账备注写「借款」。难在开口把这句话说出来。",
         "gain": "送出去的东西，在过到对方名下之前可以撤销，法律把这个时点叫财产权利转移。一旦转账、过户完成，就只剩三种情形能撤销：收东西的一方严重侵害你或者你的近亲属；该扶养你却不扶养；不履行赠与合同里约定的义务。节日、生日这类有纪念意义的时点给的价值不大的礼物礼金，还有为了表达或者增进感情的日常消费支出，不属于彩礼，分手时不按彩礼返还（全国）",
         "note": "「520、1314 这类特殊数额通常认定为赠与」是实务里常见的说法，本节没有找到最高法的官方原文，不作为结论。去公证处公证过的赠与，就不能说反悔就反悔。一笔转账到底算借还是算送，最后要看证据，聊天记录里的一句「这钱我先借你」比事后争论有用得多。",
+        "source": "全国人大 (2020). 民法典（第六百五十八、六百六十三条）. <https://www.spp.gov.cn/spp/fl/202006/t20200602_463888.shtml>；最高人民法院 (2024). 关于审理涉彩礼纠纷案件适用法律若干问题的规定（法释〔2024〕1 号，第三条）. <https://www.court.gov.cn/fabu/xiangqing/423442.html>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -4676,6 +4941,7 @@ module.exports = {
         "cost": "不花钱。彩礼、三金、改口费都走转账，并在备注里写清用途。口头说好的事，用聊天记录留痕，或者让家人在场确认。",
         "gain": "法律禁止借婚姻索取财物。一方以彩礼为名借婚姻索取财物的，另一方要求返还，法院支持。有三种情形可以要求返还：没办结婚登记；办了登记但确实没有共同生活；婚前给了彩礼，给到出钱那一方生活困难。已经登记并且共同生活的，一般不返还。但共同生活的时间短、彩礼数额又过高的，法院会按钱实际怎么花的、有没有嫁妆、有没有孕育、双方有没有过错，来确定返还的比例。没登记但已经同居的，同样按比例处理（全国，2024 年 2 月起）",
         "note": "彩礼算不算「数额过高」，要看给钱一方所在地的人均可支配收入和他家的情况，全国没有统一数字。该退多少，由法官一个案子一个案子地定。给钱的一方和收钱的一方规则一样，谁给的钱谁留证据。",
+        "source": "全国人大 (2020). 民法典（第一千零四十二条）. <https://www.spp.gov.cn/spp/fl/202006/t20200602_463888.shtml>；最高人民法院 (2024). 关于审理涉彩礼纠纷案件适用法律若干问题的规定（法释〔2024〕1 号，第二、五、六条）. <https://www.court.gov.cn/fabu/xiangqing/423442.html>；最高人民法院 (2020). 关于适用《民法典》婚姻家庭编的解释（一）（法释〔2020〕22 号，第五条）. <https://www.court.gov.cn/fabu/xiangqing/282071.html>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -4695,6 +4961,7 @@ module.exports = {
         "cost": "自己写一份书面的财产协议不花钱，去公证另外收费。父母出钱时，请他们写一句书面说明。整件事一次性花掉几个小时。难在开口和家里人谈钱。",
         "gain": "婚前财产是个人财产，不会因为结婚年头长就变成共同财产。夫妻可以书面约定：婚前财产和婚后所得归各自、归共同，或者一部分共同，这个约定对双方都有约束力。婚前父母出资买房，视为给自己子女的赠与，除非明确表示是给两个人的。婚后父母出资的，按约定处理；没有约定的，按共同财产的原则处理。婚前或者婚内约定把一方的房产赠与另一方、或者变成两个人共有的，在变更登记之前，赠与的一方可以撤销，登记之后就是对方的了。离婚时隐藏、转移、变卖、挥霍共同财产，或者伪造债务的一方，可以少分或者不分（全国）",
         "note": "财产协议对男女双方同样有效。想拿它对抗配偶欠外人的债，前提是债主知道你们有这个约定。他不知道，就管不到他。协议不公证也有效，公证只是省得日后为签名和日期扯皮。父母出钱买房怎么写清楚是借是送，见第 10 节第 11 条（父母出资买房）。",
+        "source": "全国人大 (2020). 民法典（第一千零六十三、一千零六十五、一千零九十二条）. <https://www.spp.gov.cn/spp/fl/202006/t20200602_463888.shtml>；最高人民法院 (2020). 关于适用《民法典》婚姻家庭编的解释（一）（法释〔2020〕22 号，第二十九、三十一、三十二条）. <https://www.court.gov.cn/fabu/xiangqing/282071.html>",
         "grade": "A",
         "meta": {
           "money": "少",
@@ -4714,6 +4981,7 @@ module.exports = {
         "cost": "不花钱。登记之前看一眼对方的身份证和户口簿上的婚姻状况。大额的财物往来，留下转账记录和聊天记录。",
         "gain": "重婚的婚姻无效。有配偶还去重婚的，或者明知对方有配偶仍然和他结婚的，判 2 年以下。诈骗公私财物数额较大的，判 3 年以下并处罚金。数额巨大的，判 3 到 10 年。数额特别巨大的，判 10 年以上或者无期，并处罚金或者没收财产（全国）",
         "note": "「骗婚」本身不是一个罪名。能不能按诈骗罪办，要看他一开始就想把钱占为己有，并且编了假话把钱骗到手，还得公安立案去查。够不够「数额较大」，金额由司法解释定，各地可以调整，本节没有核实。骗婚的受害者不分男女，被骗彩礼和被骗嫁妆的案例都有。",
+        "source": "全国人大 (2020). 民法典（第一千零五十一条）. <https://www.spp.gov.cn/spp/fl/202006/t20200602_463888.shtml>；全国人大 (1997). 刑法（第二百五十八、二百六十六条）. <https://www.spp.gov.cn/spp/fl/201802/t20180206_364975.shtml>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -4733,6 +5001,7 @@ module.exports = {
         "cost": "不花钱。动手之前问清收费标准和要换哪些件，把报价拍下来，或者让对方发文字。修完要维修凭证和发票，把旧件留下。还要站在旁边看一两个小时。难在全程盯着不走开。",
         "gain": "家电维修经营者必须明示服务项目和配件的收费标准、质量规范、质保期限和投诉电话。必须给消费者维修服务凭证和收费发票，并如实填写维修的项目和详情。不得虚列、夸大、伪造维修项目，不得虚报故障部件，不得故意替换性能正常的部件。情节严重的，处 3 万元以下罚款。所有经营者都必须明码标价，不得在标价之外加价，不得收取任何没有标明的费用。低价诱骗、高价结算，以及虚假折价，属于价格欺诈。经营者必须用显著的方式标明服务的项目、内容、价格和计价方法，不得作虚假的或者引人误解的宣传（全国）",
         "note": "被多收了先打 12315，处罚由商务、市场监管部门来做，不用你自己打官司。定 B 级是因为规则虽然是官方的，但「在旁边看着能少花多少」没有数字，主要靠经验。问价、留凭证、留旧件，对谁都一样做，不用以貌取人。家电那个办法只管家电维修，验车、装修参照明码标价规定和实施条例。上位的消费者权益保护法也写了这两样权利。第八条说你有权要求经营者说明服务的内容、规格、费用。第十条说你有权拒绝强制交易。",
+        "source": "商务部 (2012). 家电维修服务业管理办法（商务部令 2012 年第 7 号，第五、七、九、十四条）. <http://www.gov.cn/gongbao/content/2012/content_2231695.htm>；市场监管总局 (2022). 明码标价和禁止价格欺诈规定（市场监管总局令第 56 号，第五、八、十九条）. <http://www.gov.cn/gongbao/content/2022/content_5699926.htm>；国务院 (2024). 消费者权益保护法实施条例（国务院令第 778 号，第九、十条）. <https://www.gov.cn/zhengce/zhengceku/202403/content_6940159.htm>；全国人大常委会 (2013 修正). 消费者权益保护法（第八、十条）：「消费者有权根据商品或者服务的不同情况，要求经营者提供……服务的内容、规格、费用等有关情况」「有权拒绝经营者的强制交易行为」. <https://flk.npc.gov.cn/detail?id=2c909fdd678bf17901678bf7670606ef>（国家法律法规数据库）",
         "grade": "B",
         "meta": {
           "money": "0",
@@ -4752,6 +5021,7 @@ module.exports = {
         "cost": "不花钱。有人请你「挂个名，不用管事」，拒绝就行。",
         "gain": "法定代表人由实际执行公司事务的董事或者经理担任，法律预设你就是管事的那个人。法定代表人执行职务给别人造成损害的，公司先赔，赔完可以回头向有过错的法定代表人追偿（把这笔钱要回去）。董事、高管对公司负有忠实义务和勤勉义务（忠于公司、尽心办事）。执行职务给别人造成损害，本人又有故意或者重大过失的，自己也要掏钱赔。「不知情」在法律上不是能免掉责任的理由（全国，2024 年 7 月起）",
         "note": "公司法原文只讲了责任归谁。挂名更常见的后果是：公司被法院执行的时候，法定代表人跟着被限制高消费，税务和行政处罚也可能牵连到你。这些后果出自其他法律和执行规定，本节没有核实原文，所以定 B 级。已经挂了名的，公司法允许你辞掉，公司要在 30 日内定出新的法定代表人。借你的名字去贷款，见第 45 条（帮忙刷个脸）。",
+        "source": "全国人大常委会 (2023). 公司法（2023 年修订，第十、十一、一百八十、一百九十一条）. <https://www.gov.cn/yaowen/liebiao/202312/content_6923395.htm>",
         "grade": "B",
         "meta": {
           "money": "0",
@@ -4771,6 +5041,7 @@ module.exports = {
         "cost": "不花钱。拒绝就行。",
         "gain": "外交部领事司给出国公民的建议是「请务必避免为他人携带行李物品，特别是违禁物品或不了解的物品」。这么做是为了避免在不知情的情况下替别人携带违禁品，因而承担法律责任。行李里查出毒品或者走私品的时候，「不知道里面是什么」需要你自己举证",
         "note": "海关总署和公安部关于这件事的官方提示页面打不开，本条只引了外交部领事司的页面。而且原文只给原则、不给法条，所以定 B 级。国内代收快递也一样，尤其是让你先垫付、事后退款的。",
+        "source": "外交部领事司 (2023). 对准备出国的中国公民有哪些建议. <https://cs.mfa.gov.cn/gyls/lscs/201106/t20110615_876383.shtml>",
         "grade": "B",
         "meta": {
           "money": "0",
@@ -4790,6 +5061,7 @@ module.exports = {
         "cost": "一根绳几十元。难在每次出门都记得牵。",
         "gain": "自家养的动物伤了人，养的人或者当时管着它的人就要赔，法律叫承担侵权责任。只有能证明是被伤的人自己故意招惹，或者有重大过失，才可以不赔或者少赔。而违反管理规定、没采取安全措施的，比如该牵绳没牵，就只剩「被侵权人故意」这一条能减轻。禁止饲养的烈性犬伤了人，则没有任何能免责的理由",
         "note": "狗咬人的赔偿包含医疗费、误工费、狂犬疫苗和免疫球蛋白，一次上万很常见。伤得重，或者伤到小孩的，数目还要更高。丢下不管也不脱责：遗弃、逃逸期间伤了人，仍然算原饲养人的。被咬之后怎么处置见第 13 节。",
+        "source": "全国人大 (2020). 民法典. 最高人民检察院转载全文. <https://www.spp.gov.cn/spp/fl/202006/t20200602_463888.shtml> 第一千二百四十五条：「饲养的动物造成他人损害的，动物饲养人或者管理人应当承担侵权责任；但是，能够证明损害是因被侵权人故意或者重大过失造成的，可以不承担或者减轻责任。」第一千二百四十六条：「违反管理规定，未对动物采取安全措施造成他人损害的，动物饲养人或者管理人应当承担侵权责任；但是，能够证明损害是因被侵权人故意造成的，可以减轻责任。」第一千二百四十七条：「禁止饲养的烈性犬等危险动物造成他人损害的，动物饲养人或者管理人应当承担侵权责任。」第一千二百四十九条：遗弃、逃逸的动物在此期间造成损害，由原饲养人或者管理人承担责任",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -4809,6 +5081,7 @@ module.exports = {
         "cost": "不花钱。代价是当时把事情停下来。难在当场停住。",
         "gain": "《刑法》第二百三十六条：以暴力、胁迫或者其他手段强奸妇女的，处三年以上十年以下有期徒刑。「其他手段」不限于动手，对方意识不清、睡着时无法有效同意，就落在这四个字里。强奸妇女情节恶劣的，强奸妇女多人的等情形，处十年以上有期徒刑、无期徒刑或者死刑。同一条还规定，奸淫不满十四周岁的幼女的，以强奸论并从重处罚，幼女怎么认定见第 9 节第 18 条（不满 14 岁）。北京市西城区人民检察院的普法文章说，把妇女「麻醉、灌醉后实施性侵的，同样构成强奸罪」。关键在「是否违背了被害人内心真实意愿」，被害人当时有没有反抗「并非关键」。《刑法》第二百三十七条管强制猥亵：以暴力、胁迫或者其他方法强制猥亵他人的，处五年以下有期徒刑或者拘役（全国）",
         "note": "给 B 是因为法条只写了「其他手段」四个字。「灌醉了也算强奸」出自检察院的普法文章，不是司法解释。强奸罪的法条只写了妇女。男性被这样侵害，按强制猥亵罪追究，所以对方是男是女都一样不能碰。自己是被害的一方，先做什么见第 13 节第 42 条（被性侵之后）。你自己喝到断片的时候，被指控和被敲诈这两种风险同时存在，见本节第 32 条（对方拿把柄来要钱就报警）。",
+        "source": "全国人大 (1997). 刑法（第二百三十六条）. <https://www.spp.gov.cn/spp/fl/201802/t20180206_364975.shtml>；全国人大 (2020 年修正). 刑法（第二百三十七条）. <https://jtgl.beijing.gov.cn/jgj/jgxx/flfg/fl/11033925/index.html>（北京市公安交管局转载整合文本）；北京市西城区人民检察院 (2018). 她们为什么不再沉默……. <https://www.bjjc.gov.cn/c/xicheng/xjjsl/320654084.jhtml>",
         "grade": "B",
         "meta": {
           "money": "0",
@@ -4828,6 +5101,7 @@ module.exports = {
         "cost": "不花钱。截图对方的账号、聊天记录和收款码，带着手机去派出所。难的是忍住「先给钱平事」的念头。",
         "gain": "《刑法》第二百七十四条：敲诈勒索公私财物，数额较大或者多次敲诈勒索的，处三年以下有期徒刑、拘役或者管制，并处或者单处罚金。拘役是短期关押，管制是不关押但限制自由，并处或者单处罚金就是另外罚钱或者只罚钱。数额巨大或者有其他严重情节的，处三年以上十年以下有期徒刑，并处罚金。数额特别巨大或者有其他特别严重情节的，处十年以上有期徒刑，并处罚金。两高还有一份解释：《关于办理敲诈勒索刑事案件适用法律若干问题的解释》（法释〔2013〕10 号，2013 年 4 月 27 日起施行）。这份解释的第一条定了三档金额。敲诈勒索公私财物价值二千元至五千元以上的，认定为「数额较大」。三万元至十万元以上的，认定为「数额巨大」。三十万元至五十万元以上的，认定为「数额特别巨大」。第三条：二年内敲诈勒索三次以上的，应当认定为「多次敲诈勒索」（全国）。民法典第一千零三十二条：任何组织或者个人不得以刺探、侵扰、泄露、公开等方式侵害他人的隐私权。第一千零三十三条禁止以电话、短信、即时通讯工具等方式侵扰私人生活安宁。所以对方真把照片发出去，是他多一条罪。福建省公安厅同类案件提示的原话是：「一定要保存好证据，及时拨打 110，切勿继续转账」",
         "note": "三档金额是各省在司法解释给的幅度内自己定的。2000 到 5000 元以上算「数额较大」。3 万到 10 万元以上算「数额巨大」。30 万到 50 万元以上算「数额特别巨大」。落到你所在的省是哪个数，以当地标准为准。两年内敲诈三次以上的，每次金额不大也算「多次」。别自己删聊天记录、删照片、注销账号、拉黑了事，那是把自己的证据也删了，见本节第 5 条（被传唤先请律师、不删记录）。真被立案调查的，这些记录同时是你自证的材料。也别试图「谈判分期」。裸聊敲诈多是境外团伙干的，他们一边录屏，一边用木马读走你的通讯录。「群发给家人」是话术，报警后照样能立案。拿「告诉你家里人你喜欢同性」要挟要钱，也是同一种敲诈。江苏盐城有人在同性社交软件上约人见面后，这样要走 1.45 万元，受害人报案后他被起诉，此前他已两次因同样手法被判刑。拿裸照逼人发生关系，按强奸罪追究。浙江象山有人在社交平台上骗到多名女性的裸照，再拿公布裸照威胁她们，查明的被害人有 10 人。其中一人收到威胁就报了警，两人没见过面，检察院仍按强奸未遂处理，最后以强奸罪、强制猥亵罪起诉。所以别给网上认识的人发裸照。反过来，你自己是受害人、去向侵权方索赔的，金额高也不等于敲诈，见本节第 36 条（自己是受害人去索赔）。照片真被发到网上的，可以通知平台删除。民法典第一千一百九十五条规定，你有权通知平台删除、屏蔽、断开链接，通知里要附上侵权的初步证据和你的真实身份信息。平台收到通知不及时处理的，扩大的那部分损害由它和发帖人一起赔。",
+        "source": "全国人大 (2020 年修正). 刑法（第二百七十四条）. <https://jtgl.beijing.gov.cn/jgj/jgxx/flfg/fl/11033925/index.html>（北京市公安交管局转载整合文本）；最高人民法院、最高人民检察院 (2013). 关于办理敲诈勒索刑事案件适用法律若干问题的解释（法释〔2013〕10 号）. <https://www.court.gov.cn/zixun/xiangqing/5310.html>；全国人大 (2020). 民法典（第一千零三十二、一千零三十三条）. <https://www.spp.gov.cn/spp/fl/202006/t20200602_463888.shtml>；全国人大 (2020). 民法典（第一千一百九十五条）：「权利人有权通知网络服务提供者采取删除、屏蔽、断开链接等必要措施。通知应当包括构成侵权的初步证据及权利人的真实身份信息」「未及时采取必要措施的，对损害的扩大部分与该网络用户承担连带责任」. <https://flk.npc.gov.cn/detail?id=ff808081729d1efe01729d50b5c500bf>（国家法律法规数据库）；福建省公安厅 (2024). 因为一条「约炮」信息，我背上 23 万的债务. <http://gat.fujian.gov.cn/ztzl/fjjffpzxrx/spjq/202403/t20240307_6410612.htm>；检察日报 (2018). 两次获刑不思悔改　曝光隐私要挟网友（徐州市鼓楼区人民检察院网站转载）. <https://xzgl.jsjc.gov.cn/jianwu/baxiang/201804/t20180409_420934.shtml>；检察日报 (2022). 男子以公布裸照威胁10名女性与其发生关系，大数据筛查「报警」！（最高人民检察院网站）. <https://www.spp.gov.cn/zdgz/202212/t20221212_595435.shtml>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -4847,6 +5121,7 @@ module.exports = {
         "cost": "不花钱。去公安机关报案，说明对方是捏造的。难在拿出东西证明他是故意编的。",
         "gain": "《治安管理处罚法》（2025 年 6 月 27 日修订，2026 年 1 月 1 日起施行）第五十条管的是诬告。捏造事实诬告陷害他人，企图使他人受到刑事追究或者受到治安管理处罚的，要处罚。处五日以下拘留，或者一千元以下罚款。情节较重的，处五日以上十日以下拘留，可以并处一千元以下罚款。《刑法》第二百四十三条管的是诬告陷害罪。捏造事实诬告陷害他人，意图使他人受刑事追究，情节严重的，处三年以下有期徒刑、拘役或者管制。造成严重后果的，处三年以上十年以下有期徒刑。国家机关工作人员犯前款罪的，从重处罚，从重是指在同一档刑罚里往重里判。不是有意诬陷，而是错告，或者检举失实的，不适用前两款的规定。记错了、告错了，不按这两款追究（全国）",
         "note": "要追究对方，光证明「我没做过」不够，还要证明他「捏造事实」并且「有意诬陷」。后者难证明得多，追究不一定能成。全国范围内没有公开的诬告立案与处理统计，本书查不到，因此不写发生率，也不写性别分布。自己被指控后的举证和救济，见本节第 34、35 条（证据不足应判无罪、国家赔偿）。",
+        "source": "全国人大常委会 (2025). 治安管理处罚法（2025 年修订，第五十条）. <https://gaj.beijing.gov.cn/wsgs/2024zcwj/zcfg/202506/t20250630_4134266.html>（北京市公安局转载全文）；全国人大 (1997). 刑法（第二百四十三条）. <https://www.spp.gov.cn/spp/fl/201802/t20180206_364975.shtml>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -4866,6 +5141,7 @@ module.exports = {
         "cost": "走程序本身不花钱，但申诉和再审都很耗时间。通常要请律师，律师费几千元起。经济困难的可以申请法律援助，见本节第 5 条（被指控先请律师）。难在一轮轮等下去不放弃。",
         "gain": "《刑事诉讼法》第五十五条：证据确实、充分，要符合这些条件——定案的证据都经过法定程序查证属实，综合全案证据对认定的事实已经排除合理怀疑。排除合理怀疑，就是把全案证据合起来看，认定的事实不能还留着说得通的另一种可能。第五十六条：采用刑讯逼供等非法方法收集的犯罪嫌疑人、被告人供述，以及采用暴力、威胁等非法方法收集的证人证言、被害人陈述，应当予以排除。在侦查、审查起诉、审判时发现有应当排除的证据的，应当依法予以排除，不得作为起诉意见、起诉决定和判决的依据。第二百条第（三）项：证据不足，不能认定被告人有罪的，应当作出证据不足、指控的犯罪不能成立的无罪判决。第二百五十二条给了申诉的路。当事人及其法定代理人、近亲属，对已经发生法律效力的判决、裁定，可以向人民法院或者人民检察院提出申诉。但申诉不能停止判决、裁定的执行。第二百五十三条列举了人民法院应当重新审判的情形（全国）",
         "note": "这些是制度写明的底线，结果并没有保证。本书没有中国刑事案件无罪率、申诉改判率的可核对官方数据，所以不写比例，也不评价个案。自己能做的有三件事。第一，第一次讯问之后就委托律师，见本节第 5 条（被指控先请律师）。第二，笔录逐字看完再签。第三，别为了「早点出去」认下没做过的事，认罪认罚只能从宽，免不了责。符合法定情形的，法院应当重新审判。",
+        "source": "全国人大常委会 (2018). 刑事诉讼法（2018 年修正，第五十五、五十六、二百、二百五十二、二百五十三条）. <https://www.spp.gov.cn/zdgz/201810/t20181027_396818.shtml>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -4885,6 +5161,7 @@ module.exports = {
         "cost": "不花钱。向当初作出拘留、逮捕、起诉或者判决的那个机关提出赔偿申请。",
         "gain": "《国家赔偿法》第十七条列了几种情形，受害人有取得赔偿的权利。第一种是拘留：违反刑事诉讼法规定对公民采取拘留措施，或者依法拘留但超过法定时限。这之后决定撤销案件、不起诉，或者判决宣告无罪终止追究刑事责任的。第二种是逮捕：对公民采取逮捕措施后，决定撤销案件、不起诉，或者判决宣告无罪终止追究刑事责任的。第三种是再审：案子按审判监督程序再审改判无罪，原判刑罚已经执行的。审判监督程序就是把已经生效的判决重新拿出来审的程序。第三十三条：侵犯公民人身自由的，每日赔偿金按照国家上年度职工日平均工资计算。第三十五条：致人精神损害的，应当在侵权行为影响的范围内为受害人消除影响、恢复名誉、赔礼道歉，造成严重后果的应当支付相应的精神损害抚慰金。第十九条列了六种国家不赔的情形。一是自己故意作假口供，或者伪造其他有罪证据，因此被关或者被判刑。二是按刑法第十七条、第十八条不负刑事责任的人被关，比如没到负刑事责任的年龄，或者精神病人在不能辨认、不能控制自己行为的时候造成危害。三是按刑事诉讼法规定不追究刑事责任的人被关。这包括情节显著轻微、危害不大，不认为是犯罪的，过了追诉时效的，嫌疑人死亡的。也包括犯罪情节轻微、检察院决定不起诉的，就是常说的相对不起诉（也叫酌定不起诉）。未成年人附条件不起诉考验期满后不起诉的，和被害人达成和解后不起诉的，同样在内。四是办案人员和行使职权无关的个人行为。五是自己自伤、自残等故意行为造成的损害。六是法律规定的其他情形。两高 2015 年的刑事赔偿司法解释第七条再次确认：不负刑事责任的人和相对不起诉的人被羁押，国家不赔。但起诉后被法院错判拘役、有期徒刑、无期徒刑并已执行的，判决确定后继续关押的那段仍然要赔。该解释第八条：办案机关以「你自己作假口供」「你自己自伤自残」为理由不赔的，由办案机关举证。最高人民检察院 2026 年 5 月发了通知。国家统计局 2026 年 5 月 15 日公布，2025 年全国城镇非私营单位就业人员年平均工资约 12.9 万元（129441 元）。据此算出的日平均工资为 495.94 元。各级检察院自 2026 年 5 月 18 日起作出国家赔偿决定时，对侵犯公民人身自由的赔偿金按每日 495.94 元计算。上一个标准是每日 475.52 元，从 2025 年 5 月起用（全国）",
         "note": "这个按天算的标准，每年 5 月随国家统计局公布的上年度城镇非私营单位年平均工资更新。用的时候查当年的数字，别直接套本条这个。拿到不起诉决定书，先看它写的依据。写的是「没有犯罪事实」或者「证据不足」，可以申请赔偿。写的是「犯罪情节轻微」，或者过了追诉时效，被关的日子原则上赔不了。不服相对不起诉的，收到决定书后 7 日内可以向检察院申诉。精神损害抚慰金由办案机关按后果定，没有统一公式。该赔钱的是当初决定关你的那个机关（公安、检察院或者法院），先找它提。对它的处理不服，再按国家赔偿法的程序往上申请。实际怎么算，可以看本节第 36 条（自己是受害人去索赔）里郭利那个案子的决定书。郭利被关了 1826 天。赔偿按作决定那一年的标准算，不按关他那一年的，用的是 2016 年度全国职工日平均工资 258.89 元。限制人身自由这部分赔了约 47.3 万元（472733.14 元），另给精神损害抚慰金约 16.5 万元（165450 元）。他自己申请的十年精神损害抚慰金 8888 万元，超出的部分不支持。也要知道哪些赔不了：那份决定书把误工费、身体健康方面的赔偿、财产损失、律师费、看守所的生活费补贴，都认定为不在国家赔偿的范围里。",
+        "source": "全国人大常委会 (2012 年修正). 国家赔偿法（第十七、十九、三十三、三十五条）. <https://www.stats.gov.cn/gk/tjfg/xgfxfg/202503/t20250306_1958899.html>（国家统计局转载）；最高人民检察院 (2026). 最高人民检察院公布最新侵犯公民人身自由的赔偿金标准. <https://www.spp.gov.cn/xwfbh/wsfbh/202605/t20260519_727675.shtml>；最高人民法院、最高人民检察院 (2015). 关于办理刑事赔偿案件适用法律若干问题的解释（法释〔2015〕24 号，第七、八条）. <https://www.court.gov.cn/zixun/xiangqing/16409.html>；全国人大 (2018). 刑事诉讼法（2018 年修正，第十六、一百七十七、一百八十一、二百八十四、二百九十条）. <https://www.spp.gov.cn/zdgz/201810/t20181027_396818.shtml>。国家赔偿法第十九条和该解释引的是 2012 年刑事诉讼法条号（第十五条、第一百七十三条第二款、第二百七十三条第二款、第二百七十九条），2018 年修正后依次对应第十六条、第一百七十七条第二款、第二百八十四条第二款、第二百九十条",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -4904,6 +5181,7 @@ module.exports = {
         "cost": "不花钱。通过 12315、去法院起诉，或者委托律师提出。见面谈的时候全程录音。难在忍住不自己跟对方单独谈。",
         "gain": "官方案例：2008 年有关部门公布部分批次「施恩」牌奶粉含三聚氰胺之后，郭利之女的检查结果为「双肾中央集合系统内可见数个点状强回声」。郭利多次向销售商和施恩公司索赔，并向媒体曝光。2009 年 6 月双方达成协议，施恩公司补偿 40 万元，郭利出具书面材料表示不再追诉并放弃赔偿要求。此后公司报案，郭利被潮安县人民法院以敲诈勒索罪判处有期徒刑五年。广东省人民检察院提出了再审建议。建议认为「现有证据不足以证实郭利主观上具有非法占有的目的」。郭利作为法定监护人，「有权利向奶粉的生产厂家索赔，其索赔行为有法律依据」。建议还写着，「消费者对损害其合法权益的行为，有权通过大众传播媒介予以揭露、批评」。2017 年 4 月 7 日，广东省高级人民法院再审宣告郭利无罪。理由是「原审认定郭利以非法占有为目的，使用威胁、要挟的方法，强行索取财物行为的事实不清，证据不足，郭利的行为性质未超出民事纠纷的范畴」。郭利自 2009 年 7 月 23 日至 2014 年 7 月 22 日被羁押 1826 天（广东，2017 年再审改判）",
         "note": "给 B 是因为这只是一个案子，不是能推广的比例。它同时说明两件事：索赔本身合法，以及你仍然可能被警方当成案子立案来查。风险最低的走法是把索赔交给律师，或者直接去法院起诉，自己不和对方单独接触。对方约你去他所在地「面谈解决」时尤其要留意，报案和立案通常发生在对方所在地。和解协议签了就照协议走，签完再另起一笔高额索赔，最容易被解读成「要挟」。被立案之后怎么处置，见本节第 5、34、35 条（先请律师、证据不足应判无罪、国家赔偿）。对方拿把柄向你索财的情形，见本节第 32 条（对方拿报警、发照片来要钱）。",
+        "source": "广东省人民检察院 (2017). 广东省检察院再审建议对郭利案改判无罪. <http://www.gd.jcy.gov.cn/jcyw2/201704/t20170411_1975029.shtml>（广东省人民检察院官网）；广东省高级人民法院赔偿委员会 (2018). 郭利以再审无罪为由申请、广东省潮州市中级人民法院赔偿的国家赔偿案件（（2018）粤委赔 11 号）. <https://www.gdcourts.gov.cn/caipanwenshuxuandeng/caipanwenshuxuandeng/content/post_1045709.html>",
         "grade": "B",
         "meta": {
           "money": "0",
@@ -4923,6 +5201,7 @@ module.exports = {
         "cost": "不花钱。当场花十几分钟做防护和取证。如果走到申请禁令或者自诉这一步，要跑法院，可能还要请律师。难在被骂的时候先去存证，不去对骂。",
         "gain": "法发〔2023〕14 号第 15 条讲的是禁令。权利人有证据证明，行为人正在实施或者即将实施侵害其人格权的违法行为。不及时制止，将使其合法权益受到难以弥补的损害。权利人依据民法典第九百九十七条申请的，人民法院可以依法作出人格权侵害禁令。人格权侵害禁令就是一道责令对方先停手的法院命令。该解释第 11 条讲的是取证。自诉案件里，「被害人提供证据确有困难的，可以要求公安机关提供协助」。公安机关应当及时查明行为主体，收集传播扩散情况及影响等证据材料。网络服务提供者应当提供必要的技术支持。「经公安机关协助取证，达到自诉案件受理条件的，人民法院应当决定立案」。无法收集的，公安机关应当书面说明。自诉案件就是要受害人自己去法院起诉的案件。该解释第 12 条列了五种情形，应当认定为刑法第二百四十六条第二款说的「严重危害社会秩序」。一是造成被害人或者其近亲属精神失常、自杀等严重后果，且社会影响恶劣。二是随意以普通公众为侵害对象，信息大范围传播引发大量低俗恶意评论，且社会影响恶劣。三是侮辱诽谤多人或者多次散布，且社会影响恶劣。四是组织、指使人员在多个平台大量散布，且社会影响恶劣。五是其他。该解释第 4 条：组织「人肉搜索」，违法收集并向不特定多数人发布公民个人信息，情节严重的以侵犯公民个人信息罪定罪处罚。《网络暴力信息治理规定》第二十三条要求平台提供这些防护选项。可以屏蔽陌生用户或者特定用户。可以限制本人发布信息的可见范围。可以禁止转载或者评论。可以只接收好友私信，或者拒绝接收所有私信。第二十五条要求提供快捷取证功能。第二十六条要求在显著位置设快捷投诉举报入口。第十五条要求平台发现涉嫌违法犯罪的，及时向公安机关报案",
         "note": "顺序按「快且便宜」排：平台最快、成本最低，先固证、先举报。法院最慢最贵，最后再定要不要打。三条路的过程成本都得自己扛。禁令要自己向法院申请。自诉是自己去法院立案、自己拿证据。想让检察院接手、改走公诉，得撞上法发〔2023〕14 号第 12 条列的那五种情形之一，够不上就只能自己告。有两件事别做。一是不对骂，骂回去会把你自己变成本节第 16 条（网上不骂人、不造谣）里被处罚的那一个。二是不删自己账号里的内容，那是证据。扛不住的时候打 12356，见第 1 节第 25 条。要求平台删除你的个人信息，见第 14 节第 8 条。因为帮了陌生人被拍、被传上网的情形，见 [docs/遇到陌生人出事该不该停.md](../docs/遇到陌生人出事该不该停.md)。",
+        "source": "最高人民法院、最高人民检察院、公安部 (2023). 关于依法惩治网络暴力违法犯罪的指导意见（法发〔2023〕14 号，第 4、11、12、15 条）. <https://www.court.gov.cn/zixun/xiangqing/412992.html>；全国人大 (2020). 民法典（第九百九十七条）. 最高人民检察院转载全文 <https://www.spp.gov.cn/spp/fl/202006/t20200602_463888.shtml>；国家互联网信息办公室、公安部、文化和旅游部、国家广播电视总局 (2024). 网络暴力信息治理规定（第十五、二十三、二十五、二十六条，2024 年 8 月 1 日施行）. 国务院公报 <https://www.gov.cn/gongbao/2024/issue_11526/202408/content_6969181.html>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -4942,6 +5221,7 @@ module.exports = {
         "cost": "不花钱。",
         "gain": "保险法第三十四条：以死亡为给付保险金条件的合同，未经被保险人同意并认可保险金额的，合同无效。被保险人就是被保的那个人。父母为未成年子女投保不受这个限制。第三十九条：投保人指定受益人时须经被保险人同意。投保人是掏钱买保险的人，受益人是出事后领钱的人。第四十三条管的是故意害人。投保人故意造成被保险人死亡、伤残或者疾病的，保险人不承担给付保险金的责任。投保人已交足二年以上保险费的，向其他权利人退还现金价值。受益人故意造成被保险人死亡、伤残、疾病的，或者故意杀害被保险人未遂的，该受益人丧失受益权。第二十七条第二款：投保人、被保险人故意制造保险事故的，保险人有权解除合同、不承担赔偿或者给付责任，除第四十三条规定外不退还保险费。民法典第一千一百二十五条：故意杀害被继承人的，丧失继承权。刑法第一百九十八条第一款第五项，把「投保人、受益人故意造成被保险人死亡、伤残或者疾病，骗取保险金」列为保险诈骗。数额较大的，处 5 年以下并处 1 万至 10 万元罚金。数额巨大的，处 5 至 10 年。特别巨大的，处 10 年以上。第二款：有该项行为同时构成其他犯罪的，依照数罪并罚的规定处罚，数罪并罚就是几个罪合在一起算刑。第二百三十二条：故意杀人的，处死刑、无期徒刑或者十年以上有期徒刑。案例是安徽宣城的张某松案。2016 年 7 月 18 日凌晨，他驾车冲入池塘，妻子溺亡。事发前不到半个月，他为妻子投保 4 份，每份 100 万元。7 月 25 日他被抓获。法院以故意杀人罪、保险诈骗罪数罪并罚，判处死缓并处罚金 5 万元",
         "note": "这条的受益人是自己，避免的是死刑或者无期。案例的伤亡和判决取自检察机关公布的典型案例原文，正文不写侦查手段之外的细节。伪造事故、夸大损失这类不涉及人命的骗保，同样是犯罪，连帮忙作证的人一起算，见第 9 节第 21 条（伪造事故、夸大损失骗理赔）。给家人买保险本身是正常的，要防的是「买了保险再动手」这个念头。想伤害家人的冲动按急症处理，见本节第 14、15 条（自己冒出念头、身边人说出狠话）",
+        "source": "全国人大常委会 (2015 修正). 中华人民共和国保险法第二十七、三十四、三十九、四十三条. <https://flk.npc.gov.cn/detail?id=2c909fdd678bf17901678bf7c4060811>；全国人大 (2020). 中华人民共和国民法典第一千一百二十五条. <https://flk.npc.gov.cn/detail?id=ff808081729d1efe01729d50b5c500bf>；全国人大常委会. 中华人民共和国刑法（经刑法修正案十一修正的整合文本）第一百九十八条、第二百三十二条. <https://flk.npc.gov.cn/detail?id=ff808181796a636a0179822a19640c92>；安徽省人民检察院转载《法制日报》(2020-01-13). 杀妻骗保牵出案中案（安徽省人民检察院民事虚假诉讼监督典型案例）. <http://www.ah.jcy.gov.cn/jczt/jjslhyqkjc/mtjj/202001/t20200113_2758841.shtml>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -4961,6 +5241,7 @@ module.exports = {
         "cost": "不花钱。当场多问一句，把受案回执要到手。之后按上面的日期去追问进度。难在一次次开口去问。",
         "gain": "《公安机关办理刑事案件程序规定》（公安部令第 159 号修正后）第一百七十一条管的是受案回执。原文是：「公安机关接受案件时，应当制作受案登记表和受案回执，并将受案回执交扭送人、报案人、控告人、举报人」。第一百七十四条：「对接受的案件，或者发现的犯罪线索，公安机关应当迅速进行审查」。第一百七十八条管的是立不立案。接受案件后经审查，认为有犯罪事实需要追究刑事责任，又属于自己管辖的，经县级以上公安机关负责人批准予以立案。不立案也要给你一张纸：「对有控告人的案件，决定不予立案的，公安机关应当制作不予立案通知书，并在三日以内送达控告人」。第一百七十九条管的是不服怎么办。原文是：「控告人对不予立案决定不服的，可以在收到不予立案通知书后七日以内向作出决定的公安机关申请复议；公安机关应当在收到复议申请后三十日以内作出决定」。接着写：「控告人对不予立案的复议决定不服的，可以在收到复议决定书后七日以内向上一级公安机关申请复核；上一级公安机关应当在收到复核申请后三十日以内作出决定。对上级公安机关撤销不予立案决定的，下级公安机关应当执行」。案情重大、复杂的可以延长复议复核的时限，但「不得超过三十日，并书面告知申请人」。刑事诉讼法第一百一十二条：认为有犯罪事实需要追究刑事责任的应当立案；不予立案的，「将不立案的原因通知控告人。控告人如果不服，可以申请复议」。第一百一十三条：「被害人认为公安机关对应当立案侦查的案件而不立案侦查，向人民检察院提出的，人民检察院应当要求公安机关说明不立案的理由。人民检察院认为公安机关不立案理由不能成立的，应当通知公安机关立案，公安机关接到通知后应当立案」。《公安机关办理行政案件程序规定》第六十一条也有同样的要求。属于本单位管辖的案件，「应当立即调查处理，制作受案登记表和受案回执，并将受案回执交报案人、控告人、举报人、扭送人」。办理治安案件的期限「自受理之日起不得超过 30 日；案情重大、复杂的，经上一级公安机关批准，可以延长 30 日」，鉴定期间不计入办案期限。《公安机关督察条例》第九条管的是投诉警察。原文是：「督察机构对群众投诉的正在发生的公安机关及其人民警察违法违纪行为，应当及时出警，按照规定给予现场处置，并将处理结果及时反馈投诉人」（全国）",
         "note": "受益人是你自己。报了警不一定就会处理，但办不办、多久办，都有明文的标准和期限。三个动作按顺序记。① 当场拿受案回执，把案件编号和受理单位记下来。② 到期没结果，就按上面的期限去问进度，问「案子在哪个环节」，别问「为什么不管我」。③ 收到不予立案通知书，先看理由，7 日内复议，再 7 日复核，同时可以向人民检察院提出立案监督，三条路不冲突。治安案件，就是打架、小偷小摸这类。办案期限从受理那天算起，不超过 30 日。案情重大复杂的，经上一级公安机关批准可以再延 30 日。做鉴定的时间不算在内。接待态度差就走督察投诉，案子本身照样按立案流程追。捡到失物、邻里纠纷这类本来就不是刑事案件，公安机关按行政案件或者调解处理，甚至只是登记备案，别按「报案没人管」来理解。被诈骗之后的止付流程，见本节第 2 条（立刻打 110 要求止付）。被网暴见本节第 37 条（被网暴了先固证再挑路）",
+        "source": "全国人大 (2018). 刑事诉讼法（2018 年修正，第一百一十二、一百一十三条）. <https://flk.npc.gov.cn/detail?id=ff8080816f135f46016f1d1b81b01351>；公安部 (2020). 关于修改《公安机关办理刑事案件程序规定》的决定（公安部令第 159 号）及修正后全文. <http://www.gov.cn/gongbao/content/2020/content_5549884.htm>；公安部 (2013/2019 修正). 公安机关办理行政案件程序规定（公安部令第 125 号，第 149 号修改决定）. <http://www.gov.cn/gongbao/content/2013/content_2321117.htm>、<http://www.gov.cn/zhengce/zhengceku/2018-12/31/content_5428593.htm>；国务院 (2011). 公安机关督察条例（国务院令第 603 号，第九条）. <https://www.gov.cn/zhengce/zhengceku/2011-09/08/content_6138.htm>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -4980,6 +5261,7 @@ module.exports = {
         "cost": "不花钱。只是不去做。",
         "gain": "刑法第三百八十九条给行贿下了定义：「为谋取不正当利益，给予国家工作人员以财物的，是行贿罪」。同一条还写着：「在经济往来中，违反国家规定，给予国家工作人员以财物，数额较大的，或者违反国家规定，给予国家工作人员以各种名义的回扣、手续费的，以行贿论处」。也留了一种例外：「因被勒索给予国家工作人员以财物，没有获得不正当利益的，不是行贿」。量刑写在刑法第三百九十条（刑法修正案十二修改，2024 年 3 月 1 日起施行）。原文是：「对犯行贿罪的，处三年以下有期徒刑或者拘役，并处罚金；因行贿谋取不正当利益，情节严重的，或者使国家利益遭受重大损失的，处三年以上十年以下有期徒刑，并处罚金；情节特别严重的，或者使国家利益遭受特别重大损失的，处十年以上有期徒刑或者无期徒刑，并处罚金或者没收财产」。有七种要往重里判的从重情形：「（一）多次行贿或者向多人行贿的；（二）国家工作人员行贿的；（三）在国家重点工程、重大项目中行贿的；（四）为谋取职务、职级晋升、调整行贿的；（五）对监察、行政执法、司法工作人员行贿的；（六）在生态环境、财政金融、安全生产、食品药品、防灾救灾、社会保障、教育、医疗等领域行贿，实施违法犯罪活动的；（七）将违法所得用于行贿的」。末款留了主动交待可以减免的口子：「行贿人在被追诉前主动交待行贿行为的，可以从轻或者减轻处罚。其中，犯罪较轻的，对调查突破、侦破重大案件起关键作用的，或者有重大立功表现的，可以减轻或者免除处罚」（全国）",
         "note": "受益人是你自己。别指望贿赂一下就能免除惩罚。对方有同事、有台账、有监控和督察，你送出去的东西是他被查时的证据，也是你自己的罪证，而且这一类行贿是明文从重的那一档。真遇到对方索要好处，就按第 39 条（报警当场要受案回执）的渠道走：留下受案回执和文书，向督察机构或者纪检监察机关反映。刑法第三百八十九条第三款给的免责条件是「被勒索且没有获得不正当利益」，一旦你借这个机会拿到了本来拿不到的东西，这个条件就不成立。医院里的红包属于另一套规则，见第 24 节第 11 条",
+        "source": "全国人大常委会. 中华人民共和国刑法（经刑法修正案十一修正的整合文本）第三百八十九条. <https://flk.npc.gov.cn/detail?id=ff808181796a636a0179822a19640c92>；全国人大常委会 (2023). 中华人民共和国刑法修正案（十二）（第五项，修改刑法第三百九十条；自 2024 年 3 月 1 日起施行）. <https://flk.npc.gov.cn/detail?id=ff8081818c3ce31f018cb6a6bc412f55>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -4999,6 +5281,7 @@ module.exports = {
         "cost": "不花钱。手机打开通话录音或者录音软件就行。从头录到尾，录完把原文件留着，不剪辑、不覆盖。",
         "gain": "民事诉讼法第六十六条把视听资料、电子数据都列为证据。最高人民法院的民事诉讼法司法解释第一百零六条，只排除三种方法取得的证据：严重侵害他人合法权益的，违反法律禁止性规定的，严重违背公序良俗的。「没事先告诉对方」不在这三种里。最高人民法院的证据规定第十五条：拿录音录像当证据，要交存着它的原始载体，比如原来那部手机。第九十条：存有疑点的视听资料、电子数据，不能单独用来认定事实。最高人民法院官网转载的一篇法官文章也这样说：录音要合法取得、内容真实、不剪辑，还要和案子有关（全国）",
         "note": "受益人是你自己和家人。录音里尽量让人、事、钱数和时间对得上。别只问「你什么时候给我」，可以自然地问「去年借你的 5 万元，你准备什么时候还」。录音交给法院、仲裁委或者警察用，别发到网上，公开别人的话可能惹上隐私和名誉纠纷，见本节第 16 条（网上不骂人、不造谣）。有录音不等于一定赢，法院还要结合别的证据看真不真、有没有关系。录音只解决能不能证明，要不要真去起诉、要花多久，得另外算。离职前该存的材料见第 19 节第 8 条（离职前把工资条、考勤先存下来）。本条的依据是民事诉讼规则，刑事和行政案件里怎么用证据另有规定。",
+        "source": "全国人大常委会 (2023 年修正，2024 年 1 月 1 日施行). 民事诉讼法（第六十六条）. 上海市发展和改革委员会转载全文 <https://fgw.sh.gov.cn/ys-syjf-zc-2.4.1-h5/20240408/073febdb2b04464390546232d4089f51.html>；最高人民法院 (2022 年第二次修正). 关于适用《中华人民共和国民事诉讼法》的解释（第一百零六条）. <https://www.court.gov.cn/fabu/xiangqing/353651.html>；最高人民法院 (2019 年修正). 关于民事诉讼证据的若干规定（第十四、十五、九十条）. <https://www.court.gov.cn/zixun/xiangqing/212721.html>；刘丹妮 (2023). 电影《消失的她》中的法律（人民法院报，最高人民法院官网转载）. <https://www.court.gov.cn/zixun/xiangqing/406032.html>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -5018,6 +5301,7 @@ module.exports = {
         "cost": "不花钱。拿手机连续拍几十秒到几分钟。先保证自己安全，不耽误救人和处置。",
         "gain": "民事诉讼法第六十六条把物证、视听资料和电子数据都列为证据。最高人民法院的证据规定第十四条把图片、音频、视频列为电子数据。第十五条要求交电子数据的原件，拿录像当证据要交原始载体。照片和录像能把马上会变的现场状态留下来，再和报警记录、维修记录、病历、证人说法互相对上。「全景、位置、细节」这个顺序是经验做法，法律没有规定（全国）",
         "note": "受益人是你自己和家人。给 C 是因为拍摄顺序只是经验，法律条文只管照片录像能当证据、要交原件。有人受伤、起火、漏气或者还有别的危险，先救人、先躲开，别为了拍照耽误。交通事故现场该做的事见本节第 1 条（出了交通事故先停车、救人、报警）。",
+        "source": "全国人大常委会 (2023 年修正，2024 年 1 月 1 日施行). 民事诉讼法（第六十六条）. 上海市发展和改革委员会转载全文 <https://fgw.sh.gov.cn/ys-syjf-zc-2.4.1-h5/20240408/073febdb2b04464390546232d4089f51.html>；最高人民法院 (2019 年修正). 关于民事诉讼证据的若干规定（第十四、十五条）. <https://www.court.gov.cn/zixun/xiangqing/212721.html>",
         "grade": "C",
         "meta": {
           "money": "0",
@@ -5037,6 +5321,7 @@ module.exports = {
         "cost": "不花钱。申请人身安全保护令不交诉讼费，也不用交担保。要花的是报警、验伤、写申请的时间。最难的是对家里人开这个口。",
         "gain": "先说风险。66 个国家的数据合起来看（系统综述）。女性被杀的案子里，38.6% 是亲密伴侣干的，男性是 6.3%。作者说，这类命案往往是长期虐待的最后一步。另一项研究比较了 506 起命案和杀人未遂，还有 427 名挨过打但没出这种事的女性。以前被伴侣掐过脖子的，遭杀人未遂的几率是没被掐过的 6.70 倍（OR 6.70，95% CI 3.91–11.49）。被杀的几率是 7.48 倍（OR 7.48，95% CI 4.53–12.35）。再说法律。受害人和近亲属可以报警。公安机关要及时出警，制止家暴，调查取证，协助就医和验伤。情节较轻的，公安机关可以给对方出告诫书。遭受家暴或者面临家暴的现实危险，可以向法院申请人身安全保护令。法院受理后 72 小时内要作出裁定，情况紧急的 24 小时内。保护令可以禁止对方施暴，禁止对方骚扰、跟踪、接触你和你的近亲属，还可以让对方搬出你的住处。保护令最长管 6 个月，到期前可以申请延长。申请不以离婚为前提。法院认为家暴「存在较大可能性」就可以发。对方违反保护令，法院可以罚款 1000 元以下、拘留 15 日以下。构成犯罪的，按拒不执行判决、裁定罪处理。经常性的侮辱、威胁、跟踪、骚扰，还有挨冻挨饿，也算家暴。",
         "note": "受益人主要是你自己和家人。命案比例是国外数据，我国没有公开的同口径统计。证据要攒：出警记录、告诫书、验伤结果、看病记录、对方写的保证书、聊天记录和录音都能用。录音见本节第 41 条（录音）。保护令不用请律师，一般几天内就有结果。要离婚或者要赔偿，是另一场官司，一审普通程序 6 个月起，律师费自己出。家暴受害人可以找法律援助，法院也可以缓收、减收或者免收诉讼费。保护令不等于人身安全有了保证，眼前有危险先打 110。受害人被强迫、被吓住，没法自己申请的，近亲属、公安机关、妇联、居委会、村委会可以代为申请。受害的是朋友或同事，你可以陪对方去报警、去医院。看见陌生人家里有人正在挨打，打 110 就够了。别自己上手拉架，理由见本节第 10 条（冲突先报警）。",
+        "source": "全国人大常委会 (2015). 反家庭暴力法（第二、十三、十五、十六、十九、二十三、二十八、二十九、三十、三十四条）. <https://flk.npc.gov.cn/detail?id=2c909fdd678bf17901678bf7f9d60889>；最高人民法院 (2022). 关于办理人身安全保护令案件适用法律若干问题的规定（法释〔2022〕17 号，第一、三、六、十、十二条）. <https://www.court.gov.cn/zixun/xiangqing/366021.html>；最高人民法院 (2016). 关于人身安全保护令案件相关程序问题的批复（法释〔2016〕15 号，第一、二项）. 平原县人民法院转载全文 <http://qdzy.sdcourt.gov.cn/dzpyfy/393141/393283/1461545/index.html>；Stöckl H 等 (2013). The global prevalence of intimate partner homicide: a systematic review. Lancet. <https://doi.org/10.1016/S0140-6736(13)61030-2>；Glass N 等 (2008). Non-fatal strangulation is an important risk factor for homicide of women. Journal of Emergency Medicine. <https://doi.org/10.1016/j.jemermed.2007.02.065>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -5056,6 +5341,7 @@ module.exports = {
         "cost": "不花钱。难在债主上门、家里人哭着求时，忍住不掏钱。债主真去起诉，你要应诉。",
         "gain": "最高人民法院 2017 年的通知写了四点。一方在赌博、吸毒这些违法犯罪活动里欠的债，不予法律保护。债主知道或者应当知道他借钱去赌博、吸毒，还借给他的，不予法律保护。一方用自己的名义借钱，拿去干违法犯罪的事，他要求按夫妻共同债务处理的，法院不支持。没经过审判程序，不能要求没借钱的那一方承担民事责任（全国，2017 年起）",
         "note": "给 B 是因为这是法院的内部通知，没有数字，债主知不知情也要看证据。这份通知是按当时的婚姻法发的，民法典施行后怎么认定夫妻共同债务，见第 10 节第 12 条（配偶大额借的钱）。债主不知道他拿去赌的借款，照样要还，只是还钱的是借钱的人自己。要证明钱拿去赌了，得有转账流水、赌博平台记录或者公安的处理材料，平时就留着。债主真去起诉，一审普通程序 6 个月起，简易程序 3 个月。律师费各付各的，败诉方不负担。债主上门堵人、扣人，见第 9 节第 15 条（要债不扣人），直接报警。他本人要是已经赌到想死，见第 1 节第 37 条（赌到借钱还赌先打 12356）。受益人主要是配偶和直系亲属。",
+        "source": "最高人民法院 (2017). 关于依法妥善审理涉及夫妻债务案件有关问题的通知（法〔2017〕48 号，第二、四条）. <https://www.court.gov.cn/fabu/xiangqing/36982.html>",
         "grade": "B",
         "meta": {
           "money": "0",
@@ -5075,6 +5361,7 @@ module.exports = {
         "cost": "不花钱。难在当面拒绝亲戚朋友。对方说「只是做个见证」「不用你担责任」，也照样拒绝。手机、身份证、银行卡不交给中介，也不照中介的安排刷脸、签字。验证码只自己用，熟人要也不念。",
         "gain": "金融监管总局福建监管局 2022 年的风险提示讲了这个套路。客户 A 资质不够，贷不下来。中介说要加一个担保人，让 A 去找资质好的 B。实际办的时候，中介用 B 的身份信息申请贷款，钱给 A 用。原文说「借款人实质为B」，B「直至被银行催收才知本人是借款人而非担保人」。山东监管局 2024 年的提示说，中介会向 B 承诺「不用承担任何责任」。中介还会事先教 B 怎么应付银行的贷前调查，实际由 B 作为借款人申请贷款。上海普陀区法院 2024 年公布过一起案子。业务员拿着 B 的手机下载银行 App，直接用 B 的名义申请贷款。钱到了 B 的账户，B 转给了 A，A 又付了 8 万多元手续费。中介一伙 8 人以合同诈骗罪被判 10 个月到 4 年。中介判了刑，这笔贷款也不会因此变成别人的。民法典第一百四十九条写着，第三人欺诈的，对方「知道或者应当知道」，受骗的一方才能请求撤销。这里的对方是银行，银行不知情就撤不掉。能撤的，要在知道被骗之日起 1 年内向法院请求（第一百五十二条）。借款人要按约定的期限还钱（第六百七十五条）。合同只约束签合同的人（第四百六十五条）。把债转给别人，要经银行同意（第五百五十一条）。所以 A 写的承诺书管不到银行。钱只能自己起诉 A 去要。替人刷了脸、没看合同，法院也认。内江市市中区法院 2025 年审结过一个案子：蒋某向小贷公司借钱，自己一个人借不到。张某的儿子背着她，把她的身份信息给了蒋某，让她当共同借款人。借款流程里要她本人刷脸，她刷了，但没看合同。法院说她「应当预见人脸识别的重要性及法律后果」，判她和蒋某一起还剩下的本金 6 万多元。电子签名法写明，「可靠的电子签名与手写签名或者盖章具有同等的法律效力」。反电信网络诈骗法规定，任何人「不得提供实名核验帮助」，违反的要罚款，情节严重的拘留。普通程序一审 6 个月内审结，可以延长。律师费不在法定的诉讼费用里，要自己出（全国）",
         "note": "受益人主要是你自己，开口找你的 A 多半是家人或朋友。上海浦东一位检察长撰文说，B 往往碍于情面明知是自己贷款也照办，最后成了银行的催收对象。真想帮忙，先问清自己在合同上是什么身份，是借款合同就别签。愿意担保的，就以保证人的身份签保证合同，见第 18 条（替人担保）。已经被贷了款，先报警，再打放款银行官网上的电话说明情况，聊天和转账记录都留好。自己名下有几笔贷款，查征信见第 9 条（查征信报告）。银行贷前问话时别照中介教的说，作假可能自己担责，见第 9 节第 6 条（包装材料贷款）。刷脸和电子确认同样算签字，见第 17 条（签字前把纸看完）。法院也不是一律判本人还：广州互联网法院 2021 年判过，身份证被偷后当场报警挂失的人，银行拿不出她本人刷脸的证据就输了。所以身份证丢了要马上报警挂失，回执留好。机构要你刷脸时可以要别的方式，那是另一件事，见第 14 节第 9 条（刷脸不是必须答应的）。借你名字办事的同类套路见第 28 条（挂名法人）。手机和账户不外借，见第 8 条（不把银行卡借人）。给 B 是因为监管只给了套路和案例，没有被骗人数和金额的统计。",
+        "source": "国家金融监督管理总局福建监管局（原福建银保监局） (2022). 关于防范不良贷款中介新型套路的风险提示（2022 年 9 月 14 日）. <https://www.nfra.gov.cn/branch/fujian/view/pages/common/ItemDetail.html?docId=1072844&itemId=1104&generaltype=0>；国家金融监督管理总局山东监管局 (2024). 风险提示：警惕非法贷款中介AB贷风险（2024 年 3 月 14 日）. <https://www.nfra.gov.cn/branch/shandong/view/pages/common/ItemDetail.html?docId=1154326&itemId=1269&generaltype=0>；上海市普陀区人民法院 (2024). 以案释法：征信不好仍可办理大额贷款？小心「AB贷」陷阱. <https://www.shpt.gov.cn/fyzx-fy/20240920/953017.html>（上海市普陀区人民政府网转载）；唐逸飞 (2025). 有必要对「助贷中介套路欺诈」予以刑事规制. 检察日报理论版. <https://www.spp.gov.cn/spp/llyj/202506/t20250607_697711.shtml>（最高人民检察院官网）；全国人大 (2020). 民法典（第一百四十九、一百五十二、四百六十五、五百五十一、六百七十五条）. <https://www.spp.gov.cn/spp/fl/202006/t20200602_463888.shtml>；全国人大常委会 (2023 修正). 民事诉讼法（第一百五十二条）. <https://fgw.sh.gov.cn/ys-syjf-zc-2.4.1-h5/20240408/073febdb2b04464390546232d4089f51.html>（上海市发展改革委转载）；国务院 (2006). 诉讼费用交纳办法（国务院令第 481 号，第六条）. <https://www.gov.cn/zhengce/zhengceku/2008-03/28/content_6929.htm>；四川长安网（中共四川省委政法委员会主办，来源四川法治报）(2025). 一次「刷脸」让她背上数万元贷款 法院：当事人应当预见人脸识别的重要性及法律后果（2025 年 9 月 23 日）. <https://www.sichuanpeace.gov.cn/azsf/20250923/2992615.html>；山西省忻州市中级人民法院（转载人民法院报）(2021). 一女子「被刷脸」办卡贷款后被起诉还钱（2021 年 8 月 19 日）. <https://sxxzzy.shanxify.gov.cn/article/detail/2021/08/id/6215123.shtml>；全国人大常委会 (2019). 电子签名法（2019 年修正，第三、十三、十四、十五条）. <https://flk.npc.gov.cn/detail?id=ff8080816f135f46016f2163e4261aa1>；全国人大常委会 (2022). 反电信网络诈骗法（第三十一、四十四条）. <https://www.spp.gov.cn/spp/fl/202209/t20220902_575631.shtml>",
         "grade": "B",
         "meta": {
           "money": "0",
@@ -5094,6 +5381,7 @@ module.exports = {
         "cost": "门锁换成要用钥匙才能反锁的，窗户加锁，门外装一盏感应灯，一般几十到几百元。换整扇防盗门要上千元。难在每次出门都真的锁上门窗，夏天开着窗时也要记得。",
         "gain": "英格兰和威尔士的犯罪调查，问了 2008 到 2012 年间 37416 户人家装了哪些防盗设施，再和被盗的人家比。什么都没装的只占全部人家的 4.9%，却占了被人进屋偷东西人家的 36.6%。作者算的是「保护倍数」：被盗几率是什么都没装人家的几分之一。门锁加窗锁是 12.54 倍，被盗几率降到约十二分之一。这里的门锁指双锁或者「死锁」（锁舌要用钥匙才能收回）。门锁、窗锁再加门外的感应灯或定时灯，是 34.41 倍。再加屋里的定时灯，是 49 倍。只装一样的，门外灯约 3 倍，门锁约 2.8 倍。单装窗锁看不出差别。装五样的，并不比装对了的三样强。只装报警器、别的都不装，被盗几率反而比什么都没装的高。挂假报警器盒子的，有人想闯进来没闯成的几率也更高。锁得真锁上才算数：1993 到 2006/07 年，撬锁、砸窗、拆门板进屋的盗窃从每千户 31 起降到 7 起，降了 77%。门窗没锁、直接走进去的那种，一直是每千户 7 起，没降（英格兰和威尔士）",
         "note": "争议：报警器那一半有反方数据。同一批作者用 1992 到 1996 年的数据算过，那时加装报警器是能降低被盗几率的。作者也说这个反常结果要谨慎看待，一种可能是被偷过的人家才去装报警器。所有数字都是英国的，而且只是比较装了和没装的人家，没有分组对照，所以给 B。这些数字只管入室盗窃，没有数据说门锁能挡住入室抢劫。真遇到有人在家里，先退开报警，见第 10 条（起了冲突先报警不动手）。退无可退时，见第 11 条（躲不掉的侵害可以还手）。租房的，换锁、加窗锁先跟房东说好。民法典规定，租客没经房东同意就加装、改装，房东可以要求恢复原状或者赔偿。买防盗门可以看一眼，防盗安全门有强制性国家标准 GB 17565-2022，2024 年 1 月 1 日起实施。受益人主要是你自己和家人。",
+        "source": "Tseloni A, Thompson R, Grove L, Tilley N, Farrell G (2017). The effectiveness of burglary security devices. Security Journal 30(2):646–664. <https://doi.org/10.1057/sj.2014.30>；Tilley N, Thompson R, Farrell G, Grove L, Tseloni A (2015). Do burglar alarms increase burglary risk? A counter-intuitive finding and possible explanations. Crime Prevention and Community Safety 17(1):1–19. <https://doi.org/10.1057/cpcs.2014.17>；Tseloni A, Farrell G, Thompson R, Evans E, Tilley N (2017). Domestic burglary drop and the security hypothesis. Crime Science 6:3. <https://doi.org/10.1186/s40163-017-0064-2>；国家市场监督管理总局、国家标准化管理委员会 (2022). GB 17565-2022 防盗安全门通用技术条件. <https://openstd.samr.gov.cn/bzgk/gb/newGbInfo?hcno=A75C1C66CB989D0A40BFA7A262C93290>；全国人大 (2020). 民法典（第七百一十五条）. <https://www.spp.gov.cn/spp/fl/202006/t20200602_463888.shtml>",
         "grade": "B",
         "meta": {
           "money": "少",
@@ -5115,6 +5403,7 @@ module.exports = {
         "cost": "不花钱。转发前看一眼，看它是不是官方发的通报。拿不准就不转，也不改图、不加「据说」。难在忍住那股当第一个报信人的劲头。",
         "gain": "故意散布谣言，谎报险情、疫情、灾情、警情，扰乱公共秩序的，拘留 5 到 10 日。还可以再罚 1000 元以下。情节较轻的那一档，是拘留 5 日以下，或者罚 1000 元以下。编造虚假的险情、疫情、灾情、警情，放到网上传播的，判 3 年以下。明知是假的还故意往外传，也是这一档。前提是把社会秩序搅乱得厉害，法条的说法是「严重扰乱社会秩序」。造成严重后果的，判 3 到 7 年（全国）",
         "note": "明知是假还转发，和自己编，警察用的是同一个条款。「我只是转了一下」不免责。P 图和 AI 生成的假现场图，一样算自己编。公安部 2025 年公布过多批涉灾情、险情的网络谣言典型案例。本节写作时公安部网站打不开，所以没引用具体案例。",
+        "source": "全国人大常委会 (2025). 治安管理处罚法（2025 年修订，第二十九条）. <https://www.spp.gov.cn/spp/fl/202506/t20250627_699863.shtml>；全国人大常委会 (2015). 刑法修正案（九）（第三十二条，即刑法第二百九十一条之一第二款）. <https://www.spp.gov.cn/spp/fl/201802/t20180205_364562.shtml>；全国人大 (2020). 刑法（根据刑法修正案（十一）修正，第二百九十一条之一）. <https://jtgl.beijing.gov.cn/jgj/jgxx/flfg/fl/11033925/index.html>（北京市公安交通管理局转载）",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -5134,6 +5423,7 @@ module.exports = {
         "cost": "不花钱。涉及英烈、国旗、国徽、国歌的内容，不评论、不改图、不转发。难在群里有人接玩笑时，忍住不跟着说一句。",
         "gain": "用辱骂、编造事实这类方式，侵害英雄烈士的姓名、肖像、名誉、荣誉，损害了公共利益的，按下面这档罚。拘留 5 到 10 日，或者罚 1000 到 3000 元。亵渎、否定英烈的事迹和精神，制作传播美化侵略战争的言论、图片、音视频，扰乱公共秩序的，也是这一档。情节较重的那一档，是拘留 10 到 15 日，还可以再罚 5000 元以下。到「情节严重」这一档就构成犯罪，判 3 年以下。在公共场合侮辱国旗国徽，或者改国歌的词曲、用歪曲贬损的方式唱国歌，情节严重的也判 3 年以下。官方案例：肖某在 499 人的村民微信群发 2 条信息诋毁侮辱袁隆平，判管制 6 个月（管制是不关进监狱、但行动受限制的刑罚）。仇某用 250 余万粉丝的微博发 2 条歪曲卫国戍边官兵事迹的内容，判 8 个月，还要在全国性媒体公开道歉（全国）",
         "note": "治安管理处罚法的这一条，是 2025 年修订时才加进去的。在那之前，这种事只能走刑法，或者由检察院提民事公益诉讼。几百人的微信群，在法院眼里就算公开场合。",
+        "source": "全国人大常委会 (2025). 治安管理处罚法（2025 年修订，第三十五条）. <https://www.spp.gov.cn/spp/fl/202506/t20250627_699863.shtml>；全国人大常委会 (2018). 英雄烈士保护法（第二十二、二十六条）. <https://www.spp.gov.cn/spp/gyssshmhsh/201912/t20191202_440079.shtml>；全国人大常委会 (2020). 刑法修正案（十一）（第三十五条，即刑法第二百九十九条之一）. <https://www.spp.gov.cn/zdgz/202012/t20201227_503682.shtml>；全国人大 (2020). 刑法（根据刑法修正案（十一）修正，第二百九十九条、第二百九十九条之一）. <https://jtgl.beijing.gov.cn/jgj/jgxx/flfg/fl/11033925/index.html>；最高人民法院 (2022). 涉英烈权益保护十大典型案例（案例二、案例三）. <https://www.court.gov.cn/zixun/xiangqing/382301.html>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -5153,6 +5443,7 @@ module.exports = {
         "cost": "不花钱。页面关掉，这件事就结束了。不存档、不转发、不搬到境内平台。不用能对上自己身份的账号，在境外平台长期发政治内容。境外机构、组织、个人给的稿费和资助也不接。难在看到扎眼的内容时忍住不截图、不分享。",
         "gain": "用造谣、诽谤或者别的方式，煽动别人颠覆国家政权、推翻社会主义制度的，判 5 年以下。带头的（法条叫「首要分子」）或者罪行重大的，判 5 年以上，有期徒刑最高 15 年。煽动分裂国家、破坏国家统一的，刑期和上面一样。和境外机构、组织、个人勾结着做这两件事的，从重处罚。境内外的机构、组织或者个人出钱资助别人做的，对直接负责的人判 5 年以下，情节严重的判 5 年以上。为境外的机构、组织、人员窃取、刺探、收买、非法提供国家秘密或者情报的，判 5 到 10 年。这一项里情节特别严重的判 10 年以上或者无期徒刑，情节较轻的判 5 年以下。危害国家安全的犯罪一律附加剥夺政治权利 1 到 5 年，这几年里选举权和当公职人员的资格都被取消。还可以并处没收财产，把个人财产收归国家。行政处罚上也有规定。任何个人和组织都不得利用网络，从事危害国家安全、荣誉和利益的活动。也不得煽动颠覆国家政权、推翻社会主义制度。不得煽动分裂国家、破坏国家统一。发布或者传输这类信息的，按有关法律、行政法规处罚（全国）。另有一类不用传播就成立。明知是宣扬恐怖主义、极端主义的东西，还非法拿在手里的，情节严重就够判。这里的东西包括图书、音频视频资料或者其他物品。刑期是 3 年以下有期徒刑、拘役（短期关押）或者管制（不关押但行动受限）。还要并处或者单处罚金，判刑的同时罚钱，也可能只罚钱。依据是刑法第一百二十条之六，由刑法修正案九新增。",
         "note": "本条引的这几条法律，罚的是煽动别人、往外传、提供给别人，光看不在其中。恐怖主义、极端主义的材料是法条写明的例外，光存在自己手里就能定罪（第一百二十条之六），所以这一类一定不能存档。看到了就到此为止：不截图存档、不转发、不加评论、不拉人一起转。转发和在评论区跟着说，办案时都算传播，「我只是转了一下」不免责。内容出自境外平台的，还可能加重处罚。拿不准真假的更不要跟着转，见本节第 1 条（不转发不知真假的消息）。翻墙工具本身怎么罚，见第 11 节第 11 条。这类内容转出去得不到任何实在的好处，代价却是刑期、剥夺政治权利和没收财产。公开可查的同类案件只见于境外媒体和家属公布的文书，比如一名长期在境外平台发政治评论的博主 2023 年被判 7 年。本书没有拿到官方渠道可核对的判决书，所以只按法条写，没有附案例。",
+        "source": "全国人大 (1997). 刑法（第四十五、五十五、五十六、一百零三、一百零五、一百零六、一百零七、一百一十一、一百一十三条，这几条未经修正案修改）. <https://www.spp.gov.cn/spp/fl/201802/t20180206_364975.shtml>；全国人大常委会 (2025). 网络安全法（2025 年修正，2026 年 1 月 1 日施行，第十三条第二款、第七十一条第一项）. <https://www.cac.gov.cn/2025-12/29/c_1768735112911946.htm>；全国人大常委会 (2015). 刑法修正案（九）（新增第一百二十条之六）. 国家信访局转载全文 <https://www.gjxfj.gov.cn/gjxfj/fgwj/flfg/webinfo/2017/03/1601761496614423.htm>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -5172,6 +5463,7 @@ module.exports = {
         "cost": "不花钱。不转发，不存进群文件，也不去当这种群的群主或者管理员。",
         "gain": "在网上传播淫秽信息的，拘留 10 到 15 日，还可以再罚 5000 元以下。情节较轻的那一档，是拘留 5 日以下，或者罚 1000 到 3000 元。内容涉及未成年人的，从重处罚。传播淫秽物品到了「情节严重」这一档的，判 2 年以下。为了挣钱去卖、去传的，判 3 年以下并罚钱。这一项里情节严重的判 3 到 10 年，特别严重的判 10 年以上或者无期徒刑。建一个主要用来传播淫秽电子信息的群，成员到 30 人以上的，按犯罪办。造成严重后果的也一样。建群的人、当管理员的人和主要往里发的人，都按传播淫秽物品罪定罪（全国）",
         "note": "这两部法律罚的都是「传播」，私下自己看不在条款里。但往群里发一次，就算向全群传播。「情节严重」到底要多少数量，由司法解释规定，本节没有核实具体数字。",
+        "source": "全国人大常委会 (2025). 治安管理处罚法（2025 年修订，第八十条）. <https://www.spp.gov.cn/spp/fl/202506/t20250627_699863.shtml>；全国人大 (2020). 刑法（根据刑法修正案（十一）修正，第三百六十三、三百六十四条）. <https://jtgl.beijing.gov.cn/jgj/jgxx/flfg/fl/11033925/index.html>；最高人民法院、最高人民检察院 (2010). 关于办理利用互联网、移动通讯终端、声讯台制作、复制、出版、贩卖、传播淫秽电子信息刑事案件具体应用法律若干问题的解释（二）（第三条）. <https://www.spp.gov.cn/zdgz/201002/t20100204_25001.shtml>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -5191,6 +5483,7 @@ module.exports = {
         "cost": "不花钱。放弃这类「日结几百、带卡去银行」的活。",
         "gain": "明知是犯罪来的钱和物，还帮着转移、收购、卖掉，或者用别的办法帮着遮掩的，判 3 年以下，并处或者单处罚金（判刑的同时罚钱，也可能只罚钱）。官方案例：王某某按指示带上身份证和 1 张银行卡，到指定地点配合转账取款，赚了 500 余元。检察院没有起诉他，公安按反电信网络诈骗法拘留 10 日，并罚 1000 元。满某某把自己和别人的银行卡、手机卡交给团伙收款、转账、取现，判 2 年 3 个月，并罚 2.2 万元（全国）。换成虚拟币转走也一样：安某某等三人按电诈团伙的指示，用自己的银行卡收钱，在交易平台上买成虚拟货币，再转到对方指定的账户，按比例拿提成。查实其中有被害人被骗的钱 50 余万元。三人以掩饰、隐瞒犯罪所得罪分别判 2 年 8 个月到 3 年 3 个月，各罚 3 万到 4 万元（北京通州）",
         "note": "把银行卡借给人、帮人「跑分」的后果，见第 8 节第 8 条（银行卡借给人）。本条讲的是自己动手取现、转账。收了钱换成泰达币这类虚拟币再转出去，也是同一件事。自己买币亏了钱为什么要不回来，见第 5 节第 45 条（别买虚拟货币）。「我不知道钱是哪来的」这句话，办案时不一定认。报酬高得离谱、要你刷脸配合、交易怎么看怎么不正常，凭这几样就能认定你其实知道。最轻的结果也是拘留 10 日，加一份案底。",
+        "source": "全国人大 (2020). 刑法（根据刑法修正案（十一）修正，第三百一十二条）. <https://jtgl.beijing.gov.cn/jgj/jgxx/flfg/fl/11033925/index.html>；最高人民检察院 (2023). 检察机关依法惩治电信网络诈骗及其关联犯罪典型案例（案例九）. <https://www.spp.gov.cn/xwfbh/wsfbt/202311/t20231130_635188.shtml>；最高人民法院、最高人民检察院 (2025). 依法惩治掩饰、隐瞒犯罪所得、犯罪所得收益犯罪典型案例（案例一、五）. <https://www.spp.gov.cn/xwfbh/wsfbt/202508/t20250825_704514.shtml>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -5210,6 +5503,7 @@ module.exports = {
         "cost": "不花钱。直接拒绝。不把身份证和自己的征信记录借给别人用，不签没看过的贷款合同，也不替人去银行面签。",
         "gain": "用骗的手段，从银行或者其他金融机构拿到贷款、票据承兑、信用证、保函等。给银行或者其他金融机构造成重大损失的，判 3 年以下。还要并处或者单处罚金，判刑的同时罚钱，也可能只罚钱。造成特别重大损失，或者有其他特别严重情节的，判 3 到 7 年并罚钱。警方立案追查的起点，是直接经济损失 50 万元以上。本来就没打算还，用编造的引进资金项目理由、假的经济合同、假的证明文件或者假的产权证明去骗贷款的，是贷款诈骗罪。这一项骗到 5 万元就立案，判 5 年以下并罚 2 万到 20 万元。数额巨大或者有其他严重情节的判 5 到 10 年，特别巨大的判 10 年以上直到无期徒刑。伪造、涂改、买卖国家机关的公文、证件、印章，判 3 年以下，情节严重的判 3 到 10 年。官方案例：一个 126 人的团伙，在 16 个省市把没工作的人包装成「优质客户」，在 80 多家银行网点骗贷 3000 余万元。出面贷款的「白户」按贷款金额的三成拿好处费。检察院追诉了 105 名「白户」。2026 年一审已判的 80 人里，76 人以贷款诈骗罪判 1 年 4 个月到 6 年 6 个月并罚钱。另有 4 人因为替团伙取现，被以贷款诈骗罪、洗钱罪数罪并罚（两个罪一起算刑期）。这 4 人判 2 年 4 个月到 7 年 6 个月（全国）。本条的骗取贷款罪，按刑法修正案（十一）2021 年 3 月起的文本。",
         "note": "「我当时是想还的」这句话，在那个案子里没被采纳。检察机关查明这些人没工作、没固定资产，根本还不上，分到的钱又都花了，据此认定他们本来就没打算还。替团伙把钱取出来的，还可能另外加一条洗钱罪。钱贷在谁名下、合同谁签的字，谁就是借款人。就算不构成犯罪，这笔债和征信上的记录也是自己的。拿了钱跑到境外一样了结不了：立案之后再躲，过多少年都还能追。判了刑没服完的、正被当成犯罪嫌疑人或者被告人的，都不准出境。民事案子没了结的，法院可以不让你出境；被执行人不履行的，法院也能限制出境。替人取现、转账见本节第 5 条（「兼职」要你用自己的卡收钱），自己被人冒名贷款了怎么发现，见第 8 节第 9 条。",
+        "source": "全国人大常委会 (2020). 刑法修正案（十一）（第十一条，修改刑法第一百七十五条之一）. <https://www.spp.gov.cn/spp/fl/202012/t20201227_503700.shtml>；全国人大 (1997). 刑法（第八十八、一百九十三、二百八十条）. <https://www.spp.gov.cn/spp/fl/201802/t20180206_364975.shtml>；最高人民检察院、公安部 (2022). 关于公安机关管辖的刑事案件立案追诉标准的规定（二）（第二十二、四十五条）. <https://www.spp.gov.cn/spp/xwfbh/wsfbt/202204/t20220429_555906.shtml>；最高人民检察院 (2026). 骗贷流水线背后藏洗钱黑手（检察日报）. <https://www.spp.gov.cn/spp/zdgz/202604/t20260428_726494.shtml>；全国人大常委会 (2012). 出境入境管理法（第十二条）. <https://www.nia.gov.cn/n741440/n741547/c1013311/content.html>（国家移民管理局）；全国人大常委会 (2023 修正). 民事诉讼法（第二百六十六条）. <https://amr.guizhou.gov.cn/zwgk/xxgkml/jcxxgk/zcfg/fl/202401/t20240129_83645867.html>（贵州省市场监管局转载）",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -5229,6 +5523,7 @@ module.exports = {
         "cost": "不花钱，几分钟的事。打个电话找失主，或者把东西送到派出所。",
         "gain": "捡到别人丢的东西，要还给失主，及时通知他来领，或者送交公安等部门。把别人落下的东西留着自己用，金额到了「数额较大」又不肯交出来的，构成侵占罪，判 2 年以下。数额巨大的判 2 到 5 年。捡到别人的信用卡拿到 ATM 上用，属于「冒用他人信用卡」。够得上犯罪的，按信用卡诈骗罪处理：数额较大的判 5 年以下，并罚 2 万到 20 万元。数额巨大或者有其他严重情节的，判 5 到 10 年，并罚 5 万到 50 万元（全国）",
         "note": "侵占罪是「告诉的才处理」，得失主自己去法院起诉，警察不主动管。但拿捡来的卡取钱不一样，不用失主去告，警察直接立案。「数额较大」具体是多少钱，由司法解释规定，本节没有核实。东西送交有关部门之后，失主来领的时候要付保管费用（民法典第三百一十七条）。",
+        "source": "全国人大 (2020). 民法典（第三百一十四条）. <https://www.spp.gov.cn/spp/fl/202006/t20200602_463888.shtml>；全国人大 (2020). 刑法（根据刑法修正案（十一）修正，第一百九十六、二百七十条）. <https://jtgl.beijing.gov.cn/jgj/jgxx/flfg/fl/11033925/index.html>；最高人民检察院 (2008). 关于拾得他人信用卡并在自动柜员机（ATM 机）上使用的行为如何定性问题的批复. <https://www.spp.gov.cn/spp/flfg/sfjs/201208/t20120830_47871.shtml>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -5248,6 +5543,7 @@ module.exports = {
         "cost": "不花钱。放弃「羊毛任务群」里的活。发现平台有漏洞，不去碰它。难在忍住不把优惠当成可以批量复制的收入。",
         "gain": "骗别人或者公家的财物，数额较大的判 3 年以下，并处或者单处罚金（判刑的同时罚钱，也可能只罚钱）。数额巨大，或者有其他严重情节的，判 3 到 10 年并罚钱。数额特别巨大，或者有其他特别严重情节的，判 10 年以上或者无期徒刑，并罚钱或者没收财产。数额较大、巨大、特别巨大这三档，各省在下面的幅度内定本地标准。较大是 3000 元至 1 万元以上。巨大是 3 万元至 10 万元以上，特别巨大是 50 万元以上。把方法教给别人、卖「教程」的，按传授犯罪方法罪判 5 年以下，情节严重的判 5 到 10 年，特别严重的判 10 年以上或者无期徒刑。买卖手机号、验证码的上下游，按侵犯公民个人信息罪判 3 年以下，特别严重的判 3 到 7 年。用批量账号、网络地址自动切换系统，以及批量接收短信验证的接码平台，本身就是反电信网络诈骗法第十四条明令禁止的。非法买卖、出租、出借电话卡和互联网账号、帮别人过实名核验，在第三十一条之列。违反第十四条的，赚到的钱全部没收，再按赚到的钱罚 1 到 10 倍。没赚到钱，或者赚的不到 5 万元的，罚 50 万元以下，情节严重的还要拘留 15 日以下。违反第三十一条的，罚款同样是 1 到 10 倍，没赚到钱或者赚的不到 2 万元的罚 20 万元以下，情节严重的也要拘留 15 日以下。参与电信网络诈骗、还不够判刑的，拘留 10 到 15 日。赚到的钱没收，再罚 1 到 10 倍。没赚到钱或者赚的不到 1 万元的，罚 10 万元以下。官方案例一：外卖骑手刘某某以 0.1 元一个买虚拟手机号，注册某平台新用户。他领满 29 减 15 的新人券下单，再把商品倒卖给小商铺套现。他还用虚拟号互相邀请，领 2 元至 20 元的奖励金。他和骑手谭某某分别骗得 9 万余元和 7 万余元。上海杨浦区检察院以诈骗罪起诉 12 人，法院判 3 年 6 个月至拘役 3 个月。官方案例二：王某利用网店退款与回收虚拟抽奖币的时间差。他退款 1156 笔，提走手办 224 件，金额 24.9 万余元。他还在二手平台变现，法院以诈骗罪判 3 年缓 4 年，并处罚金 3 万元。他在审理期间退赃并预缴罚金，共 33 万元。官方案例三：某网约车平台的新用户优惠券和司机补贴，被「自己打车自己接单」的虚假跑单骗取，涉及 19 省 70 余市，金额 200 余万元。辽宁朝阳龙城区检察院起诉 163 人，全部被判有罪。主犯黄某、蔡某以诈骗罪、侵犯公民个人信息罪、传授犯罪方法罪数罪并罚（几个罪一起算刑期），各判 3 年 6 个月。另有 34 名情节轻微的从犯，检察院决定不起诉，仍然移送公安作行政处罚（全国）",
         "note": "界线不在「薅了多少」，在有没有编假的。用自己的真实身份参加活动、一个号领一次、券用在自己身上，那是平台给你的优惠。为了多领去注册假用户、编造交易、瞒着自己已经退过款，就是让对方误以为是真的才把东西交出来，按诈骗认定，金额只决定判多久。车企的免费充电也有人这么薅过。2026 年 8 月看看新闻报道，上海两人买来大量虚拟手机号，轮流绑成某新能源车企 App 的子账号。每个号用「先充后付」充两次电就解绑，电费没人付，充电机会再卖给货车司机。浦东新区检察院认为这是诈骗，不是盗窃，已经批准逮捕。此案只有媒体报道，没有判决或官方通报。金额不够判刑的也有后果：平台可以封号、扣回优惠，还能按「不该得的钱要退回来」要求你返还。参与电诈、没到犯罪程度的，还有拘留和罚款那一档。「群里有人带、按单给我钱」不改变你自己这一份的性质。把方法教给别人、倒卖账号和手机号，是另外的罪名，几个罪会一起算账。受益人是你自己。自己写脚本、卖脚本见第 11 节第 3 条，卖卡、卖账号见第 8 节第 8 条（银行卡借给人）和本节第 16 条（身份证不借人）。",
+        "source": "全国人大 (2020). 刑法（根据刑法修正案（十一）修正，第二百五十三条之一、第二百六十六条、第二百九十五条）. <https://jtgl.beijing.gov.cn/jgj/jgxx/flfg/fl/11033925/index.html>（北京市公安交通管理局转载）；最高人民法院、最高人民检察院 (2011). 关于办理诈骗刑事案件具体应用法律若干问题的解释（法释〔2011〕7 号，第一条）. <https://www.spp.gov.cn/spp/sfjs/201802/t20180201_363736.shtml>；全国人大常委会 (2022). 反电信网络诈骗法（第十四、三十一、三十八、四十二、四十四条）. <https://www.spp.gov.cn/spp/fl/202209/t20220902_575631.shtml>；全国人大 (2020). 民法典（第九百八十五条）. <https://www.spp.gov.cn/spp/fl/202006/t20200602_463888.shtml>；最高人民检察院 (2021). 剑指电信网络诈骗｜不法分子盯上了电商经济的漏洞（检察日报）. <https://www.spp.gov.cn/spp/zdgz/202106/t20210607_520557.shtml>；最高人民检察院 (2025). 如此「薅羊毛」涉嫌诈骗（检察日报）. <https://www.spp.gov.cn/spp/zdgz/202508/t20250826_704625.shtml>；最高人民检察院 (2024). 辽宁朝阳龙城区：办理系列电信网络诈骗案（法治日报）. <https://www.spp.gov.cn/spp/zdgz/202401/t20240124_641099.shtml>；看看新闻 (2026-08-25). 男子网购870多个手机号薅车企羊毛 窃电40余万（记者陈敏佳）. <https://www.kankanews.com/detail/80290xAJDw6>（网页存档 <https://web.archive.org/web/20261005044233/https://www.kankanews.com/detail/80290xAJDw6>）",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -5267,6 +5563,7 @@ module.exports = {
         "cost": "不花钱，也不费时间。烟头、垃圾袋、酒瓶都拿到屋里的垃圾桶扔，不从窗口和阳台往外丢。",
         "gain": "从楼上或者其他高处往下扔东西，只要有伤到人、砸坏财物或者危及公共安全的危险，就可以拘留 5 日以下，或者罚 1000 元以下。情节严重的拘留 10 到 15 日，还可以再罚 1000 元以下。情节严重到构成高空抛物罪的，判 1 年以下，并处或者单处罚金（判刑的同时罚钱，也可能只罚钱）。砸伤砸死人的，按更重的罪名处理。官方案例：李某晨在 21 楼酒后把空酒瓶、玻璃杯扔到楼下操场，砸中 13 岁学生致重伤二级，以危险方法危害公共安全罪判 10 年。周某从 32 楼向人群投掷 8 块砖头砸死 1 人，2024 年最高法核准死刑（全国）",
         "note": "没砸到人也能拘留，条文只要求「有危险」。民法典对高空抛物另有一条民事赔偿规定（第一千二百五十四条）。本节写作时没能打开原文，所以没有引用。",
+        "source": "全国人大常委会 (2025). 治安管理处罚法（2025 年修订，第四十三条）. <https://www.spp.gov.cn/spp/fl/202506/t20250627_699863.shtml>；全国人大常委会 (2020). 刑法修正案（十一）（第三十三条，即刑法第二百九十一条之二）. <https://www.spp.gov.cn/zdgz/202012/t20201227_503682.shtml>；全国人大 (2020). 刑法（根据刑法修正案（十一）修正，第二百九十一条之二）. <https://jtgl.beijing.gov.cn/jgj/jgxx/flfg/fl/11033925/index.html>；最高人民法院 (2024). 依法惩治危害公共安全犯罪典型案例（案例一）. <https://www.court.gov.cn/zixun/xiangqing/429522.html>；最高人民法院 (2025). 专访最高法副院长李勇：让高空抛物行为人都能被处罚. <https://www.court.gov.cn/zixun/xiangqing/458381.html>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -5286,6 +5583,7 @@ module.exports = {
         "cost": "不花钱。想打枪，去正规射击馆。",
         "gain": "没有许可就持有、私藏枪支的，判 3 年以下，情节严重的判 3 到 7 年。打不了制式子弹的非制式枪，只要枪口比动能大于等于 1.8 焦耳/平方厘米，一律认定为枪支。枪口比动能，指的是子弹出膛时每平方厘米带的能量。不少网上买的钢珠枪、气枪都超过这个数。2018 年起最高法、最高检要求，对比动能偏低的气枪，要综合外观、材质、价格、用途、本人是不是知情等等评估之后，再决定要不要定罪。官方案例：赵某某夫妇在集贸市场卖「玩具枪」，查获 43 支，其中 18 支经鉴定符合枪支标准。因为没有充分证据证明他们知道那是枪支，按证据存疑不起诉（全国）",
         "note": "那起案子不起诉的关键，是认定他们「不明知」。成年人特意上网买钢珠枪、气枪，事后再说不知道那是枪，很难成立。弩和管制刀具随身带的罚则，见本节第 26 条（别为了防身买甩棍、电击器、匕首）。",
+        "source": "全国人大 (2020). 刑法（根据刑法修正案（十一）修正，第一百二十八条）. <https://jtgl.beijing.gov.cn/jgj/jgxx/flfg/fl/11033925/index.html>；最高人民法院、最高人民检察院 (2018). 关于涉以压缩气体为动力的枪支、气枪铅弹刑事案件定罪量刑问题的批复（法释〔2018〕8 号）. <https://www.spp.gov.cn/xwfbh/wsfbt/201803/t20180328_372604.shtml>；最高人民法院 (2018). 《批复》的理解与适用. <https://www.court.gov.cn/zixun/xiangqing/88472.html>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -5305,6 +5603,7 @@ module.exports = {
         "cost": "实名登记不花钱，几分钟就办完。每次起飞前，用官方渠道查一下要飞的这块地方是不是管制空域。",
         "gain": "没做实名登记就飞的，责令改正，还可以罚 200 元以下，情节严重的罚 2000 到 2 万元。没批准就在管制空域飞微型、轻型、小型无人机的，责令停止飞行，还可以罚 500 元以下。这一项里情节严重的，没收无人机，并罚 1000 到 1 万元。违反空域管理规定飞行、情节较重的，拘留 5 到 10 日。官方案例：李某某付费破解限高，把无人机飞到近 3000 米拍云层并发布，拘留 5 日。张某某替人破解限高和禁飞区限制 20 余台次，赚了 1.5 万余元。他被以提供侵入、非法控制计算机信息系统程序、工具罪定罪。判 6 个月，缓刑 1 年，并处罚金（全国，2024 年 1 月起）",
         "note": "微型和轻型无人机在适飞空域飞，不用批准。微型指空机重量小于 0.25 千克的那种。适飞空域就是管制空域以外的地方，而机场、军事设施、政府机关周边多半属于管制空域。公安部的原文页面本节写作时打不开，所以引用的是湖北省公安厅的转载页。",
+        "source": "国务院、中央军委 (2023). 无人驾驶航空器飞行管理暂行条例（国令第 761 号，第十、十九、四十七、五十一条）. <https://www.gov.cn/zhengce/content/202306/content_6888799.htm>；全国人大常委会 (2025). 治安管理处罚法（2025 年修订，第四十六条）. <https://www.spp.gov.cn/spp/fl/202506/t20250627_699863.shtml>；湖北省公安厅 (2026). 公安部公布依法打击无人机「黑飞」违法犯罪八起典型案例（转载人民公安报）. <http://gat.hubei.gov.cn/bmdt/gayw/202602/t20260205_5870949.shtml>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -5324,6 +5623,7 @@ module.exports = {
         "cost": "不花钱，也不费时间。不偷拍别人，也不在出租屋、民宿、酒店房间里装摄像头。",
         "gain": "偷窥、偷拍、窃听、散布别人隐私的，拘留 5 日以下，或者罚 1000 元以下。情节较重的拘留 5 到 10 日，还可以再罚 1000 元以下。非法使用窃听、窃照专用器材、造成严重后果的，判 2 年以下。窃听、窃照专用器材，指专门用来偷听、偷拍的设备。官方案例：颜某平、颜某建在网上买了窃照器材，装进三家酒店的多个房间远程偷拍，分别判 1 年 3 个月和 1 年（全国）",
         "note": "偷拍的东西一旦拿去卖或者传播，另按制作、贩卖淫秽物品牟利等罪处理，同一批案例里有判 10 年的。自己家里装监控不算，装在别人使用的房间里就算。",
+        "source": "全国人大常委会 (2025). 治安管理处罚法（2025 年修订，第五十条）. <https://www.spp.gov.cn/spp/fl/202506/t20250627_699863.shtml>；全国人大 (2020). 刑法（根据刑法修正案（十一）修正，第二百八十四条）. <https://jtgl.beijing.gov.cn/jgj/jgxx/flfg/fl/11033925/index.html>；最高人民法院 (2024). 依法惩治非法生产、销售、使用窃听、窃照设备犯罪典型案例（案例二）. <https://www.court.gov.cn/shenpan/xiangqing/449581.html>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -5343,6 +5643,7 @@ module.exports = {
         "cost": "不花钱。亲友之间小额娱乐照打。不从局里抽成，不当庄，不组局收钱。难在有人张罗时忍住不去接手。",
         "gain": "为了挣钱给赌博提供便利条件，或者参与赌博、赌资较大的，拘留 5 日以下，或者罚 1000 元以下。情节严重的拘留 10 到 15 日，并罚 1000 到 5000 元。为了挣钱把人聚起来赌，或者靠赌博过日子的，判 3 年以下并罚钱。开赌场的判 5 年以下并罚钱，情节严重的判 5 到 10 年（全国）",
         "note": "多少算「赌资较大」没有全国统一数字，各地自己定，所以这条只给 B 级。从局里抽成、替网络赌博平台代收投注，办案时常常按开设赌场认定。相关的司法解释原文本节没有核实。也没有找到官方案例。",
+        "source": "全国人大常委会 (2025). 治安管理处罚法（2025 年修订，第八十二条）. <https://www.spp.gov.cn/spp/fl/202506/t20250627_699863.shtml>；全国人大 (2020). 刑法（根据刑法修正案（十一）修正，第三百零三条）. <https://jtgl.beijing.gov.cn/jgj/jgxx/flfg/fl/11033925/index.html>；全国人大常委会 (2020). 刑法修正案（十一）（第三十六条，开设赌场刑期提高到五年以下、五年以上十年以下）. <https://www.spp.gov.cn/zdgz/202012/t20201227_503682.shtml>",
         "grade": "B",
         "meta": {
           "money": "0",
@@ -5362,6 +5663,7 @@ module.exports = {
         "cost": "不花钱。宠物只买来源合法、人工繁育的品种。",
         "gain": "吃国家重点保护野生动物，或者为了吃去买的，东西没收，再按它的价值罚 2 到 20 倍的钱。没有许可证就繁育国家重点保护野生动物的，没收，并罚 1 到 10 倍。非法收购、运输、出售国家重点保护的珍贵、濒危野生动物和它们的制品，判 5 年以下并罚钱。这一项里情节严重的判 5 到 10 年，特别严重的判 10 年以上。为了吃而猎捕、收购、运输、出售其他陆生野生动物，情节严重的判 3 年以下。官方案例：养殖户王某等 3 人卖了 40 余只人工繁育的费氏牡丹鹦鹉（国家二级保护），总价不到 400 元，2021 年检察院决定不起诉。2022 年起最高法、最高检明确，人工繁育技术成熟、已经成规模、当宠物买卖运输的，一般不按犯罪处理（全国）",
         "note": "「一般不作为犯罪」说的只是人工繁育、当宠物养的那一类。野外抓的、来路不明的不适用。哪些算国家重点保护动物，以名录为准。买之前先查一下名录，比出事以后再解释省事。",
+        "source": "全国人大常委会 (2022). 野生动物保护法（2022 年修订，第三十一、五十一、五十三条）. <https://www.mee.gov.cn/ywgz/fgbz/fl/202302/t20230220_1016885.shtml>（生态环境部转载）；全国人大 (2020). 刑法（根据刑法修正案（十一）修正，第三百四十一条）. <https://jtgl.beijing.gov.cn/jgj/jgxx/flfg/fl/11033925/index.html>；全国人大常委会 (2020). 刑法修正案（十一）（第四十一条，即刑法第三百四十一条第三款）. <https://www.spp.gov.cn/zdgz/202012/t20201227_503682.shtml>；最高人民法院、最高人民检察院 (2022). 关于办理破坏野生动物资源刑事案件适用法律若干问题的解释（法释〔2022〕12 号，第十三条）. <https://www.spp.gov.cn/spp/xwfbh/wsfbt/202204/t20220407_553506.shtml>；最高人民检察院 (2023). 鹦鹉小案 民生大案. <https://www.spp.gov.cn/spp/zdgz/202302/t20230211_601023.shtml>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -5381,6 +5683,7 @@ module.exports = {
         "cost": "不花钱。对方欠钱不还，去法院起诉。借条怎么写，见第 8 节第 18 条（借条）。难在对方赖账时忍住不动手、不跟到他家去。",
         "gain": "非法限制别人的人身自由、擅自闯进别人家，或者非法搜别人的身，拘留 10 到 15 日，并罚 1000 到 2000 元。情节较轻的拘留 5 到 10 日，并罚 1000 元以下。非法拘禁判 3 年以下有期徒刑、拘役（短期关押）、管制（不关押但行动受限）或者剥夺政治权利。把人弄成重伤的判 3 到 10 年，弄死人的判 10 年以上。为了讨债扣人、关人的，照这同一套规定处罚，债是真的也一样（全国）",
         "note": "「他确实欠我钱」这句话在这条里不管用。法条专门写了，为了讨债扣人、关人也按非法拘禁办。中国法院网上有好几起案子，都是讨合法债务把人关起来，判了 7 个月到 1 年。本节写作时该网站打不开，所以没有引用。",
+        "source": "全国人大常委会 (2025). 治安管理处罚法（2025 年修订，第四十七条）. <https://www.spp.gov.cn/spp/fl/202506/t20250627_699863.shtml>；全国人大 (2020). 刑法（根据刑法修正案（十一）修正，第二百三十八条）. <https://jtgl.beijing.gov.cn/jgj/jgxx/flfg/fl/11033925/index.html>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -5400,6 +5703,7 @@ module.exports = {
         "cost": "不花钱。有人开口借，拒绝就行。要给复印件的，在复印件上写明这份只用在哪件事上。",
         "gain": "把自己的居民身份证出租、出借、转让给别人的，警告并罚 200 元以下。冒用别人的身份证，或者使用骗领来的身份证，罚 200 到 1000 元，或者拘留 10 日以下。购买、出售、使用伪造变造的身份证的，也是这一档。有些场合按国家规定必须出示身份证明。在这些场合使用伪造、变造或者盗用别人的证件，情节严重的就要判刑。证件包括身份证、护照、社保卡、驾驶证等。刑罚是拘役（短期关押）或者管制（不关押但行动受限），还要并处或者单处罚金，判刑的同时罚钱，也可能只罚钱（全国）",
         "note": "身份证借出去，可能被拿去注册公司、办银行卡。这两样的后果见第 8 节第 28、8 条（别当挂名法人、不把银行卡借给人）。用别人的身份证买火车票、住店，属于法条说的「应当提供身份证明的活动」。本条没有找到官方案例。去网吧上网也一样用自己的证。网吧必须核对登记身份证，登记内容和上网记录至少存 60 天，公安和文化部门随时能调。用谁的证上网，那段时间机器上干的事就记在谁头上。",
+        "source": "全国人大常委会 (2011). 居民身份证法（2011 年修正，第十六、十七条）. <https://jtgl.beijing.gov.cn/jgj/jgxx/flfg/fl/203777/index.html>（北京市公安交通管理局转载）；全国人大 (2020). 刑法（根据刑法修正案（十一）修正，第二百八十条之一）. <https://jtgl.beijing.gov.cn/jgj/jgxx/flfg/fl/11033925/index.html>；国务院 (2002). 互联网上网服务营业场所管理条例（国令第 363 号，第二十三条）. <http://www.gov.cn/gongbao/content/2002/content_61788.htm>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -5419,6 +5723,7 @@ module.exports = {
         "cost": "不花钱。现场不动手。有意见等事后再提：投诉、申请行政复议、去法院起诉。难在被拦下的那几分钟里、尤其喝了酒时忍住脾气。",
         "gain": "阻碍国家机关工作人员依法办公务的，警告或者罚 500 元以下。情节严重的拘留 5 到 10 日，还可以再罚 1000 元以下。阻碍的是人民警察，就从重处罚。暴力袭击正在依法执行职务的人民警察，判 3 年以下。用枪支、管制刀具或者开车撞等严重危及警察人身安全的，判 3 到 7 年。撕咬、掌掴、踢打、抱摔、投掷物品造成轻微伤以上的，才算「暴力袭击」。甩手、挣脱、蹬腿这类一般性抗拒不算（全国）",
         "note": "最高检 2021 年通报，袭警单独定罪之后的头一个月，就批准逮捕 405 人。江苏的 42 件里，酒后闹事引起的占 47.6%。湖北的 16 件里有 12 件，只是拳打脚踢、撕咬这种程度。对辅警动手，按妨害公务罪办。本条没有找到写明个人案情的官方案例。",
+        "source": "全国人大常委会 (2025). 治安管理处罚法（2025 年修订，第六十一条）. <https://www.spp.gov.cn/spp/fl/202506/t20250627_699863.shtml>；全国人大常委会 (2020). 刑法修正案（十一）（第三十一条，即刑法第二百七十七条第五款）. <https://www.spp.gov.cn/zdgz/202012/t20201227_503682.shtml>；全国人大 (2020). 刑法（根据刑法修正案（十一）修正，第二百七十七条）. <https://jtgl.beijing.gov.cn/jgj/jgxx/flfg/fl/11033925/index.html>；最高人民法院、最高人民检察院 (2025). 关于办理袭警刑事案件适用法律若干问题的解释（高检发释字〔2025〕1 号，第一、八、十二条）. <https://www.spp.gov.cn/xwfbh/wsfbt/202501/t20250116_679579.shtml>；最高人民检察院 (2021). 袭警罪入刑一月 检察机关批捕 405 人. <https://www.spp.gov.cn/xwfbh/wsfbh/202105/t20210517_518308.shtml>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -5438,6 +5743,7 @@ module.exports = {
         "cost": "不花钱。对方的年龄不确定，就不要发生关系。",
         "gain": "和不满 14 周岁的幼女发生性关系的，按强奸罪处理并从重处罚，基础刑期 3 到 10 年。最高法的口径是这样：用暴力、胁迫等强制手段的，不管知不知道对方是幼女，都定强奸罪。没用强制手段的，对不满 12 周岁的一律认定「应当知道」。12 到 14 周岁的，从身体发育、言谈举止、衣着等能看出可能是幼女，还下手的，认定为「明知」。「确实不知道」这个例外把握得很严（全国）",
         "note": "两高两部关于办理性侵害未成年人刑事案件的意见原文，以及最高法 2003 年批复的页面，本节写作时都打不开。所以「明知」的认定标准，引的是最高法官网上的答复。法条里的用语是「幼女」。本条不区分动手的人是男是女。",
+        "source": "全国人大 (2020). 刑法（根据刑法修正案（十一）修正，第二百三十六条）. <https://jtgl.beijing.gov.cn/jgj/jgxx/flfg/fl/11033925/index.html>；最高人民法院 (2015). 关于「与十四周岁以下幼女发生性关系是否要明知才构成犯罪」的答复. <https://www.court.gov.cn/hudong/xiangqing/13363.html>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -5457,6 +5763,7 @@ module.exports = {
         "cost": "不花钱，也不花时间。难的就是动手前的那几秒钟。",
         "gain": "打人或者故意伤害的，拘留 5 到 10 日，并罚 500 到 1000 元。结伙打、打残疾人孕妇老人小孩、多次打或者一次打好几个人的，拘留 10 到 15 日，并罚 1000 到 2000 元。打成轻伤就是故意伤害罪，判 3 年以下有期徒刑、拘役（短期关押）或者管制（不关押但行动受限）。打成重伤的判 3 到 10 年。民事上还要赔医疗费、误工费（耽误上班少挣的钱）、护理费、交通费、住院伙食补助费、营养费。把人打残的，另外赔残疾赔偿金。残疾赔偿金的算法，是审案法院所在地上年度城镇居民人均可支配收入乘 20 年。伤者 60 岁以上的，每多一岁减一年，75 岁以上按 5 年算。2022 年全国检察机关受理轻伤害案件 7 万余件，多数是婚姻家庭邻里纠纷或者偶然事件引起的。最高检典型案例：卢某打断对方三根肋骨（轻伤二级），赔了 11.3 万元达成和解，才获不起诉。石某打断对方桡骨（轻伤二级），没有赔，判有期徒刑十个月（全国，治安管理处罚法 2026 年 1 月 1 日起施行）",
         "note": "怎么避免冲突、先动手为什么吃亏、正当防卫的边界在哪，见第 8 节第 10 条（冲突和正当防卫）。为了泄愤对人下手的账，见第 8 节第 11 到 14 条。因民间纠纷引起、情节较轻的打架，公安可以调解。打成轻伤的，跟对方谈妥赔偿并且真赔了，可以从轻，甚至不起诉，但赔的钱一分都少不了。伤到什么程度算轻伤，由鉴定标准定，本节没有核实。误工费、护理费按实际收入和耽误的天数算，没有统一数字。",
+        "source": "全国人大常委会 (2025). 治安管理处罚法（2025 年修订，第九、五十一条）. <https://www.spp.gov.cn/spp/fl/202506/t20250627_699863.shtml>；全国人大 (1997). 刑法（第二百三十四条）. <https://www.spp.gov.cn/spp/fl/201802/t20180206_364975.shtml>；最高人民法院 (2022 修正). 关于审理人身损害赔偿案件适用法律若干问题的解释（法释〔2022〕14 号，第六至十二、十五条）. <https://www.court.gov.cn/zixun/xiangqing/357071.html>；最高人民检察院、公安部 (2023). 关于依法妥善办理轻伤害案件的指导意见. <https://www.spp.gov.cn/spp/xwfbh/wsfbt/202303/t20230302_604352.shtml>；最高人民检察院 (2023). 检察机关依法妥善办理轻伤害案件典型案例. <https://www.spp.gov.cn/xwfbh/dxal/202303/t20230302_605116.shtml>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -5476,6 +5783,7 @@ module.exports = {
         "cost": "不花钱。到县级以上民政部门办收养登记，要交材料，还要等审核和收养评估，前后要花些时间。",
         "gain": "刑法第二百四十条：「拐卖妇女、儿童的，处五年以上十年以下有期徒刑，并处罚金」。有加重情形的，处十年以上有期徒刑或者无期徒刑，并处罚金或者没收财产。「情节特别严重的，处死刑，并处没收财产」。《关于依法惩治拐卖妇女儿童犯罪的意见》第 17 条，说的是怎么区分卖亲生孩子和民间送养。判断标准是「关键在于行为人是否具有非法获利的目的」。也就是看有没有想靠这件事挣钱。有三种情形可以认定为出卖亲生子女，按拐卖妇女、儿童罪定罪。第一种是「将生育作为非法获利手段，生育后即出卖子女的」。第二种是「明知对方不具有抚养目的，或者根本不考虑对方是否具有抚养目的，为收取钱财将子女『送』给他人的」。第三种是「为收取明显不属于『营养费』『感谢费』的巨额钱财将子女『送』给他人的」。反过来，不是为了挣钱、确实迫于生活困难私自送养、只收少量营养费感谢费的，属于民间送养，不按拐卖罪定罪。再看刑法第二百六十一条。「对于年老、年幼、患病或者其他没有独立生活能力的人，负有扶养义务而拒绝扶养，情节恶劣的，处五年以下有期徒刑、拘役或者管制」。民法典第一千零九十四条规定，能当送养人的只有三种：孤儿的监护人、儿童福利机构、有特殊困难无力抚养子女的生父母。第一千一百零五条：「收养应当向县级以上人民政府民政部门登记。收养关系自登记之日起成立」",
         "note": "要不要生这里不谈。孩子生下来之后，按这个顺序走最省事。第一步，去医院生，产检和住院分娩见第 27 节。出生医学证明是后面所有手续的前提。第二步，要送养就直接找县级以上民政部门，别经由中间人。钱一旦过手，性质就可能变。产后一年之内，如果出现「有伤害自己或者伤害孩子的念头」，按急症处理。孕期和产后要立刻去医院的清单，见第 27 节第 7 条。产后 42 天复查同时是产后抑郁筛查，见第 27 节第 16 条。有自杀念头时打 12356，见第 1 节第 25 条。本条没有配案例：拐卖亲生子女的官方典型案例，本轮没有逐案核对，所以只引了条文和意见原文。",
+        "source": "全国人大 (1997). 刑法（第二百四十、二百六十一条）. <https://www.spp.gov.cn/spp/fl/201802/t20180206_364975.shtml>；最高人民法院、最高人民检察院、公安部、司法部 (2010). 关于依法惩治拐卖妇女儿童犯罪的意见（法发〔2010〕7 号，第 17 条）. 最高人民法院官网 <https://www.court.gov.cn/fabu/xiangqing/977.html>；全国人大 (2020). 民法典（第一千零九十四、一千一百零五条）. 盐城市人民政府转载收养编全文 <https://xxgk.yczf.gov.cn/xzf/ycmzj/fdzdgknr/fgwj_41995/202112/t20211203_1506640.shtml>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -5495,6 +5803,7 @@ module.exports = {
         "cost": "不花钱，也不费时间，不去做就行。",
         "gain": "刑法第一百九十八条列了五种情形。（一）投保人故意虚构保险标的，编一个根本不存在的投保对象。（二）投保人、被保险人或者受益人对发生的保险事故编造虚假的原因，或者夸大损失的程度。（三）编造未曾发生的保险事故。（四）投保人、被保险人故意造成财产损失的保险事故。（五）投保人、受益人故意造成被保险人死亡、伤残或者疾病。数额较大的，处 5 年以下有期徒刑或者拘役，并处 1 万元以上 10 万元以下罚金。数额巨大或者有其他严重情节的，处 5 至 10 年，并处 2 万至 20 万元罚金。数额特别巨大或者有其他特别严重情节的，处 10 年以上，并处 2 万至 20 万元罚金或者没收财产。这一条的末款管的是帮忙的人：保险事故的鉴定人、证明人、财产评估人。他们故意出具虚假的证明文件、给别人骗保创造条件的，按保险诈骗的共犯处理，和骗保的人一起定罪。保险法第二十七条：没出保险事故却谎称出了的，保险公司有权解除合同，并且不退保费。用伪造、变造的证明资料，或者编造虚假事故原因、夸大损失程度的，保险公司对多报的那部分不赔，已经赔出去的要退回来或者赔偿。案例：安徽宣城张某松案中，王某信等 8 人因保险诈骗罪被判处有期徒刑 4 年到 2 年不等，均并处罚金 1 万元。这案子牵出的一起虚假诉讼里，保险公司核定损失 2 万元，当事人靠伪造车辆转让协议取得起诉资格去打官司，法院判赔 7 万余元。这份已经生效的民事判决，于 2019 年 9 月 26 日经再审被撤销。《反保险欺诈工作办法》要求：卖保单和赔钱这两头（承保端和理赔端）都要核验风险信息。还要探索建立多险种的行业反欺诈信息平台、反欺诈情报中心。这些平台集中筛查欺诈可疑数据，线索交由行业协会、反欺诈组织和保险机构核查。涉嫌犯罪的及时向公安机关报案。金融监管总局和它的派出机构，要和公安机关、人民检察院、人民法院建立健全行政执法与刑事司法的衔接机制（全国，2024 年 7 月 31 日印发）",
         "note": "下面几种自以为无害的做法都在这五项里。出了小事故找修理厂「多报一点」，把旧伤旧损算进这一次，和朋友对撞一下再报案，没出事却编一个出来。车险该怎么买，见第 5 节第 26 条（三者险买够）。给家人投保后故意造成他死亡的，法条明确要数罪并罚，见第 8 节第 38 条（给家人投保）。医保是另一套规则，空刷医保卡、拿医保个人账户套现按诈骗办，见第 5 节第 13 条的备注",
+        "source": "全国人大常委会. 中华人民共和国刑法（经刑法修正案十一修正的整合文本）第一百九十八条. <https://flk.npc.gov.cn/detail?id=ff808181796a636a0179822a19640c92>；全国人大常委会 (2015 修正). 中华人民共和国保险法第二十七条. <https://flk.npc.gov.cn/detail?id=2c909fdd678bf17901678bf7c4060811>；国家金融监督管理总局 (2024). 关于印发《反保险欺诈工作办法》的通知. <https://www.gov.cn/gongbao/2024/issue_11586/202409/content_6975080.html>；安徽省人民检察院转载《法制日报》(2020-01-13). 杀妻骗保牵出案中案. <http://www.ah.jcy.gov.cn/jczt/jjslhyqkjc/mtjj/202001/t20200113_2758841.shtml>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -5514,6 +5823,7 @@ module.exports = {
         "cost": "不花钱，也不费时间，不去做就行。",
         "gain": "《人体器官捐献和移植条例》第五条：「任何组织或者个人不得以任何形式买卖人体器官，不得从事与买卖人体器官有关的活动」。第十条：「任何组织或者个人不得获取未满 18 周岁公民的活体器官用于移植」。第十一条：「活体器官的接受人限于活体器官捐献人的配偶、直系血亲或者三代以内旁系血亲」。第三十七条规定了买卖人体器官怎么罚。买卖人体器官或者从事与买卖人体器官有关活动的，由县级以上地方人民政府卫生健康部门查处。先没收违法所得，把这笔交易得来的钱全部收走。再按交易额罚 10 倍以上 20 倍以下的钱。医务人员参与的，吊销执业证书并终身禁止从事医疗卫生服务。构成犯罪的，依法追究刑事责任（全国，2024 年 5 月 1 日起施行，原《人体器官移植条例》同时废止）。刑法第二百三十四条之一：「组织他人出卖人体器官的，处五年以下有期徒刑，并处罚金；情节严重的，处五年以上有期徒刑，并处罚金或者没收财产」。还有三种情形，依照刑法第二百三十四条、第二百三十二条定罪处罚。一是未经本人同意摘取他的器官。二是摘取不满十八周岁的人的器官。三是强迫或者欺骗他人捐献器官。这几种按故意伤害、故意杀人处理。案例一：北京市第一中级人民法院 2014 年 8 月 20 日终审的郑伟等 15 人案，涉及 51 枚肾脏，涉案金额 1034 万余元。卖肾的人（供体）「换来的仅仅是 2 万到 2.5 万元不等的报酬」。等肾的病人一方（受体方）出的价码，「以前是一个肾 18 万或 19 万，后来是 21 万或 22 万」。摘肾点是每月 7500 元租的四层小楼，团伙护士长供述该处「脏乱不堪，连抢救设备都没有」。组织者郑伟以组织出卖人体器官罪判处有期徒刑 12 年，其余 14 人判 3 年半至 9 年。案例二：最高人民检察院公布的「少年卖肾买苹果手机」案。17 岁的王某 2011 年 4 月 28 日晚在郴州被切除右肾。动手术的场地，是一家没有移植资质的医院里由人承包的科室提供的。5 月 2 日出院时他拿到 2.2 万元，受体方付给中介的是 15 万元人民币和 1 万美元，主犯获利 5.6 万余元。王某术后肾功能不全，「伤情构成重伤、三级伤残」",
         "note": "受益人是你自己。这笔交易表面上是「一次性拿两万」，实际是拿一个器官换一台手机。少年卖肾案的鉴定结论是重伤、三级伤残，休息几个月好不了。那起案子里，检方认定 5 名被告人触犯刑法第二百三十四条第二款，以故意伤害罪起诉。理由之一是医务人员术前没有核实「供体」是不是未成年人，就切了右肾。今天再出同样的事，拉人头的按组织出卖人体器官罪办，摘取不满十八周岁的人的器官，仍然依第二百三十四条按故意伤害罪定罪处罚。黑中介的手术在出租屋或者借来的场地做，没有配型之外的评估，也没有术后随访，出了并发症找不到人认账。真想给亲人捐，走第十一条那条路：在有移植资质的医疗机构做，经伦理委员会审查，全程不收钱。身后的遗体器官捐献是无偿的，不在本条范围。摘掉一个肾之后身体要付什么代价，见第 1 节第 35 条（剩下那个肾替两个干活）。缺钱缺到考虑卖器官的时候，先看第 7 节的救助渠道（失业保险、临时救助、低保）。网贷和「包装材料」贷款的坑，见本节第 6 条。",
+        "source": "国务院 (2023). 人体器官捐献和移植条例（国务院令第 767 号，第五、十、十一、三十七条）. <https://www.gov.cn/zhengce/zhengceku/202312/content_6920196.htm>；全国人大常委会. 中华人民共和国刑法（经刑法修正案十一修正的整合文本）第二百三十四条之一. <https://flk.npc.gov.cn/detail?id=ff808181796a636a0179822a19640c92>；最高人民检察院 (2012-04-09). 「少年卖肾买苹果手机」案诉至法院. <https://www.spp.gov.cn/gs/201204/t20120409_34342.shtml>；河北省廊坊市中级人民法院官网转载 (2014-09-02). 全国最大贩肾案终审 组织者摘肾 51 枚获利千万. <https://lfzy.hebeicourt.gov.cn/article/detail/2014/09/id/1430881.shtml>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -5533,6 +5843,7 @@ module.exports = {
         "cost": "不花钱，也不费时间，不去做就行。",
         "gain": "《治安管理处罚法》第七十八条：卖淫、嫖娼的，处十日以上十五日以下拘留，可以并处五千元以下罚款。情节较轻的，处五日以下拘留或者一千元以下罚款。在公共场所拉客招嫖的，处五日以下拘留或者一千元以下罚款。第七十九条：引诱、容留、介绍他人卖淫的，处十日以上十五日以下拘留，可以并处五千元以下罚款。情节较轻的，处五日以下拘留或者一千元以上二千元以下罚款。第八十七条：旅馆业、饮食服务业、文化娱乐业、出租汽车业等单位的人员，在公安机关查处卖淫、嫖娼活动时为违法犯罪行为人通风报信的，或者以其他方式为上述活动提供条件的，处十日以上十五日以下拘留。《刑法》第三百六十条是传播性病罪：明知自己患有梅毒、淋病等严重性病卖淫、嫖娼的，处五年以下有期徒刑、拘役或者管制，并处罚金（全国，治安管理处罚法 2026 年 1 月 1 日起施行）",
         "note": "这里的拘留是行政拘留，人要进拘留所，不是罚完就走。找人介绍、给人提供场地，罚得和自己嫖一样重，第七十九条那一档管的就是这个。在宾馆、KTV 上班的人替客人通风报信，同样按第八十七条拘留 10 到 15 日。刑法第三百六十条原来还有第二款「嫖宿幼女罪」，2015 年刑法修正案（九）把它删了，现在这种事直接按强奸罪从重处罚，见本节第 18 条（对方不满 14 岁就不能发生关系）。「上门保健」「按摩推拿」这类招牌不改变性质，按实际发生的事认定。染上性病和艾滋病的风险，见第 1 节第 30 条（性行为全程用安全套）和第 13 节第 38 条（72 小时内去拿阻断药）。娱乐场所本身要注意的见第 22 节。",
+        "source": "全国人大常委会 (2025). 治安管理处罚法（2025 年修订，第七十八、七十九、八十七条）. <https://www.spp.gov.cn/spp/fl/202506/t20250627_699863.shtml>；全国人大常委会. 中华人民共和国刑法（经刑法修正案十一修正的整合文本）第三百六十条. <https://jtgl.beijing.gov.cn/jgj/jgxx/flfg/fl/11033925/index.html>（北京市公安交通管理局转载）；全国人大常委会 (2015). 刑法修正案（九）（第四十三条，删去刑法第三百六十条第二款）. <https://www.spp.gov.cn/spp/fl/201802/t20180205_364562.shtml>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -5552,6 +5863,7 @@ module.exports = {
         "cost": "不花钱。买来的、下载的，自己看、自己翻着玩都行，只是别传到网上给大家看。不做挂广告、收会员费的资源站和资源群，也不卖网盘链接。难在「大家都在传」的时候，忍住不跟着当搬运工。",
         "gain": "先说民事。著作权法给作者的权利里有翻译权，就是把作品从一种文字转成另一种文字的权利。还有信息网络传播权，就是把作品放到网上、让公众随时随地能看到的权利。没经许可翻译别人的作品，是侵权。没经许可把作品传到网上，也是侵权。侵权的要停止侵害、赔偿损失。只有为个人学习、研究或者欣赏，用别人已经发表的作品，才不用许可、不用付钱。赔多少，先按权利人的实际损失或者你挣到的钱算。都算不清的，由法院在 500 元到 500 万元之间定。故意侵权、情节严重的，可以判 1 到 5 倍。权利人为制止侵权花的合理开支，也要你一起赔。再说刑事。刑法第二百一十七条的前提是「以营利为目的」。为了挣钱，没经许可把别人的作品放到网上给公众看，够了门槛就是侵犯著作权罪。判 3 年以下，同时罚钱，或者只罚钱。数额巨大或者情节特别严重的，判 3 到 10 年并罚钱。什么算为了挣钱：除了卖，在网页上挂收费广告的算，用会员制收注册费或者其他费用的也算。收来的服务费、会员费、广告费，都算违法所得。够罪的门槛，下面到一条就够。违法所得 3 万元以上。非法经营数额 5 万元以上，人人影视案里算的是会员费、广告费和卖硬盘的总收入。在网上传播别人的作品合计 500 件（部）以上。被下载 1 万次以上，或者被点击 10 万次以上。用会员制传播，注册会员 1000 人以上。几项都没到，但有两项各到了一半以上，也算。到这些数的 10 倍，就进 3 到 10 年那一档。罚金一般是违法所得的 1 到 10 倍。官方案例一：梁永平等人从境外网站下载没授权的影视剧，组织人翻译、做字幕后上传。这些片子放在「人人影视字幕组」网站和客户端上，供人在线看和下载。网站里没授权的影视作品有 32824 部，会员 683 万余个。2018 年 1 月到 2021 年 1 月，收会员费 270 余万元，广告费 880 余万元。卖拷了影视剧的移动硬盘，又挣了 100 余万元。网站挂着「捐赠」二维码，捐了就能得到会员权益。检察机关认定，这就是换了个名目收会员费。2021 年 11 月 22 日，梁永平被判 3 年 6 个月，罚金 150 万元。另外 14 人判 1 年 6 个月到 3 年，都是缓刑，罚 4 万到 35 万元。官方案例二：柯某某用爬虫软件抓了 5 万余部影视剧的播放地址，放到自己的网站和 App 上让人免费看。他在开屏位置投广告，按展现量收钱，挣了 35 万余元。2023 年他被判 3 年、缓刑 4 年，罚金 40 万元。官方案例三：黄某在自己家里租服务器，搭了一个音乐下载论坛。他把 10 万余首歌传进 18 个网盘，在论坛发链接。会员要充值换论坛币，才能拿到链接和提取码。会员充值共 50 余万元。2023 年他被判 3 年、缓刑 4 年，罚金 55 万元（全国，司法解释 2025 年 4 月 26 日起施行）",
         "note": "受益人是你自己。自己买来看、自己翻着看，在法条允许的范围里。界线在「放到网上让大家看」。字幕组、汉化组不收钱，够不上侵犯著作权罪，因为这个罪要求为了挣钱。但民事侵权照样成立，权利人可以要求删掉、赔钱。在日本不收钱也可能犯法。2018 年 2 月，几名在日中国公民涉嫌违反日本著作权法被捕，中国驻长崎总领事馆随后提醒：没经授权翻译、发布、传播作品，即使不为盈利，也可能违法。一挂广告、开会员、拿「捐赠」换会员权益，就落进为了挣钱那一档。人人影视案里，只做翻译、校对的人参与程度低，警方是按证人取证的。最高检在这个案例里写明，起头、分钱、管平台的人要从严追究。受雇干活的从犯可以从宽，临时招来、情节轻微的可以不追究刑事责任。旧的 2004、2007、2020 年三部知识产权刑事司法解释，2025 年 4 月 26 日起废止。2011 年三部门意见没有被点名废止，和新解释不一致的地方以新解释为准。比如点击量门槛，就从 5 万次改成了 10 万次。写同人、做二创拿去出版的另一种风险，见本节第 25 条（写同人）。把别人的图印在商品上卖，见第 12 节第 21 条（图案要买授权）。自己做平台、收到权利人的侵权通知怎么办，见第 26 节第 9 条（接到侵权通知）。",
+        "source": "全国人大常委会 (2020). 著作权法（2020 年修正，第十条第一款第十二、十五项，第二十四条第一项，第五十二条第六项，第五十三条第一项，第五十四条）. <http://www.npc.gov.cn/npc/c2/c30834/202011/t20201119_308796.html>；全国人大常委会 (2020). 刑法修正案（十一）（第二十项，即刑法第二百一十七条）. <https://www.spp.gov.cn/zdgz/202012/t20201227_503682.shtml>；最高人民法院、最高人民检察院 (2025). 关于办理侵犯知识产权刑事案件适用法律若干问题的解释（法释〔2025〕5 号，第十二、十三、二十五、二十八、三十一条）. <https://www.spp.gov.cn/xwfbh/wsfbt/202504/t20250424_693977.shtml>；最高人民法院、最高人民检察院、公安部 (2011). 关于办理侵犯知识产权刑事案件适用法律若干问题的意见（法发〔2011〕3 号，第十条）. <https://www.dongguandesq.jcy.gov.cn/tzgg/201103/t20110321_3344314.shtml>（东莞市第二市区人民检察院转载）；最高人民检察院 (2023). 第四十八批指导性案例（检例第 193 号，梁永平、王正航等十五人侵犯著作权案）. <https://www.spp.gov.cn/spp/jczdal/202309/t20230915_628229.shtml>；最高人民检察院 (2024). 检察机关依法惩治侵犯著作权犯罪典型案例（案例一、案例三）. <https://www.spp.gov.cn/spp/xwfbh/wsfbt/202401/t20240105_639347.shtml>；中国驻长崎总领事馆 (2018). 中国驻长崎总领事馆提醒在日中国公民遵守著作权法. <http://nagasaki.china-consulate.gov.cn/chn/tzgg/201802/t20180208_4564322.htm>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -5571,6 +5883,7 @@ module.exports = {
         "cost": "不花钱。拿去出版、卖钱之前，先找原作的权利人谈授权。谈不下来，就把借来的人物名字、性格和人物关系换成自己的。书名、副标题和宣传语里，也别蹭原作的名头。",
         "gain": "江南的小说《此间的少年》，用了郭靖、黄蓉、乔峰、令狐冲等金庸小说里的人物名字。书里讲的是这些人在大学校园里的故事。2002 年出版时，副标题是「射雕英雄的大学生涯」。到起诉时，这本书出了多个版本，发行上百万册。金庸 2016 年起诉江南和出版方，索赔 500 万元。一审认为不构成著作权侵权。理由是：离开了具体情节，光是人物名字、关系和性格，很难算受保护的具体表达。但一审认定，江南借原作名气吸引读者，构成不正当竞争。按历年版税 560 万元的 30%，判赔 168 万元，外加律师费 20 万元。二审由广州知识产权法院审理，改判构成著作权侵权。二审认为，两本书的故事情节不算实质性相似，也就是情节没有抄。但 60 多个人物合起来的「人物群像」，名字、性格、关系和背景都是金庸的选择和安排。这属于著作权法保护的表达，江南侵害了金庸四部小说的著作权。副标题故意和《射雕英雄传》挂钩，另外构成不正当竞争。二审判江南停止不正当竞争、登报消除影响，赔 168 万元和合理开支 20 万元。两家出版发行公司对其中 33 万元承担连带责任，也就是这部分要一起赔。二审没有判停止侵权，但要求以后再版，按再版版税收入的 30% 付给原作权利人。二审之后，双方都向广东省高级人民法院申请再审。2025 年 9 月 19 日，各方在广东高院主持下达成和解。和解里，各方同意不把这件事定性为「剽窃」。江南承认，他创作时缺乏著作权法律知识，没有事先取得金庸的改编许可，给金庸造成了损害。江南同意不再原样再版这本书。以后再版，不再用金庸作品里的独创人物名字和相关内容。各方确认，那个副标题构成不正当竞争。二审判的赔偿，江南已经付了。调解书签收后，原来的一审、二审判决都不再有法律效力。另一个案子的被告是《鬼吹灯》作者张牧野，笔名天下霸唱。2006 年，他把这套小说著作权里的财产权全部转让给了上海玄霆娱乐信息科技有限公司。后来他授权出版新书《摸金校尉》，书里用了《鬼吹灯》的人物名字、人物关系和盗墓规矩。新书封面用了《寻龙诀》的电影海报，这部电影是从《鬼吹灯》改编的。玄霆公司起诉，索赔 2000 万元。上海浦东法院认为，新书有自己独立的情节，不算侵犯著作权。但封面让读者误以为这本书和《寻龙诀》原著有关，构成虚假宣传。法院判两家出版发行公司赔 90 万元，出版社对其中 60 万元承担连带责任，二审维持。法条上，改编权是改变作品、创作出有独创性的新作品的权利。没经著作权人许可，用改编、翻译、注释等方式使用作品，要承担停止侵害、赔偿损失等民事责任（全国）",
         "note": "受益人是你自己。定 B 级，是因为同人的法律边界还没有定论。这个案子两审结论不一样，最后以调解结案，两份判决都不再生效。广东高院的承办法官答问时说，和解协议只约束这个案子的当事人。同人是否侵权，「要具体情况具体分析，不能一概而论」。法官给的判断顺序是三步。先看两部作品相同的是抽象的想法，还是具体的表达。再看这些表达是不是原作者独创的。最后看是不是属于合理使用这类不侵权的情形。所以只借一个题材、一种设定，和成套借走人物名字、性格和关系，风险不一样。免费贴在网上的同人，本书没有找到法院下判的官方案例。著作权法里也没有「不收钱就不算侵权」的例外。过程成本要算进去：这个案子从 2016 年 7 月起诉，到 2025 年 9 月和解，前后 9 年。中间经过一审、二审和再审审查，金庸本人在二审期间去世。原作者把版权卖掉以后，自己写续作照样可能被买家告，天下霸唱那次就是。著作权官司里，赢的一方为制止侵权花的合理开支可以算进赔偿，这个案子一审判的 20 万元就是律师费。汉化、搬运、分享别人作品的风险，见本节第 24 条（汉化漫画、搬运影视剧）。",
+        "source": "广州知识产权法院 (2023). 金庸诉江南「同人作品第一案」有何深意（转载《法制与新闻》2023 年 7 月上期）. <https://www.gipc.gov.cn/front/content.action?id=7b7cb9a7b2cc45f286199fd427fc6b1f>；广东省高级人民法院 (2025). 「金庸诉江南」著作权及不正当竞争纠纷案在粤达成和解. <https://www.gdcourts.gov.cn/xwzx/fayuanxinmeiti/content/post_1843458.html>；国家版权局 (2020). 2019 年度上海十大版权典型案件发布（上海市版权局发布，案例六：「鬼吹灯」著作权侵权及不正当竞争纠纷案）. <https://www.ncac.gov.cn/xxfb/ywxx/202004/t20200430_47269.html>；全国人大常委会 (2020). 著作权法（2020 年修正，第三条，第十条第一款第十四项，第五十二条第六项，第五十四条）. <http://www.npc.gov.cn/npc/c2/c30834/202011/t20201119_308796.html>",
         "grade": "B",
         "meta": {
           "money": "0",
@@ -5590,6 +5903,7 @@ module.exports = {
         "cost": "不花钱。已经买了的留在家里，不带出门，也不放进车里。真遇到事，先退开报警，躲不掉再还手。",
         "gain": "先看治安管理处罚法第三十八条。非法携带弩、匕首等国家规定的管制器具的，拘留 5 日以下，可以再罚 1000 元以下。情节较轻的，警告或者罚 500 元以下。带进公共场所或者公共交通工具的，拘留 5 到 10 日，可以再罚 1000 元以下。刑法第一百三十条更重。非法携带管制刀具进入公共场所或者公共交通工具，危及公共安全、情节严重的，判 3 年以下。哪些刀算管制刀具，公安部 2007 年的认定标准列了五类。第一类是匕首：有刀柄、刀格和血槽，刀尖角度小于 60 度。第二类是三棱刮刀。第三类是带自锁装置的弹簧刀，俗称跳刀。第四类是刀尖角度小于 60 度、刀身超过 150 毫米的刀。第五类是刀尖角度大于 60 度、刀身超过 220 毫米的刀。没开刃、刀尖磨圆的武术和工艺礼品刀不算。警棍是警察的警械。人民警察法规定，警械只许警察持有和使用。别人持有的，没收，拘留 15 日以下或者警告，可以再按违法所得罚 5 倍以下。铁路的禁带目录把警棍、催泪器、电击器、防卫器都列为管制器具。坐火车时这些东西不许随身带，也不许托运。车里放着一样会被查：有人开车带着管制刀具过检查站，被民警查获，行政拘留。真用了的账，看正当防卫指导意见。它把「是否使用或者准备使用凶器」列为区分防卫和互殴的情节之一。官方案例：杨某和人吵架，对方扬言找人报复，他回家把两把刀藏在身上。对方回来空手打了他脸一拳，他拿刀捅对方胸腹，对方死亡。法院认定他有防卫性质，但对方只是空手打，他捅的是要害，属于防卫过当。他以故意伤害罪被判 4 年（全国，治安管理处罚法 2026 年 1 月 1 日起施行）",
         "note": "受益人是你自己。带了刀，正当防卫并不会自动不成立。检例第 45 号里，学生陈某被 9 人围殴，掏出随身的水果刀反击，仍被认定为正当防卫。检察院写明，影响认定的不是带没带工具，而是有没有互殴的故意。吃亏落在两处。一是东西本身违法，平时被查到就罚，和用没用无关。二是刀在手边，面对一拳一推也容易捅出去，伤到重伤以上就可能变成防卫过当。辣椒水喷雾，本书没查到全国层面禁止个人持有的原文，只知道坐火车不能带。网上卖的甩棍算不算警棍，本书也没查到全国统一的认定原文。真遇到事，先看第 8 节第 10 条（起了冲突先报警不动手）。退无可退时，看第 8 节第 11 条（躲不掉的侵害可以还手）。野外被人堵住要钱，见第 13 节第 36 条（荒郊野外被陌生人索财）。",
+        "source": "全国人大常委会 (2025). 治安管理处罚法（2025 年修订，第三十八条）. <https://www.spp.gov.cn/spp/fl/202506/t20250627_699863.shtml>；全国人大 (1997). 刑法（第二十、一百三十条，这两条未经修正案修改）. <https://www.spp.gov.cn/spp/fl/201802/t20180206_364975.shtml>；公安部 (2007). 关于印发《管制刀具认定标准》的通知（公通字〔2007〕2 号）. <https://www.gd.gov.cn/zwgk/wjk/zcfgk/content/post_2937075.html>（广东省人民政府转载）；全国人大常委会 (2012 修正). 人民警察法（第三十六条）. <https://jtgl.beijing.gov.cn/jgj/jgxx/flfg/fl/203770/index.html>（北京市公安交通管理局转载）；国务院 (1996). 人民警察使用警械和武器条例（第三条）. <http://jyglj.guizhou.gov.cn/szs/zwgk/xxgkml/zcwj/201808/t20180807_25452524.html>（贵州省监狱管理局转载）；国家铁路局、公安部 (2022). 关于公布《铁路旅客禁止、限制携带和托运物品目录》的公告（2022 年第 1 号）. <https://www.gov.cn/zhengce/zhengceku/2022-05/31/content_5693212.htm>；晋江市人民政府 (2022). 警方提醒！携带这些物品，可能会被拘留！. <https://www.jinjiang.gov.cn/ztzl/jjgazl/jfts/202209/t20220913_2775463.htm>；最高人民法院、最高人民检察院、公安部 (2020). 关于依法适用正当防卫制度的指导意见（法发〔2020〕31 号，第 9 条）. <https://www.court.gov.cn/zixun/xiangqing/251611.html>；最高人民法院 (2020). 涉正当防卫典型案例（案例四）. <https://www.court.gov.cn/zixun/xiangqing/251621.html>；最高人民检察院 (2018). 第十二批指导性案例（检例第 45 号陈某正当防卫案）. <https://www.spp.gov.cn/spp/jczdal/201812/t20181219_402920.shtml>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -5611,6 +5925,7 @@ module.exports = {
         "cost": "不花钱。时间花在多认识几个人上，别反复琢磨同一个人。难在忍住不死磕。",
         "gain": "两场闪电约会研究里，参与者见面前先填了 100 多项与择偶有关的自陈量表（自己给自己打分的问卷）。研究者用随机森林模型（一种找规律的算法）来算。能算出「一个人整体上有多容易喜欢别人」，这些问卷能说明其中 4%–18% 的方差，方差就是人与人之间的差别，问卷只能说明其中一小部分。也能算出「一个人整体上有多受欢迎」，能说明 7%–27%。但「这两个具体的人之间来不来电」算不出来，会前的特质和偏好怎么组合都算不出来。同一批研究者更早还做过一项闪电约会实验。参与者会前自己报了理想型偏好，比如看重外貌还是看重经济前景。这个偏好预测不了他们在现场对具体某个人的兴趣",
         "note": "两项研究只说明「见面之前算不出来」，没说「怎么努力都没用」。合不合得来只能见了面才知道，所以把时间花在多认识几个人上，每个都真正见一面，比全押在一个人身上划算。研究对象都是欧美大学生。中国的婚恋环境不一样，套到自己身上要打折",
+        "source": "Joel S, Eastwick PW, Finkel EJ (2017). Is romantic desire predictable? Machine learning applied to initial romantic attraction. Psychological Science, 28(10), 1478-1489. <https://doi.org/10.1177/0956797617714580>；Eastwick PW, Finkel EJ (2008). Sex differences in mate preferences revisited: do people know what they initially desire in a romantic partner? Journal of Personality and Social Psychology, 94(2), 245-264. <https://doi.org/10.1037/0022-3514.94.2.245>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -5630,6 +5945,7 @@ module.exports = {
         "cost": "不花钱，也不花时间。难在忍住：不再发消息，不再去等人。",
         "gain": "2026 年 1 月 1 日起施行的治安管理处罚法，把纠缠、跟踪单列成一项。条文写的是「多次发送淫秽、侮辱、恐吓等信息或者采取滋扰、纠缠、跟踪等方法，干扰他人正常生活的」。这种行为处五日以下拘留，或者一千元以下罚款。情节较重的，处五日以上十日以下拘留，可以并处一千元以下罚款。这一项还多一层：经公安机关负责人批准，可以责令行为人在一定期限内禁止接触被侵害人。违反禁止接触规定的，再处五日以上十日以下拘留",
         "note": "「死追到底会感动对方」没有任何研究支持，但拘留和禁止接触令是白纸黑字的。留下的记录还会影响考公、考编、政审，还有一部分职业的从业资格。追一个人和骚扰一个人的界线，不看你怎么想，看对方有没有明确说过拒绝",
+        "source": "全国人大常委会 (2025 修订). 治安管理处罚法（第五十条第一款第五项、第二款）. <https://www.spp.gov.cn/spp/fl/202506/t20250627_699863.shtml>（最高人民检察院转载）",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -5649,6 +5965,7 @@ module.exports = {
         "cost": "不花钱，也不花多少时间。难在改习惯：别再琢磨对方的表情和语气，改成记录事实。",
         "gain": "两项研究测了人识别调情的准确率。第一项让 52 对互不相识的异性两两交谈 10 到 12 分钟。谈完各自报告自己有没有在调情，也报告觉得对方有没有在调情。结果是「没有发生调情的互动被判断得更准，发生了调情的互动反而判断得更差」。第二项用 26 段一分钟的视频，给 261 名旁观者判断，结论一致。人能比较可靠地看出「对方没在调情」，却很难看出「对方在调情」",
         "note": "争议。另有研究认为，不是男性高估了女性的性意图，而是女性填问卷时把自己的意图报低了。到底谁判断得更准，仍无定论。但两派都同意一件事：从表情、语气这类细微线索反推对方心思，准确率很低。看得见的行为要可靠得多：对方是否主动发起，是否安排下一次，是否在你不推进时也跟进",
+        "source": "Hall JA, Xing C, Brooks S (2015). Accurately detecting flirting: error management theory, the traditional sexual script, and flirting base rate. Communication Research, 42(7), 939-958. <https://doi.org/10.1177/0093650214534972>；Perilloux C, Kurzban R (2015). Do men overperceive women's sexual interest? Psychological Science, 26(1), 70-77. <https://doi.org/10.1177/0956797614555727>（争议方）",
         "grade": "B",
         "meta": {
           "money": "0",
@@ -5668,6 +5985,7 @@ module.exports = {
         "cost": "不花钱，也不花多少时间。难在改视角：把择偶清单收起来，改成看相处过程。",
         "gain": "29 个实验室、43 份纵向配对数据的机器学习分析，纵向就是跟着同一批伴侣一路记录。最能预测关系质量的几项，全部来自当事人对这段关系的感受：感觉到对方的承诺、欣赏、性满意度、感觉到对方满意、冲突。跟个人有关的几项里最强的是生活满意度、负面情绪、抑郁、回避型依恋、焦虑型依恋。关于关系的这些项，在刚开始调查时最多能解释 45% 的方差。方差指伴侣与伴侣之间关系质量的差别，45% 是其中能用这些项说清的部分。到研究结束时最多解释 18%。而且「自己报告的那些项」的预测力，是「伴侣报告的那些项」的二到四倍。在自己报告的关系感受之外，再把个体差异和伴侣的报告加进来，没有多出任何预测力",
         "note": "同一项研究还发现，这段关系在研究期间是变好还是变坏，用问卷里任何一组自评指标都基本算不出来。所以判断眼下这段关系好不好，问自己的感受比核对对方的条件清单准，但别指望能预测它以后会怎样。关系好坏和身体好坏连在一起的那笔账，见本节第 17 条（把关系好坏当成一笔健康账）。",
+        "source": "Joel S, Eastwick PW, Allison CJ, et al. (2020). Machine learning uncovers the most robust self-report predictors of relationship quality across 43 longitudinal couples studies. Proceedings of the National Academy of Sciences, 117(32), 19061-19071. <https://doi.org/10.1073/pnas.1917036117>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -5687,6 +6005,7 @@ module.exports = {
         "cost": "不花钱。要花 45 分钟。",
         "gain": "把互不相识的两人配对，让他们轮流回答三组逐步深入的问题，一共 36 题。问题从「你最想请谁吃饭」一直到「上一次当着别人的面哭是什么时候」。45 分钟后的亲近感，显著高于做同样时长闲聊的对照组。也高于该研究中大学生对自己现实中最亲密关系的平均评分",
         "note": "只做过一次实验，对象是大学生，只测了短时间内的亲近感，没测能不能发展成长期关系。实验里的亲近感来自两个人轮流、一层层往深里说自己的真实情况，靠的不是话术、套路或单方面表现。所以聊天时可以「我说一点真实的，也问一句一样深的」，两边轮流",
+        "source": "Aron A, Melinat E, Aron EN, Vallone RD, Bator RJ (1997). The experimental generation of interpersonal closeness: a procedure and some preliminary findings. Personality and Social Psychology Bulletin, 23(4), 363-377. <https://doi.org/10.1177/0146167297234003>",
         "grade": "B",
         "meta": {
           "money": "0",
@@ -5706,6 +6025,7 @@ module.exports = {
         "cost": "要花路费，还要花来回路上的时间。见面次数比同城少。难在长期扛住见不着面。",
         "gain": "两项研究的结论一致。异地恋在分开期间反而比同城恋更稳定。原因是异地关系里把对方想得比实际更好的程度明显更高，研究测的是理想化失真、浪漫爱、关系回忆、感知到的一致这几项。而且见面越少，想得越美。但这种稳定只在双方仍然分开时成立，一旦变成同城，异地伴侣更容易分手。追踪异地转同城的那项研究给出的比例是：约一半异地伴侣走到了搬到一起这一步，另一半在分开期间就结束了。在重聚的这一半里，三分之一在重聚后 3 个月内分手。分开期间见面间隔越长、理想化越强，重聚后越不稳",
         "note": "对象是美国大学生的恋爱关系，不含婚姻，年代也较早，绝对比例别直接套。另一项研究调查了 717 人异地、425 人同城。两类关系的质量差别很小，关系好不好主要看两个人各自的情况和这段关系本身。所以决定要不要异地时，别拿「异地一定散」当理由。要提前准备的是重聚后那几个月，那时自主空间变少，彼此了解变多，冲突和吃醋也变多",
+        "source": "Stafford L, Merolla AJ, Castle JD (2006). When long-distance dating partners become geographically close. Journal of Social and Personal Relationships, 23(6), 901-919. <https://doi.org/10.1177/0265407506070472>；Stafford L, Merolla AJ (2007). Idealization, reunions, and stability in long-distance dating relationships. Journal of Social and Personal Relationships, 24(1), 37-54. <https://doi.org/10.1177/0265407507072578>；Dargie E 等 (2015). Journal of Sex & Marital Therapy, 41(2), 181-202. <https://doi.org/10.1080/0092623X.2013.864367>（备注里那项异地研究）",
         "grade": "B",
         "meta": {
           "money": "多",
@@ -5725,6 +6045,7 @@ module.exports = {
         "cost": "不花钱。读一遍民政部年度公报里的婚姻登记那一段，几分钟。",
         "gain": "2024 年全国依法办理结婚登记 610.6 万对，比上年下降 20.5%，结婚率 4.3‰。同年依法办理离婚手续 351.3 万对，其中民政部门登记离婚 262.2 万对，法院判决和调解离婚 89.1 万对，离婚率 2.5‰。公报注明，结（离）婚率 = 当年结（离）婚对数 / 当年平均总人口数 × 1000‰。这是「粗率」，分母是全体人口，不是已婚人口",
         "note": "网上常见的「离婚率 50% 以上」，是拿当年离婚的对数除以当年结婚的对数，351.3 / 610.6 ≈ 57.5%。这叫「离结比」。相除的两个数不是同一批人，公报里也没有这个指标，所以不能读成「一半婚姻会离」。要算「一段婚姻最后离掉的概率」，得盯住同一批结婚的人一路统计下去，这种官方数据本节没找到",
+        "source": "民政部 (2025). 2024 年民政事业发展统计公报（五（二）1 婚姻登记服务、注释 5），网页版与 PDF 版. <https://www.mca.gov.cn/n1288/n1294/n1554/c1662004999980006190/content.html>、<https://www.mca.gov.cn/gdnps/n2445/n2451/n2458/n2681/c1662004999980006189/attr/400985.pdf>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -5744,6 +6065,7 @@ module.exports = {
         "cost": "不花钱，也不花时间。只要记住一点：这些数字说的是已婚的人里死亡率更低，是两件事同时出现，不是结婚让你活得久。",
         "gain": "一项针对老年人的荟萃分析，把多项研究汇总重算，共 53 组比较、25 万余人。已婚相对非婚的全因死亡 RR 0.88，95% CI 0.85–0.91（RR 是风险比，CI 是可信范围），同期死亡的概率低约 12%。同一项里丧偶 1.11、离异或分居 1.16、未婚 1.11，分别高约 11%、16%、11%。男女无差异。最保守的估计是 RR 0.94，只低约 6%。另一项荟萃分析比的是未婚（从未结婚）相对已婚，用了 95 篇文献、5 亿余人。结果 HR 1.24（1.19–1.30），同期死亡的概率高约 24%。而且年纪越大，差距越小。还有一项按性别拆的荟萃分析，21 项研究、789 万余人：不论男女，非婚都与总死亡、癌症死亡、心血管死亡同时出现。男性这边的心血管死亡和总死亡差距更大。未婚男性相对未婚女性，卒中死亡多 31%，全因死亡多 9%",
         "note": "争议在于结婚的人本来就是被挑过的：健康、收入高、社交多的人，既更容易结婚，也更容易活得久。三项荟萃用的都是现成人群的观察数据，只是跟踪记录，没有分组对照。作者自己也写了有发表偏倚或方法局限。Roelfs 还发现研究做得越严谨，算出的差距越小。这些数字以欧美人群为主，对国内只能当量级参考",
+        "source": "Manzoli L, et al. (2007). Marital status and mortality in the elderly: a systematic review and meta-analysis. Soc Sci Med 64:77–94. <https://doi.org/10.1016/j.socscimed.2006.08.031>；Roelfs DJ, et al. (2011). The rising relative risk of mortality for singles: meta-analysis and meta-regression. Am J Epidemiol 174(4):379–389. <https://doi.org/10.1093/aje/kwr111>；Wang Y, et al. (2020). Sex differences in the association between marital status and the risk of cardiovascular, cancer, and all-cause mortality: a systematic review and meta-analysis of 7,881,040 individuals. Glob Health Res Policy 5:4. <https://doi.org/10.1186/s41256-020-00133-8>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -5763,6 +6085,7 @@ module.exports = {
         "cost": "不花钱。婚前花一两个小时，把家务、照料老小、谁的工作让步这些没报酬的活谈成明确分工，之后按分工执行。难在把话摊开谈，别拖着不说。",
         "gain": "2024 年全国时间利用调查。无酬劳动就是家务、陪伴照料家人这些没有报酬的活。当天做了这类活的人，每日平均花 2 小时 45 分，其中男性 1 小时 52 分、女性 3 小时 29 分。一天里做过这类活的人占多大比例，男性是 67.5%、女性是 83.9%。居民家务劳动每日平均 1 小时 17 分，只算做了的人是 1 小时 59 分，比 2018 年少 28 分。陪伴照料家人每日平均 30 分，只算做了的人是 1 小时 46 分。2018 年的数字是：家务劳动男性 45 分、女性 2 小时 6 分，陪伴照料孩子男性 17 分、女性 53 分",
         "note": "两次调查都只按性别、城乡、年龄分组，没有按结没结婚分组。所以「结婚后家务会多多少」没有官方数字，只能用性别差距做上限参考。数字是全国平均，你们两个人的分工完全可以谈成另一个样子",
+        "source": "国家统计局 (2024). 第三次全国时间利用调查公报（第二号、第三号）. <https://www.stats.gov.cn/sj/zxfb/202410/t20241031_1957216.html>、<https://www.stats.gov.cn/sj/zxfb/202410/t20241031_1957215.html>；国家统计局 (2019). 2018 年全国时间利用调查公报. <https://www.stats.gov.cn/sj/zxfb/202302/t20230203_1900224.html>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -5782,6 +6105,7 @@ module.exports = {
         "cost": "不花钱。读一遍民法典婚姻家庭编里讲财产的那几条。有需要就两个人签一份书面财产约定，法律只要求写成书面的，不必去公证。难在把钱的事提前说开。",
         "gain": "不另作约定时的默认规则是：婚后所得的工资奖金劳务报酬、生产经营投资收益、知识产权收益、继承或受赠财产，归夫妻共同所有（第一千零六十二条）。婚前财产、人身损害赔偿、遗嘱或赠与合同明确只归一方的财产、一方专用生活用品，是个人财产（第一千零六十三条）。双方可以书面约定婚前和婚后财产归各自所有、共同所有，或者部分各自所有部分共同所有，这个约定对双方有法律约束力（第一千零六十五条）。因抚育子女、照料老人、协助另一方工作而负担较多义务的一方，离婚时有权请求补偿（第一千零八十八条）",
         "note": "彩礼、婚礼、婚房没有官方统计，本条不写数字。第一千零八十八条那笔补偿给多少，先由两人自己谈，谈不成由法院定，没有固定公式。书面财产约定对两边都管用：收入高的一方用得上，家务照料这类没报酬的活干得多的一方也用得上",
+        "source": "全国人民代表大会 (2020). 中华人民共和国民法典（2021 年 1 月 1 日起施行，第一千零六十二、一千零六十三、一千零六十五、一千零八十八条）. 国家法律法规数据库 <https://flk.npc.gov.cn/detail?title=%E4%B8%AD%E5%8D%8E%E4%BA%BA%E6%B0%91%E5%85%B1%E5%92%8C%E5%9B%BD%E6%B0%91%E6%B3%95%E5%85%B8&id=ff808081729d1efe01729d50b5c500bf>；条文全文见最高人民法院公报转载 <http://gongbao.court.gov.cn/Details/7f184078694d811fb3314f6af9accf.html>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -5801,6 +6125,7 @@ module.exports = {
         "cost": "不花钱。出资当天写一页说明，写明这笔钱是赠与谁、还是借给谁，出资的父母和子女都签字。如果写的是借款，就让夫妻两个人都签，转账备注也写同一句话。",
         "gain": "婚前父母为双方购房出资的，认定为对自己子女个人的赠与。父母明确表示赠与双方的除外。婚后出资的，有约定按约定。没有约定或者约定不明确的，按夫妻共同财产的原则处理。2025 年 2 月 1 日起还有一条。婚内由一方父母全额出资、赠与合同又没写明只赠与自己子女的，离婚分割时，法院可以判房屋归出资人子女一方所有。判归之后再综合几项情况，确定要不要给另一方补偿、补多少。这几项是共同生活和生育共同子女的情况、离婚过错、对家庭的贡献大小、离婚时房屋市场价格。一方父母部分出资，或者双方父母都出资的，以出资来源和比例为基础判归其中一方，并合理补偿（全国）",
         "note": "写清楚对两边都有用。出钱的父母不必再指望离婚时补一张借条来保住出资。解释（二）施行后，钱是谁出的本身就是分房子的依据，房本写谁的名字不再决定归属。接受出资的一方，也不用等到离婚才知道这笔钱算什么。要按借款办就真按借款办：双方说好是借，约定怎么还，转账写明，必要时留下还款记录。缺一样，上了法庭都要解释",
+        "source": "最高人民法院 (2020). 关于适用《民法典》婚姻家庭编的解释（一）（法释〔2020〕22 号，第二十九条）. <https://www.court.gov.cn/fabu/xiangqing/282071.html>；最高人民法院 (2025). 关于适用《民法典》婚姻家庭编的解释（二）（法释〔2025〕1 号，第八条）. <https://www.court.gov.cn/zixun/xiangqing/452771.html>；全国人大 (2020). 民法典（第一千零六十二条第一款第四项）. <https://www.spp.gov.cn/spp/fl/202006/t20200602_463888.shtml>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -5820,6 +6145,7 @@ module.exports = {
         "cost": "不花钱。别在配偶的借条、担保书上签「共同借款人」「担保人」。也别在聊天里写「这钱我们会还」这类话，它可能被当成你事后认下了这笔债。难在被催的时候忍住不接话。",
         "gain": "下面几种情形借的钱属于夫妻共同债务。一是夫妻双方共同签名的。二是一方事后追认，就是事后认下这笔债，两个人都认账。三是一方在婚内以个人名义为家庭日常生活需要借的。一方以个人名义借的、明显超出家庭日常开销的钱，不属于夫妻共同债务。例外是债权人（要债的一方）能证明这笔钱用于夫妻共同生活、共同生产经营，或者是两个人都认的账。买房的钱明显超出家庭日常生活需要，举证责任在主张债权的一方，要债的人得自己拿出证据。但这笔钱如果确实变成了夫妻共同居住或共有的房子，债权人往往能证到「用于夫妻共同生活」这一层。所以更管用的是第 11 条（父母出资时写清是借是送）那一步（全国，2021 年起）",
         "note": "离婚分财产时，对方父母突然拿出一张只有配偶签字的借款协议，要分两步看。第一步看这笔借款到底有没有真发生。你说钱根本没交过，又能把理由说圆的，法院会结合几件事一起判断。先看借款金额、钱怎么交的、双方的经济能力，再看平时怎么交易、财产有没有相应变动、证人怎么说。对方只拿得出转账凭证的，仍要由他证明这笔借款成立。第二步，借款成立之后再看是不是共同债务。借条和担保书的一般规则见第 8 节第 18 条",
+        "source": "全国人大 (2020). 民法典（第一千零六十四条）. <https://www.spp.gov.cn/spp/fl/202006/t20200602_463888.shtml>；最高人民法院 (2020 年第二次修正). 关于审理民间借贷案件适用法律若干问题的规定（第十五、十六条）. <http://gongbao.court.gov.cn/Details/94b6623974526df7d2430a3c73f050.html>（最高人民法院公报）",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -5839,6 +6165,7 @@ module.exports = {
         "cost": "不花钱。两个人都要亲自到场。办完通常几十分钟。",
         "gain": "2025 年 5 月 10 日起施行的新婚姻登记条例，改了内地居民结婚要交的材料。条文写的是只需出具两样东西：「（一）本人的居民身份证；（二）本人无配偶以及与对方当事人没有直系血亲和三代以内旁系血亲关系的签字声明」。户口簿不再是必需材料。登记机关是「县级人民政府民政部门或者省、自治区、直辖市人民政府按照便民原则确定的乡（镇）人民政府」。旧条例里「到一方当事人常住户口所在地」的限制已经取消。条例还写明「婚姻登记机关办理婚姻登记，不得收取费用」，以及「对当事人符合结婚条件的，应当当场予以登记，发给结婚证」",
         "note": "登记机关不给办的只有四种情况：没到法定结婚年龄，不是双方完全自愿，一方或双方已经有配偶，两人是直系血亲或三代以内旁系血亲。可能收费的只有照相、复印这类周边服务。登记本身一分钱不收，遇到「工本费」「加急费」直接拒绝并投诉。离婚登记的 30 天冷静期见本节退出成本那条",
+        "source": "国务院 (2025). 婚姻登记条例（国令第 804 号，第二、六、八、十条）. <https://www.gov.cn/zhengce/zhengceku/202504/content_7017752.htm>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -5858,6 +6185,7 @@ module.exports = {
         "cost": "多数地区对适龄人群免费或者减免。自费也就几百元。要花半天时间。",
         "gain": "隐瞒的法律后果是明确的。新婚姻登记条例规定「一方当事人患有重大疾病的，应当在结婚登记前如实告知另一方当事人；不如实告知的，另一方当事人可以依据民法典第一千零五十三条的规定向人民法院请求撤销婚姻」。国家把婚检当作出生缺陷防治的第一道关口。现行目标是「婚前医学检查率、孕前优生健康检查目标人群覆盖率分别保持在 70% 和 80% 以上」。文件还要求「推进婚前医学检查机构与婚姻登记场所就近设置方便群众」，并推广「婚姻登记、婚前医学检查、生育指导『一站式』服务」。民法典规定，一方患有重大疾病的应当在结婚登记前如实告知，不如实告知的，另一方可以向人民法院请求撤销婚姻。请求撤销婚姻的，应当自知道或者应当知道撤销事由之日起一年内提出",
         "note": "婚检自 2003 年起就不是领证必须先做的一步，去不去自愿。但「有重大疾病不如实说」这一条，确实给了对方去法院撤销这段婚姻的权利，要在知道之日起一年内提。全国没有统一规定婚检免费。国家卫健委等五部门 2020 年的通知只写了「积极倡导各地结合实际推行免费婚前检查」。所以是否免费、查哪些项目由各地自己定，去当地妇幼保健机构或婚姻登记处的一站式窗口问。",
+        "source": "全国人大 (2020). 民法典（第一千零五十三条）. <https://www.spp.gov.cn/spp/fl/202006/t20200602_463888.shtml>；国务院 (2025). 婚姻登记条例（国令第 804 号，第十二条）. <https://www.gov.cn/zhengce/zhengceku/202504/content_7017752.htm>；国家卫生健康委办公厅 (2023). 出生缺陷防治能力提升计划（2023—2027 年）（国卫办妇幼发〔2023〕9 号）. <https://www.gov.cn/zhengce/zhengceku/202308/content_6900320.htm>；国家卫生健康委等五部门 (2020). 关于加强婚前保健工作的通知（国卫妇幼函〔2020〕205 号）：「积极倡导各地结合实际推行免费婚前检查」. <https://www.gov.cn/zhengce/zhengceku/2020-05/22/content_5513902.htm>",
         "grade": "B",
         "meta": {
           "money": "少",
@@ -5877,6 +6205,7 @@ module.exports = {
         "cost": "不花钱。婚前花点时间读一遍：万一要退出，要花多久，走什么程序。难在结婚前就去想散伙的事。",
         "gain": "协议离婚要签书面离婚协议，并亲自到婚姻登记机关申请（第一千零七十六条）。自登记机关收到申请之日起 30 日内，任何一方可以撤回。期满后 30 日内，双方须亲自申领离婚证，不申领视为撤回（第一千零七十七条）。一方不同意时走诉讼，法院应先调解。有重婚或与他人同居、家庭暴力或虐待遗弃、赌博吸毒屡教不改、因感情不和分居满二年等情形的，调解无效应准予离婚。判不离后又分居满一年，再起诉应准予（第一千零七十九条）。2024 年全国离婚 351.3 万对，其中 89.1 万对走的是法院判决、调解",
         "note": "冷静期只适用于协议离婚。诉讼离婚没有冷静期，但周期更长。诉讼费、律师费各地不同，本条不写数字。退出成本高不等于不该结婚，但结婚前就该知道这些",
+        "source": "全国人民代表大会 (2020). 中华人民共和国民法典（第一千零七十六、一千零七十七、一千零七十九条）. <http://gongbao.court.gov.cn/Details/7f184078694d811fb3314f6af9accf.html>；民政部 (2020). 关于贯彻落实《中华人民共和国民法典》中有关婚姻登记规定的通知（民发〔2020〕116 号）. <https://www.gov.cn/zhengce/zhengceku/2020-12/04/content_5567010.htm>；民政部 (2025). 2024 年民政事业发展统计公报. 题录同第 7 条（结婚率、离婚率各是什么口径）",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -5896,6 +6225,7 @@ module.exports = {
         "cost": "不花钱。在纸上分两栏写。一栏是这段婚姻里哪些收益是你自己的，本节前面几条能算出来。另一栏是哪些收益是长辈的：安心、面子、催婚停止。难在把长辈那一栏单独放着，不往自己这栏里并。",
         "gain": "长辈的收益是真实的。但它不会自动转成你的健康收益（第 8 条）或关系质量（第 4 条，关系好不好看自己的感受）。而时间账（第 9 条）、钱账（第 10 到 12 条）和退出成本（第 15 条），全部由当事人承担。分开记账以后，「做任务式结婚」的性价比是高是低，自己就能看出来",
         "note": "长辈那一栏也可以算成很重的一笔，怎么权衡由你自己定。填空清单见 [docs/结婚划不划算.md](../docs/结婚划不划算.md)",
+        "source": "作者经验，方法类建议；数据部分见本节前面各条",
         "grade": "C",
         "meta": {
           "money": "0",
@@ -5915,6 +6245,7 @@ module.exports = {
         "cost": "不花钱。吵架时只说眼前这件事，不骂人，不挖苦，不翻旧账。难在气头上管住嘴。",
         "gain": "把 126 篇研究、7.2 万多人合起来算（荟萃分析）。婚姻质量越高，身体越好，相关系数 r 在 .07 到 .21 之间。相关系数 0 是毫无关系，1 是完全同步。其中和死亡风险更低的相关是 r = .11。吵架时心血管反应更小，r = -.13。作者说，这些效应都小，和饮食这类健康习惯与健康的关联差不多大。另一项交叉实验里，42 对健康夫妻各住院两次，每次 24 小时。一次做互相支持的谈话，一次讨论一件有分歧的事。吵完之后，实验做出的水泡伤口愈合更慢。两次都表现出更多敌意的夫妻，伤口愈合速度只有低敌意夫妻的 60%。吵架第二天早上，他们血里的炎症指标（IL-6、肿瘤坏死因子）也升得更多。",
         "note": "定 B 的理由：汇总的研究大多只是跟踪记录，没有分组对照。所以分不清是关系差让人生病，还是身体差让关系变差。有的研究扣掉年龄和收入之后，关联仍然在。Robles 原文还写明，一部分结果有发表偏倚。明确比较过男女的研究，基本没发现男女不同。本节没有找到直接比较「关系差的婚姻」和「不结婚」死亡率的汇总分析，所以「坏婚姻比不结婚更伤身」只能算推论。伤口实验只有 42 对夫妻。「对事不对人，不骂人不挖苦」是作者从实验里的「敌意行为」推出来的做法，没有研究直接比较过。吵得凶又改不了，两个人一起去做伴侣治疗，见本节第 20 条（伴侣治疗）。吵到动手，或者长期辱骂、威胁，就不是沟通问题了，是家暴，见第 8 节第 43 条（被家暴了）。想清楚要不要走，退出成本见本节第 15 条（退出成本）。",
+        "source": "Robles TF, Slatcher RB, Trombello JM, McGinn MM (2014). Marital quality and health: a meta-analytic review. Psychological Bulletin. <https://doi.org/10.1037/a0031859>；Kiecolt-Glaser JK 等 (2005). Hostile marital interactions, proinflammatory cytokine production, and wound healing. Archives of General Psychiatry. <https://doi.org/10.1001/archpsyc.62.12.1377>",
         "grade": "B",
         "meta": {
           "money": "0",
@@ -5934,6 +6265,7 @@ module.exports = {
         "cost": "意定监护和遗嘱去公证处办，公证费各地不同，几百元起。自己手写遗嘱不花钱。前后要花一两个半天。难在两个人要坐下来谈生病和死。",
         "gain": "民法典第一千零四十五条列的近亲属是配偶、父母、子女、兄弟姐妹、祖父母、外祖父母、孙子女、外孙子女。第一千一百二十七条的法定继承人先是配偶、子女、父母，其次是兄弟姐妹、祖父母、外祖父母。伴侣两处都不在。第一千二百一十九条管的是手术、特殊检查、特殊治疗。不能或者不宜向患者说明的，医务人员要向患者的「近亲属」说明，并取得同意。有三条路可以补上。第一，第三十三条允许成年人和「其他愿意担任监护人的个人」事先书面约定监护人。本人丧失或者部分丧失民事行为能力后，这个人来当监护人，监护人就是法定代理人。第二，第一百六十五条规定，书面授权委托书要写明代理人的姓名、代理事项、权限和期限，由本人签名或者盖章。本人一去世，委托就终止。第三，第一千一百三十三条允许立遗嘱，把个人财产赠给法定继承人以外的个人。湖北省司法厅网站刊登的宜昌市司法局文章写明，同性伴侣可以办意定监护协议公证，指定对方当自己将来的监护人（全国）",
         "note": "伴侣拿遗产的身份是「受遗赠人」，不是继承人。知道有这份遗赠后，60 天内要明确表示接受，不表示就算放弃。伴侣本人和跟他有利害关系的人，不能当遗嘱见证人。立了几份遗嘱，以最后一份为准，见第 17 节第 2 条（遗嘱后立的推翻先立的）。意定监护人能不能直接签手术同意书，各医院做法不一，提前问一下常去的医院。家属不认这些文件，就要打官司：一审普通程序 6 个月起，律师费自己出。所以文件尽量去公证处办。一起买的房子、一起存的钱，按真实出资另外写书面约定。意定监护怎么办，见第 17 节第 1 条（书面指定将来的监护人）。受益人是你自己和伴侣。",
+        "source": "全国人大 (2020). 民法典（第二十三、三十三、一百六十五、一百七十三、一千零四十五、一千一百二十四、一千一百二十七、一千一百三十三至一千一百四十、一千一百四十二、一千二百一十九条）. <https://flk.npc.gov.cn/detail?id=ff808081729d1efe01729d50b5c500bf>（国家法律法规数据库）；宜昌市司法局 (2021). 意定监护公证：通向彩虹的公证之路. 湖北省司法厅网站「实践荟萃」栏目. <https://sft.hubei.gov.cn/fbjd/sjhc/202101/t20210108_3208602.shtml>",
         "grade": "A",
         "meta": {
           "money": "少",
@@ -5953,6 +6285,7 @@ module.exports = {
         "cost": "不花钱。难的是顶住家里催婚的压力，这可能要扛很多年。",
         "gain": "民法典第一千零五十一条规定，婚姻无效只有三种情形：重婚、有禁止结婚的亲属关系、未到法定婚龄。第一千零五十二、一千零五十三条规定，能撤销的只有两种：被胁迫结婚，婚前隐瞒重大疾病。婚姻家庭编解释（一）第十七条规定，拿这三种以外的理由请求确认婚姻无效，法院判决驳回。所以想退出只能离婚。形婚登记了也是合法婚姻。第一千零六十二条规定，婚后的工资、奖金、劳务报酬等是夫妻共同财产。第一千零六十四条规定，两人共同签字借的债、一方为家庭日常生活借的债，是夫妻共同债务。离婚损害赔偿看第一千零九十一条，限于重婚、与他人同居、家庭暴力、虐待遗弃家庭成员，以及「有其他重大过错」。解释（一）第二条把「与他人同居」限定为和「婚外异性」同居。所以同性关系只能按「其他重大过错」去争。赔偿包括精神损害赔偿，被瞒的一方起诉离婚时要一并提出，判不离就不支持。民法典施行后，没有查到法院公开的这类判决。旧法时期，江苏省高级人民法院网站 2013 年刊登的一篇文章，讨论了妻子因丈夫隐瞒同性恋起诉离婚的案子。文章列了两种看法。一种认为同性恋不在当时法定的过错里，多分财产和精神赔偿都不该支持。作者赞同另一种：把被瞒的一方当作「无过错方」，分财产时照顾她，还应赔精神抚慰金（全国）",
         "note": "多分财产和精神赔偿只有一篇分析文章，没写案子最后怎么判，所以能不能拿到要看具体法院。民法典比旧法多了「其他重大过错」这一项，给了被瞒的一方一个可以争的口子。法律条文本身是 A 级。形婚双方各有同性伴侣的，伴侣之间不受婚姻法保护，财产要另外写清楚，见本节第 18 条（同性伴侣办意定监护和遗嘱）。形婚离婚一样要走 30 天冷静期或者打官司，见本节第 15 条（协议离婚有 30 天冷静期）。协议离婚时写明放弃赔偿的，事后再起诉不会支持。受益人首先是会被瞒的那个配偶，其次是你自己：隐瞒被发现后，离婚、分财产、孩子抚养会一起摊上。",
+        "source": "全国人大 (2020). 民法典（第一千零五十一至一千零五十四、一千零六十二、一千零六十四、一千零七十九、一千零八十七、一千零九十一条）. <https://flk.npc.gov.cn/detail?id=ff808081729d1efe01729d50b5c500bf>（国家法律法规数据库）；最高人民法院 (2020). 关于适用《中华人民共和国民法典》婚姻家庭编的解释（一）（法释〔2020〕22 号，第二、十七、八十六至九十条）. <https://flk.npc.gov.cn/detail?id=ff80808177e75f880178006736f21aaf>；朱来宽、王洪娟 (2013). 因同性恋导致离婚能否主张损害赔偿？江苏法院网. <http://www.jsfy.gov.cn/article/26621.html>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -5972,6 +6305,7 @@ module.exports = {
         "cost": "要花钱。按次收费，各地各医院不一样，本条不写数字。研究里一般每周去一次，一项试验前后做了约 8 个月。难在两个人都得去，还得坚持做完。",
         "gain": "2020 年一项荟萃分析汇总了 58 项研究、2092 对伴侣。做完伴侣治疗，关系满意度的前后变化 g = 1.12（可信范围 0.92–1.31），作者说是大效应。g 是效应量，见 README 术语表。分到排队等候的伴侣，同一段时间 g = 0.12（−0.04 到 0.29），没有明显改善。开始时关系越差的，改善反而越多。2012 年一篇综述写的是，伴侣治疗让 70% 接受治疗的伴侣有好转。另一项随机试验找了 134 对长期、严重不和的夫妻，做了约 8 个月的两种行为伴侣治疗。做完时满意度变化 d = 0.90 和 0.71。到第 5 年，两种做法分别有 50.0% 和 45.9% 的夫妻仍有明显好转。这里的明显好转，作者叫「有临床意义的改善」。同时有 25.7% 和 27.9% 已经分居或离婚",
         "note": "争议在效果能保持多久。只收随机试验的另一项荟萃分析里，做完时 g = 0.60，半年后 0.44。到 12 个月只剩行为伴侣治疗有数据，g = 0.06，几乎没保住。另一篇汇总 20 项荟萃分析的综述说，有临床意义的效果出现在 40% 到 50% 的人身上。「七成好转」和「四到五成明显好转」用的标准不一样，别混着比。5 年那项试验没有不做治疗的对照，所以说不清离婚是变多还是变少了。2020 年那项汇总的全是异性伴侣，本条也没有找到国内的随机试验，套到自己身上要打折。国内去哪做：精神卫生法规定心理治疗要在医疗机构里做，心理咨询人员不得做心理治疗。可以去医院的精神科、心理科问有没有夫妻治疗。在医院外找机构，先问清对方的资质和受过什么训练。有家暴的先别一起做。2016 年那项荟萃分析写明，结论只适用于轻到中度、双方因冲突动手的情况。以控制对方、严重伤害为特征的暴力不在其内。业内也担心谈完回家遭报复。被打了先看第 8 节第 43 条（被家暴了）。吵架时怎么说话见本节第 17 条（吵架对事不对人），想清楚要不要走见本节第 15 条（退出成本）。受益人是你自己和配偶。",
+        "source": "Roddy MK, Walsh LM, Rothman K, Hatch SG, Doss BD (2020). Meta-analysis of couple therapy: effects across outcomes, designs, timeframes, and other moderators. Journal of Consulting and Clinical Psychology, 88(7), 583-596. <https://doi.org/10.1037/ccp0000514>；Lebow JL, Chambers AL, Christensen A, Johnson SM (2012). Research on the treatment of couple distress. Journal of Marital and Family Therapy, 38(1), 145-168. <https://doi.org/10.1111/j.1752-0606.2011.00249.x>；Christensen A, Atkins DC, Baucom B, Yi J (2010). Marital status and satisfaction five years following a randomized clinical trial comparing traditional versus integrative behavioral couple therapy. Journal of Consulting and Clinical Psychology, 78(2), 225-235. <https://doi.org/10.1037/a0018132>；Rathgeber M, Bürkner PC, Schiller EM, Holling H (2019). The efficacy of emotionally focused couples therapy and behavioral couples therapy: a meta-analysis. Journal of Marital and Family Therapy, 45(3), 447-463. <https://doi.org/10.1111/jmft.12336>（争议方）；Shadish WR, Baldwin SA (2003). Meta-analysis of MFT interventions. Journal of Marital and Family Therapy, 29(4), 547-570. <https://doi.org/10.1111/j.1752-0606.2003.tb01694.x>（争议方）；Karakurt G, Whiting K, van Esch C, Bolen SD, Calabrese JR (2016). Couples therapy for intimate partner violence: a systematic review and meta-analysis. Journal of Marital and Family Therapy, 42(4), 567-583. <https://doi.org/10.1111/jmft.12178>；全国人大常委会 (2018 修正). 精神卫生法（第二十三、五十一条）. <https://flk.npc.gov.cn/detail?id=2c909fdd678bf17901678bf7448a066d>（国家法律法规数据库）",
         "grade": "A",
         "meta": {
           "money": "多",
@@ -5993,6 +6327,7 @@ module.exports = {
         "cost": "不花钱。动手前把「技术上能不能做」换成另一个问题：厂商、平台、公司会不会去报案。难在忍住「这点小事没人管」的念头，因为服务器日志、支付记录、群聊记录，办案时默认都会被调出来",
         "gain": "任何单位和个人发现犯罪事实，都有权去报案。办案机关认为有犯罪事实，就应当立案。被刑事拘留之后，公安要在 3 日内提请批捕（向检察院申请正式逮捕）。特殊情况可以延长 1 到 4 日。流窜作案（跨地方连续作案）这类情形可以延长到 30 日。检察院再用 7 日决定。加起来最长 37 天内决定捕不捕。从第一次讯问起，或者从被采取强制措施（被拘留、逮捕这一类）起，你就可以委托律师。案子还在公安手里查的阶段，只能委托律师。律师要求会见，看守所最迟 48 小时内安排。可能判管制、拘役这类比坐牢轻的刑罚，或者只判附加刑、不判主刑的，可以取保候审：交一笔保证金或者找个保证人，先回家等着办案。取保最长 12 个月（全国）",
         "note": "这 37 天，算的是从被拘留到检察院决定批不批准逮捕，不是关押的上限。批捕之后还有侦查期间的羁押期限，接着往下算。懂行的律师最管用的也是这 37 天：见到人、向检察院递一份「不该批捕」的意见、申请取保候审。等到起诉之后再找律师就晚了。本节其余条目讲的都是同一件事：对方有没有报案的理由。",
+        "source": "全国人大 (2018). 刑事诉讼法（2018 年修正，第三十四、三十九、六十七、七十九、九十一、一百一十、一百一十二条）. <https://www.spp.gov.cn/zdgz/201810/t20181027_396818.shtml>",
         "grade": "C",
         "meta": {
           "money": "0",
@@ -6012,6 +6347,7 @@ module.exports = {
         "cost": "不花钱。代价是放弃这类接单和「小工具」的收入。难在这笔钱来得快，又看不出谁会来追究",
         "gain": "提供专门用于侵入、非法控制计算机信息系统的程序、工具，情节严重的判 3 年以下，并处或单处罚金。并处是判刑的同时罚钱，单处是只罚钱。情节特别严重的判 3 到 7 年并处罚金。「情节严重」的门槛是提供工具 20 人次以上，或者违法所得 5000 元以上。违法所得就是靠这件事挣到的钱。故意绕开或者破坏权利人设的技术保护措施，还可能构成侵犯著作权罪，判 3 年以下，严重的判 3 到 10 年。官方案例：王某等人制售外挂，靠读取和修改游戏内存实现透视、自瞄。3 个月卖了 8 万余元，获利 3 万余元。判 1 年缓 1 年、罚 5000 元。缓 1 年就是判了 1 年但先不关，这一年里不再犯事就不用去坐牢。项某等人卖「TZ」系列外挂，销售额 20 余万元，项某判 3 年缓 3 年、罚 2 万元。刘某某等人拿到游戏服务端程序，改参数开私服，收了充值 2000 余万元。判 4 年到 2 年 6 个月，罚 1000 万到 130 万元。不只是游戏。上海一家公司做了刷机包，让手机里的微信多出自动转发、点赞、群发等几十种功能，当「营销手机」卖了 2381 台。2019 年上海徐汇法院按侵犯著作权罪判公司罚金 50 万元，负责人判 1 年 6 个月缓 1 年 6 个月（全国）",
         "note": "已经公布的外挂判例，都是读写游戏内存、绕过反作弊的那种。「只截屏、只模拟按键」的辅助还没见过官方判例。但第 3 条的抢票案说明，不碰内存、只发请求，一样能定非法获取数据罪。最后算不算犯罪、按哪个罪算，由办案机关根据厂商报案时交上去的材料定，不是作者说了算。卖 20 人次就够「情节严重」，这个量很小。",
+        "source": "全国人大 (2020). 刑法（根据刑法修正案（十一）修正，第二百八十五条第三款、第二百一十七条第六项）. <https://jtgl.beijing.gov.cn/jgj/jgxx/flfg/fl/11033925/index.html>；最高人民法院、最高人民检察院 (2011). 关于办理危害计算机信息系统安全刑事案件应用法律若干问题的解释（第三条）. <https://ga.sz.gov.cn/ZWGK/ZCFG/ZCJD/content/post_1304363.html>（深圳市公安局转载）；最高人民检察院 (2026). 上海静安：严惩制售游戏外挂黑灰产共护清朗网络空间. <https://www.spp.gov.cn/spp/zdgz/202608/t20260825_735480.shtml>；最高人民检察院 (2021). 2020 年度检察机关保护知识产权典型案例（案例五）. <https://www.spp.gov.cn/spp/xwfbh/wsfbt/202104/t20210425_516525.shtml>；国家版权局 (2020). 2019 年度上海十大版权典型案件发布（上海市版权局发布，案例八：上海昱宫网络科技有限公司等侵犯著作权案）. <https://www.ncac.gov.cn/xxfb/ywxx/202004/t20200430_47269.html>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -6031,6 +6367,7 @@ module.exports = {
         "cost": "不花钱，也不占时间",
         "gain": "侵入计算机信息系统，或者用其他技术手段拿到里面的数据，情节严重的判 3 年以下，并处或单处罚金，特别严重的判 3 到 7 年。「情节严重」的门槛是违法所得 5000 元以上，或者造成损失 1 万元以上。官方案例：某人用外挂批量导入买来的 12306 账号，多线程密集提交购票请求。他代抢火车票 200 余张，获利 2 万余元。法院以非法获取计算机信息系统数据罪，判他 1 年 6 个月缓 1 年 6 个月、罚 5000 元。郑某在网店卖针对某售票 App 的抢票软件，被判构成不正当竞争，赔 2 万元（全国）",
         "note": "抢票案里的脚本不改内存、不破解，只是「比人快」，仍然按刑法 285 条定罪。收钱代抢和卖脚本都算牟利。自己用一次的情形，没有找到官方案例。",
+        "source": "全国人大 (2020). 刑法（根据刑法修正案（十一）修正，第二百八十五条第二款）. <https://jtgl.beijing.gov.cn/jgj/jgxx/flfg/fl/11033925/index.html>；最高人民法院、最高人民检察院 (2011). 关于办理危害计算机信息系统安全刑事案件应用法律若干问题的解释（第一条）. <https://ga.sz.gov.cn/ZWGK/ZCFG/ZCJD/content/post_1304363.html>；最高人民检察院 (2026). 上海静安：查办利用外挂软件批量代抢火车票牟利案. <https://www.spp.gov.cn/spp/dfjcdt/202607/t20260707_731426.shtml>；最高人民法院 (2025). 2024 年人民法院知识产权典型案例（案例七，抢票软件不正当竞争案）. <https://enipc.court.gov.cn/zh-cn/news/view-4205.html>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -6050,6 +6387,7 @@ module.exports = {
         "cost": "不花钱。爬虫就是自动翻网页、把上面的数据抓下来的程序。爬之前先看一眼 robots 文件和接口授权说明，robots 是网站放在自己根目录、写明哪些页面不让抓的那份文件。要登录、要 token（一串临时通行凭证）、要破解签名才拿得到的数据，不爬。难在这些数据技术上一抓就到手，忍住全靠自觉",
         "gain": "绕过防护拿系统里的数据，量刑和第 3 条（抢票秒杀刷单脚本）一样，判 3 年以下，或者 3 到 7 年。非法获取、出售或者提供公民个人信息，达到下面任何一条就算「情节严重」：行踪轨迹、通信内容、征信、财产信息 50 条以上；住宿、通信记录、健康、交易信息 500 条以上；其他个人信息 5000 条以上；违法所得 5000 元以上。情节严重的判 3 年以下，并处或单处罚金，特别严重的判 3 到 7 年。官方案例：软件开发人员李某把窃取手机相册的功能伪装成「颜值检测」软件，拿到人脸照片 1751 张，还倒卖社工库资料，判 3 年缓 3 年。社工库就是把各处泄露的个人信息汇总起来的数据库。某网络科技公司用爬虫拿外卖平台的店铺、订单数据，造成损失 4 万余元，被以非法获取计算机信息系统数据罪追诉（全国）",
         "note": "2017 年那份司法解释规定，「未经本人同意，把合法收集来的信息给别人」也算「提供」。公司里把用户表导给外部合作方，同样落在这句里。5000 条只是一张小表的量。",
+        "source": "全国人大 (2020). 刑法（根据刑法修正案（十一）修正，第二百八十五条第二款、第二百五十三条之一）. <https://jtgl.beijing.gov.cn/jgj/jgxx/flfg/fl/11033925/index.html>；最高人民法院、最高人民检察院 (2017). 关于办理侵犯公民个人信息刑事案件适用法律若干问题的解释（第三、四、五条）. <https://www.spp.gov.cn/xwfbh/wsfbt/201705/t20170509_190088.shtml>；最高人民检察院 (2022). 检察机关依法惩治侵犯公民个人信息犯罪典型案例（案例二）. <https://www.spp.gov.cn/spp/xwfbh/wsfbt/202212/t20221207_594915.shtml>；最高人民检察院 (2025). 检察机关依法惩治侵害企业数据安全犯罪 服务保障企业创新发展（案例一）. <https://www.spp.gov.cn/xwfbh/wsfbh/202501/t20250124_680670.shtml>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -6069,6 +6407,7 @@ module.exports = {
         "cost": "不花钱。代价是放弃这类报价高、需求又说不清的外包。难在对方给的钱常常比正常单子高一大截",
         "gain": "明知别人在利用网络犯罪，还给他提供技术支持、支付结算这类帮助，情节严重的判 3 年以下，并处或单处罚金。同时还构成其他犯罪的，按更重的那个罪判。开设赌场判 5 年以下并处罚金，情节严重的判 5 到 10 年。官方案例：张盛集团研发赌博游戏后「包网外销」，收建站费、报表费。涉案近 70 亿元。张盛判 9 年 9 个月、罚 5000 万元。负责外包研发的王强等 79 人，判 6 个月到 9 年 9 个月不等。陈东等人开发运营电竞竞猜 App，技术团队在海南写代码，28 人以开设赌场罪判 3 年 6 个月到 1 年不等，并处罚金。张某某开工作室替诈骗团伙解封被封的 QQ 号，判 1 年 6 个月、罚 2 万元（全国）",
         "note": "「明知」不需要对方把用途说出口。报价明显高于市价、功能是充值提现加赔率、客户不肯说用途，办案时都会拿来推断你心里清楚。开发赌博 App 的技术人员，是按开设赌场罪的共犯办，不是帮信罪封顶 3 年那一档。帮信罪是「帮助信息网络犯罪活动罪」的简称。",
+        "source": "全国人大 (2020). 刑法（根据刑法修正案（十一）修正，第二百八十七条之二、第三百零三条第二款）. <https://jtgl.beijing.gov.cn/jgj/jgxx/flfg/fl/11033925/index.html>；最高人民检察院 (2023). 建赌博网站并出售，涉案近 70 亿元. <https://www.spp.gov.cn/spp/zdgz/202307/t20230711_621248.shtml>；最高人民检察院 (2022). 上海闵行区：办理一起新型开设网络赌场案. <https://www.spp.gov.cn/spp/zdgz/202208/t20220805_569952.shtml>；最高人民检察院 (2025). 依法惩治帮助信息网络犯罪活动及相关犯罪典型案例（案例一）. <https://www.spp.gov.cn/xwfbh/wsfbt/202507/t20250728_702377.shtml>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -6088,6 +6427,7 @@ module.exports = {
         "cost": "不花钱。公司欠你工资，走劳动仲裁要回来，别自己动手（劳动仲裁见第 7 节）。难在气头上要忍住不去碰系统",
         "gain": "非法控制计算机信息系统，情节严重的判 3 年以下，并处或单处罚金，特别严重的判 3 到 7 年。删除、修改系统功能或者数据，造成系统不能正常运行，后果严重的判 5 年以下，特别严重的判 5 年以上。官方案例：IT 高级工程师吕某某被辞退后，用原管理员账号登录公司共享服务器。他改了密码，删了数据和日志，造成损失 12 万余元。判 3 年缓 5 年、罚 3 万元。软件公司员工白某某写升级程序时故意加进错误代码，导致客户系统无法登录，损失 4 万余元，以破坏计算机信息系统罪追诉（全国）",
         "note": "账号密码是公司给的，不等于离职后还能用。用原账号登录，就算「非法控制」。损失按数据恢复费用算，几万元就够立案。",
+        "source": "全国人大 (2020). 刑法（根据刑法修正案（十一）修正，第二百八十五条第二款、第二百八十六条）. <https://jtgl.beijing.gov.cn/jgj/jgxx/flfg/fl/11033925/index.html>；最高人民检察院 (2024). 检察机关「依法惩治网络犯罪 助力网络空间综合治理」典型案例（案例六）. <https://www.spp.gov.cn/xwfbh/wsfbh/202402/t20240223_644505.shtml>；最高人民检察院 (2025). 检察机关依法惩治侵害企业数据安全犯罪 服务保障企业创新发展（案例七）. <https://www.spp.gov.cn/xwfbh/wsfbh/202501/t20250124_680670.shtml>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -6107,6 +6447,7 @@ module.exports = {
         "cost": "不花钱。离职前把个人电脑和网盘里的公司资料删干净。难在有些文件是自己一行行写出来的，舍不得",
         "gain": "违反保密义务，把商业秘密说出去或者自己拿来用，情节严重的判 3 年以下，并处或单处罚金，特别严重的判 3 到 10 年并处罚金。反不正当竞争法还把两件事列为侵权：用「电子侵入」（技术手段侵入系统）拿商业秘密；教唆、帮助别人违反保密义务。官方案例：孙某明等离职员工带走安检系统源码和核心算法，用在新公司的产品上，孙某明判 5 年、罚 50 万元，新公司罚 400 万元。田某某利用系统漏洞下载 3.3 万余个设计文件，判 1 年 10 个月、罚 10 万元。工程师杨某某把 App 模块源码存进个人电脑和云端，跳槽后做同类 App，以侵犯商业秘密罪追诉（全国）",
         "note": "「自己写的代码」著作权也归公司，这一点见第 13 条（用公司资源写的代码归公司）。带走就是拿公司的东西。客户名单属于经营信息，同样是商业秘密。判刑之外，公司还会另起民事索赔。",
+        "source": "全国人大 (2020). 刑法（根据刑法修正案（十一）修正，第二百一十九条）. <https://jtgl.beijing.gov.cn/jgj/jgxx/flfg/fl/11033925/index.html>；全国人大常委会 (2025). 反不正当竞争法（2025 年修订，第十条）. <https://www.spp.gov.cn/spp/fl/202506/t20250627_699862.shtml>；最高人民检察院 (2025). 检察机关知识产权保护典型案例（案例七）. <https://www.spp.gov.cn/xwfbh/wsfbh/202504/t20250423_693691.shtml>；最高人民检察院 (2020). 2019 年度检察机关保护知识产权典型案例（案例十六）. <https://www.spp.gov.cn/xwfbh/wsfbh/202004/t20200425_459623.shtml>；最高人民检察院 (2025). 检察机关依法惩治侵害企业数据安全犯罪 服务保障企业创新发展（案例五）. <https://www.spp.gov.cn/xwfbh/wsfbh/202501/t20250124_680670.shtml>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -6126,6 +6467,7 @@ module.exports = {
         "cost": "不花钱，也不占时间",
         "gain": "对计算机信息系统实施非法控制，情节严重的判 3 年以下，并处或单处罚金，特别严重的判 3 到 7 年。非法控制 20 台以上就算「情节严重」。还够不上犯罪的，公安没收违法所得，拘留 5 日以下，并可以罚 5 万到 50 万元。情节较重的拘留 5 到 15 日，并可以罚 10 万到 100 万元。受过治安处罚的 5 年内、受过刑事处罚的终身，不得从事网络安全管理和网络运营的关键岗位。官方案例：李某买来网络摄像头的 IP，用软件控制了 105 台摄像头窥探隐私，判 3 年缓 5 年、罚 2 万元。吴某等人把木马植入手机主板，控制 330 余万部手机回传验证码，判 2 年到 4 年 6 个月（全国）",
         "note": "用公司服务器挖矿，没有找到最高检、最高法公布的案例，这条是按「没经过允许就控制别人的系统」那条法条写的。「终身不得从事关键岗位」是网络安全法在罚款、判刑之外附带的一道后果，对技术人来说比罚款重。",
+        "source": "全国人大 (2020). 刑法（根据刑法修正案（十一）修正，第二百八十五条第二款）. <https://jtgl.beijing.gov.cn/jgj/jgxx/flfg/fl/11033925/index.html>；最高人民法院、最高人民检察院 (2011). 关于办理危害计算机信息系统安全刑事案件应用法律若干问题的解释（第一条）. <https://ga.sz.gov.cn/ZWGK/ZCFG/ZCJD/content/post_1304363.html>；全国人大常委会 (2025). 网络安全法（2025 年修正，2026 年 1 月 1 日施行，第二十九、六十六条；2016 年文本为第二十七、六十三条，终身禁业为修正后的第六十六条第三款）. <https://www.cac.gov.cn/2025-12/29/c_1768735112911946.htm>；最高人民检察院 (2022). 山东滨州开发区：办理一起非法控制计算机信息系统案. <https://www.spp.gov.cn/spp/dfjcdt/202205/t20220518_557113.shtml>；最高人民检察院 (2021). 充分发挥检察职能 推进网络空间治理典型案例（案例六）. <https://www.spp.gov.cn/spp/xwfbh/wsfbh/202101/t20210125_507452.shtml>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -6145,6 +6487,7 @@ module.exports = {
         "cost": "不花钱。参加厂商 SRC 或者众测之前，先拿到写明授权范围、目标清单和可测时间段的文件。SRC 是厂商自己办的安全应急响应中心，专门接收外部报来的漏洞。验证到漏洞确实存在就停手。难在放弃「顺手试一下」这一下",
         "gain": "普通公司和个人的系统，属于国家事务、国防建设、尖端科学技术领域以外的计算机信息系统。侵入这类系统，或者采用其他技术手段，拿到里面存储、处理、传输的数据，情节严重的判 3 年以下有期徒刑或者拘役，并处或单处罚金。特别严重的判 3 到 7 年并处罚金。「情节严重」有几条标准：拿到支付结算、证券交易、期货交易等网络金融服务的身份认证信息（账号密码这类）10 组以上；拿到其他身份认证信息 500 组以上；非法控制计算机信息系统 20 台以上；违法所得 5000 元以上，或者造成经济损失 1 万元以上。上面这些数字的 5 倍以上，就是「情节特别严重」。官方案例：检例第 36 号确立了一句话，「超出授权范围使用账号、密码登录计算机信息系统，属于侵入计算机信息系统的行为」。意思是手里本来就有账号密码，但用在授权范围以外，这个行为本身就算侵入。该案三人用工作中掌握的账号、密码和令牌，异地登录公司内部系统，下载了不属于工作范围的数据，拿到网上出售，违法所得 37000 元。三人分别判 4 年、3 年 9 个月、4 年，各罚 4 万元（全国）",
         "note": "检例第 36 号那个指导性案例，本身是卖数据牟利的案子。引它只是为了「超出授权范围登录也算侵入」这一句，不是说善意测试会判得一样重。你本意想干什么、事后有没有上报，都不能把罪名抵消掉，只可能影响判多重、起不起诉。厂商先道谢、回头再报案，两件事并不矛盾，道谢不等于授权。2016 年，一名白帽子把世纪佳缘网站的漏洞提交到第三方漏洞平台，后来世纪佳缘报了警，他被抓。世纪佳缘对记者说，报警是因为有数据被人拿走，当时不知道拿数据的就是提交漏洞的人。此案只有媒体报道，没有判决，也没有官方通报，最后怎么处理没有官方说法。最高法、最高检官网上也没找到能逐字核对的善意测试类案例，所以本条只按法条和处罚标准定级。要做就走厂商公开的 SRC，或者有书面委托的测评，把范围、目标和时间窗口都写进文件。证明漏洞存在用最少的证据，不批量取数据。够不上犯罪的那一档也要挨治安处罚，还有从业禁止，罚款数额和年限同第 8 条（不在别人的机器上跑自己的程序）。发现漏洞之后怎么处理，见第 10 条（漏洞按规定报送）。",
+        "source": "全国人大 (2020). 刑法（根据刑法修正案（十一）修正，第二百八十五条第一款、第二款）. <https://jtgl.beijing.gov.cn/jgj/jgxx/flfg/fl/11033925/index.html>；最高人民法院、最高人民检察院 (2011). 关于办理危害计算机信息系统安全刑事案件应用法律若干问题的解释（第一条）. <https://ga.sz.gov.cn/ZWGK/ZCFG/ZCJD/content/post_1304363.html>（深圳市公安局转载）；最高人民检察院 (2017). 第九批指导性案例（检例第 36 号，卫梦龙、龚旭、薛东东非法获取计算机信息系统数据案）. <https://www.spp.gov.cn/spp/jczdal/201710/t20171017_202593.shtml>；央广网 (2016-06-29). 白帽子发布漏洞后被抓 世纪佳缘否认“钓鱼”使其上套（记者赵珂，实习记者刘香玺）. <https://m.cnr.cn/news/yctt/20160629/t20160629_522531823.html>（网页存档 <https://web.archive.org/web/20261005043859/https://m.cnr.cn/news/yctt/20160629/t20160629_522531823.html>）",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -6164,6 +6507,7 @@ module.exports = {
         "cost": "不花钱。把漏洞报给产品提供者，或者报给官方平台。厂商修好之前，不发细节，也不发验证代码",
         "gain": "这份规定管三类对象：境内的网络产品提供者、网络运营者，以及从事漏洞发现、收集、发布等活动的组织或者个人。任何组织或者个人，不得利用漏洞从事危害网络安全的活动，不得非法收集、出售、发布漏洞信息。向社会发布漏洞信息要守五条。第一，不得在产品提供者提供修补措施之前发布。第二，不得发布网络运营者在用的网络、信息系统及其设备存在漏洞的细节情况。第三，不得刻意夸大危害和风险，不得利用漏洞信息实施恶意炒作或者诈骗。第四，不得发布或者提供专门用于利用漏洞从事危害网络安全活动的程序和工具。第五，发布时应当同步发布修补或者防范措施。另外，未公开的漏洞信息，不得提供给产品提供者之外的境外组织或者个人。规定鼓励把漏洞报给四个官方平台。一是工业和信息化部网络安全威胁和漏洞信息共享平台。二是国家网络与信息安全信息通报中心漏洞平台。三是国家计算机网络应急技术处理协调中心漏洞平台。四是中国信息安全测评中心漏洞库。违反规定收集、发布漏洞信息的，由工业和信息化部、公安部依据各自职责依法处理。构成网络安全法规定情形的，依该法处罚。向社会发布系统漏洞等网络安全信息，应当遵守国家有关规定。违反的，由有关主管部门责令改正、给予警告，可以处 1 万元以上 10 万元以下罚款。拒不改正或者情节严重的，处 10 万元以上 100 万元以下罚款。还可以责令暂停相关业务、停业整顿、关闭网站或者应用程序。也可以吊销相关业务许可证或者吊销营业执照。对直接负责的主管人员和其他直接责任人员，处 1 万元以上 10 万元以下罚款（全国）",
         "note": "规定把个人明确写进了管的对象里，「我只是个业余爱好者」不在例外里。往境外的漏洞赏金平台提交国内系统的洞，正落在「未公开的漏洞不得提供给境外」这一条上。有没有资格去测，见第 9 条（没有书面授权不测别人的系统），和拿到漏洞后怎么处置要分开看。合法发现的漏洞，也可能因为发布方式违规被罚；未经授权测出来的漏洞，测和发布两头都有问题。报送渠道里，工信部平台和国家互联网应急中心（CNCERT）用得最多。规定没有专门区分「已经通知厂商、厂商却不修」这种情况，实际做法是把协商和报告的过程留下记录，同时报给官方平台。",
+        "source": "工业和信息化部、国家互联网信息办公室、公安部 (2021). 网络产品安全漏洞管理规定（工信部联网安〔2021〕66 号，第二、四、九、十、十四条，2021 年 9 月 1 日施行）. <https://www.gov.cn/gongbao/content/2021/content_5641351.htm>；全国人大常委会 (2025). 网络安全法（2025 年修正，2026 年 1 月 1 日施行，第二十八、六十五条；2016 年文本为第二十六、六十二条，规定第十四条援引的是 2016 年文本的条号）. <https://www.cac.gov.cn/2025-12/29/c_1768735112911946.htm>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -6183,6 +6527,7 @@ module.exports = {
         "cost": "不花钱，也不占时间",
         "gain": "直接进行国际联网，必须使用国家公用电信网提供的国际出入口信道。任何单位和个人不得自行建立或者使用其他信道：既不能自己搭线路出境，也不能用别人搭的。违反的，由公安责令停止联网、给予警告，可以并处 1.5 万元以下罚款，没收违法所得。靠这个做生意的，办案机关可以按非法经营罪处理。情节严重的判 5 年以下，并处或单处违法所得 1 到 5 倍的罚金。特别严重的判 5 年以上（全国）",
         "note": "本节写作时，未在最高法、最高检官网找到公布的翻墙类判例，各地处理差异也大，所以定 B 级。个人自己用的，处罚最重是暂行规定第十四条写的警告加罚款。",
+        "source": "国务院 (1997). 计算机信息网络国际联网管理暂行规定（第六、十四条）. <https://nyncw.cq.gov.cn/wsdw/zz/zhfb/wlyxxaq/202406/t20240619_13306645.html>（重庆市农业农村委员会转载）；全国人大 (2020). 刑法（根据刑法修正案（十一）修正，第二百二十五条第四项）. <https://jtgl.beijing.gov.cn/jgj/jgxx/flfg/fl/11033925/index.html>",
         "grade": "B",
         "meta": {
           "money": "0",
@@ -6202,6 +6547,7 @@ module.exports = {
         "cost": "不花钱。离职时留好竞业协议的原件，以及公司没有按月付钱的证据",
         "gain": "竞业限制只能约束高管、高级技术人员，以及其他负有保密义务的人。期限最长 2 年。公司必须在这段期限内按月给经济补偿。没有约定补偿数额的，按离职前 12 个月平均工资的 30% 给，并且不低于当地最低工资。因为公司自己的原因 3 个月没付，劳动者可以请求解除这份竞业限制。公司主动解除的，要额外付 3 个月补偿。2025 年起，岗位上没知道、没接触过商业秘密的劳动者，可以请求确认条款不生效。约定范围超出他实际知道的那部分秘密的，超出的部分无效。官方案例：某医药公司起诉首席技术官郑某，索赔违约金 710 万元。法院认定他新东家的产品与原公司不具替代性，竞业范围应当限于他实际知悉的秘密，判决全部驳回（全国）",
         "note": "反过来，协议有效、公司也按月付了钱，你还去竞品上班，就要按约定掏违约金。掏完还可能被要求把剩下的竞业期守完。在职期间约定的竞业，公司不另外给钱也算数。",
+        "source": "全国人大常委会 (2012). 劳动合同法（2012 年修正，第二十三、二十四条）. <https://yjglj.fushun.gov.cn/008/20260622/d846d3c2-df3d-4c4c-af16-898ede43e1ee.html>（抚顺市应急管理局转载）；最高人民法院 (2020). 关于审理劳动争议案件适用法律问题的解释（一）（第三十六至四十条）. <https://www.court.gov.cn/zixun/xiangqing/282121.html>；最高人民法院 (2025). 关于审理劳动争议案件适用法律问题的解释（二）（法释〔2025〕12 号，第十三至十五条）. <https://www.court.gov.cn/zixun/xiangqing/472691.html>；最高人民法院 (2025). 劳动争议典型案例（案例四）. <https://www.court.gov.cn/zixun/xiangqing/472681.html>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -6221,6 +6567,7 @@ module.exports = {
         "cost": "不花钱。入职时把劳动合同里的知识产权条款看清楚。难在个人项目和公司的活常常混在一台电脑上，要分开",
         "gain": "为完成单位工作任务创作的作品是职务作品（上班干活做出来的东西）。一般情形下著作权归作者，单位有权在业务范围内优先使用，并且 2 年内作者不得许可第三人以相同方式使用。但有两类情况不一样。一类是主要利用单位物质技术条件创作、并由单位承担责任的工程设计、软件等作品。另一类是合同约定归单位的作品。这两类作者只保留署名权。单位物质技术条件指的是公司的设备、内网、业务数据这些。执行本单位任务，或者主要利用本单位物质技术条件完成的发明创造，是职务发明，申请专利的权利和拿到的专利权都归单位（全国）",
         "note": "软件被直接写进「著作权归单位」那一类，程序员几乎落不进「著作权归作者、单位两年内优先使用」那一档。「下班写的」只要用了公司电脑、内网或者公司业务数据，一样可能被算成主要是靠单位的设备和资料做出来的。想把个人项目做干净，就用自己的机器，不碰公司仓库，不和公司业务重叠。",
+        "source": "全国人大常委会 (2020). 著作权法（2020 年修正，第十八条）. <http://www.npc.gov.cn/npc/c2/c30834/202011/t20201119_308796.html>；全国人大常委会 (2020). 专利法（2020 年修正，第六条）. <http://www.npc.gov.cn/npc/c2/c30834/202011/t20201119_308800.html>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -6240,6 +6587,7 @@ module.exports = {
         "cost": "不花钱。用别人的开源代码之前，看一眼它的许可证（作者写明的使用条件）。GPL 这一系要求用了它的产品也得把源码开出来，和闭源卖钱冲突，冲突就换一个。难在舍掉一个已经用顺手的库",
         "gain": "侵犯著作权，按权利人的实际损失赔，或者按侵权人挣到的钱赔。这两样都算不清的，参照正常买这份授权要付多少钱来定。故意侵权并且情节严重的，可以判 1 到 5 倍赔偿。损害公共利益的，还可以没收违法所得并处罚款。官方案例：（2021）最高法知民终 51 号。被告招聘了原告的前员工，开发出的网关软件与原告软件实质相似。被告抗辩说，原告软件基于 GPLv2、本来就该开源。最高法认定「开发者自身是否违反 GPLv2 协议和是否享有软件著作权是两个独立问题」，判停止侵害、赔偿 50 万元（全国）",
         "note": "这个案子说明，「对方用了 GPL 代码」不能当成你抄它的理由。反过来，GPL 作者起诉不开源的商用方，在国内已经有生效判决，本节未在最高法官网找到原文，所以不引。定 B 级是因为守不守开源许可证，只能靠合同和著作权法里的通用规定管，没有一条专门的法条。",
+        "source": "全国人大常委会 (2020). 著作权法（2020 年修正，第五十三、五十四条）. <http://www.npc.gov.cn/npc/c2/c30834/202011/t20201119_308796.html>；最高人民法院知识产权法庭 (2022). 涉「开源软件」著作权侵权案（（2021）最高法知民终 51 号）. <https://ipc.court.gov.cn/zh-cn/news/view-3042.html>",
         "grade": "B",
         "meta": {
           "money": "0",
@@ -6259,6 +6607,7 @@ module.exports = {
         "cost": "不花钱。上线前把 App 申请的权限列表和隐私政策对一遍，能不要的权限就不要。难在产品那边总想多留一些「以后可能用得上」的数据",
         "gain": "处理个人信息应当有明确合理的目的，与这个目的直接相关，并且采取对个人权益影响最小的方式。处理个人信息要取得个人同意，或者符合法定情形。不满 14 周岁的，必须取得父母或者监护人同意。违反的，由监管部门责令改正、给予警告、没收违法所得，对违法的 App 责令暂停或者终止提供服务。拒不改正的罚 100 万元以下，对直接负责的主管人员和其他直接责任人员罚 1 万到 10 万元。情节严重的罚 5000 万元以下，或者上一年度营业额 5% 以下。责任人员罚 10 万到 100 万元。这些人还可能被禁止在一定期限内担任相关企业的董事、监事、高管。出售或者提供个人信息构成犯罪的，见第 4 条（全国）",
         "note": "「直接责任人员」在实务里常常落到写代码和做产品的人头上。工信部定期通报下架违规 App，本节没有核实到具体是哪一期通报，所以不引。",
+        "source": "全国人大常委会 (2021). 个人信息保护法（第六、十三、三十一、六十六条）. <http://www.npc.gov.cn/npc/c2/c30834/202108/t20210820_313088.html>",
         "grade": "B",
         "meta": {
           "money": "0",
@@ -6278,6 +6627,7 @@ module.exports = {
         "cost": "备案免费，走云厂商的流程大概几周。等级保护测评按级别收费。等级保护简称等保，是国家按系统重要程度分级、要求网站和系统做到的一套安全管理动作，小站一般不需要做测评",
         "gain": "经营性的互联网信息服务实行许可，非经营性的实行备案。没有取得许可、或者没有备案的，不得从事。未备案的，由电信管理机构责令改正，拒不改正的责令关闭网站。未经许可经营的，没收违法所得，并罚违法所得的 3 到 5 倍，或者罚 10 万到 100 万元。网站主页不标备案号，罚 5000 元到 5 万元。网络运营者要按等级保护制度（等保）制定安全管理制度、防范攻击、留存网络日志不少于 6 个月、对数据分类备份加密。不履行的，责令改正、给予警告。拒不改正或者造成后果的，罚 1 万到 10 万元，主管人员罚 5000 元到 5 万元（全国）",
         "note": "境内服务器不备案，域名根本解析不了。备案怎么办、不挂备案号罚多少、怎么查服务商有没有资质，见第 26 节第 4 条（服务器放境内就要备案）。常见的坑有两种：备案成个人非经营性，实际却在收费；换了域名或者换了主体，没去变更备案。日志留 6 个月既是义务也是自保，出事时能证明不是你干的。",
+        "source": "国务院 (2011). 互联网信息服务管理办法（2011 年修订，第四、十九、二十二条）. <https://www.gov.cn/gongbao/content/2011/content_1860864.htm>；全国人大常委会 (2025). 网络安全法（2025 年修正，2026 年 1 月 1 日施行，第二十三、六十一条；2016 年文本为第二十一、五十九条）. <https://www.cac.gov.cn/2025-12/29/c_1768735112911946.htm>",
         "grade": "A",
         "meta": {
           "money": "少",
@@ -6297,6 +6647,7 @@ module.exports = {
         "cost": "不花钱，但要走网信部门的流程，办下来要花些时间。个人做的小工具只要不对公众开放，就不触发这一套",
         "gain": "提供具有舆论属性或者社会动员能力的生成式人工智能服务，应当按国家规定开展安全评估，并按算法推荐管理规定办算法备案，以及后续的变更、注销手续。舆论属性或者社会动员能力，指的是能影响公众看法，或者能把人组织动员起来。提供者应当对图片、视频等生成内容进行标识。办法自 2023 年 8 月 15 日施行（全国）",
         "note": "这个办法自己没写罚多少钱。违反了要回到网络安全法、数据安全法、个人信息保护法里找处罚，所以定 B 级。用 AI 生成的内容侵犯别人著作权、肖像的民事案例，本节未在最高法官网核实原文，不引。低价转卖境外大模型接口的中转站，见本节第 19 条（AI 中转站）。",
+        "source": "国家互联网信息办公室等七部门 (2023). 生成式人工智能服务管理暂行办法（第十二、十七条）. <https://www.gov.cn/zhengce/zhengceku/202307/content_6891752.htm>",
         "grade": "B",
         "meta": {
           "money": "0",
@@ -6316,6 +6667,7 @@ module.exports = {
         "cost": "不花钱。代价是放掉一个很受欢迎的小工具。难在你觉得自己没挣钱，只是替用户点了一下「跳过」",
         "gain": "法律规定，经营者不得利用技术手段，妨碍、破坏其他经营者合法提供的网络产品或服务正常运行。这里的经营者，指提供商品或服务的自然人、法人和非法人组织。给对方造成损害的，按对方的实际损失赔，或者按你因此得到的好处赔，再加上对方为制止侵权花的合理开支。市场监管部门还可以罚 10 万到 100 万元，情节严重的罚 100 万到 500 万元。官方案例：720 浏览器的内置功能默认拦截芒果TV 网站的片头广告和暂停广告。一审驳回了芒果TV 的起诉。广州知识产权法院二审改判，认定构成不正当竞争，判赔经济损失和合理开支 80 万元。2021 年最高法把它列为典型案例。「拦精灵」App 让用户直接跳过芒果TV 的开屏广告。一审判它停止，赔经济损失 8 万元、合理开支 1 万元。2024 年 4 月，北京知识产权法院二审维持。二审认为它实际是把开屏广告屏蔽了，不只是替用户点「跳过」（全国）",
         "note": "两起判决用的是修订前的条文。2025 年修订后，这一条挪到第十三条，还加上了数据、算法和平台规则。二审法院说判的是屏蔽，用户自己点「跳过」不受影响。2023 年 8 月，安卓上的免费跳广告工具「李跳跳」收到腾讯的律师函。律师函说它屏蔽了腾讯浏览器的广告，构成不正当竞争，要它 48 小时内下架。开发者说它是公益性质、不盈利，报道说它只收零星打赏，但它还是宣布无限期停更，几款同类软件也停了。此事只有媒体报道，没有起诉，也没有判决。个人开发者收到律师函，要么停手，要么自己花钱请律师应诉。一审普通程序 6 个月起，律师费一般自己出。自己写个脚本只给自己用，没找到被追究的案例。卖抢票软件按不正当竞争赔钱，见本节第 3 条（抢票秒杀脚本）。受益人是你自己。",
+        "source": "全国人大常委会 (2025 年修订). 反不正当竞争法（第二、十三、二十二、二十九条）. <https://flk.npc.gov.cn/detail?id=ff808181971552b40197b1016efc5437>；最高人民法院 (2021). 人民法院反垄断和反不正当竞争典型案例（案例五：「720浏览器」不正当竞争纠纷，（2018）粤73民终1022号）. <https://www.court.gov.cn/zixun/xiangqing/324491.html>；北京政法网 (2024-04-18). 「芒果TV」起诉「拦精灵」不正当竞争案，二审胜诉（来源：京法网事）. <https://www.bj148.org/sa1/ajbb/202404/t20240418_1664299.html>；《财经》客户端 (2023-09-10). App屏蔽开屏广告，腾讯发律师函要求下架，合理吗？（财经E法 樊瑞）. <https://www.mycaijing.com/article/detail/500930?source_id=40>（网页存档 <https://web.archive.org/web/20261005041658/https://www.mycaijing.com/article/detail/500930?source_id=40>）",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -6335,6 +6687,7 @@ module.exports = {
         "cost": "不花钱。代价是放掉一门门槛低、流水看着不错的副业。真想做模型聚合就走正路，办经营许可、接有官方授权的模型，钱和时间都要花不少",
         "gain": "国家安全部 2026 年 6 月发布风险提示。提示说，AI 中转站是夹在用户和模型厂商官方服务之间的代理层。部分中转站运营资质缺失。有的没取得数据出境的合规资质，也没走安全评估的法定流程，就把用户输入的数据传到境外服务器。有的还能让用户绕过网络访问、官方授权和跨境传输的限制。《中国新闻周刊》2026 年 6 月报道了一个案子。2026 年 5 月，一名上海的中转站站长在技术社区发了关停声明。他说自己因为非法获取大模型接口，被上海警方刑事拘留 37 天，现在取保候审。他说「将来肯定会被判刑」，已经退赔退赃，还要交罚金。报道说，这类中转站批量注册或购买境外大模型的订阅账号，在海外架服务器当跳板，再低价转卖给国内用户（全国 / 上海）",
         "note": "此案只有媒体报道和当事人自述，没有判决，也没有警方通报，按什么罪名办没有官方说法。网上流传的具体罪名和刑期出自律师文章，本书不引。所以不能说「做中转站一定犯罪」，只能说已经有人因此被刑事拘留。正规做模型聚合，收费要办经营许可，见第 26 节第 2 条（收费的网站要许可证）。对公众提供生成式 AI 服务要备案，见本节第 17 条（生成式 AI 安全评估）。把用户数据传到境外有法定条件，见第 26 节第 10 条（用户信息出境）。用中转站的人另有风险，见第 14 节第 10 条（AI 中转站）。受益人是你自己。",
+        "source": "国家安全部 (2026). 「AI中转站」，风险要防范. <https://www.szzg.gov.cn/2026/xwzx/szkx/202606/t20260608_5331487.htm>（数字中国建设峰会官网转载国家安全部微信公众号）；中国新闻周刊 (2026-06-22). AI中转站，面临整治「风暴」（记者孟倩）. <https://www.chinanews.com/cj/2026/06-22/10644787.shtml>（网页存档 <https://web.archive.org/web/20261005042903/https://www.chinanews.com/cj/2026/06-22/10644787.shtml>）",
         "grade": "C",
         "meta": {
           "money": "0",
@@ -6356,6 +6709,7 @@ module.exports = {
         "cost": "不花钱。动手前先给自己定一个数：这笔钱全亏光，也不影响你还房贷、养孩子、看病。超过这个数就不投。家里人的钱和借来的钱，不算在这个数里。难的是生意看着有起色的时候，忍住不再往里追加。",
         "gain": "亏了不只是钱没了。个体工商户欠的债，如果生意是你一个人做的，要拿你自己名下的钱和东西还（以个人财产承担）。如果是全家一起做的，或者分不清是谁做的，要拿全家的钱和东西还（以家庭财产承担）。夫妻两人都签了字的债，算两个人一起还的共同债务。一方事后点了头的，也算。一方用自己名义借的钱，只要债主能证明这笔钱用在了两口子一起做的生意上，照样两个人一起还。公司这边也有一条：公司还不上到期的债时，股东当初在注册资本里答应出、还没到缴纳期限的那笔钱（认缴出资），债主可以要求他提前交出来（全国）",
         "note": "「亏得起」的意思是：这笔钱全亏掉，你也不用卖房，不用找亲戚借钱补窟窿。有多少企业能活下来、平均活几年，这类官方统计本次在国家统计局和市场监管总局官网都没找到能核实的原文。所以正文不写数字，只写法律后果，定 B 级。",
+        "source": "全国人大 (2020). 民法典（第五十六、一千零六十四条）. <https://www.spp.gov.cn/spp/fl/202006/t20200602_463888.shtml>；全国人大常委会 (2023). 公司法（2023 年修订，第四十七、五十四条）. <https://www.gov.cn/yaowen/liebiao/202312/content_6923395.htm>",
         "grade": "B",
         "meta": {
           "money": "0",
@@ -6375,6 +6729,7 @@ module.exports = {
         "cost": "不花钱。银行、供应商、房东要你签「股东个人连带担保」或者「配偶签字」时，先停一下。签那一页，等于你亲手放弃了「公司的债不找个人」这层保护（放弃有限责任）。能不签就不签。非签不可，就只签「一般保证」，并且写清自己最多担保多少钱。难的是对方常说「不签就不放款」，要顶得住。",
         "gain": "担保书上的那句话，意思就是「欠钱的人不还，由你来还」。写成「连带责任保证」的，债主可以不去找公司，直接上门找你要。写成「一般保证」的，债主得先去告公司或者去仲裁，再请法院把公司的财产强制卖掉抵债。卖完还差多少，才轮到你补。夫妻两人都签了字的债，算两个人一起还的共同债务。一方事后点了头的，也算。配偶签了字，就是两个人的家产一起搭进去（全国，2021 年起）",
         "note": "银行给小微企业放贷款，几乎都要股东个人签连带担保。贷款照样可以贷，只是签字之前要弄清楚这一页签掉的是什么，再把担保的金额压在第 1 条（只拿亏得起的钱创业）那个「亏得起」的数以内。借条和担保书的一般规则，见第 8 节第 18 条。",
+        "source": "全国人大 (2020). 民法典（第六百八十一、六百八十七、六百八十八、一千零六十四条）. <https://www.spp.gov.cn/spp/fl/202006/t20200602_463888.shtml>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -6394,6 +6749,7 @@ module.exports = {
         "cost": "登记在当地政务服务网上办，一次几个小时。开了有限公司之后每个月要记账报税，这是长期的开销：自己做花时间，请人代记账花钱，各地价格不同。",
         "gain": "个体工商户欠的债，要拿个人的钱和东西还，或者拿全家的钱和东西还。普通合伙企业的合伙人，对合伙企业的债承担无限连带责任。意思是欠多少还多少，还不完不算完。债主还可以只揪住其中一个人，要他还全部。有限合伙不一样，里面的有限合伙人只赔到自己答应出的那笔钱（以认缴出资为限）为止。有限责任公司的股东也是只赔到自己答应出的那笔钱（以认缴出资额为限）。但「有限」会在三种情况下失效。一是答应出的钱要在公司成立起 5 年内真交齐，公司还不上到期的债时，债主可以要求提前交。二是已经投进去又抽走的钱（抽逃出资）要还回来。三是拿公司当壳子躲债。只有一个股东的公司，又证明不了公司的钱和自己的钱是分开的，也算在这第三种里。这两种做法之下，公司的债你个人要跟着一起还（承担连带责任）（全国，2024 年 7 月起）",
         "note": "「有限」的前提是公私分明：公司账户和个人账户不混着用，不用公司的钱付家里的开销，账目留全。注册资本别为了好看填大数。认缴多少，5 年内就要真拿出多少。填 100 万，就是 100 万的潜在债务。",
+        "source": "全国人大 (2020). 民法典（第五十六条）. <https://www.spp.gov.cn/spp/fl/202006/t20200602_463888.shtml>；全国人大常委会 (2006). 合伙企业法（2006 年修订，第二条）. <http://www.gov.cn/gongbao/content/2006/content_413955.htm>；全国人大常委会 (2023). 公司法（2023 年修订，第四、二十三、四十七、五十三、五十四条）. <https://www.gov.cn/yaowen/liebiao/202312/content_6923395.htm>",
         "grade": "A",
         "meta": {
           "money": "少",
@@ -6413,6 +6769,7 @@ module.exports = {
         "cost": "不花钱。有人来说「借你身份证挂个股东」「股份先放你名下」，一律回绝。",
         "gain": "登记在册的股东，就是法律上的股东。你要按公司章程定的期限，把答应出的钱一分不少地交进去（足额缴纳认缴出资）。没按期交的，除了补交还要赔公司的损失。公司开办时有股东没把钱真交进来的，开办时的其他股东在这个缺口里跟着一起还（承担连带责任）。公司还不上到期的债时，债主可以要求还没到期限的那笔钱提前交。真正做生意的人不在登记上，债却记在你名下（全国，2024 年 7 月起）",
         "note": "替人挂名的股东和真正出钱的人之间，代持协议没有无效情形的就算数。但真正出钱的人想把名字换上来，要其他股东半数以上同意。挂名的人把股权卖了或者押了，法院参照民法典的善意取得处理。买方不知情、价格合理、已经办了登记的，出钱的人拿不回股权，只能找挂名的人赔。这份司法解释 2025 年 9 月已出了新解释的征求意见稿，定稿施行后整份废止，以截至 2026 年 9 月仍有效的 2020 年修正本为准。挂名法定代表人的风险，见第 8 节第 28 条。",
+        "source": "全国人大常委会 (2023). 公司法（2023 年修订，第四十七、四十九、五十、五十四条）. <https://www.gov.cn/yaowen/liebiao/202312/content_6923395.htm>；最高人民法院 (2020 修正). 关于适用《中华人民共和国公司法》若干问题的规定（三）（法释〔2011〕3 号，2014 年法释〔2014〕2 号、2020 年法释〔2020〕18 号两次修正，第二十四、二十五条）：「如无法律规定的无效情形，人民法院应当认定该合同有效」「实际出资人未经公司其他股东半数以上同意，请求公司变更股东……人民法院不予支持」「名义股东处分股权造成实际出资人损失，实际出资人请求名义股东承担赔偿责任的，人民法院应予支持」. <https://flk.npc.gov.cn/detail?id=ff808181799def980179ac07a9ca117c>（国家法律法规数据库）；最高人民法院 (2025). 关于适用《中华人民共和国公司法》若干问题的解释（征求意见稿）第九十条. <https://www.court.gov.cn/zixun/xiangqing/477881.html>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -6432,6 +6789,7 @@ module.exports = {
         "cost": "不花钱。上商务部的「商业特许经营信息管理系统」网站，查品牌方有没有备案。再要求对方在签约前，把该交代的事写成书面材料给你，连同合同文本一起。几个小时能做完。",
         "gain": "法规要求品牌方（法规里叫特许人）至少有 2 个自己开、自己经营的直营店，而且开满 1 年以上。从第一次签加盟合同那天算起，15 日内它要去商务主管部门备案。不备案的，罚 1 万到 5 万元。过了期限还不备案的，罚 5 万到 10 万元，并且对外公告。签约之前，它必须把该交代的事写成书面材料交给你，一共 12 项。里面包括加盟费收哪几种、各多少钱，保证金什么情况下退，现有多少家加盟店、生意做得怎么样。还有近 2 年查过账的审计报告摘要，近 5 年打过的官司和仲裁。合同里还必须写明，加盟商在签约后的一段时间内可以自己一方说退就退（单方解除）。品牌方瞒着不说，或者给的是假信息，加盟商可以解除合同（全国，2007 年 5 月起）",
         "note": "查不到备案、不肯给披露文件、要先交钱再看合同的，直接走。「冷静期」就是签约之后还能自己一方说退就退的那几天。天数由合同定，条例只说「一定期限」，所以签约时要求把天数写进去。品牌方披露的「现有加盟店平均销售量、毛利、纯利」，要追问数字是哪来的，办法要求品牌方说明来源。不叫加盟、只收「代运营」「开店培训」服务费的，见第 24 条（代运营和开店培训）。",
+        "source": "国务院 (2007). 商业特许经营管理条例（国务院令第 485 号，第七、八、十二、二十二、二十三、二十五条）. <https://www.gov.cn/zhengce/zhengceku/2008-03/28/content_4179.htm>；商务部 (2012). 商业特许经营信息披露管理办法（商务部令 2012 年第 2 号，第五、九条）. <http://www.gov.cn/gongbao/content/2012/content_2177025.htm>；商务部. 商业特许经营信息管理系统. <https://txjy.syggs.mofcom.gov.cn/>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -6451,6 +6809,7 @@ module.exports = {
         "cost": "登记这一步不花钱。企业和个体工商户的注册登记费，从 2015 年 1 月 1 日起就停收了。自己在当地政务服务网上办，或者去政务大厅办，一次几个小时。刻公章、请人代记账、租一个注册地址（地址托管），是在市场上买服务，不是政府收的费。",
         "gain": "条例把要交的材料写死为五项。「（一）申请书」。「（二）申请人资格文件、自然人身份证明」。「（三）住所或者主要经营场所相关文件」。「（四）公司、非公司企业法人、农民专业合作社（联合社）章程或者合伙企业合伙协议」。「（五）法律、行政法规和国务院市场监督管理部门规定提交的其他材料」。翻成大白话：一份申请书；一份证明你是谁、或者你有资格办这件事的材料；一份能证明店面或者办公地归你用的材料；公司章程或者合伙协议；再加上法规另外点名要的。公司还要交法定代表人、董事、监事和高管的任职文件和身份证明。个体户不用交章程。名字「由申请人依法自主申报」，自己起、自己报。注册资本「实行认缴登记制」，先写上答应出多少，不用当场掏出来。经营范围从登记机关公布的分类里挑。材料齐全、格式也对的，「予以确认并当场登记」。当场办不完的，「3 个工作日内」办完，情况复杂的再多给 3 个工作日。「营业执照签发日期为市场主体的成立日期」：执照上印的那天，就是公司或者店铺成立的日子（全国，2022 年 3 月起）",
         "note": "登记本身不收费，被收的那笔多半是代办的跑腿费。刻章的价格由市场定。国务院办公厅明令「严禁指定公章制作单位制作公章」，所以有人说「必须去指定的地方刻章」，你不必接受。注册资本填多少不影响门面，只决定你的责任上限，而且 5 年内要缴足，见本节第 3 条（开张前选对主体）。经营范围里带许可项目的，证没下来不能开张，见本节第 7 条（要许可证的行当）",
+        "source": "国务院 (2021). 市场主体登记管理条例（国务院令第 746 号，第十、十三、十四、十六、十九、二十一条）. <https://www.gov.cn/gongbao/content/2021/content_5636139.htm> ; 市场监管总局 (2022). 市场主体登记管理条例实施细则（市场监管总局令第 52 号，第十二、二十五、二十六条）. <https://www.gov.cn/zhengce/zhengceku/2022-03/02/content_5676403.htm> ; 财政部、国家发展改革委 (2014). 关于取消、停征和免征一批行政事业性收费的通知（财税〔2014〕101 号，附件 1）. <https://www.gov.cn/zhengce/2014-12/23/content_5023513.htm>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -6470,6 +6829,7 @@ module.exports = {
         "cost": "不花钱。开张前先查清楚，自己要做的这门生意要不要办许可证。做餐饮、卖食品要办食品经营许可。只卖别人做好的整包装食品，不用许可，改成备案。证下来了再开门营业。",
         "gain": "没拿到许可就开门做生意的，由法律法规指定的那个部门来查处。没有执照就经营、法律又没写明怎么罚的，勒令停下来，把挣到的钱（违法所得）收走，再罚 1 万元以下。还有更重的一档。法律法规规定的专营、专卖或者限制买卖的物品，没经许可就去经营。证券、期货、保险、资金支付结算这几类生意，没经批准就去做。这两种情形，情节严重的构成非法经营罪。判 5 年以下有期徒刑或者拘役（短期关押），同时按挣到的钱的 1 到 5 倍罚钱。情节特别严重的判 5 年以上（全国）",
         "note": "金融、医疗、教培这几类的许可条件，各有专门的法律，本条只核实了通用的查处规则和刑法条款。奶茶店、小吃店属于餐饮服务，要办食品经营许可。先装修后办证、证下来之前先试营业，是常见的踩坑点。食品这一行分哪几档、卖生鲜肉菜要不要证，见第 8 条（做食品先看自己落在哪一档）。",
+        "source": "国务院 (2017). 无证无照经营查处办法（国务院令第 684 号，第五、六、十三条）. <https://www.gov.cn/zhengce/zhengceku/2017-08/23/content_5219861.htm>；市场监管总局 (2023). 食品经营许可和备案管理办法（市场监管总局令第 78 号，第四条）. <https://www.gov.cn/gongbao/2023/issue_10606/202307/content_6894763.html>；全国人大 (1997). 刑法（第二百二十五条）. <https://www.spp.gov.cn/spp/fl/201802/t20180206_364975.shtml>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -6489,6 +6849,7 @@ module.exports = {
         "cost": "许可证本身不收费。但场地和设施要达标，现场核查加上办证要几个星期。卖肉的还要每批留好检疫证明和肉品品质检验合格证。",
         "gain": "食品安全法：做食品生意要先拿许可。自己生产食品、卖食品、做餐饮，都要依法拿到许可。「但是，销售食用农产品和仅销售预包装食品的，不需要取得许可。仅销售预包装食品的，应当报所在地县级以上地方人民政府食品安全监督管理部门备案」。食用农产品就是生鲜肉、蔬菜这类没加工过的。预包装食品就是别人做好、连包装一起卖的。「食品生产加工小作坊和食品摊贩等的具体管理办法由省、自治区、直辖市制定」，这两类由各省自己出规矩。没拿到许可就做食品生意的，挣到的钱、食品以及工具设备原料全部没收。这批货按售价算的总金额（货值金额）不足一万元的，另罚 5 万元以上 10 万元以下。货值金额一万元以上的，按货值的 10 倍以上 20 倍以下罚。生猪屠宰管理条例：猪只能在国家指定的屠宰厂宰，由官方集中检疫。「除农村地区个人自宰自食的不实行定点屠宰外，任何单位和个人未经定点不得从事生猪屠宰活动」。「从事生猪产品销售、肉食品生产加工的单位和个人以及餐饮服务经营者、集中用餐单位生产经营的生猪产品，必须是生猪定点屠宰厂（场）经检疫和肉品品质检验合格的生猪产品」。所以你卖的、用的猪肉都得来自指定屠宰厂，检疫和肉品品质检验这两道都得过。没在指定屠宰厂私自宰猪的，勒令关停，猪、屠宰的工具设备和挣到的钱一起没收，罚多少和上面没证做食品那一档一样。动物防疫法：卖的和运的动物产品，要随货带着检疫证明和检疫标志。没带的勒令改正，再按同类合格货的货值金额罚一倍以下。司法解释：小作坊和食品摊贩做的、卖的食品不符合食品安全标准的，买家要求按十倍赔（惩罚性赔偿，就是退钱之外再多赔的那笔），法院应当支持（全国）",
         "note": "小作坊、小餐饮、食品摊贩的门槛是各省定的，本条不写具体数字。去你所在省的市场监管局官网，搜「食品小作坊小餐饮小摊贩管理条例」，看当地的版本。在网上卖自制食品，不会因为「在网上」就少一张证，该许可的照样要许可。许可之外还有这一节的通用规则：主体和执照见第 6 条（注册前把名称、场所、经营范围定下来），别的行当要不要证见第 7 条（要许可证的行当）。买家能要多少赔偿见第 5 节第 31 条（食品的十倍赔偿）。",
+        "source": "全国人大常委会 (2025 年第三次修正). 食品安全法（第三十五、三十六、一百二十二条）. <https://flk.npc.gov.cn/detail?id=7b5a76d0461745a08d3f964916b87ef3>；国务院 (2021). 生猪屠宰管理条例（国务院令第 742 号，第二、二十三、三十一条）. <https://www.gov.cn/zhengce/zhengceku/2021-07/22/content_5626534.htm>；全国人大常委会 (2021 修订). 动物防疫法（第五十一、一百条）. <https://flk.npc.gov.cn/detail?id=ff8080817703add2017737395a973e31>；最高人民法院 (2024). 关于审理食品药品惩罚性赔偿纠纷案件适用法律若干问题的解释（法释〔2024〕9 号，第四条）. <http://gongbao.court.gov.cn/Details/bf531a70471f10d377788f28d3d8f8.html>",
         "grade": "A",
         "meta": {
           "money": "少",
@@ -6508,6 +6869,7 @@ module.exports = {
         "cost": "印标签几分钱到几毛钱一张。每一批都要把日期和配料填对，要占一些时间。",
         "gain": "食品安全法：预包装食品（装进包装再卖的食品）包装上必须有标签。标签要标明名称、规格、净含量、生产日期，成分或者配料表，生产者的名称、地址、联系方式，保质期。还有产品标准代号、贮存条件、所用食品添加剂在国家标准里的通用名称、生产许可证编号。法律法规或者食品安全标准另外要求标的，也要标。散装食品是不装袋、按需称的那种。卖散装食品，容器和外包装上也要标：食品的名称，生产日期或者生产批号，保质期，生产经营者的名称、地址、联系方式等内容。做的、卖的预包装食品没标签，或者标签、说明书不符合本法规定的，挣到的钱和食品一起没收。这批货按售价算的总金额（货值金额）不足一万元的，另罚 5000 元以上 5 万元以下。货值金额一万元以上的，按货值的 5 倍以上 10 倍以下罚。情节严重的勒令停产停业，直到把许可证收回。标签、说明书只是有小毛病（瑕疵），既不影响食品安全也不会让消费者误解的，先勒令改正，拒不改才罚 2000 元以下。新版《预包装食品标签通则》编号 GB 7718-2025，2025 年 3 月 16 日发布，2027 年 3 月 16 日起实施，中间有两年过渡期。它要求在包装上设置独立区域，同时展示生产日期和保质期到期日。日期要用高对比度、容易看清的字体和颜色，并且按年-月-日的顺序排列（全国）",
         "note": "标签的毛病分两种，罚多少、赔多少都跟着这个分法走。一种是小毛病，比如错别字、字号不规范，既不影响食品安全，也不会让人误解。这种市场监管部门只让你改，拒不改才罚 2000 元以下，买家也要不到十倍赔偿。另一种是该标的没标，比如漏了生产日期、保质期。司法解释明文说这不算小毛病：罚款按货值算，不足一万元的罚 5000 元到 5 万元，一万元以上的罚货值的 5 到 10 倍。而且买家还能另外向你要食品价款的十倍赔偿，不足一千元的按一千元算（见第 5 节第 31 条，食品的十倍赔偿）。GB 7718-2025 的逐条要求，本条只核到了公告和官方解读给出的日期与展示方式，具体格式以标准原文为准。",
+        "source": "全国人大常委会 (2025 年第三次修正). 食品安全法（第六十七、六十八、一百二十五条）. <https://flk.npc.gov.cn/detail?id=7b5a76d0461745a08d3f964916b87ef3>；国家卫生健康委员会、国家市场监督管理总局 (2025). 关于发布《食品安全国家标准 预包装食品标签通则》（GB 7718-2025）等 50 项食品安全国家标准和 9 项修改单的公告（2025 年第 2 号）. <https://jkw.lasa.gov.cn/wswyh/wjzl/202504/a90766908ef24869a74f7373bf42463f.shtml>（拉萨市卫生健康委员会转载公告全文）；最高人民法院 (2024). 关于审理食品药品惩罚性赔偿纠纷案件适用法律若干问题的解释（法释〔2024〕9 号，第六、八条）. <http://gongbao.court.gov.cn/Details/bf531a70471f10d377788f28d3d8f8.html>（标签瑕疵与必标事项缺失的分档）；北京市市场监督管理局 (2026). 找不到生产日期？食品标签要「变脸」！新规这些重点必看. <https://scjgj.beijing.gov.cn/zwxx/scjgdt/202605/t20260507_4639154.html>（实施日期、过渡期与日期展示新要求）",
         "grade": "A",
         "meta": {
           "money": "少",
@@ -6527,6 +6889,7 @@ module.exports = {
         "cost": "不花钱。把宣传语、商品详情页和直播的话术过一遍。难的是忍住不说「降三高」「治便秘」这类话。",
         "gain": "食品安全法：「食品和食品添加剂的标签、说明书，不得含有虚假内容，不得涉及疾病预防、治疗功能。生产经营者对其提供的标签、说明书的内容负责」。「食品广告的内容应当真实合法，不得含有虚假内容，不得涉及疾病预防、治疗功能。食品生产经营者对食品广告内容的真实性、合法性负责」。意思是包装、说明书和广告里都不能说自己能防病治病，写了什么由卖家自己担责。在广告里对食品吹牛、骗消费者的，按广告法罚。广告法也有一条禁令。「除医疗、药品、医疗器械广告外，禁止其他任何广告涉及疾病治疗功能，并不得使用医疗用语或者易使推销的商品与药品、医疗器械相混淆的用语」。除了医疗、药品、医疗器械这三类广告，其他广告一律不许说能治病，也不许用听着像药、像医疗器械的词。违反这一条的，勒令停掉广告。还要让出广告的那一方（广告主）在发过的范围里公开澄清、消除影响。再按广告费用的 1 倍以上 3 倍以下罚钱。广告费用算不出来，或者报得明显偏低的，罚 10 万元以上 20 万元以下。情节严重的，按广告费用的 3 倍以上 5 倍以下罚，或者罚 20 万元以上 100 万元以下，还可以把营业执照吊销、生意直接做不成（全国）",
         "note": "「保健功能」也不是普通食品能说的。保健食品能声称的保健功能，只能从国家定的目录里来，产品还要经过注册或者备案，普通食品没有这道程序。买家怎么识别这类话术，见第 6 节第 10 条（不要花大钱买保健品调理身体）。除了包装和广告，详情页、直播话术、朋友圈文案同样算广告内容，发出去就留下了痕迹。",
+        "source": "全国人大常委会 (2025 年第三次修正). 食品安全法（第七十一、七十三、一百二十五、一百四十条）. <https://flk.npc.gov.cn/detail?id=7b5a76d0461745a08d3f964916b87ef3>；全国人大常委会 (2021 年修正). 广告法（第十七、五十八条）. <https://flk.npc.gov.cn/detail?id=ff8081817ab231eb017abd6bd860052d>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -6546,6 +6909,7 @@ module.exports = {
         "cost": "不花钱。按第 8 条（做食品先看自己落在哪一档）那套做：留好检疫证明和进货凭证，配料表里只放查得到批准文号的东西。",
         "gain": "刑法第一百四十三条管的是这一档。你做的、卖的食品不符合食品安全标准。只要「足以造成严重食物中毒事故或者其他严重食源性疾病的」，就够罪。判 3 年以下有期徒刑或者拘役（短期关押），同时罚钱。把人的健康搞出严重损害，或者有其他严重情节的，判 3 年以上 7 年以下并罚钱。后果特别严重的，判 7 年以上有期徒刑直到无期，罚钱或者把名下财产全部没收。第一百四十四条：在做的、卖的食品里掺进有毒有害的非食品原料，或者明知掺了还卖的，判 5 年以下有期徒刑并罚钱。把人的健康搞出严重损害，或者有其他严重情节的，判 5 年以上 10 年以下并罚钱。把人吃死了，或者有其他特别严重情节的，按第一百四十一条处罚（10 年以上、无期或者死刑）。最高人民法院和最高人民检察院出过一份解释（两高解释）。它列明了哪几种情形算「足以造成严重食物中毒事故或者其他严重食源性疾病」。一是「含有严重超出标准限量的致病性微生物、农药残留、兽药残留、生物毒素、重金属等污染物质」。二是「属于病死、死因不明或者检验检疫不合格的畜、禽、兽、水产动物肉类及其制品的」。三是「属于国家为防控疾病等特殊需要明令禁止生产、销售的」。四是「特殊医学用途配方食品、专供婴幼儿的主辅食品营养成分严重不符合食品安全标准的」。添加剂用超量、用错地方，到了会造成上述后果的程度，同样按第一百四十三条定罪。什么算「有毒、有害的非食品原料」，不由你说了算。一类是法律法规禁止往食品里加的物质。另一类是国务院有关部门公告的名单上的物质，比如禁用农药、禁止用在食用动物身上的药。还有一种情形也算第一百四十四条里的「其他严重情节」。做了、卖了 10 万元以上不满 20 万元。地点在中小学校园、托幼机构、养老机构及周边。卖的对象是未成年人、老年人。不在指定屠宰厂、自己私设猪的屠宰场干屠宰和销售，情节严重的按非法经营罪判。做到 10 万元以上，或者挣到 5 万元以上，就算「情节严重」（全国）",
         "note": "和前面三条的分界线是：有没有踩到食品安全本身。没办证、标签漏项、吹疗效，罚的是钱。卖病死肉、超标货、乱加添加剂、掺非食品原料，进的是刑事程序。最省事的防线还是第 8 条（做食品先看自己落在哪一档）里那套动作。肉只从定点屠宰厂进。每批留好检疫证明和肉品品质检验合格证。配料只用查得到批准文号的。所谓「便宜处理的肉」「不知道哪来的边角料」，最常出事。原始来源最高人民法院公报的页面本轮返回 502，所以引了两份省级官方转载，并且互相逐字核对过。",
+        "source": "全国人大常委会 (2020 年修正). 刑法（第一百四十一、一百四十三、一百四十四条）. <https://flk.npc.gov.cn/detail?id=ff808181796a636a0179822a19640c92>（国家法律法规数据库）；最高人民法院、最高人民检察院 (2021). 关于办理危害食品安全刑事案件适用法律若干问题的解释（法释〔2021〕24 号，第一、二、五、七、九、十七、十八条，2022 年 1 月 1 日起施行）. <https://scjg.hebei.gov.cn/info/79117>（河北省市场监督管理局转载全文）、<https://sft.ln.gov.cn/sft/ywgz/zfflgw/xzys/2525860BD0F843EFA7A3B7FDC330614E/index.shtml>（辽宁省司法厅转载全文，两份逐字核对一致）",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -6565,6 +6929,7 @@ module.exports = {
         "cost": "不花钱。自己在电子税务局按月或者按季申报，一次几分钟。请人代记账是另一笔市场上的开支。用了人的，还要从成立那天算起 30 日内办社保登记。难的是没生意的月份也得记着按时报。",
         "gain": "「纳税人在纳税期内没有应纳税款的，也应当按照规定办理纳税申报」：这一期一分税都不用交，表照样要报。不按期报的，「由税务机关责令限期改正，可以处二千元以下的罚款；情节严重的，可以处二千元以上一万元以下的罚款」。不报又少缴了税的，税要追回来，还要把按天加收的滞纳金一起补上，另罚少缴那笔税的「百分之五十以上五倍以下的罚款」。滞纳金按每天万分之五加。「连续三个月所有税种均未进行纳税申报的，税收征管系统自动将其认定为非正常户，并停止其发票领用簿和发票的使用」。三个月什么都不报，系统就自己把你列为非正常户，发票领不了也开不了。补报并且接受处罚之后，自动解除。用了人的单位「应当自成立之日起三十日内……向当地社会保险经办机构申请办理社会保险登记」（全国）",
         "note": "「多证合一」之后不用单独办税务登记。拿营业执照上的统一社会信用代码登录电子税务局，确认登记信息，报上自己要交哪些税。个体工商户和个人独资企业交的是经营所得个税。先「在月度或者季度终了后十五日内」交一笔，再「在取得所得的次年三月三十一日前办理汇算清缴」（全年算总账，多退少补）。没开张也要报，零申报同样是申报。放着不管三个月就成了非正常户，发票停用，想注销也走不了简易程序，见本节第 23 条（亏了就按程序退场）",
+        "source": "国务院 (2002). 税收征收管理法实施细则（国务院令第 362 号，第三十二、七十五条）. <https://fgk.chinatax.gov.cn/zcfgk/c100010/c5195082/content.html> ; 全国人大常委会 (2015). 税收征收管理法（2015 年修正，第二十五、三十二、六十二、六十四条）. <https://fgk.chinatax.gov.cn/zcfgk/c100009/c5195081/content.html> ; 国家税务总局 (2019). 关于税收征管若干事项的公告（国家税务总局公告 2019 年第 48 号，第三条）. <https://fgk.chinatax.gov.cn/zcfgk/c100012/c5195194/content.html> ; 全国人大常委会 (2018). 个人所得税法（2018 年修正，第十二条）. <https://fgk.chinatax.gov.cn/zcfgk/c100009/c5193028/content.html> ; 全国人大常委会 (2018). 社会保险法（2018 年修正，第五十七条）. <http://www.npc.gov.cn/zgrdw/npc/xinwen/2019-01/07/content_2070267.htm>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -6584,6 +6949,7 @@ module.exports = {
         "cost": "不花钱。不买发票，不卖发票，也不替别人「走账开票」。按真实发生的生意开票、报税。",
         "gain": "规模小、按简易办法交税的那一档叫小规模纳税人。法律写的是「销售额未达到起征点的，免征增值税」。这条线叫起征点。从 2026 年 1 月 1 日到 2027 年 12 月 31 日，起征点是按月算 10 万元，按季度算 30 万元，按次或者按天算 1000 元，卖不到这条线就不用交。同一段时间里，本来按 3% 交的减到按 1% 交，卖房租房和转让土地使用权除外。反过来说，开了没有真实买卖的增值税专用发票，或者其他能拿去抵税的发票，判 3 年以下有期徒刑或者拘役，并罚 2 万到 20 万元。给别人开、给自己开、让别人给自己开、介绍别人开，都算。涉及税额较大的判 3 到 10 年。数额巨大的判 10 年以上或者无期（全国）",
         "note": "增值税法从 2026 年 1 月 1 日起施行。原来的两份小规模纳税人减免公告，2023 年第 19 号和 2023 年第 1 号，跟着停止执行或者废止。金额门槛没变，但依据换了，本条已经按新文件更新。刑法原文页是 1997 年版，第二百零五条后来经修正案调过判几年的档次，本条只写核实到、而且没被改动过的那几档。免的是增值税，所得税另算。「找人开票抵成本」就是虚开，不是节税。",
+        "source": "全国人大常委会 (2024). 增值税法（2026 年 1 月 1 日施行，第二十三条）. <https://fgk.chinatax.gov.cn/zcfgk/c100009/c5237365/content.html>；财政部、税务总局 (2026). 关于增值税法施行后增值税优惠政策衔接事项的公告（财政部 税务总局公告 2026 年第 10 号，第一、二、六条）. <https://fgk.chinatax.gov.cn/zcfgk/c102416/c5247434/content.html>；全国人大 (1997). 刑法（第二百零五条）. <https://www.spp.gov.cn/spp/fl/201802/t20180206_364975.shtml>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -6603,6 +6969,7 @@ module.exports = {
         "cost": "不花钱。接到「税务抽查」「账户异常」「不报税就罚款」的电话、短信，或者有人加你好友，先挂断、不回。再打 12366，或者打主管税务机关的固定电话核实。",
         "gain": "税务总局的提示原文：「税务部门不会通过微信小程序、电话、短信等方式索要银行卡密码、支付密码、账户余额及与银行卡收付款项相关的短信验证码」。「一些不法分子冒充税务干部以提供『帮办纳税申报』『税收优惠代办』『政策辅导』等为名接触纳税人」。要核实就打「12366 纳税缴费服务热线或主管税务机关固定电话」。真上门查账（稽查）的，「必须出示检查通知书和检查证」。「税款只能通过电子税务局或者在办税大厅缴纳，税务部门不会提供指定账号」。替人办税的中介机构也有一条。「以税务机关和税务人员的名义敲诈纳税人、扣缴义务人的」，按情节轻重罚款。打着税务局和税务干部的旗号，敲诈交税的人和代扣代缴税款的单位，就是这种情形。冒充国家机关工作人员招摇撞骗的，拘留 10 日以上 15 日以下，还可以再罚 1000 元以下。既够诈骗罪又够招摇撞骗罪的，「依照处罚较重的规定定罪处罚」（哪条罚得重按哪条判）（全国）",
         "note": "这类骗局专挑刚注册的个体户和小公司。话术是「系统显示你没报税，今天不处理就罚款」，然后把你引到他们自己的公众号或者小程序，一次收几百元。而那笔申报本来免费，自己几分钟就能做完。找市场上的机构代记账不违法，但它不是政府部门，也不会用税务局的名义催你。已经付钱或者转了账的，按第 8 节第 2 条（被骗止付）立刻打 110 或 96110 要求止付",
+        "source": "国家税务总局 (2025). 税务部门提醒广大纳税人——增强防范意识 警惕互联网涉税诈骗. <https://www.chinatax.gov.cn/chinatax/n810219/n810724/c5243181/content.html> ; 国家税务总局扬州市税务局 (2023). 扬州防范涉税诈骗宣传篇. <https://jiangsu.chinatax.gov.cn/art/2023/8/28/art_23038_432322.html> ; 国家税务总局 (2025). 涉税专业服务管理办法（试行）（国家税务总局令第 58 号，第三十二条第七项、第三十三条）. <https://fgk.chinatax.gov.cn/zcfgk/c100011/c5239044/content.html> ; 全国人大常委会 (2025). 治安管理处罚法（2025 年修订，2026 年 1 月 1 日施行，第六十二条）. <https://www.spp.gov.cn/spp/fl/202506/t20250627_699863.shtml> ; 最高人民法院、最高人民检察院、公安部 (2016). 关于办理电信网络诈骗等刑事案件适用法律若干问题的意见（法发〔2016〕32 号）. <https://www.spp.gov.cn/zdgz/201612/t20161221_176278.shtml>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -6622,6 +6989,7 @@ module.exports = {
         "cost": "不花钱。合同里写「定金」这两个字，金额不超过合同总金额的 20%。先收钱再发货。答应对方先拿货、后付款（给账期）之前，先把对方查一遍。",
         "gain": "定金要等钱真交到对方手上才算数（自实际交付时成立）。付定金的一方毁约，这笔钱要不回来。收定金的一方毁约，要原数退回，再赔上同样一份（双倍返还）。超过合同总金额（主合同标的额）20% 的那部分，不按定金算。约定的违约金比实际损失高得离谱或者低得离谱的，法院可以按一方的请求往下调或者往上调。违约金和定金都写进了合同的，真出了违约只能挑一样要，不能两样都拿（全国，2021 年起）",
         "note": "「订金」在民法典里没有定金那套规则，一般只当预付款看待。这是实务里的通行说法，本节没有核实判例。账期就是把自己的钱无息借给对方，对方倒了就是坏账。给账期之前，先去国家企业信用信息公示系统查对方的记录，看它有没有被起诉过。",
+        "source": "全国人大 (2020). 民法典（第五百八十五、五百八十六、五百八十七、五百八十八条）. <https://www.spp.gov.cn/spp/fl/202006/t20200602_463888.shtml>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -6641,6 +7009,7 @@ module.exports = {
         "cost": "社保里由公司出的那一部分，要一直交下去，各地的比例不一样。签合同本身不花钱，直接用当地人社部门的合同范本就行。",
         "gain": "人来上班满一个月、不满一年还没签书面合同的，每个月要按双倍发工资。从人上班第一天算起，30 日内要给他办社保登记。不办的先勒令改正。过了期限的，按该交的社保费罚 1 到 3 倍，经办这件事的人另罚 500 到 3000 元。社保没按时交、没足额交的，从欠的那天起按每天万分之五加钱（滞纳金）。过了期限还不交的，再按欠款罚 1 到 3 倍。单位要自己申报，按时把钱交足。只有天灾这类没法抗的法定事由，才能晚交或者少交。没有「员工自愿放弃」这一项（全国）",
         "note": "双倍工资从第二个月一直算到满一年，越拖越贵。没签合同、没缴社保的员工，一旦出了工伤，或者离职之后去仲裁，补缴加上罚款再加上赔偿，往往比省下的那点钱多得多。",
+        "source": "全国人大常委会 (2007). 劳动合同法（第十、八十二条）. <https://www.gov.cn/gongbao/content/2007/content_711013.htm>；全国人大常委会 (2010). 社会保险法（2018 年修正，第五十八、六十、八十四、八十六条）. <https://www.mohrss.gov.cn/xxgk2020/fdzdgknr/zcfg/fl/202011/t20201102_394629.html>",
         "grade": "A",
         "meta": {
           "money": "多",
@@ -6660,6 +7029,7 @@ module.exports = {
         "cost": "不花钱。合同里把工资写清楚。加薪、奖金、垫付、借款，一律签字留一张纸。不口头承诺。也不从自己口袋里掏钱替公司发工资。难的是熟人开口时也照这个规矩办。",
         "gain": "劳动合同里必须写明的内容，就包括工资怎么给、社保怎么交。单位要按合同和国家规定，及时、足额发工资。拖着不发的，员工可以直接向法院申请支付令（法院开出的催款文书）。老板拿自己的钱借给员工，这就是一份借款合同。除了两个自然人之间另有约定的，都要写成书面的，写清借了多少、利息怎么算、什么时候还、怎么还。口头答应的奖金没有白纸黑字，真吵起来，拿不出证据的一方吃亏（全国）",
         "note": "不是不帮人，是帮人也要走制度。制度之外的恩惠一旦成了惯例，想停掉就会起纠纷。私人借款和公司账混在一起，公司亏了，坏账就落在你自己头上。法条部分已核实，建议本身是经验，故 C 级。",
+        "source": "全国人大常委会 (2007). 劳动合同法（第十七、三十条）. <https://www.gov.cn/gongbao/content/2007/content_711013.htm>；全国人大 (2020). 民法典（第四百六十九、六百六十八条）. <https://www.spp.gov.cn/spp/fl/202006/t20200602_463888.shtml>",
         "grade": "C",
         "meta": {
           "money": "0",
@@ -6679,6 +7049,7 @@ module.exports = {
         "cost": "几十到几百元，做个样品或者一个页面。再去找几十个真实客户，让他们预付或者下小单。这样比直接开工慢几个星期。难的是忍住不先把货做出来。",
         "gain": "一项随机对照试验，跟踪了 116 家意大利初创企业大约一年。随机对照试验就是把人随机分成两组，只给一组做培训，再比两组的结果。结果是：受过培训、按「先提假设、再用市场反馈严格检验」来做决定的创业者，业绩更好，也更可能及时掉头换别的方案，早期放弃的比例并不更高。作者的解释是，这种做法减少了往看着有戏、其实做不成的项目（假阳性项目）上继续砸钱的概率（意大利，2020 年发表）",
         "note": "只有这一项研究，样本小，而且是在意大利做的，所以定 B 级。标题、出处和摘要经 Crossref 与 Semantic Scholar 核对过，全文里的效果数字本节没有核实。落到操作上：没人肯预付、没人肯下小单，就别相信「做出来就有人买」。",
+        "source": "Camuffo A, Cordova A, Gambardella A, Spina C (2020). A Scientific Approach to Entrepreneurial Decision Making: Evidence from a Randomized Control Trial. Management Science 66(2):564-586. <https://doi.org/10.1287/mnsc.2018.3249>",
         "grade": "B",
         "meta": {
           "money": "少",
@@ -6698,6 +7069,7 @@ module.exports = {
         "cost": "几百元做一次小批量试产。再花几个小时，把这几项算清楚：良率（100 件里有几件能卖）、供应商的起订量和账期、库存要占多少钱、包装和物流、认证和许可、商标。难的是忍住不跳过这一步直接开工。",
         "gain": "一件样品和一千件的差别，在于钱压在哪里。良率决定真实成本，良率就是做出来的一批里有几成合格能卖。供应商一次最少要你订多少（起订量），发货之后多久才收得到钱（账期），这两项决定你要先垫多少钱。库存决定钱什么时候回来。列入强制性产品认证目录的产品，必须先通过认证，并且在产品上标出认证标志，才能出厂和销售。没认证就擅自出厂销售的，按认证认可条例处罚。做餐饮和卖食品要办食品经营许可（全国）",
         "note": "清单本身是经验方法，法条部分已核实原文。投产之前，先到国家知识产权局的商标查询系统查一下有没有近似的注册，再去申请自己的商标。用别人的商标和图案的红线，见第 20、21 条（进货留票据、图案要自己做或买授权）。强制认证目录以市场监管总局最新公布的为准。",
+        "source": "质检总局 (2009). 强制性产品认证管理规定（质检总局令第 117 号，第二、四十九条）. <http://www.gov.cn/gongbao/content/2010/content_1533513.htm>；市场监管总局 (2023). 食品经营许可和备案管理办法（市场监管总局令第 78 号，第四条）. <https://www.gov.cn/gongbao/2023/issue_10606/202307/content_6894763.html>",
         "grade": "C",
         "meta": {
           "money": "少",
@@ -6717,6 +7089,7 @@ module.exports = {
         "cost": "不花钱。每批货都留好这几样：采购合同、发票、付款记录、上家的营业执照和授权文件。再定一条内部规矩：谁进的货谁签字，价格明显低于市场价的一律不进。难的是放过那些看着很赚钱的低价货。",
         "gain": "明知是假冒注册商标的商品还卖，挣到的钱（违法所得）够 3 万元，或者卖出去的金额够 5 万元，就到了要判刑的门槛。判 3 年以下，同时罚钱，或者只罚钱。达到这个标准十倍的，判 3 到 10 年并罚钱。货还压在仓库没卖出去也算：货值到了销售金额标准三倍以上的，同样构成犯罪。「明知」不用你自己承认。最高人民法院和最高人民检察院 2025 年的司法解释，列了五种可以直接认定你知情的情形，你拿得出证据证明确实不知道的除外。一是知道商品上的注册商标被涂改、调换或者覆盖。二是伪造、涂改商标注册人授权文件，或者知道该文件被伪造、涂改。三是因销售假冒商品受过刑事或者行政处罚，又销售同一种的。四是无正当理由，以明显低于市场价格进货或者销售的。五是被行政执法机关、司法机关发现后，转移、销毁侵权商品和会计凭证等证据，或者提供虚假证明的。公司犯这一条的，「对单位判处罚金，并对其直接负责的主管人员和其他直接责任人员」按同一条处罚。就是公司罚钱，拍板的负责人和经手的人按同一条判。所以货是员工进的，挨罚挨判的还是拍板的那个人。反过来，商标法留了一条出路：卖的时候确实不知道这货侵犯了别人的注册商标，「能证明该商品是自己合法取得并说明提供者的，不承担赔偿责任」。能不能免赔，全看有没有票据和上家信息，没留就用不上这一条（全国，司法解释 2025 年 4 月 26 日起施行）",
         "note": "化妆品、酒水、母婴、数码、服装是这类案子的高发品类。共同点是同一款货有巨大的价差空间。「渠道货」「尾单」「海外免税」这些说法，都不能替代票据。判刑之外还有一道行政处罚：认定侵权成立的，侵权商品和工具要没收，违法经营额 5 万元以上的还可以并处 5 倍以下罚款。已经进了货才发现不对，立刻停售、封存，再联系品牌方或者市场监管部门。别继续卖，更别把货和账销毁。销毁证据正好落进上面「推定你明知是假货」的第五种情形。用别人的图案见第 21 条（图案要么自己做要么买授权）。有一种套路专门打这条：有人主动上门，说这批笔或者别的小商品白送给你，放店里卖了再分钱。过些天就有人来买走、当场取证，再按侵权来索赔。白给的货，免赔要的三个条件恰好全缺：没有采购合同和付款记录，说不出真实的提供者，价格明显不正常。「合法取得并说明提供者」一条都用不上。所以主动送货上门、不给票据、只留一个微信号的，一律不上架。真要做代销，就签书面的代销合同，留下对方的身份证和营业执照复印件，把货归谁、侵权了算谁的写进去。",
+        "source": "全国人大常委会 (2020). 刑法修正案（十一）（第十七、二十四项，即刑法第二百一十四、二百二十条）. <https://www.spp.gov.cn/zdgz/202012/t20201227_503682.shtml>；最高人民法院、最高人民检察院 (2025). 关于办理侵犯知识产权刑事案件适用法律若干问题的解释（法释〔2025〕5 号，2025 年 4 月 26 日起施行）. <https://www.spp.gov.cn/xwfbh/wsfbt/202504/t20250424_693977.shtml>；全国人大常委会 (2019). 商标法（2019 年修正，第五十七、六十四条；2026 年 6 月 26 日修订后为第七十二、七十八条，自 2027 年 1 月 1 日起施行）. <https://www.cnipa.gov.cn/art/2019/7/30/art_95_28179.html>、<https://www.cnipa.gov.cn/art/2026/6/26/art_95_206942.html>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -6736,6 +7109,7 @@ module.exports = {
         "cost": "正版图库的授权从几十元一张起。找人原创设计，几百到几千元。每一张用在商品上的图，都留一份授权凭证和购买记录。难的是不去用网上随手搜来的图。",
         "gain": "著作权法把「未经著作权人许可，以改编、翻译、注释等方式使用作品」和直接复制并列为侵权行为。所以在原图上改颜色、换底色、加个自己的图标，仍然是未经许可使用别人的作品。要判刑的门槛在这里：为了赚钱，没经作品的版权人（著作权人）许可，就把美术作品印出来卖（复制发行）。够上罪的是三个数。挣到的钱（违法所得）够 3 万元。或者这门买卖做到 5 万元（非法经营数额）。或者印出来的件数加起来够 500 份（张）。到了其中任何一个数，就构成侵犯著作权罪。判 3 年以下，同时罚钱，或者只罚钱。达到十倍标准的判 3 到 10 年。只是卖别人印的侵权货，挣到 5 万元以上，或者卖出去 10 万元以上，按销售侵权复制品罪判 5 年以下。商标也一样：在同一种商品上使用与注册商标近似的商标，或者在类似商品上使用相同或者近似的商标，「容易导致混淆的」本身就在侵权范围内。「近似」是法条明写的侵权情形，稍微改一改仍然算侵权（全国，司法解释 2025 年 4 月 26 日起施行）",
         "note": "常踩的有三处。一是把网上搜来的卡通形象和明星图，印在衣服、杯子、手机壳上。二是字体：商用字体多数要单独授权，免费预览不等于免费商用。三是给客户做的设计稿里夹了没授权的素材，责任仍然在卖货的人身上。要省事，就用有商用授权的图库，并且把授权页存下来。或者让设计方在合同里写清素材从哪儿来、授权到什么范围，出了事由设计方负责。判刑之外还有民事赔偿和行政罚款：损害公共利益的，可以没收违法所得，并按违法经营额的 1 到 5 倍罚款。投产前查商标见第 19 条（样品先过一遍量产清单）。反过来，自己的图被别人用了，也按这套规则维权。把别人的漫画、影视剧传到网上，挂广告、收会员费的刑事线，见第 9 节第 24 条（汉化漫画、搬运影视剧）。",
+        "source": "全国人大常委会 (2020). 著作权法（2020 年修正，第五十二条第六项、第五十三条）. <http://www.npc.gov.cn/npc/c2/c30834/202011/t20201119_308796.html>；全国人大常委会 (2020). 刑法修正案（十一）（第二十、二十一项，即刑法第二百一十七、二百一十八条）. <https://www.spp.gov.cn/zdgz/202012/t20201227_503682.shtml>；最高人民法院、最高人民检察院 (2025). 关于办理侵犯知识产权刑事案件适用法律若干问题的解释（法释〔2025〕5 号）. <https://www.spp.gov.cn/xwfbh/wsfbt/202504/t20250424_693977.shtml>；全国人大常委会 (2019). 商标法（2019 年修正，第五十七条第二项；2026 年修订后为第七十二条第二项）. <https://www.cnipa.gov.cn/art/2019/7/30/art_95_28179.html>",
         "grade": "A",
         "meta": {
           "money": "少",
@@ -6755,6 +7129,7 @@ module.exports = {
         "cost": "不花钱。上班做事按制度、按医嘱、按流程走。不在自己的权限之外替人做决定。想帮忙之前，先问自己一句：出了事谁负责。难的是当场顶住「通融一下」的请求。",
         "gain": "以护士为例，法规写明的职务边界是这样的。发现病情危急，立即通知医师。紧急情况下为抢救垂危患者，可以先行实施必要的紧急救护。发现医嘱违法违规，或者违反诊疗技术规范的，要向医师提出，必要时向科室负责人报告。民法典另有规定：自愿出手做紧急救助，结果把被救的人弄伤了的，救人的一方不用赔钱（不承担民事责任）（全国）",
         "note": "岗位之内按规程办，紧急救人受法律保护。其余的事，先分清是谁的权限、谁的责任，别用私人的好意代替制度上的决定。护士条例 2020 年经国务院令第 726 号修订，只改了注册那几条，第十七条一字未动。医师法里关于按诊疗规范执业的条款，本次未能打开官方原文，所以没有引用。",
+        "source": "国务院 (2008). 护士条例（国务院令第 517 号，第十七条）. <http://www.gov.cn/zhengce/zhengceku/2008-03/28/content_6169.htm>；国务院 (2020). 护士条例（2020 年修订，第十七条）. <https://flk.npc.gov.cn/detail?id=ff808081777d07c50177b8ed29bf3950>（国家法律法规数据库）；全国人大 (2020). 民法典（第一百八十四条）. <https://www.spp.gov.cn/spp/fl/202006/t20200602_463888.shtml>",
         "grade": "B",
         "meta": {
           "money": "0",
@@ -6774,6 +7149,7 @@ module.exports = {
         "cost": "简易注销自己就能办：在国家企业信用信息公示系统上挂出来 20 日。还有债没还完的，要先把账理清，该收的收回来，该还的还掉，这一步叫清算。走破产要向法院申请，耗时几个月。难的是亏了之后不想面对，一直拖着不办。",
         "gain": "欠别人的和别人欠你的都没有，或者都已经还清。不欠工资、不欠社保、不欠税。全体投资人写了书面承诺。满足这几条，挂出来公示 20 日没人提异议，就能走简易注销。个体户不用公示，有关部门 10 日内没有异议就直接注销。公司还不上到期的债、欠的又比手上有的多（资不抵债）的，可以向法院申请重整、和解或者破产清算。已经解散又没清算、欠的比有的多的，该负责清算的人应当去申请破产清算。放着不管的后果是这样的：不按期公示年报，会被列进经营异常名录。连续 2 年不报年报、被列进经营异常名录还不改，按登记的地址又联系不上的，吊销营业执照。担任被吊销执照企业的法定代表人、对此负有个人责任的，从吊销那天算起 3 年内不得再当公司的法定代表人和董事、监事、高管。已经列进经营异常名录的，连简易注销都走不了（全国）",
         "note": "企业信息公示暂行条例 2024 年经国务院令第 777 号修订，5 月 1 日起施行，此后没有再改。旧版第十七条「经营异常满 3 年列入严重违法企业名单」已经删掉。现在的严重违法失信名单管的是年报弄虚作假、情节严重的企业。网上很多说法还是旧版，别照抄。个人破产制度（个体户也算在内）目前只有个别地区在试点，本节没有核实原文，所以不写。",
+        "source": "国务院 (2021). 市场主体登记管理条例（国务院令第 746 号，第三十一、三十二、三十三条）. <https://www.gov.cn/zhengce/zhengceku/2021-08/24/content_5632964.htm>；市场监管总局等六部门 (2025). 企业注销指引（2025 年修订）（2025 年第 52 号公告）. <https://www.gov.cn/zhengce/zhengceku/202512/content_7053238.htm>；全国人大常委会 (2006). 企业破产法（第二、七条）. <http://www.gov.cn/gongbao/content/2006/content_413952.htm>；国务院 (2024 修订). 企业信息公示暂行条例（国务院令第 777 号修订，第十八条）：「企业因连续2年未按规定报送年度报告被列入经营异常名录未改正，且通过登记的住所或者经营场所无法取得联系的，由县级以上市场监督管理部门吊销营业执照」. <https://flk.npc.gov.cn/detail?id=ff8081819c46fcc5019cd18fc6e9557d>（国家法律法规数据库）；国务院 (2024). 关于修改和废止部分行政法规的决定（国务院令第 777 号）. <https://www.gov.cn/gongbao/2024/issue_11246/202403/content_6941844.html>；市场主体登记管理条例（第十二条第四项）与公司法（2023 年修订，第一百七十八条第一款第四项）：担任因违法被吊销营业执照的企业的法定代表人并负有个人责任的，自被吊销营业执照之日起未逾 3 年不得担任法定代表人和董事、监事、高级管理人员. <https://www.gov.cn/zhengce/zhengceku/2021-08/24/content_5632964.htm>；<https://www.gov.cn/yaowen/liebiao/202312/content_6923395.htm>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -6793,6 +7169,7 @@ module.exports = {
         "cost": "不花钱。交钱之前要到三样东西：书面合同、对方公司的全称、退钱的条件。钱只付给合同上那家公司，不转给个人账号。难的是对方晒出「学员月入过万」的截图时，忍住不当场交钱。",
         "gain": "广东省高级人民法院判过一个代运营骗局。蒋某、徐某等 55 人在广州、南宁、杭州开了多家公司。法院认定他们「明知根本不具备电商代运营的能力和技术条件」。他们还是以给淘宝网店代运营为名，诱骗 7711 名被害人购买、升级「服务套餐」。一共骗走 5299.4 万余元。两名首犯按诈骗罪分别判了 14 年和 13 年 6 个月。法院说，骗局设计得「严丝合缝」，「多名被害人一再受骗」。江苏省公安厅 2025 年把「无货源」跨境电商骗局拆成四步。第一步，在社交平台发「零基础」「无需囤货」的信息。第二步，以「运营指导」的身份加你，让你下载指定的平台。第三步，你开店后很快有第一单。对方让你先付商品成本价，说买家的货款冻结在平台里，收货后解冻。随后后台造出大量订单，让你不断加钱。第四步，想提现时就说「账户异常」「系统维护」，要你再交解冻金、手续费。案例里的张女士陆续垫进去 90 余万元，3 天后网站就打不开了。刷单那一头：一家代运营商给商户组织虚假团购冲排名。市场监管部门罚了它 10 万元，平台扣了它 5 万元保证金，法院支持平台扣钱。最高人民法院 2026 年把它列为典型案例，原话是「虚假交易、刷单炒信本为法律明令禁止的行为」。市场监管总局 2025 年也公布过一个案子。一家公司卖「一键搬家」「一键代发」软件，把别的平台的商品信息爬过来上架，被罚 53 万元。总局提示经营者「不得实施『搬家盗店』『无货源经营』等」违法行为。出路在民法典里：被对方用欺诈手段骗着签的合同，你可以请法院或者仲裁机构撤销。要在知道被骗那天起 1 年内提出。撤销以后，对方因此拿到的钱应当返还（全国）",
         "note": "看到「零基础」「无需囤货」「低投入，高回报」「保证盈利」，就先停下。让你往它指定的平台里垫货款的，也先停下。交钱前去国家企业信用信息公示系统，查对方的执照和处罚记录。合同里写清服务内容、达不到怎么退钱。聊天记录、合同和转账截图都留好。已经转了钱，立刻打 110 或者 96110 要求止付，见第 8 节第 2 条（被骗止付）。对方确实干了活、只是效果差，多半算合同纠纷，要走协商、投诉或者起诉。撤销合同要打官司，一审普通程序 6 个月起，律师费自己出，判下来对方也可能早就跑了。打着加盟旗号收钱的，先按第 5 条（加盟前先查商务部备案）查备案。受益人主要是你自己。",
+        "source": "广东省高级人民法院 (2023). 广东法院打击治理电信网络诈骗犯罪典型案例（案例三：蒋某、徐某等 55 人犯罪集团诈骗案）. <https://www.gdcourts.gov.cn/gsxx/quanweifabu/anlihuicui/content/post_1388464.html>；江苏省公安厅 (2025). 防范提示：无货源跨境电商，当心有诈！. <https://gat.jiangsu.gov.cn/art/2025/2/13/art_89956_11491354.html>；最高人民法院 (2026). 最高人民法院发布依法规范平台经营、保护消费者合法权益典型案例（案例三：某代运营商诉某平台服务合同纠纷案）. <https://www.court.gov.cn/zixun/xiangqing/507691.html>；市场监管总局 (2025). 市场监管总局公布五起网络不正当竞争典型案例（案例一）. <https://www.samr.gov.cn/xw/zj/art/2025/art_0d043840ec9445a689496bcf30c94820.html>；全国人大 (2020). 民法典（第一百四十八、一百五十二、一百五十七条）. <https://www.spp.gov.cn/spp/fl/202006/t20200602_463888.shtml>",
         "grade": "B",
         "meta": {
           "money": "0",
@@ -6814,6 +7191,7 @@ module.exports = {
         "cost": "不花钱。红十字会或者医院的心肺复苏课，半天到一天，学一次够用多年。没学过也能做：双手叠起来放在两乳头连线的中点，每秒大约 2 次用力往下压，不要停。",
         "gain": "79 项研究、142,740 人合起来算（荟萃分析）：心跳停在医院外面（院外心脏骤停）的人，活着出院的总共只有 7.6%。在场的人做了心肺复苏的，活着出院的比例从 3.9% 升到 16.1%。有人在旁边看见发作的占 53%，真得到在场者按压的只有 32%。中国 BASIC-OHCA 登记了 38,227 例急救接诊病例。其中 30,282 例（79.2%）的心脏骤停发生在家中。这批人里，在场者按压率 20.3%，活着出院的 1.2%。顺序是先按压，再让第二个人打电话和拿 AED。机器开机后照着它的语音做",
         "note": "不满 1 岁的孩子手法不同，要吹气，见本节第 44 条（婴儿心肺复苏）。不要先掐人中，不要先找家属，不要先拍视频。也不要因为怕按断肋骨就不敢用力。民法典第一百八十四条写明：自愿做紧急救助、把受助人弄伤了，救助人不承担民事责任。",
+        "source": "Sasson C 等 (2010). Predictors of survival from out-of-hospital cardiac arrest: a systematic review and meta-analysis. Circulation: Cardiovascular Quality and Outcomes. <https://doi.org/10.1161/CIRCOUTCOMES.109.889576> ; Zheng J 等 (2023). Incidence, process of care, and outcomes of out-of-hospital cardiac arrest in China: a prospective study of the BASIC-OHCA registry. The Lancet Public Health. <https://doi.org/10.1016/S2468-2667(23)00173-1> ; 全国人大 (2020). 民法典（第一百八十四条）. <https://www.spp.gov.cn/spp/fl/202006/t20200602_463888.shtml>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -6833,6 +7211,7 @@ module.exports = {
         "cost": "不花钱。蹲下去问一句、打个电话，几分钟。难的是忍住伸手去扶的那一下。对陌生人还要多算一笔：打 120 会留下你的号码，可能被回电，也可能被问一次话。真被家属盯上，打官司是几个月起步的事。而且就算最后判你赢，律师费也得自己出。",
         "gain": "卫生部《老年人跌倒干预技术指南》写明两句话。一句是「跌倒是我国 65 岁以上老年人伤害死亡的首位原因」。另一句是「发现老年人跌倒，不要急于扶起，要分情况进行处理」。意识不清的，立即拨打急救电话。有呕吐的，把头偏向一侧并清理口鼻。呼吸心跳停止的，立即做胸外按压。「如需搬动，应保证平稳，尽量平卧」。意识清楚的，先问他对跌倒过程有没有记忆，「如不能记起，可能为晕厥或脑血管意外」。有剧烈头痛，或者口角歪斜、言语不利、手脚无力的，「立即扶起老年人可能加重脑出血或脑缺血，使病情加重」。有骨折迹象，或者腰背疼痛、大小便失禁的，「如无相关专业知识，不要随便搬动」。以上几种都应立即拨打急救电话。老人自己想站起来的，可以协助他缓慢起立，「坐、卧休息并观察，确认无碍后方可离开」。说到「怕被讹」，法律上是这样规定的。《最高人民法院关于适用〈中华人民共和国民事诉讼法〉的解释》第九十条有两句。头一句是「当事人对自己提出的诉讼请求所依据的事实……应当提供证据加以证明」。第二句是「在作出判决前，当事人未能提供证据或者证据不足以证明其事实主张的，由负有举证证明责任的当事人承担不利的后果」。民法典第一千一百九十八条的原文是：「宾馆、商场、银行、车站、机场、体育场馆、娱乐场所等经营场所、公共场所的经营者、管理者或者群众性活动的组织者，未尽到安全保障义务，造成他人损害的，应当承担侵权责任。」民法典第一百八十四条：「因自愿实施紧急救助行为造成受助人损害的，救助人不承担民事责任」。最高人民法院公布过一个典型案例。药店经营者给心脏骤停的人做心肺复苏，压断了对方的肋骨。受助人住院 18 天，索赔 9 千余元。法院判决救助人不承担民事责任",
         "note": "定 B 是因为指南只说了该怎么处置，没有「照做能少死多少人」的数字。第一百八十四条免的是救人过程中弄出的损害，前提是你自愿、情况紧急。「自作主张把人塞进私家车送医」这类它不管，等 120 更稳妥。打完 120 别挂电话，按接线的调度员说的做。这套判断首先是给自家老人和熟人用的。换成路上不认识的人，走开不违法，也最省事：法律没规定你必须救。停下来要付的账要逐层算：时间、留号码、被家属找上、被告上法庭、闹到单位、被拍被传上网。详见 [docs/遇到陌生人出事该不该停.md](../docs/遇到陌生人出事该不该停.md)。真决定停下，唯一必须做到的是**别上手搬**，理由在医学上：硬扶可能加重脑出血或者脊柱损伤。有一个例外：这地方要是你在经营、你在管，或者活动是你组织的，走开就可能要担责。民法典第一千一百九十八条给的安全保障义务，要求你为场子里的人负一份安全责任。防跌倒本身见第 1 节第 13 条（练平衡和腿部力量）。老人磕过头之后的迟发症状见本节第 10 条。救人受伤之后的钱见本节第 39 条。被网暴怎么留证报警见第 8 节第 16 条。",
+        "source": "卫生部 (2011). 老年人跌倒干预技术指南（「老年人跌倒后的处理」）. 全文 PDF 见广东省疾病预防控制中心 <http://cdcp.gd.gov.cn/gcdcdfiles/editor/uploadfile/20111027094832117.pdf>，现场处理部分全文见贵南县人民政府转载 <https://www.guinan.gov.cn/lnb/zc1__zwgk/zc/aztfl/qt/content_27609778>；全国人大 (2020). 民法典（第一百八十三、一百八十四条）. <https://www.spp.gov.cn/spp/fl/202006/t20200602_463888.shtml>；最高人民法院 (2023). 人民法院抓实公正与效率践行社会主义核心价值观典型案例（案例十三，齐某某诉孙某某健康权纠纷案，辽宁省康平县人民法院）. <https://www.court.gov.cn/zixun/xiangqing/408162.html>；最高人民法院 (2022 年第二次修正，2022 年 4 月 10 日施行). 关于适用《中华人民共和国民事诉讼法》的解释（第九十条）. <https://www.court.gov.cn/zixun/xiangqing/353651.html>；民法典第一千一百九十八条同上最高检转载全文；全国人大常委会 (2023 年修正，2024 年 1 月 1 日施行). 民事诉讼法（第一百五十二、一百六十四条）. 上海市发展和改革委员会转载全文 <https://fgw.sh.gov.cn/ys-syjf-zc-2.4.1-h5/20240408/073febdb2b04464390546232d4089f51.html>；国务院 (2006). 诉讼费用交纳办法（国务院令第 481 号，第六、二十九条）. <https://www.gov.cn/ziliao/flfg/2006-12/29/content_483682.htm>；全国人大常委会 (2025). 治安管理处罚法（2025 年修订，2026 年 1 月 1 日起施行，第二十六条第一项、第五十条第五项）. <https://www.spp.gov.cn/spp/fl/202506/t20250627_699863.shtml>",
         "grade": "B",
         "meta": {
           "money": "0",
@@ -6852,6 +7231,7 @@ module.exports = {
         "cost": "不花钱。三个动作，看一遍就会：让他笑一下、双手平举、说一句完整的话。",
         "gain": "把 16 项静脉溶栓随机试验、6756 名患者的个体数据合起来算（荟萃分析）。静脉溶栓就是打药把堵住的血管通开。发病 3 小时内用阿替普酶溶栓，恢复到生活基本能自理（改良 Rankin 评分 0–1）的比值比 1.75，95% CI 1.35–2.27（可信范围）。这个结果出现的可能性约为不溶栓的 1.75 倍。拖到 3 到 4.5 小时是 1.26（1.05–1.51）。超过 4.5 小时是 1.15（0.95–1.40），统计上已经看不出差别",
         "note": "溶栓越早越有效，超过 4.5 小时就基本没用了。打 120 而不是自己开车，是因为救护车会直接送到有卒中中心的医院，还会提前通知对方准备。记下症状开始的准确时间，医生要用它决定能不能溶栓。别喂水喂药，别等「休息一下看看」",
+        "source": "Emberson J, Lees KR, Lyden P, et al. (2014). Effect of treatment delay, age, and stroke severity on the effects of intravenous thrombolysis with alteplase for acute ischaemic stroke: a meta-analysis of individual patient data from randomised trials. Lancet, 384(9958), 1929-1935. <https://doi.org/10.1016/S0140-6736(14)60584-5>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -6871,6 +7251,7 @@ module.exports = {
         "cost": "不花钱。在「脸歪、抬手、说话」这三个动作（第 3 条，突然嘴歪、说话说不清）之外再加两个。一个是让他站直闭眼，看晃不晃，再问他看东西有没有重影、有没有缺一块。另一个是自己怀疑时伸手指点鼻尖，闭上眼再点一次。",
         "gain": "美国肯塔基大学卒中中心 2014 年回顾了 736 例急性缺血性卒中（血管堵住引起的中风）的病历。其中 14.1% 的病人发病时完全没有脸歪、胳膊无力、说话不清这三个症状（FAST）。把「走路不稳、腿没劲、视觉症状」也算进筛查，漏掉的比例从 14.1% 降到 4.4%",
         "note": "小脑和脑干那一片的血管堵了（后循环梗死），常常不歪嘴、不瘫手。它只是天旋地转、走路偏斜、复视（看东西成双）、喝水吃饭呛，最容易被当成颈椎病、低血糖、耳石症耽误。指鼻不准、闭眼站不住，是小脑受累的表现。但没有哪个动作能反过来排除卒中：突然出现、不缓解就打 120，并记下发作的准确时间。该研究只翻了一家医院的病历，作者自己写明还要再验证",
+        "source": "Aroor S, Singh R, Goldstein LB (2017). BE-FAST (Balance, Eyes, Face, Arm, Speech, Time): Reducing the Proportion of Strokes Missed Using the FAST Mnemonic. Stroke, 48(2), 479-481. <https://doi.org/10.1161/STROKEAHA.116.015169>",
         "grade": "B",
         "meta": {
           "money": "0",
@@ -6890,6 +7271,7 @@ module.exports = {
         "cost": "不花钱。急诊评估和血管检查要占掉半天到一天。",
         "gain": "美国心脏协会 2021 年关于视网膜中央动脉阻塞（眼底那根主血管被堵住）的科学声明写明：「急性视网膜中央动脉阻塞是急症」。救治体系应当把它按急诊来识别、按轻重缓急排顺序。断血时间越长，还能救回来的视网膜越少。牛津 EXPRESS 研究看的是两类病人：小卒中，和症状自己好转的脑缺血（医学上叫短暂性脑缺血发作）。这批病人改为当天评估、当天开始治疗之后，90 天内再发卒中的比例从 10.3%（32/310）降到 2.1%（6/281）",
         "note": "定 B 是因为 EXPRESS 不是随机试验。它比的是同一片人群改做法之前、之后两段时间，两段之间别的条件也可能变了，这部分分不开。眼前一黑几分钟又自己恢复，最容易被当成「累的」「低血糖」放过去。它是短暂性脑缺血发作的一种，接下来几天正是卒中高发的窗口。不疼、不红、不流泪的单眼看不见，尤其要当回事。别等第二天挂眼科门诊，直接去有卒中中心的医院急诊。",
+        "source": "Mac Grory B, Schrag M, Biousse V, et al. (2021). Management of Central Retinal Artery Occlusion: A Scientific Statement From the American Heart Association. Stroke, 52(6), e282-e294. <https://doi.org/10.1161/STR.0000000000000366> ; Rothwell PM, Giles MF, Chandratheva A, et al. (2007). Effect of urgent treatment of transient ischaemic attack and minor stroke on early recurrent stroke (EXPRESS study): a prospective population-based sequential comparison. Lancet, 370(9596), 1432-1442. <https://doi.org/10.1016/S0140-6736(07)61448-2>",
         "grade": "B",
         "meta": {
           "money": "0",
@@ -6909,6 +7291,7 @@ module.exports = {
         "cost": "不花钱。眼科急诊量眼压、查前房，占掉半天。",
         "gain": "武汉一家眼科医院比了两段时间的急性原发性闭角型青光眼病人。2020 年封控的 76 天里有 54 人 64 眼，2021 年同期有 46 人 51 眼，两组的人口特征相近。从出现症状到接受治疗，封控那组是 241.84±211.95 小时，对照组是 121.53±96.12 小时（P=0.001）。就诊时的眼压是 52.63±12.45 mmHg 对 45.16±9.79 mmHg（P=0.001）。失明的比例是 21.87% 对 7.84%。查出青光眼性视神经病变的是 20/64 眼（31.25%）对 7/51 眼（13.73%）（P=0.03）。韩国一家医院回顾了 50 只发作过一次、后来摘了晶状体的眼睛。一年之后 25 只（50%）留下了不同程度的视野缺损。从症状出现到把眼压降下来的这段时间越长，留下缺损的可能越大（P=0.005）。另有一项前瞻研究，让 43 名前房浅的人在暗室里俯卧 1 小时。两只眼的眼压都明显升高（P<0.01）。平时主要用的那只眼中位数升了 3.60 mmHg，另一只升了 2.70 mmHg（P<0.05）",
         "note": "定 B 的原因有两条。一是武汉那两组是翻旧病历比出来的，封控本身还带来别的差别，和「拖延」这一项分不开。二是韩国那组只有 50 只眼，也是回顾性的。诱因说的不是看屏幕，是两件事叠在一起：暗处瞳孔会散大，长时间低头或者趴着又把晶状体往前顶。前房本来就浅的人容易被这样诱发，所以真正高危的是 50 岁以上、远视、家里有人得过闭角型青光眼的人。年轻人通宵打游戏基本不会这样发作。发作时最常见的错判是当成胃肠炎、偏头痛或者血压高，因为头痛呕吐比眼睛的症状更抢眼。不疼不红的单眼看不见是另一回事，见第 5 条（一只眼睛突然黑掉）。防蓝光眼镜有没有用，见第 6 节第 16 条（防蓝光眼镜）。",
+        "source": "Zhou L, Wu S, Wang Y, Bao X, Peng T, Luo W, Ortega-Usobiaga J (2022). Clinical presentation of acute primary angle closure during the COVID-19 epidemic lockdown. Frontiers in Medicine, 9, 1078237. <https://doi.org/10.3389/fmed.2022.1078237> ; Sung MS, Kim HJ, Park SW (2023). Predictors of long-term visual field outcome after an episode of acute primary angle closure. Clinical & Experimental Ophthalmology, 51(4), 291-299. <https://doi.org/10.1111/ceo.14206> ; Wang J, Wang J, Ng TK, Huang C (2025). Asymmetric intraocular pressure changes in dominant and contralateral eyes: the dark room prone provocative test. Seminars in Ophthalmology, 40(4), 325-331. <https://doi.org/10.1080/08820538.2024.2443972>",
         "grade": "B",
         "meta": {
           "money": "0",
@@ -6928,6 +7311,7 @@ module.exports = {
         "cost": "不花钱。",
         "gain": "以色列做过一项全国急性冠脉综合征调查。分析的对象是 ST 段抬高心肌梗死患者，这是一类心梗。算的是从进医院到用球囊把堵住的血管撑开（球囊扩张）这一段间隔。间隔 ≤55 分钟的，30 天内死亡 5/178（2.8%）。间隔 >55 分钟的，30 天内死亡 15/155（9.7%）",
         "note": "该研究比的是进了医院之后耽误的那段，不是从发病到进医院那段。但道理一样：每耽误一会儿，就多坏死一块心肌。疼可能疼在上腹、后背、下巴，也可能是左胳膊发麻。糖尿病人和老年人可能不疼，只是喘。不要自己开车，路上失去意识就是第二场事故",
+        "source": "Karkabi B, Meir G, Zafrir B, et al. (2021). Door-to-balloon time and mortality in patients with ST-elevation myocardial infarction. European Heart Journal - Quality of Care and Clinical Outcomes. <https://doi.org/10.1093/ehjqcco/qcaa037>",
         "grade": "B",
         "meta": {
           "money": "0",
@@ -6947,6 +7331,7 @@ module.exports = {
         "cost": "不花钱。",
         "gain": "国际急性主动脉夹层登记（IRAD）收了 12 家中心的 464 例。主动脉夹层就是胸背撕裂样剧痛那种病。病人最先说出来的症状里，最常见的是突然发作的剧烈锐痛。住院期间总死亡率 27.4%。A 型夹层没做手术、只吃药的，死亡率 58%",
         "note": "夹层和心梗的处理正好相反。心梗要用抗凝、溶栓这类让血别凝住的药，用在夹层上等于给撕口放血。所以到医院要主动说「撕裂样，疼在往下走」，让医生想到查增强 CT。两条胳膊血压差很多、一侧摸不到脉搏，是提示。血压控制不好的、有马凡综合征的、家里得过主动脉瘤或者夹层的，风险高。同样不要自己开车，不要忍到第二天",
+        "source": "Hagan PG, Nienaber CA, Isselbacher EM, et al. (2000). The International Registry of Acute Aortic Dissection (IRAD): new insights into an old disease. JAMA, 283(7), 897-903. <https://doi.org/10.1001/jama.283.7.897>",
         "grade": "B",
         "meta": {
           "money": "0",
@@ -6966,6 +7351,7 @@ module.exports = {
         "cost": "看急诊本身不花什么钱。急诊做一次头颅 CT 几百元。",
         "gain": "加拿大 10 家急诊对 2131 例「一小时内达到最痛的剧烈头痛」做了前瞻队列研究，事先定好标准，再一路跟踪记录。其中 132 例（6.2%）是蛛网膜下腔出血（脑表面的血管破了）。渥太华 SAH 规则有六条：40 岁及以上、脖子痛或者发硬、有人看到晕过去。另外三条是活动中发作、一下子炸开式发作、医生查体时脖子前屈受限。符合任一条就要查。这条规则把出血的人全都挑了出来，敏感性 100%，95% CI 97.2%–100.0%（可信范围）。代价是没出血的人里只有 15.3% 被它排除掉（特异性 15.3%）",
         "note": "要看的不是「有多疼」，是「多快到最疼」，几秒到一分钟内炸开的头痛才是危险信号，慢慢加重的偏头痛不是。伴呕吐、脖子发硬、怕光、短暂晕厥，更要当回事。特异性只有 15.3%，意思是按这条去查的人绝大多数查完没事。但漏掉一次再出血就是死亡，值得查。不要吃片止痛药压下去接着睡",
+        "source": "Perry JJ, Stiell IG, Sivilotti MLA, et al. (2013). Clinical decision rules to rule out subarachnoid hemorrhage for acute headache. JAMA, 310(12), 1248-1255. <https://doi.org/10.1001/jama.2013.278018>",
         "grade": "A",
         "meta": {
           "money": "少",
@@ -6985,6 +7371,7 @@ module.exports = {
         "cost": "做一次头颅 CT 两三百元。",
         "gain": "中华医学会神经外科学分会等发布过《慢性硬膜下血肿药物治疗中国专家共识》。慢性硬膜下血肿，是脑膜之间慢慢积起来的一摊血。专业说法是蛛网膜与硬脑膜之间积血形成的慢性占位。它「通常在颅脑外伤后第三周形成」，多见于老年人。开刀之后复发率可达 33%，病死率可达 32%。90 岁以上的病人，总体上恢复得好的只有 24%。系统综述：全球每 10 万人每年新发 3.39 到 39.1 例，随年龄升高，80 岁以上可达三倍。最常见的起因是外伤和跌倒，其次是长期酗酒、用防止血液凝固的药（抗凝）和暴力伤害。老年医学综述：临床表现「典型包括意识模糊、认知下降、步态障碍或嗜睡，可能与其他老年综合征相似」",
         "note": "撞的时候可以完全没事，老人自己甚至想不起磕过。所以家里发现「最近突然糊涂了、走路发飘、总想睡、一只手没劲」，先倒回去问这两三个月有没有摔过、撞过头，再去做 CT。别直接归到「老年痴呆」或者「上次中风的后遗症」上，归错了就会耽误。吃阿司匹林、氯吡格雷、华法林或者新型口服抗凝药的老人，风险更高，长期大量喝酒也是。防跌倒见第 1 节第 13 条（练平衡和腿部力量）。",
+        "source": "Zhang J 等 (2021). Expert consensus on drug treatment of chronic subdural hematoma. Chinese Neurosurgical Journal, 7(1), 47. <https://doi.org/10.1186/s41016-021-00263-z> ; Dziho A 等 (2025). Global prevalence and incidence of chronic subdural hematoma: A systematic review. Brain and Spine, 5, 105893. <https://doi.org/10.1016/j.bas.2025.105893> ; Mathon B, Shotar E (2026). Diagnostic and therapeutic management of chronic subdural hematoma in elderly patients. Gériatrie et Psychologie Neuropsychiatrie du Vieillissement, 24(1), 30-41. <https://doi.org/10.1684/pnv.2026.1274>",
         "grade": "B",
         "meta": {
           "money": "少",
@@ -7004,6 +7391,7 @@ module.exports = {
         "cost": "腿部血管做一次超声（下肢静脉超声），一两百元。",
         "gain": "国际肺栓塞协作登记（ICOPER）收了 7 个国家 52 家医院的 2454 例确诊急性肺栓塞病人。肺栓塞就是血块堵住肺动脉。这批人 3 个月内不分原因的死亡率是 17.4%（426/2454）。世界卫生组织 WRIGHT 项目：连续 4 小时以上的旅行，让静脉里长血块、血块跑到肺里（静脉血栓栓塞）的风险「大约翻倍」。但摊到一个人头上的概率仍然很低，久坐不动超过 4 小时「约为六千分之一」",
         "note": "两条腿一起肿，多半是心、肝、肾或者静脉功能的问题。一条腿突然肿、比另一条粗一圈，才是深静脉血栓的典型样子。容易出事的是长途坐车坐飞机、手术或骨折后卧床、打石膏、怀孕生产前后、肿瘤、吃口服避孕药。血块脱落、堵住肺动脉就是肺栓塞：突然喘不上气、深吸一口气胸口更疼、心跳快、发晕、咳出血（咯血）。到这一步直接打 120。17.4% 是确诊肺栓塞病例的死亡率，不是「腿肿了就有这么大风险」，别对着这个数字吓自己。",
+        "source": "Goldhaber SZ, Visani L, De Rosa M (1999). Acute pulmonary embolism: clinical outcomes in the International Cooperative Pulmonary Embolism Registry (ICOPER). Lancet, 353(9162), 1386-1389. <https://doi.org/10.1016/S0140-6736(98)07534-5> ; WHO (2007). Study results released on travel and blood clots. <https://www.who.int/news/item/29-06-2007-study-results-released-on-travel-and-blood-clots>",
         "grade": "B",
         "meta": {
           "money": "少",
@@ -7023,6 +7411,7 @@ module.exports = {
         "cost": "一根旋压式止血带几十到一百多元，放车里和急救包里。学一次「扎在伤口上方、拧到血停、记时间」，几分钟。",
         "gain": "美国得州 11 家一级创伤中心 6 年里收了 1,026 例四肢血管伤，其中 181 例（17.6%）在到医院之前上了止血带。不做任何调整直接算，上了止血带的死亡 3.9%，没上的 5.2%。把其他条件拉平之后（多因素校正），上止血带仍然单独和活下来相关。校正 OR 5.86，可信范围是 95% CI 1.41 到 24.47。巴格达战地医院的 232 名伤员：休克出现前上止血带的存活 90%，休克后才上的只有 10%。需要止血带而没上的 5 人全部死亡，上了的存活 87%。顺序是：直接压迫，衣物、毛巾都行 → 压不住的四肢出血上止血带 → 打 120 → 不松开",
         "note": "不要拿绳子、鞋带这类细东西当止血带，勒不住动脉，还割破皮肤。上了止血带不要隔一会儿松一下「放放血」。脖子和躯干上的出血只能压，不能扎。那份战地数据里，止血带本身没有让谁截肢，出现短暂神经麻痹的有 4 例。中国急诊医师的专家共识说法一致：院前一旦用上就不建议松开，除非有别的办法能彻底止血。上臂出血扎在上臂中上三分之一，大腿出血扎在大腿根。前臂、小腿、肘、膝上不要扎。共识建议到医院前后总共尽量别超过 2 小时，但到不了医院、又没别的办法止血的，等到正规救援之前不解开。皮带、领带、衣袖临时做的止血带，单用很难止住血，要配一根棍子绞紧。",
+        "source": "Teixeira PGR 等 (2018). Civilian Prehospital Tourniquet Use Is Associated with Improved Survival in Patients with Peripheral Vascular Injury. Journal of the American College of Surgeons. <https://doi.org/10.1016/j.jamcollsurg.2018.01.047> ; Kragh JF 等 (2009). Survival with emergency tourniquet use to stop bleeding in major limb trauma. Annals of Surgery. <https://doi.org/10.1097/SLA.0b013e31818842ba> ; 中国医师协会急诊医师分会等 (2020). 止血带的急诊应用专家共识. 中华急诊医学杂志 29(6):773-779：「院前急救时，止血带一旦使用则不建议松开，除非得到可以替代的彻底止血的救治」「最长使用时间不应超过2 h。但如果客观情况无法到医院救治或者无替代止血办法，则在得到正规救援前不解除止血带」. <https://doi.org/10.3760/cma.j.issn.1671-0282.2020.06.006>，全文 <http://www.cem.org.cn/rhtml/20200606/index.htm>",
         "grade": "A",
         "meta": {
           "money": "少",
@@ -7042,6 +7431,7 @@ module.exports = {
         "cost": "冲洗不花钱。狂犬病疫苗全程几百元。三级暴露还要加打狂犬病被动免疫制剂（直接打进现成的抗体），几百到上千元。",
         "gain": "国家疾控局、国家卫健委 2023 年版规范原文：「狂犬病病死率几乎达 100%」。处置是「用肥皂水（或者其他弱碱性清洁剂）和一定压力的流动清水交替彻底冲洗所有咬伤和抓伤处约 15 分钟」。裸露皮肤被轻咬、无出血抓伤，是 II 级暴露，要打疫苗。贯穿性咬伤、破损皮肤被舔，是 III 级暴露，「应处置伤口并注射狂犬病被动免疫制剂和接种狂犬病疫苗」。WHO：全球每年约 5.9 万人死于狂犬病，99% 由狗传播",
         "note": "不要因为「家养的、打过针的」就不处理。规范看的是伤口到了哪一级（暴露级别），不看狗的来历。不要自己包伤口。十日观察法只能决定要不要停针，不能决定要不要开始打。被野生动物、蝙蝠咬伤，同样这么处理。",
+        "source": "国家疾控局综合司、国家卫生健康委办公厅 (2023). 关于印发狂犬病暴露预防处置工作规范（2023 年版）的通知. <https://www.ndcpa.gov.cn/jbkzzx/c100014/common/content/content_1706569159854649344.html> ; WHO. 狂犬病 实况报道. <https://www.who.int/zh/news-room/fact-sheets/detail/rabies>",
         "grade": "A",
         "meta": {
           "money": "少",
@@ -7061,6 +7451,7 @@ module.exports = {
         "cost": "不花钱。占 20 分钟。",
         "gain": "澳大利亚跟踪了 2495 名烧烫伤儿童。受伤后 3 小时内用凉流动水冲 20 分钟的孩子，后来需要植皮的比值比是 0.6，95% CI 0.4–0.8（可信范围），大约只有没这么冲的六成。7 项研究合起来算的结果同样发现，「伤后三小时内 20 分钟凉流动水显著降低了需要植皮和手术处理创面的可能」",
         "note": "是凉水不是冰水，冰敷会加重损伤。衣服粘在伤口上就别硬撕，冲完用干净布盖住去医院。牙膏、酱油、香油、面粉都不要抹，会影响医生判断深度，还容易感染。三小时内补冲仍然有用",
+        "source": "Griffin BR, Frear CC, Babl F, Oakley E, Kimble RM (2020). Cool Running Water First Aid Decreases Skin Grafting Requirements in Pediatric Burns: A Cohort Study of Two Thousand Four Hundred Ninety-five Children. Annals of Emergency Medicine, 75(1), 75-85. <https://doi.org/10.1016/j.annemergmed.2019.06.028>；Griffin B, Cabilan CJ, Ayoub B, et al. (2022). The effect of 20 minutes of cool running water first aid within three hours of thermal burn injury on patient outcomes: A systematic review and meta-analysis. Australasian Emergency Care, 25(4), 367-376. <https://doi.org/10.1016/j.auec.2022.05.004>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -7080,6 +7471,7 @@ module.exports = {
         "cost": "不花钱。已知有严重过敏的人自备肾上腺素笔要花钱，而且它是处方药。",
         "gain": "肾上腺素是二级及以上过敏性休克首选的药（一线药），指南把它列为强推荐。抗过敏药和激素起效慢，顶不了它的位置",
         "note": "这份过敏指南（EAACI）自己写明，这个领域「证据大多停留在很低的等级」。它列为强推荐，是因为好处远大于风险，不是因为有大型试验。肾上腺素在国内是处方药，普通人手上通常没有。能做的是叫 120，并说「怀疑过敏性休克」，让急救带着药来。有过一次严重过敏的，找医生开自动注射笔，学会打大腿中外侧（外侧偏前），隔着裤子也能打。",
+        "source": "中国医药教育协会等 (2022). 过敏性休克急救临床实践指南（2020）. Frontiers in Pharmacology：「Epinephrine is the first-line medicine in GRADE II to IV anaphylaxis」「Intramuscular epinephrine should be injected in the mid-anterolateral thigh」，成人肌注上限 0.5 mg、14 岁以下 0.3 mg，无反应可每 5–15 分钟重复一次. <https://doi.org/10.3389/fphar.2022.845689>；Muraro A, et al. (2022). EAACI guidelines: Anaphylaxis (2021 update). Allergy. <https://doi.org/10.1111/all.15032>",
         "grade": "B",
         "meta": {
           "money": "0",
@@ -7099,6 +7491,7 @@ module.exports = {
         "cost": "不花钱。",
         "gain": "避免掰嘴、塞硬物造成的牙齿和下颌损伤。避免强行按住造成的骨折。超过 5 分钟不停，是必须叫救护车的红线",
         "note": "同一页还列了另外几种要立刻叫救护车的情况：一次结束后很快又发作、发作后叫不醒或者呼吸困难、发作中受了伤、在水里发作、这是第一次发作。发作停了让他侧躺、嘴朝下，等人完全清醒再给水。家里有癫痫病人的，这套动作最用得上。对陌生人做同样的动作，好处回到你身上的机会小一些，但也不会让你担责（民法典第一百八十四条，见本节第 2 条，别急着把人扶起来）。",
+        "source": "美国疾病控制与预防中心. 癫痫发作急救：「Don't hold the person down or stop their movements」「Don't put anything in their mouth. This can hurt their teeth or jaw」「Don't offer water or food until they are fully alert」「Time the seizure to track if it lasts more than 5 minutes. If it does, seek immediate medical attention or call 911」. <https://www.cdc.gov/epilepsy/first-aid-for-seizures/index.html>",
         "grade": "B",
         "meta": {
           "money": "0",
@@ -7118,6 +7511,7 @@ module.exports = {
         "cost": "不花钱。随身带几块方糖或者一小盒果汁。",
         "gain": "血糖低于 3.0 mmol/L，属于临床上有意义的低血糖。出现意识或者行动改变、需要别人帮忙处理的，是重度低血糖，可以致命",
         "note": "意识不清的人不要喂东西，会呛进气管，直接叫 120。同一份标准还建议，打胰岛素的人、容易低血糖的人，都该备一份胰高血糖素。原文是「All individuals treated with insulin or who are at high risk of hypoglycemia...should be prescribed glucagon」。鼻喷的和事先装好药的针剂，比要临时兑药的好用。这些做法默认是给你自己或者家里的糖尿病人准备的，随身带糖也是给他们带的。",
+        "source": "美国糖尿病学会 (2025). 糖尿病诊疗标准 2025·第 6 章 血糖目标与低血糖. Diabetes Care：分级「Level 1: Glucose <70 mg/dL (<3.9 mmol/L) and ≥54 mg/dL (≥3.0 mmol/L)」「Level 2: Glucose <54 mg/dL (<3.0 mmol/L)」「Level 3: A severe event characterized by altered mental and/or physical status requiring assistance for treatment of hypoglycemia, irrespective of glucose level」；处理「For most individuals, 15 g carbohydrates should be ingested」「Fifteen minutes after initial treatment, repeat the treatment if hypoglycemia persists」. <https://doi.org/10.2337/dc25-S006>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -7137,6 +7531,7 @@ module.exports = {
         "cost": "不花钱。",
         "gain": "避免施救的人一起被电住，把一个伤者变成两个。脱离电源后没有呼吸的，按本节第 1 条（用力按压胸口）做心肺复苏。美国疾控中心的急救步骤是：先看，别碰，人可能还连着电。能断电先断电，断不了就用纸板、塑料或木头这类不导电的东西把电源拨开。脱离电源后，呼吸或脉搏停了的，立刻做心肺复苏。一篇综述说，触电后心跳骤停、被救回来的人，预后往往不错",
         "note": "「先断电再碰人」是纯自利规则：直接上手拉，倒下的第二个就是你。高压线落地、变电设备附近不要自己处置，退远等电力部门断电。触电引起的心脏骤停，照常规按压、照常规除颤就行，别因为是「电伤」就不敢上手。",
+        "source": "US CDC. What to Do to Protect Yourself From Electrical Hazards（First aid 一节）. <https://www.cdc.gov/natural-disasters/response/what-to-do-protect-yourself-from-electrical-hazards.html>；Spies C, Trohman RG (2006). Narrative review: Electrocution and life-threatening electrical injuries. Annals of Internal Medicine 145(7):531-537. <https://doi.org/10.7326/0003-4819-145-7-200610030-00011>",
         "grade": "B",
         "meta": {
           "money": "0",
@@ -7156,6 +7551,7 @@ module.exports = {
         "cost": "不花钱。",
         "gain": "中国疾控的死因监测系统 2018 年报告了 11523 例一氧化碳中毒死亡。最多的是 1 月（2845 例）、2 月（2321 例）和 12 月（2010 例）。冬天这三个月，死在家里的占 66% 到 73%。这是系统里报上来的数，不是按全国人口推算的。美国每年 400 多人死于与火灾无关的意外一氧化碳中毒。10 万人以上进急诊，1.4 万人以上住院",
         "note": "症状像感冒，又像喝多了。一屋子人一起难受、出门就好转，是最强的提示。别留在屋里找原因，别回去关阀门，人先出来再打电话。报警器怎么装见第 1 节第 3 条。",
+        "source": "You J, Liu J, Zhou M (2020). Number of Deaths due to Carbon Monoxide Poisoning by Month and by Place of Death — China, 2018. China CDC Weekly 2(2):32：「In 2018, there were 11,523 deaths caused by carbon monoxide poisoning reported in China」. <https://doi.org/10.46234/ccdcw2020.008>；美国疾病控制与预防中心. 一氧化碳中毒：「More than 400 Americans die from unintentional CO poisoning not linked to fires」「More than 100,000 visit an emergency department」「More than 14,000 are hospitalized」，常见症状「headache, dizziness, weakness, upset stomach, vomiting, chest pain, and confusion」. <https://www.cdc.gov/carbon-monoxide/about/index.html>；美国消费品安全委员会. 一氧化碳信息中心：「If you suspect CO poisoning, get outside to fresh air immediately, and then call 911」. <https://www.cpsc.gov/Safety-Education/Safety-Education-Centers/Carbon-Monoxide-Information-Center>",
         "grade": "B",
         "meta": {
           "money": "0",
@@ -7175,6 +7571,7 @@ module.exports = {
         "cost": "不花钱。把清洁剂、消毒液、农药和药品放到孩子够不着的高处，或者带锁的柜子里。绝不分装进饮料瓶。",
         "gain": "中国疾控中心职业卫生与中毒控制所给的处置口径分四种。吃进嘴里（消化道摄入）的，立即饮用适量的牛奶或蛋清，「切记，不要催吐」。尽快就医，同时携带包装或说明书，「以便于医生快速判断成分并制定救治方案」。吸进气里（呼吸道吸入）：立即转移至通风良好的区域，解开衣领保持呼吸通畅；出现剧烈咳嗽、气促或呼吸困难的，立即就医。皮肤接触：立即用大量清水冲洗接触部位至少 15 分钟，注意别让冲洗液溅到眼睛或者其他完好皮肤。眼睛接触的，立即用大量清水或生理盐水冲洗眼睛至少 15 分钟。冲洗时撑开眼睑，让水流充分接触眼球及眼睑内侧，「切勿揉搓眼睛」。冲洗后立即前往眼科。高危产品按酸碱度（pH）认。pH<3 的是洁厕剂、除垢剂、地板清洁剂、不锈钢光亮剂。部分强力管道疏通剂还含稀硫酸。pH>11 的是管道疏通剂、厨房强力除污剂、洗碗粉、爆炸盐、去污粉。还有一个当场出事的组合：消毒液和含盐酸的洁厕剂一起用会产生氯气，刺激呼吸道、引起剧烈咳嗽和气促，甚至危及生命",
         "note": "定 B 是因为官方科普只讲了该怎么处理、怎么认出来，没有「照做能少出多少事」的数字。不催吐的道理是：腐蚀性的液体吐出来，会把食管（嗓子到胃那根管子）再烧一遍。拿不准误服的是什么，就把瓶子、说明书连同呕吐物一起带去医院。预防比急救便宜得多：分类存放，别和食物饮料混放，用完拧紧盖子扔掉空瓶，绝不倒进矿泉水瓶。使用时戴橡胶手套和护目镜，开窗通风，不同类型不混用。一氧化碳见第 19 条，烧烫伤见第 14 条。酸碱这类化学品溅到身上，怎么脱衣服、冲多久，见第 21 条（化学品溅到身上）。",
+        "source": "中国疾病预防控制中心职业卫生与中毒控制所 (2025). 暑假安全提示：警惕强酸强碱清洁剂. <https://niohp.chinacdc.cn/kpdw/202507/t20250722_308659.htm>",
         "grade": "B",
         "meta": {
           "money": "0",
@@ -7194,6 +7591,7 @@ module.exports = {
         "cost": "不花钱。上岗第一天就把洗眼器和冲淋装置的位置看好，别等出事再找。",
         "gain": "现场三步。第一步，立即脱去受污染的衣物鞋袜：毒物会继续经皮肤吸收，衣服兜着的部分伤得最重。第二步，用大量流动清水冲洗。中国疾控中心职业卫生与中毒控制所给的下限，是皮肤和眼睛各「至少 15 分钟」。湖南省应急管理厅给的口径是创面冲洗 20 至 30 分钟，「强烈的化学品要更长」。两个口径里取长的那个。第三步，眼睛要「撑开眼睑，确保水流充分接触眼球及眼睑内侧」，「切勿揉搓眼睛」，冲完立即去眼科。用常温或微温水，禁用热水。新鲜创面上不要涂油膏、红药水或者任何东西，也不要用脏布包裹，涂了会影响医生判断深度。法律上，「化学性皮肤灼伤」和「化学性眼部灼伤」都在法定职业病目录里，工作中发生的按职业病和工伤走。发生急性职业病危害事故的，用人单位「应当及时组织救治、进行健康检查和医学观察，所需费用由用人单位承担」（全国）",
         "note": "定 B 是因为冲多久这件事，两份官方材料一份写 15 分钟、一份写 20 到 30 分钟，没有统一的国家标准数字。去医院带上化学品的名字、包装，或者那张安全数据表（SDS），医生要靠它定方案。不要随手抓另一种酸或者碱去「中和」：两样兑到一起会放热，倒多少也没法控制。湖南那份材料里说的「中和液」，指的是单位事先备好的专用冲洗液，不是现场拿东西对冲。石灰粉、水泥粉这类干粉先刷掉再冲水（有的地方应急页面据此说浓硫酸也要先擦干，这一点各处口径不一，本书不写）。家里的清洁剂和误服见第 20 条。上岗前的防护和体检见第 19 节第 9、10 条（上岗前看危害告知、防护用品单位必须给）。",
+        "source": "中国疾病预防控制中心职业卫生与中毒控制所 (2025). 暑假安全提示：警惕强酸强碱清洁剂. <https://niohp.chinacdc.cn/kpdw/202507/t20250722_308659.htm>；湖南省应急管理厅 (2015). 常见化学品中毒事故的应急处理与治疗. <http://yjt.hunan.gov.cn/yjt/tszt/aqzs/201509/t20150919_3113778.html>；国家卫生健康委等四部门 (2024). 职业病分类和目录（2025 年 8 月 1 日起实施）. <https://www.gov.cn/zhengce/zhengceku/202412/content_6992843.htm>；全国人大常委会 (2018). 职业病防治法（第三十七条）. <https://www.beijing.gov.cn/zhengce/zhengcefagui/qtwj/201711/t20171104_779851.html>（北京市人民政府转载）",
         "grade": "B",
         "meta": {
           "money": "0",
@@ -7213,6 +7611,7 @@ module.exports = {
         "cost": "不花钱。",
         "gain": "美国国家气象局：热射病是「严重的医疗急症」。它的表现是体温高于 103°F（39.4°C）、意识混乱、说话含糊、皮肤发烫发红。处理是立刻叫急救、移到凉处、用凉水和湿布降温、「不要给液体」。热衰竭的表现是大汗、乏力、皮肤湿冷、脉快而弱，处理是移到凉处、松开衣服、小口喝水；呕吐、恶化或者超过 1 小时不缓解就就医。云南省疾控局提示：立即转移到阴凉通风处，用冷湿毛巾降温，意识清醒的补含盐饮料，症状严重的立即拨打急救电话；重症热射病「病死率极高」。中国疾控中心提示：先降温，后转运，在病人失去意识后的「黄金半小时」内降温。有条件的，无基础疾病的青壮年可以用冷水浸泡快速降温，老人和有基础病的往皮肤上喷水、靠蒸发降温。荒野医学会 2024 年更新的热病指南说，冷水浸泡是治重症中暑最重要的办法，降温最快。没有冰水就用手边最凉的水，泡不了就喷水加扇风，速度大约是浸泡的一半",
         "note": "不要等「缓一缓」，热射病从头晕到昏迷可以只有几十分钟。不要给意识不清的人灌水，会呛。冰袋放哪里，两边说法不同。中国疾控说敷在脖子、腋窝和大腿根，荒野医学会说研究看不出敷这几处有降温效果。它的建议是，只有冰袋可用时就把全身盖满，冰袋不够再放脸颊、手心和脚底。两边都说有条件就用冷水浸泡。",
+        "source": "US National Weather Service. Heat Related Illnesses. <https://www.weather.gov/safety/heat-illness> ; 云南省疾控局 (2026). 出现这些症状，你可能是中暑了. <https://ynsjkj.yn.gov.cn/html/2026/jikongkepu_0719/2606.html> ; 中国疾病预防控制中心. 高温天气，中国疾控中心提醒您谨防中暑：「如有条件可用冷水浸泡的方法对无基础疾病的青壮年快速降温。老人和有基础疾病的患者可向皮肤喷水通过蒸发降温。降温应遵循\"先降温，后转运\" 的原则」. <https://www.chinacdc.cn/jkkp/ggws/hjyssj/202409/t20240906_296985.html> ; 国家卫生健康委 (2010). 高温中暑预防知识要点. <https://www.nhc.gov.cn/wjw/jbyfykz/201007/1edb19b7dd4e4bdf8da5ea45f4a64e23.shtml> ; Eifling KP 等 (2024). Wilderness Medical Society Clinical Practice Guidelines for the Prevention and Treatment of Heat Illness: 2024 Update. Wilderness & Environmental Medicine 35(1_suppl):112S-127S. <https://doi.org/10.1177/10806032241227924>（正文站点拒绝自动抓取，具体推荐按荒野医学会官网的更新摘要核对：「cold water immersion … is the most important method of treating severe heat illness」「If CWI is unavailable, evaporative cooling is the recommended second-line treatment. … generally half as fast as CWI」<https://wms.org/magazine/magazine/1540/Heat-Illness-CPG/default.aspx>）；Lipman GS 等 (2019). 同指南 2019 版. <https://doi.org/10.1016/j.wem.2018.10.004>",
         "grade": "B",
         "meta": {
           "money": "0",
@@ -7232,6 +7631,7 @@ module.exports = {
         "cost": "不花钱。一瓶运动饮料几元。",
         "gain": "中国疾控中心发布过《公众高温中暑预防与紧急处理指南（2014 版）》。里面写着「至少每小时喝 2~4 杯凉水（500~1000ml），水温不宜过高，饮水应少量多次」。还写着「不要饮用含酒精或大量糖分的饮料。这些饮料会导致失去更多的体液。同时，还应避免饮用过凉的冰冻饮料」。对热射病则明确写「不要给病人喝水」。美国 NIOSH：热衰竭要「鼓励小口频繁地喝凉水」；热痉挛每 15 到 20 分钟补一次含糖和电解质的运动饮料，「不要用盐片」",
         "note": "出大汗后只灌白开水，会把血里的盐冲淡（血钠低），所以水里要含一点盐。一次猛灌容易吐，吐的东西呛进气管比中暑本身更快要命。「别喝冰镇的」是中国疾控 2014 年那版指南里的建议，理由是怕胃痉挛，没有量化证据。别把它误读成「不能用冷的」。第 22 条（高温下头晕恶心时脱衣泼水降温）里讲了几样降温法。分别是凉水擦洗、冷水浸泡、冰袋敷脖子、腋下、大腿根（腹股沟）。这几样正是官方推荐的头一档降温法，是往身上用的，不往嘴里灌。降温永远排在补水前面。意识不清、说话含糊的，一口都不要喂",
+        "source": "中国疾病预防控制中心职业卫生与中毒控制所 (2014). 公众高温中暑预防与紧急处理指南（2014 版）. <https://niohp.chinacdc.cn/sndt/201405/t20140530_97623.htm> ; US CDC/NIOSH. Heat-Related Illnesses. <https://www.cdc.gov/niosh/heat-stress/about/illnesses.html>",
         "grade": "B",
         "meta": {
           "money": "0",
@@ -7251,6 +7651,7 @@ module.exports = {
         "cost": "家里装 1 到 2 个独立烟感，几十元。提前看一眼楼道的两条出口。",
         "gain": "美国 FEMA 逃生原文：「趴到地上，从烟下面爬向出口」。开门前先摸门把和门板，「如果是热的，或者门缝有烟，别开这扇门，用第二条路」。开门要慢，一有浓烟立刻关上。衣服着火就「停下、倒地、打滚」，用手护脸。出不去就关门，用布或者胶带堵住门缝和通风口，打电话报位置。应急管理部的火灾自救提示和这一致：逃生不要坐电梯，火不大时尽量往楼下跑，用湿毛巾或口罩蒙住口鼻，趴着或弯腰撤离",
         "note": "不要坐电梯，断电就困在里面。不要为拿财物回头。不要往上跑，除非确认楼顶门开着。不要跳楼。湿毛巾要对折 3 次叠成 8 层，水别太多，太湿反而喘不上气。烟和毒气太浓的时候，毛巾也挡不住。",
+        "source": "US FEMA Ready.gov. Home Fires. <https://www.ready.gov/home-fires>；应急管理部 (2019). 公共场所火灾自救方法：「逃生时不要乘坐电梯，当火势不大时，要尽量往楼层下面跑」「可用湿毛巾或口罩蒙鼻，匍匐或弯腰撤离」. <https://www.mem.gov.cn/kp/shaq/201904/t20190401_366015.shtml>；贵州省消防救援总队 (2020). 消防常识丨逃生三要点：「湿毛巾对折3次（叠成8层），除烟率比较高，但烟和毒气浓度过高时，过滤效果就无法保证了。另外，毛巾过湿会导致呼吸困难」. <https://gz.119.gov.cn/xfkp/xfcs/202010/t20201026_71437855.html>",
         "grade": "B",
         "meta": {
           "money": "少",
@@ -7270,6 +7671,7 @@ module.exports = {
         "cost": "不花钱。难的是忍住往下跳的冲动。",
         "gain": "WHO：全球每年约 30 万人溺亡，92% 在中低收入国家。溺水是 1 到 4 岁儿童的第四位死因，5 到 14 岁的第三位死因。WHO 推荐的干预是「安全救援和复苏培训」，比如先学会不下水的救法。顺序是：大喊叫人 → 打电话 → 递长杆、绳子，抛救生圈、空桶、矿泉水瓶 → 人上岸后无呼吸立刻按压",
         "note": "C 级原因是「不下水」这条规则没有找到官方原文，只有 WHO 的死亡数字和「安全救援」的方向。不要手拉手结成链子下水。没受过训练就不要去拖人，溺水者会把施救者往下按。「不下水」同样是自利规则：下水的人自己淹死，水里那个是谁都一样。真要救的多半是自家孩子，怎么防在第 1 节第 12 条（儿童近水不离视线）。有人掉进冰窟窿，同样不跑上冰面去拉，冰面怎么防见第 1 节第 41 条（野外冰面先量厚度）。",
+        "source": "WHO. 溺水 实况报道. <https://www.who.int/zh/news-room/fact-sheets/detail/drowning>",
         "grade": "C",
         "meta": {
           "money": "0",
@@ -7289,6 +7691,7 @@ module.exports = {
         "cost": "不花钱。看一遍动作：一手握拳顶在肚脐上方，另一手包住，向内向上快速冲击。",
         "gain": "美国国立医学图书馆原文：先问「你噎住了吗，能说话吗」。「能用力咳嗽、能说话的不要动手」，咳嗽本身多能把异物咳出。说不出话就「反复做 5 次拍背接 5 次腹部冲击，直到异物出来或人失去意识」。「失去意识就开始心肺复苏」，同时叫人打急救电话。孕妇、肥胖者改做胸部冲击",
         "note": "不要往嘴里伸手掏看不见的东西，会推得更深。不要拍还能咳嗽的人。噎住最常发生在自家饭桌上，受益的主要是家里人。国内的教法也是这一套：福建省红十字应急救护培训中心说，1 岁以上的孩子和成人，中国红十字系统一直按 5 次拍背加 5 次腹部冲击循环来教。网上不少老教程只教腹部冲击，那是旧版。不满 1 岁的孩子不按肚子，改按胸口，见本节第 43 条（婴儿噎住）。",
+        "source": "US National Library of Medicine, MedlinePlus. Choking – adult or child over 1 year. <https://medlineplus.gov/ency/article/000047.htm>；福州市卫生健康委员会 (2026). 海姆立克急救法更新了：「1岁以上幼儿、儿童及成人：从旧版单一腹部冲击改为\"5次背部拍击+5次腹部冲击\"的循环」「中国红十字系统急救培训一直都是按\"5次背部拍击+5次腹部冲击\"循环进行的方式进行教学」. <https://www.fuzhou.gov.cn/zgfzzt/swjw/fzwj/jkkp/202601/t20260108_5268351.htm>",
         "grade": "B",
         "meta": {
           "money": "0",
@@ -7308,6 +7711,7 @@ module.exports = {
         "cost": "进无人区前告诉别人路线、目的地、返回日期、车型车牌。每人每天 4 升水起。卫星通讯器或者北斗短报文设备上千元，租一次几百元。难的是守住「留在原地不乱走」。",
         "gain": "美国国家公园管理局的莫哈韦沙漠页面有三句原文。一句是「每人每天至少 1 加仑（约 3.8 升）水，徒步和骑行者每人每天 2 加仑」。一句是「告诉别人你的路线、目的地、返回日期、车型和车牌」。还有一句是「手机信号时有时无」。死亡谷原文：「热的时候不要在谷底和低海拔徒步」，荒野区域「几乎没有手机信号」，推荐带卫星电话。莫哈韦的沙漠驾驶页面原文：「出了紧急情况，待在车旁是你能做的最重要的事」。页面还说，这种事不常见，但确实有人在走回公路的路上，死于暴露在酷热或寒冷里。优先级分五步。第一步是报平安和坐标，有信号时先发位置再打电话。第二步是遮阳保暖，车是最大的遮蔽物。第三步是水，白天不动、夜里凉了再动。第四步是不乱走。第五步是信号。重庆市应急管理局的提示是：摆成三角形的三堆火是国际通行的求救信号。离得近就喊「三声短、三声长、再三声短」，隔 1 分钟重复。有太阳时用镜子、罐头盖这类亮东西反光。文化和旅游部提醒自驾游客谨慎前往无人区，尽量多车同行，必要时租卫星电话",
         "note": "C 级原因是这些都是官方提示，不是研究数据。饮水量、报备、信号覆盖、待在车旁、求救信号都是官方原话。流传的「三声一组」没有找到官方原文，所以改写成官方的三堆火和三短三长三短。不要在正午徒步找路。不要喝尿。不要为了省水而不喝。",
+        "source": "US National Park Service. Mojave National Preserve Safety. <https://www.nps.gov/moja/planyourvisit/safety.htm> ; US National Park Service. Death Valley Safety. <https://www.nps.gov/deva/planyourvisit/safety.htm> ; US National Park Service. Desert Driving Safety. <https://www.nps.gov/articles/000/desertdrivingsafety.htm> ; 重庆市应急管理局 (2024). 应急科普>>在野外你需要了解的求救信号（长图）：「燃放三堆火焰是国际通行的求救信号，将火堆摆成三角形」「三声短三声长，再三声短；间隔1分钟之后再重复」. <https://yjj.cq.gov.cn/yjkp/scshaq/202409/t20240918_13639172.html> ; 文化和旅游部 (2018). 文化和旅游部提醒游客谨慎选择户外探险旅游：「谨慎前往无人区和人烟稀少区」「尽量多车同行，提前准备对讲机，必要时租用卫星电话」. <https://www.mct.gov.cn/zxbs/cxts/201811/t20181127_836244.htm>",
         "grade": "C",
         "meta": {
           "money": "多",
@@ -7327,6 +7731,7 @@ module.exports = {
         "cost": "一张铝箔保温毯几元，再加一件备用干衣。学会看信号不花钱。",
         "gain": "美国国家气象局原文：体温 95°F（35°C）以下就是失温，「觉得冷、迟钝、想不清楚，立刻看医生」。处理是「立即就医，把人移到有暖气的室内，先从身体中心开始复温」，给热饮。「酒精会减少寒战」，所以不喝。「失去意识做心肺复苏」。冻伤用温水或者体温回暖，「不要用热水或壁炉一类辐射热」。荒野医学会 2019 年失温指南是这个领域的执业指南",
         "note": "不要搓手脚。不要泡热水澡。不要硬拖硬拽地搬，失温重的人心脏容易骤停。不要因为「不抖了」就以为好转，不打哆嗦（寒战停止）是加重。荒野医学会指南全文需订阅，本次只核实了摘要。",
+        "source": "US National Weather Service. During Extreme Cold. <https://www.weather.gov/safety/cold-during> ; Dow J 等 (2019). Wilderness Medical Society Clinical Practice Guidelines for the Out-of-Hospital Evaluation and Treatment of Accidental Hypothermia: 2019 Update. Wilderness & Environmental Medicine. <https://doi.org/10.1016/j.wem.2019.10.002>",
         "grade": "B",
         "meta": {
           "money": "少",
@@ -7346,6 +7751,7 @@ module.exports = {
         "cost": "不花钱。提前知道附近哪家医院有抗蛇毒血清。难的是忍住自己动手处理伤口。",
         "gain": "WHO 原文有三句。一句是「立即完全固定被咬的身体部位，并迅速送到最近的医疗机构就医」。一句是「避免使用止血带，并避免切割伤口」。还有一句是「用针对当地蛇种的适当抗蛇毒血清进行治疗」。「高质量抗蛇毒血清是防止或逆转蛇咬伤的大部分毒性作用的最有效治疗方法」。全球每年约 8.1 万到 13.8 万人死于蛇咬伤，截肢和永久残疾的人数约为死亡数的 3 倍。中国 2024 年的蛇伤救治指南估计，国内每年有 25 万到 28 万例毒蛇咬伤，被咬的多是 50 岁以上的人。长江流域和南方 11 个省的医院 2017 到 2021 年收治了 40817 名蛇伤病人，住院期间死亡 23 人（0.06%）",
         "note": "能拍到蛇的照片就拍，别去抓。不要喝酒，不要跑动，不要用嘴吸，不要冰敷，不要用绳子勒到发紫。中国的全国蛇伤死亡数没有官方统计。那 11 个省的住院死亡率看着低，但有一成多病人没治完就自己出院了，他们后来怎样不在统计里。",
+        "source": "WHO. 动物咬伤 实况报道. <https://www.who.int/zh/news-room/fact-sheets/detail/animal-bites> ; WHO (2023). 蛇咬伤中毒 实况报道. <https://www.who.int/zh/news-room/fact-sheets/detail/snakebite-envenoming> ; Lai R 等 (2024). The Chinese guideline for management of snakebites. World Journal of Emergency Medicine 15(5):333-355：「An estimated 250,000–280,000 cases of venomous snakebites occur in China each year, affecting mainly patients aged ≥50 years」. <https://doi.org/10.5847/wjem.j.1920-8642.2024.076> ; Yan S 等 (2026). Clinical epidemiology of snakebite envenoming in hospitals 11 provinces of Yangtze River Basin and southern regions of China. PLoS Neglected Tropical Diseases：「withdrawal (4346, 10.65%), and death (23, 0.06%)」. <https://doi.org/10.1371/journal.pntd.0013247>",
         "grade": "B",
         "meta": {
           "money": "0",
@@ -7365,6 +7771,7 @@ module.exports = {
         "cost": "不花钱。提前看一眼自己家出门要几步、走哪条路、哪张桌子结实。",
         "gain": "中国地震局科普片《地震来了，是躲还是跑？》的口诀是「震时就近躲避，震后迅速撤离」，并明确限定「这里指的是在符合抗震设防要求的建筑内」。理由是这类建筑「整体垮塌的可能性较小」。原文说「坠落的建筑构件及装饰物品」「才是对生命安全最大的威胁」。而「震时无保护措施的盲目乱跑」「反而容易被坠落的天花板、吊灯（扇）等物品砸伤」。躲的做法是「用手或者其他软物保护好头颈部」「并牢牢地抓住桌腿」；没有桌子就「迅速贴紧承重墙蹲伏」「避开外墙、窗户、阳台」。「如果在户外」则「应该第一时间疏散到空旷的地方避震」。反过来看，1988 年亚美尼亚地震是苏联式预制板楼成片垮塌。那次的病例对照研究写着，「第一下震动之后离开建筑是保护性行为」。待在室内的人受伤的可能性，是跑出去的 4.40 倍（比值比 4.40），95% CI 2.24–8.71（可信范围）。在建筑里受伤的可能性，是在室外的 12.20 倍（3.62–63.79）。在 5 层以上的楼里，是在更矮的楼里的 3.65 倍（2.12–6.33）",
         "note": "争议，两种结论针对的是两种房子。中国地震局自己也把「躲」的前提写成了「符合抗震设防要求的建筑内」。它还要求「因地制宜」「因人而异」，一起看楼抗不抗震、你人在哪个位置、自己跑不跑得动。亚美尼亚那批楼整栋垮塌，躲无处可躲，出去才占优。美国 FEMA 对本国住宅给的是「就地趴下、护住头颈、抓牢，不要往外跑」，那里的伤主要来自坠物和摇晃中移动摔倒。Northridge 的研究还提示，伸手去接东西、扶住「看起来稳」的东西会加重受伤。所以光问「跑不跑」没用，要判断「这栋楼会不会垮、你几秒内能不能到空地」。2001 年以后按规范建的楼房，需要下楼梯或者穿门厅的，就地躲。平房、老旧砖房、无抗震设防的自建房，门就在几步外，出去。亚美尼亚这项研究只比了幸存者中受伤与未受伤的，没把遇难者算进去，也没说明有没有把楼层高低的影响扣掉。能跑出去的人本来就可能住在低层，数字要打折看。任何情况下都不跳楼、不坐电梯、不在摇晃中下楼梯。到室外要远离高大建筑、高架桥、电线杆、玻璃幕墙和广告牌。",
+        "source": "中国地震局（安徽省地震局制作）. 地震来了，是躲还是跑？（科普视频，字幕转录）. <https://www.cea.gov.cn/cea/dzpd/dzcs/5537260/index.html>；Armenian HK, Noji EK, Oganesian AP (1992). A case-control study of injuries arising from the earthquake in Armenia, 1988. Bulletin of the World Health Organization, 70(2), 251-257. <https://europepmc.org/article/MED/1600585>；US FEMA Ready.gov. Earthquakes. <https://www.ready.gov/earthquakes>；Mahue-Giangreco M, Mack W, Seligson H, Bourque LB (2001). Risk factors associated with moderate and serious injuries attributable to the 1994 Northridge Earthquake. Annals of Epidemiology, 11(5), 347-357. <https://doi.org/10.1016/s1047-2797(01)00220-4>",
         "grade": "B",
         "meta": {
           "money": "0",
@@ -7384,6 +7791,7 @@ module.exports = {
         "cost": "不花钱。进山带根登山杖，结伴走、出声走，让动物先知道你来了。难的是站住不跑。",
         "gain": "美国国家公园管理局关于熊的原文有六句。一句是「不要跑，熊上下坡都能跑得像赛马一样快」。一句是「保持冷静，大多数熊不想攻击你，只想被放着不管」。一句是「用低沉的声音持续跟熊说话」。一句是「熊不动时，侧着身慢慢退开，这样既能盯着熊又不会绊倒」。一句是「让自己显得尽量大」。还有一句是「不要爬树，灰熊和黑熊都会爬树」。被棕熊攻击时「装死，趴着双手扣在颈后、双腿分开」。被黑熊攻击时「不要装死，逃向车或房子，逃不了就用手边任何东西反击」。被狗咬伤按第 13 条处理",
         "note": "B 级只对应熊。野猪和野狗的「不跑、慢退、找高处或者障碍物挡」是经验，算 C 级，国家林草局和地方林草的官方提示本次未找到。不要拿食物引，不要凑近拍照，不要带狗进有野猪的山。中国的熊多是黑熊和棕熊，装死还是不装死，按这两种分开看。",
+        "source": "US National Park Service. Staying Safe Around Bears. <https://www.nps.gov/subjects/bears/safety.htm> ；国家疾控局综合司、国家卫生健康委办公厅 (2023). 狂犬病暴露预防处置工作规范（2023 年版）. <https://www.ndcpa.gov.cn/jbkzzx/c100014/common/content/content_1706569159854649344.html>",
         "grade": "B",
         "meta": {
           "money": "0",
@@ -7403,6 +7811,7 @@ module.exports = {
         "cost": "不花钱。代价是行程被打断半小时以上。难的是雷声还远的时候就肯往回走。",
         "gain": "雷暴范围内的户外没有安全的地方。最后一声雷响过 30 分钟，才算安全",
         "note": "帐篷、凉亭、树下、岩石突出部都不算掩体。硬顶汽车算，敞篷车和摩托不算。听见雷就开始撤，不要等雨下下来。",
+        "source": "美国国家气象局. 户外雷电安全：「There is no safe place outside when thunderstorms are in the area」「Avoid open fields, the top of a hill or a ridge top. Stay away from tall, isolated trees or other tall objects」「Stay away from water, wet items, such as ropes, and metal objects, such as fences and poles」；实在走不了时「If you are in a group, spread out to avoid the current traveling between group members」；恢复活动「Wait 30 minutes until after the last rumble of thunder」. <https://www.weather.gov/safety/lightning-outdoors>",
         "grade": "B",
         "meta": {
           "money": "0",
@@ -7422,6 +7831,7 @@ module.exports = {
         "cost": "多花一到两天做适应。预防药是处方药，要在出发前问医生。难的是行程排得紧时还肯留出这几天。",
         "gain": "睡在 2450 米以上就有高原病风险。高原脑水肿和肺水肿（脑子和肺里积水），不及时往低处撤会死",
         "note": "算的是「睡在多高」，不是白天到过多高。头痛加恶心、走路打晃、意识变化，或者不动也喘不上气，都是往下走的信号。下撤优先于吸氧和吃药，吸着氧继续往上是错的。",
+        "source": "美国疾病控制与预防中心. 黄皮书·高海拔旅行与高原病：「Any unacclimatized traveler proceeding to a sleeping altitude of ≥2,450 m (≥8,000 ft)—and sometimes lower—is at risk for altitude illness」；上升速度「500 m (1,650 ft) per night in sleeping altitude once above 3,000 m (9,800 ft)」，每上升 1000 米加一天适应日；乙酰唑胺预防「125 mg twice a day; 250 mg twice a day if >100 kg body weight」；「If symptoms become worse despite rest or treatment at the same elevation」必须下撤. <https://www.cdc.gov/yellow-book/hcp/environmental-hazards-risks/high-altitude-travel-and-altitude-illness.html>；荒野医学会 (2024). 急性高原病预防、诊断与治疗临床实践指南（2024 更新）. Wilderness & Environmental Medicine. <https://doi.org/10.1016/j.wem.2023.05.013>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -7441,6 +7851,7 @@ module.exports = {
         "cost": "一把尖头镊子。",
         "gain": "涂油、用火烧、扭着拽，会刺激蜱虫，把带病原体的体液挤进皮肤。这么做也容易把它扎在肉里的那部分嘴（口器）留在里面。蜱虫在中国传的发热伴血小板减少综合征，2024 年全国报告 6602 例、死亡 306 例，都是发现这种病以来最多的一年。2010 到 2024 年平均病死率 4.79%，年纪越大越高，85 岁以上是 9.15%",
         "note": "拔完把日期记下来。之后几周里发烧、起皮疹、乏力，看病时主动说被蜱咬过。医生不问、你不说，很容易被按感冒处理。",
+        "source": "美国疾病控制与预防中心. 被蜱叮咬之后：「Grasp the tick as close to the skin's surface as possible using clean fine-tipped tweezers」「Pull tick away from the skin with steady, even pressure」「Do not use petroleum jelly, heat, nail polish, or other substances to try and make the tick detach from the skin. This may agitate the tick and force infected fluid from the tick into the skin」. <https://www.cdc.gov/ticks/after-a-tick-bite/index.html>；Ren Q 等 (2026). Epidemiological characteristics of severe fever with thrombocytopenia syndrome (SFTS) in China, 2010–2024: a fifteen-year national surveillance analysis. BMC Infectious Diseases 26:1497：「The number of reported cases (6,602 cases) and deaths (306 cases) in 2024 were both the highest levels since the discovery of this disease」「The average CFR was 4.79%, and the CFR increased with age, reaching 9.15% among those aged 85 years and above」. <https://doi.org/10.1186/s12879-026-14066-z>",
         "grade": "B",
         "meta": {
           "money": "少",
@@ -7460,6 +7871,7 @@ module.exports = {
         "cost": "多背一套炉具和燃料的重量。",
         "gain": "所有能靠喝水致病的微生物，在水烧开的温度下几秒就被杀死（灭活）。「高海拔水烧不到位」是常见误解",
         "note": "同一页也写了不必真的烧开：60 ℃ 保持 30 分钟同样有效，烧开只是不用温度计就能看见的终点。烧不了就用过滤器或者化学消毒片，两者各有覆盖不到的病原体，能烧就烧。看起来清澈的溪水、雪水一样可能有寄生虫，别凭外观判断。",
+        "source": "美国疾病控制与预防中心. 黄皮书·旅行者的水消毒：「All organisms that may cause illness from drinking water are killed within seconds at boiling temperature」「CDC recommends that travelers boil water for a full minute to account for user variability in identifying boiling points and to add a margin of safety」「Although the boiling point for water decreases with increasing elevation, at common travel elevations the temperature needed to achieve boiling is still well above the temperature required to inactivate enteric pathogens」. <https://www.cdc.gov/yellow-book/hcp/preparing-international-travelers/water-disinfection-for-travelers.html>",
         "grade": "B",
         "meta": {
           "money": "0",
@@ -7479,6 +7891,7 @@ module.exports = {
         "cost": "身上的现金。难的是压住火气。",
         "gain": "命比钱贵，对方为几百元冒的是重罪。刑法第二百六十三条规定，以暴力、胁迫或者其他方法抢劫公私财物的，处三年以上十年以下有期徒刑并处罚金。持枪、入户、致人重伤死亡等情形，判十年以上直至死刑。刑法第二十条的正当防卫只保护「制止正在进行的不法侵害」。对方拿了钱转身走，你追上去打就不再是防卫。脱身后立刻记下体貌、口音、车牌、逃跑方向，打 110",
         "note": "C 级原因是「给钱不对抗更安全」没有直接文献，法条只说明对方的风险和你的边界。不要跟去偏僻处「取钱」。不要交手机密码。不要上对方的车。先给钱只限当面被堵住、人身安全受威胁的场合，脱身后照样报警。网上被人拿隐私照片、裸聊录像来要钱是反过来的，一分钱都不能给，见第 8 节第 32 条（对方拿把柄来要钱）。别指望随身带的甩棍、电击器、匕首，带着出门本身就会被罚，见第 9 节第 26 条（别为了防身买甩棍、电击器）。",
+        "source": "全国人大 (2020 年修正). 刑法（第二十条、第二百六十三条）. <https://jtgl.beijing.gov.cn/jgj/jgxx/flfg/fl/11033925/index.html>（北京市公安交管局转载整合文本）",
         "grade": "C",
         "meta": {
           "money": "少",
@@ -7498,6 +7911,7 @@ module.exports = {
         "cost": "不花钱。难的是忍住上前拉一把、以及站着看热闹这两种冲动。报警之后可能被回访做一次笔录，最多搭进半天。",
         "gain": "刑法第二百九十二条：「聚众斗殴的，对首要分子和其他积极参加的，处三年以下有期徒刑、拘役或者管制」。多次聚众斗殴的，人数多规模大社会影响恶劣的，在公共场所或者交通要道造成社会秩序严重混乱的，持械的，「处三年以上十年以下有期徒刑」。「聚众斗殴，致人重伤、死亡的」，按故意伤害罪、故意杀人罪定罪处罚。治安管理处罚法也有罚则。殴打他人，拘留 5 到 10 日并罚 500 到 1000 元。结伙斗殴按寻衅滋事处理，最高拘留 15 日并罚 2000 元。《关于依法适用正当防卫制度的指导意见》第 5 条：不法侵害「既包括针对本人的不法侵害，也包括危害国家、公共利益或者针对他人的不法侵害」。该意见第 9 条：一方先动手且手段明显过激，或者一方先动手、在对方努力避免冲突的情况下仍继续侵害的，还击一方一般应当认定为防卫行为",
         "note": "定 B 是因为后果那一半有硬条文，但「退开报警、不上手拉架」这一步没有官方原文，是从条文和「互殴怎么认定」推出来的。「我是来劝架的」不是护身符，认定看的是你动没动手、打了谁。对方已经倒地或者跑了，你还追上去打，就不再算防卫。看到有人被围着单方面挨打，法律上你确实可以制止。正当防卫保护的不只是自己，也包括别人。但徒手上去多半只是再添一个伤员。喊人、远远录像、报警更管用。「不上手、不围观」对你只有好处。打 110 的好处主要落在地上那个人身上，属于本书受益人里最低的那一档，愿不愿意花这个时间你自己权衡。权衡之前要知道几件事。作证义务本来就有：刑诉法第六十二条写明，凡是知道案件情况的人都有作证的义务，不打这个电话它也不会消失。出了重伤或者人命，警方调监控照样找到在场的人，站着围观反而最容易被登记。报案人不愿公开姓名的，办案机关「应当为他保守秘密」（第一百一十一条）。说清地点、人数、有没有拿家伙就可以挂，不必留在原地。会走到训诫或者十日以下拘留的，是法院通知你出庭、你又拿不出正当理由还不肯作证（第一百九十三条），路人极少走到这一步。不报警本身不违法：刑诉法第一百一十条那句「有权利也有义务」没有罚则，刑法里也没有处罚普通人知情不报的罪名，走开是合法选项。走开之后的红线只有两条。一是事后帮着藏人或者作假证明包庇（刑法第三百一十条，3 年以下，情节严重 3 到 10 年）。二是被找去做证时故意作假证（第三百零五条，3 年以下，情节严重 3 到 7 年）。沉默和如实说都没事，编话才有事。自己被卷进冲突见第 8 节第 10 条，被陌生人索财见本节第 36 条，救人受伤之后的钱见本节第 39 条。",
+        "source": "全国人大 (1997). 刑法（第二百三十二、二百三十四、二百九十二、三百零五、三百一十条）. <https://www.spp.gov.cn/spp/fl/201802/t20180206_364975.shtml>；全国人大常委会 (2025). 治安管理处罚法（2025 年修订，第三十、五十一条）. <https://www.spp.gov.cn/spp/fl/202506/t20250627_699863.shtml>；最高人民法院、最高人民检察院、公安部 (2020). 关于依法适用正当防卫制度的指导意见（法发〔2020〕31 号，第 5、9 条）. <https://www.court.gov.cn/zixun/xiangqing/251611.html>；全国人大 (2018). 刑事诉讼法（2018 年修订，第六十二、一百一十、一百一十一、一百九十三条）. 宁夏回族自治区人民检察院转载全文 <https://www.nx.jcy.gov.cn/zwsy/qwfb/202011/t20201119_608817.html>",
         "grade": "B",
         "meta": {
           "money": "0",
@@ -7517,6 +7931,7 @@ module.exports = {
         "cost": "一个 28 天疗程的药费上千元，多数地区自费。当晚就得跑一趟医院。难的是当场承认自己可能被传染，立刻出门。",
         "gain": "北京市人民政府防艾科普栏目的口径是：接触之后的预防用药叫暴露后预防（英文缩写 PEP），应「尽可能在 2 小时内进行预防性用药，最好在 24 小时内、不超过 72 小时」。还要「连续服用 28 天」。超过 72 小时就不再建议启动，这是一条硬时限",
         "note": "去哪里拿：当地疾控中心指定的艾滋病定点医疗机构，通常挂感染科（性病艾滋病门诊）。不少城市已经建了 24 小时门诊，重庆的公开数据是 26 个区县 29 家门诊，其中 14 家全天候。去之前打当地疾控电话问哪家有药，别在急诊科耗时间。算「暴露」的情况包括没做防护的性行为、安全套破了、被针头扎到、血沾到黏膜上，到底用不用药由医生判断。药必须吃满 28 天，漏几次会让效果明显变差。之后按医嘱在第 4 至 6 周、3 个月复查。阻断药只是补救，日常预防和检测见第 1 节第 30、31 条（全程用安全套、有过高危行为就去查）。",
+        "source": "北京市人民政府. 事前、事后分不清？六问六答全面了解艾滋病病毒暴露前/暴露后预防. <https://www.beijing.gov.cn/fuwu/bmfw/jhsyfwzdzx/sjazbr/fakp/202311/t20231110_3299397.html>；中国疾病预防控制中心性病艾滋病预防控制中心 (2020). 艾滋病病毒暴露后预防技术指南（试用）. <https://www.chinacdc.cn/jkyj/crb2/yl/azb/jswj_azb/202410/t20241027_302131.html>",
         "grade": "B",
         "meta": {
           "money": "多",
@@ -7536,6 +7951,7 @@ module.exports = {
         "cost": "不花钱。申报要交材料、等认定，跑几趟，几周到几个月。",
         "gain": "民法典第一百八十三条：「因保护他人民事权益使自己受到损害的，由侵权人承担民事责任，受益人可以给予适当补偿。没有侵权人、侵权人逃逸或者无力承担民事责任，受害人请求补偿的，受益人应当给予适当补偿」。国办发〔2012〕39 号讲了见义勇为负伤人员怎么办。医疗机构要建立绿色通道，「坚持『先救治、后收费』的原则」。医疗费这一块的原文是「因紧急救治发生的医疗费用，有加害人或责任人的，由加害人或责任人承担；无加害人或责任人以及加害人或责任人逃逸或者无力承担的，按规定通过基本医疗保障制度解决」。死亡的，「符合烈士评定条件的，依法评定为烈士」；「属于视同工伤情形的，享受一次性工亡补助金以及相当于本人 40 个月工资的遗属特别补助金」。伤残的，「符合享受工伤保险待遇条件的，依据《工伤保险条例》落实相应待遇；不符合的，由民政部门评定伤残等级并落实相应待遇」。就业上「优先纳入就业援助，予以重点支持」，公益性岗位「优先安排符合条件的见义勇为人员」。住房上「优先纳入住房保障体系，优先配租、配售保障性住房或发放住房租赁补贴」",
         "note": "定 B 是因为能拿什么待遇由全国文件定死，但奖金给多少、怎么走认定，是各省自己的见义勇为条例说了算，数字各地不同，本轮未逐省核实。一般是向出事地方的公安机关或者见义勇为工作机构（基金会）申报。能不能认定靠证据：报警回执、现场监控、目击者的姓名和电话、医院病历，当场就留下来。要打官司，见义勇为的民事权益本来就在免费法律援助的范围内。一次性工亡补助金的全国标准和伤残等级怎么换算成钱，见第 19 节第 14、15 条。法律援助怎么申请见第 7 节第 3 条。",
+        "source": "全国人大 (2020). 民法典（第一百八十三条）. <https://www.spp.gov.cn/spp/fl/202006/t20200602_463888.shtml>；国务院办公厅转发民政部等部门 (2012). 关于加强见义勇为人员权益保护的意见（国办发〔2012〕39 号）. <https://www.gov.cn/zwgk/2012-07/26/content_2191928.htm>",
         "grade": "B",
         "meta": {
           "money": "0",
@@ -7555,6 +7971,7 @@ module.exports = {
         "cost": "不花钱。难的是忍住「先拔出来」的本能，守着人等救护车。",
         "gain": "国际红十字与红新月会联合会 2025 年国际急救指南：「急救的人应当压住扎进身体的异物（比如刀）周围，把异物稳住，不要把它拔出来」。「不要从腹部或胸部的伤口里拔出任何扎入的异物，拔出来可能造成大出血，也会让医生更难判断伤得有多重」。「扎在身体里的异物应当稳住；异物随脉搏跳动的，就让它跳，松松地稳住即可」。「急救的人不应把露出来的内脏塞回体内」。没有在往外涌血的开放性胸壁伤口「可以敞着、不加敷料，因为把伤口封死可能让空气积在胸腔里，使肺部分或完全塌陷（气胸）」。所有穿透性胸腹部伤口都应立即呼叫急救",
         "note": "定 B 是因为这是指南里的公认做法，没有随机试验，总不能把伤者分成「拔」和「不拔」两组来试。唯一的例外是异物堵住气道、人喘不上气。到了医院直接找急诊门口那张分轻重缓急的台子（预检分诊台），报「穿透伤」。这属于要立刻进抢救室的那一级，不要去挂号窗口排队（见第 24 节第 7 条）。真扎穿了就打 120，救护车会提前通知医院准备接诊。大出血怎么压、怎么上止血带见第 12 条。",
+        "source": "International Federation of Red Cross and Red Crescent Societies (2025). International First Aid, Resuscitation and Education Guidelines 2025，第 256–257、267–268 页. <https://www.ifrc.org/sites/default/files/2026-03/IFRC%20International%20First%20Aid,%20Resuscitation%20and%20Education%20Guidelines%202025.pdf>",
         "grade": "B",
         "meta": {
           "money": "0",
@@ -7570,10 +7987,11 @@ module.exports = {
       {
         "index": 41,
         "title": "怀疑骨折就别再动那个部位，托着不动、冷敷 20 分钟以内，别自己掰正",
-        "plain": "手脚受了伤一律先当骨折处理，能站、能动都排除不了，只有 X 光能确定。让受伤的部位保持不动，用手托住，或者用三角巾、硬板在它原来的位置上撑住。尽早冷敷，一次不超过 20 分钟。别自己掰正。断骨戳破皮肤的先止血、盖干净敷料，别把骨头按回去。",
+        "plain": "手脚受了伤先当骨折处理，能站能动也排除不了。伤处保持不动，用手托住或用硬板在原位撑住，冷敷一次不超过 20 分钟。别自己掰正，骨头戳出皮肤的先止血，别按回去。X 光可能漏看骨折。片子正常但医生仍怀疑骨折或者韧带伤的，按医生说的复查或做核磁。",
         "cost": "不花钱。找块硬板、卷起的杂志或者衣物当支撑。冷的东西隔层布敷。",
-        "gain": "国际红十字与红新月会联合会发布了 2025 年国际急救指南。里面写着「手脚上的任何一处伤，都应当先按可能的骨折来处理」。还写着「确诊骨折唯一准确的办法是拍 X 光。拿不准就当骨折办」。固定的目的是「尽量减少活动和疼痛」。冷敷「一次最多连续 20 分钟，这样可以减轻疼痛；冷得比这更久可能损伤皮肤」。「伤到股骨这类长骨时，光是骨头本身出的血就可能致命」。疼痛或者肿胀明显、有休克表现、股骨（大腿骨）骨折或者肢体位置明显不对时，应呼叫急救。折弯成角的骨折，要两个条件同时成立，才考虑在现场掰回原位（复位）。一是「地处偏远（或者条件有限），而且成角处下方的肢体发凉、发白，或者急救的人没法固定好以便搬动」。二是施救者受过训练。开放性骨折（断骨戳破皮肤）的优先事项是止血和防感染",
-        "note": "定 B 是因为这些都是公认做法。送医院之前给股骨（大腿骨）骨折做牵引固定，只有一项翻旧病历的研究撑着，证据可信度很低。结果是 24 小时内输血量更少、住院更短，死亡和并发症的差别小到说不清。至于先复位（把骨头对回原位）还是原样固定，根本没找到证据。三个常见误解要改掉：能站能走不等于没骨折；只用冷不用热，也不要冷热交替；扭伤不会「活动开就好了」，先歇着。老人跌倒后怀疑骨折的搬动禁忌见第 2 条。打了石膏或者卧床之后一条腿肿起来要警惕血栓，见第 11 条。治完之后要不要做伤残鉴定、要不要办残疾人证，见第 24 节第 9、10 条。",
+        "gain": "国际红十字与红新月会联合会发布了 2025 年国际急救指南。里面写着「手脚上的任何一处伤，都应当先按可能的骨折来处理」。还写着「确诊骨折唯一准确的办法是拍 X 光。拿不准就当骨折办」。固定的目的是「尽量减少活动和疼痛」。冷敷「一次最多连续 20 分钟，这样可以减轻疼痛；冷得比这更久可能损伤皮肤」。「伤到股骨这类长骨时，光是骨头本身出的血就可能致命」。疼痛或者肿胀明显、有休克表现、股骨（大腿骨）骨折或者肢体位置明显不对时，应呼叫急救。折弯成角的骨折，要两个条件同时成立，才考虑在现场掰回原位（复位）。一是「地处偏远（或者条件有限），而且成角处下方的肢体发凉、发白，或者急救的人没法固定好以便搬动」。二是施救者受过训练。开放性骨折（断骨戳破皮肤）的优先事项是止血和防感染。但第一次 X 光没看出来，不等于没骨折。英国国家卫生与临床优化研究所（NICE）的髋部骨折指南写：X 光正常但仍怀疑髋部骨折的，「做磁共振（核磁）」。24 小时内做不了，就考虑做 CT。它的骨折指南写：怀疑手腕舟骨骨折的，「经过仔细的体格检查后，考虑首先做磁共振」。舟骨是手腕里的一块小骨头。考克兰（Cochrane）的一篇文献汇总说：「最初的 X 光片不能排除骨折」。它收的研究里，X 光正常、医生仍怀疑舟骨骨折的人，真有骨折的比例中位数是 20%。美国放射学会有一份膝关节外伤的检查标准。它写：X 光没看到骨折，但仍怀疑有隐藏骨折或关节内部损伤的，下一步「通常适合」做磁共振。它还写，磁共振查隐藏骨折、半月板和韧带损伤都很准",
+        "note": "定 B 是因为这些都是公认做法。送医院之前给股骨（大腿骨）骨折做牵引固定，只有一项翻旧病历的研究撑着，证据可信度很低。结果是 24 小时内输血量更少、住院更短，死亡和并发症的差别小到说不清。至于先复位（把骨头对回原位）还是原样固定，根本没找到证据。三个常见误解要改掉：能站能走不等于没骨折；只用冷不用热，也不要冷热交替；扭伤不会「活动开就好了」，先歇着。骨头没长好之前别抽烟，见第 2 节第 1 条（戒烟）。别指望猛补钙、喝骨头汤让骨头长得快，见第 6 节第 30 条（骨折之后猛补钙）。老人跌倒后怀疑骨折的搬动禁忌见第 2 条。打了石膏或者卧床之后一条腿肿起来要警惕血栓，见第 11 条。治完之后要不要做伤残鉴定、要不要办残疾人证，见第 24 节第 9、10 条。",
+        "source": "International Federation of Red Cross and Red Crescent Societies (2025). International First Aid, Resuscitation and Education Guidelines 2025，第 301–302 页. <https://www.ifrc.org/sites/default/files/2026-03/IFRC%20International%20First%20Aid,%20Resuscitation%20and%20Education%20Guidelines%202025.pdf>；National Institute for Health and Care Excellence (2011). Hip fracture: management. NICE guideline CG124，第 1.1.1 条. <https://www.nice.org.uk/guidance/cg124/chapter/Recommendations>；National Institute for Health and Care Excellence (2016). Fractures (non-complex): assessment and management. NICE guideline NG38，第 1.2.3 条. <https://www.nice.org.uk/guidance/ng38/chapter/Recommendations>；Mallee WH 等 (2015). Computed tomography versus magnetic resonance imaging versus bone scintigraphy for clinically suspected scaphoid fractures in patients with negative plain radiographs. Cochrane Database of Systematic Reviews. <https://doi.org/10.1002/14651858.CD010023.pub2>；Taljanovic MS 等, Expert Panel on Musculoskeletal Imaging (2019). ACR Appropriateness Criteria: Acute Trauma to the Knee，Variant 3. American College of Radiology. <https://acsearch.acr.org/docs/69419/Narrative/>",
         "grade": "B",
         "meta": {
           "money": "0",
@@ -7593,6 +8011,7 @@ module.exports = {
         "cost": "报警不花钱。紧急避孕药是非处方药，药店就能买。阻断药一个疗程上千元，要不要吃由医生判断，见本节第 38 条（72 小时内去拿阻断药）。难的是当时很难开口，也很想马上洗个澡。",
         "gain": "北京市人民检察院的检察官说：「无论是未成年人还是成年人，遇到侵害，都应当第一时间拨打110报警」。及时报警、就医，「便于侦查机关及时勘查现场、提取物证痕迹、固定证据」。贵州省民政厅转载的人民日报防性侵手册写：「一旦不幸遭遇性侵害，最重要的事情就是留存证据」。要保留「体液、毛发、皮屑、通信记录等证据」，「被侵害后，不要擅自洗澡、洗衣物、收拾房间、扔东西」。熟人作案的，保留通话、通信记录。对方事后威胁或者收买，也要留下证据。北京市西城区人民检察院写的是：「在接受身体检查之前尽量不要洗澡」。世界卫生组织说，紧急避孕可以用在「女性在未采取有效的避孕保护措施时遭受性侵犯」的时候。建议在 5 天内用，越早越有效。含左炔诺孕酮（一种孕激素）的紧急避孕药，用过的女性怀孕率是 1.2% 到 2.1%。国内药店卖的左炔诺孕酮片是非处方药。武汉市卫健委的说法是：在无防护性生活后「72小时以内，服药越早，预防妊娠效果越好」。艾滋病阻断药要尽可能 2 小时内吃上，最晚不超过 72 小时（全国）",
         "note": "给 B 是因为这些是官方的办案经验和用药建议，没有「照做之后定罪率高多少」的数字。受益人主要是你自己和家人。紧急避孕药的 72 小时是国内说明书的口径，世界卫生组织说 5 天内都有用，但越晚越差，别拖。已经怀孕的，紧急避孕药没有作用。报警时如实说，不隐瞒，也不夸大。对方事后找你私了、给钱或者威胁你，都留下记录，别删。想好了再报警也可以，但证据会随时间消失。不管报不报警，都要在时限内去医院。录音见第 8 节第 41 条（录音）。对方事后拿照片、拿报警来要挟你，同样是犯罪，见第 8 节第 32 条（对方拿报警、发照片来要钱）。朋友出了这种事，陪对方去报警、去医院，别先劝对方洗个澡休息一下。",
+        "source": "北京市人民检察院 (2024). 法眼看剧丨看《九部的检察官》 未成年人面对不法侵害该如何保护自己？（转载中央广播电视总台中国之声）. <https://www.bjjc.gov.cn/c/bjoweb/mtbg1/75046.jhtml>；贵州省民政厅 (2024). 未成年人防性侵手册，请家长孩子查收！（转载人民日报）. <https://mzt.guizhou.gov.cn/xwzx/mzyw/202407/t20240723_85145012.html>；北京市西城区人民检察院 (2018). 她们为什么不再沉默……. <https://www.bjjc.gov.cn/c/xicheng/xjjsl/320654084.jhtml>；世界卫生组织 (2021). 紧急避孕（实况报道）. <https://www.who.int/zh/news-room/fact-sheets/detail/emergency-contraception>；武汉市卫生健康委员会 (2020). 安全合理使用紧急避孕药. <https://wjw.wuhan.gov.cn/ztzl_28/fyjkkp/szjk/202010/t20201009_1461161.shtml>；北京市人民政府. 事前、事后分不清？六问六答全面了解艾滋病病毒暴露前/暴露后预防. <https://www.beijing.gov.cn/fuwu/bmfw/jhsyfwzdzx/sjazbr/fakp/202311/t20231110_3299397.html>",
         "grade": "B",
         "meta": {
           "money": "少",
@@ -7612,6 +8031,7 @@ module.exports = {
         "cost": "不花钱。看一遍动作或者上一次婴儿急救课，几分钟到半天。难的是慌乱中先把孩子翻过来趴好。",
         "gain": "美国心脏协会和美国儿科学会出了 2025 年的儿童基础生命支持指南。指南写：窒息（比如异物堵住气道）「是婴儿和儿童的主要死因之一」。婴儿最常呛进去的是液体。还在咳、还能出声的是轻度，让孩子自己咳，同时盯着有没有变重。咳得很弱或者咳不出、哭不出、脸色发紫的是重度。重度要先叫急救，再「反复做 5 次拍背、接 5 次胸部冲击，直到异物出来或者婴儿失去反应」。指南不建议给婴儿做腹部冲击，因为可能伤到肚子里的脏器。胸部冲击现在推荐用一只手的掌根，因为它比原来的两指法按得更深。婴儿失去反应就开始心肺复苏，先按压，不摸脉搏。吹气前看得见的异物要取出来。指南明写「不要用手指盲目去掏」。国际红十字与红新月会联合会的 2025 年国际急救指南也是这一套。先在两肩胛骨之间用力拍最多 5 下，不行就把孩子翻过来按胸口最多 5 下，再不行马上叫急救。它按胸口用的是双手环抱、两个拇指按。福建省红十字应急救护培训中心说，1 岁以下婴儿要做「5 次背部拍击 + 5 次胸部冲击」。拍背时让婴儿俯卧在前臂上，头低于躯干",
         "note": "定 B 是因为支撑这套手法的主要是病例报告，没有「照做能少死多少人」的数字。收益定「大」是凭判断：完全堵住的气道几分钟内就会让孩子心跳停下。受益的几乎都是自家孩子。1 岁以上的孩子和成人改按肚子，见本节第 26 条（噎住拍背加腹部冲击）。按胸口用什么手法，各家写法不同。美国指南和国内红十字新版用一只手的掌根，国际红十字用两个拇指，老教程用两根手指。2025 年美国指南因为两指按不够深，已经不再推荐它。急救时用哪种都比不按强。东西咳出来了也要去医院看，可能有碎块留在肺里。硬币、小玩具这类小东西放到孩子够不着的地方。孩子没反应之后怎么做，见本节第 44 条（婴儿心肺复苏）。",
+        "source": "Joyner BL 等 (2025). Part 6: Pediatric Basic Life Support: 2025 American Heart Association and American Academy of Pediatrics Guidelines for Cardiopulmonary Resuscitation and Emergency Cardiovascular Care. Circulation 152(suppl 2):S424–S447. <https://doi.org/10.1161/CIR.0000000000001370>，全文见 <https://cpr.heart.org/en/resuscitation-science/cpr-and-ecc-guidelines/pediatric-basic-life-support>；International Federation of Red Cross and Red Crescent Societies (2025). International First Aid, Resuscitation and Education Guidelines 2025，第 238–240 页. <https://www.ifrc.org/sites/default/files/2026-03/IFRC%20International%20First%20Aid,%20Resuscitation%20and%20Education%20Guidelines%202025.pdf>；福州市卫生健康委员会 (2026). 海姆立克急救法更新了. <https://www.fuzhou.gov.cn/zgfzzt/swjw/fzwj/jkkp/202601/t20260108_5268351.htm>",
         "grade": "B",
         "meta": {
           "money": "0",
@@ -7631,6 +8051,7 @@ module.exports = {
         "cost": "不花钱。婴儿心肺复苏要上课练一次，半天到一天。难的是对着孩子口鼻吹气，还有不敢用力按。",
         "gain": "美国心脏协会和美国儿科学会出了 2025 年的儿童基础生命支持指南。指南写：婴儿和儿童心跳骤停，主要原因仍是呼吸出了问题。在医院外心跳骤停的婴儿，活着出院的只有 6.6%。普通人遇到没反应、没正常呼吸、没有生命迹象的婴儿或儿童，「应当立即开始心肺复苏」，不要去摸脉搏。按压深度至少是胸廓前后径的三分之一，婴儿「约 1.5 英寸（4 厘米）」。频率每分钟 100 到 120 次。一个人做时，按 30 下吹 2 口气。两个人做时，按 15 下吹 2 口气。婴儿用一只手的掌根按，或者双手环抱、两个拇指按。环抱不住就用掌根。两根手指按的做法已经取消，因为按不够深。指南还写，院外心脏骤停的婴儿和儿童，按压之外再加吹气能提高存活。美国一个登记库统计了 3900 名 18 岁以下院外心脏骤停的孩子，59.4% 是婴儿。在场的人做了心肺复苏的，调整后活着出院的比例是 13.2%，没做的是 9.5%。调整后 OR 1.57（活下来的几率高约 57%），95% CI 1.25–1.96（可信范围）。在婴儿里，带吹气的心肺复苏和更高的存活有关，活下来的孩子脑子也恢复得更好。只按不吹的，结果和没人做差不多。国际红十字与红新月会联合会的 2025 年国际急救指南写：看婴儿有没有反应，要把孩子抱起来或者拍他的脚底。只有你一个人，就开免提自己打急救电话。手边没有能边按边打的电话，就先做 1 分钟心肺复苏再去打。首都儿科研究所有一篇科普，北京市卫健委转载了。它写：「如果只有1个人在场，先进行2分钟的心肺复苏后呼叫120救护车」。按压幅度「婴儿4cm」。1 岁以内吹气要「口对口鼻」",
         "note": "定 B 是因为存活的数字来自只跟踪记录的登记研究，而且算的是全体孩子，婴儿单独的数字摘要里没给。收益定「大」是按全体孩子的数字算的：活着出院从 9.5% 到 13.2%，相对多了约四成。受益的几乎都是自家孩子。和本节第 1 条（用力按压胸口）的区别有三点。一是婴儿要吹气，只按不吹对婴儿效果差。二是用两个拇指或一只掌根，按约 4 厘米，不用双手叠着压。三是一个人又没法边按边打电话时，先按再去打。先按多久各家不一：首都儿科研究所和美国指南的单人流程是 2 分钟，国际红十字是 1 分钟。手机开免提就没有这个问题。欧洲复苏委员会教的是先吹 5 口气再按，美国指南是先按后吹，两种都比不做强。国内老教程教两指按压，2025 年美国指南已经去掉了这种手法。噎住引起的，吹气前看一眼嘴里，看得见的异物才取，见本节第 43 条（婴儿噎住）。",
+        "source": "Joyner BL 等 (2025). Part 6: Pediatric Basic Life Support: 2025 American Heart Association and American Academy of Pediatrics Guidelines for Cardiopulmonary Resuscitation and Emergency Cardiovascular Care. Circulation 152(suppl 2):S424–S447. <https://doi.org/10.1161/CIR.0000000000001370>，全文见 <https://cpr.heart.org/en/resuscitation-science/cpr-and-ecc-guidelines/pediatric-basic-life-support>；Naim MY 等 (2017). Association of Bystander Cardiopulmonary Resuscitation With Overall and Neurologically Favorable Survival After Pediatric Out-of-Hospital Cardiac Arrest in the United States: A Report From the Cardiac Arrest Registry to Enhance Survival Surveillance Registry. JAMA Pediatrics 171(2):133–141. <https://doi.org/10.1001/jamapediatrics.2016.3643>；International Federation of Red Cross and Red Crescent Societies (2025). International First Aid, Resuscitation and Education Guidelines 2025，第 186–188 页. <https://www.ifrc.org/sites/default/files/2026-03/IFRC%20International%20First%20Aid,%20Resuscitation%20and%20Education%20Guidelines%202025.pdf>；首都儿科研究所 (2022). 【儿研所儿医说】心肺复苏：爸妈必备的急救知识（北京市卫生健康委员会转载）. <https://wjw.beijing.gov.cn/bmfw_20143/jkzs/jksh/202210/t20221017_2837684.html>；European Resuscitation Council (2025). ERC Guidelines 2025 for the lay public（Paediatric Basic Life Support 一章）. <https://www.erc.edu/media/p5ymaeej/gl2025_layperson_book_ipdf-v11-e.pdf>",
         "grade": "B",
         "meta": {
           "money": "0",
@@ -7652,6 +8073,7 @@ module.exports = {
         "cost": "不花钱。每个账号设置一次，两三分钟就设完。",
         "gain": "谷歌统计了 35 万次真实的盗号尝试（也叫账号劫持）。一类是靠设备来验证，比如手机上弹窗让你点确认，或者插一把安全密钥。这一类拦下了「超过 94% 源于钓鱼的劫持尝试和 100% 的自动化劫持尝试」。钓鱼是指骗你在假网站上输密码，自动化是指机器拿泄露的密码批量去试。另一类是靠回答问题来验证，比如问你上次在哪登录、备用邮箱是什么。这一类「只拦下了低至 10% 的钓鱼劫持和 73% 的自动化劫持」",
         "note": "同一项研究也发现，这类验证有时会把本人挡在外面。52% 的真用户第一次没登进去，不过最后有 97% 还是进去了。先给邮箱开这个功能，因为别的账号大多能用邮箱找回密码。验证码只自己用，替别人报码、刷脸会背上什么，见第 8 节第 45 条（念验证码）",
+        "source": "Doerfler P, Thomas K, Marincenko M, et al. (2019). Evaluating Login Challenges as a Defense Against Account Takeover. The World Wide Web Conference (WWW '19). <https://doi.org/10.1145/3308558.3313481>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -7671,6 +8093,7 @@ module.exports = {
         "cost": "不花钱。用密码管理器存着就不用自己记。难的是要改掉一个密码到处用的老习惯。",
         "gain": "把别处泄露的账号和密码挨个拿来试着登，这叫撞库，是最省事的攻击方式，你的邮箱也会被这样试。邮箱一旦被人登进去，所有用它找回密码的账号一起丢。美国网络安全和基础设施安全局的建议是：每个账号用一个不同的强密码，至少 16 位，交给密码管理器存",
         "note": "记不住就用浏览器自带的密码管理器。它替你记住每个网站的密码，比到处用同一个密码强得多。别把密码存在微信收藏或者备忘录里",
+        "source": "US CISA. Use Strong Passwords. <https://www.cisa.gov/secure-our-world/use-strong-passwords>",
         "grade": "C",
         "meta": {
           "money": "0",
@@ -7690,6 +8113,7 @@ module.exports = {
         "cost": "不花钱。锁屏密码和 PIN 码各设一次就行。",
         "gain": "手机丢了以后，捡到的人最快的一条路是把 SIM 卡插到别的手机上，收你的短信验证码。有了验证码，他就能一个个重置你的账号。SIM 卡设了 PIN 码，换到别的手机上开机就要先输密码，捡到的人就没法拿它收验证码",
         "note": "PIN 码在手机设置里的「SIM 卡锁」那一项里设。出厂时的初始码一般是 1234 或者 0000。连着输错三次，就要用运营商给的 PUK 码才能解开。所以设完先把这个码记在纸上",
+        "source": "作者经验，无直接文献",
         "grade": "C",
         "meta": {
           "money": "0",
@@ -7709,6 +8133,7 @@ module.exports = {
         "cost": "不花钱。整套做下来十几分钟。",
         "gain": "顺序比速度更重要。第一步，挂失 SIM 卡，别人就收不到你的验证码了。第二步，远程锁定手机，并清空手机里的内容。第三步，从电脑上改邮箱和支付密码。第四步，报警，拿回执。最后按需要冻结银行卡。美国联邦通信委员会的提示也是：就算觉得只是弄丢了，也要远程锁住。被偷了马上报警，报上型号和 IMEI 串号（手机的身份编号），并马上告诉运营商",
         "note": "提前把三家运营商的客服号记下来：移动 10086，联通 10010，电信 10000。自己的手机号是在哪个城市办的，也记一下，客服会问。用别人的手机一样能打客服挂失",
+        "source": "US FCC. Protect Your Smart Device. <https://www.fcc.gov/consumers/guides/protect-your-mobile-device>；步骤顺序是作者经验；补办身份证见第 7 节，冒名贷款见第 8 节关于征信的一条",
         "grade": "C",
         "meta": {
           "money": "0",
@@ -7728,6 +8153,7 @@ module.exports = {
         "cost": "不花钱。发现卡上有不对劲的动静，立刻挂失或者冻结。把报警记录、挂失记录、银行发来的交易通知都留着。卡还在自己身上的，就近做一笔小额查询或者存取，留下记录证明出事的时候真卡在你手上。难的是要忍住别先跟客服争论，先挂失。",
         "gain": "最高法的规定把「谁来拿证据」分开了。你说这是伪卡盗刷或者网络盗刷，要先拿证据。伪卡盗刷就是卡被人复制了一张去刷。这些都能用来证明：已经生效的法律文书、银行卡交易时真卡在哪里、交易发生在哪里。还有账户交易明细、交易通知、报警记录、挂失记录等等。**反过来，发卡银行、非银行支付机构（第三方支付）说这笔是持卡人本人刷的、或者是经他授权刷的，要由它们拿出证据**。你告知银行之后，银行没及时核实，或者没及时提供、保存交易单据和监控录像，证据因此拿不到的，拿不出证据的后果由银行承担。认定成立以后：借记卡（储蓄卡）持卡人，可以要求发卡银行把被盗刷的存款本息付给你，并赔偿损失。信用卡持卡人，可以要求退回被扣走的透支款本息和违约金，并赔偿损失；银行反过来要你还这笔透支款的，法院不予支持。你还可以要求发卡银行及时撤销相应的不良征信记录（全国，2021 年 5 月 25 日起施行）",
         "note": "有两种情形要你自己担责。一是银行卡、密码、验证码这些东西你没保管好，自己有过错（原文是「未尽妥善保管义务具有过错」），错多少担多少。所以密码不告诉别人，验证码不转发给别人（见第 1 条，二次验证优先用手机弹窗确认）。二是没及时挂失，让损失接着扩大，多出来那部分自己承担。所以第一步永远是挂失冻结，别先打客服争论。第三方支付机构也适用这套规则。它的宣传资料里写了「先行赔付」，而且承诺得具体明确的，可以照着要求它先赔。钱是你被人骗着自己转出去的，要走另一套办法，见第 8 节第 2 条（发现被骗立刻打 110 或 96110 要求止付）。",
+        "source": "最高人民法院 (2021). 关于审理银行卡民事纠纷案件若干问题的规定（第四、五、七、十四、十五条）. <https://www.court.gov.cn/fabu/xiangqing/304771.html>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -7747,6 +8173,7 @@ module.exports = {
         "cost": "不花钱。每次看几分钟。难的是没人提醒，要自己记得去看。",
         "gain": "被盗号往往不是当场就动手，对方会先潜伏一阵。账号里的登录设备列表，记着现在还能用这个账号的手机和电脑。已授权应用列表，记着你准许它用这个账号登录的别家软件。列表里的陌生设备，和早就不用的第三方软件，是最容易发现的痕迹",
         "note": "微信、支付宝、邮箱、苹果账号和安卓账号里都有这个入口。发现不认识的设备，就点退出全部登录，再改密码",
+        "source": "作者经验，无直接文献",
         "grade": "C",
         "meta": {
           "money": "0",
@@ -7766,6 +8193,7 @@ module.exports = {
         "cost": "不花钱。难的是要忍住不点「全部同意」。",
         "gain": "法律明写了两条。一是不得以个人不同意、或者撤回同意为由，拒绝提供产品或者服务；处理这些信息属于提供服务所必需的除外。二是收集应当限于实现处理目的的最小范围，只能收用得着的那些",
         "note": "判断标准是这项信息是不是提供这个服务所必需的。地图要位置是必需的，手电筒要通讯录不是。App 装完，先到手机设置里的应用权限页，把不必需的权限关掉。等真用到的时候，再选只这一次允许。",
+        "source": "全国人大常委会 (2021). 个人信息保护法. 中国人大网. <http://www.npc.gov.cn/npc/c2/c30834/202108/t20210820_313088.html>：第六条「收集个人信息，应当限于实现处理目的的最小范围，不得过度收集个人信息」；第十六条「个人信息处理者不得以个人不同意处理其个人信息或者撤回同意为由，拒绝提供产品或者服务；处理个人信息属于提供产品或者服务所必需的除外」；第十五条「基于个人同意处理个人信息的，个人有权撤回其同意。个人信息处理者应当提供便捷的撤回同意的方式」",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -7785,6 +8213,7 @@ module.exports = {
         "cost": "不花钱。只有对方拖着不办，才需要去投诉或者起诉。真打官司就是几个月起步，律师费还要自己出，所以先投诉更划算。难的是对方拖着的时候得反复去催。",
         "gain": "有几种情形企业应当主动删除：服务停了、约定的保存期限到了、你撤回同意、当初收集的目的已经达到等等。它没删，你可以要求它删。它拒绝你行使这些权利的，必须说明理由。你可以直接向法院起诉",
         "note": "注销账号和删除个人信息是两件事，注销之后还要单独提出删除。换手机或者卖旧手机之前，先在旧手机上把所有账号退出、解除绑定，再恢复出厂设置。法律给你的是事后的删除权，它不能替你把已经泄露出去的东西收回来。",
+        "source": "全国人大常委会 (2021). 个人信息保护法. 中国人大网. <http://www.npc.gov.cn/npc/c2/c30834/202108/t20210820_313088.html>：第四十五条「个人有权向个人信息处理者查阅、复制其个人信息……个人请求查阅、复制其个人信息的，个人信息处理者应当及时提供」；第四十六条更正、补充权；第四十七条列了五种应当主动删除的情形，含「（一）处理目的已实现、无法实现或者为实现处理目的不再必要」「（二）个人信息处理者停止提供产品或者服务，或者保存期限已届满」「（三）个人撤回同意」，「个人信息处理者未删除的，个人有权请求删除」；第五十条「个人信息处理者应当建立便捷的个人行使权利的申请受理和处理机制。拒绝个人行使权利的请求的，应当说明理由」「个人可以依法向人民法院提起诉讼」",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -7804,6 +8233,7 @@ module.exports = {
         "cost": "不花钱。被要求刷脸时，问一句「有没有别的验证方式」。对方说没有，就要求它提供一个。难的是要当面开口问。",
         "gain": "人脸识别技术应用安全管理办法写明：「实现相同目的或者达到同等业务要求，存在其他非人脸识别技术方式的，不得将人脸识别技术作为唯一验证方式。个人不同意通过人脸信息进行身份验证的，应当提供其他合理、便捷的方式。」办法还写明：「任何组织和个人不得以办理业务、提升服务质量等为由，误导、欺诈、胁迫个人接受人脸识别技术验证个人身份。」要是按你同意来处理人脸信息，得取得「在充分知情的前提下自愿、明确作出的单独同意」：单独就这一件事问你，你单独点头才算。你有权撤回同意，处理者要提供便捷的撤回方式。处理不满十四周岁未成年人的人脸信息，应当取得父母或者其他监护人的同意。公共场所安装人脸识别设备，「应当为维护公共安全所必需」，并设置显著提示标识。宾馆客房、公共浴室、公共更衣室、公共卫生间等公共场所中的私密空间内部，任何组织和个人不得安装。人脸信息应当存储于人脸识别设备内，不得通过互联网对外传输。两种情况例外：法律、行政法规另有规定，或者取得了单独同意（全国，2025 年 6 月 1 日起施行）",
         "note": "最常遇到的是小区门禁、租房平台、健身房、酒店要你录人脸。对方说「系统只支持刷脸」的时候，把办法的原话念给他听。原话是：「实现相同目的或者达到同等业务要求，存在其他非人脸识别技术方式的，不得将人脸识别技术作为唯一验证方式」。然后要求它提供刷卡、密码或者身份证这类别的方式。还是不给的，向当地网信部门反映。国家对刷脸验证身份另有规定的，比如一部分金融和政务场景，按那些规定办。人脸和密码最大的区别是泄露之后改不掉，所以它值得比密码更谨慎。存了 10 万人以上人脸信息的单位，要在 30 个工作日内向省级以上网信部门备案，这也是判断对方正不正规的一个问法。查阅、更正、删除自己个人信息的权利见第 8 条。别人借你的脸去办他自己的贷款，是另一回事，见第 8 节第 45 条（帮忙刷个脸）。",
+        "source": "国家互联网信息办公室、公安部 (2025). 人脸识别技术应用安全管理办法（第 19 号令，第十条、十二条、十三条，2025 年 6 月 1 日起施行）. <https://www.cac.gov.cn/2025-03/21/c_1744174262156096.htm>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -7823,6 +8253,7 @@ module.exports = {
         "cost": "官方直连通常比中转站贵，充值也没那么方便。难在中转站便宜，一个入口能调好几家模型",
         "gain": "国家安全部 2026 年 6 月发布风险提示。部分中转站会把用户提交的数据留在服务器上，有的私自截留，倒卖给别的大模型厂商做训练。有的暗藏后门，向用户设备植入恶意代码，窃取账号密钥和云端凭证，甚至装上远程控制程序。提示建议用官方直连、正规授权的平台，不用来源不明、没有运营资质、没有安全保障的平台。用的时候先给个人隐私和项目资料脱敏，管好密钥、定期更换。遇到异常扣费、无故封号、数据异常，立即停用、改密钥、查杀病毒、留存证据。加州大学圣塔芭芭拉分校等单位的研究者 2026 年做了一项测量。他们从淘宝、闲鱼和海外网店买了 28 个付费中转站，又从公开社区收集了 400 个免费中转站。结果 1 个付费的和 8 个免费的，会往返回的工具调用里注入恶意代码。工具调用就是 AI 让你的电脑去执行的命令，比如安装软件包。还有 2 个会挑时机下手，论文举的例子是只对全自动执行的会话下手。17 个动用过研究者故意放进去的亚马逊云服务密钥。1 个转走了研究者以太坊钱包里的钱，钱包里只放了很少的钱，损失不到 50 美元。论文演示的改法很隐蔽：把安装命令里的 requests 换成拼法相近的 reqeusts，一眼看不出来（全国）",
         "note": "定 B 级，是因为只有一项研究，而且是预印本，也就是正式发表前公开的版本。测的中转站多数是免费的，付费的只有 28 个，算不出「中转站有几成有问题」。有媒体把那次被盗写成 50 万美元，论文原文是不到 50 美元。收益量级凭后果定为中：密钥和代码被偷的损失大小差得很远，研究里没有金额可套。已经用过来路不明的中转站，就到模型厂商那里把用过的密钥作废、重新生成，云服务和代码仓库的密钥一起换。经过中转站时，别让 AI 全自动执行命令，命令先看一眼再放行。开中转站的一方有刑事风险，见第 11 节第 19 条（AI 中转站）。受益人是你自己。",
+        "source": "国家安全部 (2026). 「AI中转站」，风险要防范. <https://www.szzg.gov.cn/2026/xwzx/szkx/202606/t20260608_5331487.htm>（数字中国建设峰会官网转载国家安全部微信公众号）；Liu H, Shou C, Wen H, Chen Y, Fang RJ, Feng Y. (2026). Your Agent Is Mine: Measuring Malicious Intermediary Attacks on the LLM Supply Chain. arXiv:2604.08407. <https://arxiv.org/abs/2604.08407>",
         "grade": "B",
         "meta": {
           "money": "少",
@@ -7844,6 +8275,7 @@ module.exports = {
         "cost": "不花钱。签合同时多花十分钟。难在要当着房东的面提出来",
         "gain": "行政法规写得很明白：「出租人收取押金的，应当在住房租赁合同中约定押金的数额、返还时间以及扣减押金的情形等事项。除住房租赁合同约定的情形以外，出租人无正当理由不得扣减押金。」三件事要写进合同：押金收多少、什么时候退、什么情况下能扣。合同里没写的理由，房东不能拿来扣你的钱",
         "note": "退租那天和房东一起拍照录像。水表、电表、燃气表的读数都拍下来，墙面和地面也拍。押金被无故扣了，先找房屋租赁管理部门投诉。金额不大的走小额诉讼，见第 8 节",
+        "source": "国务院 (2025). 住房租赁条例（国令第 812 号，2025 年 9 月 15 日施行）（第十条）. <https://www.gov.cn/zhengce/zhengceku/202507/content_7032956.htm>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -7863,6 +8295,7 @@ module.exports = {
         "cost": "不花钱。打个电话报警，当场就能做",
         "gain": "行政法规写得很明白：「出租人不得采取暴力、威胁或者其他非法方式迫使承租人解除住房租赁合同或者腾退租赁住房。」腾退就是让你搬走。遇到这类情况先报警，把证据留下。不要自己动手对抗",
         "note": "报警是为了留下出警记录，以后要求赔损失时它就是证据。同时通知房屋租赁管理部门",
+        "source": "国务院 (2025). 住房租赁条例（国令第 812 号，2025 年 9 月 15 日施行）（第十二条）. <https://www.gov.cn/zhengce/zhengceku/202507/content_7032956.htm>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -7882,6 +8315,7 @@ module.exports = {
         "cost": "不花钱。付款前核对收款人，几分钟。难在要顶住中介让你把钱转给它的说法",
         "gain": "行政法规把「代收、代付住房租金、押金」列为房地产经纪机构的禁止行为，中介不能替房东收你的房租和押金。钱在中介手里过一道，就多一次卷款跑路的机会",
         "note": "付款前核对收款人是不是产权证上的名字。不是本人的，问清楚，并留一份书面授权。中介只能收牵线撮合的居间服务费",
+        "source": "国务院 (2025). 住房租赁条例（国令第 812 号，2025 年 9 月 15 日施行）（第二十五条）. <https://www.gov.cn/zhengce/zhengceku/202507/content_7032956.htm>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -7901,6 +8335,7 @@ module.exports = {
         "cost": "不花钱。查一次十几分钟",
         "gain": "行政法规要求转租经营的住房租赁企业「设立住房租赁资金监管账户并向社会公示」。转租经营就是企业从房东手里整租下来，再转租给你。一次性付一年拿到的那点折扣，抵不上企业跑路时押金和剩余租金一起没的风险。同时签了租金贷的，风险更大",
         "note": "签约时看清有没有绑定贷款。如果是分期 App 把一年的钱一次性给了公寓、你按月还贷，那么公寓跑了你还要接着还。这种合同不签",
+        "source": "国务院 (2025). 住房租赁条例（国令第 812 号，2025 年 9 月 15 日施行）（第十九条）. <https://www.gov.cn/zhengce/zhengceku/202507/content_7032956.htm>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -7920,6 +8355,7 @@ module.exports = {
         "cost": "不花钱",
         "gain": "民法典里有一条叫「买卖不破租赁」。法条原话是：租赁物在租赁期限内发生所有权变动的，不影响租赁合同的效力。意思是租期里房子换了主人，已经签好的租约照样有效。新房东要按原合同让你住到期满",
         "note": "前提是你已经合法住进去了，法条里的说法是合法占有使用。合同、转账记录、入住时间的证据要留好",
+        "source": "全国人大 (2020). 民法典（第七百二十五条）. <https://www.spp.gov.cn/spp/fl/202006/t20200602_463888.shtml>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -7939,6 +8375,7 @@ module.exports = {
         "cost": "不花钱。查一次半小时",
         "gain": "最常见的两种血本无归，一是把租金付给了不是产权人的人，二是房子早就抵押给银行，后来被查封。转账时备注「某某房屋某月租金」，出了纠纷这就是直接证据",
         "note": "产权信息可以去当地不动产登记中心查。签约时让房东本人到场，本人来不了的，要一份授权委托书。二房东转租给你的，要有原房东的书面同意",
+        "source": "作者经验，无直接文献；证据留存与转账备注同理见第 8 节关于彩礼和借条的两条",
         "grade": "C",
         "meta": {
           "money": "0",
@@ -7958,6 +8395,7 @@ module.exports = {
         "cost": "不花钱。难在要坚持走专用账户，可能得跟中介多争几句",
         "gain": "规章写得很明白：约定由房地产经纪机构代收代付交易资金的，应当通过其在银行开设的客户交易结算资金专用存款账户划转。意思是房款进的是受监管的专用账户，不是中介自己的账户，也不是某个经纪人的私人账户",
         "note": "房款是几十万到几百万，是这本书里单笔金额最大的一件事，别用微信转给经纪人。还有两种常见的多收钱。一是两家中介联合做同一单，这种只能收一份佣金。二是代办贷款、代办过户，这属于另外的服务，要单独签合同并事先告知收费。所有款项都走转账并备注用途，见第 6 条（签约前核对产权证和抵押情况）。",
+        "source": "住房城乡建设部、国家发展改革委、人力资源社会保障部 (2011). 房地产经纪管理办法（令第 8 号，2016 年第 29 号令修改）第二十四条：「房地产交易当事人约定由房地产经纪机构代收代付交易资金的，应当通过房地产经纪机构在银行开设的客户交易结算资金专用存款账户划转交易资金。」第十八条「房地产经纪服务实行明码标价制度……在经营场所醒目位置标明房地产经纪服务项目、服务内容、收费标准」；第十九条「两家或者两家以上房地产经纪机构合作开展同一宗房地产经纪业务的，只能按照一宗业务收取佣金，不得向委托人增加收费」；第十七条代办贷款、代办房地产登记等其他服务「应当向委托人说明服务内容、收费标准等情况，经委托人同意后，另行签订合同」. <http://www.gov.cn/gongbao/content/2011/content_1918920.htm>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -7977,6 +8415,7 @@ module.exports = {
         "cost": "不花钱。代价是同样的预算，要么住得远一点，要么住得小一点",
         "gain": "规章写得很明白，最小的出租单位是原设计的房间，不能把一间房再隔成几间分开租。人均租住建筑面积不得低于当地规定的最低标准。厨房、卫生间、阳台和地下储藏室不得出租供人员居住。租期内出租人也不得单方面随意提高租金",
         "note": "违规隔断被查处时，搬家的是租客，押金和已经付掉的租金往往拿不回来。安全上也差：隔断墙常常堵住逃生的通道，一屋住很多人还共用一条电线。看房时注意三点：墙是不是后来砌的，房间有没有窗，电表带不带得动这么多人。",
+        "source": "住房和城乡建设部 (2010). 商品房屋租赁管理办法（令第 6 号）第八条：「出租住房的，应当以原设计的房间为最小出租单位，人均租住建筑面积不得低于当地人民政府规定的最低标准。厨房、卫生间、阳台和地下储藏室不得出租供人员居住。」第九条：「出租人应当按照合同约定履行房屋的维修义务并确保房屋和室内设施安全……房屋租赁合同期内，出租人不得单方面随意提高租金水平。」<http://www.gov.cn/gongbao/content/2011/content_1845070.htm>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -7996,6 +8435,7 @@ module.exports = {
         "cost": "不花钱。代价是房子不归你，租期一次最长 20 年，到期要重新和房东谈",
         "gain": "国务院办公厅的文件写得很明白：「城镇居民不得到农村购买宅基地、农民住宅或『小产权房』。」同一份文件还规定，农民卖掉或者租出住房以后，再申请宅基地不予批准。2019 年中央农办和农业农村部的文件又说了一遍：「严禁城镇居民到农村购买宅基地。」同一份文件给出了合法的路：城镇居民可以租农房居住或者经营，租赁合同的期限不得超过二十年，到期双方可以另行约定",
         "note": "宅基地就是村里分给本村村民盖房的地，只能分给本村人。租农房时和出租的农户签书面合同，写清租期、租金、能不能装修改建，以及装修的钱到期怎么算。文件规定租期不超过 20 年，别签「租 50 年」「租 70 年」这类合同，更别一次付清多年租金。文件还禁止下乡用宅基地盖别墅大院和私人会馆，别出钱给村民「合建」。",
+        "source": "国务院办公厅 (2007). 关于严格执行有关农村集体建设用地法律和政策的通知（国办发〔2007〕71 号）. <https://www.gov.cn/zhengce/zhengceku/2008-03/28/content_2395.htm>；中央农村工作领导小组办公室、农业农村部 (2019). 关于进一步加强农村宅基地管理的通知（中农发〔2019〕11 号）第五、六部分. <https://www.moa.gov.cn/govpublic/NCJJTZ/201909/t20190920_6328397.htm>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -8017,6 +8457,7 @@ module.exports = {
         "cost": "不花钱，反而省下以后治并发症的钱。每天吃药占不了几分钟，难在一天不落地吃下去。",
         "gain": "21 项研究、46847 人合起来算（荟萃分析）：和吃药断断续续的人相比，按医嘱吃满的人同期死亡的可能性约低 44%。原值是比值比 0.56，95% CI 0.50–0.63（可信范围）。只看确有疗效的治疗，约低 45%（0.55，0.49–0.62）",
         "note": "争议。这也是这本书里最需要打折看的一个数字。同一项汇总分析里，连安慰剂（假药）都吃满的人死亡率也低（0.56，0.43–0.74）。这说明相当一部分好处来自「能坚持吃药的人本来就更注意健康」。作者把这层混进来的因素叫健康依从者效应。但停药本身的害处是明确的，尤其是降压药、抗凝药和抗排异药",
+        "source": "Simpson SH, Eurich DT, Majumdar SR, et al. (2006). A meta-analysis of the association between adherence to drug therapy and mortality. BMJ, 333(7557), 15. <https://doi.org/10.1136/bmj.38875.675486.55>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -8036,6 +8477,7 @@ module.exports = {
         "cost": "不花钱。出发前在医保 App 上办一次异地就医备案，手机上就能办。",
         "gain": "国家医保局的文件说已经做到了这一步。原话是「基本实现高血压、糖尿病、恶性肿瘤门诊放化疗、尿毒症透析、器官移植术后抗排异治疗等 5 种门诊慢特病费用跨省直接结算县域可及」。「县域可及」的意思是在县一级就能办到。文件还在这 5 种的基础上再新增 5 种",
         "note": "前提是两件事都要办：先在参保地办门诊慢特病认定，再做异地就医备案。新增的 5 个病种开到了哪一步，各地进度不一样，以当地医保部门公布的为准",
+        "source": "国家医保局办公室、财政部办公厅 (2024). 关于稳妥有序扩大跨省直接结算门诊慢特病病种范围的通知（医保办发〔2024〕19 号）. <https://www.gov.cn/zhengce/zhengceku/202409/content_6974467.htm>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -8055,6 +8497,7 @@ module.exports = {
         "cost": "每次检查几十到几百元。去一趟医院加上等结果，要占一点时间。难在隔一段就得去一次，容易一拖再拖。",
         "gain": "慢性病要看的是数值一段时间里怎么变，只看某一次不够。记在同一处还有一个好处：换医院时不用重复检查，也不用重复花钱",
         "note": "每次至少记四样：日期、指标值、当时在吃的药、药的剂量。用手机拍化验单也行，但都要放在同一处，别东一张西一张",
+        "source": "作者经验，无直接文献",
         "grade": "C",
         "meta": {
           "money": "少",
@@ -8074,6 +8517,7 @@ module.exports = {
         "cost": "不花钱，还省下买保健品的钱。不占时间。难在别人反复劝你试的时候能顶住。",
         "gain": "停药的害处是确定的，偏方的好处是不确定的。常见的无效品类，这本书第 6 节列了一批",
         "note": "想试补充剂就先告诉主治医生。有些补充剂会和处方药相互作用，比如影响抗凝药、抗排异药在血里的浓度",
+        "source": "作者经验，无直接文献；相关证据见第 6 节",
         "grade": "C",
         "meta": {
           "money": "0",
@@ -8093,6 +8537,7 @@ module.exports = {
         "cost": "不花钱。去社区卫生服务中心问一句能不能开长期处方，一句话的事。",
         "gain": "不用每月往返大医院排队开药。在同一个参保地（也叫统筹地区）里，住基层医院的报销比例原则上比上一级医院高约 10 个百分点",
         "note": "「符合条件」由医生判断，一般是诊断已经明确、用药方案也稳定的人。药还是那个药，省下的是每月跑一趟的半天和挂号费。基层没有你要的那种药，可以问问有没有缺药登记和配送。同一份文件还要求三级医院逐步减掉这类慢病的普通门诊，同一批专家的普通门诊改到社区去开。还把大医院当开药点，以后会越来越难挂号。",
+        "source": "国务院办公厅 (2026). 关于加快建设分级诊疗体系的若干措施. <https://www.gov.cn/zhengce/zhengceku/202604/content_7065031.htm>：「对于符合条件的慢性病患者，基层医疗卫生机构单次可开具不超过12周用药的长期处方。」；同文「原则上统筹地区内医疗卫生机构住院报销比例逐级拉开10个百分点左右的差距」，并要求上级医院在基层开设高血压、糖尿病、慢性阻塞性肺疾病等常见病慢性病门诊；同文「三级医院要聚焦急危重症和疑难复杂疾病，加强转诊会诊和住院服务，逐步酌减常见病复诊和诊断明确、病情稳定的慢性病等普通门诊」，「并将专家团队普通门诊向基层医疗卫生机构延伸」",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -8112,6 +8557,7 @@ module.exports = {
         "cost": "不花钱。签约前多问一句，一分钟的事。",
         "gain": "基本服务包按规定由医保付。个性化服务包的钱全部自己出，这种包还要向县级卫生健康部门备案",
         "note": "签约本身的价值在于有人长期跟着你这个病，不在于打包了多少项目。有人推销「升级包」时，先问三句：这是基本包还是个性化包，备没备案，一年多少钱。",
+        "source": "国务院办公厅 (2026). 关于加快建设分级诊疗体系的若干措施. <https://www.gov.cn/zhengce/zhengceku/202604/content_7065031.htm>：「加强基层门诊付费与签约服务政策联动，基本服务包按规定纳入医保支付；个性化服务包由签约基层医疗卫生机构按程序向县级卫生健康部门备案，费用由个人支付。」",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -8131,6 +8577,7 @@ module.exports = {
         "cost": "一次散瞳眼底检查几十到几百元。足部检查通常包含在门诊里，不另花钱。难在眼睛和脚都没不舒服的时候也要记着去查。",
         "gain": "糖尿病伤到眼底叫视网膜病变，伤到脚叫糖尿病足。这两样在出问题之前几乎没有感觉。早查出来还有得治。等到看不见或者脚烂起来，就晚了",
         "note": "2 型糖尿病确诊的时候就要查，1 型是发病 5 年后才开始查。差别在于 2 型往往已经悄悄高了好几年。查过一两次没事、血糖也达标的，可以放宽到 1 到 2 年一次。脚上感觉变迟钝的人，每天自己看一眼脚底，用镜子照也行。",
+        "source": "美国糖尿病学会 (2026). 糖尿病诊疗标准 2026·第 12 章 视网膜病变、神经病变与足部护理. Diabetes Care：「People with type 2 diabetes should have an initial dilated and comprehensive eye examination by an ophthalmologist or optometrist at the time of the diabetes diagnosis.」「Adults with type 1 diabetes should have an initial dilated and comprehensive eye examination by an ophthalmologist or optometrist 5 years after the onset of diabetes.」「If there is no evidence of retinopathy from one or more annual eye exams and glycemic indicators are within the goal range, then screening every 1–2 years may be considered.」「Perform a comprehensive foot evaluation at least annually to identify risk factors for ulcers and amputations.」<https://doi.org/10.2337/dc26-S012>",
         "grade": "A",
         "meta": {
           "money": "少",
@@ -8150,6 +8597,7 @@ module.exports = {
         "cost": "不花钱。把随时喝水变成习惯。出汗多的日子还要再多喝一些，难在天天记着。",
         "gain": "一项为期 5 年、随机分成两组的对照试验，对象是 199 名第一次得钙结石、又查不出原因的患者（也叫特发性钙结石）。一组每天至少喝 2 升水，另一组不做任何干预。5 年里复发的，多喝水那组 12/99（12.1%），不干预那组 27/100（27.0%），P=0.008。P 值越小，越说明两组的差别不是碰巧。平均隔多久复发：38.7±13.2 个月对 25.1±16.4 个月，P=0.016。一开始测的 24 小时尿量，结石患者明显低于没结石的人：男性是 1,057±238 mL 对 1,401±562 mL（P<0.0001），女性是 990±230 mL 对 1,239±440 mL（P<0.001）。NICE 指南 NG118 第 1.8.1 条建议，成人每天喝 2.5 到 3 升水，儿童青少年按年龄喝 1 到 2 升。水里加点鲜柠檬汁，别喝碳酸饮料，成人每天盐不超过 6 克",
         "note": "复发少了大约 55%，又不花钱，按本书的排序规则这是本节性价比最高的一条。要盯的是 24 小时尿量，目标是 2 到 2.5 升以上，不是看喝进去多少。出汗多的人、在高温环境里干活的人，得喝得更多。那项试验做的是第一次发作的特发性钙结石患者。结石成分不止一种，尿酸结石、感染性结石、胱氨酸结石各有各的对策。复发过的人值得做一次结石成分分析和 24 小时尿检，再定要不要加药。别为了防结石把钙戒掉，见第 6 节第 21 条。发作时腰腹绞痛得厉害要去医院，不是靠多喝水冲下去的。不疼的血尿另有要查的东西，见第 1 节第 27 条",
+        "source": "Borghi L, Meschi T, Amato F, Briganti A, Novarini A, Giannini A (1996). Urinary volume, water and recurrences in idiopathic calcium nephrolithiasis: a 5-year randomized prospective study. The Journal of Urology, 155(3), 839-843. <https://doi.org/10.1016/s0022-5347(01)66321-3>；National Institute for Health and Care Excellence (2019). Renal and ureteric stones: assessment and management. NICE guideline NG118，第 1.8.1 条. <https://www.nice.org.uk/guidance/ng118/chapter/Recommendations>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -8169,6 +8617,7 @@ module.exports = {
         "cost": "别嘌醇每月几元到几十元。刚开始每几周查一次血尿酸来调药量，稳定之后每几个月查一次。头 3 到 6 个月还要同时吃一种预防发作的药。难在不疼的时候也得一直吃下去。",
         "gain": "一项随机分成两组的对照试验，517 名过去 12 个月内发作过的成人。一组由护士主导，给患者讲清楚病是怎么回事，再按指标把尿酸调到达标。另一组照常找全科医生看。2 年时血尿酸降到 <360 µmol/L（6 mg/dL）的比例，95% 对 30%。达标的可能性是常规组的 3.18 倍（RR 3.18，95% CI 2.42–4.18，这个区间是数字的可信范围），P<0.0001。第 2 年的发作频率、痛风石、生活质量这几项次要指标，也都优于常规组。每多换来一年算上生活质量折算的寿命（质量调整生命年），花费 £5,066。同一试验还做了随访研究，438 人发了问卷，收回 82%。两组都自己报告了过去 12 个月的发作次数。达标组的中位数是 0 次（中间一半人落在 0–0 次）。常规组是 1 次（0–3），P<0.001。括号里的这个范围叫四分位距。仍在吃降尿酸药的比例，达标组是常规组的 1.19 倍（校正后 RR 1.19，1.09–1.30）。美国风湿病学会 2020 年痛风指南强烈推荐三种人启动降尿酸治疗：皮下长了痛风石的、影像检查看到痛风把骨头啃出缺损的、每年发作 ≥2 次的。做法是持续监测血尿酸，照着结果调剂量直到达标，目标 <6 mg/dL。首选别嘌醇，3 期及以上慢性肾病的人也是首选它，起始剂量 ≤100 mg/日。启动时同时给抗炎的预防用药，至少吃 3 到 6 个月。同一指南还引用了一组病例观察。这些患者长期控制良好之后停了药，停药后血尿酸仍保持 <7 mg/dL。他们当中，5 年跟踪期内一次都没发作的只有 13%（27/211）。饮食方面，限酒或戒酒的人，血尿酸比不限的人低 1.6 mg/dL，一份啤酒使血尿酸升高 0.16 mg/dL。健康饮食、地中海饮食、DASH 饮食的效果更小。首选哪种降尿酸药有分歧。美国风湿病学会指南强烈推荐别嘌醇作为首选，理由是剂量用够时有效、耐受好、安全、便宜。它还有条件地建议：吃非布司他的人如果有心血管病史，或新出了心血管事件，有别的药可换就换掉。这条推荐和 FDA 给非布司他加的黑框警告一致。依据之一是 CARES 试验，6190 名合并心血管病的痛风病人随机吃非布司他或别嘌醇。非布司他组的全因死亡风险是别嘌醇组的 1.22 倍（HR 1.22，95% CI 1.01–1.47，高约 22%）。心血管死亡是 1.34 倍（1.03–1.73，高约 34%）。欧洲的 FAST 试验结论不同。它纳入 6128 名 60 岁以上、有心血管危险因素的病人，非布司他的主要心血管事件不比别嘌醇多（HR 0.85，0.70–1.03）。死亡人数是非布司他组 7.2%、别嘌醇组 8.6%。吃促进尿酸从肾排出的药的人，美国风湿病学会有条件地不建议碱化尿液，因为没有证据说明有效，证据确定性很低。它同时要求叮嘱这些人多喝水，已知有肾结石或 3 期及以上慢性肾病的人不该用这类药",
         "note": "争议：用哪种药降尿酸，各国指南不一样。美国指南首选别嘌醇，有心血管病的人能换就别吃非布司他，但欧洲 FAST 试验没看到非布司他更危险。国内还能买到苯溴马隆，它是促进尿酸排出的药。中华医学会的指南（2019 版和 2024 更新版）对选药和碱化尿液单独给了推荐。吃苯溴马隆要不要加碳酸氢钠碱化尿液，美国指南认为没有证据，按你的医生的意见办，多喝水不能省。**汉族人用别嘌醇之前值得先查 HLA-B\\*5801**。它是一种天生的、管免疫反应的基因型号，查一次结果终身不变。带着这个基因的人，在汉族、韩国、泰国人里占 7.4%，白人和西班牙裔只有 0.7%。亚裔和非裔用别嘌醇之后发生别嘌醇超敏综合征的风险是白人的 3 倍，这个病严重时皮肤会大面积剥脱，能要命。美国风湿病学会 2020 年痛风指南对这两类人建议，用药前可以考虑先查一下。**刚开始降尿酸反而更容易诱发发作**，所以指南明确要求头 3 到 6 个月同时吃一种抗炎的预防药。「吃了降尿酸药反而更疼，所以停了」是这件事最常见的失败方式。疼起来该做的是按医嘱加抗炎药，不是停降尿酸药。达标值各家写法不同：<6 mg/dL 约合 360 µmol/L，中国的化验单多用 µmol/L。体检查出尿酸高但从没发作过是另一回事，见第 6 节第 19 条。含糖饮料和酒见第 2 节第 7、19 条（不喝含糖饮料、少喝或不喝酒）",
+        "source": "Doherty M, Jenkins W, Richardson H, et al. (2018). Efficacy and cost-effectiveness of nurse-led care involving education and engagement of patients and a treat-to-target urate-lowering strategy versus usual care for gout: a randomised controlled trial. Lancet, 392(10156), 1403-1412. <https://doi.org/10.1016/S0140-6736(18)32158-5>；Abhishek A, Jenkins W, La-Crette J, Fernandes G, Doherty M (2020). Nurse-led care is preferred over GP-led care of gout and improves gout outcomes: results of Nottingham Gout Treatment Trial follow-up study. Rheumatology, 59(3), 575-579. <https://doi.org/10.1093/rheumatology/kez333>；FitzGerald JD, Dalbeth N, Mikuls T, et al. (2020). 2020 American College of Rheumatology Guideline for the Management of Gout. Arthritis Care & Research, 72(6), 744-760. <https://doi.org/10.1002/acr.24180>；White WB, Saag KG, Becker MA, et al.; CARES Investigators (2018). Cardiovascular Safety of Febuxostat or Allopurinol in Patients with Gout. New England Journal of Medicine, 378(13), 1200-1210. <https://doi.org/10.1056/NEJMoa1710895>；Mackenzie IS, Ford I, Nuki G, et al.; FAST Study Group (2020). Long-term cardiovascular safety of febuxostat compared with allopurinol in patients with gout (FAST): a multicentre, prospective, randomised, open-label, non-inferiority trial. Lancet, 396(10264), 1745-1757. <https://doi.org/10.1016/S0140-6736(20)32234-0>；中华医学会内分泌学分会 (2020). 中国高尿酸血症与痛风诊疗指南(2019). 中华内分泌代谢杂志, 36(1), 1-13. <https://doi.org/10.3760/cma.j.issn.1000-6699.2020.01.001>",
         "grade": "A",
         "meta": {
           "money": "少",
@@ -8190,6 +8639,7 @@ module.exports = {
         "cost": "去公证处办一份，几百元。和老人谈一次话就能定下来。难在开口：要当面说到将来他自己管不了自己的那一天",
         "gain": "民法典规定，头脑清醒、能自己做主的成年人（法律叫「具有完全民事行为能力的成年人」），可以提前和人商量好将来谁当自己的监护人。商量的对象可以是近亲属，也可以是其他愿意当监护人的个人或者组织。商量好了要「以书面形式确定自己的监护人」。将来他不能做决定了，或者只能做一部分决定了（法律叫「丧失或者部分丧失民事行为能力」），就由写定的这个人来管。没有这份文件，将来谁替他签字、谁替他管钱，要走法院指定",
         "note": "这份文件叫意定监护，意思是自己提前指定的人。这个人排在法律默认的那套监护顺序前面。老人独居、子女在外地、家里关系复杂的，更需要提前办。建议去公证处做公证",
+        "source": "全国人大 (2020). 民法典（第三十三条）. <https://www.spp.gov.cn/spp/fl/202006/t20200602_463888.shtml>",
         "grade": "A",
         "meta": {
           "money": "少",
@@ -8209,6 +8659,7 @@ module.exports = {
         "cost": "自己手写一份遗嘱，不花钱。找公证处公证，几百到上千元。难在开口：要和家里人谈身后事",
         "gain": "民法典认可六种遗嘱形式：自己手写的、请人代写的、打印的、录音录像的、口头的、公证的。每一种都有各自必须做到的手续要求（法律叫「形式要件」）。如果立了好几份，内容互相打架，以最后立的那份为准。2021 年起，公证的那份不再自动排在前面",
         "note": "自己手写的遗嘱，要本人从头到尾手写，签上名，写清年月日。打印的遗嘱要有两个以上见证人。遗嘱人和见证人要在每一页上签名，并写清年月日。继承人、被写进遗嘱要分东西的人，以及他们的近亲属，都不能当见证人。形式错了整份作废，这是最常见的翻车点",
+        "source": "全国人大 (2020). 民法典（第一千一百三十四条至第一千一百四十二条）. <https://www.spp.gov.cn/spp/fl/202006/t20200602_463888.shtml>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -8228,6 +8679,7 @@ module.exports = {
         "cost": "不花钱。和家里人商量一次，定下一个数额就行。难在怎么开口，别让老人觉得你在防着他",
         "gain": "针对老人的保健品、收藏品、理财骗局，套路都是先用几个月把信任攒足，再一次性收割。事先约好「超过多少钱的支出要先和某个人说一声」。这等于把掏钱这个决定往后拖，拖过最冲动的那一阵",
         "note": "别把这件事讲成「怕你被骗」。讲成「家里的钱统一记账」，老人更容易接受。也别把老人的所有钱都交给子女保管，那会引出另一类纠纷",
+        "source": "作者经验，无直接文献；防骗通则见第 8 节和第 13 节",
         "grade": "C",
         "meta": {
           "money": "0",
@@ -8247,6 +8699,7 @@ module.exports = {
         "cost": "不花钱。和老人对一次话，几分钟就行",
         "gain": "推销和诈骗都靠现场施压。事先商量好一句「我要回去和家里人商量」，让老人有台阶可下。这比事后讲道理有效",
         "note": "和第 3 条（老人的钱单独放一个账户）一起用。家里的防跌倒改造也顺手做了，见第 1 节。这句话是给老人留个台阶，让他不用当场硬顶，不是用来防着他的。被推销围住的时候，最难的是当着一屋子人开口拒绝，比判断真假还难",
+        "source": "作者经验，无直接文献",
         "grade": "C",
         "meta": {
           "money": "0",
@@ -8266,6 +8719,7 @@ module.exports = {
         "cost": "不花钱。把下面这几种名目念给老人听一遍，几分钟。以后遇上就直接拒绝：不去听课，不去参观，不留电话。难在老人要是已经去过几次、和人处熟了，就不容易劝回来",
         "gain": "民政部列了五种表现形式，认名目比认人可靠。第一种，假借养老服务机构之名：没有实体，临时租个场地，宣称和养老机构签了合作协议来「碰瓷」。第二种，以提供「养老服务」为名：卖「贵宾卡」「会员卡」「预付卡」，让人预交「养老服务费用」，承诺的服务明显超过自己的床位供给能力。第三种，以投资「养老项目」为名。常见名目有入股养生养老基地、销售虚构的养老公寓。还有长期出租养老床位、「时间银行」互助养老。打的幌子是返本销售、售后返租、约定回购。第四种，以销售「老年产品」为名：商品回购、寄存代售、消费返利、免费体检、赠送礼品、会议营销、养生讲座、专家义诊。第五种，以享受「旅居养老」为名：低价或免费旅游、储值返利、积分养老。钱追不回来，条例里写明了。防范和处置非法集资条例第二十五条规定，「因参与非法集资受到的损失，由集资参与人自行承担」，亏掉的钱只能自己认。官方通报过的案子里，戴某平等人以预定养老公寓床位名义非法集资 1.36 亿元，被害人 2100 余人，戴某平以集资诈骗罪判 15 年，并处罚金 40 万元。曹某铭以投资养老产业为名集资诈骗 132.07 亿元，涉及 11 万余人，判无期徒刑、剥夺政治权利终身、没收个人全部财产。保健品会销走的是诈骗罪。倪某荣用免费宴请、赠送礼品、专车接送，把老年人拉去听课。讲师用「虚假人设、虚假案例、虚高砍价」编造防癌抗癌功效。老人被诱骗以成本价的数十倍买「二氢槲皮素」。销售金额 62 万余元。倪某荣判 10 年 3 个月，并处罚金 12 万元（全国，条例 2021 年 5 月 1 日起施行）",
         "note": "判断不靠「这家看着正规」，靠「有没有让你先交钱、有没有承诺回报」。养老机构本来是卖服务的，话里一带上投资、返利、回本，就别信。老人被拉去听课、旅游、义诊，本身不违法，也很难拦住。能拦的是掏钱那一步，配合第 3 条的双人确认规矩用。已经交了钱，就立刻按第 8 节第 2 条打 110 或 96110 要求止付，同时向当地负责处置非法集资的牵头部门举报。以房养老是另一套路径，见第 6 条（住房反向抵押养老保险）。",
+        "source": "民政部 (2023). 关于养老服务领域非法集资的风险提示. <https://www.gov.cn/lianbo/bumen/202306/content_6886556.htm>（中国政府网发布）；民政部、中国银保监会 (2021). 关于养老领域非法集资的风险提示. <https://www.mca.gov.cn/n152/n164/c36171/content.html>；国务院 (2021). 防范和处置非法集资条例（国务院令第 737 号，第二、二十五、三十条）. <https://www.gov.cn/zhengce/zhengceku/2021-02/10/content_5586632.htm>；最高人民检察院 (2022). 检察机关打击整治养老诈骗犯罪典型案例. <https://www.spp.gov.cn/xwfbh/wsfbt/202206/t20220617_560010.shtml>；最高人民法院 (2025). 依法惩治涉民生领域诈骗犯罪典型案例（案例五 倪某荣诈骗案）. <https://www.court.gov.cn/zixun/xiangqing/482861.html>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -8285,6 +8739,7 @@ module.exports = {
         "cost": "不花钱。家里的房产证，不交给任何以「以房养老」名义上门的人。抵押、担保、借贷这些协议，签字前先给子女看一遍。难在上门的人往往很热情、跑了很多趟，老人不好意思回绝",
         "gain": "银保监会消保局把真假两种说清楚了。正规的以房养老只有一种，叫「老年人住房反向抵押养老保险」。拥有房屋完全合法产权的老年人，把房产抵押给保险公司。房子照样归自己住、自己用、自己收租。要卖、要处置，得经抵押权人（保险公司）同意。老人按约定条件领取养老金，一直领到去世。这项业务目前仍处于试点阶段，做的人比较少。不法分子说的「以房养老」，与国家试行的住房反向抵押养老保险「完全无关」，是「假借国家政策、为非法集资活动造势宣传的手段」。它的操作是诱骗老人办房产抵押，再把借来的钱去买它推荐的理财产品，「往往是『以新还旧』的庞氏骗局」。后果原文写的是「有的参与人甚至都不知道自己的房产被抵押，最终失去了房子，还背负贷款」。提示里还给了一条看收益率的线。原话是「理财产品如果承诺收益率超过 6% 就要打问号，超过 8% 就很危险，10% 以上就要准备损失全部本金，『保本高收益』就是金融诈骗」。同一份提示还要求「慎重对待合同签署环节，不在空白合同签字」（全国，2021 年 6 月）",
         "note": "给 B 级是因为这些说法出自监管部门的风险提示和经验判断，不是研究数据。6%、8%、10% 这三条线是监管给消费者的参考线，不是法律定的标准。银保监会已经并入国家金融监督管理总局，原发布页打不开，这里引的是省级金融监管局的转载页。理财亏钱还在其次，房子被抵押出去以后老人还欠着一笔贷款，损失远大于本金。签字和空白合同的一般规则见第 8 节第 17 条，被骗之后怎么止付见第 8 节第 2 条。",
+        "source": "中国银保监会消费者权益保护局 (2021). 关于警惕「投资养老」「以房养老」金融诈骗的风险提示（2021 年第三期）. <https://dfjrjgj.hunan.gov.cn/dfjrjgj/yhlj/202106/t20210608_19450856.html>（湖南省地方金融监督管理局转载）；民政部、中国银保监会 (2021). 关于养老领域非法集资的风险提示（第四种表现形式：以宣称「以房养老」为名非法集资）. <https://www.mca.gov.cn/n152/n164/c36171/content.html>",
         "grade": "B",
         "meta": {
           "money": "0",
@@ -8304,6 +8759,7 @@ module.exports = {
         "cost": "去参保地医保部门交一次申请。再做一次失能等级评估。第一次评估就通过的，评估费由基金出，不用自己掏",
         "gain": "符合规定的长期护理服务费用不设起付线。起付线就是先自己垫够一个数才开始报，这里不用垫。按单位职工政策参保的，由基金报销约 70%。按未就业城乡居民政策参保的，约 50%。一年最多能报到的钱（年度最高支付限额），不超过本地统筹地区上年度城乡居民人均可支配收入的 50%",
         "note": "失能要「长期持续（一般为6个月以上）」，住院几周还不到申请的条件。享受待遇前还有 6 个月等待期。床位费、伙食费这类不算护理的费用，长护险不付。本该医保付的医疗费，长护险也不付。已经在领工伤生活护理费的，不重复享受。这笔钱和残疾人两项补贴里的护理补贴是两套手续、两笔钱，不冲突，见第 7 节第 8 条（两项补贴）。在家里和在社区接受护理，报销比例上有倾斜，不一定非得住进机构。这项制度各地分批落地，失能评估标准也不一样。先打 12393 或者参保地医保经办机构的电话，问本地启没启动、评估怎么约。评估不通过也别放弃，失能状态变重之后可以再申请。",
+        "source": "国家医保局等八部门 (2026). 关于印发《加快建立长期护理保险制度实施方案》的通知. <https://www.gov.cn/zhengce/zhengceku/202603/content_7063915.htm>：保障对象为「按规定参保缴费且失能状态长期持续（一般为6个月以上），经申请通过评估认定的失能人员」，「制度起步阶段保障重度失能人员」；「待遇享受不设起付标准。符合规定的长期护理服务费用，按未就业城乡居民参保政策参保的，基金支付比例为50%左右；按单位职工参保政策参保的，基金支付比例为70%左右，退休人员享受单位职工参保待遇」；「参保人员基金年度最高支付限额不超过统筹地区上年度城乡居民人均可支配收入的50%」；「待遇享受固定等待期原则上按照6个月设置」；另见中共中央办公厅、国务院办公厅《关于加快建立长期护理保险制度的意见》. <https://www.gov.cn/gongbao/2026/issue_12666/202604/content_7065119.html>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -8323,6 +8779,7 @@ module.exports = {
         "cost": "家用电动交替压力气垫床，几百元起。翻一次身只要几分钟。难的是每隔两三小时就得翻一次，夜里也不停，一个人扛不下来",
         "gain": "19520 例髋部骨折手术患者（美国 NSQIP 2016 至 2019 年）。开刀前就有压疮的人，30 天内死亡的比例更高。把其他因素算进去之后，这个关联仍然成立（OR 1.2，几率增加 21%，P=0.004）。这些人还更容易出别的问题：深静脉血栓（OR 1.59）、肺炎（OR 1.39）、非计划再住院（OR 1.43），平均住院日也多 0.4 天。324 名住院老人（平均 86 岁）随访中位 18 个月。压疮能单独预测长期死亡（HR 1.500，95% CI 1.059 至 2.126，P=0.020）。单独预测的意思是，把别的因素排掉之后，它自己就能预测。65 项随机试验放在一起算（网络荟萃分析）。比的是电动主动气流支撑面和标准病床垫（标准病床支撑面）。电动主动气流支撑面就是电动气垫床这一类。用它的人压疮发生率更低（RR 0.42，95% CI 0.29 至 0.63，中等确定性）。电动混合气流支撑面是 RR 0.22（0.07 至 0.66）。11 项试验 4462 人的 Cochrane 综述（2026 年更新）。2 小时翻一次和 4 小时翻一次比，差别说不清（RR 1.05，95% CI 0.79 至 1.39，确定性极低）。其他翻身间隔之间的比较，同样极不确定。1226 名 ICU 患者的试验里，用可穿戴传感器实时提醒并给出视觉警示，把 2 小时翻一次真正落实下来。压疮发生率低于常规护理（RR 0.28，95% CI 0.10 至 0.75，中等确定性）。116 人的试验中，俯卧位（趴着）那组的压疮发生率高于仰卧位（平躺）那组（RR 4.55，95% CI 2.31 至 8.98）",
         "note": "给 B 的原因有三条。一是死亡率那两项研究只看到「有压疮的人后来处境更差」，这不等于「防住压疮就能把死亡率降下来」。二是翻身间隔那几项随机试验的结论很不牢靠。三是气垫床那条证据要硬一些，但研究里比的是医院病床的垫子，套到家用床垫上属于往外推。每天查骶尾、足跟、髋部、肩背，看有没有「压下去不褪色的红」，这是护理的常规做法，没有单独的文献。长期护理保险能报的照护服务，见本节第 7 条。突然一条腿肿起来，按深静脉血栓处理，见第 13 节第 11 条。因坠落或重伤长期卧床的那一段，见第 1 节第 34 条",
+        "source": "Porter SB, Pla R, Chow JH, et al. (2022). Preoperative Pressure Ulcers, Mortality, and Complications in Older Hip Fracture Surgery Patients. JAAOS Global Research & Reviews, 6(11). <https://doi.org/10.5435/JAAOSGlobal-D-22-00117>；Ottaviani S, Rondanina E, Longo E, 等 (2026). Impact of pressure ulcers and frailty on long-term mortality: a prospective cohort study of hospitalized older adults. European Geriatric Medicine, 17(2), 665-672. <https://doi.org/10.1007/s41999-025-01331-8>；Shi C, Dumville JC, Cullum N (2018). Support surfaces for pressure ulcer prevention: A network meta-analysis. PLoS ONE, 13(2), e0192707. <https://doi.org/10.1371/journal.pone.0192707>；Latimer SL, Chaboyer WP, Probst S, 等 (2026). Repositioning for pressure injury prevention in adults. Cochrane Database of Systematic Reviews, 6, CD009958. <https://doi.org/10.1002/14651858.CD009958.pub4>",
         "grade": "B",
         "meta": {
           "money": "少",
@@ -8342,6 +8799,7 @@ module.exports = {
         "cost": "先陪老人去眼科查一次，由医生判断该不该做。一只眼做一次手术，很多医院按日间手术做，当天就能回家。两只眼都有白内障的，要分两次做。自己掏多少钱，看换进眼里的人工晶体（人造镜片）选哪种、当地医保怎么报，术前问清楚。",
         "gain": "一项随机试验找了 306 名 70 岁以上、有白内障的女性。一半在约 4 周内做第一只眼的手术，另一半按常规等 12 个月。一年里，尽快做手术的人跌倒次数少约 34%。原值是跌倒率之比 0.66，可信范围 95% CI 0.45 到 0.96。跌过至少一次的人，手术组 49%，等待组 45%，没有少。跌过两次以上的人，手术组 18%，等待组 25%。手术组 4 人骨折（3%），等待组 12 人（8%）。Cochrane 综述收了这项试验，结论是女性第一只眼的手术减少了跌倒次数，第二只眼的手术没有。第二只眼的随机试验找了 239 名 70 岁以上的女性。手术组跌倒率低 32%，但差别可能是碰巧（跌倒率之比 0.68，95% CI 0.39 到 1.19）。美国医保 5% 抽样里，有 1113640 名 65 岁以上的白内障病人（2002 到 2009 年）。这项研究只是跟踪记录，没有分组对照。做了手术的人，一年内髋部骨折的几率低约 16%（OR 0.84，95% CI 0.81 到 0.87）。绝对差是 0.20 个百分点，约每 1000 人少 2 例",
         "note": "争议：两项随机试验合起来算，摔过跤的人数没有明显减少（OR 0.81，95% CI 0.55 到 1.17）。澳大利亚西部的全人群住院记录里，做完第一只眼后的一年，因跌倒受伤住院的反而多了 27%。两次手术之间那段，这类住院是术前的 2.14 倍。这类前后对比分不开手术的影响和人变老的影响。另一项澳大利亚的跟踪研究里，做完第二只眼以后，跌倒次数降得最多。所以两只眼都有白内障的，第二只别拖太久。两次手术之间那段，走路和上下楼要格外小心。Cochrane 还收了一项帮老人处理视力问题的试验，跌倒次数反而多了约五成七。手术管的是看不看得清，少摔跤还要靠第 1 节第 13 条（平衡和腿部力量）。骨头经不经得起摔，见第 1 节第 39 条（骨密度检查）和第 1 节第 40 条（查出骨质疏松就用药）。国家眼健康规划写明，白内障复明手术已在县域普遍开展，不一定要去大城市的医院。受益人主要是你的父母和祖父母。",
+        "source": "Harwood RH, Foss AJ, Osborn F, Gregson RM, Zaman A, Masud T (2005). Falls and health status in elderly women following first eye cataract surgery: a randomised controlled trial. British Journal of Ophthalmology, 89(1), 53-59. <https://doi.org/10.1136/bjo.2004.049478> ; Foss AJ, Harwood RH, Osborn F, Gregson RM, Zaman A, Masud T (2006). Falls and health status in elderly women following second eye cataract surgery: a randomised controlled trial. Age and Ageing, 35(1), 66-71. <https://doi.org/10.1093/ageing/afj005> ; Gillespie LD, Robertson MC, Gillespie WJ, et al. (2012). Interventions for preventing falls in older people living in the community. Cochrane Database of Systematic Reviews, 9, CD007146. <https://doi.org/10.1002/14651858.CD007146.pub3> ; Tseng VL, Yu F, Lum F, Coleman AL (2012). Risk of fractures following cataract surgery in Medicare beneficiaries. JAMA, 308(5), 493-501. <https://doi.org/10.1001/jama.2012.9014> ; Desapriya E, Subzwari S, Scime-Beltrano G, et al. (2010). Vision improvement and reduction in falls after expedited cataract surgery: systematic review and metaanalysis. Journal of Cataract and Refractive Surgery, 36(1), 13-19. <https://doi.org/10.1016/j.jcrs.2009.07.032> ; Meuleners LB, Lee AH, Ng JQ, Morlet N, Fraser ML (2012). First eye cataract surgery and hospitalization from injuries due to a fall: a population-based study. Journal of the American Geriatrics Society, 60(9), 1730-1733. <https://doi.org/10.1111/j.1532-5415.2012.04098.x> ; Meuleners LB, Fraser ML, Ng J, Morlet N (2014). The impact of first- and second-eye cataract surgery on injurious falls that require hospitalisation: a whole-population study. Age and Ageing, 43(3), 341-346. <https://doi.org/10.1093/ageing/aft177> ; Keay L, Ho KC, Rogers K, et al. (2022). The incidence of falls after first and second eye cataract surgery: a longitudinal cohort study. Medical Journal of Australia, 217(2), 94-99. <https://doi.org/10.5694/mja2.51611> ; 国家卫生健康委 (2022). 「十四五」全国眼健康规划（2021-2025年）. <https://www.gov.cn/zhengce/zhengceku/2022-01/17/content_5668951.htm>",
         "grade": "B",
         "meta": {
           "money": "多",
@@ -8363,6 +8821,7 @@ module.exports = {
         "cost": "不花钱。去孩子户口所在地申请，跑一趟就办完",
         "gain": "中共中央办公厅、国务院办公厅印发的方案规定：2025 年 1 月 1 日起出生、3 周岁以下的婴幼儿，按「每孩每年 3600 元」发放。由孩子的父母一方或者其他监护人去申领。这笔补贴「免征个人所得税」。认定低保这类救助的时候，它「不计入家庭或个人收入」",
         "note": "这是全国统一的最低线。有的省市另有自己的地方补贴，可以和这笔叠加着一起领。三年加起来 10800 元，在养孩子的开支里只是很小的一块，别把它当成生不生的依据",
+        "source": "中共中央办公厅、国务院办公厅 (2025). 育儿补贴制度实施方案. <https://www.gov.cn/gongbao/2025/issue_12206/202508/content_7035435.html>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -8382,6 +8841,7 @@ module.exports = {
         "cost": "不花钱。由单位去申报，你自己不用跑",
         "gain": "产假天数由国务院规定。「女职工生育享受 98 天产假，其中产前可以休假 15 天；难产的，增加产假 15 天；生育多胞胎的，每多生育 1 个婴儿，增加产假 15 天。」产假期间拿的钱叫生育津贴。已经参加生育保险的，「按照用人单位上年度职工月平均工资的标准由生育保险基金支付」。没参保的，由用人单位按你产假前的工资标准发给你",
         "note": "98 天是国家定的最低标准。各省的人口与计划生育条例普遍还要再加 60 天以上的生育奖励假，加起来通常是 158 天起。奖励假这段时间的工资由哪一方出，各省规定不一样",
+        "source": "国务院 (2012). 女职工劳动保护特别规定（国令第 619 号，第七条、第八条）. <https://www.gov.cn/zhengce/zhengceku/2012-05/07/content_6584.htm>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -8401,6 +8861,7 @@ module.exports = {
         "cost": "不花钱",
         "gain": "国务院规定：「用人单位不得因女职工怀孕、生育、哺乳降低其工资、予以辞退、与其解除劳动或者聘用合同。」这三段时间里单位不能给你减钱，也不能把你辞退或者解约。哺乳未满 1 周岁婴儿的，每天有 1 小时哺乳时间。单位也不得安排你延长劳动时间，不得安排夜班。单位违反上面这些的，按每人 1000 元以上 5000 元以下罚款",
         "note": "真的被违法辞退了，索赔路径见第 19 节。取证的重点是调岗、降薪的书面通知和聊天记录，这两样要留好",
+        "source": "国务院 (2012). 女职工劳动保护特别规定（国令第 619 号，第五条、第九条、第十三条）. <https://www.gov.cn/zhengce/zhengceku/2012-05/07/content_6584.htm>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -8420,6 +8881,7 @@ module.exports = {
         "cost": "不花钱，花的是时间。孩子 3 岁前基本是全天被占住。难在天天如此，没法咬牙几天就过去",
         "gain": "把每天照看孩子的时间、夜里被吵醒的次数，都折算成小时。再乘以干这些活的那个人的时薪。得到的数字通常远大于奶粉尿布钱。照看、做饭、夜里起夜这些活虽然没人付钱，也照这样记进成本。算法和第 10 节算家务的那套一样。先谈好分工，再决定生不生",
         "note": "数字不必算得很准。有用的是两个人在生之前对着同一张表谈分工，免得生完再吵",
+        "source": "作者经验，无直接文献；口径见第 10 节",
         "grade": "C",
         "meta": {
           "money": "0",
@@ -8439,6 +8901,7 @@ module.exports = {
         "cost": "花多少钱没有固定数，城市不同、带法不同，差得很远。难在要静下心来把三段账分开算，不能凭感觉拍一个数",
         "gain": "0 到 3 岁的大头是照料方式：自己带、老人带还是请人带。义务教育阶段（小学到初中）的大头是住房和课外支出。这之后的大头是升学路径。这三段钱花在哪完全不同，混在一起算，只会得到一个吓人的总数",
         "note": "先把育儿补贴、生育津贴、医保报销这些确定能拿到的钱算进来，再看还差多少。别拿网上流传的「养大一个孩子要多少万」做决定，那类数字口径不明，你不知道它算了哪些、又漏了哪些",
+        "source": "作者经验，无直接文献",
         "grade": "C",
         "meta": {
           "money": "多",
@@ -8458,6 +8921,7 @@ module.exports = {
         "cost": "不花钱，花的是一次认真的谈话。难在要把话说开，不绕过去",
         "gain": "思路和第 10 节一样。别人的期待可以算你的一个考虑因素。但成本要记在你自己的账上，不记在他们账上。「养儿防老」尤其要单独算一笔，因为它假定的是二十年后另一个人的经济能力和意愿",
         "note": "把「不生的后果」也写下来，和「生的后果」放在一起对照着看",
+        "source": "作者经验，无直接文献；同类分析见第 10 节",
         "grade": "C",
         "meta": {
           "money": "0",
@@ -8479,6 +8943,7 @@ module.exports = {
         "cost": "不花钱。平时顺手把打卡记录、排班表、加班审批单存一份，工作群里领导派活的消息也截图留着。难在每个月都要记得存。",
         "gain": "法律规定的正常上班时间是每天不超过 8 小时，平均每周不超过 44 小时。平时加班一般每天不得超过 1 小时。有特殊原因要多干的，每天不得超过 3 小时，而且一个月加起来不得超过 36 小时。加班费分三档。平时安排你延长工作时间的，按不低于工资的 150% 给。休息日安排你上班、又安排不了补休的，不低于 200%。法定休假日安排你上班的，不低于 300%。法定休假日这一档，法条里没有「拿补休顶掉」这个选项。单位安排了加班又不给加班费的，由劳动行政部门勒令它限期付清。过了期限还不付的，勒令它在欠款之外，再按应付金额的 50% 以上 100% 以下加付一笔赔偿金给劳动者（全国）",
         "note": "休息日和法定休假日要分开算。法定休假日全年只有元旦、春节、劳动节、国庆节等法定的那几天。调休凑出来的连休日按休息日算，给 200%。「公司规定加班要审批」「我是自愿留下的」，这两句话不等于公司就可以不给钱，但会让你更难拿出证据，所以派活和审批记录要留着。公司想实行综合计算工时制、不定时工时制这两种特殊工时安排，得先经劳动行政部门批准，不是自己说了算。争议的仲裁时效见第 8 节第 19 条。",
+        "source": "全国人大常委会 (2018). 劳动法（2018 年第二次修正，第三十六、四十一、四十三、四十四条）. <https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/bgt/art/2023/art_d9aa750028b14b99a776cb93726a360d.html>（国家市场监督管理总局刊登）；全国人大常委会 (2007). 劳动合同法（第八十五条第三项）. <http://www.gov.cn/gongbao/content/2007/content_711013.htm>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -8498,6 +8963,7 @@ module.exports = {
         "cost": "不花钱。把自己在所有单位干过的年头加起来算一遍，社保缴费记录就是证明。难在公司递「自愿放弃年休假」的表时要能不签。",
         "gain": "连续工作满 12 个月就有年休假。天数按**累计**工作时间定，在所有单位干过的年头都加起来算。满 1 年不满 10 年 5 天，满 10 年不满 20 年 10 天，满 20 年 15 天。国家法定休假日和休息日不算进年休假的天数里。单位确实因为工作需要安排不了、又征得你本人同意不休的，该休没休的那几天「按照该职工日工资收入的 300% 支付年休假工资报酬」。这 300% 里已经含了正常上班那天本来就该给的一份，所以实际额外多拿到手的是 200%。日工资 = 本人月工资 ÷ 21.75。月工资按发这笔钱之前 12 个月的工资算，去掉加班费之后取月平均数。当年才进单位的，按在这家单位剩下的日历天数折算。离职时按当年已经干了多久折算并结清，已经多休的不倒扣回来。单位既不安排休、又不给钱的，勒令限期改正。过了期限还不改的，除了那笔年休假工资报酬，还要再按同样的数额加付一笔赔偿金（全国，2008 年 1 月 1 日起施行）",
         "note": "累计工作时间要跨单位加起来算，换过工作的别按现单位工龄算。**只有职工「因本人原因且书面提出不休」，单位才可以只支付正常工资**，所以「自愿放弃年休假」的表别签。请事假累计 20 天以上、单位又不扣你工资的，当年不享受年休假。病假超过对应月数的也不享受：工龄不满 10 年是 2 个月，10 到 20 年是 3 个月，20 年以上是 4 个月。探亲假、婚丧假、产假和工伤停工留薪期不计入年休假。",
+        "source": "国务院 (2007). 职工带薪年休假条例（国务院令第 514 号，第二、三、四、五、七条）. <http://www.gov.cn/gongbao/content/2008/content_859865.htm>；人力资源和社会保障部 (2008). 企业职工带薪年休假实施办法（人社部令第 1 号，第三、四、五、十、十一、十二、十五条）. <http://www.gov.cn/gongbao/content/2009/content_1265995.htm>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -8517,6 +8983,7 @@ module.exports = {
         "cost": "不花钱。签字前花几分钟，把合同写的期限和试用期长度对一遍。",
         "gain": "合同签 3 个月以上不满 1 年的，试用期不得超过 1 个月。签 1 年以上不满 3 年的，不得超过 2 个月。签 3 年以上的，以及不写到期日的无固定期限合同，不得超过 6 个月。以干完一件活为期限的合同，或者总共不到 3 个月的合同，不许约定试用期。「同一用人单位与同一劳动者只能约定一次试用期」，同一家公司对同一个人只能试用一回。合同里只写了试用期的，这段试用期不成立，这个期限就是劳动合同期限。试用期工资「不得低于本单位相同岗位最低档工资或者劳动合同约定工资的百分之八十，并不得低于用人单位所在地的最低工资标准」。试用期约得超过法定长度、人又实际干了的，单位要按你试用期满后的月工资标准，就超出去的那段时间另付一笔赔偿金。试用期内单位想解除合同，只能按法律列明的那几种情形，而且要向劳动者说明理由（全国）",
         "note": "最常见的三种违法做法。一是合同只签 1 年，却约定 3 个月试用期。二是转正之后调岗，再来一次试用期。三是「试用期不交社保」，社保义务从上班第一天起算，和试不试用无关，用人一侧的义务见第 12 节第 16 条。试用期被辞退不等于一分钱没有，要看单位给的理由是不是法律允许辞退的那几种。被违法解除的按第 6 条算 2N。",
+        "source": "全国人大常委会 (2007). 劳动合同法（第十九、二十、二十一、八十三条）. <http://www.gov.cn/gongbao/content/2007/content_711013.htm>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -8536,6 +9003,7 @@ module.exports = {
         "cost": "不花钱。拿计算器算一次，十分钟。",
         "gain": "劳动合同法定的经济补偿，就是被裁时单位该给的那笔钱，大家常叫它 N。算法是：「每满一年支付一个月工资……六个月以上不满一年的，按一年计算；不满六个月的，向劳动者支付半个月工资」。月工资高过当地上年度职工月平均工资三倍的，按三倍封顶算，而且工龄最多只算到十二年",
         "note": "月工资指劳动合同解除前十二个月的平均工资。奖金、津贴和补贴都要算进去，不是只算基本工资。这一点最容易被公司做低。这笔钱要不要交个税，见本节第 18 条（补偿的个税）",
+        "source": "全国人大常委会 (2007). 中华人民共和国劳动合同法（2008 年 1 月 1 日施行）（第四十七条）. <http://www.gov.cn/gongbao/content/2007/content_711013.htm>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -8555,6 +9023,7 @@ module.exports = {
         "cost": "不花钱。",
         "gain": "劳动合同法规定，用人单位按这一条解除劳动合同的，有两种做法。一种是「提前三十日以书面形式通知劳动者本人」。另一种是「额外支付劳动者一个月工资后，可以解除劳动合同」。想让你立刻走，就得多掏一个月工资。这多出来的一个月俗称代通知金，是 N 之外另算的一笔。这一个月按你上一个月的工资算，N 按离职前 12 个月的平均工资算，两笔的基数不一样",
         "note": "这一个月只出现在劳动合同法第四十条的三种情形里：生病或非因工负伤、医疗期满后干不了原来的活也干不了另安排的活；干不了工作、培训或调岗后仍干不了；订合同时的客观情况发生重大变化、协商不成。别的情形没有这一个月：经济性裁员（第四十一条）只要求公司提前 30 天向工会或者全体职工说明情况；公司提出、双方协商解除的是 N；你有严重违纪这类过错被辞退，没有补偿；公司违法解除是 2N。属于第四十条那三种的，谈判时把 N 和 1 分开算，别让公司把多的那一个月算进 N 里",
+        "source": "全国人大常委会 (2007). 中华人民共和国劳动合同法（2008 年 1 月 1 日施行）（第三十六、三十九、四十、四十一、四十六、四十七、八十七条）. <http://www.gov.cn/gongbao/content/2007/content_711013.htm>；国务院 (2008). 劳动合同法实施条例（国务院令第 535 号）第二十条：「用人单位依照劳动合同法第四十条的规定，选择额外支付劳动者一个月工资解除劳动合同的，其额外支付的工资应当按照该劳动者上一个月的工资标准确定」. <http://www.gov.cn/gongbao/content/2008/content_1107604.htm>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -8574,6 +9043,7 @@ module.exports = {
         "cost": "不花钱。走仲裁要等几个月。难在这几个月要一直跟着办，不能中途放弃。",
         "gain": "劳动合同法规定，用人单位违反本法规定解除或者终止劳动合同的，「应当依照本法第四十七条规定的经济补偿标准的二倍向劳动者支付赔偿金」。算法是先按经济补偿那套标准算出一份，再翻一倍给你",
         "note": "这就是俗称的 2N。什么算违法解除要看具体情形。先咨询法律援助或者律师，再决定是谈还是去仲裁，路径见第 7 节",
+        "source": "全国人大常委会 (2007). 中华人民共和国劳动合同法（2008 年 1 月 1 日施行）（第八十七条）. <http://www.gov.cn/gongbao/content/2007/content_711013.htm>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -8593,6 +9063,7 @@ module.exports = {
         "cost": "不花钱。难在要顶住当场签字的压力。",
         "gain": "劳动合同法把该给经济补偿的情形限定在法律列明的那几类里。劳动者自己提出走人，不在里面，除非是因为公司欠薪、不缴社保这类法定过错。签了「主动辞职」，经济补偿和失业保险金通常一起落空",
         "note": "公司常用的话术是「先签了好走流程，补偿另外给」。要就当场写进协议，不写就不签。当天不签不会有任何法律后果，冷静一晚再说",
+        "source": "全国人大常委会 (2007). 中华人民共和国劳动合同法（2008 年 1 月 1 日施行）（第三十八条、第四十六条）. <http://www.gov.cn/gongbao/content/2007/content_711013.htm>",
         "grade": "B",
         "meta": {
           "money": "0",
@@ -8612,6 +9083,7 @@ module.exports = {
         "cost": "不花钱。花半小时把材料存好。难在走之前要记得存。",
         "gain": "一旦交回电脑和账号，这些材料就再也拿不到了。仲裁时谁来举证，虽然会朝单位那边偏一些，但工资多少、有没有加班这些事，还是要靠你自己手上的证据",
         "note": "存的是自己的劳动关系材料。不要顺手带走公司的源码、客户名单和技术文档，带走的风险见第 11 节。走的时候还要找单位要离职证明，见本节第 17 条（离职证明）",
+        "source": "作者经验，无直接文献；维权路径见第 7 节",
         "grade": "C",
         "meta": {
           "money": "0",
@@ -8631,6 +9103,7 @@ module.exports = {
         "cost": "不花钱。签合同时把「职业病危害告知」那部分逐条看完。每次体检的报告都要一份自己留着。难在要当面开口问、当面把材料要到手。",
         "gain": "职业病防治法规定，签劳动合同的时候，单位要把四件事讲清楚：干这份活可能产生哪些职业病危害、会落下什么后果、怎么防护、有什么待遇。法条原文是「如实告知劳动者，并在劳动合同中写明，不得隐瞒或者欺骗」。合同签完之后又调你去干合同里没交代过的有害活儿的，要重新如实告知，并且跟你商量着改合同条款。单位没做到的，「劳动者有权拒绝从事存在职业病危害的作业，用人单位不得因此解除与劳动者所订立的劳动合同」。体检一共三次：上岗前、在岗期间、离岗时。「职业健康检查费用由用人单位承担」，钱由单位出，结果要书面告诉你本人。没做上岗前体检的人，单位不得安排去干接触职业病危害的活。身体条件本来就不适合这类活的人（有职业禁忌的），也不得安排去干这些禁忌作业。查出跟这份工作有关的健康损害的，要把人调离原岗位并妥善安置。**「对未进行离岗前职业健康检查的劳动者不得解除或者终止与其订立的劳动合同」**。离职时你「有权索取本人职业健康监护档案复印件，用人单位应当如实、无偿提供，并在所提供的复印件上签章」。这份职业健康监护档案，单位要照实复印一份免费给你，还要在复印件上盖章（全国）",
         "note": "面试时问三句，就能大致判断这家正不正规：这个岗位有没有职业病危害、合同里写不写、上岗前体检谁出钱。答不上来或者说「先干着再说」的，风险自己掂量。离岗体检最容易被忽略：没做离岗体检，单位不能和你解除或终止劳动合同。这份体检还是日后申请职业病诊断的关键材料，档案复印件同理，走之前要拿到手。职业病本身按工伤走，待遇见第 11 条起。",
+        "source": "全国人大常委会 (2018). 职业病防治法（2018 年修正，第三十三、三十五、三十六条）. <https://www.beijing.gov.cn/zhengce/zhengcefagui/qtwj/201711/t20171104_779851.html>（北京市人民政府转载）",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -8650,6 +9123,7 @@ module.exports = {
         "cost": "不花钱。难在要一直戴防颗粒物口罩、耳塞、护目镜，还要拒绝没有防护的活，代价是可能被同事说「事多」。",
         "gain": "法定职业病自 2025 年 8 月 1 日起是 12 大类 135 种，其中含 4 项开放性条款。排在第一类的是职业性尘肺病。里面有矽肺、煤工尘肺、石墨尘肺、碳黑尘肺、石棉肺、滑石尘肺。还有水泥尘肺、云母尘肺、陶工尘肺、铝尘肺、电焊工尘肺、铸工尘肺，再加一项开放条款。职业性耳鼻喉口腔疾病里有噪声聋和爆震聋。职业性眼病里有化学性眼部灼伤和电光性眼炎。这些损伤都不可逆，没有哪种治疗能把肺和听力修回来。法律给了四条可以当场搬出来用的权利。一是知道这个工作场所里有哪些职业病危害、会造成什么后果、该采取哪些防护措施。二是要求单位提供合格的防护设施和个人防护用品、改善工作条件。三是对违反职业病防治法律法规的做法、以及会危及生命健康的做法提出批评、检举和控告。四是「拒绝违章指挥和强令进行没有职业病防护措施的作业」，不合规的指挥和没有防护的活，你可以不干。并且「因劳动者依法行使正当权利而降低其工资、福利等待遇或者解除、终止与其订立的劳动合同的，其行为无效」。因为你用了这几条权利就给你降薪、降待遇或者辞退你，这些做法不算数（全国）",
         "note": "口罩要认对，防颗粒物的口罩才挡粉尘，普通纱布口罩和一次性外科口罩不挡。噪声岗位单位不发耳塞就自己买，几元一副，听力掉了补不回来。「干两年攒够钱就走」在尘肺上不成立。矽肺可以在脱离粉尘作业多年之后才发病，而且还会继续加重。所以离岗体检格外重要（见第 9 条，三次职业健康检查由单位安排并掏钱）。新版目录还新增了两类。一类是职业性肌肉骨骼疾病，里面是腕管综合征，只限长时间重复用手腕或者用力干活的制造业工人。另一类是职业性精神和行为障碍，里面是创伤后应激障碍，只限参与突发事件处置的人民警察、医疗卫生人员、消防救援等应急救援人员。化学品溅到身上的现场处理见第 13 节第 21 条。",
+        "source": "国家卫生健康委、人力资源社会保障部、国家疾控局、全国总工会 (2024). 职业病分类和目录（2025 年 8 月 1 日起实施）. <https://www.gov.cn/zhengce/zhengceku/202412/content_6992843.htm>；新版目录 12 大类 135 种的口径见国家卫生健康委 (2024). 新版目录将职业病调整为 12 大类 135 种. <https://www.gov.cn/lianbo/bumen/202412/content_6992838.htm>；全国人大常委会 (2018). 职业病防治法（第三十九条）. <https://www.beijing.gov.cn/zhengce/zhengcefagui/qtwj/201711/t20171104_779851.html>（北京市人民政府转载）",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -8669,6 +9143,7 @@ module.exports = {
         "cost": "不花钱，跑一趟社保行政部门。要带三样材料：工伤认定申请表、劳动关系证明、医疗诊断证明。",
         "gain": "没做工伤认定，医药费、养伤期间照发的工资（停工留薪期工资）、伤残补助金就全部落空。单位超过 30 日不申报的，这段时间里该给的工伤待遇费用由单位自己掏",
         "note": "1 年要当真，别拖。但不是你自己的原因耽误的时间不算在 1 年里：不可抗力、人身自由受限、单位的原因、社保部门登记制度不完善、为确认劳动关系去申请仲裁或者打官司。所以单位拖着不报、拖到超期的，照样去申请，并把单位拖延的证据带上。社保部门不受理，或者认定结论你不服，可以申请行政复议，也可以直接起诉。单位说不算工伤，得由单位举证。但你自己也要留材料：出事当天的照片、同事联系方式、就诊记录、考勤。条例第十六条列了三种不认的情形：故意犯罪、醉酒或者吸毒、自残或者自杀。第十五条另有「视同工伤」：在工作时间和工作岗位突发疾病死亡，或者 48 小时之内经抢救无效死亡的。",
+        "source": "国务院 (2010 修订). 工伤保险条例（国务院令第 586 号）第十四条列了七种「应当认定为工伤」，含「（六）在上下班途中，受到非本人主要责任的交通事故或者城市轨道交通、客运轮渡、火车事故伤害的」；第十七条「所在单位应当自事故伤害发生之日或者被诊断、鉴定为职业病之日起30日内，向统筹地区社会保险行政部门提出工伤认定申请」「用人单位未按前款规定提出工伤认定申请的，工伤职工或者其近亲属、工会组织在事故伤害发生之日或者被诊断、鉴定为职业病之日起1年内，可以直接向用人单位所在地统筹地区社会保险行政部门提出工伤认定申请」「用人单位未在本条第一款规定的时限内提交工伤认定申请，在此期间发生符合本条例规定的工伤待遇等有关费用由该用人单位负担」；第十九条「职工或者其近亲属认为是工伤，用人单位不认为是工伤的，由用人单位承担举证责任」；第二十条「自受理工伤认定申请之日起60日内作出工伤认定的决定」；第五十五条，对「工伤认定申请不予受理的决定不服的」「对工伤认定结论不服的」，「可以依法申请行政复议，也可以依法向人民法院提起行政诉讼」. <https://www.gov.cn/gongbao/content/2011/content_1778064.htm>；最高人民法院 (2014). 关于审理工伤保险行政案件若干问题的规定（法释〔2014〕9 号）第七条：「由于不属于职工或者其近亲属自身原因超过工伤认定申请期限的，被耽误的时间不计算在工伤认定申请期限内」，所列情形为「（一）不可抗力；（二）人身自由受到限制；（三）属于用人单位原因；（四）社会保险行政部门登记制度不完善；（五）当事人对是否存在劳动关系申请仲裁、提起民事诉讼」. <https://www.court.gov.cn/fabu/xiangqing/6775.html>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -8688,6 +9163,7 @@ module.exports = {
         "cost": "不花钱。",
         "gain": "视同工伤要求人「在工作时间和工作岗位」上突发疾病死亡，或者在 48 小时之内经抢救无效死亡。为了凑齐这两个条件而耽误就医，赔的是自己活下来的机会，换来的赔偿也不一定拿得到",
         "note": "两个条件要同时满足：在工作时间，并且在工作岗位。路上发病没到岗的不适用。在岗发病后被送回家或者送医、48 小时内经抢救无效死亡的，仍可能适用。看的是发病时人在哪，不看最后死在哪。短视频把这条讲成「撑到公司就有钱」，方向正好反了。能改变结局的是发病后那几十分钟有没有去医院。另外 48 小时是硬线，抢救超过 48 小时反而不算。",
+        "source": "工伤保险条例第十五条第一款第（一）项：「在工作时间和工作岗位，突发疾病死亡或者在48小时之内经抢救无效死亡的」视同工伤；第十四条第（六）项只把上下班途中「受到非本人主要责任的交通事故或者城市轨道交通、客运轮渡、火车事故伤害的」列为工伤，途中突发疾病不在其中. <https://www.gov.cn/gongbao/content/2011/content_1778064.htm>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -8707,6 +9183,7 @@ module.exports = {
         "cost": "不花钱。单位不认的，就要走仲裁甚至打官司，几个月起步。难在这几个月要一直跟着办。",
         "gain": "条例明写：没给员工交工伤保险的单位，员工出了工伤，由这家单位按条例规定的项目和标准把钱付出来。该给哪几笔、每笔给多少，和交了保险的完全一样，只是改成单位自己掏",
         "note": "「公司没给你买工伤险，所以赔不了」是这类事里最常见的一句假话。没参保只会让单位被加罚，你的待遇不减。",
+        "source": "工伤保险条例第六十二条第二款：「依照本条例规定应当参加工伤保险而未参加工伤保险的用人单位职工发生工伤的，由该用人单位按照本条例规定的工伤保险待遇项目和标准支付费用。」同条第一款：责令限期参加、补缴，「自欠缴之日起，按日加收万分之五的滞纳金；逾期仍不缴纳的，处欠缴数额1倍以上3倍以下的罚款」. <https://www.gov.cn/gongbao/content/2011/content_1778064.htm>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -8726,6 +9203,7 @@ module.exports = {
         "cost": "不花钱。走一次劳动能力鉴定的流程，前后要等一段时间。",
         "gain": "一次性伤残补助金按伤残等级折算成几个月的工资，一次付清。五级 18 个月、六级 16 个月、七级 13 个月的本人工资。八级 11 个月、九级 9 个月、十级 7 个月的本人工资",
         "note": "五级、六级保留劳动关系，人还算这家单位的员工，按月拿伤残津贴。七到十级的人，合同到期或者自己提出解除时，另有两笔钱：一次性工伤医疗补助金由基金出，一次性伤残就业补助金由单位出，给多少由省里定。鉴定结果出来之前不要签「一次性了结」的协议。",
+        "source": "工伤保险条例第二十一条「经治疗伤情相对稳定后存在残疾、影响劳动能力的，应当进行劳动能力鉴定」；第二十二条「劳动功能障碍分为十个伤残等级，最重的为一级，最轻的为十级」；第三十六条五、六级待遇（一次性伤残补助金 18/16 个月本人工资，按月伤残津贴为本人工资的 70%/60%）；第三十七条七至十级待遇（13/11/9/7 个月本人工资）. <https://www.gov.cn/gongbao/content/2011/content_1778064.htm>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -8745,6 +9223,7 @@ module.exports = {
         "cost": "不花钱，办一套手续。",
         "gain": "因工死亡的钱分三笔。第一笔是丧葬补助金，金额是参保所在地区（统筹地区）上年度职工月平均工资的 6 个月。第二笔是供养亲属抚恤金，按死者本人工资按月发，配偶每月 40%，其他亲属每人每月 30%。第三笔是一次性工亡补助金，金额是上一年度全国城镇居民人均可支配收入的 20 倍，全国只有这一个数，不分地区。2026 年因工死亡的，这一笔是约 113 万元（1130040 元）。算法是上一年度全国城镇居民人均可支配收入 56502 元乘以 20。",
         "note": "一次性工亡补助金全国统一，金额每年随国家统计局公布的数据更新。谈赔偿时不接受「我们这边地方标准低」的说法。",
+        "source": "工伤保险条例第三十九条：「（一）丧葬补助金为6个月的统筹地区上年度职工月平均工资；（二）供养亲属抚恤金按照职工本人工资的一定比例发给由因工死亡职工生前提供主要生活来源、无劳动能力的亲属。标准为：配偶每月40%，其他亲属每人每月30%，孤寡老人或者孤儿每人每月在上述标准的基础上增加10%……（三）一次性工亡补助金标准为上一年度全国城镇居民人均可支配收入的20倍。」. <https://www.gov.cn/gongbao/content/2011/content_1778064.htm>；国家统计局 (2026). 2025 年居民收入和消费支出情况. <https://www.stats.gov.cn/sj/zxfbhjd/202601/t20260119_1962321.html>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -8764,6 +9243,7 @@ module.exports = {
         "cost": "不花钱。要花时间记录：日期、在场的人、对方原话，聊天截图和邮件留原件。走仲裁、打官司要花几个月。换工作的代价最高，走不走由你自己算。",
         "gain": "健康上，瑞典和丹麦三个队列合起来，共 79,201 名 18 到 65 岁的在职者。他们起初都没有心血管病，平均跟踪 12.4 年。9% 的人说过去一年在单位被欺负过。被欺负的人得心血管病（冠心病和脑血管病）的风险高约 59%（HR 1.59，95% CI 1.28–1.98）。在单位遭遇过暴力的，高约 25%（HR 1.25，1.12–1.40）。两种都是遭遇越多，风险越高。挪威一项全国随机抽样的跟踪调查，1846 名在职者，隔两到三年测一次，共测三次。被欺负的人后来出现自杀念头的几率约是别人的 2 倍（OR 2.05，95% CI 1.08–3.89）。反过来，先有自杀念头的人，后来并不更容易被欺负。法律上，我国没有专门管「职场霸凌」的法律，要按具体行为对号。单位侮辱、体罚、殴打、非法搜查或者拘禁劳动者的，要受行政处罚，造成损害要赔偿，构成犯罪的追究刑事责任。单位用暴力、威胁强迫你干活的，你可以立即解除合同，不用事先通知，还能拿经济补偿。单位要采取措施，预防和制止有人利用职权、上下级关系实施性骚扰。受害人可以要求骚扰的人承担民事责任。劳动仲裁从受理那天算起 45 日内结案，复杂的最多再延 15 日。",
         "note": "定 B 的理由：健康数字来自跟踪记录，不是分组实验，「被欺负」是本人自己报的。能先做的有四步。第一步，从今天起记录，录音见第 8 节第 41 条（录音）。第二步，按单位内部渠道书面反映，留下反映过的记录。第三步，被打、被关、被当众侮辱的，报警。第四步，因为欠薪、不缴社保被逼走的，按本节第 7 条（别签主动辞职）和第 8 条（离职前存证据）来办。经济补偿怎么算，见本节第 4 条（被裁先算清 N）。单纯的冷落、排挤、刁难，多数对不上哪一条法律，能走的主要是内部投诉、调岗和换工作。仲裁从受理起最长 60 天，打官司一审 6 个月起，律师费自己出。已经撑不住了，先打 12356，见第 1 节第 25 条（12356）。不主张一受气就辞职，换工作的代价由你自己算。",
+        "source": "Xu T 等 (2019). Workplace bullying and workplace violence as risk factors for cardiovascular disease: a multi-cohort study. European Heart Journal. <https://doi.org/10.1093/eurheartj/ehy683>；Nielsen MB, Nielsen GH, Notelaers G, Einarsen S (2015). Workplace Bullying and Suicidal Ideation: A 3-Wave Longitudinal Norwegian Study. American Journal of Public Health. <https://doi.org/10.2105/AJPH.2015.302855>；全国人大常委会 (2007). 劳动合同法（第三十八条第二款、第四十六条、第八十八条）. <https://www.gov.cn/gongbao/content/2007/content_711013.htm>；全国人大 (2020). 民法典（第一千零一十条）. 最高人民检察院转载全文 <https://www.spp.gov.cn/spp/fl/202006/t20200602_463888.shtml>；全国人大常委会 (2022 年修订). 妇女权益保障法（第二十五条）. <https://flk.npc.gov.cn/detail?id=ff808181841257210184281512de0eec>；全国人大常委会 (2007). 劳动争议调解仲裁法（第四十三条）. 安康市人社局转载全文 <https://rsj.ankang.gov.cn/Content-2150407.html>",
         "grade": "B",
         "meta": {
           "money": "0",
@@ -8783,6 +9263,7 @@ module.exports = {
         "cost": "不花钱。走之前当面要，或者发一条书面消息要，留下要过的记录。难在关系闹僵了还得开这个口。单位拖着不给，就要投诉或者申请仲裁，前后几十天到几个月。",
         "gain": "劳动合同法规定，单位要在解除或者终止劳动合同时出具证明。法条不分是谁提出的，合同到期不续、你自己辞职、被辞退都在内。单位还要在 15 日内为你办好档案和社会保险关系的转移手续。实施条例规定证明上要写四样：劳动合同期限、解除或者终止的日期、工作岗位、在本单位的工作年限。失业保险条例规定，职工失业后要拿着单位出具的这份证明，及时去社保经办机构办失业登记。失业保险金从办失业登记那天起算。单位不出书面证明的，由劳动行政部门责令改正。给你造成损害的，单位要赔。法律另外规定，新单位招了还没和原单位解除合同的人，给原单位造成损失的，要承担连带赔偿责任。离职证明就是你已经和原单位解除合同的书面凭据（全国）",
         "note": "法条没有把出证明和工作交接挂在一起，交接办完才付的是经济补偿。单位拖着不给，先发书面消息再要一次。再不给，就打 12333 或者去人社局劳动监察投诉。投诉不收费，立案后 60 个工作日内查完，复杂的可以再延 30 个工作日。要单位赔损失的，走劳动仲裁，也不收费，要在 1 年内申请。仲裁受理后 45 日内结案，最多再延 15 日。损失要你自己拿证据证明，比如因为没有证明耽误了失业登记、被新单位拒收。不服裁决再去法院，一审普通程序 6 个月起。法院收的劳动争议受理费每件 10 元，律师费不在诉讼费用里，要自己出。条例要求写的四样里没有离职原因。证明上写了「个人原因主动辞职」而事实不是这样，当场提出来，理由见本节第 7 条（别签主动辞职）。失业保险金怎么领，见第 7 节第 1 条（失业保险金）。",
+        "source": "全国人大常委会 (2012 修正). 劳动合同法（第五十、八十九、九十一条）. <https://flk.npc.gov.cn/detail?id=2c909fdd678bf17901678bf74d7106b3>；国务院 (2008). 劳动合同法实施条例（国务院令第 535 号，第二十四条）. <https://flk.npc.gov.cn/detail?id=ff8080816f3cbb3c016f40927caf049c>；国务院 (1999). 失业保险条例（国务院令第 258 号，第十六条）. <https://xzfg.moj.gov.cn/front/law/detail?LawID=517>；全国人大常委会 (2007). 劳动争议调解仲裁法（第二、二十七、四十三、五十三条）. <https://flk.npc.gov.cn/detail?id=2c909fdd678bf17901678bf64f28039d>；国务院 (2004). 劳动保障监察条例（国务院令第 423 号，第十七条）. <https://www.gov.cn/gongbao/content/2004/content_63042.htm>；国务院 (2006). 诉讼费用交纳办法（国务院令第 481 号，第六、十三、二十九条）. <https://www.gov.cn/ziliao/flfg/2006-12/29/content_483682.htm>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -8802,6 +9283,27 @@ module.exports = {
         "cost": "不花钱。查一下当地上年职工平均工资，再花几分钟核对单位是怎么扣的税。个人所得税 App 里能查到每笔收入的申报明细。",
         "gain": "财政部和税务总局的文件规定，个人和用人单位解除劳动关系拿到的一次性补偿收入，包括经济补偿金、生活补助费和其他补助费。其中在当地上年职工平均工资 3 倍以内的部分，免征个人所得税。超过 3 倍的部分，不并入当年综合所得，单独按综合所得税率表算税。这张表全年 36000 元以内的部分税率 3%，36000 元到 144000 元的部分 10%，再往上分级加到 45%。举个例子，当地上年职工平均工资是 10 万元，3 倍就是 30 万元。拿到 36 万元补偿，只就超出的 6 万元算税，是 3480 元。同样 36 万元要是整笔都按这张表算，是 58080 元。这条从 2019 年 1 月 1 日起执行，没有写截止日期（全国）",
         "note": "同一份文件里，全年一次性奖金那项写了截止日期，后来延到 2027 年 12 月 31 日。解除劳动关系补偿这一项没写截止日期，不跟着奖金那项走。文件只点名了经济补偿金、生活补助费和其他补助费，没有单独点名代通知金和违法解除的赔偿金。这两笔算不算，拿不准就打 12366 问当地税务局。「当地上年职工平均工资」用哪个数，也以当地税务局为准。补偿本身怎么算，见本节第 4 条（被裁先算清 N）、第 5 条（没提前 30 天通知）和第 6 条（违法解除的赔偿金）。提前退休、内部退养拿的一次性补贴另有算法，不适用这一条。",
+        "source": "财政部、税务总局 (2018). 关于个人所得税法修改后有关优惠政策衔接问题的通知（财税〔2018〕164 号，第五条第（一）项、第八条、第九条）. <https://fgk.chinatax.gov.cn/zcfgk/c102416/c5202364/content.html>（国家税务总局政策法规库）；财政部、税务总局 (2023). 关于延续实施全年一次性奖金个人所得税政策的公告（2023 年第 30 号）. <https://fgk.chinatax.gov.cn/zcfgk/c102416/c5211524/content.html>（国家税务总局政策法规库）；全国人大常委会 (2018 修正). 个人所得税法（第三、九条，个人所得税税率表一）. <https://flk.npc.gov.cn/detail?id=2c909fdd678bf17901678bf724bd0609>",
+        "grade": "A",
+        "meta": {
+          "money": "0",
+          "time": "少",
+          "will": "否",
+          "gain": "大",
+          "lens": "金钱",
+          "ratio": "极高",
+          "dispute": false,
+          "todo": false
+        }
+      },
+      {
+        "index": 19,
+        "title": "换城市工作时，把养老和医保关系转到新参保地，缴费年限接着累计，别办退保",
+        "plain": "换城市工作，养老和医保关系都能跟着你走，以前交的年限接着往上加。没到领养老金的年龄，不能办退保把钱取出来。医保断交超过 3 个月，到新地方可能要等最多 6 个月才能报销，所以中间别空太久。",
+        "cost": "不花钱。在新地方参保缴费以后，由新单位或你自己提出转移申请，跑一趟窗口或者网上办。养老这边前后要等几十个工作日，医保要等 15 个工作日左右。",
+        "gain": "社会保险法规定，换个地方就业的（正式说法是跨统筹地区），养老关系随本人转移，缴费年限累计计算。职工医保也一样，关系跟着人走，年限累计计算。退休时养老金分段计算、统一支付。跨省转养老关系按国务院办公厅转发的转移接续办法办。没到领取待遇的年龄，不得终止养老关系、办理退保。社会保险法也写明个人账户不得提前支取。个人账户里的钱连本带息全部转走。单位交的那部分叫统筹基金，按你 1998 年以后各年实际缴费工资的 12% 转过去。领养老金时，按你各年的缴费工资、缴费年限和领取地各年的平均工资算。手续是在新地方参保缴费以后，由单位或你自己向新参保地书面申请。新参保地 15 个工作日内审核，原参保地接到同意接收函后 15 个工作日内办好转出。新参保地收到关系和资金后，再 15 个工作日内办结。按 2020 年的跨省通办清单，这件事要在当年底前实现跨省通办。你向转入地申请就行，不用再回转出地办。职工医保要原参保地先停保、新地方已经参保，才能申请转移。可以在国家医保服务平台网上申请，也可以去窗口。原参保地 10 个工作日内转出，新参保地 5 个工作日内转入，个人账户余额一起划过去。转之前断缴 3 个月以内的，按新地方规定补缴后不设等待期，缴费当月就能报销，中间那段也能追溯报。断缴超过 3 个月的，等待期按各地规定，原则上不超过 6 个月（全国）",
+        "note": "跨省去的不是户口所在省，而且男的满 50 岁、女的满 40 岁，养老关系会留在原参保地。新地方只开一个临时账户，记下单位和个人的全部缴费。退休时在哪领养老金，规则是这样的。关系在户籍所在省的，在户籍地领。不在户籍地、但在关系所在地累计交满 10 年的，在当地领。都不满 10 年的，转回上一个交满 10 年的地方领。每个地方都不满 10 年的，归集到户籍地领。领取地不同，算养老金用的平均工资也不同。省内跨市怎么转，由各省自己定办法，问当地社保经办机构。已经在领养老金的人，不再转移关系。断缴之后年限怎么算、哪些资格要连续缴费，见第 7 节第 18 条（社保断缴）。不进单位、自己交社保的，见第 31 节第 11 条（灵活就业）。",
+        "source": "全国人大常委会 (2010, 2018 修正). 社会保险法（第十四、十九、三十二条）. <https://www.gov.cn/guoqing/2021-10/29/content_5647616.htm>；人力资源社会保障部、财政部 (2009). 城镇企业职工基本养老保险关系转移接续暂行办法（国办发〔2009〕66 号转发，第二、三、四、五、六、七、八、十一条）. <https://www.gov.cn/zhengce/zhengceku/2009-12/29/content_8104.htm>；国务院办公厅 (2020). 关于加快推进政务服务「跨省通办」的指导意见（国办发〔2020〕35 号，附件第 7 项）. <https://www.gov.cn/zhengce/zhengceku/2020-09/29/content_5548125.htm>；国家医保局办公室、财政部办公厅 (2021). 基本医疗保险关系转移接续暂行办法（医保办发〔2021〕43 号，第五、六、八、九、十一、十二、十三条）. <https://www.gov.cn/zhengce/zhengceku/2021-11/28/content_5653856.htm>；国家医保局 (2021). 《基本医疗保险关系转移接续暂行办法》政策解读（国家医保服务平台网址 fuwu.nhsa.gov.cn）. <http://www.gov.cn/zhengce/2021-11/28/content_5653855.htm>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -8823,6 +9325,7 @@ module.exports = {
         "cost": "不花钱。床垫要换成硬的，几百元。难在要顶住长辈的说法，一直按这个来",
         "gain": "美国每年约 3500 名婴儿死于睡眠相关原因。这里面包括婴儿猝死综合征、死因不明和在床上意外憋住。美国儿科学会给的安全睡眠环境是「仰卧位；使用坚实、不倾斜的睡眠表面；同房不同床；避免柔软的寝具和过热」。还有几件事也能降低风险：母乳喂养、别让孩子接触尼古丁和酒精、按时接种疫苗、使用安抚奶嘴",
         "note": "「床上不放任何软东西」是指枕头、被子、床围、毛绒玩具、定型枕全都不放。看起来很安全的哺乳枕也不放。斜着的摇篮和婴儿椅不能当睡觉的地方。这一节里，这件事的差别最大，也最需要顶住长辈的压力",
+        "source": "Moon RY, Carlin RF, Hand I, Task Force on Sudden Infant Death Syndrome and the Committee on Fetus and Newborn (2022). Sleep-Related Infant Deaths: Updated 2022 Recommendations for Reducing Infant Deaths in the Sleep Environment. Pediatrics, 150(1), e2022057990. <https://doi.org/10.1542/peds.2022-057990>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -8842,6 +9345,7 @@ module.exports = {
         "cost": "不花钱。乙肝疫苗属于免疫规划疫苗，本来就免费。孩子出生当天在医院就打了，不用另外跑",
         "gain": "世界卫生组织的说法是：「所有婴儿都应在出生后尽早（24 小时内）接种乙肝疫苗。」原因是「婴儿期和幼儿期感染约有 95% 会发展为慢性肝炎」。成年后感染的绝大多数能自愈（不用治也会好）",
         "note": "妈妈的乙肝表面抗原是阳性的，孩子出生后还要同时打一针乙肝免疫球蛋白。这件事产检的时候就要查清楚，别等生完再问。妈妈自己要做的筛查见第 1 节",
+        "source": "World Health Organization. Hepatitis B fact sheet. <https://www.who.int/news-room/fact-sheets/detail/hepatitis-b>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -8861,6 +9365,7 @@ module.exports = {
         "cost": "不花钱。法律写明「接种单位接种免疫规划疫苗不得收取任何费用」。要按月龄跑几趟接种门诊。预防接种证收好，别弄丢",
         "gain": "孩子入托、入学的时候，托幼机构和学校要查验预防接种证。发现没按规定接种免疫规划疫苗的，要报告接种单位，并且配合督促监护人补种。所以漏打的疫苗拖不过去，入学时一定会被查出来。现在执行的是 2026 年版程序。人乳头瘤病毒（HPV）疫苗已经纳入国家免疫规划。百白破疫苗的起始接种年龄从 3 月龄改成 2 月龄，一共 5 剂，分别在 2 月龄、4 月龄、6 月龄、18 月龄和 6 周岁各打 1 剂。西藏、青海、新疆和新疆生产建设兵团的适龄儿童，2026 年 3 月起也常规接种乙脑疫苗。几种疫苗可以同一天打：现阶段国家免疫规划疫苗都可以按免疫程序或补种原则同时接种。两种及以上打针的疫苗要打在不同部位，「严禁将两种或多种疫苗混合吸入同一支注射器内接种」。没在同一天打的，两种及以上打针的减毒活疫苗之间要间隔不小于 28 天。灭活疫苗、口服的减毒活疫苗和其他疫苗之间的间隔不作限制。不满 18 周岁的补种原则是尽早补种，「只需补种未完成的剂次，无需重新开始全程接种」，同一种疫苗换厂家可以接着打（全国，2026 年版程序）",
         "note": "最常见的误会是「孩子体质不好，先别打」。官方说法是：所谓「过敏性体质」、家里人有过敏的病、孩子以前对食物或药物过敏过，都不是不能打的理由。特应性皮炎（湿疹）、荨麻疹、过敏性鼻炎、支气管哮喘，只要病情稳定就能正常打。正在吃抗过敏药，或者在用吸入型激素，也能打。新生儿的生理性黄疸、母乳性黄疸也能正常打。真正不能打的只有两种：以前打同一种疫苗出现过急性的严重过敏反应，或者对疫苗里已知的某种成分严重过敏。有免疫缺陷的孩子，以及正在化疗放疗、正在用免疫抑制剂的孩子，要一个个单独评估，去接种门诊说明情况再定。乙肝第一针见第 2 条。自费的非免疫规划疫苗要另收疫苗费和接种服务费，和这条说的免费无关。",
+        "source": "全国人大常委会 (2019). 疫苗管理法（第四十八、四十九条）. <http://ynswsjkw.yn.gov.cn/html/2019/faguiguizhangxin_0731/6509.html>（云南省卫生健康委员会转载）；国家疾病预防控制局、国家卫生健康委 (2026). 《国家免疫规划疫苗儿童免疫程序及说明（2026 年版）》解读问答. <https://www.ndcpa.gov.cn/jbkzzx/c100013/common/content/content_2073002930292035584.html>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -8880,6 +9385,7 @@ module.exports = {
         "cost": "不花钱，还省下奶粉钱。费的是时间，喂奶每天都要占掉不少。难在要一直喂下去，前 6 个月不能断",
         "gain": "世界卫生组织的建议是「在出生后第一个小时内开始母乳喂养」。前 6 个月「纯母乳喂养，即不提供其他任何食物或液体，包括水」。然后「从 6 月龄起开始添加安全充足的辅食，同时继续母乳喂养到 2 岁或以上」。国家卫健委的服务指南也提倡 0 至 6 月龄纯母乳喂养。这份指南还要求满 6 月龄起「每天的辅食必须包含含铁丰富的动物性食物」",
         "note": "母乳不够，或者身体不允许喂，就用配方奶。喂母乳还是喂配方奶，差距远小于安全睡眠那条。加辅食的次数：6 至 8 月龄每天 1 到 2 次，9 至 12 月龄每天 2 到 3 次。每天吃的东西，至少要覆盖七类里的四类。孩子有重度湿疹或鸡蛋过敏时，花生要不要躲着，见本节第 12 条（别躲着花生）。",
+        "source": "World Health Organization. Breastfeeding. <https://www.who.int/health-topics/breastfeeding>；国家卫生健康委办公厅 (2024). 婴幼儿营养喂养评估服务指南（试行）（国卫办妇幼函〔2024〕452 号）. <https://www.gov.cn/zhengce/zhengceku/202502/content_7002872.htm>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -8899,6 +9405,7 @@ module.exports = {
         "cost": "不花钱。每次多等几分钟把奶放凉。难在孩子饿得哭的时候，也要等水温降下来再冲",
         "gain": "奶粉不是无菌的，可能带阪崎克罗诺杆菌。新生儿感染后的病死率，报告为 40% 到 80%。实验研究显示：先把热水倒进奶瓶，等水温降到约 73.8 ℃ 再加奶粉，绝大多数情况下奶液温度还在 70 ℃ 以上。这样可以让这种菌减少 5 个对数级以上，降到原来的十万分之一以下",
         "note": "70 ℃ 这个门槛来自公共卫生指南。Beary 等人的原话是「针对高危婴儿照护者的公共卫生指南建议用加热到至少 70 ℃（158 ℉）的水冲调配方奶粉以灭活微生物」。早产儿、体重偏低的孩子和不满 2 个月的孩子风险最高。别用保温杯里放了一天的水来冲。也别把冲好的奶搁在室温下，等着下一顿再喂",
+        "source": "Beary MA, Daly SE, Baker J, Snyder AB (2025). Assessing Hot Water Reconstitution Instructions and Labeling of Powdered Infant Formula to Ensure Cronobacter spp. Reduction. Journal of Food Protection, 88(9), 100571. <https://doi.org/10.1016/j.jfp.2025.100571>；Sima WG, Legesse T, Girma S, et al. (2025). Emerging microbial risks: Cronobacter sakazakii in powdered infant formula for infants under six months of age in Ethiopia. BMC Microbiology, 26, 307. <https://doi.org/10.1186/s12866-025-04380-y>；World Health Organization & FAO (2007). Safe preparation, storage and handling of powdered infant formula: guidelines. <https://www.who.int/publications/i/item/9789241595414>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -8918,6 +9425,7 @@ module.exports = {
         "cost": "不花钱",
         "gain": "美国疾控中心的说法是「不要给 1 岁以下的儿童喂蜂蜜」，因为「蜂蜜可能含有引起肉毒中毒的细菌」。成年人的肠道菌群能压住这种芽孢（这种细菌的休眠状态），婴儿压不住",
         "note": "不能喂的包括蜂蜜水、拌了蜂蜜的辅食、含蜂蜜的糕点。同样的道理，自家做的腌菜和发酵食品，也不要给婴儿吃",
+        "source": "US CDC. Preventing Botulism. <https://www.cdc.gov/botulism/prevention/index.html>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -8937,6 +9445,7 @@ module.exports = {
         "cost": "0 元到几十元。这笔钱通常已经包含在住院生孩子的费用里，不用另外交",
         "gain": "新生儿体内存的维生素 K 很少。不补充可能出现维生素 K 缺乏性出血，晚出现的那一种常常表现为颅内出血（脑子里出血）。比利时的共识建议是「出生时肌肉注射 1 或 2 毫克维生素 K 一次」。在没有系统提供预防的地区，维生素 K 缺乏性出血的发生率是每 10 万人 478 例，这个数字来自塔什干的 4.2 万名新生儿。作者估计，做了预防可以使发生率下降「高于 78.5%」",
         "note": "在中国的正规医院生孩子，医院会常规打这一针，不用自己操心。在家生的，或者在不正规机构生的，要主动去确认。口服的效果不如打针，这里说的打针是打进肌肉里",
+        "source": "Fiesack S, Smits A, Rayyan M, et al. (2021). Nutrients, 13(11), 4109. <https://doi.org/10.3390/nu13114109>；Tursunov D, Yoshida Y, Yrysov K, et al. (2018). Nagoya Journal of Medical Science, 80(1), 11. <https://doi.org/10.18999/nagjms.80.1.11>",
         "grade": "B",
         "meta": {
           "money": "0",
@@ -8956,6 +9465,7 @@ module.exports = {
         "cost": "挂号加检查几百元",
         "gain": "美国儿科学会为 8 至 60 日龄、看上去状态还可以的足月婴儿制定了专门指南。这份指南把发热定义为「体温 ≥38.0 ℃」。它按 8 至 21 日龄、22 至 28 日龄、29 至 60 日龄分成三档，各给一条处理路径。不满 8 日龄的婴儿甚至不在这份指南的范围里，意思是这个阶段更要立即就医",
         "note": "这个月龄的孩子，得了严重细菌感染也可能只表现为发热。所以看着「精神还行」，不能作为在家观察的理由。也别自己先喂退烧药，再等等看",
+        "source": "Pantell RH, Roberts KB, Adams WG, et al. (2021). Evaluation and Management of Well-Appearing Febrile Infants 8 to 60 Days Old. Pediatrics, 148(2), e2021052228. <https://doi.org/10.1542/peds.2021-052228>",
         "grade": "A",
         "meta": {
           "money": "少",
@@ -8975,6 +9485,7 @@ module.exports = {
         "cost": "不花钱。难在自己太累、太气的时候要停住手",
         "gain": "婴儿头部占比大，颈部肌肉弱。剧烈摇晃会造成颅内出血和视网膜出血（脑子里和眼睛里出血），可能致死，也可能留下终身残疾。哄睡时的轻柔摇动不算，危险的是失控的剧烈晃动。医学上把摇晃、撞击造成的这类伤叫「虐待性头部外伤」。它是 2 岁以下孩子头部外伤致死的首要原因。美国 1999 到 2014 年，它造成近 2250 名 5 岁以下孩子死亡",
         "note": "真的到了要失控的那一刻，先把孩子放回婴儿床里，人走开几分钟。让他哭一会儿，比抱在手上晃安全得多。一个人带孩子、长期睡不够的人，最要记住这一点。自己的情绪怎么处理，见第 3 节",
+        "source": "Spies EL, Klevens J (2016). Fatal Abusive Head Trauma Among Children Aged <5 Years — United States, 1999–2014. MMWR 65(20):505-509. <https://doi.org/10.15585/mmwr.mm6520a1>；Choudhary AK 等 (2018). Consensus statement on abusive head trauma in infants and young children. Pediatric Radiology 48(8):1048-1065. <https://doi.org/10.1007/s00247-018-4149-1>",
         "grade": "B",
         "meta": {
           "money": "0",
@@ -8994,6 +9505,7 @@ module.exports = {
         "cost": "每月两三百到上千元不等，看你用什么档次的",
         "gain": "没有任何官方机构发布过「哪个牌子最好」的排名，所以本书不给品牌推荐。能核查的信息只有两类。一类是国家市场监督管理总局的产品质量抽检通报。另一类是监管部门对具体事件的调查。2026 年 6 月「婴幼儿纸尿裤甲酰胺问题」引起关注之后，市场监管总局牵头成立了联合调查组去核查",
         "note": "联合调查组成立时只说「有关情况将及时公布」。TODO（待核实：调查结论。截至 2026 年 9 月 30 日，市场监管总局官网和近年的国家监督抽查通报里都没找到纸尿裤的结论）。实际怎么买：贵的不等于安全，进口的不等于合格。先买小包装试一周，看孩子有没有红屁股和勒痕，合适再囤。红屁股主要是换得不够勤、不透气造成的，和牌子的关系没有想象中大。查抽检通报的方法见第 5 节",
+        "source": "市场监管总局 (2026-06-22). 市场监管总局牵头成立联合调查组核查「婴幼儿纸尿裤甲酰胺问题」：「针对媒体反映的\"婴幼儿纸尿裤甲酰胺问题\"，市场监管总局、工业和信息化部、国家卫生健康委、国家疾控局高度重视，成立联合调查组，核查婴幼儿纸尿裤甲酰胺有关问题，并依法依规处理。有关情况将及时公布。」. <https://www.samr.gov.cn/xw/zj/art/2026/art_78c0425db7604b27bd7a3f36ba319975.html>；中国政府网转载. <https://www.gov.cn/zhengce/202606/content_7072931.htm>",
         "grade": "C",
         "meta": {
           "money": "少",
@@ -9013,6 +9525,7 @@ module.exports = {
         "cost": "不用额外花钱，省下来的钱通常以千元计。难在忍住不一次性把东西配齐",
         "gain": "婴儿车、婴儿床、抱被、玩具的使用期都很短，二手市场上供给远大于需求。真正不能省、也不建议买二手的是两样：安全座椅和床垫。安全座椅撞过之后的结构损伤，肉眼看不出来",
         "note": "月子会所、早教课、婴儿游泳馆这几类，本书不推荐也不否定。但它们都是可花可不花的一笔大钱，适用第 5 节讲的 24 小时冷静期",
+        "source": "作者经验，无直接文献；安全座椅的证据见第 1 节，冲动消费见第 5 节",
         "grade": "C",
         "meta": {
           "money": "少",
@@ -9032,6 +9545,7 @@ module.exports = {
         "cost": "一罐花生酱几十元。每周喂几次，顺手就做。加之前要带孩子看一次医生，做个评估。",
         "gain": "英国 LEAP 随机试验。640 名婴儿入组，条件是有重度湿疹、鸡蛋过敏，或者两样都有。入组时 4 到 11 个月大。随机分成两组，一组定期吃花生制品，一组完全回避，到 60 个月大时看花生过敏率。入组时花生皮试阴性的 530 人里，回避组 13.7% 过敏，吃的组 1.9%（P<0.001）。入组时皮试已经弱阳性的 98 人里，回避组 35.3%，吃的组 10.6%（P=0.004）。两组的严重不良事件没有差别。",
         "note": "**形式只能是花生酱调稀或者花生粉拌进辅食，绝不能给整粒花生。**卫健委的喂养核心信息写得很明白：「整粒花生、坚果、果冻等食物易吸入气管，引起窒息，婴幼儿应当避免食用」。噎住了怎么办见第 13 节第 26 条（有人噎住说不出话）。适用的只是高危孩子：有重度湿疹，或者已经对鸡蛋过敏的那些。**加之前必须先看医生做评估，不要自己在家试**：LEAP 试验入组前给每个孩子做了皮试，皮试反应大于 4 毫米的孩子被排除在试验之外，没让他们吃。一般孩子的证据弱得多。另一项 1162 名普通母乳喂养婴儿的试验里，按分组算，早引入组食物过敏 5.6%、常规组 7.1%，差别不显著（P=0.32）；只有在真正做到了的那部分孩子里才显著（2.4% 对 7.3%）。这种算法容易把效果说大，作者自己说按分组算没能证出效力，但也说明早引入是安全的。中国的官方喂养文件目前对「该早引入还是该回避易过敏食物」没有说法，所以这条按国际试验证据写。时间点上也要注意：LEAP 从 4 月龄起，而中国是满 6 月龄开始加辅食，见本节第 4 条（前 6 个月只喂母乳）。高危孩子几月龄开始、怎么开始，听医生的。",
+        "source": "Du Toit G, Roberts G, Sayre PH, 等 (2015). Randomized trial of peanut consumption in infants at risk for peanut allergy. New England Journal of Medicine, 372(9), 803-813. <https://doi.org/10.1056/NEJMoa1414850>；国家卫生健康委办公厅 (2020). 婴幼儿喂养健康教育核心信息. <https://www.gov.cn/zhengce/zhengceku/2020-08/01/content_5531915.htm>；Perkin MR 等 (2016). Randomized Trial of Introduction of Allergenic Foods in Breast-Fed Infants. New England Journal of Medicine, 374(18), 1733-1743. <https://doi.org/10.1056/NEJMoa1514210>（备注里那项一般婴儿试验 EAT）",
         "grade": "A",
         "meta": {
           "money": "少",
@@ -9051,6 +9565,7 @@ module.exports = {
         "cost": "挂号加测胆红素，几百元以内。要照蓝光的，一般在医院照两天左右。难在孩子看着还好的时候，也要跑这一趟",
         "gain": "美国儿科学会 2022 年的指南说，「超过 80% 的新生儿会有某种程度的黄疸」。胆红素太高，会引起急性胆红素脑病和核黄疸。指南说核黄疸是「永久的致残性神经系统疾病」。它的表现包括手脚不自主扭动的脑瘫、眼睛往上看不了、乳牙釉质发育不良和听力损害。指南把「出生后 24 小时内出现黄疸」列为会发展成重度黄疸的风险因素。英国国家医疗服务体系（NHS）给家长的说法分两档。第一档要打急救电话或直接去急诊。这一档是孩子有黄疸，同时比平时嗜睡或叫不醒、不吃奶、身子发软或发硬、有抽动。孩子出生还不满 24 小时就有黄疸的，也算这一档。第二档要尽快约医生。这一档是出生超过 24 小时，黄疸不见好或越来越重，尿深黄或褐色，或者大便是淡奶油色。全球估算，2010 年约 48 万名新生儿得了 Rh 溶血病（母子血型不合引起）或极重度的高胆红素血症。这些孩子里 24% 死亡，13% 发展成核黄疸。核黄疸活下来的孩子里，83% 以上留下一种或多种残损。大便发白可能是胆道闭锁，这种病要在 60 天内做葛西手术（Kasai 手术），预后才明显更好。台湾从 2004 年起，把大便比色卡印进每个新生儿的儿童健康手册。60 天内做上手术的比例，从 2004 年的 60% 升到 2005 年的 74.3%。另一项台湾全民研究里，推行比色卡之后，胆道闭锁孩子的死亡率从 26.2% 降到 15.9%。这是前后对比，不是分组试验",
         "note": "照蓝光（光照治疗）是用特殊的光照孩子的皮肤，让胆红素变成容易排出去的形式。别在家晒太阳代替：美国儿科学会说，晒太阳很难做到既安全又不晒伤，所以不推荐拿它当治疗。也别喂水或葡萄糖水来退黄，这个指南也明确不推荐。肉眼看黄的深浅，估不准胆红素有多高。英国 NICE 指南写明不要只靠肉眼，拿不准就去测一次。不满 38 周出生、哥哥姐姐照过蓝光、母乳没吃够的孩子，更容易黄得重。复查按国家基本公共卫生服务规范走：出院后 1 周内，医务人员上门访视。出生后 28 到 30 天，到社区卫生服务中心或乡镇卫生院随访。两次都要看黄疸。出院时医生另约了复查胆红素的，按约的时间去。足月的孩子黄了超过 14 天，早产的超过 21 天，NICE 指南要求查一次结合胆红素，并看大便是不是发白。黄疸本身不耽误打疫苗，见本节第 3 条（疫苗）。新生儿筛查见第 27 节第 13 条（足跟血筛查）。",
+        "source": "Kemper AR, Newman TB, Slaughter JL, et al. (2022). Clinical Practice Guideline Revision: Management of Hyperbilirubinemia in the Newborn Infant 35 or More Weeks of Gestation. Pediatrics, 150(3), e2022058859. <https://doi.org/10.1542/peds.2022-058859>；NHS. Jaundice in babies（2026-03-24 审阅）. <https://www.nhs.uk/conditions/jaundice-newborn/>；NICE (2010, 2023 修订). Jaundice in newborn babies under 28 days (CG98), 1.2.6、1.7.1. <https://www.nice.org.uk/guidance/cg98/chapter/Recommendations>；Bhutani VK, Zipursky A, Blencowe H, et al. (2013). Neonatal hyperbilirubinemia and Rhesus disease of the newborn: incidence and impairment estimates for 2010 at regional and global levels. Pediatric Research, 74(Suppl 1), 86-100. <https://doi.org/10.1038/pr.2013.208>；Hsiao CH, Chang MH, Chen HL, et al. (2008). Universal screening for biliary atresia using an infant stool color card in Taiwan. Hepatology, 47(4), 1233-1240. <https://doi.org/10.1002/hep.22182>；Lee M, Chen SC, Yang HY, et al. (2016). Infant Stool Color Card Screening Helps Reduce the Hospitalization Rate and Mortality of Biliary Atresia: A 14-Year Nationwide Cohort Study in Taiwan. Medicine, 95(12), e3166. <https://doi.org/10.1097/MD.0000000000003166>；国家卫生计生委 (2017). 国家基本公共卫生服务规范（第三版），0～6 岁儿童健康管理服务规范. <https://www.nhc.gov.cn/ewebeditor/uploadfile/2017/04/20170417104506514.pdf>",
         "grade": "B",
         "meta": {
           "money": "少",
@@ -9072,6 +9587,7 @@ module.exports = {
         "cost": "不花钱。打开中国领事服务网翻一遍，几分钟就看完。",
         "gain": "外交部按风险高低公开发布国外安全提醒。从低到高大致是四档：「注意安全」「加强安全防范」「谨慎前往」「暂勿前往」。2026 年 9 月 15 日起施行的新规，把个人的义务也写进了行政法规。原文是：「中国公民应当关注国外安全提醒和旅游目的地安全风险提示，避免前往及驻留高风险国家或者地区」。新规同时要求移民管理机构（办出入境证件和管边检的部门），在办证和出境边检时提醒要去高风险地区的人。这一条的原文是：「对准备前往风险等级为最高级别或者严重危及人身安全案件突发高发的国家或者地区的中国公民，必要时应当劝阻其前往」",
         "note": "提醒会随局势变动，本书不抄名单，出行前自己查一次那一页。截至 2026 年 9 月 7 日，该栏目里还挂着这几条「暂勿前往」类提醒：斯威士兰（2026-08-25）、巴勒斯坦（2023-10-10）、苏丹（2023-04-17）。另外四条是阿富汗（2023-02-17）、叙利亚（2023-01-04）、秘鲁（2022-12-29）、索马里（2022-11-24）。另外还有针对缅北地区、刚果（金）部分省份的专门提醒。旅行社也有告知义务。跟团之前，你可以要求对方书面说明目的地的风险",
+        "source": "国务院 (2026). 关于出境入境管理的规定（国令第 841 号）. <https://www.gov.cn/zhengce/zhengceku/202607/content_7077173.htm>（第二条）；国务院 (2023). 领事保护与协助条例（国令第 763 号）. <https://www.gov.cn/zhengce/zhengceku/202307/content_6891761.htm>（第十九、二十一条）；外交部领事司. 安全提醒. <https://cs.mfa.gov.cn/zggmzhw/lsbh/aqtx/>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -9091,6 +9607,7 @@ module.exports = {
         "cost": "不花钱。存两个号码，再抄一份，几分钟。",
         "gain": "外交部有一条全球领事保护与服务应急热线，24 小时有人接。人在国内拨 12308。人在国外拨 +86-10-12308，或者 +86-10-65612308。这条热线从 2014 年开通到现在，累计接听 300 多万通来电。同一时期，外交部和驻外机构处置各类领事保护案件 50 多万起",
         "note": "驻当地使领馆自己还有一个领保电话，通常比总台更快。出发前在中国领事服务网上按国家查到，和总台号码一起存进手机。手机丢了或者没电，存的号码就用不上了。所以再手抄一份放在钱包里，或者把号码写一份给家里人",
+        "source": "外交部、中国驻缅甸使领馆 (2023). 关于当前缅北地区安全局势的领事提醒. <https://cs.mfa.gov.cn/zggmzhw/lsbh/aqtx/202311/t20231109_11176682.shtml>；国务院新闻办 (2023). 国务院政策例行吹风会介绍领事保护与协助有关情况. <https://www.gov.cn/xinwen/2023zccfh/11/index.htm>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -9110,6 +9627,7 @@ module.exports = {
         "cost": "不花钱。花几分钟把这条界线读明白。",
         "gain": "你被抓时，使领馆能做这么几件事。向所在国有关部门核实情况，要求依法公正处理。条例原文是「按照驻在国法律和我国与驻在国缔结或者共同参加的国际条约对其进行探视或者与其联络，了解其相关需求，要求驻在国有关部门给予该中国公民人道主义待遇和公正待遇」。说白了就是照当地法律和两国签的条约去看你、跟你联络、问你要什么，并要求当地按人道和公正的标准对待你。开庭时使领馆可以旁听，可以要求保障你的诉讼权利。你受了伤或者赶上灾，它能催当地紧急救助，能帮家属处理善后。但费用上条例写得同样清楚：「中国公民、法人、非法人组织在领事保护与协助过程中，得到第三方提供的食宿、交通、医疗等物资和服务的，应当支付应由其自身承担的费用」。别人先垫的食宿、交通、医疗，该你掏的还是你掏",
         "note": "使领馆不替你交罚款、不替你付医药费、不替你买机票，也改变不了所在国法院的结论。它能给你的是当地律师、翻译、医疗、殡葬机构的信息，还能帮你联系亲友、帮你找到救济渠道。所以出国前自己把钱和保险准备好，别把「出事了国家会兜底」当成计划",
+        "source": "国务院 (2023). 领事保护与协助条例（国令第 763 号）. <https://www.gov.cn/zhengce/zhengceku/202307/content_6891761.htm>（第九、十、十四、二十六条）",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -9129,6 +9647,7 @@ module.exports = {
         "cost": "一份短期的境外旅行险，几十到几百元。",
         "gain": "在境外看病的钱要自己出。国内医保在境外基本不报销。领事保护也不垫付这笔钱（见第 3 条，领事保护能做什么、不能做什么，依据是条例第二十六条）。真正会把一个家拖垮的不是门诊费，是重伤以后的住院和医疗转运。把人从境外医院转回国，要用专机或者医疗护送，属于自费项目里最贵的一类。美国疾控中心的说法是，把病人从偏远地方紧急转运到好医院，自己付的话可能要花 10 万美元以上。买保险时优先看两项额度。一是境外医疗费用额度。二是紧急医疗转运与送返额度，管的是出事后转院、把人送回国最多能赔多少",
         "note": "10 万美元是一个下限说法，不是费用区间。官方或行业公开的费用区间统计没有找到，所以本书不写具体区间。买之前确认三件事。第一，你要去的国家在不在承保范围里。第二，潜水、滑雪、骑摩托这类高风险活动是不是被排除在外。第三，理赔是保险公司直接和医院结账，还是你先垫钱回来再报销。去免签的国家也一样要买",
+        "source": "国务院 (2023). 领事保护与协助条例（国令第 763 号）. <https://www.gov.cn/zhengce/zhengceku/202307/content_6891761.htm>（第二十六条）；美国疾病控制与预防中心. Travelers' Health: Travel Insurance：「Medical evacuation insurance covers emergency transportation from a remote area to a high-quality hospital, which could otherwise cost more than $100,000.」. <https://wwwnc.cdc.gov/travel/page/insurance>；其余为作者经验，无直接文献",
         "grade": "C",
         "meta": {
           "money": "少",
@@ -9148,6 +9667,7 @@ module.exports = {
         "cost": "不花钱。难的是亲手推掉一份看起来很好的工作。",
         "gain": "官方对这类案件的定性很直接。近年出现「上当受骗出境或者虚构事由非法出境从事跨境赌博、电信网络诈骗等违法活动，严重危害人民群众生命和财产安全」。说的是被人骗出去，或者编个理由偷着出去，到那边干赌博和电信诈骗。新规针对这一点两头收紧。出境这头：「申请出境入境、停留居留的事由应当真实、合法」。交假材料或者说假话的，移民管理机构有权不给你发证件、不放你出境。回国这头：「中国公民在境外从事违法犯罪活动，危害国家安全和利益的，可以……决定自回国之日起 6 个月至 3 年以内不准其出境」。因为骗取证件、非法出境入境被行政拘留的，同样是 6 个月至 3 年不准出境",
         "note": "识别特征基本固定：月薪远高于同岗位、不要求学历经验、不签正规合同、让你先到边境城市集合、代办签证并保管你的护照。缅北地区已经有专门的领事提醒。真去了，人身自由和护照都不在自己手上，想走也走不了",
+        "source": "国务院 (2026). 关于出境入境管理的规定（国令第 841 号）. <https://www.gov.cn/zhengce/zhengceku/202607/content_7077173.htm>（第三、四条）；司法部、公安部、国家移民局 (2026). 就《国务院关于出境入境管理的规定》答记者问. <https://www.gov.cn/zhengce/202608/content_7077270.htm>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -9167,6 +9687,7 @@ module.exports = {
         "cost": "不花钱。出发前估一下这趟要取多少现金，剩下的靠刷卡。难的是改掉习惯，能刷卡就别取现。",
         "gain": "依据是国家外汇管理局《关于规范银行卡境外大额提取现金交易的通知》（汇发〔2017〕29 号，2018 年 1 月 1 日起实施）。第一条：「个人持境内银行卡在境外提取现金，本人名下银行卡（含附属卡）合计每个自然年度不得超过等值 10 万元人民币。超过年度额度的，本年及次年将被暂停持境内银行卡在境外提取现金」。同条第二款：「个人不得通过借用他人银行卡或出借本人银行卡等方式规避或协助规避境外提取现金管理」。第二条：外汇局每天把暂停名单发给发卡银行，发卡银行应不晚于北京时间当日 17 时起，暂停名单里的人用本行银行卡在境外取现。第三条：被列入暂停名单的人，可以拿本人有效身份证件到外汇局分支局，查自己的境外取现明细。第四条：外币卡每卡每日的上限，由等值 1000 美元调整为等值 1 万元人民币；人民币卡维持每卡每日不得超过等值 1 万元人民币。第六条：发卡银行、境内人民币卡清算组织和个人违反本通知规定的，按《中华人民共和国外汇管理条例》有关规定处罚。外汇局答记者问还讲清了几点。《通知》不影响个人持卡在境外消费。出境旅游、商务、留学所涉的食、宿、行、购等经常项下交易，都可以刷银行卡支付。这些消费也不占用个人便利化年度 5 万美元购汇额度。年度额度由外汇局汇总各家发卡金融机构的数据算出来，因为实时控制会拖慢交易响应，「外汇局采用延时控制手段」（不当场拦截）。另据统计，2016 年 81% 的境内银行卡境外提取现金低于 3 万元人民币（全国）",
         "note": "额度按自然年度算，1 月 1 日重新开始累计。停的只是在境外取现，刷卡消费不受影响。真的需要在境外用大额现金，就按《个人外汇管理办法》先办购汇，再带外币现钞出境。取现本身还有两个坑，银联国际「境外ATM取款」页面写明了。一是双标识卡在部分国家的部分 ATM 上，没法选银联通道取款。二是部分境外 ATM 会在屏幕上提示额外手续费（surcharge），这笔钱由当地收单机构收，「与银联无关」。同一页还提示「由于信用卡取款需支付透支利息，建议持卡人境外取款使用银联借记卡」。卡丢了、被吞了或者被盗刷怎么办，见第 14 节第 5 条（卡被盗刷先挂失冻结再报警）",
+        "source": "国家外汇管理局 (2017). 关于规范银行卡境外大额提取现金交易的通知（汇发〔2017〕29 号，第一、二、三、四、六、七条，2018 年 1 月 1 日起实施）. <https://www.safe.gov.cn/safe/2017/1230/21873.html>；国家外汇管理局 (2017). 外汇局有关负责人就规范银行卡境外大额提取现金交易有关问题答记者问. <https://www.gov.cn/zhengce/2017-12/31/content_5251958.htm>；中国银联国际. 境外ATM取款. <https://m.unionpayintl.com/wap/cn/serviceCenter/cardUsingInstructions/805.shtml>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -9186,6 +9707,7 @@ module.exports = {
         "cost": "不花钱。出发前拍几张照片。",
         "gain": "护照丢了，驻外使领馆能给你签发回国用的旅行证件，但需要你先证明自己的身份。手里有清晰的护照资料页照片、签证页照片和出入境记录，补办速度差别很大。同时你要先在当地报警，拿到报案回执。很多国家的出境检查和保险理赔都要这份材料。找使领馆的入口，就是第 2 条里存好的那两个领保电话",
         "note": "存法是拍完照放进两个不同的地方，比如云盘存一份、发给一位家人一份。另外打印一份纸质复印件，和原件分开放。银行卡、常用药的处方也一并拍下来。手机和护照通常一起丢，只存在手机里等于没存。云盘登录要收手机验证码的，手机一丢就可能登不进去。出发前在另一台设备上试登一次，确认不靠这部手机也能打开。证件照片是敏感信息，选能加密的存法更稳妥。但加密的存法忘了密码谁也打不开，所以发给家人的那一份不能省。",
+        "source": "国务院 (2023). 领事保护与协助条例（国令第 763 号）. <https://www.gov.cn/zhengce/zhengceku/202307/content_6891761.htm>（第十六条）；作者经验，无直接文献",
         "grade": "C",
         "meta": {
           "money": "0",
@@ -9205,6 +9727,7 @@ module.exports = {
         "cost": "不花钱。出发前查一次目的地的规定。",
         "gain": "所谓「国际驾照」（IDP），是 1949 年《道路交通公约》缔约国之间互相认可的翻译件。这份公约 1949 年 9 月 19 日在日内瓦订立，1952 年 3 月 26 日生效。目前有 103 个缔约方（签约的国家和地区）。中国内地不在这份名单里。所以中国不签发这种国际驾照。任何机构在国内「代办国际驾照」，都不产生法律效力。能不能用中国驾照开车，取决于目的地国家或地区自己的规定：有的承认中国驾照加公证翻译件，有的要求换领当地驾照，有的完全不认",
         "note": "在多数国家，无证驾驶是刑事犯罪，或者要重罚。而且出了事保险大概率拒赔，这才是真正的成本。查法有两个：在中国领事服务网上找目的地国家的「中国公民须知」，或者直接让租车公司给你一份书面确认。香港、澳门、台湾地区以及部分国家另有单独安排",
+        "source": "United Nations Treaty Collection. Convention on Road Traffic, Geneva, 19 September 1949 — status of treaties. <https://treaties.un.org/pages/ViewDetailsV.aspx?src=TREATY&mtdsg_no=XI-B-1&chapter=11&clang=_en>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -9224,6 +9747,7 @@ module.exports = {
         "cost": "不花钱。多问一句它有没有备案，再把书面材料留好。",
         "gain": "2018 年取消了因私出入境中介机构的准入许可（开中介不必先拿批文）。此后机构数量快速增长，也出现了「机构底数不清、部分机构违法违规办理业务、损害出境入境人员合法权益」的问题，官方连有多少家都数不清。2026 年 9 月 15 日起，这类中介改成备案管理。机构应当自设立之日起 15 日内，向所在地移民管理机构报备。此前已经在做的，要在施行之日起 90 日内补办。明令禁止的行为有这几类。一是「发布虚假信息，或者通过夸大宣传、误导性宣传等方式招徕服务对象」。二是「提供或者协助提供虚假材料，协助他人违规办理签证、停留居留证件、护照等出境入境证件或者手续」。三是「泄露、出售、非法提供……个人隐私或者个人信息」。四是「组织或者协助他人从事跨境违法犯罪活动」。境外企业、机构不得在中国境内提供这类中介服务",
         "note": "把「包过」「保签」「材料我们帮你做」挂在嘴上的中介，做的本来就是被明令禁止的事。一旦查出来，留下污点的是你的签证记录。自己填表申请出了问题，最多是这次被拒签。用了假材料被认定弄虚作假，后果重得多。不为赚钱的政策咨询和信息查询，不算中介服务",
+        "source": "国务院 (2026). 关于出境入境管理的规定（国令第 841 号）. <https://www.gov.cn/zhengce/zhengceku/202607/content_7077173.htm>（第七、八、十、十二、十三条）",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -9243,6 +9767,7 @@ module.exports = {
         "cost": "不花钱。难的是当面推掉一次人情。",
         "gain": "出具邀请函的人，要对内容是不是真实负责。原文是：「个人为他人申请出境入境、停留居留出具虚假邀请函件或者其他申请材料的，由移民管理机构处 5000 元以上 1 万元以下罚款；有违法所得的，没收违法所得」。单位出具虚假材料的，罚 1 万元以上 5 万元以下。同时对直接负责的主管人员和其他直接责任人员（管事的领导和经手人），再处 5000 元以上 1 万元以下罚款",
         "note": "这和第 8 节「不帮陌生人带东西」是同一类风险：材料以你的名义出具，后果就落在你身上。公职人员和军队人员想通过中介违规办外国国籍或者境外居留资格的，中介不但不能办，还得报告监察机关",
+        "source": "国务院 (2026). 关于出境入境管理的规定（国令第 841 号）. <https://www.gov.cn/zhengce/zhengceku/202607/content_7077173.htm>（第三、十一条）",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -9262,6 +9787,7 @@ module.exports = {
         "cost": "不花钱。出发前发一条消息。",
         "gain": "中国公民在境外下落不明时，亲属可以向驻外外交机构求助。条例原文是「驻外外交机构应当提供当地报警方式及其他获取救助的信息」。当地警方立案以后，使领馆会催他们及时处理。这些求助能不能启动，取决于国内有没有人知道你本该在哪、本该什么时候联系",
         "note": "写清四样就够：航班号、住处地址、同行人的姓名和电话、约好的联系频率。要去信号差或者治安差的地方，再把「多久没消息就报警」这句话说明白。上面这些救助程序，都要先有家人知道你的行程才能开始",
+        "source": "国务院 (2023). 领事保护与协助条例（国令第 763 号）. <https://www.gov.cn/zhengce/zhengceku/202307/content_6891761.htm>（第十三条）；作者经验，无直接文献",
         "grade": "C",
         "meta": {
           "money": "0",
@@ -9283,6 +9809,7 @@ module.exports = {
         "cost": "不花钱。进门时抬头看 10 秒。",
         "gain": "这是经营者的法定义务。做不到就是违法，你可以举报。条例原文：「营业期间，娱乐场所应当保证疏散通道和安全出口畅通，不得封堵、锁闭疏散通道和安全出口，不得在疏散通道和安全出口设置栅栏等影响疏散的障碍物」。条例还要求，「应当在疏散通道和安全出口设置明显指示标志，不得遮挡、覆盖指示标志」。网吧也一样，被要求「营业期间禁止封堵或者锁闭门窗、安全疏散通道和安全出口」，并「禁止明火照明和吸烟」",
         "note": "下面几样占了任何一样，就换个地方：包厢在地下、只有一个出口、走道堆满杂物、安全出口的指示灯不亮。这类场所着火时烟大、走道窄、人多，而且多数人喝了酒。留给你逃出去的时间以秒计。举报电话按条例应当写在场所内的警示标志上",
+        "source": "国务院 (2006). 娱乐场所管理条例（国令第 458 号，第二十、二十一条）. <http://www.gov.cn/zhengce/zhengceku/2008-03/28/content_6297.htm>；国务院 (2002). 互联网上网服务营业场所管理条例（国令第 363 号，第二十一条）. <http://www.gov.cn/gongbao/content/2002/content_61788.htm>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -9302,6 +9829,7 @@ module.exports = {
         "cost": "不花钱。开口要一次单子。难在当着人开口问价，有点抹不开面子。",
         "gain": "条例原文：「娱乐场所提供娱乐服务项目和出售商品，应当明码标价，并向消费者出示价目表；不得强迫、欺骗消费者接受服务、购买商品。」违反价格法律法规的，由有关部门依法处罚。所谓「天价酒水」纠纷，绝大多数发生在这种场合：没有出示价目表，事后按口头报价结账",
         "note": "怎么做：进包厢先要一份价目表，纸质的电子的都行，拿到就拍照。点完单再要一份确认好的清单。服务员推荐的「特调」「果盘」，一律先问价再点。结账有争议时当场打 12315。别先付款再去维权，付了款你要举证就难得多",
+        "source": "国务院 (2006). 娱乐场所管理条例（国令第 458 号，第二十九、五十三条）. <http://www.gov.cn/zhengce/zhengceku/2008-03/28/content_6297.htm>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -9321,6 +9849,7 @@ module.exports = {
         "cost": "不花钱。站起来走出去。难在要当着一桌人的面离席。",
         "gain": "条例明令禁止娱乐场所「贩卖、提供毒品，或者组织、强迫、教唆、引诱、欺骗、容留他人吸食、注射毒品」。从业人员也不得吸毒，不得为顾客做上面这些事提供条件。违反的，由公安部门没收违法所得和非法财物，责令停业整顿 3 至 6 个月。情节严重的吊销娱乐经营许可证。条例还要求场所在大厅、包厢、包间的显著位置悬挂禁毒、禁赌、禁止卖淫嫖娼的警示标志，并注明举报电话",
         "note": "只要有人拿出不明的粉末、片剂、电子烟弹，请你「试试」，就当场离开，别留下来看热闹。你个人担的风险比场所更重。自己吸毒，本身就要受治安处罚。在自己订的包厢或者自己住处「让朋友在这儿用一下」，构成的是容留他人吸毒，属于刑事犯罪",
+        "source": "国务院 (2006). 娱乐场所管理条例（国令第 458 号，第十四、三十、四十二条）. <http://www.gov.cn/zhengce/zhengceku/2008-03/28/content_6297.htm>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -9340,6 +9869,7 @@ module.exports = {
         "cost": "不花钱。别人递过来的一律不接。自己的杯子离开过视线，就换一杯。",
         "gain": "现在的毒品不长毒品的样子。合成大麻素类物质自 2021 年 7 月 1 日起被整类列管，这一大类整体按毒品管。有人把它掺进烟油，做成「上头」电子烟。最高检报道的案子里，办案人员的描述是：这种烟油「可以通过添加食用颜料变成各种颜色、各种口味」，「在外观上和普通电子烟基本一致」。卖家在酒吧、KTV、宾馆呼朋引伴推销，诱导他人吸食。报道里，当地当年办理的吸食案件中，未成年吸食者占比近四成。依托咪酯自 2023 年 10 月 1 日起列入第二类精神药品目录。骗人吸食本身就是一档违法：引诱、教唆、欺骗或者强迫他人吸食、注射毒品的，拘留 10 到 15 日并罚 1000 到 5000 元。构成犯罪的判 3 年以下，情节严重的判 3 到 7 年，强迫的判 3 到 10 年，对未成年人下手的从重。后果也落在被骗的人身上：吸食、注射毒品的，处 10 到 15 日拘留并可罚 3000 元以下。情节较轻的处 5 日以下拘留或者 1000 元以下罚款。还可能被同时责令 6 个月到 1 年内不得进入娱乐场所。成瘾的责令社区戒毒 3 年。拒绝社区戒毒、或者戒毒期间再吸的，强制隔离戒毒 2 年，最长可再延长 1 年（全国，治安管理处罚法 2026 年 1 月起）",
         "note": "不只是娱乐场所，学校门口、朋友聚会、长途车上同理。给的是糖果、饮料还是烟弹，也都一样。被下药之后常跟着抢劫、性侵和敲诈，这部分没有公开的官方统计，属于经验判断。饮料只要离开过视线就换一杯，比事后追究省事得多。场子里有人拿出不明粉末、片剂、烟弹时怎么办，见本节第 3 条。替人带东西见第 8 节第 29 条。",
+        "source": "最高人民检察院 (2021). 江苏苏州吴江区：办案检察官揭秘披着潮流外衣的新型毒品. <https://www.spp.gov.cn/spp/zdgz/202110/t20211011_531831.shtml>；国家药监局、公安部、国家卫生健康委 (2023). 关于调整麻醉药品和精神药品目录的公告（2023 年第 120 号）. <https://yjj.sh.gov.cn/qtgzwj/20230911/3b612c94e35b4b63abba314c972a2593.html>（上海市药监局转载，原文页 nmpa.gov.cn 在本机返回 412）；全国人大常委会 (2025). 治安管理处罚法（2025 年修订，第八十四、八十五条）. <https://www.spp.gov.cn/spp/fl/202506/t20250627_699863.shtml>；全国人大 (1997). 刑法（第三百五十三条）. <https://www.spp.gov.cn/spp/fl/201802/t20180206_364975.shtml>；全国人大常委会 (2007). 禁毒法（第三十三、三十八、四十七条）. <http://www.gd.gov.cn/zwgk/wjk/zcfgk/content/post_2520706.html>（广东省人民政府转载）",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -9359,6 +9889,7 @@ module.exports = {
         "cost": "不花钱。订之前问一句地址在几层。",
         "gain": "五部门 2022 年的专门通知写得很具体：「剧本娱乐经营场所不得设在居民楼内、建筑物地下一层以下（不含地下一层）等地」。通知还要求场所落实安全生产法和消防法的要求，「常态化开展火灾风险自知、自查、自改，提高紧急情况下的组织疏散逃生和初起火灾扑救能力」。同一份通知还要求剧本设置适龄提示。场景不适宜未成年人的，不得允许未成年人进入。除法定节假日、休息日及寒暑假外，不得向未成年人提供剧本娱乐活动",
         "note": "这类场所的特点是黑暗、隔断多、道具易燃，门常常需要「解谜」才能打开。一旦起火，比普通商铺更难跑出去。订之前在点评页面上就能看出楼层，也能看出是不是居民楼。不合规的直接换一家",
+        "source": "文化和旅游部、公安部、住房和城乡建设部、应急管理部、市场监管总局 (2022). 关于加强剧本娱乐经营场所管理的通知. <https://www.gov.cn/zhengce/zhengceku/2022-06/27/content_5698021.htm>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -9378,6 +9909,7 @@ module.exports = {
         "cost": "不花钱。每次半小时上下。难在情绪差的时候最不想动，得推自己一把。",
         "gain": "这是把 218 项随机分成两组的对照试验合在一起算的结果。涉及 495 个组、14170 名符合重度抑郁临床标准的参与者。算法让各种运动互相比较（贝叶斯网状荟萃分析）。拿来对比的是常规照护和安慰剂片（主动对照）。效果大小用 Hedges' g 表示，数越往负走，症状改善越多。快走或慢跑 −0.62（95% 可信区间 −0.80 至 −0.45，意思是真实值大致落在这一段里）。瑜伽 −0.55（−0.73 至 −0.36）。力量训练 −0.49（−0.69 至 −0.29）。混合有氧 −0.43（−0.61 至 −0.24）。太极或气功 −0.42（−0.65 至 −0.21）。原文说「运动的效果与所处方的强度成正比」：强度开得越高，效果越好。力量训练和瑜伽的可接受度最好，最容易坚持下来",
         "note": "争议。作者自己写明，218 项研究里只有 1 项做得够干净、不容易被设计带偏。按通行的打分法，快走慢跑只算「低」可信，其余是「极低」。运动也瞒不住参与者，人知道自己在锻炼，就容易觉得好些，这份期待去不掉。结论方向仍然可用：动比不动好，强度别太低，选自己能坚持的那种。这是第 3 节「情绪低落时先动起来」的展开，不能替代确诊后的规范治疗",
+        "source": "Noetel M, Sanders T, Gallardo-Gómez D, et al. (2024). Effect of exercise for depression: systematic review and network meta-analysis of randomised controlled trials. BMJ, 384, e075847. <https://doi.org/10.1136/bmj-2023-075847>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -9397,6 +9929,7 @@ module.exports = {
         "cost": "报课要花一点钱。课程 8 周，每周上一次课，还要每天在家练。难在连着 8 周每天都练。",
         "gain": "这是美国 3 家城市学术医疗中心做的试验，目的是看上课会不会比吃药差（非劣效随机对照试验）。276 名确诊焦虑障碍的成年人按 1:1 随机对半分组。一组上 8 周正念减压课程。一组吃艾司西酞普兰（10 至 20 mg 弹性剂量）。208 人做完全程。结束时按医生打的焦虑严重程度分（临床总体印象严重度量表）算，正念组下降 1.35，药物组下降 1.43。两组差 −0.07（95% CI −0.38 至 0.23，即真实差距大致落在这一段里；P=0.65，即这点差距和没差别看不出区别）。这一段的下限没有越过事先划好的「算不上更差」的线（非劣效界值 −0.495）。副作用差别很大：药物组 78.6% 至少出现一次和试验有关的不良反应，10 人因此退出。正念组 15.4%，无人因此退出",
         "note": "试验用的是标准化的 8 周正念减压课程（MBSR），随便一个冥想 App 不能和它划等号。它适用于已经达到焦虑障碍诊断标准的人，该看医生还是要看。如果你因为顾虑药物副作用一直拖着不治疗，这是一个证据强度相当的选项",
+        "source": "Hoge EA, Bui E, Mete M, Dutton MA, Baker AW, Simon NM (2023). Mindfulness-based stress reduction vs escitalopram for the treatment of adults with anxiety disorders: a randomized clinical trial. JAMA Psychiatry, 80(1), 13-21. <https://doi.org/10.1001/jamapsychiatry.2022.3679>",
         "grade": "A",
         "meta": {
           "money": "少",
@@ -9416,6 +9949,7 @@ module.exports = {
         "cost": "不花钱。每天 5 分钟。",
         "gain": "这是一项在家做、随机分组的对照试验，比较三种每天 5 分钟的呼吸练习和同样时长的正念冥想，持续 1 个月。三种呼吸法是：循环叹息（强调延长呼气）、箱式呼吸（吸气、屏息、呼气等长）、带屏息的循环过度换气（吸气长、呼气短）。把各人各次的数据放在一起算（混合效应模型），呼吸练习都好过正念冥想，尤其是以呼气为主的循环叹息。它在情绪改善（P<0.05，即这点差别不像是碰巧撞出来的）和呼吸频率下降（P<0.05）上都更好",
         "note": "做法是用鼻子吸一口，短暂再补吸一小口把肺撑满，然后用嘴把气缓慢长长地吐尽，重复 5 分钟。只有这一项试验，在家做，好不好由本人填问卷报，人数也不多。效果只是比冥想略好，解决不了问题。但它不花钱，只要 5 分钟，随时随地能做，性价比高",
+        "source": "Balban MY, Neri E, Kogon MM, et al. (2023). Brief structured respiration practices enhance mood and reduce physiological arousal. Cell Reports Medicine, 4(1), 100895. <https://doi.org/10.1016/j.xcrm.2022.100895>",
         "grade": "B",
         "meta": {
           "money": "0",
@@ -9435,6 +9969,7 @@ module.exports = {
         "cost": "要花一点钱，还要搭上见面的时间。难在心情好的时候也得主动约人。",
         "gain": "这是把 70 项先记录情况再往后跟踪的研究合在一起算的结果（荟萃分析），共 340 万名参与者，平均跟踪 7 年。社会隔离、孤独感、独居都与死亡率升高相关。把年龄、身体状况这些干扰因素扣掉之后，加权平均比值比分别是：社会隔离 1.29、孤独 1.26、独居 1.32。换算过来，同期死亡的概率分别高约三成、约四分之一、约三成。三者的效果大小差不多，而且在 65 岁以下人群中比在老年人群中更大",
         "note": "争议。这些都是跟着人群观察出来的关联，不是分组对照试验，谁因谁果分不开。身体本来就差的人，更容易独居、更少社交。作者把社会关系看作和吸烟、肥胖同一量级的健康因素，但没有随机试验证明「增加社交能降低死亡率」。这条与第 3 节「减少让你消耗的人际关系」不冲突：那条砍掉消耗你的关系，这里要保住让你恢复精力的那几段",
+        "source": "Holt-Lunstad J, Smith TB, Baker M, Harris T, Stephenson D (2015). Loneliness and social isolation as risk factors for mortality: a meta-analytic review. Perspectives on Psychological Science, 10(2), 227-237. <https://doi.org/10.1177/1745691614568352>",
         "grade": "A",
         "meta": {
           "money": "少",
@@ -9454,6 +9989,7 @@ module.exports = {
         "cost": "不花钱。顺路就做了。",
         "gain": "这是把 9 项跟踪人群多年的研究合在一起算的结果（队列研究的荟萃分析），涉及 7 个国家、832 万人。看的是住处 500 米以内的周边绿化程度，用归一化植被指数（NDVI，把地面绿化折算成的一个数）衡量。绿化程度每增加 0.1 个指数，总死亡率的合并风险比为 0.96（95% CI 0.94–0.97），同期死亡的概率低约 4%，真实值大致落在低 3% 到低 6% 这一段。9 项研究中有 7 项发现绿化越好死亡率越低，差别也不像碰巧。另外 2 项没看出关联",
         "note": "争议。各项研究的结果差得很远（I²=95%，这个数越大越是彼此对不上）。而且它测的是居住地周边的绿化程度，和你去公园的次数无关。住在绿化好的地方的人往往也更富、空气更好、更爱运动，这几样和绿化分不开谁在起作用。别读成「去公园就能延寿」，可用的部分是选住处时把绿地算进去，成本为零。NDVI 这个数，裸地和水泥接近 0，茂密植被接近 1。所以「0.1」大致是从光秃街区挪到有成排行道树的街区那种差别",
+        "source": "Rojas-Rueda D, Nieuwenhuijsen MJ, Gascon M, Perez-Leon D, Mudu P (2019). Green spaces and mortality: a systematic review and meta-analysis of cohort studies. The Lancet Planetary Health, 3(11), e469-e477. <https://doi.org/10.1016/S2542-5196(19)30215-3>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -9475,6 +10011,7 @@ module.exports = {
         "cost": "不花钱。花一分钟算一下自己多大。",
         "gain": "《义务教育法》第十一条：「凡年满六周岁的儿童，其父母或者其他法定监护人应当送其入学接受并完成义务教育」。第十四条：「禁止用人单位招用应当接受义务教育的适龄儿童、少年」。第五十八条：没有正当理由、不按本法规定送适龄儿童少年入学的，由当地乡镇人民政府或者县级人民政府教育行政部门「给予批评教育，责令限期改正」。《禁止使用童工规定》第二条：国家机关、社会团体、企业事业单位、民办非企业单位或者个体工商户「均不得招用不满16周岁的未成年人」。第六条：「按照每使用一名童工每月处5000元罚款的标准给予处罚」，逾期不改正的按每人每月 1 万元罚。第七条：介绍童工去就业的，「按照每介绍一人处5000元罚款」。第十条：童工患病或者受伤的，用人单位「应当负责送到医疗机构治疗，并负担治疗期间的全部医疗和生活费用」，伤残或死亡的还要一次性赔偿。第十三条只留了一个例外：文艺、体育单位经父母或者其他监护人同意，可以招用不满 16 周岁的专业文艺工作者、运动员（全国）",
         "note": "受益人是自己。满 16 岁以后打工是合法的。但肯要一个 16 岁、没学历的人的岗位，正好是本节第 10 条（挑抗自动化的技能）讲的那一类：流程固定，最容易被机器顶掉。第 19 节讲的加班费、年休假、工伤待遇，前提都是有劳动关系、有证据。黑工这两样都没有，那些钱也就拿不到",
+        "source": "全国人大常委会 (2018). 义务教育法（2018 年第二次修正，第十一、十四、五十八条）. <http://www.moe.gov.cn/jyb_sjzl/sjzl_zcfg/zcfg_jyfl/202110/t20211029_575949.html>（教育部刊登）；国务院 (2002). 禁止使用童工规定（国务院令第 364 号，第二、六、七、十、十三条）. <http://www.gov.cn/gongbao/content/2002/content_61798.htm>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -9494,6 +10031,7 @@ module.exports = {
         "cost": "不花钱。花的是多读那几年的时间和精力，学费那部分见本节第 4 条（中职学费和助学金）。难在要一直读下去，中间不放弃。",
         "gain": "把此前的研究找齐再合在一起算（系统综述与荟萃分析）。检索范围是 1980 年 1 月到 2023 年 5 月，最终纳入 603 项研究、59 个国家 70 个地点、10355 个观测。教育和成人死亡率（各种原因加起来的死亡）是剂量反应关系（读得越多降得越多）。每多受一年教育，死亡风险平均下降 1.9%（95% 不确定区间 1.8–2.0，真实值大致落在这一段里）。18 至 49 岁的人每多一年下降 2.9%（2.8–3.0）。70 岁以上的人下降 0.8%（0.6–1.0）。男女之间没看出差别。按国家发展水平（社会人口指数）分开看，也没看出差别",
         "note": "争议。作者自己报告了发表偏倚（p<0.0001），意思是结果好看的研究更容易被发出来。各项研究之间的结果也差得很开。纳入的都是跟踪观察，不是把人分组做的试验。读书年数和家庭条件、地区、职业搅在一起，这 1.9% 里有多少是读书本身带来的、有多少是「能一直读下去的人本来条件就好」，这类研究分不开。反过来的路也分不开：小时候就有病、有心理问题的人，更容易辍学，也更容易早死，这会让读书的作用看起来比实际大。所以它能有力说明「多读书和活得久是同向的」，但不等于「你去读书就能延寿 1.9%」。收益量级定为小：读者面对的通常是再多读三四年，按每年 1.9% 算加起来不到一成，按全书的界线只算小。受益人是自己",
+        "source": "IHME-CHAIN Collaborators (2024). Effects of education on adult mortality: a global systematic review and meta-analysis. The Lancet Public Health, 9(3), e155-e165. <https://doi.org/10.1016/S2468-2667(23)00306-7>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -9513,6 +10051,7 @@ module.exports = {
         "cost": "不花钱。看一眼下面的数字就行。",
         "gain": "第七次全国人口普查的标准时点是 2020 年 11 月 1 日。全国人口里，有大学（大专及以上）文化程度的 218360767 人。高中（含中专）213005258 人。初中 487163489 人。小学 349658828 人。和 2010 年第六次人口普查相比，每 10 万人中有大学文化程度的由 8930 人上升为 15467 人。高中由 14032 人上升为 15088 人。初中由 38788 人下降为 34507 人。小学由 26779 人下降为 24767 人。15 岁及以上人口的平均受教育年限由 9.08 年提高到 9.91 年。文盲率由 4.08% 下降为 2.67%",
         "note": "这些数只说明学历在人群里稀不稀缺。某个具体的人读书划不划算，要按本节第 6 条（读书还是打工怎么算）的方法自己算。还要注意：普查数的是全国所有人口，老人小孩都算在内。年轻人里念到大学的比例比这个数高得多，拿它跟同龄人比会高估自己的优势。反过来，用它去反驳「读书没用」是成立的，因为分母正是要跟你抢饭碗的整个劳动力。受益人是自己",
+        "source": "国家统计局、国务院第七次全国人口普查领导小组办公室 (2021). 第七次全国人口普查公报（第六号）——人口受教育情况. <https://www.stats.gov.cn/sj/tjgb/rkpcgb/qgrkpcgb/202302/t20230206_1902006.html>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -9532,6 +10071,7 @@ module.exports = {
         "cost": "不花钱。开学前去学校的学生资助管理机构问一次，交一次材料。",
         "gain": "中职免学费是 2012 年秋季学期起的政策。原文是「对公办中等职业学校全日制正式学籍一、二、三年级在校生中所有农村（含县镇）学生、城市涉农专业学生和家庭经济困难学生免除学费（艺术类相关表演专业学生除外）」。2024 年调整了学生资助政策。本专科生国家助学金由每生每年 3300 元提高到 3700 元。国家励志奖学金由 5000 元提高到 6000 元。这两项从 2024 年秋季学期起执行（励志奖学金自 2024 年起）。中等职业学校国家助学金、普通高中国家助学金都由每生每年 2000 元提高到 2300 元，从 2025 年春季学期起执行。国家助学贷款也调了，从 2024 年秋季学期起。本专科学生「每人每年申请贷款额度由不超过16000元提高至不超过20000元」。研究生「由不超过20000元提高至不超过25000元」。利率是同期同档次的贷款市场报价利率（LPR）减 70 个基点（再低 0.7 个百分点）（全国）",
         "note": "受益人是自己和子女。免学费具体覆盖哪些人、助学金分几档，都由各省定。民办学校按当地公办同类专业的标准补助，差额还是要自己付，所以入学前要按本地文件核一遍。助学贷款是贷款不是补助，毕业后要还。但它把「现在拿不出学费」和「这几年划不划算」拆成了两件事，先别把钱不够当成结论。第 7 节写过失业期间的培训补贴和临时救助，家里确实断了收入就先去申请那几样",
+        "source": "财政部、发展改革委、教育部、人力资源社会保障部 (2012). 关于扩大中等职业教育免学费政策范围 进一步完善国家助学金制度的意见（财教〔2012〕376 号）. <http://www.gov.cn/gongbao/content/2013/content_2332779.htm>；财政部、教育部、人力资源社会保障部有关司局负责人 (2024). 就调整学生资助政策有关问题答记者问. <https://www.gov.cn/zhengce/202410/content_6983672.htm>；财政部、教育部、人民银行、金融监管总局 (2024). 关于调整完善国家助学贷款有关政策的通知（财教〔2024〕188 号）. <https://www.gov.cn/zhengce/zhengceku/202411/content_6984812.htm>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -9551,6 +10091,7 @@ module.exports = {
         "cost": "不花钱。填中考志愿之前，查一次本省的职教招生平台。",
         "gain": "《职业教育法》（2022 年 5 月 1 日起施行）第三条：「职业教育是与普通教育具有同等重要地位的教育类型」。第三十七条：中等职业学校「可以按照国家有关规定，在有关专业实行与高等职业学校教育的贯通招生和培养」。高等职业学校「可以按照国家有关规定，采取文化素质与职业技能相结合的考核方式招收学生」。省级以上教育行政部门要建立职业教育统一招生平台，汇总发布学校、专业设置和招生情况，并提供查询报考服务。第五十三条：「职业学校学生在升学、就业、职业发展等方面与同层次普通学校学生享有平等机会」。高等职业学校和实施职业教育的普通高等学校「应当在招生计划中确定相应比例或者采取单独考试办法，专门招收职业学校毕业生」。「用人单位不得设置妨碍职业学校毕业生平等就业、公平竞争的报考、录用、聘用条件」。事业单位公开招聘中有职业技能等级要求的岗位「可以适当降低学历要求」（全国）",
         "note": "受益人是自己和子女。这些是法定的通道，不是保证录取。贯通培养有哪些专业、单独招生留多少比例、职教高考考哪些科目，都由各省定。报志愿前必须查本省当年的职教招生平台和招生计划，别按外省的经验推。挑中职专业时，用本节第 10 条（挑抗自动化的技能）的维度过一遍：要到现场、环境不标准的专业更难被顶掉。选学校就看它在不在本省当年的职教招生计划里。它发的证再按第 8 条（查证书在不在目录里）那三步验一遍。招生宣传里承诺「包分配」「保过」的一律不要",
+        "source": "全国人大常委会 (2022). 职业教育法（2022 年修订，第三、三十七、五十三条）. <http://www.moe.gov.cn/jyb_sjzl/sjzl_zcfg/zcfg_jyfl/202204/t20220421_620064.html>（教育部刊登）",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -9570,6 +10111,7 @@ module.exports = {
         "cost": "不花钱。坐下来算一次，大概半小时。",
         "gain": "这是对中国城镇 1988 至 2001 年的估计。多读一年书能让收入高出多少，这叫教育回报率。原文写的是「从 1988 年每受教育一年 4.0% 大幅上升到 2001 年的 10.2%」。涨幅主要发生在 1992 年之后。它反映的是念到大学的人比没念的多挣的那一截（高等教育工资溢价）在变大。这是把「多读一年」折成年收入差时可用的中国本土量级。全球平均值见本节第 7 条（多受一年教育的全球平均回报）",
         "note": "算之前先扣掉本节第 4 条（中职学费和助学金）那些免学费和助学金，另外还有本节第 2 条（多受一年教育和死亡率）那笔账。数据截至 2001 年，只覆盖城镇，不能直接当今天的数用。本节第 7 条那个全球平均 9% 也一样。真按这个方法算，结论会因人而异。学费高、专业和岗位对不上、读的年限又长的，算出来可能真不划算，但那只说明这个具体项目不划算，说明不了读书无用。还有几项进不了公式：法定的学历门槛，见本节第 5 条（中职的贯通招生和单独考试）；抗替代能力，见第 10 条（挑抗自动化的技能）；能不能换行业。受益人是自己",
+        "source": "Zhang J, Zhao Y, Park A, Song X (2005). Economic returns to schooling in urban China, 1988 to 2001. Journal of Comparative Economics, 33(4), 730-752. <https://doi.org/10.1016/j.jce.2005.05.008>",
         "grade": "B",
         "meta": {
           "money": "0",
@@ -9589,6 +10131,7 @@ module.exports = {
         "cost": "不花钱。把这个数记住，当成衡量各种「学点东西」方案的尺子。",
         "gain": "一项覆盖 1950 至 2014 年、139 个国家、1120 项估计的综述算出：「多受一年教育的全球平均私人回报率是每年 9%」。私人回报就是落到本人收入上的那一部分：多读一年书，收入平均高约 9%。高等教育的私人回报在上升。教育的社会回报（落到整个社会而不是本人身上的那部分）仍然很高。女性受教育的平均回报持续高于男性",
         "note": "这是「多读一年书」的全球平均值，不能当成「报一个班」的收益，也不是中国的具体数字，只能当量级参照。它的用处是给所有培训方案一把尺子：一个课程要你花 3 万元和半年时间，就该问它能不能带来相当于一年正规教育的收入变化。还要注意，全球平均掩盖了巨大的专业差异和国别差异",
+        "source": "Psacharopoulos G, Patrinos HA (2018). Returns to investment in education: a decennial review of the global literature. Education Economics, 26(5), 445-458. <https://doi.org/10.1080/09645292.2018.1484426>；世界银行政策研究工作论文 8402. <https://doi.org/10.1596/1813-9450-8402>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -9608,6 +10151,7 @@ module.exports = {
         "cost": "不花钱。查一次，十几分钟。",
         "gain": "人社部专门为此开展过全国性治理。文件里点名的乱象是「一些机构和单位以新职业职业资格、职业技能等级等名义随意举办培训、评价、发证活动，乱收费、滥发证；一些机构和单位虚假或夸大宣传，甚至假冒权威机构名义组织培训、评价、颁发证书等」。治理措施包括联合网信、公安、市场监管等部门查处，「严厉打击假冒鉴定机构、人社部门备案评价机构的评价发证活动」。网站和新媒体上不合规的宣传，依法关停。文件同时要求「引导公众了解证书查询渠道和方式，判断证书合法合规性和含金量」",
         "note": "按这个顺序验。先看这个职业在不在《国家职业资格目录》里，不在目录里的就不是国家职业资格。再看发证机构是不是人社部门备案的评价机构。最后到官方的技能人才评价证书查询平台，查证书编号能不能查到。查不到的一律不报。带「国际」「高级」「注册」字样、承诺「包过」「挂靠有收入」的，风险最高",
+        "source": "人力资源社会保障部 (2022). 关于开展技术技能类「山寨证书」专项治理工作的通知. <https://www.gov.cn/zhengce/zhengceku/2022-03/18/content_5679641.htm>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -9627,6 +10171,7 @@ module.exports = {
         "cost": "不花钱，或者能大幅减免。培训本身要占时间。难在忍住别一冲动就自费报班，先去查一遍补贴目录。",
         "gain": "国家层面的规模是明确的：2025 年到 2027 年底，「聚焦高精尖产业与急需行业、就业重点群体等开展补贴性培训 3000 万人次以上」。资金来源被打通为一揽子：就业补助资金、失业保险基金、行业发展资金、东西部协作资金、企业职工教育经费等。补贴高低按职业（工种）的急需紧缺程度和培训成本来定，不同工种不一样。对企业还要求「按规定足额提取和使用职工教育经费，确保 60% 以上用于一线职工教育和培训」",
         "note": "具体怎么领、能领多少由各省定。入口是当地人社局官网的「职业培训补贴目录」和公共实训基地。第 7 节写过失业期间的职业培训补贴（同一个人最多享受 3 次）和社保补贴。在职的人则先问单位的职工教育经费。先查补贴目录再选学什么，比先选好再去找补贴省钱得多",
+        "source": "国务院就业促进和劳动保护工作领导小组 (2025). 关于开展大规模职业技能提升培训行动的指导意见. <https://www.gov.cn/zhengce/zhengceku/202507/content_7032222.htm>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -9646,6 +10191,7 @@ module.exports = {
         "cost": "不花钱。选之前先按这个维度把想学的活过一遍。",
         "gain": "给美国 702 个职业逐个估「这活多大概率能交给计算机做」（可计算化概率评估），结果是约 47% 的就业岗位处于高风险区间。模型里决定风险高低的，是三处机器目前迈不过去的坎，作者叫它「工程瓶颈」。一是感知与操作，包括手指灵巧度、手部灵巧度、在狭窄空间和别扭姿势下作业。二是创造性智能（想出新东西的能力）。三是社会智能（跟人打交道的能力）。所以环境非标准、需要手上功夫和临场判断的活，被替代的概率一贯更低，不是个别职业的偶然。流程固定、以信息处理为主的岗位风险最高",
         "note": "争议。这项研究是 2013 年一份没正式发表的论文稿，打分打的是「整个职业能不能被机器接手」。后来有研究改成拆到一件件具体任务上去估，算出来的高风险比例低得多。它也不说这事会在哪一年发生。用它时别盯着 47% 这个数，要看它点出的那三处卡住机器的地方。现场安装、检修、护理这类活比纯文书更抗替代，原因就在这里。所以「学个技能」优先该选需要到现场、面对非标准环境的那种",
+        "source": "Frey CB, Osborne MA (2017). The future of employment: how susceptible are jobs to computerisation? Technological Forecasting and Social Change, 114, 254-280. <https://doi.org/10.1016/j.techfore.2016.08.019>",
         "grade": "B",
         "meta": {
           "money": "0",
@@ -9665,6 +10211,7 @@ module.exports = {
         "cost": "不花钱。查一次就行。",
         "gain": "国家正在推「新八级工」职业技能等级制度。文件明确要求把等级和薪酬挂钩，原话是「强化技能导向的薪酬分配制度……指导企业实行岗位薪酬与岗位价值、技能等级双挂钩的分配办法」。各地要「加大高级工以上评聘力度和批次」。符合条件的企业可以自己给职工做技能等级评价。对表现突出的职工，「可打破工作年限、等级、资历等条件，直接认定相应职业技能等级」",
         "note": "这是政策方向，不是已经兑现的工资数，各地各企业的落地程度差别很大。能照着做的部分是：选技能时看它有没有对应的国家职业标准和等级通道，有通道的技能后面才谈得上按等级涨薪。没有等级、也没有行业准入门槛的「技能」，学完只能靠自己找活",
+        "source": "国务院就业促进和劳动保护工作领导小组 (2025). 关于开展大规模职业技能提升培训行动的指导意见. <https://www.gov.cn/zhengce/zhengceku/202507/content_7032222.htm>；人力资源社会保障部 (2021). 「技能中国行动」实施方案. <https://www.gov.cn/zhengce/zhengceku/2021-07/06/content_5622619.htm>",
         "grade": "B",
         "meta": {
           "money": "0",
@@ -9684,6 +10231,7 @@ module.exports = {
         "cost": "不花钱。查两份当地的文件。",
         "gain": "补贴额度本身就是官方对「哪些工种缺人」的定价。政策要求「健全根据职业（工种）急需紧缺程度、培训成本等情况确定的差异化补贴机制」，各地据此确定本地的补贴性职业技能培训项目范围。所以同一个工种在不同城市的补贴额度差多少，直接反映了当地的紧缺程度",
         "note": "官方的分职业工资只分到五大类岗位，没有具体工种。国家统计局 2025 年的数字是，规模以上企业平均年工资约 10.6 万元（精确值 106080 元）。中层以上管理人员约 21 万元（精确值 210016 元），专业技术人员约 15.5 万元（精确值 155491 元），办事人员 94936 元，生产制造人员 80739 元，社会生产和生活服务人员 79857 元。人社部的「最缺工的 100 个职业排行」在中国就业网上能查，最新一期停在 2022 年第四季度，按全国 102 个城市公共就业服务机构的招聘和求职数据编。网上流传的「某工种月入多少」，几乎都来自招聘平台的挂牌价或者个人自述。能被你看到的，多半是挣到钱的那批人，而且都不算工时、通勤、职业病和淡旺季。要看真实需求，去当地人社局官网查补贴目录，再查公共就业服务机构的岗位需求排行。最后去实际的工地、工厂、门店问在职的人",
+        "source": "国务院就业促进和劳动保护工作领导小组 (2025). 关于开展大规模职业技能提升培训行动的指导意见. <https://www.gov.cn/zhengce/zhengceku/202507/content_7032222.htm>；国家统计局 (2026). 2025年城镇单位就业人员年平均工资情况：「规模以上企业就业人员年平均工资为106080元，其中，中层及以上管理人员210016元，专业技术人员155491元，办事人员和有关人员94936元，社会生产服务和生活服务人员79857元，生产制造及有关人员80739元」. <https://www.stats.gov.cn/sj/zxfb/202605/t20260515_1963707.html>；人力资源社会保障部就业培训技术指导中心 (2023). 2022年第四季度全国招聘大于求职「最缺工」的100个职业排行（中国就业网）. <https://chinajob.mohrss.gov.cn/c/2023-01-30/367442.shtml>",
         "grade": "C",
         "meta": {
           "money": "0",
@@ -9703,6 +10251,7 @@ module.exports = {
         "cost": "要交短期课程的学费，钱不多。时间上要占一段。难在学到一半还没见效时，按说好的条件停下来。",
         "gain": "政策口径与此一致：支持「民办培训机构开展市场化的高质量职业技能培训项目和能短期实现就业的『短平快』式职业技能培训项目」。同时推动职业院校「聚焦就业市场急需知识和技能……开设微专业和职业能力培训课程」",
         "note": "判断标准就一条：学完之后有没有一个具体的岗位能投简历。学一年半载、结业后还要「再积累经验」的项目，实际成本远高于标价。第 4 节讲的退出条件同样适用：开工前就写清楚「学到什么程度还没找到活就停」",
+        "source": "国务院就业促进和劳动保护工作领导小组 (2025). 关于开展大规模职业技能提升培训行动的指导意见. <https://www.gov.cn/zhengce/zhengceku/202507/content_7032222.htm>",
         "grade": "C",
         "meta": {
           "money": "少",
@@ -9722,6 +10271,7 @@ module.exports = {
         "cost": "不花钱，总时间也不用增加。把原来用来重读的那段时间，改成合上书默写或者做题。难在自测当场就把没记住的暴露出来，感觉比重读难受。",
         "gain": "222 项独立研究、48478 名学生的荟萃分析：课堂测验让学生的学业成绩提高，效应量属于中等（g = 0.499）。效果大小受几个条件影响：对照组用的是什么学法、测验形式和最终考试是否一致、材料是否匹配、有没有给纠正性反馈、测验重复了几次、在哪里什么时候测、干预持续多久、用的是什么实验设计。另一份逐一评估十种常用学习方法的综述，把「练习性测验」和「分散练习」评为最高一档（high utility），理由是它们对不同年龄、不同能力的学习者都有效，在多种考核形式和真实教育场景里都被验证过。",
         "note": "自测是为了逼着把东西从脑子里调出来，不为打分。做法：读完一节合上书先默写要点，再翻回去对。有纠正性反馈的效果更好，所以对完答案要看清错在哪。收益量级记「大」，是按效应量和评级判的。这两份证据量的是成绩，没有量小时数，所以没按节省时间的阈值套。自测和第 15 条（把同样的时间摊到几天）是同一份综述里评级最高的两样，配合用。",
+        "source": "Yang C, Luo L, Vadillo MA, Yu R, Shanks DR (2021). Testing (quizzing) boosts classroom learning: A systematic and meta-analytic review. Psychological Bulletin, 147(4), 399–435. <https://doi.org/10.1037/bul0000309>；Dunlosky J, Rawson KA, Marsh EJ, Nathan MJ, Willingham DT (2013). Improving Students' Learning With Effective Learning Techniques: Promising Directions From Cognitive and Educational Psychology. Psychological Science in the Public Interest, 14(1), 4–58. <https://doi.org/10.1177/1529100612453266>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -9741,6 +10291,7 @@ module.exports = {
         "cost": "不花钱，总时间也不变。变的只是排法：同样 3 小时，拆成三天各 1 小时。难在要提前几天开始，不能拖到最后一晚。",
         "gain": "一份汇总了 184 篇文章、317 个实验、839 次分散练习效果评估的荟萃分析。它比较了两件事：连着学完和分开几次学（间隔效应），以及间隔短和间隔长（延迟效应）。结论是复习间隔和「要记到多久之后」共同决定最终测验的保持率：要保持的时间越长，能带来最佳保持率的复习间隔也越长。另一份逐一评估十种常用学习方法的综述，把分散练习评为最高一档（high utility）。",
         "note": "和第 14 条（合上书自测）叠加用最好：把自测本身分散到几天做。Cepeda 那份荟萃分析里的材料多是词表记忆这类，复杂内容的最佳间隔没有给出通用天数。「考得越远、间隔越长」是原文给的规律，没有具体日程。考前一晚突击当场有用，问题是忘得快。",
+        "source": "Cepeda NJ, Pashler H, Vul E, Wixted JT, Rohrer D (2006). Distributed practice in verbal recall tasks: A review and quantitative synthesis. Psychological Bulletin, 132(3), 354–380. <https://doi.org/10.1037/0033-2909.132.3.354>；Dunlosky J, Rawson KA, Marsh EJ, Nathan MJ, Willingham DT (2013). Improving Students' Learning With Effective Learning Techniques. Psychological Science in the Public Interest, 14(1), 4–58. <https://doi.org/10.1177/1529100612453266>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -9760,6 +10311,7 @@ module.exports = {
         "cost": "不花钱，反而省时间。难在这几样做起来最顺手，也最有「我在学习」的感觉。",
         "gain": "一份评估十种常用学习方法的综述，按「效果能不能跨学习条件、跨学生特征、跨材料、跨考核形式推广」给评级。评为最高一档的是练习性测验和分散练习。评为中等一档的是精细提问、自我解释、交错练习。评为最低一档的五种是：写摘要、划重点（或者画线）、关键词记忆法、为课文配图想象、反复阅读。综述写明：多数学生都说自己在用反复阅读和划重点，但这两种并不能稳定提高成绩，应当换成别的方法，比如用练习性测验代替反复阅读。",
         "note": "划线可以用来「标出一会儿要自测哪几处」，出问题的是把划线本身当成学习。综述也说明，最低一档不等于零，只是能起作用的条件窄、还需要更多研究。替代动作见第 14 条（合上书自测）和第 15 条（把同样的时间摊到几天）。",
+        "source": "Dunlosky J, Rawson KA, Marsh EJ, Nathan MJ, Willingham DT (2013). Improving Students' Learning With Effective Learning Techniques: Promising Directions From Cognitive and Educational Psychology. Psychological Science in the Public Interest, 14(1), 4–58. <https://doi.org/10.1177/1529100612453266>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -9779,6 +10331,7 @@ module.exports = {
         "cost": "不花钱。把练习册按题型顺序做改成打乱着做。难在混着练当场正确率更低，感觉像退步。",
         "gain": "一份纳入 59 项研究、238 个效应量、158 个样本的多层荟萃分析。交错练习相对于分块练习的总体效应属于中等（Hedges' g = 0.42）。按材料分：绘画类最好（g = 0.67），其他视觉材料也较好；数学任务的效应较小（g = 0.34）；说明性文本和味觉材料的总体效应不显著；词汇类反而是分块练习更好（g = −0.39）。回归分析显示：类别之间越相似、同一类别内部越不相似、材料越复杂，交错的好处越大。",
         "note": "第 16 条（别把划重点当主要学法）引的那份综述把交错练习评为中等一档，理由是当时研究还不够多。两份合起来看，用法是：需要「认出这是哪一类、该用哪个方法」的内容混着练，比如数学题型、病例、法条适用；需要死记的内容分块练，比如单词、名词解释。",
+        "source": "Brunmair M, Richter T (2019). Similarity matters: A meta-analysis of interleaved learning and its moderators. Psychological Bulletin, 145(11), 1029–1052. <https://doi.org/10.1037/bul0000209>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -9798,6 +10351,7 @@ module.exports = {
         "cost": "不花钱。只是不再按这个分类挑材料、挑课程，也不再花钱做风格测评。",
         "gain": "一份受托评估学习风格证据的综述指出：要证明「按学习风格施教」有效，必须先按风格给学生分组，再把每组学生随机分配到不同教法，最后用同一份测验考。有效的判据是出现一种特定的交互作用：对一种风格最有效的教法，对另一种风格不是最有效的。综述的结论是：几乎没有发现这种交互作用；关于学习风格的文献虽然很多，但用了合格实验设计的研究极少，其中几项的结果还直接和「匹配假说」相反。作者据此认为，现有证据不足以支持把学习风格测评用进教育实践。",
         "note": "综述同时说明，这不等于所有版本的学习风格理论都被测过并被否定，很多根本没被测过。要避免的是花钱做风格测评、按风格挑培训班这两件事。挑培训的标准见第 9 条（培训优先走政府补贴渠道）和第 13 条（优先选能直接上岗的短周期项目）。",
+        "source": "Pashler H, McDaniel M, Rohrer D, Bjork R (2008). Learning Styles: Concepts and Evidence. Psychological Science in the Public Interest, 9(3), 105–119. <https://doi.org/10.1111/j.1539-6053.2009.01038.x>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -9817,6 +10371,7 @@ module.exports = {
         "cost": "不花钱，也不多花时间。变的只是练法：把「原样背一遍」换成「按将来的用法出题考自己」。难在得先想清楚这些东西将来要怎么用。",
         "gain": "一项荟萃分析汇总了 40 多年的研究，含 67 篇已发表和未发表的文章、122 个实验、192 个迁移效应量，总人数 10382 人。和「再看一遍但不考」的对照相比，练习性测验带来的学习确实能迁移到别的情境，效应量 d=0.40（95% CI 0.31 到 0.50）。迁移最强的几种情况是：换一种题型考、考应用题和推理题、医学诊断类的问题、考意思相近的线索词。迁移最弱的几种是：把刺激和反应对调、初学时见过但没被考过的材料、例题类问题。调节因素中，练时和考时的作答形式是否一致、有没有做过带详细反馈的提取练习、以及初次测验答对没有，都强烈影响会不会出现正向迁移。作者还用两种方法校正了发表偏倚，调节因素的效应量受影响很小，但截距估计被明显压低：上面这些条件一个都不具备时，常常看不到正向迁移",
         "note": "「背」这个词平时把两件事混在一起：把材料再过一遍（反复读、划重点），和合上书主动回想。前一类在那份给十种学法排队的综述里评级最低，想看评级本身见第 16 条（别把划重点、反复读、写摘要当成主要学法）。要做的是后一类：合上书主动回想，具体见第 14 条（合上书自测），而且要分几天做，见第 15 条（摊到几天）。做法是先想清楚将来怎么用：是要在卷子上选出来，还是要在现场判断出来，然后照那个形式出题考自己。反过来对调着考一遍也值得做，因为这份荟萃分析里对调方向的迁移最弱，两个方向都得练到。",
+        "source": "Pan SC, Rickard TC (2018). Transfer of test-enhanced learning: meta-analytic review and synthesis. Psychological Bulletin, 144(7), 710-756. <https://doi.org/10.1037/bul0000151>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -9836,6 +10391,7 @@ module.exports = {
         "cost": "不花钱。查一次本省当年的申报通知，半小时左右。",
         "gain": "全国共设 27 个职称系列，比如经济、工程、卫生、出版。职称分高级、中级、初级三层。人社部令第 40 号适用于企业、事业单位、社会团体、个体经济组织，也适用于自由职业者。申报人一般要逐级申报。你所在单位要审核材料，并在单位内公示，公示期不少于 5 个工作日。民营企业和自由职业者，可以由人事代理机构等替你审核、公示、推荐。各地要在科技园区、高新区等地设职称申报受理服务点，也可以通过人才中介服务机构、行业协会商会、学会受理申报。符合条件的自由职业者，按属地参加当地人社部门组织的评审。能在网上核验的材料，不得要求你另外开证明。材料不齐的，评审方要一次性告诉你缺哪些。民营企业的人一般在劳动关系所在地申报。被派到外地连续干满一年的，可以在派驻地申报。离退休人员不能申报。事业单位工作人员受记过以上处分的，处分期间不能申报（全国）",
         "note": "要准备哪些材料，全国没有统一清单。各系列、各省每年发申报通知，材料清单、申报时间和业绩条件都写在里面。所以第一步是在本省人社厅官网找当年的通知。论文不再是一律要有：2016 年的改革意见要求，不把论文当应用型人才的硬门槛，职称外语和计算机考试也不作统一要求。技术工人也有路：符合条件的高技能人才，可以参加工程系列的职称评审。公务员不能参加职称评审。",
+        "source": "人力资源和社会保障部令第 40 号 (2019). 职称评审管理暂行规定. <https://www.gov.cn/gongbao/content/2019/content_5437137.htm>：第二条、第十三条、第十四条、第十五条、第十六条、第十七条、第十八条；人力资源社会保障部办公厅 (2020). 关于进一步做好民营企业职称工作的通知. <https://www.gov.cn/zhengce/zhengceku/2020-03/03/content_5486340.htm>：「在专业技术人才密集的创业孵化基地、高新技术开发区、科技园区等地设立职称申报受理服务点，或通过人才中介服务机构、工商联、行业协会商会、学会等社会组织受理民营企业专业技术人才职称申报」「民营企业专业技术人才被派驻外地连续工作一年以上的，可按有关规定在派驻地申报职称评审」；新华社 (2024). 职称评审进入高峰，信息如何查？有何新变化？ <https://www.gov.cn/zhengce/202410/content_6978917.htm>：「我国共设有经济、工程、卫生、出版等27个职称系列」「符合条件的自由职业者，可根据属地原则申报参加当地人社部门组织的职称评审」；中共中央办公厅、国务院办公厅 (2016). 关于深化职称制度改革的意见. <https://www.gov.cn/gongbao/content/2017/content_5163445.htm>：「不将论文作为评价应用型人才的限制性条件」「对职称外语和计算机应用能力考试不作统一要求」「符合条件的高技能人才，可参加工程系列专业技术人才职称评审」「公务员不得参加专业技术人才职称评审」",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -9855,6 +10411,7 @@ module.exports = {
         "cost": "报名费按各省标准交。备考要占几个月的业余时间。",
         "gain": "2016 年的改革意见规定，初级、中级职称实行全国统一考试的专业，不再进行相应的评审或认定。在职称和职业资格密切相关的领域，取得职业资格就可以认定具备相应职称，还可以作为申报高一级的条件。以会计为例。助理会计师和会计师实行全国统一考试。高级会计师考试和评审结合，正高级一般只评审。报考条件如下。助理会计师：高中毕业以上学历，含中专、职高、技校。会计师：博士学位；或硕士学位、干会计满 1 年；或第二学士学位、研究生班毕业、干满 2 年；或本科、干满 4 年；或大专、干满 5 年。有会计硕士、会计博士专业学位的，考会计师可以免考《财务管理》（全国）",
         "note": "你的系列是考、是评，还是考评结合，看该系列那份「深化××职称制度改革的指导意见」。人社部和各行业主管部门分系列发过，在中国政府网政策文件库能搜到。考试的报名时间和科目，以当年的考试公告为准。公务员可以参加会计考试，但不能参加会计职称评审。",
+        "source": "中共中央办公厅、国务院办公厅 (2016). 关于深化职称制度改革的意见. <https://www.gov.cn/gongbao/content/2017/content_5163445.htm>：「专业技术人才取得职业资格即可认定其具备相应系列和层级的职称，并可作为申报高一级职称的条件。初级、中级职称实行全国统一考试的专业不再进行相应的职称评审或认定。」；人力资源社会保障部、财政部 (2019). 关于深化会计人员职称制度改革的指导意见. <https://www.gov.cn/zhengce/zhengceku/2019-09/27/content_5433803.htm>：「助理会计师、会计师实行全国统一的会计专业技术资格考试」「高级会计师采取考试与评审相结合方式，正高级会计师一般采取评审方式」；财政部等 (2024). 关于做好会计专业学位与会计专业技术资格衔接有关工作的通知. <https://www.gov.cn/zhengce/zhengceku/202405/content_6952602.htm>",
         "grade": "A",
         "meta": {
           "money": "少",
@@ -9874,6 +10431,7 @@ module.exports = {
         "cost": "不花钱。难在忍住「花钱包过」的广告。",
         "gain": "人社部令第 40 号规定，提供虚假材料、剽窃他人作品和学术成果，或者用其他不正当手段取得职称的，撤销职称。同时记入职称评审诚信档案库，纳入全国信用信息共享平台，记录期限 3 年。2024 年的监管办法点名了申报人的几类违规：虚假承诺和伪造信息，论文造假代写，业绩造假，说情打招呼。申报时要签个人承诺书，承诺不实的，3 年内不得申报。人社部门会同公安、网信、市场监管查处中介的虚假网站、虚假宣传、合同陷阱、假冒评审和假证。情节严重涉嫌犯罪的，移送有关机关处理（全国）",
         "note": "辨真假有个办法：正规评审出来的职称，能在全国职称评审信息查询平台查到。入口是 12333 网站、12333 手机客户端和人社部官网。没经过备案的评审委员会评出来的，这个系统里查不到。所以承诺「包过」「不用本人参加」「证书查不到也能用」的，基本可以判定有问题。受益人主要是自己，收益量级按「避免撤销职称和 3 年失信记录」判。",
+        "source": "人力资源和社会保障部令第 40 号 (2019). 职称评审管理暂行规定. <https://www.gov.cn/gongbao/content/2019/content_5437137.htm>：第三十九条；人力资源社会保障部 (2024). 职称评审监管暂行办法. <https://www.gov.cn/zhengce/zhengceku/202408/content_6969436.htm>：第五条、第十五条、第十七条、第二十七条；人力资源社会保障部办公厅 (2022). 关于进一步做好职称评审工作的通知. <https://www.gov.cn/zhengce/zhengceku/2022-12/24/content_5733407.htm>：「未经备案的职称评审委员会，评审结果不纳入全国职称评审信息查询验证系统」；新华社 (2024). 职称评审进入高峰，信息如何查？有何新变化？ <https://www.gov.cn/zhengce/202410/content_6978917.htm>：「大家可通过www.12333.gov.cn网页、手机12333客户端、人力资源社会保障部门户网站、“人力资源和社会保障部”微信公众号等多种渠道进行登录」",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -9893,6 +10451,7 @@ module.exports = {
         "cost": "不花钱。问一次单位人事部门就行。",
         "gain": "人社部令第 40 号第二条：职称评审结果是专业技术人才聘用、考核、晋升等的重要依据。2016 年的改革意见规定，全面实行岗位管理的事业单位，一般在岗位结构比例内开展职称评审。不实行岗位管理的单位，以及通用性强的系列和新兴职业，可以评聘分开。专业技术人才跨地区、跨单位流动时，职称按管理权限重新评审或者确认，国家另有规定的除外（全国）",
         "note": "证据等级定 B，是因为文件只写了评聘怎么衔接，没有全国统一的「评上涨多少」的数字。能照着做的是：在事业单位和国企，先问人事部门本单位的岗位空缺和聘任规则。在私企，先问老板这张证认不认、加不加钱。",
+        "source": "人力资源和社会保障部令第 40 号 (2019). 职称评审管理暂行规定. <https://www.gov.cn/gongbao/content/2019/content_5437137.htm>：第二条、第二十九条；中共中央办公厅、国务院办公厅 (2016). 关于深化职称制度改革的意见. <https://www.gov.cn/gongbao/content/2017/content_5163445.htm>：「对于全面实行岗位管理、专业技术人才学术技术水平与岗位职责密切相关的事业单位，一般应在岗位结构比例内开展职称评审。对于不实行岗位管理的单位，以及通用性强、广泛分布在各社会组织的职称系列和新兴职业，可采用评聘分开方式。」",
         "grade": "B",
         "meta": {
           "money": "0",
@@ -9914,6 +10473,7 @@ module.exports = {
         "cost": "不花钱。要先去一趟社区。难在忍住不直接去挂专家号。",
         "gain": "经基层逐级转诊的参保患者，在上级医院的住院起付线可以连续计算。起付线就是每次住院自己先掏、掏够了医保才开始报的那一段。连续计算的意思是前后两家医院合起来只算一次，不用重新掏一遍。由上级医院下转回基层的住院患者，同一疾病周期内不再另设起付线",
         "note": "自己直接跑去三级医院住院，再转回基层康复，这段钱可能要掏两次，走转诊只算一次。转诊规则由各省、各市和医联体分别制定，去之前先问一下社区。稳定期的慢病别再去大医院开药：大医院的这类普通门诊会逐步减掉，社区一次能开 12 周的药，见第 16 节第 5 条（社区一次开到 12 周的药）。",
+        "source": "国务院办公厅 (2026). 关于加快建设分级诊疗体系的若干措施. <https://www.gov.cn/zhengce/zhengceku/202604/content_7065031.htm>：「统筹地区内经基层医疗卫生机构逐级转诊的参保患者，在上级医院的住院起付线可连续计算；由上级医院下转至基层医疗卫生机构的住院患者，同一疾病周期内不再另设住院起付线。」",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -9933,6 +10493,7 @@ module.exports = {
         "cost": "不花钱。难在忍住不往大医院跑。",
         "gain": "文件要求各地拉开不同等级医疗机构的住院报销水平，原则上逐级差 10 个百分点左右。按这个差距，同一笔住院费每往上跑一级医院，自己多掏的大约是这笔可报销费用的 10%。比如 1 万元可报销的住院费，报销比例从 80% 降到 70%，自己掏的从 2000 元变成 3000 元。多掏的 1000 元是总费用的一成，但比原来自己掏的多了一半。各地实际比例不同，起付线和封顶线也会让差额变化，这里只是按文件的 10 个百分点算的示意。年度新增医保基金也向基层倾斜",
         "note": "同一笔住院费，在基层和在三级医院，自己掏的差额可能是几千元。能在基层办完的病别往上跑，并不是什么病都要在社区看。",
+        "source": "国务院办公厅 (2026). 关于加快建设分级诊疗体系的若干措施. <https://www.gov.cn/zhengce/zhengceku/202604/content_7065031.htm>：「因地制宜适当拉开参保人员在不同等级医疗卫生机构的住院报销水平，原则上统筹地区内医疗卫生机构住院报销比例逐级拉开10个百分点左右的差距。」「具备条件的地方，可按分级诊疗导向酌情拉开参保人员在不同等级医疗卫生机构的门诊报销水平。」",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -9952,6 +10513,7 @@ module.exports = {
         "cost": "不花钱。要多办一道转诊手续。",
         "gain": "紧密型医联体的牵头医院，要为基层预留一定比例的号源和床位，并及时接诊经基层转诊的患者。紧密型医联体就是几家医院和社区卫生机构绑在一起协作的一组机构。所以从社区转上去有单独的号和床，不和大厅里抢号的人挤在一起。医疗机构要设转诊中心或指定固定部门，到 2027 年实现全覆盖",
         "note": "预留号源是专门留给转诊患者的，抢不到号可以走转诊。找号贩子除了贵，还可能让你落到不对口的科室。找不到转诊中心，就打医院的服务电话问。",
+        "source": "国务院办公厅 (2026). 关于加快建设分级诊疗体系的若干措施. <https://www.gov.cn/zhengce/zhengceku/202604/content_7065031.htm>：「牵头医院要为基层医疗卫生机构预留一定比例的号源和床位，并及时接诊经基层转诊患者。」「医疗机构要强化转诊服务统一管理，设立转诊中心或指定固定部门承担患者转诊服务工作，到2027年实现全覆盖。」",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -9971,6 +10533,7 @@ module.exports = {
         "cost": "不花钱。出发前多问一句。",
         "gain": "跨统筹地区、跨省异地就医的必要性，原则上由二、三级医院副主任医师及以上职称人员评估。跨统筹地区就是跨出自己的医保参保地。去不去外地看，要由够级别的医生说了算。跨省临时外出就医人员的报销水平，与参保地同级别机构保持合理差异。在外地看同样的病，报回来的钱会比在家少一截",
         "note": "「临时外出就医」和「长期异地居住」是两种不同的备案，报销水平不一样。备案怎么办、哪几类病能直接结算，见第 16 节。别先跑到外地，再回头想报销的事。",
+        "source": "国务院办公厅 (2026). 关于加快建设分级诊疗体系的若干措施. <https://www.gov.cn/zhengce/zhengceku/202604/content_7065031.htm>：「原则上由二、三级医院副主任医师及以上职称人员评估患者跨统筹地区、跨省异地就医的必要性。」「进一步强化异地就医直接结算管理服务，跨省临时外出就医人员报销水平与参保地同级别医疗机构报销水平保持合理差异。」",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -9990,6 +10553,7 @@ module.exports = {
         "cost": "不花钱。医院复印可以按规定收工本费，收费标准要公开。难在每次看完病都记得去复印一份。",
         "gain": "法规明确把查阅、复制病历列为患者的权利。范围覆盖门诊病历、住院志、化验单、医学影像、手术及麻醉记录、病理资料、医疗费用等全部资料。换医院、找第二个医生再看一遍、报商业保险、真起了纠纷，靠的都是这些",
         "note": "复印有专门窗口，不用去求医生。要复印的清单，直接照《医疗纠纷预防和处理条例》第十六条念。先是门诊病历、住院志、体温单、医嘱单、化验单、影像资料。再是手术和麻醉记录、病理资料、护理记录、医疗费用清单。拿到之后按时间顺序存一个文件夹。里面最要紧的是出院小结、手术记录、病理报告和关键影像。慢性病的历次指标记在同一个本子上，见第 16 节。",
+        "source": "国务院 (2018). 医疗纠纷预防和处理条例（国务院令第 701 号）第十六条：「患者有权查阅、复制其门诊病历、住院志、体温单、医嘱单、化验单（检验报告）、医学影像检查资料、特殊检查同意书、手术同意书、手术及麻醉记录、病理资料、护理记录、医疗费用以及国务院卫生主管部门规定的其他属于病历的全部资料。」「患者要求复制病历资料的，医疗机构应当提供复制服务，并在复制的病历资料上加盖证明印记……可以收取工本费，收费标准应当公开。」「患者死亡的，其近亲属可以依照本条例的规定，查阅、复制病历资料。」第十五条「任何单位和个人不得篡改、伪造、隐匿、毁灭或者抢夺病历资料。」<https://www.gov.cn/zhengce/zhengceku/2018-08/31/content_5318057.htm>；国家卫生计生委、国家中医药管理局 (2013). 医疗机构病历管理规定（2013 年版）：医疗机构「应当指定部门或者专（兼）职人员负责受理复制病历资料的申请」，复制在申请人在场的情况下进行并加盖证明印记. <http://www.gov.cn/gongbao/content/2014/content_2600084.htm>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -10009,6 +10573,7 @@ module.exports = {
         "cost": "不花钱。向医院提出封存要求，等医患双方到场把手续做完。难在当着医生的面把这句话说出口。",
         "gain": "条例规定「发生医疗纠纷需要封存、启封病历资料的，应当在医患双方在场的情况下进行」。封存的可以是原件，也可以是复制件，由医疗机构保管。病历尚未完成需要封存的，对已完成部分先行封存，后续完成后再封存。医疗机构应当对封存的病历开列封存清单，由医患双方签字或者盖章，各执一份。疑似输液、输血、注射、用药等引起不良后果的，医患双方应当共同对现场实物进行封存、启封。需要检验的，应当由双方共同委托有检验资格的机构。双方无法共同委托的，由医疗机构所在地县级人民政府卫生主管部门指定。疑似输血引起不良后果、需要封存血液的，医疗机构应当通知血站派员到场。另有一条硬约束：「任何单位和个人不得篡改、伪造、隐匿、毁灭或者抢夺病历资料。」封存后纠纷已解决，或者满 3 年未再提出解决要求的，医疗机构可以自行启封（全国，2018 年 10 月 1 日起施行）",
         "note": "封存和复印是两件事。复印是平时就该做的，见第 5 条（病历和影像自己存一份）。封存是纠纷发生时把证据固定住，防的是事后补写和修改。怀疑是输液、输血、用药出的问题，除了病历，还要一起封存那袋液体、那支药和输液器，别让人收走扔掉。医疗机构应当在显著位置公布医疗纠纷的解决途径、程序和联系方式，并设置统一的投诉管理部门。有事先找那个部门，不要找当班医生理论。",
+        "source": "国务院 (2018). 医疗纠纷预防和处理条例（国务院令第 701 号，第十五、二十四、二十五条）. <https://www.gov.cn/zhengce/zhengceku/2018-08/31/content_5318057.htm>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -10028,6 +10593,7 @@ module.exports = {
         "cost": "不花钱。进门多走几步找到预检分诊台。把最要命的那个症状，用一句话说清。",
         "gain": "国家卫生健康委 2024 年版急诊医学质控指标规定，急诊预检分诊要「按病情危重程度将患者分为四级」。「I 级为急危患者，需要立即得到救治」。「II 级为急重患者，往往评估与救治同时进行」。「III 级为急症患者，需要短时间内得到诊治」。「IV 级为非急症患者或亚急症患者，在普通诊疗区顺序就诊」。预检分诊就是进急诊先由专人评一遍病情轻重，定下看病顺序。北京市的执行标准给出了各级的响应要求。1 级「立即进行评估和救治，安排患者进入复苏室或抢救室」。2 级「立即监护生命体征，10 分钟内得到救治，安排患者进入抢救室」。3 级「先于 4 级患者优先诊治，安排患者在普通诊疗区候诊；若候诊时间大于 30 分钟，需再次评估」。4 级「顺序就诊，除非病情变化，否则候诊时间较长；若候诊时间大于 4 小时，可再次评估」。分诊要「坚持急危重症优先就诊原则」，急诊科入口显著位置应设预检分诊区域（四级标准为全国口径，响应时间为北京市标准）",
         "note": "分成四级是全国统一的。每一级多久得到处理，由各省市自己定，北京这份是能逐字核对的一版。定级看的是心跳、血压、血氧这些指标和症状，不是你觉得有多疼。1 级的硬指标包括这么几条。一是心率大于 180 次/分，或者小于 40 次/分。二是收缩压低于 70 mmHg，收缩压就是血压里的高压。三是血氧低于 80%。四是休克、明确心肌梗死、急性意识障碍。觉得分诊把你定低了，就补充说清最危险的那个症状。候诊中病情有变化，立刻回分诊台重新评一次。真正危重的时候打 120 比自己去更快，院前医生会按同一套标准先定一个级，并提前通知医院准备接诊（见第 13 节）。",
+        "source": "国家卫生健康委办公厅 (2024). 关于印发急诊医学等 6 个专业医疗质量控制指标（2024 年版）的通知（国卫办医政函〔2024〕150 号）附件 1，指标四「急诊分级分诊执行率」. <https://www.gov.cn/zhengce/zhengceku/202405/content_6951260.htm>；北京市卫生健康委员会 (2019). 北京市加强急诊预检分诊分级工作方案及附件《北京市医院急诊预检分诊分级标准（试行）》：「坚持急危重症优先就诊原则。按照患者病情的严重程度，遵循从重到轻、从病情迅速变化到相对稳定的原则，合理安排患者就诊顺序。」「在急诊科入口的显著位置，设置急诊预检分诊区域」. <http://wjw.beijing.gov.cn/zwgk_20040/ylws/201912/t20191216_1242338.html>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -10047,6 +10613,7 @@ module.exports = {
         "cost": "不花钱。",
         "gain": "疾病应急救助制度的救助对象是「在中国境内发生急重危伤病、需要急救但身份不明确或无力支付相应费用的患者」。基金支付两类费用：「无法查明身份患者所发生的急救费用」，和「身份明确但无力缴费的患者所拖欠的急救费用」。文件还写明「各级各类医疗机构及其工作人员必须及时、有效地对急重危伤患者施救，不得以任何理由拒绝、推诿或拖延救治」。院前急救也有规定：全国院前医疗急救呼叫号码为「120」。急救中心（站）「不得因指挥调度原因拒绝、推诿或者延误院前医疗急救服务」，也「不得因费用问题拒绝或者延误院前医疗急救服务」。转运遵循「就近、就急、满足专业需要、兼顾患者意愿的原则」（全国，2013 年起）",
         "note": "基金只付「急救费用」那一段，而且是先救治，事后由医疗机构向基金申请，不用你去窗口领钱。有医保的照常先走医保。各省的申请流程和限额不同。转运原则里「就近、就急」排在「患者意愿」前面，所以救护车不一定送你指定的那家医院，危重时以最近能处理的为准。后续自己掏的部分仍然过重的，走医疗救助，见第 7 节第 10 条（医疗救助）。",
+        "source": "国务院办公厅 (2013). 关于建立疾病应急救助制度的指导意见（国办发〔2013〕15 号）. <https://www.gov.cn/zhengce/zhengceku/2013-03/01/content_6069.htm>；国家卫生和计划生育委员会 (2014). 院前医疗急救管理办法（委令第 3 号，第十三、二十二、二十三、二十五条）. <http://www.gov.cn/gongbao/content/2014/content_2580977.htm>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -10066,6 +10633,7 @@ module.exports = {
         "cost": "鉴定费几百到两千元不等，一般由提出申请的一方先垫。要等治疗终结，或者临床效果稳定，通常是伤后三到六个月，有时更久。难在伤还没好利索就想赶紧定下来，得忍住。",
         "gain": "《人体损伤致残程度分级》规定鉴定时机「应在原发性损伤及其与之确有关联的并发症治疗终结或者临床治疗效果稳定后进行鉴定」。标准「将人体损伤致残程度划分为 10 个等级，从一级（人体致残率 100%）到十级（人体致残率 10%），每级致残率相差 10%」。判断依据是「人体组织器官结构破坏、功能障碍及其对医疗、护理的依赖程度，适当考虑由于残疾引起的社会交往和心理因素影响」。十级里与骨折有关的条款包括这么几条。一是「一椎体压缩性骨折（压缩程度达 1/3）或者粉碎性骨折」。二是「骨盆两处以上骨折或者粉碎性骨折，畸形愈合」。三是「四肢任一大关节（踝关节除外）功能丧失 25% 以上」。同一部位和性质的残疾不得重复计算。两处以上致残的，应分别写明等级（全国，2017 年 1 月 1 日起施行）",
         "note": "三套评残不通用，别搞混。被人打伤、交通事故和其他人身损害，走司法鉴定的《人体损伤致残程度分级》，用来算残疾赔偿金（见第 9 节）。工伤走劳动能力鉴定，用的是另一套十个伤残等级，管的是工伤待遇（见第 19 节）。想享受残疾人的政策待遇，要另外办残疾人证（见第 10 条，残疾人证）。鉴定前把病历、手术记录、复查影像备齐（见第 5 条，病历和影像自己存一份），缺影像是等级被压低最常见的原因。这次受伤和本来就有的老毛病混在一起时，鉴定意见还要写明这次受伤在残疾后果里占多大分量。这一栏直接影响赔多少钱。",
+        "source": "最高人民法院、最高人民检察院、公安部、国家安全部、司法部 (2016). 关于发布《人体损伤致残程度分级》的公告（2016 年 4 月 18 日发布，2017 年 1 月 1 日施行），标准第 4.2、4.4、4.5、5.10.6、6.2 条. <https://www.moj.gov.cn/pub/sfbgw/zwxxgk/fdzdgknr/fdzdgknrtzwj/201908/P020210316701681025917.pdf>",
         "grade": "A",
         "meta": {
           "money": "少",
@@ -10085,6 +10653,7 @@ module.exports = {
         "cost": "证本身不收工本费。评定费和照片费原则上自己出，困难的可以申请减免。带身份证、户口本和 3 张两寸白底照片到户籍地县级残联。评定合格后在村（社区）公示 5 个工作日，残联 10 个工作日内审核完毕。难在要跑这几趟、等这段时间。",
         "gain": "残疾人证「是认定残疾人及其残疾类别、残疾等级的合法凭证，是残疾人依法享有国家和地方政府优惠政策的重要依据」。评定标准是国家标准《残疾人残疾分类和分级》（GB/T 26341-2010）。办证坚持申领自愿、属地管理。视力、听力、言语、肢体、智力、精神及多重七类残疾人均可申领，残疾等级为一至四级。县级残联负责申办受理与核发，依据省级指定的医院或专业机构作出的评定结论。评定结论符合标准的，在村（社区）公示五个工作日，县级残联「在十个工作日内审核完毕」。「办理残疾人证不收取工本费」。评定与照片费用「原则上由申请人个人自理；有条件的地方可由当地财政予以补贴，对特殊困难的申请人应协调有关部门予以减免」。证的有效期十年，期满免费换领。残疾类别或等级发生变化的，可申请重新评定。对评定结论有异议的，可在十个工作日内到地市级残联申请重新评定。仍有异议的，由省级残疾评定专家委员会作出最终结论（全国，2018 年 1 月 1 日起施行）",
         "note": "办不办先算账。证本身不直接发钱。它接上的是残疾人两项补贴：低保家庭中的残疾人领生活补贴，一级二级且需长期照护的领护理补贴，见第 7 节第 8 条（两项补贴）。证还接上各地的康复、辅助器具、税费、就业和交通优惠。这些标准各省差别很大，先在当地残联官网查清楚，再决定跑不跑这一趟。它和司法鉴定的伤残等级、工伤的劳动能力鉴定是三套东西，互不替代（见第 9 条，伤残鉴定要等治疗终结之后再做）。证只限本人使用，不得转借。残疾状况不再符合标准的会被注销，注销后一年内不得重新申请。多重残疾按其中最重的一类定等级。",
+        "source": "中国残疾人联合会、国家卫生和计划生育委员会 (2017). 中华人民共和国残疾人证管理办法（2017 年 5 月 27 日发布，2018 年 1 月 1 日施行；第二、三、五、七、九、十七、十九、二十二、二十五条）. <https://www.bdpf.org.cn/cms68/web1459/subject/n1/n1459/n1508/n1509/n1512/c68465/content.html>",
         "grade": "A",
         "meta": {
           "money": "少",
@@ -10104,6 +10673,7 @@ module.exports = {
         "cost": "不花钱。写一封感谢信，或者在满意度平台上填一次，十几分钟。",
         "gain": "《医疗机构工作人员廉洁从业九项准则》（国卫医发〔2021〕41 号）第七项：「维护诊疗秩序，不破坏就医公平。坚持平等原则，共建公平就医环境。严禁利用号源、床源、紧缺药品耗材等医疗资源或者检查、手术等诊疗安排收受好处、损公肥私」。第八项：「共建和谐关系，不收受患方『红包』。恪守医德、严格自律」。同一项还写明「严禁索取或者收受患者及其亲友的礼品、礼金、消费卡和有价证券、股权、其他金融产品等财物」。患方出钱的饭局和娱乐也一样：「严禁参加其安排、组织或者支付费用的宴请或者旅游、健身、娱乐等活动安排」。文件同时要求医疗机构落实主体责任、开展督查、「坚决查处违规行为」。满意度评价被写进了三级公立医院的绩效考核。依据是《国务院办公厅关于加强三级公立医院绩效考核工作的意见》（国办发〔2019〕4 号）。文件说：「三级公立医院绩效考核指标体系由医疗质量、运营效率、持续发展、满意度评价等 4 个方面的指标构成」。文件还写明：「医院满意度由患者满意度和医务人员满意度两部分组成……」。后面接着说，要「通过门诊患者、住院患者和医务人员满意度评价，衡量患者获得感及医务人员积极性」。这套评价还有全国统一的平台：「国家建立公立医院满意度管理制度……」。时间表是：「2019 年 3 月底前，全国三级公立医院全部纳入国家卫生健康委满意度调查平台。各地要应用国家卫生健康委满意度调查平台，将调查结果纳入三级公立医院绩效考核」。医院还必须管投诉。依据是《医疗机构投诉管理办法》（国家卫生健康委令第 3 号，2019 年施行）第二条。投诉管理是指患者就医疗服务行为、医疗管理、医疗质量安全等方面「提出意见、建议或者投诉请求」。医院要负责调查、处理和反馈。「二级以上医疗机构应当设置医患关系办公室或者指定部门（以下统称投诉管理部门）统一承担投诉管理工作」。投诉管理部门的职责包括「统一受理投诉，调查、核实投诉事项，提出处理意见，及时答复患者」。医疗机构「应当鼓励工作人员主动收集患者对医疗服务、医疗质量安全等方面的意见和建议」（全国）",
         "note": "受益人是你自己，也是救了你的那个人。通宵抢救之后想谢是人之常情，可以谢，要改的只是形式。红包和烟酒把风险转给了对方，感谢信、锦旗和满意度评价是制度里认可的方式。已经送出去、对方推回来的，别当成嫌少或者摆架子，那是他按规定必须做的。另外分清楚两件事：送医生红包归行业纪律和医院管，送办案、执法人员财物是刑法上的行贿罪，两件事不是一个量级，后者见第 8 节第 40 条。写感谢信、送锦旗医院普遍接受，但「会进个人和科室记录」是经验之谈，没有文件规定。有文件依据的是满意度调查结果纳入三级公立医院绩效考核这一条。对诊疗本身有疑问，就当场要求封存病历（见本节第 6 条，封存病历），并留存病历与影像（第 5 条，病历和影像自己存一份）",
+        "source": "国家卫生健康委、国家医保局、国家中医药局 (2021). 关于印发医疗机构工作人员廉洁从业九项准则的通知（国卫医发〔2021〕41 号）. 国务院公报 <http://www.gov.cn/gongbao/content/2022/content_5678098.htm>；国务院办公厅 (2019). 关于加强三级公立医院绩效考核工作的意见（国办发〔2019〕4 号）. <https://www.gov.cn/zhengce/zhengceku/2019-01/30/content_5362266.htm>；国家卫生健康委 (2019). 医疗机构投诉管理办法（委令第 3 号）. <https://www.gov.cn/zhengce/zhengceku/2019-10/08/content_5436976.htm>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -10123,6 +10693,7 @@ module.exports = {
         "cost": "不花钱。看牙前在国家医保局的公众号上查一次机构名单，当面把价目问清，十几分钟。",
         "gain": "国家医保局 2024 年 1 月的公告说，常规单颗牙种植费用由三部分构成。一是医疗服务费，采取包干的方式。包干范围包括「种植全过程的诊查费、生化检验和影像检查费、种植体植入费、牙冠置入费、扫描设计建模费，不包括拔牙、牙周洁治、根管治疗、植骨、软组织移植」。「各地三级公立医院单颗常规种植牙的医疗服务收费原则上不超过4500元」，经济发达地区按 2022 年的专项治理通知最多可以放宽 20%。二是种植体，2023 年 1 月全国集中采购，「中选价格区间为548元—1855元，均价900余元」。牵头的四川省医保局公布，进口的高价品牌从采购中位价 5000 元降到 1850 元左右，用量最大的几个品牌从 1500 元左右降到 770 元左右。三是牙冠，「价格区间为100元—656元，均价300余元」。国家医保局 2023 年下半年的新闻发布会说，各地治理措施在 4 月底 5 月初全部落地，「种植牙整体费用从平均1.5万元降至6000－7000元左右」。医保报不报：劳动保障部等部门 1999 年的文件把「义齿」（假牙）和「非功能性整容、矫形手术」列为基本医保不予支付。国家医保局 2019 年答复政协提案时说，「美容类（包括牙缺失修复、矫正等）的诊疗项目,不纳入医保基金支付范围。但是对于牙科治疗类的诊疗项目，国家层面没有排除，各地也普遍纳入了医保支付范围」（全国，截至 2026 年 10 月）",
         "note": "4500 元这条线只管公立医院。民营机构自己定价，但专项治理通知要求它们不得用虚假的或误导性的「补贴」「低价」诱导患者。广告上的低价往往只是种植体一项，拔牙、植骨这些包干之外的项目才是加价的地方，所以签字前要拿到一份写清每项价格的单子。承诺参与价格治理的机构名单由国家医保局在官方微信公众号上公布。缺一两颗牙不一定非种不可，固定义齿和活动义齿也是修复方式，价格没有跟着变，问医生哪种适合你。职工医保个人账户能不能付种牙，全国没有统一说法，问当地医保部门；个人账户怎么给家人用见第 5 节第 13 条（家庭共济）。缺牙为什么要补见第 2 节第 10 条（缺牙及时补）。收益量级定为中：降价是政策带来的，读者自己这一步能省下的，主要是包干外加价和高价机构的那部分，单颗几千元",
+        "source": "国家医疗保障局 (2024). 关于发布“承诺参与口腔种植价格治理医疗机构名单”等信息的公告（2024 年 1 月 12 日）. <https://www.nhsa.gov.cn/art/2024/1/12/art_109_11954.html>；国家医疗保障局 (2022). 关于开展口腔种植医疗服务收费和耗材价格专项治理的通知（医保发〔2022〕27 号，第四、六条）. <https://www.gov.cn/zhengce/zhengceku/2022-09/08/content_5709065.htm>；国家医疗保障局 (2023). 国家医保局举行 2023 年下半年例行新闻发布会（2023 年 9 月 22 日）. <https://www.nhsa.gov.cn/art/2023/9/22/art_14_11321.html>；四川省医疗保障局 (2023). 口腔种植体系统集中带量采购拟中选结果（2023 年 1 月 11 日）. <https://ylbzj.sc.gov.cn/scsybj/nc020100/2023/1/11/ac5565c7e0454890be086a2bc41f9acd.shtml>；劳动和社会保障部等 (1999). 关于印发城镇职工基本医疗保险诊疗项目管理、医疗服务设施范围和支付标准意见的通知（劳社部发〔1999〕22 号，附件一）. <https://policy.mofcom.gov.cn/claw/clawContent.shtml?id=39317>；国家医疗保障局 (2019). 关于政协十三届全国委员会第二次会议第 4043 号提案答复的函. <https://www.nhsa.gov.cn/art/2019/12/3/art_26_2096.html>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -10144,6 +10715,7 @@ module.exports = {
         "cost": "不花钱。打一个电话就行。",
         "gain": "户口登记条例第八条第二款：「公民因意外事故致死或者死因不明，户主、发现人应当立即报告当地公安派出所或者乡、镇人民委员会」。意思是：出了意外，或者不知道人是怎么没的，户主和发现的人要马上报派出所或者乡镇政府。殡葬管理条例第二十三条：「自然人正常死亡的，医疗卫生机构应当及时出具死亡证明。涉及公安机关依法处置且未经医疗卫生机构救治的非正常死亡案（事）件的逝者，由公安机关出具死亡证明」。意思是：正常病故的，由给他看病的医疗机构开死亡证明。没经医院救治、又归公安处理的那种，由公安开。非正常死亡的死亡证明只有公安能开。现场被动过，就既说不清也不好开。后面火化、销户、保险理赔，全都卡在这一张纸上",
         "note": "长期卧病、在家里临终的，算正常死亡。可以找生前给他看病的机构开证，也可以找住处这一片的社区卫生服务中心、乡镇卫生院。死亡证明谁救治谁开，见第 2 条（死亡证明）。分不清是哪一种，就按非正常处理，先打 110，警察到场调查完照样能出证。如果先把现场收拾干净再报警，谁也帮不了你。不要自己搬遗体、给他擦洗换衣服，也不要收走药瓶和字条。",
+        "source": "全国人大常委会 (1958). 中华人民共和国户口登记条例（第八条）. <http://www.gd.gov.cn/zwgk/wjk/zcfgk/content/mpost_2531969.html>（广东省人民政府门户网站刊登）；国务院 (2026). 殡葬管理条例（国务院令第 824 号，自 2026 年 3 月 30 日起施行，第二十三条）. <https://www.gov.cn/zhengce/zhengceku/202601/content_7054169.htm>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -10163,6 +10735,7 @@ module.exports = {
         "cost": "不花钱。",
         "gain": "《人口死亡信息登记管理规范（试行）》说：在医疗卫生机构内死亡的，由「负责救治的医疗卫生机构签发」，在医院或者卫生院走的，找管救治的那一家开。在家中或其他场所正常死亡的，「由本辖区社区卫生服务机构或乡镇（街道）卫生院签发」，找住处这一片的社区卫生服务中心、乡镇或街道卫生院开。公安司法机构判断为非正常死亡的，由公安司法部门按现行规定及程序办理。2026 年五部门通知说：《死亡证明》「纸质版与电子证照具有同等法律效力」，电子的和纸质的一样管用。死因已明确的正常死亡，要在死亡发生后一日内签发。证明丢了，可以向原签发机构申请补发一次。基本信息有误的，可以凭材料申请重新签发一次",
         "note": "销户、火化、取公积金、领社保待遇、保险理赔、办继承，每一件都要用它。拿到手先多复印几份，能开电子证照的一并申请。补发只有一次机会，原件别弄丢。名字、身份证号有错要当场改，因为等到办继承时才发现，每个窗口都要重跑一遍。",
+        "source": "国家卫生计生委办公厅 (2014). 人口死亡信息登记管理规范（试行）（国卫办规划发〔2014〕68 号，第九条）. <https://mzj.sz.gov.cn/szmz/pc/zwgk/jcxxgk/zcfg/byfw/content/post_2952215.html>（深圳市民政局转发）；国家卫生健康委、公安部、民政部、国家中医药局、国家疾控局 (2026). 关于加强居民死亡医学证明信息登记和电子证照管理工作的通知（国卫规划发〔2026〕5 号）. <https://wjw.fujian.gov.cn/xxgk/fgwj/gjwj/202602/t20260228_7102810.htm>（福建省卫生健康委员会转发）",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -10182,6 +10755,7 @@ module.exports = {
         "cost": "不花钱。",
         "gain": "殡葬管理条例第二十五条：「遗体接运、存放、防腐、整容、火化服务，由殡仪馆专门负责提供」。这几件事别家做不了。第二十四条：「医疗卫生机构的太平间不得外包，不得开展殡仪服务，可以为遗体暂时停放提供便利服务」。医院太平间只能临时放一放，不能承办丧事。第二十七条：「殡仪馆存放遗体一般不超过 3 日，需要延期存放的，丧属或者遗体移交方应当在殡仪馆办理延期存放手续」。要多放几天，就去殡仪馆办延期。第二十八条：「殡仪馆应当凭死亡证明和火化确认书火化遗体，并出具火化证明」。两样材料缺一不可，火化完会给你一张火化证明。第二十九条：「在实行火葬的地区，遗体应当就地、就近在殡仪馆火化」，要在人去世的地方就近找殡仪馆火化",
         "note": "在医院去世后凑上来的「一条龙」，多半不是殡仪馆的人。接运本身属于基础项目，有定价，见第 6 条（基础项目清单）。火化证明收好，办继承、保险、迁骨灰都要用。本地实行火葬还是土葬，由省级政府划定。少数民族的丧葬习俗受条例第九条保护。该火化却土葬的，或者在公墓和生态安葬区域外埋葬、修坟的，民政部门会责令限期改正（限期改回来）。",
+        "source": "国务院 (2026). 殡葬管理条例（国务院令第 824 号，自 2026 年 3 月 30 日起施行，第八、九、二十四、二十五、二十七、二十八、二十九条）. <https://www.gov.cn/zhengce/zhengceku/202601/content_7054169.htm>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -10201,6 +10775,7 @@ module.exports = {
         "cost": "不花钱。难的是在那个时候还想得起来提。",
         "gain": "尸检的时限写在医疗纠纷预防和处理条例第二十六条。原文是：「患者死亡，医患双方对死因有异议的，应当在患者死亡后 48 小时内进行尸检；具备尸体冻存条件的，可以延长至 7 日」。所以想查清死因，要在人去世后 48 小时内做尸检，医院有冷冻条件的最多放宽到 7 天。同一条还写着：「尸检应当经死者近亲属同意并签字，拒绝签字的，视为死者近亲属不同意进行尸检」。家属不签字，就当作不同意。还写着：「不同意或者拖延尸检，超过规定时间，影响对死因判定的，由不同意或者拖延的一方承担责任」。谁不同意、谁拖过了时间，后面查不清死因的责任就算谁的。第二十四条：封存、启封病历资料「应当在医患双方在场的情况下进行」。病历装封和拆封，你和医院都得在场",
         "note": "过了这个时限再说「当初就觉得不对」，责任反过来落在拖延的那一方。遗体一旦火化，就再没有尸检的可能，所以这件事要在联系殡仪馆之前定下来。病历怎么封存见第 24 节。",
+        "source": "国务院 (2018). 医疗纠纷预防和处理条例（国务院令第 701 号，第二十四、二十六条）. <https://www.gov.cn/zhengce/content/2018-08/31/content_5318057.htm>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -10220,6 +10795,7 @@ module.exports = {
         "cost": "不花钱。带上死亡证明和户口簿，去派出所跑一趟。",
         "gain": "户口登记条例第八条第一款：「公民死亡，城市在葬前，农村在一个月以内，由户主、亲属、抚养人或者邻居向户口登记机关申报死亡登记，注销户口。公民如果在暂住地死亡，由暂住地户口登记机关通知常住地户口登记机关注销户口」。意思是：城里在下葬前办，农村在一个月内办。户主、亲属、抚养人或者邻居都可以去户口登记机关（派出所）报死亡、销户口。人是在外地暂住时走的，由暂住地派出所通知户籍所在地派出所销户",
         "note": "户口一直挂着，办继承过户、领待遇、退保都会卡住，这些窗口都看户籍状态。养老金要是还照发，那是冒领，早晚要退回去。去派出所时顺便问清楚：社保、医保待遇怎么停，丧葬补助怎么申领。那几笔钱见第 9 条（公积金余额、社保待遇）。",
+        "source": "全国人大常委会 (1958). 中华人民共和国户口登记条例（第八条）. <http://www.gd.gov.cn/zwgk/wjk/zcfgk/content/mpost_2531969.html>（广东省人民政府门户网站刊登）",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -10239,6 +10815,7 @@ module.exports = {
         "cost": "不花钱。出发前花几分钟看一眼清单。",
         "gain": "遗体接运、遗体存放、遗体告别、遗体火化、骨灰寄存、生态安葬，都在国家的基础项目清单里。政府举办的殡葬服务机构提供的骨灰格位安葬，也在清单里。这些项目的收费标准依法制定，价钱按规定来定，不由殡仪馆自己说了算。非基础项目清单由设区的市级以上民政部门（地级市及以上的民政部门）确定",
         "note": "省、自治区、直辖市可以在国家清单的基础上再加项目。先问清楚哪几项属于基础项目、当地的收费标准是多少，再谈其余的。清单里的项目价钱按规定定死，清单外的是自选的，分清这两类，被多收的那部分才有得说。想把亲人的后事办得体面一点没有错，不劝你从简，钱花在哪儿由你自己定。",
+        "source": "国务院 (2026). 殡葬管理条例（国务院令第 824 号，2025 年 11 月 14 日国务院第 72 次常务会议修订通过，「自2026年3月30日起施行」）. <https://www.gov.cn/zhengce/zhengceku/202601/content_7054169.htm> 第五条：「殡葬服务分为基础项目和非基础项目，收费政策由国务院发展改革部门、财政部门会同国务院民政等部门制定。」「国家制定殡葬服务基础项目清单，将遗体接运、遗体存放、遗体告别、遗体火化、骨灰寄存、生态安葬以及政府举办的殡葬服务机构提供的骨灰格位安葬等纳入清单范围」；第五十条「殡葬服务实行清单化管理并动态调整，禁止在清单之外设立项目、收取费用。」",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -10258,6 +10835,7 @@ module.exports = {
         "cost": "不花钱。难的是在那个当口还愿意较真。",
         "gain": "条例列了五类价格违法行为，下面说其中四类。不挂价目表、收比标价更多的钱，属于不明码标价或者在标价之外加价。不买这个就不给办那个，属于捆绑或者附加不合理条件强制销售。硬塞给你另一家的收费服务，属于强制或者变相强制接受第三方有偿服务。换个名目多收钱，属于变相提高收费标准。另外还禁止「分解项目、扩大范围收费等形式变相提高收费标准」。把一项服务拆成好几项分别收费，或者把收费范围往外扩，都在禁止之列",
         "note": "查处价格违法归市场监管部门，殡葬服务本身归民政部门。当场先要一张价目表，收费凭据和聊天记录都留好，事后再去投诉也来得及。",
+        "source": "国务院 (2026). 殡葬管理条例（国务院令第 824 号，2025 年 11 月 14 日国务院第 72 次常务会议修订通过，「自2026年3月30日起施行」）. <https://www.gov.cn/zhengce/zhengceku/202601/content_7054169.htm> 第四十二条：「殡葬服务机构不得违反有关规定擅自设立收费项目，或者采取分解项目、扩大范围收费等形式变相提高收费标准。」第四十三条列举的价格违法行为含「（一）不按规定明码标价，或者在标价之外加价或者收取未标明的费用」「（三）采取捆绑、附加不合理条件或者不合理限制等方式，强制或者变相强制销售丧葬用品、提供殡葬相关服务并收取费用」「（四）强制或者变相强制丧属接受第三方的有偿服务，或者利用相关服务网点重复收取费用」；第五十一条要求民政部门与政务服务便民热线建立信息共享监督机制，「对丧属反映的殡葬服务问题，应当会同有关部门及时予以处理并将处理结果告知丧属」",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -10277,6 +10855,7 @@ module.exports = {
         "cost": "不花钱。问一句备没备案。",
         "gain": "没备案的中介，不在民政部门管的殡葬服务信息系统里。以欺骗手段违规收费、诱导大操大办、强迫接受服务、倒卖逝者信息的，会被依法处置，还会在系统中标注、向社会公开，谁都能看到",
         "note": "「倒卖逝者信息」是这一行里最常见的坑。刚办完手续就接到一堆推销电话，多半是信息被转卖了。网络祭扫平台也一样受管。条例第四十五条不许它诱导消费，也不许它违法处理逝者的信息。",
+        "source": "国务院 (2026). 殡葬管理条例（国务院令第 824 号，2025 年 11 月 14 日国务院第 72 次常务会议修订通过，「自2026年3月30日起施行」）. <https://www.gov.cn/zhengce/zhengceku/202601/content_7054169.htm> 第四十一条：「除殡葬服务机构外，从事殡葬服务代理、用品代购、策划主持、信息咨询等殡葬相关服务活动的组织和个人，应当向县级人民政府民政部门备案。」「对存在以欺骗等手段违规收费、诱导大操大办、强迫接受服务、倒卖逝者信息等损害丧属权益行为的依法处置，并在殡葬服务信息系统中进行标注，向社会公开。」",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -10296,6 +10875,7 @@ module.exports = {
         "cost": "不花钱，但要跑几个窗口。去之前备齐死亡证明和亲属关系证明。",
         "gain": "住房公积金账户余额（他公积金账户里还剩的钱），继承人、受遗赠人可以提取。受遗赠人是指写进遗嘱、要把东西留给他的那个人。因工死亡的，另有三笔钱：丧葬补助金、供养亲属抚恤金、一次性工亡补助金。养老保险个人账户里剩的钱，社会保险法写明可以继承。参加职工养老保险的人因病或者非因工死亡，家属还能领丧葬补助金和抚恤金，合称遗属待遇。企业职工的标准全国统一公式。丧葬补助金是本省上一年城镇居民月人均可支配收入的 2 倍。抚恤金以这个月收入为基数，按缴费年限发 3 到 24 个月：不满 5 年 3 个月，5 到 10 年 6 个月，10 到 15 年 9 个月，15 年以上每多 1 年加 1 个月，最多 24 个月。已经退休的，每领 1 年养老金减 1 个月，最少 9 个月",
         "note": "公积金那笔最常被忘掉，因为它不在银行账户里，也不会自动进遗产分配。养老保险个人账户里剩的钱和遗属待遇是分开算、分开发的，要去参保地的社保经办窗口一起办。各地要的材料不一样。缴费不满 5 年的，遗属待遇合起来不超过他自己交的钱。这套公式出自企业职工养老保险的办法，机关事业单位和城乡居民养老保险的遗属待遇去窗口问。遗嘱和继承的形式要求见第 17 节。",
+        "source": "国务院 (2026). 住房公积金管理条例（国务院令第 844 号修改，2026 年 9 月 20 日起施行）第二十四条末款. <https://www.gov.cn/gongbao/2026/issue_12946/202608/content_7079363.html>：「职工死亡或者被宣告死亡的，职工的继承人、受遗赠人可以提取职工住房公积金账户内的存储余额；无继承人也无受遗赠人的，职工住房公积金账户内的存储余额纳入住房公积金的增值收益。」；工伤保险条例第三十九条的三笔待遇见第 19 节. <https://www.gov.cn/gongbao/content/2011/content_1778064.htm>；全国人大常委会 (2018 修正). 社会保险法（第十四、十七条）：「个人死亡的，个人账户余额可以继承」「参加基本养老保险的个人，因病或者非因工死亡的，其遗属可以领取丧葬补助金和抚恤金」. <https://flk.npc.gov.cn/detail?id=ff8080816f135f46016f210989b9179a>（国家法律法规数据库）；人力资源社会保障部、财政部 (2021). 企业职工基本养老保险遗属待遇暂行办法（人社部发〔2021〕18 号，2021 年 9 月 1 日起施行，第四、五条），原件未公开挂网，条文按广州市花都区人民政府行政复议决定书（花都府行复〔2022〕226 号）的逐字引用核对：「丧葬补助金的标准，按照参保人员死亡时本省……上一年度城镇居民月人均可支配收入的2倍计算」「缴费年限不满5年的，发放月数为3个月……缴费年限30年以上的，按照30年计算，发放月数最高为24个月」. <https://www.huadu.gov.cn/xxgk/xzfy/content/post_8672730.html>；福建省人力资源和社会保障厅. 常见问题：「每领取1年基本养老金减少1个月，发放月数最低为9个月」「累计缴费年限不足5年的，其遗属待遇（含丧葬补助金和抚恤金）标准不得超过其个人缴费之和」. <http://rst.fujian.gov.cn/wz/cjwt/czzgly/202311/t20231113_6294929.htm>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -10315,6 +10895,7 @@ module.exports = {
         "cost": "不花钱。平台不配合，才需要去投诉或者起诉。",
         "gain": "法律明写：自然人死亡的，近亲属为了自身合法、正当利益，可以对死者的相关个人信息行使查阅、复制、更正、删除等权利。近亲属可以要求平台把他的信息拿出来看、复制一份、改错、删掉",
         "note": "法条里有一句「死者生前另有安排的除外」，生前设过账号继承人、或者留过明确意愿的，按他留下的来。所以趁人清醒的时候，值得把账号和密码的去向写下来，见第 17 节。注销账号和删除个人信息是两件事，见第 14 节。",
+        "source": "全国人大常委会 (2021). 个人信息保护法. 中国人大网. <http://www.npc.gov.cn/npc/c2/c30834/202108/t20210820_313088.html> 第四十九条：「自然人死亡的，其近亲属为了自身的合法、正当利益，可以对死者的相关个人信息行使本章规定的查阅、复制、更正、删除等权利；死者生前另有安排的除外。」；第五十条「个人信息处理者应当建立便捷的个人行使权利的申请受理和处理机制。拒绝个人行使权利的请求的，应当说明理由」「个人可以依法向人民法院提起诉讼」",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -10336,6 +10917,7 @@ module.exports = {
         "cost": "不花钱。要花点时间接一家持牌支付机构的产品。持牌支付机构就是拿到了央行支付牌照的公司。用它的分账或者担保交易功能，买家的钱直接结给卖家，不进平台自己的账户",
         "gain": "法规说的支付业务，是「根据收款人或者付款人提交的电子支付指令转移货币资金」。说白了就是按别人的指令替人转钱。要做这门生意，「应当经中国人民银行批准，取得支付业务许可」。注册资本最低 1 亿元，而且是实缴货币资本，这 1 亿元要真金白银打进公司账户。「未经依法批准，擅自设立非银行支付机构、从事或者变相从事支付业务的，由中国人民银行依法予以取缔，没收违法所得」。没批准就干这件事的，直接关停，挣的钱收走。违法所得 50 万元以上的，再罚违法所得的 1 到 5 倍。没有违法所得、或者不足 50 万元的，罚 50 万到 200 万元。法定代表人和直接负责的人另外罚 10 万到 50 万元。刑法还把「非法从事资金支付结算业务」算作非法经营。情节严重的判 5 年以下，特别严重的判 5 年以上。什么算「情节严重」，最高人民法院和最高人民检察院的解释里划了线。这条线是非法经营数额 500 万元以上，或者违法所得 10 万元以上（全国，2024 年 5 月起）",
         "note": "把钱设计成不进你的账户，这是唯一稳妥的做法。市面上管这种代收代付叫「二清」，但官方文件里没有这个词。实施细则用的说法是「变相从事支付业务」，意思是没经批准却按用户的指令替人转钱。最高人民法院和最高人民检察院的那份解释只列了三种情形：编假交易套现、用单位账户套现、用支票套现。它没有点名平台代收代付，所以不能说平台代收代付「一定构成犯罪」",
+        "source": "国务院 (2023). 非银行支付机构监督管理条例（国务院令第 768 号，第二、六、八、二十七、四十七条）. <https://www.gov.cn/gongbao/2024/issue_11086/202401/content_6924970.html> ; 中国人民银行 (2024). 非银行支付机构监督管理条例实施细则（中国人民银行令〔2024〕第 4 号，第六十八条）. <https://www.gov.cn/gongbao/2024/issue_11546/202408/content_6970979.html> ; 全国人大 (1997). 刑法（第二百二十五条第三项）. <https://www.spp.gov.cn/spp/fl/201802/t20180206_364975.shtml> ; 最高人民法院、最高人民检察院 (2019). 关于办理非法从事资金支付结算业务、非法买卖外汇刑事案件适用法律若干问题的解释（第一、三、四条）. <https://www.spp.gov.cn/xwfbh/wsfbt/201901/t20190131_407161.shtml>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -10355,6 +10937,7 @@ module.exports = {
         "cost": "备案不花钱。增值电信业务经营许可证要花钱，它管的是「向用户收钱的网站能不能开」。办这张证先得有公司。只在省内经营的，注册资本不低于 100 万元。跨省经营的，不低于 1000 万元。审查期 60 日，证的有效期 5 年",
         "gain": "法规原话是「国家对经营性互联网信息服务实行许可制度；对非经营性互联网信息服务实行备案制度。未取得许可或者未履行备案手续的，不得从事互联网信息服务」。收钱的要先拿许可证，不收钱的要先备案，两样都没有就不能开站。什么叫经营性？法规说是「通过互联网向上网用户有偿提供信息或者网页制作等服务活动」。简单说就是向用户收钱。撮合交易的那一类叫在线数据处理与交易处理业务，业内简称 EDI。法规给它的定义是「利用各种与公用通信网或互联网相连的数据与交易/事务处理应用平台，通过公用通信网或互联网为用户提供在线数据处理和交易/事务处理的业务」。它还「包括交易处理业务、电子数据交换业务和网络/电子设备数据处理业务」。说的就是网站替用户在线处理数据，或者替买卖双方撮合和处理交易。没办证就经营，或者超范围经营，都要没收违法所得，再罚违法所得的 3 到 5 倍。超范围经营就是办了证，干的事却超出证上写的范围。没有违法所得、或者违法所得不足 5 万元的，罚 10 万到 100 万元。情节严重的，责令关闭网站（全国）。收钱不等于一定要办证。广东省通信管理局 2025 年 10 月发的问答说，按工信部要求，下面三种不用办这张证。第一种，企业在自己的网站、App 上「以自营方式直接销售自身或其它企业的商品或服务」，而且没有别的单位或个人入驻开店。第二种，企业在自己的网站、App 上只发自己的信息，不给别人提供发布信息的平台。第三种，企业只靠微信、支付宝这些平台上的小程序、公众号、视频号、网店做生意，「且无其他独立运营平台」。反过来，只要让别人入驻开店、或者让用户在你这里发信息，就不在这三种里面",
         "note": "你要做的是不是 EDI 那一类，自己拿《电信业务分类目录》里的定义对号入座。官方没有任何一句话明说「带撮合和资金处理的电商平台必须办 EDI 许可」。工信部的办事指南只说「按照业务界定申请相应的电信业务经营许可」。所以要不要办，只能拿定义自己判断。还有一点：这张证个人办不了，申请人必须是依法设立的公司。自营不用办证那三种情形，出自广东省通信管理局的问答，它写明是按工信部要求，但别的省没查到同样的公开文字。拿不准就先打电话问属地的通信管理局。这份问答也提醒，办证不用找中介，只在工信部「电信业务市场综合管理信息系统」上交材料，官方不收费",
+        "source": "广东省通信管理局 (2025). 关于办理增值电信业务经营许可证的常见问题解答（2025 年 10 月 17 日，第一项）. <https://gdca.miit.gov.cn/bsfw/bszn/jyxk/tzgg/art/2025/art_6bcbfa4f041247868c0de08e765b33e9.html> ; 国务院 (2000). 互联网信息服务管理办法（国务院令第 292 号，2024 年 12 月 6 日第二次修订，第三、四、七、十九条）. <https://www.gov.cn/gongbao/content/2011/content_1860864.htm> ; 国务院 (2024). 关于修改和废止部分行政法规的决定（国务院令第 797 号，第十八项）. <https://www.gov.cn/gongbao/2025/issue_11786/202501/content_6997034.html> ; 国务院 (2000). 电信条例（2016 年第二次修订，第七、九、十三、六十九条）. <https://www.gov.cn/gongbao/content/2016/content_5139478.htm> ; 工业和信息化部 (2017). 电信业务经营许可管理办法（工信部令第 42 号，第六、九、十一、十四条）. <https://www.gov.cn/gongbao/content/2017/content_5240090.htm>",
         "grade": "A",
         "meta": {
           "money": "多",
@@ -10374,6 +10957,7 @@ module.exports = {
         "cost": "网络文化经营许可证俗称网文证，它管的是「能不能靠直播、游戏解说这类网络表演赚钱」。由省级文化行政部门审批，受理后 20 日内给结果，有效期 3 年，到期前 30 日去续办。视听节目许可管的是「能不能在网上放节目」，它要求申请人是国有独资或者国有控股单位",
         "gain": "做网络表演的单位要先办证。法规原话是「应当根据《互联网文化管理暂行规定》，向省级文化行政部门申请取得《网络文化经营许可证》，许可证的经营范围应当明确包括网络表演」。打游戏给人看、给人讲解的也按这一套管，法规原话是「参照本办法进行管理」。所有网络表演的视频资料，「保存时间不得少于60日」，播过的视频你要自己留满 60 天。没批准就做经营性互联网文化活动的，责令停止、给予警告，再罚 3 万元以下。叫了还不停的，列入文化市场黑名单。在网上放节目是另一张证，「应当取得《信息网络传播视听节目许可证》」。申请人要「具备法人资格，为国有独资或国有控股单位」，必须是国家全资或者国家控股的单位，民营公司基本拿不到。没这张证就做的，予以警告、责令改正，可以再罚 3 万元以下。情节严重的，按广播电视管理条例处罚（全国）",
         "note": "哪种业务配哪张证，七部门那份文件写得最清楚。靠直播赚钱的平台，要网文证加 ICP 备案，ICP 备案就是网站在工信部登记的那道手续。在网上放节目的，要视听证，或者完成登记。发新闻的，要互联网新闻信息服务许可证。另外，中国政府网 2025 年转发的《互联网文化管理暂行规定》登的是 2011 年未修订的原文，引用要以文化和旅游部的现行文本为准",
+        "source": "文化部 (2016). 网络表演经营活动管理办法（文市发〔2016〕33 号，第二、四、六、十三、二十条）. <https://zwgk.mct.gov.cn/zfxxgkml/scgl/202012/t20201206_918194.html> ; 文化部 (2011). 互联网文化管理暂行规定（文化部令第 51 号，2017 年经文化部令第 57 号修订，第七、八、九、十六、二十一、二十八条）. <https://zwgk.mct.gov.cn/zfxxgkml/zcfg/bmgz/202012/t20201204_905340.html> ; 广电总局、信息产业部 (2007). 互联网视听节目服务管理规定（第 56 号令，2015 年修订，第二、七、八、二十四条）. <https://www.gov.cn/zhengce/2022-08/23/content_5722664.htm> ; 国家网信办等七部门 (2021). 关于加强网络直播规范管理工作的指导意见（国信办发文〔2021〕3 号，第 9 项）. <https://www.gov.cn/zhengce/zhengceku/2021-02/10/content_5586472.htm>",
         "grade": "A",
         "meta": {
           "money": "多",
@@ -10393,6 +10977,7 @@ module.exports = {
         "cost": "备案不花钱。它跟着服务器一起在服务商那里提交，通常要等几天到几周。查一次服务商有没有资质，十分钟就够",
         "gain": "法规原话是「未经备案，不得在中华人民共和国境内从事非经营性互联网信息服务」。不向用户收钱的网站，只要放在境内，也得先备案。没备案的，责令限期改正，再罚 1 万元。拒不改正的，关闭网站。帮你把服务器接上网的那家服务商也受管：它「不得为未经备案的组织或者个人从事非经营性互联网信息服务提供互联网接入服务」。替你收钱的服务商也一样。法规说这类服务商「不得为未依法取得经营许可证或者履行非经营性互联网信息服务备案手续的单位或者个人提供接入或者代收费等服务」。意思是没证也没备案的站，正规服务商不许接。再有，机房托管和云主机在法规里叫互联网数据中心业务，宽带接入叫互联网接入服务业务，这两样本身就要许可，服务商自己先得有证。网站主页上不标备案号的，责令改正，再罚 5000 元到 5 万元（全国）",
         "note": "谈价之前先查服务商有没有证。查证用工信部电信业务市场综合管理信息系统 tsm.miit.gov.cn，按公司全称或者证号查。查网站备案用 beian.miit.gov.cn。没有相应许可的「机房」，出事那天你连找谁申诉都不知道。把机器放到境外，确实能绕开备案。但用户在境内、钱在境内，本节第 5 到第 10 条写的那些义务一条都不会少，还多出一层数据出境的成本",
+        "source": "信息产业部 (2005). 非经营性互联网信息服务备案管理办法（信产部令第 33 号，2024 年经工信部令第 68 号修订，第五、十三、十八、二十二条）. <https://www.miit.gov.cn/gyhxxhb/jgsj/cyzcyfgs/bmgz/xxtxl/art/2024/art_84a0cfa0ebd049bbbe751dca9a008e56.html> ; 工业和信息化部 (2017). 电信业务经营许可管理办法（工信部令第 42 号，第二十、二十四条）. <https://www.gov.cn/gongbao/content/2017/content_5240090.htm> ; 工业和信息化部 (2015). 电信业务分类目录（2015 年版，B11、B14、B21、B25）. <https://www.miit.gov.cn/zwgk/zcwj/wjfb/tg/art/2020/art_e98406cd89844f7e92ea1bcf3b5301e0.html>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -10412,6 +10997,7 @@ module.exports = {
         "cost": "不花钱。要在后台做卖家的资质核验，还要建一份登记档案。每个季度报一次涉税信息，交易数据留三年。难在它是常年的活，不是办一次就完",
         "gain": "法律对平台有一段要求。原话是「应当要求申请进入平台销售商品或者提供服务的经营者提交其身份、地址、联系方式、行政许可等真实信息，进行核验、登记，建立登记档案，并定期核验更新」。卖家进场前要交身份、地址、联系方式和他该办的许可证。你要核一遍，登记建档，之后隔一段时间还要回头再核一次。「定期」是多久？部门规章说得更细，「至少每六个月核验更新一次」。你还要向市场监管部门报送平台内经营者的身份信息。税务那边也要报，原话是「依照税收征收管理法律、行政法规的规定，向税务部门报送平台内经营者的身份信息和与纳税有关的信息」。所以卖家是谁要报给市场监管，卖家的身份和纳税情况要报给税务。商品和服务信息、交易信息「保存时间自交易完成之日起不少于三年」，从一笔交易做完那天算起，数据至少留三年。上面任何一项没做到的，责令限期改正。逾期不改的，罚 2 万到 10 万元。情节严重的，责令停业整顿，再罚 10 万到 50 万元。涉税信息要「于季度终了的次月内」报送，每个季度结束后的下一个月里就要报掉。没按期报的，罚则一样（全国）",
         "note": "卖家自己也要去办市场主体登记。法律列了几种不用办的：「个人销售自产农副产品、家庭手工业产品，个人利用自己的技能从事依法无须取得许可的便民劳务活动和零星小额交易活动」。「零星小额」有个具体数，网络交易监督管理办法第八条定的是年交易额 10 万元。平台这边还有两件事要做：把已登记和未登记的卖家分别标出来，以及不许删消费者的评价",
+        "source": "全国人大常委会 (2018). 电子商务法（第十、二十七、二十八、三十一、八十条）. <https://flk.npc.gov.cn/detail?id=2c909fdd678bf17901678bf8af050b81> ; 市场监管总局 (2021). 网络交易监督管理办法（市场监管总局令第 37 号，第八、二十四、二十五、三十一条）. <https://www.gov.cn/gongbao/content/2021/content_5602020.htm> ; 国务院 (2025). 互联网平台企业涉税信息报送规定（国务院令第 810 号，第二、三、四、十条）. <https://www.gov.cn/gongbao/2025/issue_12146/202507/content_7030983.html> ; 国家税务总局 (2025). 关于互联网平台企业报送涉税信息有关事项的公告（税务总局公告 2025 年第 15 号）. <https://www.gov.cn/zhengce/zhengceku/202506/content_7029727.htm>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -10431,6 +11017,7 @@ module.exports = {
         "cost": "要花钱雇人审核，这是平台最大的一笔长期开支。举报入口和每一次处置的记录都要留痕。难在它天天都得有人盯，停一天就可能出事",
         "gain": "法规说平台「应当履行信息内容管理主体责任」，用户发的东西由平台自己负责管。具体要「健全用户注册、账号管理、信息发布审核、跟帖评论审核、版面页面生态管理、实时巡查、应急处置和网络谣言、黑色产业链信息处置等制度」。从注册、发帖、评论，到日常巡查和出事处置，每一环都要有写下来的规矩。还「应当在显著位置设置便捷的投诉举报入口」，举报按钮要放在用户一眼看得见、点得到的地方。发现违法信息的，「应当依法立即采取处置措施，保存有关记录，并向有关主管部门报告」。网络安全法说得更具体。原话是「发现法律、行政法规禁止发布或者传输的信息的，应当立即停止传输该信息，采取消除等处置措施，防止信息扩散，保存有关记录，并向有关主管部门报告」。没做到的，责令改正、给予警告、予以通报，可以再罚 5 万到 50 万元。拒不改正、或者情节严重的，罚 50 万到 200 万元，还可能被责令停业整顿、关闭网站或者应用程序、吊销许可证或者营业执照。直接负责的人另外罚 5 万到 20 万元（全国）",
         "note": "审核规则不用自己想，照抄就行。哪九类内容不许发，互联网信息服务管理办法第十五条列得清清楚楚。做直播的还多三件事：要「建立直播内容审核平台」，要能随时掐断一场正在播的直播，法条管这个叫「即时阻断」，还要把直播内容和日志保存 60 日。网络表演的视频资料同样不少于 60 日",
+        "source": "国家互联网信息办公室 (2019). 网络信息内容生态治理规定（网信办令第 5 号，第八、九、十、十六、三十七条）. <http://www.cac.gov.cn/2019-12/20/c_1578375159509309.htm> ; 全国人大常委会 (2025). 网络安全法（2025 年修正，2026 年 1 月 1 日施行，第四十九、六十九条）. <https://www.cac.gov.cn/2025-12/29/c_1768735112911946.htm> ; 国务院 (2000). 互联网信息服务管理办法（第十五、十六、二十三条）. <https://www.gov.cn/gongbao/content/2011/content_1860864.htm>",
         "grade": "A",
         "meta": {
           "money": "少",
@@ -10450,6 +11037,7 @@ module.exports = {
         "cost": "要接一条实名核验通道，这类通道按次收费。产品上按「后台实名、前台自愿」来设计：后台存真名，页面上显示昵称",
         "gain": "法律原话是「网络运营者为用户办理网络接入、域名注册服务，办理固定电话、移动电话等入网手续，或者为用户提供信息发布、即时通讯等服务，在与用户签订协议或者确认提供服务时，应当要求用户提供真实身份信息。用户不提供真实身份信息的，网络运营者不得为其提供相关服务」。没要实名的，或者用户没给真实身份、你还照样让他用的，责令改正。拒不改正、或者情节严重的，罚 5 万到 50 万元，还可能被责令暂停相关业务、停业整顿、关闭网站或者应用程序、吊销许可证或者营业执照。直接负责的人另外罚 1 万到 10 万元。直播服务按「后台实名、前台自愿」的原则，做「基于移动电话号码等方式的真实身份信息认证」。意思是平台后台存着用户的真名，页面上显示什么昵称由用户自己定，核验靠手机号一类方式。直播带货要求更严，是「基于身份证件信息、统一社会信用代码等真实身份信息认证」。统一社会信用代码就是营业执照上那串号（全国）",
         "note": "条号换过位置。网络安全法 2025 年修正，2026 年 1 月 1 日施行。实名这一条从第二十四条移到了第二十六条，罚则从第六十一条移到了第六十四条。条文文字没变。你手上的材料如果还引旧条号，要改过来",
+        "source": "全国人大常委会 (2025). 网络安全法（2025 年修正，2026 年 1 月 1 日施行，第二十六、六十四条；2016 年文本为第二十四、六十一条）. <https://www.cac.gov.cn/2025-12/29/c_1768735112911946.htm> ; 国家互联网信息办公室 (2016). 互联网直播服务管理规定（第十二、十六条）. <https://www.cac.gov.cn/2016-11/04/c_1119847629.htm> ; 国家网信办等七部门 (2021). 网络直播营销管理办法（试行）（国信办发文〔2021〕5 号，第八条）. <https://www.gov.cn/zhengce/zhengceku/2021-04/23/content_5601682.htm>",
         "grade": "A",
         "meta": {
           "money": "少",
@@ -10469,6 +11057,7 @@ module.exports = {
         "cost": "不花钱。在注册和付款这两步各加一道流程：先判断年龄，再确认监护人同意过",
         "gain": "法律原话是「网络直播服务提供者不得为未满十六周岁的未成年人提供网络直播发布者账号注册服务；为年满十六周岁的未成年人提供网络直播发布者账号注册服务时，应当对其身份信息进行认证，并征得其父母或者其他监护人同意」。条例还要求「建立网络直播发布者真实身份信息动态核验机制」，开播的人的身份，你要能随时复核一遍。另外要「合理限制不同年龄阶段未成年人在使用其服务中的单次消费数额和单日累计消费数额」，按年龄给未成年人设单笔和单日的花钱上限。打赏现在分三档：「不得向八周岁以下的未成年人提供打赏服务。向八周岁至十六周岁的未成年人提供打赏服务，应征得其监护人同意。向十六周岁以上的未成年人提供打赏服务，应征得其监护人同意或核验其收入证明材料」。还有一条：限制民事行为能力人没经监护人同意就打赏的，监护人来要钱，法院应予支持，钱能要回去。限制民事行为能力人指法律上还不能完全自己做主的未成年人（全国）",
         "note": "真起了退款争议，按对未成年人最有利的方向处理。这件事的说法改过。2022 年四部门的意见和广电总局 2020 年的通知，说的都是未成年人一律不得打赏。2026 年 4 月的新通知改成按 8 岁、16 岁分档，却没写明前两份作废，官方也没说两者怎么衔接。所以「未成年人一律禁止打赏」这句话现在不准确",
+        "source": "全国人大常委会 (2020). 未成年人保护法（第七十四、七十六条）. <https://www.cac.gov.cn/2020-10/22/c_1604928959588622.htm> ; 国务院 (2023). 未成年人网络保护条例（国务院令第 766 号，第三十一、四十四条）. <https://www.gov.cn/gongbao/2023/issue_10806/202311/content_6913813.html> ; 中央网信办秘书局 (2026). 关于加强网络直播打赏规范管理的通知（第 7 项）. <https://www.cac.gov.cn/2026-04/13/c_1777815804150225.htm> ; 最高人民法院 (2020). 关于依法妥善审理涉新冠肺炎疫情民事案件若干问题的指导意见（二）（法发〔2020〕17 号，第九条）. <https://www.court.gov.cn/fabu/xiangqing/230181.html>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -10488,6 +11077,7 @@ module.exports = {
         "cost": "不花钱。要建一条固定流程：收到通知、转给卖家、收卖家的申辩、把结果公示出来。每一步都留档",
         "gain": "权利人「有权通知电子商务平台经营者采取删除、屏蔽、断开链接、终止交易和服务等必要措施。通知应当包括构成侵权的初步证据」。权利人就是商标、著作权、专利这些权利的主人。光发一句话不算，要附上初步证据。平台接到通知后，「应当及时采取必要措施，并将该通知转送平台内经营者；未及时采取必要措施的，对损害的扩大部分与平台内经营者承担连带责任」。你拖着不处理，多出来的那部分损失，你要和卖家一起赔。卖家申辩之后，平台「在转送声明到达知识产权权利人后十五日内，未收到权利人已经投诉或者起诉通知的，应当及时终止所采取的措施」。意思是把卖家的申辩转给权利人，等 15 天。对方既没投诉也没起诉，就把删掉、下架的恢复回去。平台知道或者应当知道有侵权却不处理的，与侵权人承担连带责任。知识产权部门还可以责令你限期改正，逾期不改的罚 5 万到 50 万元，情节严重的罚 50 万到 200 万元。反过来，「恶意发出错误通知，造成平台内经营者损失的，加倍承担赔偿责任」（全国）",
         "note": "你不是电商平台，只是一般网站，那就走民法典的通知删除规则。区别在于对方申辩之后你要等多久：电商法给了明确的 15 日，民法典只写「合理期限」。另外，把收到的通知、卖家的申辩和你的处理结果公示出来，是电商法第四十四条的明文要求。平台自己组织上传盗版，或者明知侵权还放着不管，「收到通知就删」这条规则护不住它，见第 9 节第 24 条（汉化漫画、搬运影视剧）",
+        "source": "全国人大常委会 (2018). 电子商务法（第四十二、四十三、四十四、四十五、八十四条）. <https://flk.npc.gov.cn/detail?id=2c909fdd678bf17901678bf8af050b81> ; 全国人大 (2020). 民法典（第一千一百九十五、一千一百九十六、一千一百九十七条）. <https://www.court.gov.cn/zixun/xiangqing/233181.html>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -10507,6 +11097,7 @@ module.exports = {
         "cost": "不花钱。最省事的办法是把用户数据留在境内。确实要传到境外的，走标准合同或者做认证",
         "gain": "把境内用户的信息交给境外的公司、或者存到境外的机器上，法律上叫向境外提供个人信息，「应当具备」四项条件之一。一是通过网信部门组织的安全评估。二是经专业机构做个人信息保护认证。三是按网信部门制定的标准合同和境外接收方签约。四是法律、行政法规规定的其他条件。同时你要告诉用户这几样：境外接收方的名称、联系方式、处理目的、处理方式、个人信息的种类，以及他怎么行使自己的权利。而且要「取得个人的单独同意」，专门就这件事问用户一次。具体门槛按累计人数分档。普通企业在法规里叫关键信息基础设施运营者以外的数据处理者。这类企业有一条免办的线，原话是「自当年1月1日起累计向境外提供不满10万人个人信息（不含敏感个人信息）的」。到不了这条线，申报评估、订立标准合同、做认证这三样都免了。10 万人以上不满 100 万人的，应当订立标准合同或者通过认证。100 万人以上的，或者敏感个人信息达到 1 万人以上的，应当申报安全评估（全国，2024 年 3 月起）",
         "note": "服务器放境外不等于「数据没出境」。用户在境内注册，你把他的信息传到境外的机器上，这就是出境。有一类不用走安全评估、认证、标准合同这三条路：跨境购物、跨境寄递、订机票酒店，这些是「为订立、履行个人作为一方当事人的合同」确实必须传的。还要注意人数怎么算：按「自当年 1 月 1 日起累计」算，不是从今天往回数十二个月",
+        "source": "全国人大常委会 (2021). 个人信息保护法（第三十八、三十九、四十条）. <https://www.spp.gov.cn/spp/fl/202108/t20210820_527244.shtml> ; 国家互联网信息办公室 (2024). 促进和规范数据跨境流动规定（网信办令第 16 号，第三、四、五、七、八条）. <https://www.gov.cn/gongbao/2024/issue_11366/202405/content_6954192.html> ; 国家互联网信息办公室 (2022). 数据出境安全评估办法（网信办令第 11 号，第四条）. <https://www.cac.gov.cn/2022-07/07/c_1658811536396503.htm>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -10526,6 +11117,7 @@ module.exports = {
         "cost": "主流云厂商的云主机，每月数百到数千元。小服务商的 VPS，每月几十元起。VPS 就是一台虚拟的小服务器。独立服务器托管每年数千元起，而且硬件要自己买",
         "gain": "三档的差别不在价格，在出事那天你手上有什么。主流云厂商有备案通道，资质是公开的，出故障有公告，合同里有赔偿条款，出了问题能找到人。小服务商价格能低一半，但它超售、跑路、被上游封掉的时候，你没有申诉对象，所以谈价之前先去工信部系统查它有没有增值电信业务经营许可。独立服务器托管只有在两个条件都成立时才合算：带宽或者硬件成本明显更便宜，并且你自己有人做运维。怎么选：没有用户数据的静态站，用最便宜的 VPS 就够。有用户注册和交易的，选能弹性扩容、能快照备份的云主机，备份至少放在两个地方",
         "note": "上面是经验判断，没有文献证据。能真正核查的只有一件事：服务商的许可证。要省钱就在配置和带宽上省，别在资质上省",
+        "source": "作者经验，无直接文献；服务商资质与备案的法定要求见本节第 4 条，日志留存 6 个月和等级保护义务见第 11 节第 16 条",
         "grade": "C",
         "meta": {
           "money": "少",
@@ -10547,6 +11139,7 @@ module.exports = {
         "cost": "几十元一瓶。农村妇女不用花钱，国家的免费增补叶酸项目会发。每天吃一粒，难在天天记得住",
         "gain": "Cochrane 系统综述把 5 项试验、6708 例分娩合起来一起算，证据质量评为高。怀孕前后每天补叶酸，胎儿神经管缺陷的风险 RR 0.31（95% CI 0.17 至 0.58，可信范围），约降低七成。已经生过神经管缺陷孩子的人，再生一个又出问题的风险 RR 0.34（95% CI 0.18 至 0.64），降到原来的三分之一左右。按人群分组来看，0.4 毫克和更高的剂量效果没有差别。单独吃叶酸和吃复合维生素，效果也没有差别",
         "note": "关键是「怀孕前就开始吃」。胎儿的神经管在受孕后 28 天内就长合了。等你测出怀孕再吃，这段时间已经过去大半。所以打算要孩子，就提前 3 个月开始吃。同一篇汇总研究里，叶酸对唇腭裂、先天性心脏病、流产都没有明确效果，别指望它治别的",
+        "source": "De-Regil LM, Peña-Rosas JP, Fernández-Gaxiola AC, Rayco-Solon P (2015). Effects and safety of periconceptional oral folate supplementation for preventing birth defects. Cochrane Database of Systematic Reviews, (12), CD007950. <https://doi.org/10.1002/14651858.CD007950.pub3>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -10566,6 +11159,7 @@ module.exports = {
         "cost": "不花钱，这属于国家基本公共卫生服务项目。要按孕周跑几趟",
         "gain": "《国家基本公共卫生服务规范（第三版）》里有孕产妇健康管理服务。辖区内的常住孕产妇可以做这些。孕早期健康检查 1 次，孕中期 2 次，孕晚期 2 次，产后访视 1 次，产后 42 天健康检查 1 次。孕 13 周前要去建册，同时做第 1 次产前检查。孕中期那两次分别在孕 16 至 20 周、孕 21 至 24 周。孕晚期那两次分别在孕 28 至 36 周、孕 37 至 40 周。地方公开的服务清单里，还包含第一次的一整套化验和产后抑郁筛查",
         "note": "这 5 次是免费的下限，不是产检的全部。医院会按情况加做超声、血糖、胎心监护，这些要自己掏钱。建册越早，妊娠风险分级越早做出来。妊娠风险分级就是按风险高低给孕妇分档，查出是高危的，才能早点转到接得住的医院。人住在外区的，按现在住的地方建册，不用回户籍地",
+        "source": "国家卫生计生委 (2017). 国家基本公共卫生服务规范（第三版）. <https://www.nhc.gov.cn/ewebeditor/uploadfile/2017/04/20170417104506514.pdf>；靖江市人民政府. 国家基本公共卫生服务项目——孕产妇健康管理服务（地方服务清单公开）. <https://www.jingjiang.gov.cn/xxgk/zdlyxxgk/wsjk/art/2023/art_383017a2e7794892bc772bfbe042f379.html>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -10585,6 +11179,7 @@ module.exports = {
         "cost": "不花钱，预防母婴传播项目提供免费检测",
         "gain": "母婴传播就是病从母亲传给孩子。《预防艾滋病、梅毒和乙肝母婴传播工作规范（2020 年版）》有要求。在孕早期或者第一次产前检查的时候，医院要告知相关信息，并「提供适宜、规范的免费检测」，这三项检测不用自己掏钱。再根据结果提供检测后咨询或者转诊。查出阳性也不是绝路。《艾滋病防治条例》第四十四条规定，向感染艾滋病病毒的孕产妇「免费提供预防艾滋病母婴传播的治疗和咨询」。第四十三条要求提供阻断（不让病传给孩子）、治疗、产后访视、婴儿随访和检测等服务。母亲乙肝表面抗原阳性的，新生儿出生时要同时打乙肝疫苗和乙肝免疫球蛋白（见第 20 节第 2 条）",
         "note": "这三项越早查越有用，因为阻断和治疗都需要时间。艾滋病防治条例第三条还写明「任何单位和个人不得歧视艾滋病病毒感染者、艾滋病病人及其家属」，结婚、找工作、看病、上学这些合法权益受法律保护。日常的预防和检测见第 1 节。发生高危行为之后的暴露后阻断见第 13 节",
+        "source": "国家卫生健康委办公厅 (2020). 预防艾滋病、梅毒和乙肝母婴传播工作规范（2020 年版）. <https://wjw.xinjiang.gov.cn/hfpc/zhgl6/202012/08b7de496f0b40e586d4b99d00cf79c4.shtml>（新疆维吾尔自治区卫生健康委员会转载）；国务院 (2006). 艾滋病防治条例（第四十三、四十四条）. <https://wjw.beijing.gov.cn/zwgk_20040/zcwj2022/flfg/202304/t20230408_2992986.html>（北京市卫生健康委员会转载）",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -10604,6 +11199,7 @@ module.exports = {
         "cost": "不花钱，还能省下烟酒钱。难在让同住的人跟着一起戒",
         "gain": "美国疾病控制与预防中心的口径：孕期吸烟会让孩子「足月出生也可能过小」「可能早产」。它会「使孕期和分娩期异常出血的风险翻倍」。它会提高唇裂、腭裂等出生缺陷的风险。它还会「损害胎儿正在发育的肺和大脑，损害可持续到儿童期」。孕期吸烟的母亲生的婴儿，以及出生后接触烟雾的婴儿，婴儿猝死综合征的风险更高。官方建议是「最好在怀孕前就戒烟，但如果已经怀孕，戒了仍然有用」「什么时候戒都不晚」",
         "note": "别人在屋里抽，孕妇吸到的二手烟对胎儿一样算数。所以同住的家人也别在屋里抽。酒也一样：没有哪个喝酒的量是已知安全的，孕期最省事的做法就是一口不喝。烟酒对成年人自己的账见第 2 节",
+        "source": "Centers for Disease Control and Prevention. Smoking During Pregnancy. <https://www.cdc.gov/tobacco/campaign/tips/diseases/pregnancy.html>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -10623,6 +11219,7 @@ module.exports = {
         "cost": "几十元。每天一片，要一直吃到生。难在天天不忘",
         "gain": "美国预防服务工作组给的是 B 级推荐：对子痫前期高危的人，在孕 12 周之后开始吃小剂量阿司匹林（81 毫克/天）来预防。子痫前期是孕期的一种高血压疾病。把多项研究合起来算，结果如下，95% CI 是可信范围。子痫前期 RR 0.85（95% CI 0.75 至 0.95，16 项研究），低约 15%。早产 RR 0.80（95% CI 0.67 至 0.95，13 项研究），低约 20%。围产期死亡 RR 0.79（95% CI 0.66 至 0.96，11 项研究），低约 21%；围产期死亡就是生产前后这段时间里的死亡。小于胎龄儿／宫内生长受限 RR 0.82（95% CI 0.68 至 0.99，16 项研究），低约 18%；说的是胎儿长得比同孕周的偏小",
         "note": "算高危的有：上一胎得过子痫前期、怀的是双胎或者多胎、有慢性高血压。还有怀孕前就有 1 型或者 2 型糖尿病、有肾病，以及有系统性红斑狼疮、抗磷脂综合征这类自身免疫病。不在这几类里的不要自己吃。这个药要医生开处方，产检的时候把病史说清楚，让医生判断。国内卖的多是 100 毫克的肠溶片，按医嘱吃",
+        "source": "US Preventive Services Task Force (2021). Aspirin Use to Prevent Preeclampsia and Related Morbidity and Mortality: Preventive Medication. <https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/low-dose-aspirin-use-for-the-prevention-of-morbidity-and-mortality-from-preeclampsia-preventive-medication>",
         "grade": "A",
         "meta": {
           "money": "少",
@@ -10642,6 +11239,7 @@ module.exports = {
         "cost": "几十到一百多元。要空腹去，抽几次血，占掉半个上午",
         "gain": "美国预防服务工作组的 B 级推荐：对没有症状（自己没觉出不舒服）的孕妇，在孕 24 周及以后筛查妊娠期糖尿病。妊娠期糖尿病就是怀孕之后才出现的血糖高。只做一次筛查的，这一次要放在孕 24 周及以后。孕 24 周之前就筛查好不好，工作组的结论是现有证据不足以判断好处和坏处（I 级）。妊娠期糖尿病不管，会推高这几样的风险：巨大儿（胎儿长得过大）、难产、剖宫产、子痫前期和新生儿低血糖",
         "note": "查出来的人里，大多数靠调饮食和运动就能把血糖控住，需要打胰岛素的是少数。别因为怕查出来要打针，就跳过这一次。生完之后还要复查血糖：得过妊娠期糖尿病的人，以后得 2 型糖尿病的风险明显更高",
+        "source": "US Preventive Services Task Force (2021). Gestational Diabetes: Screening. <https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/gestational-diabetes-screening>",
         "grade": "A",
         "meta": {
           "money": "少",
@@ -10661,6 +11259,7 @@ module.exports = {
         "cost": "不花钱。花五分钟记住，最好也让同住的人知道",
         "gain": "美国疾病控制与预防中心列出的孕产期紧急预警信号有这些：头痛一直不好或者越来越重、头晕或者晕过去、看东西变样、体温达到 38 ℃ 或更高；手或者脸肿得厉害、有伤害自己或者伤害孩子的念头、呼吸困难、胸痛或者心跳过快；恶心呕吐很厉害、肚子剧烈疼痛一直不缓解、孕期胎动停止或者明显减少；孕期阴道出血或者流出液体、产后阴道出血或者分泌物不正常；一条胳膊或者一条腿严重肿胀、发红或者疼痛。这些问题在产后一年内都可能发生，不是「出了月子就没事」",
         "note": "这张清单的用处，是把「再忍忍」和「必须马上走」分开。头痛加上看东西发花，再加上上腹部疼，指向的是子痫前期（孕期的高血压疾病）。一条小腿又肿又痛，指向的是深静脉血栓（见第 13 节）。产后大出血按世界卫生组织的说法，可以在几小时内夺走一个健康女性的生命。任何一条出现就直接去医院，不要先在家等一晚",
+        "source": "Centers for Disease Control and Prevention. Hear Her — Urgent Maternal Warning Signs. <https://www.cdc.gov/hearher/maternal-warning-signs/index.html>；World Health Organization. Maternal mortality fact sheet. <https://www.who.int/news-room/fact-sheets/detail/maternal-mortality>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -10680,6 +11279,7 @@ module.exports = {
         "cost": "不花钱",
         "gain": "北京市卫生健康委员会给的处置办法：发现破水后「马上找个地方平躺下来，防止羊水流出来」「不要随意走动」，并且「立即拨打 120 急救电话」。等车的时候通知家里人带东西到医院会合。医疗机构的科普进一步说明了为什么：人站着的时候羊水流失更快，胎儿的脐带可能跟着掉出来，这叫脐带脱垂，是危及胎儿的急症。所以要躺下，把臀部垫高，可以取左侧卧位",
         "note": "快生的三个征兆是规律宫缩、见红、破水。前两个都可以从容收拾东西，破水是唯一一个「当场躺下叫车」的。破水后洗澡、蹲厕所、自己开车，都是典型的错误做法。记下破水的时间和羊水的颜色，告诉医生。羊水发黄绿色，或者带着胎粪颗粒，提示胎儿窘迫（胎儿在子宫里缺氧）。同时还有规律宫缩、胎动明显减少、发热打寒战的，更要跟医生强调这是急诊",
+        "source": "北京市卫生健康委员会. 每周急救话题：准妈妈羊水早破怎样办？ <https://wjw.beijing.gov.cn/bmfw_20143/jkzs/jzjj/202001/t20200115_1575632.html>；北京市顺义区妇幼保健院. 孕晚期在家破水怎么办？ <https://www.bch-syfy.cn/Html/News/Articles/9453.html>",
         "grade": "B",
         "meta": {
           "money": "0",
@@ -10699,6 +11299,7 @@ module.exports = {
         "cost": "几百到一千多元，各地价格不一样。要提前问医院和麻醉科能不能做。难在得自己开口提",
         "gain": "Cochrane 系统综述的结论是：硬膜外镇痛在减轻产痛、提高产妇对镇痛的满意度上，比不用硬膜外的办法更有效。无痛分娩用的就是硬膜外镇痛。同一篇还说，「硬膜外镇痛对剖宫产风险和长期腰痛没有影响」。器械助产（用器械把孩子接出来）增加的现象，在 2005 年以后的研究中已经看不到。2024 年起，国家医保局的产科类医疗服务价格项目立项指南，把「分娩镇痛」「导乐分娩」「亲情陪产」单独立了项。理由正是原先没有独立的价格项目，医院提供分娩镇痛的积极性被压低",
         "note": "「打无痛会腰疼一辈子」和「打无痛会难产要挨刀」这两条流传最广的说法都没有依据。Cochrane 把硬膜外镇痛和别的镇痛办法放在一起汇总，结论是它对剖宫产风险和长期腰痛都没有影响。真实的副作用是这些：血压偏低、发热、腿发软、尿不出来，以及第一、第二产程变长、更可能要用缩宫素。做不做自己定，但别因为传言放弃。能不能做还要看医院有没有 24 小时在场的麻醉医生，产检的时候就问清楚",
+        "source": "Anim-Somuah M, Smyth RMD, Cyna AM, Cuthbert A (2018). Epidural versus non-epidural or no analgesia for pain management in labour. Cochrane Database of Systematic Reviews, (5), CD000331. <https://doi.org/10.1002/14651858.CD000331.pub4>；国家医疗保障局 (2024). 重构产科服务价格项目 助力构建生育友好型社会. <https://www.gov.cn/zhengce/202406/content_6957553.htm>",
         "grade": "A",
         "meta": {
           "money": "少",
@@ -10718,6 +11319,7 @@ module.exports = {
         "cost": "不花钱。难在顶住家里人的说法",
         "gain": "世界卫生组织 2015 年的声明：一个人群里的剖宫产率上升到约 10% 时，孕产妇和新生儿的死亡数会下降。超过 10% 之后，没有证据显示死亡率还能进一步改善。世界卫生组织同时强调，应当尽一切努力，为有需要的产妇提供剖宫产，而不是为了凑某个特定的比率",
         "note": "医学上确实需要的时候，剖宫产是救命手术，该做就做，别硬扛。要避免的是医学上并不需要还去开刀，比如怕疼、挑吉时、算孩子上学的年龄。剖宫产是腹部大手术，恢复更慢，下一胎出现前置胎盘、胎盘植入和子宫破裂的风险更高。这直接影响你还想不想生第二个",
+        "source": "World Health Organization (2015). WHO Statement on Caesarean Section Rates（WHO/RHR/15.02）. <https://www.who.int/publications/i/item/WHO-RHR-15.02>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -10737,6 +11339,7 @@ module.exports = {
         "cost": "不花钱。打一次社保或者医保的咨询电话",
         "gain": "《社会保险法》第五十四条：用人单位已经缴纳生育保险费的，其职工享受生育保险待遇。职工没有工作的配偶，按照国家规定享受生育医疗费用待遇，所需资金从生育保险基金中支付。说白了，单位交了生育保险，职工本人能享受待遇，职工那位没工作的配偶生孩子的医疗费，也能从这笔基金里出。生育保险待遇分两块：一块是生育医疗费用，就是生孩子这件事本身的医疗费；另一块是生育津贴，就是产假期间发给你的那笔钱。第五十六条列明了能领生育津贴的三种情形：女职工生育享受产假、享受计划生育手术休假、法律法规规定的其他情形。生育津贴「按照职工所在用人单位上年度职工月平均工资计发」，算的是你所在单位去年的职工月平均工资，不是你自己的工资",
         "note": "两件事要提前问清楚，因为事后补不了。一是连续参保的月数够不够：各地都定了最低月数，不够就享受不了。二是不在参保地生的，要不要先办异地生育备案：没备案的可能只能自己先垫钱，回来再手工报销，甚至报不了。产假天数和生育津贴怎么算见第 18 节第 2 条",
+        "source": "全国人大常委会 (2010). 中华人民共和国社会保险法（第五十四、五十六条）. <https://guangdong.chinatax.gov.cn/gdsw/qysw_gkwj/2020-02/12/content_8e8c485d0db34b989531f3ba57cec5a9.shtml>（国家税务总局广东省税务局转载）",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -10756,6 +11359,7 @@ module.exports = {
         "cost": "不花钱。办出院手续的时候顺手就办了",
         "gain": "《母婴保健法》第二十三条：医疗保健机构和从事家庭接生的人员，按照国务院卫生行政部门的规定，出具统一制发的新生儿出生医学证明。这张证是后面所有事的前置条件：上户口、参保、办医保卡、入园入学都要它。而且第一次签发只能由接生的机构办。出了院再回头补办，要走另一套流程，还需要额外的证明材料",
         "note": "填之前把父母姓名、身份证号和孩子姓名逐字核对一遍。姓名用字要能在户籍系统里打得出来，生僻字以后办事会很麻烦。改名和改证都要走补发或者换发，比当场核对麻烦得多。证拿到手就单独收好，和户口本、身份证一样要紧",
+        "source": "全国人大常委会 (1994, 2017 修正). 中华人民共和国母婴保健法（第二十三条）. <https://www.gov.cn/guoqing/2021-10/29/content_5647619.htm>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -10775,6 +11379,7 @@ module.exports = {
         "cost": "多数地区免费，或者几十元。有些扩展项目要自己掏钱。孩子出生后扎一次足跟",
         "gain": "《新生儿疾病筛查管理办法》第三条：「全国新生儿疾病筛查病种包括先天性甲状腺功能减低症、苯丙酮尿症等新生儿遗传代谢病和听力障碍。」这两类病有个共同点：早期完全看不出异常，等到症状明显的时候，智力损害已经不可逆了。而早发现早干预效果很好，办法是补充甲状腺素、喝特殊配方奶、戴助听器或者装人工耳蜗。第十条规定，筛查结果是阳性的，机构应当及时通知监护人去确诊",
         "note": "办法第十一条要求，筛查前要把项目、条件、方式、灵敏度（能查出多少）和费用如实告诉监护人，并签字同意。所以你会拿到一张知情同意书。签之前看清楚：哪些是国家规定的病种，哪些是自费的加项。初筛阳性不等于确诊，绝大多数复查一次就排除了，别在这一步先崩溃。听力初筛没过的要按通知去复筛，别自己判断「孩子听得见就算了」",
+        "source": "卫生部 (2009). 新生儿疾病筛查管理办法（卫生部令第 64 号，第三、十、十一条）. <http://www.gov.cn/gongbao/content/2009/content_1371363.htm>",
         "grade": "A",
         "meta": {
           "money": "少",
@@ -10794,6 +11399,7 @@ module.exports = {
         "cost": "一年交一次居民医保保费，几百元",
         "gain": "中国政府网 2024 年的口径：「新生儿凭出生医学证明就可以在线上参保」，不必先落户。「新生儿出院以后就能够直接报销医药费用」。以前的做法是落了户才能参保，住院费得先全额垫付，再回头报销。参保缴费的平均办理时长，也从年初的 28.7 个工作日压减到 6.4 个工作日",
         "note": "早产、黄疸照蓝光、新生儿肺炎，这些是新生儿住院的常见原因，动辄上万元，参保和不参保差别很大。各地对「出生后多少天内参保，可以从出生那天起享受待遇」的规定不完全一样。具体怎么执行，以当地医保部门说的为准。出院前打 12393 问一句最省事",
+        "source": "中国政府网 (2024). 健全基本医疗保险参保长效机制国务院政策例行吹风会. <https://www.gov.cn/zhengce/202409/content_6973567.htm>",
         "grade": "A",
         "meta": {
           "money": "少",
@@ -10813,6 +11419,7 @@ module.exports = {
         "cost": "不花钱。跑一趟派出所的户籍窗口",
         "gain": "《户口登记条例》第七条：「婴儿出生后一个月以内，由户主、亲属、抚养人或者邻居向婴儿常住地户口登记机关申报出生登记。」这是法律定的时限，不是建议。落户是后面这些事的前置条件：打疫苗、入园、入学、办身份证。越往后拖，需要补的材料越多",
         "note": "带齐这些：出生医学证明、父母双方的身份证和户口本、结婚证。跟父亲落户还是跟母亲落户可以自己选，但两个地方的政策不一样，学区和参保地都受影响。去之前想清楚，改起来麻烦。没结婚生的孩子，同样可以申报出生登记",
+        "source": "国务院 (1958). 中华人民共和国户口登记条例（第七条）. <http://www.gd.gov.cn/zwgk/wjk/zcfgk/content/post_2531969.html>（广东省人民政府转载）",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -10832,6 +11439,7 @@ module.exports = {
         "cost": "不花钱，属于基本公共卫生服务。占半天时间。难在刚出月子懒得动",
         "gain": "《国家基本公共卫生服务规范（第三版）》的孕产妇健康管理里，产后有 1 次产后访视和 1 次产后 42 天健康检查。地方公开的服务清单里，这一次含化验（血常规、白带常规）和 1 次产后抑郁筛查。产后一年内都可能出现严重并发症。第 7 条那张「立刻去医院」的清单里，「有伤害自己或伤害孩子的念头」「产后阴道出血或异常分泌物」「一侧肢体严重肿痛」都属于产后",
         "note": "产后抑郁不是矫情，靠家里人劝一句「想开点」也解决不了。它有专门的筛查问卷，有治疗，可以恢复。有自杀念头时的处置见第 1 节。孩子生下来确实养不了时的合法出路见第 9 节第 20 条。这次复查还会看伤口长得怎么样、子宫恢复得怎么样、盆底功能好不好。避孕方案也在这次谈：产后不来月经，不等于不会怀孕",
+        "source": "国家卫生计生委 (2017). 国家基本公共卫生服务规范（第三版）. <https://www.nhc.gov.cn/ewebeditor/uploadfile/2017/04/20170417104506514.pdf>；靖江市人民政府. 国家基本公共卫生服务项目——孕产妇健康管理服务（地方服务清单公开）. <https://www.jingjiang.gov.cn/xxgk/zdlyxxgk/wsjk/art/2023/art_383017a2e7794892bc772bfbe042f379.html>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -10853,6 +11461,7 @@ module.exports = {
         "cost": "不花钱。反过来还省下买减肥产品的钱。",
         "gain": "36 项研究合起来算。神经性厌食这一批人累计被跟踪了 166,642 人年（每人被跟踪的年数加总）。他们的标准化死亡比是 5.86，即死亡概率约为同龄人的 5.9 倍。每 1000 人年死亡 5.1 例，就是 1000 个人跟一年死 5.1 个。死的人里约 1/5 死于自杀。贪食症的标准化死亡比是 1.93，其他进食障碍是 1.92，即各约为同龄人的 1.9 倍。另一项研究在澳大利亚维多利亚州的 44 所中学做，跟踪 14–15 岁学生 3 年、同一批学生三年里前后查了 6 波。女生新发进食障碍 21.8/1000 人年，即 1000 个女生跟一年新出 21.8 例。严重节食的女生发病风险是不节食者的 18 倍，中度节食者是 5 倍。再校正既往节食与精神症状，把「以前就节食过」和「本来就有精神症状」的影响扣掉。扣掉之后，BMI（体重除以身高平方算出的胖瘦指标）、运动量和性别都不再预测新发进食障碍。作者结论是「在青少年中用运动而非限食控制体重，发生进食障碍的风险似乎更低」",
         "note": "这里说的「严重节食」，指的是长期把吃的压到远低于身体需要，不是指少吃一顿或者不吃夜宵。已经出现催吐、暴食之后自责、反复称重停不下来的，去精神科或者综合医院的临床心理科看。这是有规范治疗办法的病，不是意志力的问题。BMI 与死亡率的关系见第 2 节第 32 条，那条讲长期体重区间，不讲减重手段。",
+        "source": "Arcelus J et al. (2011). Mortality rates in patients with anorexia nervosa and other eating disorders. A meta-analysis of 36 studies. Arch Gen Psychiatry. <https://doi.org/10.1001/archgenpsychiatry.2011.74>；Patton GC et al. (1999). Onset of adolescent eating disorders: population based cohort study over 3 years. BMJ. <https://doi.org/10.1136/bmj.318.7186.765>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -10872,6 +11481,7 @@ module.exports = {
         "cost": "不花钱。查这两张证只要几分钟。机构应该把《医疗机构执业许可证》挂在大厅里。医生的资质可以在卫健部门的执业医师查询里核对。",
         "gain": "《医疗美容服务管理办法》第二条给医疗美容下了定义。原文是「运用手术、药物、医疗器械以及其他具有创伤性或者侵入性的医学技术方法对人的容貌和人体各部位形态进行的修复与再塑」。说白了，只要破皮、进针、进到身体里，就按看病算。第八条和第二十四条要求先取得《医疗机构执业许可证》，并经登记机关核准医疗美容诊疗科目，才能开展。许可证上没写「医疗美容」这一项，就不能做。第十一条要求主诊医师（动手的那位医生）具有执业医师资格并且注册过。做美容外科的还要有 6 年以上相关专业临床工作经历，美容牙科 5 年以上，美容中医科与美容皮肤科各 3 年以上。第二十条要求动手之前书面告知适应症、禁忌症（什么情况适合做、什么情况不能做）、医疗风险和注意事项，并取得签字同意。《刑法》第三百三十六条管的是非法行医。非法行医就是没有医生执业资格的人给人打针、动刀、看病。情节严重的，处 3 年以下有期徒刑、拘役或者管制，并处或者单处罚金。严重损害就诊人身体健康的，处 3 年以上 10 年以下有期徒刑并处罚金。造成就诊人死亡的，处 10 年以上有期徒刑并处罚金",
         "note": "同一份办法第十六条还规定，医美项目只能在美容医疗机构里做，或者在设了医疗美容科室的医院、诊所里做。所以上门打针、在工作室里私下操作，光看地点就已经不合规。第二十条写明，未成年人这类还不能自己作主的人要做医美，必须经监护人同意，要家长签字。做脸、按摩、美甲属于生活美容，不归这套规矩管。但只要动到针和刀，就算医疗美容。",
+        "source": "卫生部 (2002). 医疗美容服务管理办法（卫生部令第 19 号，第二条、第八条、第十一条、第十六条、第二十条、第二十四条）. <http://www.gov.cn/gongbao/content/2003/content_62198.htm>；全国人大 (1997). 刑法（第三百三十六条）. <https://www.spp.gov.cn/spp/fl/201802/t20180206_364975.shtml>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -10891,6 +11501,7 @@ module.exports = {
         "cost": "不花钱。只是换个部位打，或者不做。",
         "gain": "把全世界期刊报过的病例汇总起来算。2015 年 1 月到 2018 年 9 月新增 48 例注射填充后部分或完全视力丧失。出事最多的部位是鼻部，占 56.3%。接下来是眉间 27.1%、前额 18.8%、鼻唇沟（法令纹那道沟）14.6%。81.3% 的病例填充物为透明质酸，就是玻尿酸。43.8% 出现皮肤改变。18.8% 出现中枢神经系统并发症（脑出了问题）。10 例（20.8%）视力完全恢复，8 例（16.7%）部分恢复，剩下的没恢复。作者结论为各家的处理方式差得很远，没有一种治疗被证明能持续奏效",
         "note": "这些数字是把期刊报过的病例一例一例数出来的。里面只有出事的人数，没有打针的总人数。所以算不出「打一针有多大概率失明」，只看得出哪些部位出事多、事后基本救不回来。证据记 B 级也是因为这个。正规机构降低风险的做法本来就是常规：先查清要打的地方底下血管怎么走，用钝头针不用尖针，边退针边少量推，事先备好透明质酸酶。每一样都要求动手的是受过训练的医生，这也是别找非正规渠道的理由。做之前先按本节第 2 条（查机构许可证和主诊医师）核一遍。",
+        "source": "Beleznay K et al. (2019). Update on Avoiding and Treating Blindness From Fillers: A Recent Review of the World Literature. Aesthet Surg J. <https://doi.org/10.1093/asj/sjz053>",
         "grade": "B",
         "meta": {
           "money": "0",
@@ -10910,6 +11521,7 @@ module.exports = {
         "cost": "不花钱。反过来还省下买这些产品的钱。难的是要接受没有「一周掉几斤」这回事。",
         "gain": "SCOUT 试验招了 9,804 人。他们都是 55 岁以上、超重或肥胖，并且有心血管病或 2 型糖尿病。这些人抽签分成吃药和不吃药两组，平均治疗 3.4 年。主要终点是事先定好要数的几件坏事：非致死性心梗、非致死性卒中（中风）、心脏骤停后被救回来、心血管死亡。这几件事的发生率是 11.4% vs 10.0%。HR 1.16（95% CI 1.03–1.31，P=0.02），吃药的人出事概率高约一成六。真实值大致落在高 3% 到高 31% 之间。非致死性心梗 4.1% vs 3.2%，HR 1.28（1.04–1.57），高约三成。非致死性卒中 2.6% vs 1.9%，HR 1.36（1.04–1.77），高约三成六。心血管死亡与全因死亡未增加，全因就是各种原因加起来。抽签之后，西布曲明组平均多减重 1.7 kg。原国家食品药品监督管理局根据安全性评估认为「减肥治疗的风险大于效益」，2010 年 10 月通知停止西布曲明制剂及原料药的生产、销售、使用。西布曲明与酚酞均禁止添加于食品，保健食品也算在内",
         "note": "SCOUT 招的是本来就有心脏病或者糖尿病的高危人群。这个试验没有证明健康年轻人吃了也一样出事。但正因为分不清谁是高危，监管才干脆让它退市。另一种常被偷加的成分是酚酞，它本来是泻药，长期吃多了会打乱体内电解质、诱发心律失常。怎么判断：正经减肥药是处方药，在药店和医院能查到批准文号。打着「咖啡」「糖果」「梅子」「代餐」旗号卖、又承诺一周掉几斤的，按定义就不该有药效，有药效就说明加了东西。国食药监办〔2010〕432 号的原文在国家药监局网站，本机打开一直报 412 错误，所以改引省级监管部门的转述页。「风险大于效益」和「2010 年 10 月停止生产销售使用」两句可以在那里逐字核对。",
+        "source": "James WPT et al. (2010). Effect of sibutramine on cardiovascular outcomes in overweight and obese subjects. NEJM. <https://doi.org/10.1056/NEJMoa1003114>；天津市市场监督管理委员会. 警惕部分食品中违法添加「盐酸西布曲明」和「酚酞」. <https://scjg.tj.gov.cn/tjsscjdglwyh_52651/hdpt/cjwtyxfts/202007/t20200720_2972549.html>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -10929,6 +11541,7 @@ module.exports = {
         "cost": "不花钱，还省下药钱。难的是要接受肌肉长得慢。",
         "gain": "丹麦回头翻档案，给每个用药的人配同龄对照。用药的是 2006-01-03 至 2018-03-01 健身房兴奋剂检测雄激素类固醇阳性的 545 名男性，配了 5,450 名对照。另外又用 644 名拒绝受检者和 6,440 名对照复核了一遍。结果：使用者死亡率为对照的 3 倍，HR 3.0（95% CI 1.3–7.0），真实倍数大致在 1.3 到 7 之间。每年住院或就诊次数的中位数是 0.81 次 vs 0.36 次（P<0.0001）。中位数就是一半人多于、一半人少于这个数。这个 P 值说明这个差别几乎不可能是碰巧。痤疮（长痘）、男性乳房发育、勃起功能障碍各影响超过 10% 的使用者，即每十个用药的人里至少一个中招，都明显高于对照（P<0.0001）。复核的那一批结果一致。《反兴奋剂条例》第七条：国家对兴奋剂目录所列禁用物质实行严格管理，任何单位和个人不得非法生产、销售、进出口。同一条例规定蛋白同化制剂、肽类激素实行处方药管理，即只能凭医生处方买，蛋白同化制剂是法规里对这类药的叫法",
         "note": "争议：这是跟踪一群人看结果的研究，不是随机分组试验。用药的人本身可能在别的方面也更冒险，3 倍这个数不能全记到药头上。真实倍数可能低到 1.3，也可能高到 7.0，范围很宽。但「痤疮、男性乳房发育、勃起功能障碍各有一成以上的人中招」是眼睛能看见的副作用，受这种偏差影响较小。这类药在法规里写作「蛋白同化制剂」，看到这四个字说的就是它。普通蛋白粉、肌酸不在本条之内。麻烦的是「宣称增肌特别快」的产品可能偷加成分。判断方法和减肥产品那条一样（第 4 条，不买承诺快速瘦的减肥药）：正经药是处方药、有批准文号可查。靠「增肌粉」「营养品」名义卖、又承诺几周见效的，真有效就是加了东西。",
+        "source": "Horwitz H et al. (2019). Health consequences of androgenic anabolic steroid use. J Intern Med. <https://doi.org/10.1111/joim.12850>；国务院 (2004). 反兴奋剂条例（国务院令第 398 号，第七条、第九条）. <http://www.gov.cn/gongbao/content/2004/content_63129.htm>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -10948,6 +11561,7 @@ module.exports = {
         "cost": "一次挂号，加上来回跑一趟。几十元，半天时间。",
         "gain": "《药品经营和使用质量监督管理办法》规定，药品零售企业要遵守处方药与非处方药分类管理制度。这个制度就是把药分成两类，一类必须凭医生处方买，一类可以自己买。药店要按规定凭处方销售处方药，处方保留不少于五年。药师或者其他药学技术人员不在岗时应挂牌告知，没经过他们审核不得销售处方药。处方药不得开架销售，不能摆在货架上由顾客自己拿。《药品网络销售监督管理办法》第九条规定，通过网络向个人销售处方药的，应当确保处方来源真实、可靠并实行实名制。第十条要求在每个药品展示页面下突出显示风险警示信息。通过处方审核前，不得展示说明书，也不得提供购买服务，处方没审过，页面上连买的按钮都不该给。第八条规定，国家实行特殊管理的药品不得在网络上销售。这类药包括疫苗、血液制品、麻醉药品、精神药品、医疗用毒性药品、放射性药品、药品类易制毒化学品",
         "note": "法条可以逐字核对，但「按处方吃比自己买着吃能少出多少事」没人做过量化研究，所以按「难以量化」记 B 级。本节第 5、7 条说的类固醇和性激素，也走同一套规则。真到了该靠药减重的程度，医生会先看体重指数、身上有没有别的病、有没有不能用药的情况，再定吃不吃、吃哪种。这个判断是买不到的。",
+        "source": "国家市场监督管理总局 (2023). 药品经营和使用质量监督管理办法（总局令第 84 号）. <https://www.gov.cn/gongbao/2023/issue_10846/202311/content_6917322.html>；国家市场监督管理总局 (2022). 药品网络销售监督管理办法（总局令第 58 号，第八条至第十条）. <https://www.gov.cn/gongbao/content/2022/content_5717002.htm>",
         "grade": "B",
         "meta": {
           "money": "少",
@@ -10967,6 +11581,7 @@ module.exports = {
         "cost": "定期挂号，加上抽血复查。一年几百元，占掉几个半天。",
         "gain": "研究者从 Kaiser Permanente 这家医疗集团的电子病历里跟踪了一批人。其中 2,842 名跨性别女性、2,118 名跨性别男性。平均跟踪 4.0 年与 3.6 年。每个人都按出生年、种族、就诊点和入组时间配了约 10 倍的顺性别对照，一共 48,686 名顺性别男性与 48,775 名顺性别女性。跨性别女性的静脉血栓栓塞（血管里长血块堵住）比对照多。和顺性别男性比，2 年是每 1000 人 4.1 例（95% CI 1.6–6.7）。8 年是 16.7 例（6.4–27.5）。算下来，1000 个人里两年多出 4.1 例，八年多出 16.7 例。和顺性别女性比，这两个数是 3.4（1.1–5.6）与 13.7（4.1–22.7）。缺血性卒中（血管堵住那一类中风）与心肌梗死总体各组接近。但在跟踪期内才开始激素治疗的跨性别女性中，静脉血栓与缺血性卒中的差异更明显。跨性别男性的证据不够，下不了结论。作者结论为「这些结果可能提示需要长期警惕跨性别激素中雌激素的血管副作用」",
         "note": "研究者自己写明了这项研究的短处：有多少人是在医院系统外自己买的药，他们查不到，所以「有没有用药」这条线本来就划不干净。所以用药更该放进正规随访里。这项研究看的只是血管出没出事，不回答激素治疗该不该用、用了有什么好处，那是另一套证据。所有用到性激素的场合都一样，包括避孕药、更年期激素治疗、睾酮补充。凡是自己网购、照着网帖调量、从不查血栓和肝肾指标的，风险都出在「没人盯着」这一段，和为什么用药无关。国内的正规路子是去正规医疗机构的内分泌科或者相应专科，做评估、开方、复查。",
+        "source": "Getahun D et al. (2018). Cross-sex Hormones and Acute Cardiovascular Events in Transgender Persons: A Cohort Study. Ann Intern Med. <https://doi.org/10.7326/M17-2785>；国家市场监督管理总局 (2022). 药品网络销售监督管理办法（总局令第 58 号，第九条）. <https://www.gov.cn/gongbao/content/2022/content_5717002.htm>",
         "grade": "A",
         "meta": {
           "money": "少",
@@ -10986,6 +11601,7 @@ module.exports = {
         "cost": "去精神科或者临床心理科挂一次号，几十元。难的是在约手术之前先去这一趟。",
         "gain": "按规矩把 33 项研究找齐再合起来算。整形外科就诊者中，躯体变形障碍（把别人基本看不出的缺陷放大到影响生活）患病率 15.04%，各项研究在 2.21%–56.67% 之间。换成人数，每 100 个去做整形的人里约 15 个符合，单看各项研究则从 2 个到 57 个不等。这批人平均年龄 34.54±12.41 岁，后一个数是上下浮动的幅度，74.38% 为女性。皮肤科就诊者是 12.65%，各项研究在 4.52%–35.16% 之间，平均年龄 27.79±9.03 岁，76.09% 为女性。作者建议整形外科医师与皮肤科医师主动评估、把高风险的人认出来，并安排几个科室一起管",
         "note": "各项研究测出来的比例从 2.21% 一直到 56.67%，差得极大。原因是用的问卷和调查的人群都不一样。所以只能读出「这个比例不低、值得先筛一次」，不能把 15.04% 当准确数字，记 B 级也是因为这个。想做医美的人绝大多数没有心理问题。本条针对的是「反复、持续、已经影响到工作和社交」这一小部分人，手术解决不了他们的问题。判断线索有这几条：一天里花很长时间检查或者遮挡某个部位，因此回避社交或者拍照，做完一处又盯上下一处。",
+        "source": "Ribeiro RVE (2017). Prevalence of Body Dysmorphic Disorder in Plastic Surgery and Dermatology Patients: A Systematic Review with Meta-Analysis. Aesthetic Plast Surg. <https://doi.org/10.1007/s00266-017-0869-0>",
         "grade": "B",
         "meta": {
           "money": "少",
@@ -11005,6 +11621,7 @@ module.exports = {
         "cost": "比网购多出挂号和复诊的钱，每隔一段时间要去一趟诊所。难在疗程常常一两年，要坚持复诊。",
         "gain": "国家药监局医疗器械技术审评中心 2022 年的《无托槽矫治器注册审查指导原则》说，这种牙套「管理类别为Ⅱ类」。它要求说明书写明「治疗过程中需在具有口腔正畸专业资质医师的指导下进行佩戴」，还要写「进食、刷牙及定期复诊的要求」。产品名称「不建议含有“隐形”等虚无、假设的概念性名称」。美国食品药品监督管理局（FDA）的说法是：「The FDA has not authorized clear aligners that are sold directly to consumers without a prescription and supervision by a dentist or orthodontist」，意思是不经牙医开方和监督、直接卖给个人的透明牙套，它一个都没批准过。FDA 还说：「In-person examination by a dentist or orthodontist can help lower the risks of uneven bite, unintended tooth movement, pain, and tooth loss」，也就是牙医当面检查能降低咬合不齐、牙齿移位、疼痛和掉牙的风险。开始戴以后定期当面复诊，才能确认牙在按计划安全移动。这两份都是监管文件，没有给出出事的比例",
         "note": "收益量级定为小，因为没找到出事比例，只能凭后果判断。国内药监和卫健部门针对「网购牙套在家自己戴」的风险提示没有找到，所以本条主要靠注册要求和 FDA 的说法。正畸属于医疗行为，做医疗美容性质的牙齿矫正，机构许可证要有对应科目，动手的医生要有资质，查法见本节第 2 条（机构许可证、主诊医师）。四部门 2023 年的口腔医疗通知也点名要严惩无证机构和聘用非卫生技术人员看牙。正畸医保不报，见第 24 节第 12 条（种牙之前先问清包干价）",
+        "source": "国家药品监督管理局医疗器械技术审评中心 (2022). 无托槽矫治器注册审查指导原则（2022 年第 41 号）. <https://www.cmde.org.cn/flfg/zdyz/zdyzwbk/20230103095116100.html>；国家卫生健康委办公厅等 (2023). 关于进一步推进口腔医疗服务和保障管理工作的通知（国卫办医政发〔2023〕11 号，第五条）. <https://www.gov.cn/zhengce/zhengceku/202309/content_6903786.htm>；U.S. Food and Drug Administration (2026). Clear Dental Aligners（页面 2026 年 9 月 9 日更新）. <https://www.fda.gov/medical-devices/dental-devices/clear-dental-aligners>",
         "grade": "C",
         "meta": {
           "money": "少",
@@ -11026,6 +11643,7 @@ module.exports = {
         "cost": "不花钱。这几天别一个人待着，药照常吃。",
         "gain": "1985 名急性心梗患者，拿同一个人发病前后的不同时间段自己跟自己比。其中 270 人（13.6%）在发病前 6 个月内失去过重要的人，19 人是在心梗前 1 天内失去的。重要的人去世后 24 小时内，急性心梗发作率升高 21.1 倍（95% CI 13.1–34.1，真实倍数大致在 13 到 34 之间）。此后逐日下降。换成实际人数：十年心梗风险 5% 的人里，每 1394 个刚失去亲人的多出 1 例。风险 20% 的人里，每 320 个多出 1 例。英国另一项研究，比了 30447 名 60 至 89 岁丧偶者和 83588 名条件相当的对照。丧偶后 30 天内发生心梗或中风的，丧偶的一边 50 人（0.16%）。对照的一边 67 人（0.08%）。IRR 2.20（1.52–3.15），即出事的概率约为对照的 2.2 倍。其中心梗 2.14（1.20–3.81），约 2.1 倍。中风 2.40（1.22–4.71），约 2.4 倍。30 天以后减弱。90 天内还看了两类病。一类是非心梗急性冠脉综合征（心脏供血急性出问题、但还够不上心梗的那类），IRR 2.20（1.12–4.29）。一类是肺栓塞（血块堵在肺的血管里），IRR 2.37（1.18–4.75）",
         "note": "药盒交给别人管，别靠自己记。这几天别开长途。别靠喝酒扛过去，酒的账见第 2 节。心梗、中风怎么认、怎么叫车见第 13 节。两项都是回头翻人群数据的研究，分不清里面有多少人本来就要发病。但两项指的方向和时间段一致。没有人可以把药盒交出去、这几天注定一个人在屋里的，见本节第 6 条。",
+        "source": "Mostofsky E, et al. (2012). Risk of acute myocardial infarction after the death of a significant person in one's life: the Determinants of Myocardial Infarction Onset Study. Circulation. <https://doi.org/10.1161/CIRCULATIONAHA.111.061770>；Carey IM, et al. (2014). Increased risk of acute cardiovascular events after partner bereavement: a matched cohort study. JAMA Internal Medicine. <https://doi.org/10.1001/jamainternmed.2013.14558>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -11045,6 +11663,7 @@ module.exports = {
         "cost": "不花钱。找个人陪你去拿报告。把治疗以外的大决定推后几天。",
         "gain": "瑞典全国档案跟踪 607 万多人（6,073,240 人），时间是 1991 至 2006 年。和没确诊癌症的人相比，确诊后第一周自杀相对风险 12.6（95% CI 8.6–17.8），即约 12.6 倍。真实倍数大致在 8.6 到 17.8 之间。这一周的发病率是 2.50/1000 人年，也就是 1000 人跟一年出 2.5 例。到第一年降到 3.1（2.7–3.5，0.60/1000 人年），约 3.1 倍。心血管死亡第一周 5.6（5.2–5.9，116.80/1000 人年），约 5.6 倍。前 4 周 3.3（3.1–3.4，65.81/1000 人年）。风险升高在确诊后第一年内迅速回落。越是治起来难、活下来概率低的癌种，升得越明显。把同一批患者不同时间段自己跟自己比，结论一致",
         "note": "这是癌症病人的数据。换到别的重大诊断，没有同等分量的原文。出事的人其实很少：第一周自杀率 2.50/1000 人年，即 1000 人跟一年出 2.5 例。写出来不是吓人，是说明「刚知道的那几天」要有人在旁边。确诊后的长期管理、报销和复查见第 16 节和第 24 节。找不到人陪着去的见本节第 6 条（把「那个人」换成邻居和社区名单）。",
+        "source": "Fang F, et al. (2012). Suicide and cardiovascular death after a cancer diagnosis. New England Journal of Medicine. <https://doi.org/10.1056/NEJMoa1110307>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -11064,6 +11683,7 @@ module.exports = {
         "cost": "不花钱。先去办失业登记、领失业保险金，再把找工作排成固定日程。难在没人催你的时候还要按点起床。",
         "gain": "42 项研究、235 个死亡风险估计、逾 2000 万人合起来算。把年龄等条件的影响扣平之后，失业者各种原因加起来的死亡风险平均 HR 为 1.63，比在职的人高约六成。男性高于女性。对处在职业生涯早期和中期的人影响明显，晚期较小。跟踪的头 10 年风险最高，之后下降。在把抽烟喝酒这类健康行为也算进去的那部分研究里，平均 HR 低 24%，即算出来的升幅少了约四分之一",
         "note": "这是回头翻人群数据的研究，分不清因果方向。本来身体差的人也更容易失业。但「把生活习惯那部分影响扣掉后，效应低 24%」给了可着手的方向。失业能领什么、去哪领、社保怎么续见第 7 节。被辞退该拿多少补偿、别签主动辞职见第 19 节。",
+        "source": "Roelfs DJ, et al. (2011). Losing life and livelihood: a systematic review and meta-analysis of unemployment and all-cause mortality. Social Science & Medicine. <https://doi.org/10.1016/j.socscimed.2011.01.005>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -11083,6 +11703,7 @@ module.exports = {
         "cost": "打 12356 不花钱。要看医生，挂心理门诊是普通门诊的钱。难在自己开口找人。",
         "gain": "丹麦全国档案跟踪 670 万成年人，时间是 1980 至 2014 年，合计逾 1.36 亿人年（所有人被跟踪的年数加总）。因配偶自杀而丧偶的人，5 年内新查出精神障碍的风险和一般人比，IRR 男性 1.8（95% CI 1.6–2.0），即高约八成。女性 1.7（1.6–1.8），即高约七成。和因其他死因丧偶的人相比，IRR 男性 1.7（1.5–1.9）、女性 2.0（1.9–2.2），即高七成到一倍。这批人里，自杀行为、死亡率与需要市政救助的比例也更高。肝硬化、睡眠障碍等身体上的病，风险同样升高。另有 57 项研究逐项归纳，不合并算数。因自杀丧亲，和下面四件事相关。一是伴侣自杀风险升高。二是子女自杀后父母住进精神科的风险升高。三是成年子女自杀后母亲自杀风险升高。四是父母自杀后子女抑郁风险升高。和因其他暴力死亡丧亲的人相比，因自杀丧亲的人更常说自己被人疏远、觉得羞耻",
         "note": "突然的、暴力性的死亡，指的是事故、凶案、灾害。这类死亡之后，创伤后应激障碍、抑郁和哀伤卡住的比例都比病亡后高。恢复也更慢。自己有自杀念头时的处置见第 1 节第 25 条。",
+        "source": "Erlangsen A, et al. (2017). Association Between Spousal Suicide and Mental, Physical, and Social Health Outcomes: A Longitudinal and Nationwide Register-Based Study. JAMA Psychiatry. <https://doi.org/10.1001/jamapsychiatry.2017.0226>；Pitman A, et al. (2014). Effects of suicide bereavement on mental health and suicide risk. The Lancet Psychiatry. <https://doi.org/10.1016/S2215-0366(14)70224-X>；Kristensen P 等 (2012). Bereavement and mental health after sudden and violent losses: a review. Psychiatry. <https://doi.org/10.1521/psyc.2012.75.1.76>（备注里那份综述）",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -11102,6 +11723,7 @@ module.exports = {
         "cost": "不花钱。找一个具体的人，子女、兄弟姐妹或者朋友都行，让他定期上门或者打电话。难在要开口把这件事托付出去。",
         "gain": "15 项先登记再往后跟踪的研究、2,263,888 人合起来算。丧偶不足 6 个月时死亡 RR 1.41（95% CI 1.26–1.57），即同期死亡概率比没丧偶的人高约四成。6 个月以后是 1.14（1.10–1.18），降到高约一成半。男性 RR 1.23（1.18–1.28），高约两成三。女性 1.04（1.00–1.08，无统计学意义，即这点差可能只是巧合）。小于 65 岁与 65 岁以上没看出明显差别。另一项分析合并了 123 篇文献、1377 个风险估计、逾 5 亿人。把条件差异扣平后 HR 1.23（1.19–1.28），即整体高约两成三。男性还高于女性。男性 1.27（1.19–1.35），高两成七。女性 1.15（1.08–1.22），高一成五",
         "note": "这是回头翻人群数据的研究，别的因素掺进来去不掉。夫妻的生活方式和疾病本来就相似。但「头半年比之后高得多」这个规律，在两份各自独立的汇总分析里都一样，值得当成一段照看窗口。男性风险更高，也更少开口求助。家里有丧偶老人的，按第 17 节把账户、监护和遗嘱一并理清。找不到这样一个人的（独居、失独、子女也不在了），把这件事交给社区和手机，见本节第 6 条。",
+        "source": "Moon JR, et al. (2011). Widowhood and mortality: a meta-analysis. PLoS ONE. <https://doi.org/10.1371/journal.pone.0023465>；Shor E, et al. (2012). Widowhood and mortality: a meta-analysis and meta-regression. Demography. <https://doi.org/10.1007/s13524-012-0096-x>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -11121,6 +11743,7 @@ module.exports = {
         "cost": "不花钱。难在要主动开口，跟邻居和居委会说一句「我一个人住，家里刚出事」。",
         "gain": "44,573 名门诊病人，都有动脉粥样硬化血栓的风险或者病史（血管里长斑块、容易被血块堵住的那类毛病）。他们由多国医生登记进 REACH 这个国际项目跟踪，2003 年 12 月至 2004 年 12 月入组，跟踪 4 年。其中 8,594 人（19%）独居。独居的人 4 年里各种原因加起来的死亡为 14.1%，同住的是 11.1%。心血管死亡 8.6% 对 6.8%。两项 log-rank P<0.01，差别不太可能是碰巧。不同年龄段的差距不一样（交互 P=0.03）。45 至 65 岁，独居对同住的死亡为 7.7% 对 5.7%。把别的条件扣平后 HR 1.24（95% CI 1.01–1.51），即高约两成四。66 至 80 岁是 13.2% 对 12.3%，HR 1.12（1.01–1.26），高约一成。80 岁以上是 24.6% 对 28.4%，HR 0.92（0.79–1.06），反而没见升高。民政部等十部门 2022 年意见规定，要开展探访关爱服务。对象是独居、空巢、留守、失能、重残、计划生育特殊家庭等老年人。服务方式为「定期上门入户、电话视频、远程监测」。由乡镇（街道）摸底排查、村（居）民委员会协助，掌握基本信息和「接受探访关爱服务的意愿」并纳入基层网格化管理，也就是按片区分给专人盯着。到 2025 年底「确保特殊困难老年人月探访率达到 100%」，「对失能的特殊困难老年人，每月探访关爱不少于一次」。文件还倡导家庭配置智能呼叫系统、智能电水表、健康监测产品、养老监护装置，「一旦监测异常，能够及时预警，并同步向紧急联系人发送提示信息」。服务人员发现紧急问题「应当第一时间协助拨打紧急求助电话」",
         "note": "三样东西具体怎么办。一，把备用钥匙或者门锁的临时密码给一个邻居或者物业，跟他说一句「我这几天一个人」。不需要交情，只需要有人知道你在屋里。二，去社区居委会说明自己独居，问能不能上探访关爱的名单。老年人里独居、空巢、失独的是官方明确的服务对象，顺便问本地有没有免费装的智能呼叫器、智能水表这类装置。三，手机设好紧急联络人和医疗急救卡，这几天别静音、别关机。给 B 的原因有两条。一是独居和死亡率的关联来自回头翻人群数据的研究，去不掉「本来身体差、条件差的人更可能独居」这层反过来的解释，原文自己也写这个结果有待确认。二是探访关爱那份文件只覆盖老年人。不满 60 岁的没有对应的专门制度。能指望的是文件里的一条，它要求网格员和社工「及时发现家庭变故、失业、失学等心理危机风险」（见本节第 11 条，要人陪着说话打 12356）。「屋里有人」为什么值钱，看第 13 节第 1 条（按压胸口）。发生在医院外的心脏骤停，79.2% 发生在家里。旁边有人做按压的，活着出院的占 16.1%，没人的只有 3.9%。屋里没人就等于落在低的那一档。另外两件顺手的事。办丧事本身就要跑殡仪馆、社区卫生服务机构、公安、公积金好几个窗口（见第 25 节）。把它排成每天出门一次的固定日程，这几天的外出安排现成就有。热线可以反复打，不是只能打一次（见本节第 11 条，要人陪着说话打 12356）。「一个人住」本身还是个长期风险因素。独居的死亡比值比 1.32，高出约三成，见第 22 节第 9 条（把定期和人见面当健康支出）。但这里只管眼前这几天，长期那笔账另算。",
+        "source": "Udell JA, et al. (2012). Living alone and cardiovascular risk in outpatients at risk of or with atherothrombosis. Archives of Internal Medicine. <https://doi.org/10.1001/archinternmed.2012.2782>；民政部等十部门 (2022). 关于开展特殊困难老年人探访关爱服务的指导意见（民发〔2022〕73 号）. <https://www.gov.cn/zhengce/zhengceku/2022-10/13/content_5718017.htm>",
         "grade": "B",
         "meta": {
           "money": "0",
@@ -11140,6 +11763,7 @@ module.exports = {
         "cost": "不花钱。难在自己也正难受，还得跟孩子把话说清楚。",
         "gain": "丹麦 1968 至 2008 年、瑞典 1973 至 2006 年出生的全部人口都算进来。再加上芬兰 1987 至 2007 年出生者里抽出的 89.3%。合计逾 730 万人。其中 189,094 人在 18 岁前失去父母。这批孩子各种原因加起来的死亡率，比没丧亲的人高 50%（死亡率比 1.50，95% CI 1.43–1.58，即约 1.5 倍）。父母死于意外、自杀这类非自然原因的是 1.84（1.71–2.00），高约八成。死于疾病等自然原因的是 1.33（1.24–1.41），高约三成。孩子的死因和父母的死因属同一类时最高",
         "note": "跟孩子说的时候别编「出远门了」，监护和抚养的安排要落到书面。给 B 不是因为数字不硬。这是三个国家全体人口的跟踪研究，数字本身够 A 级。给 B 是因为从这个数字到「怎么跟孩子说、要不要参加告别」的具体做法之间，没有直接试验证据。作者也写明，丧亲后亲子关系和孩子生活方式的数据都缺。升高里既有天生体质的成分，也有丧亲留下的长期影响。指定监护人和安排财产见第 17 节。孩子的抚养费和上学见第 18 节。",
+        "source": "Li J, et al. (2014). Mortality after parental death in childhood: a nationwide cohort study from three Nordic countries. PLoS Medicine. <https://doi.org/10.1371/journal.pmed.1001679>",
         "grade": "B",
         "meta": {
           "money": "0",
@@ -11159,6 +11783,7 @@ module.exports = {
         "cost": "挂号费加治疗费。这类治疗按疗程做，试验里平均 19 周做 16 次。难在要自己迈出去挂这个号。",
         "gain": "14 项研究合起来算，对象是亲人不是死于暴力、本人也没在精神科就诊的成年人。延长哀伤障碍患病率 9.8%（95% CI 6.8–14.0），即每 100 个丧亲的成年人里约 10 个。年龄越大比例越高。另有一项研究检验这套诊断标准准不准，找了 291 名丧亲者，在丧亲后 0–6、6–12、12–24 个月分三次访谈。诊断的核心表现是对逝者的强烈想念。还要加上这九项里的至少五项。前五项是情感麻木、震惊、觉得生活没有意义、不信任他人、因这次失去而痛苦。后四项是难以接受、认不清自己该是谁、回避现实、无法继续生活。这些表现要每天都出现，或者严重到干不了事。而且在亲人去世至少 6 个月后仍然存在，还影响着日常生活。还有一项 95 人抽签分两组的试验，做 16 次治疗、平均 19 周。针对复杂哀伤的治疗有效率 51%。普通的人际心理治疗 28%（P=0.02，差别不太可能是碰巧）。前者起效也更快。需治疗人数 4.3，即平均每治 4.3 个人就多一个好转",
         "note": "别自己卡月份。真正的判断是「影响到吃饭、睡觉、上班、带孩子」，对上了就去挂号。科室叫精神科、心理科或临床心理科，公立精神专科医院都有。这个诊断在不同资料里叫复杂哀伤，也叫延长哀伤障碍。不同标准要求持续多久也不一样，有的写 6 个月，有的写 12 个月。9.8% 这个比例来自 14 项做法差异不小的研究，作者也提醒它未必能照搬到别的人群身上。",
+        "source": "Lundorff M, et al. (2017). Prevalence of prolonged grief disorder in adult bereavement: A systematic review and meta-analysis. Journal of Affective Disorders. <https://doi.org/10.1016/j.jad.2017.01.030>；Prigerson HG, et al. (2009). Prolonged grief disorder: Psychometric validation of criteria proposed for DSM-V and ICD-11. PLoS Medicine. <https://doi.org/10.1371/journal.pmed.1000121>；Shear MK, et al. (2005). Treatment of complicated grief: a randomized controlled trial. JAMA. <https://doi.org/10.1001/jama.293.21.2601>",
         "grade": "A",
         "meta": {
           "money": "少",
@@ -11178,6 +11803,7 @@ module.exports = {
         "cost": "不花钱，反过来省下一笔咨询费。",
         "gain": "61 项对照研究合起来算。给丧亲的人普遍做心理干预，在治疗刚结束时好处很小，隔一段时间再看就看不出好处了。只招收「已经明显适应不了」的丧亲者的干预，效果和治疗其他心理问题的心理治疗一样好。事先不做筛查的研究结果不好，原因是没做干预的那一组本来也会随时间自己缓过来。另有 14 项抽签分组试验合起来算：对已经出问题的人做的治疗，在治疗后和之后回访时都明显好于对照，隔一段时间效果还在变大。对还没出问题的人普遍做的预防性干预无效。还有一项研究把 205 人从丧偶前一直跟到丧偶后 6、18 个月。这项研究分出五种走向。分别是普通哀伤、长期哀伤、长期抑郁、丧亲期间反而好转、韧性（扛得住）。其中韧性型最常见，普通哀伤型相对少见",
         "note": "意思是「不必人人做」，不是「都别做」。第 4 条（亲人死于自杀、意外或凶案）那类高危丧亲、第 8 条（哀伤卡住了去精神科）那类已经卡住的人，正是有证据支持该做的人。一篇 Lancet 综述的结论也是这样：哀伤不是病，多数人不需要专业干预。该把力气用在高危的人身上。也用在已经出现复杂哀伤、丧亲后抑郁和应激障碍的人身上。",
+        "source": "Currier JM, et al. (2008). The effectiveness of psychotherapeutic interventions for bereaved persons: a comprehensive quantitative review. Psychological Bulletin. <https://doi.org/10.1037/0033-2909.134.5.648>；Wittouck C, et al. (2011). The prevention and treatment of complicated grief: a meta-analysis. Clinical Psychology Review. <https://doi.org/10.1016/j.cpr.2010.09.005>；Bonanno GA, et al. (2002). Resilience to loss and chronic grief: a prospective study from preloss to 18-months postloss. Journal of Personality and Social Psychology. <https://doi.org/10.1037/0022-3514.83.5.1150>；Stroebe M 等 (2007). Health outcomes of bereavement. Lancet. <https://doi.org/10.1016/S0140-6736(07)61816-9>（备注里那份综述）",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -11197,6 +11823,7 @@ module.exports = {
         "cost": "不花钱。把医保续上，把酒停掉。难在这段时间容易靠酒顶着。",
         "gain": "32 项先登记再往后跟踪的研究合起来算，覆盖逾 650 万人、16 万例死亡、逾 75.5 万例离婚、11 个国家。和还在婚的人相比，分居或离婚的成年人早死风险明显升高。男性和年纪较轻的人，升得比女性和年长者明显。作者讨论了四条可能的路径。一是社会选择，本来健康或条件就不一样的人更容易走到离婚。二是资源中断，收入和保障断掉。三是健康行为改变，烟酒作息变差。四是慢性心理压力（长期紧绷）",
         "note": "原文只说了「明显升高」和分组对比，没给能引用的倍数，所以这里不写具体数字。收益量级按「知道方向、没有可套阈值的降幅」定为中。离婚时的财产、债务与彩礼见第 8 节和第 10 节。孩子的抚养安排见第 18 节。",
+        "source": "Sbarra DA, et al. (2011). Divorce and Death: A Meta-Analysis and Research Agenda for Clinical, Social, and Health Psychology. Perspectives on Psychological Science. <https://doi.org/10.1177/1745691611414724>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -11216,6 +11843,7 @@ module.exports = {
         "cost": "不花钱。两条热线都免费。心理门诊按普通门诊挂号。",
         "gain": "国家卫生健康委等 25 部门 2026 年方案要求完善 12356 心理援助热线工作制度。要保证稳定运行、提升接通率。要推动建立省级 12356 信息化平台。要加强与 110 等服务热线的联动机制建设。还要建强用好 12355 青少年综合服务平台，并与 12356 联动协作。到 2030 年的目标有三条。一是 80% 以上的行政村、城市社区设心理咨询室或社会工作室并提供心理服务。二是各级公立精神专科医院、各县（区）至少有 1 所医院提供心理门诊服务。三是各省建成省级 12356 心理援助平台。心理危机干预与心理援助队伍，由精神科医师、心理治疗技师、心理咨询人员、社会工作专业人员和志愿者组成。方案还要求三类人平时就留意、早点发现。这三类人是网格员（社区里按片区负责的工作人员）、社会工作专业人员和志愿者。他们要及时发现家庭变故、失业、失学等心理危机风险（全国，2026 年 3 月印发）",
         "note": "给 B 是因为村和社区的咨询室、县级的心理门诊都是 2030 年才要建成的目标，不是现在各地都有。12356 和 12355 则是现在就能打的。12356 的开通时间和每天接听多长时间见第 1 节第 25 条。心理咨询和心理治疗不是一回事。下诊断、开药得由精神科医师来，治疗要在有资质的医疗机构做。市面上按小时收费的「疗愈」「灵性咨询」不在这个体系里。",
+        "source": "国家卫生健康委等 25 部门 (2026). 关于印发健全社会心理服务体系和危机干预机制实施方案的通知（国卫医政发〔2026〕8 号）. <https://www.gov.cn/zhengce/zhengceku/202604/content_7065035.htm>",
         "grade": "B",
         "meta": {
           "money": "0",
@@ -11235,6 +11863,7 @@ module.exports = {
         "cost": "不花钱，只是把决定往后推，可能因此错过某些机会。难在当时会觉得机会不等人。",
         "gain": "避免在刚受打击、判断力最差的那段时间，做出反悔不了的财产处置。这类事包括卖房、辞职、把抚恤金或赔偿款一次性投出去、仓促再婚、替人担保。这类决定的金额通常在数万元到一套房子这个量级，收益因此定为中。官方文件同样把「家庭变故、失业、失学」列为社区要主动排查的心理危机风险，这段时间的状态本来就被当成需要外人搭把手的状态",
         "note": "身边没有这样一个没利益关系的人，就打 12356 讲一遍（见本节第 11 条，要人陪着说话打 12356），或者自己写下来隔三天再读一遍。「三个月」是作者自己划的线，没有文献支持这个具体时长，所以记 C 级。针对丧亲者和老人的常见骗局见第 17 节（投资养老、以房养老）和第 6 节（算命）。担保和借条的坑见第 8 节。有几笔钱要主动去办，不在「往后推」之列：公积金余额、社保待遇、工亡三笔钱，见第 25 节和第 19 节。",
+        "source": "作者经验，无直接文献；「家庭变故、失业、失学」作为心理危机风险的表述见国家卫生健康委等 25 部门 (2026). 健全社会心理服务体系和危机干预机制实施方案（国卫医政发〔2026〕8 号）. <https://www.gov.cn/zhengce/zhengceku/202604/content_7065035.htm>",
         "grade": "C",
         "meta": {
           "money": "0",
@@ -11254,6 +11883,7 @@ module.exports = {
         "cost": "不花钱，只是把这笔账算清。",
         "gain": "保险法第四十四条管的是以被保险人死亡为给付保险金条件的合同。从合同成立或者合同效力恢复之日起算，二年内被保险人自杀的，保险人不承担给付保险金的责任。被保险人自杀时为无民事行为能力人的，也就是法律上不能为自己行为负责的人，不在此列。这种情况下保险公司应当按照合同约定退还保险单的现金价值，即只退保单里能退的那点钱，不赔保额。寿险保额通常在数十万元级，收益因此定为大。工伤保险条例第十六条第三项规定：自残或者自杀的，不得认定为工伤或者视同工伤。第三十九条那三笔工亡待遇随之全部落空。一是丧葬补助金，按当地上一年职工月平均工资发 6 个月。二是供养亲属抚恤金。三是一次性工亡补助金，为上一年度全国城镇居民人均可支配收入的 20 倍。民法典第一千一百五十九条规定：分割遗产应当清偿被继承人依法应当缴纳的税款和债务，即先拿遗产还税和债，剩下的才分。第一千一百六十一条规定：继承人以所得遗产实际价值为限清偿，也就是只用继承到的那部分还、不用自己再掏，放弃继承的可以不负清偿责任",
         "note": "这里只算钱这一笔账。本节和第 1 节的其他条目说的是别走到这一步。保险法第四十四条管的只是前两年，写出来是为了把条文说全，不是在给时间表。家人的健康代价见本节第 4 条（配偶死于自杀者 5 年内新发精神障碍风险高七到八成）。念头冒出来时怎么办见第 1 节第 25、32 条，救回来之后的后遗症见第 1 节第 33 条。工亡三笔钱的标准见第 19 节第 15 条。遗产和债务的具体手续见第 25 节第 9 条（逐个去取公积金和社保待遇）",
+        "source": "全国人大常委会 (2015 修正). 中华人民共和国保险法第四十四条. <https://flk.npc.gov.cn/detail?id=2c909fdd678bf17901678bf7c4060811>；国务院 (2010 修订). 工伤保险条例（国务院令第 586 号）第十六条、第三十九条. <https://www.gov.cn/gongbao/content/2011/content_1778064.htm>；全国人大 (2020). 中华人民共和国民法典第一千一百五十九条、第一千一百六十一条. <https://flk.npc.gov.cn/detail?id=ff808081729d1efe01729d50b5c500bf>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -11275,6 +11905,7 @@ module.exports = {
         "cost": "不花钱。请半天假，带孩子去挂急诊。",
         "gain": "按规矩把 30 组病例报告、2116 例睾丸扭转患者找齐，合起来看。其中 1283 例是按 6 小时一档统计的。从开始痛算起，0 至 6 小时睾丸保住的比例 97.2%。7 至 12 小时 79.3%。13 至 18 小时 61.3%。19 至 24 小时 42.5%。25 至 48 小时 24.4%。超过 48 小时 7.4%。合并成大段看，12 小时内 90.4%，13 至 24 小时 54.0%，超过 24 小时 18.1%。作者的结论是，能保住的时间可以比通常说的 6 至 8 小时更长。所以就算已经痛了很久，也还是要去处理，不要因为「反正晚了」就不去",
         "note": "提前跟男孩说一句：下面要是突然剧痛，马上讲，不用不好意思。睾丸扭转多发于青春期男孩，不少人因为难以启齿就硬忍。同样按小时算的还有急性阑尾炎（拖久了会穿孔）、糖尿病酮症酸中毒、脑膜炎。这几种本节没有逐条核实过「拖几小时坏多少」。它们共同的信号是：突然发作，一直加重，和以往任何一次都不一样。急症怎么认、怎么叫车见第 13 节。",
+        "source": "Mellick LB, et al. (2019). A Systematic Review of Testicle Survival Time After a Torsion Event. Pediatric Emergency Care. <https://doi.org/10.1097/PEC.0000000000001287>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -11294,6 +11925,7 @@ module.exports = {
         "cost": "不花钱，要定的只是早做还是晚做。请假和复诊要占时间，治疗本身的花费另算。难在支具要求每天至少戴 18 小时，孩子得一直忍着。",
         "gain": "多家医院一起做的试验，找了 242 例够条件戴支具的青少年特发性脊柱侧弯患者。其中 116 例抽签分组，126 例自己选戴不戴。成败事先定好怎么算：弯度长到 50 度以上算治疗失败，骨头长完时还没到这个度数算治疗成功。按最初分到哪一组来算，不管后来有没有真戴够。抽签戴支具组成功率 75%，抽签只观察组 42%（OR 4.11，95% CI 1.85–9.16），成功的机会约为只观察的 4 倍。把抽签的和自己选的两拨人合起来算，是 72% 对 48%（把两拨人本来的差别扣平后 OR 1.93，1.08–3.46，仍约 1.9 倍）。每天戴的小时数越多，成功率越高（P<0.001，这个关系不太可能是碰巧）。试验因为支具确实有效，提前停掉了",
         "note": "这里用脊柱侧弯举例，是因为它有抽签分组的试验，有明确的时间窗口，而且正好是学生体检的重点项目之一（见第 7 条）。同类的还有斜视、弱视、龋齿，以及先天性心脏病那种可以挑时间做的手术。它们的共同点是越晚做效果越差，或者代价越大。具体窗口问专科医生。怕耽误上课，义务教育阶段可以休学，最长 1 年，学籍给留着，见第 11 条。",
+        "source": "Weinstein SL, et al. (2013). Effects of bracing in adolescents with idiopathic scoliosis. New England Journal of Medicine. <https://doi.org/10.1056/NEJMoa1307337>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -11313,6 +11945,7 @@ module.exports = {
         "cost": "不花钱。找班主任，也找学校的学生欺凌治理组织。要报警就打 110。难在要顶住「别把事闹大」这类劝法。",
         "gain": "34 项研究、284,375 名儿童青少年合起来算。被同伴欺凌和冒出自杀念头相关，OR 2.23（95% CI 2.10–2.37），出现念头的机会约为没被欺凌的 2.2 倍。另有 9 项研究、70,102 人，被欺凌和自杀未遂相关，OR 2.55（1.95–3.34），约 2.6 倍。男女、年龄和研究本身质量不同，结果都一样。网络欺凌和自杀念头的关联比线下欺凌更强。《未成年人学校保护规定》第二十一条列出五类行为：殴打、脚踢、掌掴、抓咬、推撞、拉扯；辱骂、讥讽、起侮辱性绰号；抢夺、强拿硬要或故意毁坏财物；恶意排斥孤立；通过网络捏造事实诽谤或散布谣言。该条还规定，在年龄、身体或人数上占优势的一方蓄意或恶意做这些事，造成人身伤害、财产损失或精神损害的，可以认定为欺凌。第二十二条要求教职工发现学生情绪反常、身体损伤，应及时了解并报告。第二十三条要求学校接到报告立即调查，提交欺凌治理组织认定处置，并通知家长参与。认定构成欺凌的，要作出教育惩戒或纪律处分。对违反治安管理或涉嫌犯罪的严重欺凌行为不得隐瞒，应当及时向公安机关、教育行政部门报告（全国，2021 年 9 月 1 日起施行）",
         "note": "孩子身上出现说不清来由的伤，突然不肯上学，东西反复丢失，先按第二十二条那几个信号去问。这份把多项研究合起来算的分析只是跟踪记录、没有分组对照，所以不能证明单是欺凌就导致自杀，但风险的方向和大小是清楚的。《加强中小学生欺凌综合治理方案》另外要求严格区分欺凌与学生之间的打闹嬉戏。所以学校有义务作出认定，不能一句「小孩子闹着玩」了事。",
+        "source": "van Geel M, et al. (2014). Relationship between peer victimization, cyberbullying, and suicide in children and adolescents: a meta-analysis. JAMA Pediatrics. <https://doi.org/10.1001/jamapediatrics.2013.4143>；教育部 (2021). 未成年人学校保护规定（教育部令第 50 号，第二十一、二十二、二十三条）. <https://www.gov.cn/zhengce/zhengceku/2021-06/02/content_5614946.htm>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -11332,6 +11965,7 @@ module.exports = {
         "cost": "不花钱。但每天要腾出时间，多半得从写作业和上网课的时间里挤。难在天天都要做到，不是做几次就完。",
         "gain": "广州 12 所小学的一年级学生，以学校为单位抽签分组（干预校 952 人，对照校 951 人，平均年龄 6.6 岁）。干预的做法是每个上学日增加 1 节 40 分钟户外活动课，并鼓励家长在课外多带孩子出去。3 年里新近视的比例，干预组 30.4%，是 853 名合格者中的 259 例；对照组 39.5%，是 726 名中的 287 例。两组差值 -9.1 个百分点（95% CI -14.1 至 -4.1，P<0.001），真实差距大致在少 4 到少 14 个百分点之间。3 年里度数的加深量（等效球镜变化）是 -1.42 D 对 -1.59 D，差 0.17 D（P=0.04）。干预组加深得略少一点。D 是量度数的单位。眼轴（眼球前后的长度）的增长，两组看不出差别（P=0.07）。《防控儿童青少年近视核心知识十条》要求儿童青少年每天日间户外活动不少于 2 小时，或每周累计 14 小时。它注明即使阴天，户外活动也有防护效果，并要求避开午后高温强晒的时段",
         "note": "这项试验只做了 3 年，参加的孩子也都是从 6 岁开始的。两组近视的比例差 9.1 个百分点，只能让一部分人不近视，保证不了不近视。同一份核心知识十条还给了几条做法。读写要「一尺一拳一寸」。近距离用眼 20 分钟后，要远眺 20 秒以上。中小学生不为学习而用电子屏幕的，一次不超过 15 分钟，一天加起来不超过 1 小时。「待在户外」和「上体育课」不是一回事，课间到室外站着也算数。",
+        "source": "He M, et al. (2015). Effect of Time Spent Outdoors at School on the Development of Myopia Among Children in China: A Randomized Clinical Trial. JAMA. <https://doi.org/10.1001/jama.2015.10803>；国家卫生健康委办公厅 (2023). 防控儿童青少年近视核心知识十条（国卫办妇幼函〔2023〕278 号）. <https://www.gov.cn/zhengce/zhengceku/202307/content_6894284.htm>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -11351,6 +11985,7 @@ module.exports = {
         "cost": "不花钱。难的是把屏幕从孩子手里拿走，也难在家长自己当着孩子的面少看。",
         "gain": "《防控儿童青少年近视核心知识十条》第四条的原话是「0～3岁婴幼儿不使用手机、平板、电脑等视屏类电子产品；3～6岁幼儿尽量避免其接触和使用手机、平板、电脑等视屏类电子产品；中小学生非学习目的使用电子屏幕单次时长不宜超过15分钟，每天累计时长不宜超过1小时」。同一条写明「长时间近距离使用电子视屏类产品，易消耗儿童远视储备量，是儿童青少年近视早发、高发的重要原因」。教育部等八部门 2018 年的实施方案给家长的要求一致，还加了一句「年龄越小，连续使用电子产品的时间应越短」。研究证据要弱得多：一项系统综述收了 33 项研究，11 项进了合并计算，对象从 3 个月到 33 岁。只算手机和平板的，近视的比值比是 1.26（95% CI 1.00 到 1.60，I²=77%）。和电脑合起来算是 1.77（1.28 到 2.45，I²=87%）。作者的结论只写到「可能相关」，并写明 33 项研究没有一项有可靠的屏幕时间测量",
         "note": "定 B 是因为官方给的是分档规定，不是试验测出来的数字。研究给的比值比下限正好压在 1.00，作者只敢说「可能相关」。所以把它当一条好执行的家规就行，不要当成「不看屏幕就不会近视」。真正有抽签试验撑着的是第 4 条（户外 2 小时）。学龄前也要查眼睛：同一份文件写明 1～3 岁、4～6 岁、7 岁之后都应当定期做屈光筛查，看远视储备还剩多少，查法见第 12 条（散瞳验光）。屏幕和孩子语言能力的关系也做过荟萃：42 项研究 18905 人，屏幕时间越长语言能力越弱（r=−0.14，95% CI −0.18 到 −0.10）。但一起看、看有教育内容的节目反过来是正相关（r=0.16 和 0.13）。这是相关不是因果，只能说明拿屏幕代替陪孩子说话不划算。",
+        "source": "国家卫生健康委办公厅 (2023). 防控儿童青少年近视核心知识十条（国卫办妇幼函〔2023〕278 号）. <https://www.gov.cn/zhengce/zhengceku/202307/content_6894284.htm> ; 教育部等八部门 (2018). 综合防控儿童青少年近视实施方案（教体艺〔2018〕3 号）. <http://www.moe.gov.cn/srcsite/A17/moe_943/s3285/201808/t20180830_346672.html> ; Foreman J, Salim AT, Praveen A, et al. (2021). Association between digital smart device use and myopia: a systematic review and meta-analysis. The Lancet Digital Health, 3(12), e806-e818. <https://doi.org/10.1016/S2589-7500(21)00135-7> ; Madigan S, McArthur BA, Anhorn C, Eirich R, Christakis DA (2020). Associations between screen use and child language skills: a systematic review and meta-analysis. JAMA Pediatrics, 174(7), 665-675. <https://doi.org/10.1001/jamapediatrics.2020.0327>",
         "grade": "B",
         "meta": {
           "money": "0",
@@ -11370,6 +12005,7 @@ module.exports = {
         "cost": "不花钱。本身不用做什么，要做的事在第 4、5 条（户外 2 小时、分龄管屏幕）。",
         "gain": "一项系统综述与荟萃分析汇总了 2019 年 6 月之前的研究，按度数分三档：轻度（−0.5 到 −3.00 D）、中度（−3.00 到 −6.00 D）、高度（≤−6.00 D，600 度以上）。和不近视的人相比，近视性黄斑变性的比值比依次是 13.57（95% CI 6.18 到 29.79）、72.74（33.18 到 159.48）、845.08（230.05 到 3104.34）。视网膜脱离依次是 3.15（1.92 到 5.17）、8.74（7.28 到 10.50）、12.62（6.65 到 23.94）。后囊下白内障依次是 1.56（1.32 到 1.84）、2.55（1.98 到 3.28）、4.55（2.66 到 7.75）。开角型青光眼，轻度是 1.59（1.33 到 1.91），中度和高度合起来是 2.92（1.89 到 4.52）。60 岁以上出现视力损害的比值比，三档依次是 1.71（1.07 到 2.74）、5.54（3.12 到 9.85）、87.63（34.50 到 222.58）。《防控儿童青少年近视核心知识十条》的说法一致：600 度以上为高度近视，这类人群里白内障、开角型青光眼、近视性黄斑病变、视网膜脱离、近视性视神经病变等致盲性眼病的发病率明显高于其他人群，而且「近视可防可控不可逆」",
         "note": "汇总进去的都是观察性研究，比值比也大得不寻常。高度近视对黄斑变性那一项的可信范围从 230 到 3104，说明底下各项研究差别很大，数字只能看量级，不能当精确值用。这些并发症多数要到中老年才显出来。近视本身不是残疾，绝大多数人戴镜矫正后视力正常。但近视不是配副眼镜就完了，值得花力气推迟它、控制它。确诊之后怎么复查见第 12 条（散瞳验光）。别买号称能治好的产品，见第 9 条（治愈近视）。",
+        "source": "Haarman AEG, Enthoven CA, Tideman JWL, Tedja MS, Verhoeven VJM, Klaver CCW (2020). The complications of myopia: a review and meta-analysis. Investigative Ophthalmology & Visual Science, 61(4), 49. <https://doi.org/10.1167/iovs.61.4.49> ; 国家卫生健康委办公厅 (2023). 防控儿童青少年近视核心知识十条（国卫办妇幼函〔2023〕278 号）. <https://www.gov.cn/zhengce/zhengceku/202307/content_6894284.htm>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -11389,6 +12025,7 @@ module.exports = {
         "cost": "不花钱。义务教育阶段的体检费由学校公用经费出，家长不用另掏。",
         "gain": "《中小学生健康体检管理办法（2021 年版）》规定，中小学校每年组织 1 次在校学生健康体检。外科检查包括头部、颈部、胸部、脊柱、四肢、皮肤、淋巴结。眼科检查包括眼外观、远视力、屈光度（近视远视的度数）。发给个人的报告单应包括查出来的结果、总的评价和健康指导建议。其中超重、肥胖、营养不良、脊柱弯曲异常、视力不良、龋齿（蛀牙）须作为指导重点。教育行政部门应当对出现健康问题的学生建立档案并随访（记下来、之后再跟进）。义务教育阶段学生健康体检费用由学校公用经费开支，家长不另掏（全国，2021 年 9 月印发）",
         "note": "给 B 是因为这是一份规定学校怎么做的文件，不是效果研究。它保证的是「每年查、查这几项、发现异常要跟进」，不保证查出来就有人管。体检只是先筛一遍，不是确诊。视力不良要去眼科做散瞳验光（第 12 条）。脊柱弯曲异常要去骨科或脊柱外科（第 2 条，别为了等考完推迟治疗）。这两步都得家长自己带孩子去。",
+        "source": "国家卫生健康委、教育部 (2021). 中小学生健康体检管理办法（2021 年版）（国卫医发〔2021〕29 号）. <https://www.gov.cn/zhengce/zhengceku/2021-10/21/content_5644100.htm>",
         "grade": "B",
         "meta": {
           "money": "0",
@@ -11408,6 +12045,7 @@ module.exports = {
         "cost": "0 到几十元，在社区或医院门诊填一份筛查问卷。12355 和 12356 两条热线打电话不要钱。",
         "gain": "美国预防服务工作组 2022 年发了一份推荐声明。它建议对 12 至 18 岁青少年筛查重度抑郁障碍（B 类推荐）。B 类的意思是把握中等、算下来好处也中等，值得做。对 11 岁及以下儿童筛查重度抑郁，证据不足（I 声明，即证据不够，给不出建议）。对儿童青少年专门筛查自杀风险，好处和坏处的证据都不足（I 声明）。文件指出，自杀是 10 至 19 岁人群的第二位死因。文件还指出，儿童青少年的重度抑郁和后来的很多问题关系密切。这些问题包括成年后抑郁反复发作、别的精神障碍，以及自杀念头、自杀未遂、自杀死亡的风险升高。《进一步加强中小学生心理健康工作十条措施》要求构建班主任、专兼职心理健康教师、精神科医师三级服务体系。每名学生每学年接受心理测评，一般不超过 1 次。文件还要求推进精神疾病转介就医和愈后复学机制。它要求发挥 12355 青少年服务台和 12356 心理援助热线的作用（全国，2025 年 10 月印发）",
         "note": "给 B 是因为原文给的是推荐力度的评级，不是能换算成数字的效果。它还是美国的推荐，国内没有对应的官方筛查建议。筛查结果是阳性，只说明要再做一次评估，不等于确诊。有自杀念头时的处置见第 1 节第 25 条。家里的应对见第 29 节。",
+        "source": "US Preventive Services Task Force (2022). Screening for Depression and Suicide Risk in Children and Adolescents: US Preventive Services Task Force Recommendation Statement. JAMA. <https://doi.org/10.1001/jama.2022.16946>；教育部办公厅 (2025). 进一步加强中小学生心理健康工作十条措施（教基厅〔2025〕2 号）. <https://www.gov.cn/zhengce/zhengceku/202510/content_7045528.htm>",
         "grade": "B",
         "meta": {
           "money": "0",
@@ -11427,6 +12065,7 @@ module.exports = {
         "cost": "不花钱，反过来还省下这笔钱。",
         "gain": "市场监管总局办公厅 2021 年 11 月至 2022 年 3 月的专项整治行动通知明确：「在目前医疗技术条件下，近视不能治愈」。通知要求依法从严查处使用「康复」「恢复」「降低度数」「近视治愈」「近视克星」「度数修复」等误导性表述营销儿童青少年近视防控产品的行为。通知要求加大打击力度，管的是冒用中医药名义、或者假借中医药理论技术做营销宣传欺骗消费者的行为。通知还要求严厉打击两类虚假违法广告：使用患者名义或形象作诊疗前后效果对比的，以及对诊疗安全性、功效作保证性承诺的。通知要求电商平台严格落实护眼仪等医疗器械及有关特殊商品的经营资质审查责任（查清卖家够不够格卖）（全国）",
         "note": "给 B 是因为依据的是监管部门查处时的认定口径，不是拿产品做对照试验测出来的。但「近视不能治愈」这句话，卫生部门和监管部门说法一致：《防控儿童青少年近视核心知识十条》里写的是「近视可防可控不可逆」。真正有证据的两件事在第 4 条（户外）和第 12 条（规范验光配镜与复查）。防蓝光眼镜见第 6 节。",
+        "source": "市场监管总局办公厅 (2021). 关于开展儿童青少年近视防控产品违法违规商业营销宣传专项整治行动的通知. <https://www.gov.cn/zhengce/zhengceku/2021-11/12/content_5650400.htm>",
         "grade": "B",
         "meta": {
           "money": "0",
@@ -11446,6 +12085,7 @@ module.exports = {
         "cost": "不花钱。知道条文就行，必要时向学校或当地教育行政部门反映。难在要开口去提。",
         "gain": "《关于进一步加强中小学生睡眠管理工作的通知》规定：小学生每天睡眠应达 10 小时，初中生 9 小时，高中生 8 小时。小学上午上课时间一般不早于 8:20，中学一般不早于 8:00。学校不得要求学生提前到校参加统一的教育教学活动。小学生就寝一般不晚于 21:20，初中生不晚于 22:00，高中生不晚于 23:00。校外培训机构培训结束时间不得晚于 20:30，线上直播类培训结束不得晚于 21:00。每日 22:00 到次日 8:00 不得为未成年人提供游戏服务（全国，2021 年 3 月印发）。《进一步加强中小学生心理健康工作十条措施》另有几条规定：全面推行中小学生每天综合体育活动时间不低于 2 小时，鼓励推行「课间 15 分钟」。它还规定不得以考试成绩对学生进行排名，严禁布置机械重复、惩罚性作业，鼓励每周设置一天「无作业日」（全国，2025 年 10 月印发）",
         "note": "这两份都是主管部门发的文件。各地各校执行到什么程度差别很大，所以本条给 B。它们的用处是让你知道哪些事学校本来就该做，去谈的时候手里有依据。成年人的睡眠账见第 2、3 节。",
+        "source": "教育部办公厅 (2021). 关于进一步加强中小学生睡眠管理工作的通知（教基厅函〔2021〕11 号）. <https://www.gov.cn/zhengce/zhengceku/2021-04/02/content_5597443.htm>；教育部办公厅 (2025). 进一步加强中小学生心理健康工作十条措施（教基厅〔2025〕2 号）. <https://www.gov.cn/zhengce/zhengceku/202510/content_7045528.htm>",
         "grade": "B",
         "meta": {
           "money": "0",
@@ -11465,6 +12105,7 @@ module.exports = {
         "cost": "不花钱。由父母或其他法定监护人向学校提出申请。难在要先接受孩子停一段时间。",
         "gain": "《中小学生学籍管理办法》第十六条规定了休学怎么办。学生休学由父母或其他法定监护人提出申请。学校确认后报上级学籍管理部门核准。复学时学校应及时办理相关手续。一次申请休学的期限不超过 1 年，期满后确实还要接着休的，应重新申请办理。学生休学期间学校应为其保留学籍（学生身份和位置给留着）。休学复学的具体办法由省级教育行政部门制定（全国，2025 年 1 月印发）。《进一步加强中小学生心理健康工作十条措施》要求推进精神疾病转介就医和愈后复学机制建设，指导学校制定校园突发心理危机事件处理预案",
         "note": "去办之前先问清三件事：要开什么医疗证明，休学这段时间学籍在系统里怎么记，复学是回原来的年级还是降一级。给 B 是因为休学要什么条件、交什么材料、复学怎么接上，都由省级教育部门自己定，全国层面只搭了个框架。《未成年人学校保护规定》还要求义务教育学校把辍学、休学和长期请假的学生登记备案，所以休学是学校办过的事，不是给你一个人开特例。",
+        "source": "教育部 (2025). 中小学生学籍管理办法（教基〔2025〕1 号，第十六条）. <https://www.gov.cn/zhengce/zhengceku/202502/content_7002620.htm>；教育部办公厅 (2025). 进一步加强中小学生心理健康工作十条措施（教基厅〔2025〕2 号）. <https://www.gov.cn/zhengce/zhengceku/202510/content_7045528.htm>",
         "grade": "B",
         "meta": {
           "money": "0",
@@ -11484,6 +12125,7 @@ module.exports = {
         "cost": "几十到几百元的检查费和配镜费。散瞳之后孩子会怕光、看近处模糊，要半天到一两天才缓过来。",
         "gain": "《防控儿童青少年近视核心知识十条》写明了散瞳验光是怎么回事。先用睫状肌麻痹剂，再验光。睫状肌麻痹剂是让眼睛里负责调焦的那块肌肉松下来的眼药水。散瞳验光是在医院做的医学验光，为诊断近视的「金标准」（最准的做法）。散瞳药物对健康的眼睛不会产生损伤，用药后可短期出现怕光、看近处不清楚，停药后可恢复正常。一旦确诊近视，应及时科学干预，通过配戴眼镜等矫正。配戴合适的眼镜可以有效矫正视物不清、延缓近视进展。戴镜视力正常者，学龄前儿童及小学生每 3 至 6 个月复查一次，初高中学生每 6 至 12 个月复查一次，根据具体情况决定是否更换眼镜。儿童在 1 至 3 岁、4 至 6 岁、7 岁之后应定期接受屈光筛查（查度数），监测远视储备量（全国，2023 年 7 月印发）",
         "note": "给 B 是因为这是官方科普文件给的做法，不是带具体数字的原始研究。高度近视会引出视网膜脱离一类的毛病，所以复查不只是为了换眼镜。学生体检查出的「视力不良」只是先筛出来的结果，还要拿去医院做一次完整的眼科检查，见第 7 条。",
+        "source": "国家卫生健康委办公厅 (2023). 防控儿童青少年近视核心知识十条（国卫办妇幼函〔2023〕278 号）. <https://www.gov.cn/zhengce/zhengceku/202307/content_6894284.htm>",
         "grade": "B",
         "meta": {
           "money": "少",
@@ -11503,6 +12145,7 @@ module.exports = {
         "cost": "每颗几十到一两百元。不打麻药，也不用磨牙，一次几分钟。不少地方对够年龄的孩子有免费项目。",
         "gain": "38 项试验、7924 名 5 至 16 岁儿童，由 Cochrane 按规矩找齐后合起来算。拿树脂类封闭剂和不封闭比。5 至 10 岁儿童的第一恒磨牙，做完 24 个月时长蛀牙 OR 0.12（95% CI 0.08–0.19），长蛀牙的机会约为不封闭的八分之一。这一项来自 7 项试验，1548 名抽签分组、1322 名最后受检，证据质量中等。若对照组 24 个月内 16% 的牙面长蛀牙，封闭后为 5.2%（3.13%–7.37%）。对照组 40% 时为 6.25%（3.84%–9.63%）。对照组 70% 时为 19%（12.3%–27.2%）。做完 48 至 54 个月时 OR 0.21（0.16–0.28），仍是不封闭的约五分之一。作者结论为树脂封闭剂在 24 个月时比不封闭少长 11% 至 51% 的蛀牙。4 项记录了不良反应的试验中，没出现不良反应。玻璃离子这类别的封闭材料之间谁更好，证据不足",
         "note": "第一颗恒磨牙（不会再换的那颗大牙）一般 6 岁左右冒头，第二颗 12 岁左右。封闭要趁牙刚长出来、还没坏的时候做，已经蛀了就只能补。不少地区把够年龄孩子的窝沟封闭列成免费项目，问当地疾控中心或社区卫生服务中心。本节没找到能逐字核对的全国性文件，所以不写覆盖范围和年龄段。龋齿也是学生体检重点指导的项目，见第 7 条。",
+        "source": "Ahovuo-Saloranta A, et al. (2017). Pit and fissure sealants for preventing dental decay in permanent teeth. Cochrane Database of Systematic Reviews. <https://doi.org/10.1002/14651858.CD001830.pub5>",
         "grade": "A",
         "meta": {
           "money": "少",
@@ -11522,6 +12165,7 @@ module.exports = {
         "cost": "不花钱。每周留意一次孩子几点睡、作业交没交、有没有出门活动。",
         "gain": "一篇荟萃分析汇总了 17 个国家的 53 项研究、226247 人。游戏障碍的患病率是 3.05%（95% CI 2.38–3.91，这是可信范围）。只算抽样更严格的研究，是 1.96%。各研究结果差得远，77% 的差别出在用的是哪份问卷上。样本是青少年、门槛分数低、样本小，都会让比例偏高。另一项研究拿到 7 家游戏公司的数据，把 38935 名玩家六周的真实游戏时长，和他们自己填的幸福感连起来看。几乎找不到玩的时长影响幸福感的证据。国家新闻出版署规定，游戏企业只能在周五、周六、周日和法定节假日每天 20 时到 21 时，给未成年人提供 1 小时服务（全国 / 国际，2021 年起）",
         "note": "给 B 是因为患病率随问卷变化太大，幸福感那项研究也只跟了六周。游戏最常见的代价是挤掉睡觉和户外时间。睡觉的明文要求见本节第 10 条（睡眠、作业、体育），户外见本节第 4 条（每天户外 2 小时），屏幕时长见本节第 5 条（非学习用途每天不超过 1 小时）。充值和退款见第 5 节第 9 条（孩子用手机充值打赏）。成绩、睡觉、和家里人的关系一起垮下来，劝也停不下来，这时带孩子去精神科或儿童心理科。别送去封闭管理的戒网瘾学校，见本节第 18 条（戒网瘾学校）。受益人是孩子。",
+        "source": "Stevens MW, Dorstyn D, Delfabbro PH, King DL. (2021). Global prevalence of gaming disorder: A systematic review and meta-analysis. Australian and New Zealand Journal of Psychiatry, 55(6), 553–568. <https://doi.org/10.1177/0004867420962851>；Vuorre M, Johannes N, Magnusson K, Przybylski AK. (2022). Time spent playing video games is unlikely to impact well-being. Royal Society Open Science, 9(7), 220411. <https://doi.org/10.1098/rsos.220411>；国家新闻出版署 (2021). 关于进一步严格管理切实防止未成年人沉迷网络游戏的通知（国新出发〔2021〕14 号）. <https://www.gov.cn/zhengce/zhengceku/2021-09/01/content_5634661.htm>",
         "grade": "B",
         "meta": {
           "money": "0",
@@ -11541,6 +12185,7 @@ module.exports = {
         "cost": "不花钱。难在家长要先消化自己的情绪，当下不说狠话。",
         "gain": "国内一项调查覆盖 7 个省 506 所中学，共 150822 名初一到高三的学生。过去一年试过自杀的，男生里只喜欢异性的是 2.2%，只喜欢同性的是 6.9%，两性都喜欢的是 12.2%。女生对应是 3.1%、8.9%、10.9%。算下来约是只喜欢异性的同学的 3 到 5.5 倍。研究者扣除了年龄、学业压力、家庭经济、被欺凌这些因素。之后男生这两组的 OR 是 3.13（95% CI 2.28–4.28）和 3.83（2.85–5.14），高约两到三倍。一篇汇总 35 项研究的荟萃分析算出，性少数青少年试过自杀的 OR 3.50（2.98–4.12）。美国一项研究访问了 224 名 21 到 25 岁的同性恋和双性恋青年，请他们回忆青春期时家里的反应。和家里几乎不排斥的同龄人比，家里排斥程度高的试过自杀的 OR 是 8.4。另一项研究里，父母自己试图改变孩子性取向的，孩子试过自杀的 OR 3.08（1.39–6.83）。父母还把孩子送去找治疗师或宗教人士的，是 5.07（2.38–10.79）（中国 / 多国 / 美国）",
         "note": "给 B 是因为这些都是一次性的调查，家里排斥的程度靠成年后回忆，只能说明有关联，说明不了谁导致谁。家长不必马上认同，先别做伤害孩子的事。法律上，父母不得虐待、遗弃孩子，也不得对孩子实施家庭暴力。经常性的谩骂、恐吓，也算家庭暴力。孩子情绪低落、说不想活了，先打 12356，见第 1 节第 25 条（有自杀念头时打 12356）。也可以按本节第 8 条（12 到 18 岁做一次抑郁筛查）去精神科。「矫正」为什么别碰，见第 6 节第 28 条（不要做性取向矫正）。受益人是孩子，也是你自己。",
+        "source": "Huang Y, Li P, Guo L, et al. (2018). Sexual minority status and suicidal behaviour among Chinese adolescents: a nationally representative cross-sectional study. BMJ Open, 8(8), e020969. <https://doi.org/10.1136/bmjopen-2017-020969>；di Giacomo E, Krausz M, Colmegna F, Aspesi F, Clerici M. (2018). Estimating the Risk of Attempted Suicide Among Sexual Minority Youths: A Systematic Review and Meta-analysis. JAMA Pediatrics, 172(12), 1145–1152. <https://doi.org/10.1001/jamapediatrics.2018.2731>；Ryan C, Huebner D, Diaz RM, Sanchez J. (2009). Family rejection as a predictor of negative health outcomes in white and Latino lesbian, gay, and bisexual young adults. Pediatrics, 123(1), 346–352. <https://doi.org/10.1542/peds.2007-3524>；Ryan C, Toomey RB, Diaz RM, Russell ST. (2020). Parent-Initiated Sexual Orientation Change Efforts With LGBT Adolescents: Implications for Young Adult Mental Health and Adjustment. Journal of Homosexuality, 67(2), 159–173. <https://doi.org/10.1080/00918369.2018.1538407>；全国人大常委会 (2024 年修正). 未成年人保护法（第十七条）. <https://flk.npc.gov.cn/detail?id=ff8081818f197cf001905e567af635a0>；全国人大常委会 (2015). 反家庭暴力法（第二条）. <https://flk.npc.gov.cn/detail?id=2c909fdd678bf17901678bf7f9d60889>",
         "grade": "B",
         "meta": {
           "money": "0",
@@ -11560,6 +12205,7 @@ module.exports = {
         "cost": "不花钱。难在火上来的那一刻停住手和嘴，还得换一套不打不骂的管法。换成什么管法，见本节第 17 条（教具体做法的家长课）。",
         "gain": "先看打。一篇荟萃分析只算「张开手打屁股或打手脚」这一种。它汇总了 75 项研究、111 个效果值，共 160927 名孩子。17 项结果里有 13 项和挨打明显有关，方向全是坏的。d 是效果大小，0.2 算小，0.5 算中等。小时候的攻击性 d = 0.37（95% CI 0.13–0.61，可信范围）。外显问题 0.41，指打人、违反规矩这类。内化问题 0.24，指焦虑、抑郁这类。心理健康问题 0.53，和父母关系差 0.51，自尊低 0.15，认知能力差 0.17。被父母施加身体虐待 0.64。长大后的反社会行为 0.36，心理健康问题 0.24。111 个效果值合起来是 d = 0.33（0.29–0.38）。孩子当场听不听话，和挨不挨打关系不明显（d = 0.14，−0.19–0.47），这一项只有 5 个效果值。另一篇综述只看前后跟踪的研究，共 69 项。体罚稳定地预示孩子之后的行为问题变多，没看到它和任何长期的好结果有关。其中 7 项研究看了打的次数，5 项发现打得越多、问题越重。再看吼骂。美国一项研究跟踪了 976 个父母双全的家庭。孩子 13 岁时，父母常吼叫、骂脏话、骂孩子笨或懒，孩子 13 到 14 岁之间闯祸和抑郁症状都增加。父母平时亲不亲热，都抵消不了这个关联。反过来也成立：13 岁时闯祸多的孩子，之后挨骂也更多。法律上，父母不得对孩子实施家庭暴力。《反家庭暴力法》第二条列了家庭暴力的方式：殴打、捆绑、残害、限制人身自由，以及经常性谩骂、恐吓。该法第十二条要求监护人用文明的方式进行家庭教育。父母侵犯孩子权益的，居委会、村委会要劝诫、制止，情节严重的报公安。公安、检察院、法院发现了，应当训诫父母，并可以责令他们接受家庭教育指导（全国）",
         "note": "争议。这些研究几乎都只是跟踪记录、没有分组对照，说明不了谁导致谁。打屁股那篇荟萃里，72% 的研究只看两件事是否一起出现，或者靠事后回忆。另一篇荟萃只收前后跟踪的研究，扣掉孩子原来的行为之后，打屁股和外显问题的关联只剩 0.07，和内化问题只剩 0.10。那篇的作者认为影响很小。还有一篇荟萃发现，「有条件地打」在减少不听话和反社会行为上，比 13 种别的管法里的 10 种效果好。它也发现，打得过重或者以打为主，就比别的管法差。所以反方能说明的是：少量、有条件地打，未必比别的管法差。打得重、常打常骂，两边都认为更差。偶尔打一下、吼一句，法条没有明说就是家暴，它点名的是殴打和经常性的谩骂、恐吓。受益人主要是孩子。家里别人打孩子，报警和申请保护令见第 8 节第 43 条（人身安全保护令）。看到别人家长期打孩子，任何人都有权劝阻，或者向公安、民政、教育部门检举。对陌生人家里的事，打 110 或者告诉居委会就够了，别自己上门拉架。",
+        "source": "Gershoff ET, Grogan-Kaylor A. (2016). Spanking and child outcomes: Old controversies and new meta-analyses. Journal of Family Psychology, 30(4), 453–469. <https://doi.org/10.1037/fam0000191>；Heilmann A, Mehay A, Watt RG, et al. (2021). Physical punishment and child outcomes: a narrative review of prospective studies. Lancet, 398(10297), 355–364. <https://doi.org/10.1016/S0140-6736(21)00582-1>；Wang MT, Kenny S. (2014). Longitudinal links between fathers' and mothers' harsh verbal discipline and adolescents' conduct problems and depressive symptoms. Child Development, 85(3), 908–923. <https://doi.org/10.1111/cdev.12143>；Ferguson CJ. (2013). Spanking, corporal punishment and negative long-term outcomes: a meta-analytic review of longitudinal studies. Clinical Psychology Review, 33(1), 196–208. <https://doi.org/10.1016/j.cpr.2012.11.002>；Larzelere RE, Kuhn BR. (2005). Comparing child outcomes of physical punishment and alternative disciplinary tactics: a meta-analysis. Clinical Child and Family Psychology Review, 8(1), 1–37. <https://doi.org/10.1007/s10567-005-2340-z>；全国人大常委会 (2015). 反家庭暴力法（第二、十二条）. <https://flk.npc.gov.cn/detail?id=2c909fdd678bf17901678bf7f9d60889>；全国人大常委会 (2024 年修正). 未成年人保护法（第十一、十七、一百一十八条）. <https://flk.npc.gov.cn/detail?id=ff8081818f197cf001905e567af635a0>；全国人大常委会 (2021). 家庭教育促进法（第二十三、五十三条）. <https://flk.npc.gov.cn/detail?id=ff8081817cac3b2d017cac5a6c6f0109>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -11579,6 +12225,7 @@ module.exports = {
         "cost": "学校、幼儿园和社区办的家长学校是公益的，不收费。有证据的那类课每周或隔周上一次，每次一到两小时，从四周到二十四周不等。回家要照着练。难在坚持上完、天天练。",
         "gain": "Cochrane 汇总了 13 项试验，其中 10 项是抽签分组的，共 1078 名家长。孩子 3 到 12 岁，都有行为问题。上过课的家长，孩子的行为问题少了。家长自己评是 SMD −0.53（95% CI −0.72 到 −0.34，可信范围），旁人独立评是 −0.44（−0.77 到 −0.11）。SMD 和 d 是同一把尺子，0.5 算中等。家长的心理健康变好，−0.36（−0.52 到 −0.20）。负面或严厉的管法变少，家长自己评 −0.77（−0.96 到 −0.59），旁人评 −0.42（−0.67 到 −0.16）。作者说这些是短期效果。另一篇荟萃筛出 346 项抽签分组的试验，其中 60 项量了打骂孩子这类行为，分布在 22 个国家。打骂在课刚上完时少了，d = −0.46（−0.59 到 −0.33）。1 到 6 个月后是 −0.24（−0.37 到 −0.11）。7 到 24 个月后是 −0.18（−0.34 到 −0.02），越往后越小。这些数据大多是家长自己报的。国内也有试验。上海 81 名家长抽签分组，一部分上 Triple P 小组课。上完课，孩子的适应问题、家长的管法和情绪，都比等着上课的家长好，6 个月后还在。农村一所幼儿园有 191 名带孩子的大人参加，一部分自学网课，再加两次小组讨论。上完两周，他们报告的虐待孩子行为比只发书读的少约 33%（IRR 0.67）。三个月后，孩子的行为问题也少了（d = −0.40）。《家庭教育促进法》要求父母自觉学习家庭教育知识。中小学校、幼儿园可以办家长学校，定期组织公益性的家庭教育指导。居委会、村委会可以办社区家长学校。省级以上政府要开公益性的网上家长学校和服务热线。家庭教育指导机构不得组织营利性培训（全国，2022 年 1 月 1 日起施行）",
         "note": "给 A 是因为有 Cochrane 和多项抽签试验合并出来的数字。试验里的课有几个共同点。带课的人教具体做法，比如陪孩子玩、夸奖、奖励和管教。家长在课上练习、演练，回家还有作业。只发资料或者只讨论的课被排除在外，所以证据管不到只听一场讲座的那种。国内公益家长学校讲什么、怎么讲，各地不一样，未必是这一类。挑课时看它是不是连上几周、让你练具体做法。课名里常见的有 Triple P、Incredible Years、亲子互动治疗（PCIT）。本书不推荐具体机构和收费产品。打骂少了的效果一两年后变小，课上完还得接着练。受益人是孩子，也是你自己。孩子已经有严重的情绪问题，带去精神科或儿童心理科，见本节第 8 条（抑郁筛查）。",
+        "source": "Furlong M, McGilloway S, Bywater T, Hutchings J, Smith SM, Donnelly M. (2012). Behavioural and cognitive-behavioural group-based parenting programmes for early-onset conduct problems in children aged 3 to 12 years. Cochrane Database of Systematic Reviews, (2), CD008225. <https://doi.org/10.1002/14651858.CD008225.pub2>；Backhaus S, Leijten P, Jochim J, Melendez-Torres GJ, Gardner F. (2023). Effects over time of parenting interventions to reduce physical and emotional violence against children: a systematic review and meta-analysis. eClinicalMedicine, 60, 102003. <https://doi.org/10.1016/j.eclinm.2023.102003>；Guo M, Morawska A, Sanders MR. (2016). A Randomized Controlled Trial of Group Triple P With Chinese Parents in Mainland China. Behavior Modification, 40(6), 825–851. <https://doi.org/10.1177/0145445516644221>；Wang W, Zhang H. (2026). A self-directed parenting program to reduce the risk of child maltreatment in rural China: A cluster randomized controlled trial. Child Abuse & Neglect, 173, 107937. <https://doi.org/10.1016/j.chiabu.2026.107937>；全国人大常委会 (2021). 家庭教育促进法（第十八、二十五、三十一、三十八、四十条）. <https://flk.npc.gov.cn/detail?id=ff8081817cac3b2d017cac5a6c6f0109>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -11598,6 +12245,7 @@ module.exports = {
         "cost": "不花钱，还省下一笔学费。难在孩子闹得最凶的时候，家长忍住不把他交给外人「封闭管教」。",
         "gain": "《未成年人保护法》第六十八条规定，任何组织和个人不得用侵害未成年人身心健康的方式，干预未成年人沉迷网络。下面两起案子都有法院判决。第一起在安徽合肥。2017 年 8 月，一名 18 岁男孩的父母和一家特训学校签了协议，要送他戒网瘾。学校的人把他强行带走，关进禁闭室，把他的双手铐在窗户栅栏上。他们限制他吃饭、喝水和休息，还打了他。约 44 个小时后，男孩死亡。鉴定结论是高温、限制体位、缺少饮食和外伤，引起水电解质紊乱死亡。2018 年 10 月 31 日，合肥市中级法院一审判决。学校负责人犯故意伤害罪和非法拘禁罪，判 16 年。四名教官判 1 年到 8 年 6 个月。2018 年 12 月 28 日，安徽省高级法院二审维持原判。二审裁定写明，这所学校没有经过有关部门批准，几名被告人也都没有教师资质。第二起在江西南昌。豫章书院 2013 年开办，2017 年 11 月注销停办。办学期间，学校把部分学生带进「烦闷解脱室」关禁闭，派专人看守，每次关三到十天。2023 年 4 月 28 日，萍乡市安源区法院重审一审宣判，五名被告人构成非法拘禁罪。四人判二年十个月到十一个月，并在一定期限内禁止从事和教育有关的职业，一人免予刑事处罚。家长要求赔学费和往返交通费，法院不支持（全国 / 安徽 / 江西）",
         "note": "给 C 是因为只有个案，没有这类学校出事多少的统计。合肥那起只有媒体报道，报道引用了一审判决书和二审裁定书，法院官网上没找到判决原文。豫章书院那起是新华社报道的法院宣判。孩子爱打游戏，先按本节第 14 条（孩子爱打游戏）看睡觉、作业和出门活动有没有被挤掉。成绩、睡觉、家里关系一起垮了，劝也停不下来，带孩子去精神科或儿童心理科，由医生诊断再治。已经送进去的，把孩子接回来。孩子说被关、被打，报警。受益人是孩子。",
+        "source": "全国人大常委会 (2024 年修正). 未成年人保护法（第六十八条）. <https://flk.npc.gov.cn/detail?id=ff8081818f197cf001905e567af635a0>；红星新闻 (2019-02-20). 追热点·18岁少年被铐着关禁闭两天死亡，戒网瘾学校5人获刑. <https://static.cdsb.com/micropub/Articles/201902/5b98283216ea5d2e8eef7f8cb7d4dbbb.html>（网页存档 <https://web.archive.org/web/20261005013030/https://static.cdsb.com/micropub/Articles/201902/5b98283216ea5d2e8eef7f8cb7d4dbbb.html>）；新华社 (2023-04-28). 江西“豫章书院案”宣判 5名被告均服判不上诉. <http://www.news.cn/2023-04/28/c_1129579126.htm>（网页存档 <http://web.archive.org/web/20230428212544/http://www.news.cn/2023-04/28/c_1129579126.htm>）",
         "grade": "C",
         "meta": {
           "money": "0",
@@ -11619,6 +12267,7 @@ module.exports = {
         "cost": "不花钱。花十分钟对一遍，看自己够不够得着。",
         "gain": "当兵看兵役法：「年满十八周岁的男性公民，应当被征集服现役；当年未被征集的，在二十二周岁以前仍可以被征集服现役。普通高等学校毕业生的征集年龄可以放宽至二十四周岁，研究生的征集年龄可以放宽至二十六周岁」。考公务员看《公务员录用规定》第十八条。报考条件含「年龄为十八周岁以上，三十五周岁以下」「具有大学专科以上文化程度」。这两项经省级以上公务员主管部门批准可适当调整。该规定第十九条列了五类不得报考的人。比如因犯罪受过刑事处罚的、被开除公职的、被列为失信联合惩戒对象的。消防员看《国家综合性消防救援队伍消防员招录办法》。第五条「年龄为 18 周岁以上、22 周岁以下」「具有高中以上文化程度」。第六条「大学专科以上学历人员、解放军和武警部队退役士兵……年龄可以放宽至 24 周岁」。军队文职看《中国人民解放军文职人员条例》第九条，基本条件含「年满 18 周岁」。该条例第十九条写明，较低职级岗位首次招录聘用最高年龄 35 周岁。较低职级岗位就是入门层级的岗位。事业单位看《事业单位人事管理条例》第八条「事业单位新聘用工作人员，应当面向社会公开招聘」。个体户看《促进个体工商户发展条例》「有经营能力的公民……依法登记为个体工商户的，适用本条例」。自考看《高等教育自学考试暂行条例》。第三条「中华人民共和国公民，不受性别、年龄、民族、种族和已受教育程度的限制，均可依照本条例的规定参加高等教育自学考试」。第二十条「各级各类全日制学校的在校生不得报考」。公费师范生看《教育部直属师范大学本研衔接师范生公费教育实施办法》第二条。它只在六所部属师范大学招。分别是北京师范大学、华东师范大学、东北师范大学、华中师范大学、陕西师范大学和西南大学。本科和研究生阶段一体设计、分段考核，本科读完接着读研究生。在校期间的学费和住宿费由中央财政承担，另外还给生活费补助。该办法第五条「招收公费师范生实行提前批次录取」，就是在普通批次之前先录。定向医学生看《关于做好农村订单定向免费培养医学生就业安置和履约管理工作的通知》。它写着：「在录取后、获得入学通知书前，须与培养学校和定向就业所在地的县级卫生健康行政部门……人力资源社会保障部门签署协议」。出国打工看《对外劳务合作管理条例》。第五条：从事对外劳务合作应当经商务主管部门批准取得经营资格。第七条第四款：「未依法取得对外劳务合作经营资格证书并办理登记，不得从事对外劳务合作」。没有这张资格证的公司组织人出国打工，本身就违法。第八条第二款：「任何单位和个人不得以商务、旅游、留学等名义组织劳务人员赴国外工作」。平台接单和灵活就业没有法定学历门槛，自己参保和职业伤害保障的依据见本节第 11、12 条。义务教育法「禁止用人单位招用应当接受义务教育的适龄儿童、少年」（全国）",
         "note": "够得着门槛之后，还要过政治条件、体检和政治考核这几关。这几关没有公开的打分标准，条文里查不到。中职、技工院校和职教贯通招生的入口见第 23 节第 5 条，家里供不起时的资助见第 23 节第 4 条。个体户不看学历，但开店并不容易。本钱、个人担保和关门退场的成本见第 12 节。个人担保的意思是公司还不上，就得你自己还。起步钱能不能借到国家替你出一部分利息的贷款，见本节第 16 条。公费师范生和定向医学生这两条，在高考填志愿那天就定下了，代价写在第 13 条。出国打工的门槛不在你身上，在公司有没有资质上，怎么认见第 14 条。哪条路更划算，这里不作比较。",
+        "source": "全国人大常委会 (2021). 兵役法（第二十条）. <http://www.mod.gov.cn/regulatory/2021-08/20/content_4892491.htm>（国防部刊登）；中共中央组织部 (2019). 公务员录用规定（第十八、十九条）. <https://www.12371.cn/2020/01/08/ARTI1578447606460158.shtml>（共产党员网刊登）；人力资源社会保障部、应急管理部 (2021). 国家综合性消防救援队伍消防员招录办法（人社部发〔2021〕58 号，第五、六条）. <https://www.gov.cn/zhengce/zhengceku/2021-08/27/content_5633684.htm>；国务院、中央军委 (2022). 中国人民解放军文职人员条例（第二次修订，令第 757 号，第九、十九条）. <https://flk.npc.gov.cn/detail?id=ff808181857bca5e01859ee5a6c06d62>（国家法律法规数据库）；国务院 (2014). 事业单位人事管理条例（国务院令第 652 号，第八条）. <https://www.gov.cn/zhengce/zhengceku/2014-05/15/content_8810.htm>；国务院 (2022). 促进个体工商户发展条例（国务院令第 755 号，第二条）. <https://www.gov.cn/zhengce/zhengceku/2022-10/25/content_5721592.htm>；国务院 (1988, 2014 修订). 高等教育自学考试暂行条例（第三、二十条）. <https://flk.npc.gov.cn/detail?id=ff8080816f3cbb3c016f415d64e5236d>（国家法律法规数据库）；全国人大常委会 (2018). 义务教育法（第十四条）. <http://www.moe.gov.cn/jyb_sjzl/sjzl_zcfg/zcfg_jyfl/202110/t20211029_575949.html>（教育部刊登）；国务院办公厅 (2024). 关于转发教育部等部门《教育部直属师范大学本研衔接师范生公费教育实施办法》的通知（国办发〔2024〕27 号，第二、五条）. <https://www.gov.cn/zhengce/zhengceku/202406/content_6957261.htm>；国家卫生健康委等 7 部门 (2019). 关于做好农村订单定向免费培养医学生就业安置和履约管理工作的通知. <https://www.gov.cn/zhengce/zhengceku/2019-11/13/content_5451684.htm>；国务院 (2012). 对外劳务合作管理条例（国务院令第 620 号，第五、七、八条）. <https://www.gov.cn/zhengce/zhengceku/2012-06/11/content_1091.htm>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -11638,6 +12287,7 @@ module.exports = {
         "cost": "不花钱。登记在网上填一次，几分钟就填完。真去当兵，代价是两年全职，这两年里没法同时干别的。",
         "gain": "登记看《兵役登记工作规定》。它写着：「县、自治县、不设区的市、市辖区人民政府兵役机关应当于每年 10 月 31 日前，组织本行政区域内当年 12 月 31 日以前年满 18 周岁的男性公民进行初次兵役登记」。同一份规定还写着：「初次兵役登记主要采取网络登记的方式进行，由公民通过兵役登记网络平台自主完成」。不登记会怎么样，看兵役法第五十七条第一款。这一款管的是「拒绝、逃避兵役登记的」。处罚是「由县级人民政府责令限期改正；逾期不改正的，由县级人民政府强制其履行兵役义务，并处以罚款」。兵役法还写着「义务兵服现役的期限为二年」。「根据军队需要和本人自愿，可以征集年满十七周岁未满十八周岁的公民服现役」。军士「服现役满十二年或者符合国家规定的其他条件的，由安置地的县级以上地方人民政府安排工作」。军士「服现役满三十年或者年满五十五周岁或者符合国家规定的其他条件的，作退休安置」。安排工作就是由政府给一份工作，退休安置就是按退休办退下来。《征兵工作条例》写着「优先保证普通高等学校毕业生和对政治、身体条件或者专业技能有特别要求的兵员征集」。该条例还写着「应征公民为普通高等学校的全日制在校生、应届毕业生的，可以在入学前户籍所在地或者学校所在地应征」（全国）",
         "note": "登记和应征是两件事，代价差一大截。两年内不准出境那一串惩戒，只罚应征之后反悔的人，见第 3 条（拒服兵役）。女性不强制做初次兵役登记，按军队需要征集。士兵考军校、表现好的士兵转为军官（提干），条件都写在军队内部法规里，外面查不到。兵役法只写了两句：现役军官从「表现优秀的现役士兵」等人员中选拔招收，军队院校招学员不受征集年龄限制。具体分数线和名额本书不给。",
+        "source": "国务院办公厅、中央军委办公厅 (2025). 兵役登记工作规定（国办发〔2025〕41 号）. <https://www.gov.cn/zhengce/zhengceku/202512/content_7051363.htm>；全国人大常委会 (2021). 兵役法（2021 年修订，第二十、二十五、二十六、五十四、五十七条）. <http://www.mod.gov.cn/regulatory/2021-08/20/content_4892491.htm>（国防部刊登）；国务院、中央军委 (2023). 征兵工作条例（国务院、中央军委令第 759 号，第五条）. <http://www.gov.cn/gongbao/content/2023/content_5753313.htm>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -11657,6 +12307,7 @@ module.exports = {
         "cost": "不花钱。代价是在报名之前，就要把去不去想清楚。",
         "gain": "兵役法第五十七条第一款第二项是「应征公民拒绝、逃避征集服现役的」。处罚同样是「由县级人民政府责令限期改正；逾期不改正的，由县级人民政府强制其履行兵役义务，并处以罚款」。同一条第二款：「有前款第二项行为，拒不改正的，不得录用为公务员或者参照《中华人民共和国公务员法》管理的工作人员，不得招录、聘用为国有企业和事业单位工作人员，两年内不准出境或者升学复学，纳入履行国防义务严重失信主体名单实施联合惩戒。」联合惩戒就是多个部门照同一份名单，一起执行上面这些限制。第五十八条把同一套惩戒接到已经入伍的人身上。军人以逃避服兵役为目的，拒绝履行职责或者逃离部队，后果要看处理结果。被军队除名、开除军籍或者被依法追究刑事责任的，依照第五十七条第二款处罚。其中被除名的并处罚款（全国，2021 年 10 月 1 日起施行）",
         "note": "这里算的是人身自由和就业资格，不是钱。这一串惩戒只罚两种人。一种是「应征公民拒绝、逃避征集服现役」的。另一种是入伍以后被除名、开除军籍、被追究刑责的。光是没做兵役登记的不在里面，兵役登记见第 2 条。罚的前提是「拒不改正」，由县级人民政府认定和处罚。罚多少钱各地自己定，本书不写。去不去由你自己定，但要在报名之前定下来。",
+        "source": "全国人大常委会 (2021). 兵役法（2021 年修订，第五十七、五十八条）. <http://www.mod.gov.cn/regulatory/2021-08/20/content_4892491.htm>（国防部刊登）",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -11676,6 +12327,7 @@ module.exports = {
         "cost": "不花钱。退役以后按学校要求交材料申请，前后跑一两趟。",
         "gain": "财政部等四部门 2024 年通知说，去服兵役的高校学生有三样待遇：学费补偿、用于学费的国家助学贷款代偿、学费减免。代偿就是国家替你把这笔助学贷款还掉。这三样的标准「相应调整为本专科学生每人每年最高不超过 20000 元、研究生每人每年最高不超过 25000 元」。新标准自 2024 年秋季学期起执行。到底按多少补，看这一句：「按学生实际缴纳的学费或获得的国家助学贷款（包括本金及其全部偿还之前产生的利息）两者金额较高者执行」。后面还有一句是「超出标准部分不予补偿、代偿或减免」。所以每年拿到的，是「实际学费和助学贷款里较高的那个」与上限两者中较小的那个。学费每年 5000 元的就补 5000 元。补几年按读书的年数算，不按服役的年数算。2019 年的学生资助资金管理办法写着：「入伍前已完成规定的修业年限，即为学费补偿或国家助学贷款代偿的年限；退役复学后接续完成规定的剩余修业年限，即为学费减免的年限」。应届毕业生去当兵，补的是整个学制的学费。学籍看《退役军人保障法》。它写着：「现役军人入伍前已被普通高等学校录取或者是正在普通高等学校就学的学生，服现役期间保留入学资格或者学籍，退役后两年内允许入学或者复学，可以按照国家有关规定转入本校其他专业学习」。该法还写着：「高等学校根据国家统筹安排，可以通过单列计划、单独招生等方式招考退役军人」。考研看教育部办公厅 2026 年通知。这个计划叫「退役大学生士兵计划」。通知写着：「在全国硕士研究生招生计划总规模内单列下达、专项使用，不得调整为普通计划或其他专项计划。招生单位自主确定……初试成绩要求（一般不高于本单位相应学科专业普通计划考生初试成绩要求）……同等条件下服役时间长的考生优先录取」。单列、专项使用的意思是，这部分名额单独划出来，只能用来招退役大学生士兵。这个计划 2026 年由 532 所普通高等学校承担（全国）",
         "note": "还有两条通道。一是专升本免考文化课：专科生去当兵，退役后读完专科，可以申请免试专升本，由学校考职业技能后择优录取。这条从 2022 年招生起执行，具体办法看本省当年的通知。二是考研初试加 10 分：退役大学生士兵退役后 3 年内考研，初试总分加 10 分。报了专项计划就不再加分，两样不能一起享受。立过二等功以上的，可以申请免初试读研。招专项计划的学校名单每年变，2025 年是 523 所。学费标准调过两次：2019 年是 8000/12000，2023 年秋改成 16000/20000，2024 年秋改成 20000/25000。退役军人事务部 2022 年的摘要里还是最早那一版，别照抄。",
+        "source": "财政部、教育部、中国人民银行、金融监管总局 (2024). 关于调整完善国家助学贷款有关政策的通知（财教〔2024〕188 号）. <https://www.gov.cn/zhengce/zhengceku/202411/content_6984812.htm>；财政部等五部门 (2019). 学生资助资金管理办法（财科教〔2019〕19 号，第五条；入伍资助年限：「入伍前已完成规定的修业年限，即为学费补偿或国家助学贷款代偿的年限；退役复学后接续完成规定的剩余修业年限，即为学费减免的年限」，毕业生「学费补偿或国家助学贷款代偿的年限，分别按照国家规定的相应学制计算」）. <http://www.gov.cn/gongbao/content/2019/content_5421553.htm>；全国人大常委会 (2020). 退役军人保障法（第三十四、三十五条）. <http://www.mod.gov.cn/gfbw/fgwx/flfg/16048597.html>（国防部刊登）；教育部办公厅 (2025). 关于做好 2026 年退役大学生士兵专项硕士研究生招生计划招生工作的通知（教学厅〔2025〕8 号）. <http://www.moe.gov.cn/srcsite/A15/moe_778/s3261/202512/t20251211_1423174.html>；退役军人事务部 (2022). 退役士兵教育培训政策 23 条：「从2022年招生起，高职（专科）毕业生及在校生（含高校新生）应征入伍，退役后完成高职（专科）学业的，申请专升本，免于参加文化课考试」（依据教学厅〔2021〕8 号）. <https://www.mva.gov.cn/sy/xx/bnxx/202201/t20220107_55052.html>；教育部 (2026). 2027 年全国硕士研究生招生工作管理规定（教学〔2026〕2 号，第二十二、二十四、二十五条），研招网刊登. <https://yz.chsi.com.cn/kyzx/jybzc/202609/20260924/2293971511.html>；教育部 (2024). 2025 年全国硕士研究生招生工作管理规定（教学〔2024〕4 号，第二十二条）. <https://www.gov.cn/zhengce/zhengceku/202410/content_6978684.htm>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -11695,6 +12347,7 @@ module.exports = {
         "cost": "不花钱。带上退役证明，到安置地的退役军人事务部门跑一趟。",
         "gain": "《退役军人安置条例》第二十五条列了六种情形，由安置地人民政府安排工作。原文是：「（一）军士服现役满 12 年的；（二）服现役期间个人获得勋章、荣誉称号的；（三）服现役期间个人荣获三等战功、二等功以上奖励的；（四）服现役期间个人获得一级表彰的；（五）因战致残被评定为 5 级至 8 级残疾等级的；（六）是烈士子女的」。该条例还写着：「安置地人民政府应当在接收退役军士和义务兵的 6 个月内完成安排退役军士和义务兵工作的任务」。用人单位「应当按照规定与其签订不少于 3 年的中长期聘用合同或者劳动合同。其中，企业接收军龄 10 年以上的退役军士的，应当与其签订无固定期限劳动合同」。无固定期限就是合同上不写到期日。待安排工作期间「按照当地月最低工资标准逐月发放生活补助」。不是因为你自己的原因没按规定安排上岗的，「按照不低于本单位同等条件人员平均工资 80% 的标准，逐月发放生活费直至上岗为止」。不得以安排工作方式安置的情形，包括被开除中国共产党党籍、受过刑事处罚。自主就业的期限看第五十一条：「自主就业的退役军士和义务兵，应当自被批准退出现役之日起 30 日内，到安置地人民政府退役军人工作主管部门报到。无正当理由不按照规定时间报到超过 30 日的，视为放弃安置待遇。」（全国，2024 年 9 月 1 日起施行）",
         "note": "这份条例施行的同一天，2011 年的《退役士兵安置条例》（国务院、中央军委令第 608 号）废止。网上大量攻略引的还是旧条例，条件表述已经变了，旧版写的是「平时荣获二等功以上奖励或者战时荣获三等功以上奖励」。30 日这个期限只管自主就业那一档，其他安置方式是「按照规定时间」报到。报到时会发退役军人优待证，后面的退役金、就业创业扶持和教育资助都从这里接上。",
+        "source": "国务院、中央军委 (2024). 退役军人安置条例（国务院、中央军委令第 787 号，2024 年 7 月 29 日公布、9 月 1 日施行；第二十五、三十一、三十二、三十五、五十一、七十五条）. <https://www.gov.cn/gongbao/2024/issue_11526/202408/content_6969192.html>；全国人大常委会 (2020). 退役军人保障法（第十三、十四、十五条）. <http://www.mod.gov.cn/gfbw/fgwx/flfg/16048597.html>（国防部刊登）",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -11714,6 +12367,7 @@ module.exports = {
         "cost": "不花钱。退役时军队把你的社保关系和钱转出来。你再到安置地的社保经办机构（办社保的窗口）办接续。",
         "gain": "第一笔看《退役军人安置条例》。它写着：「对自主就业的退役军士和义务兵，根据其服现役年限发放一次性退役金」。钱由谁出：「由中央财政专项安排，具体标准由国务院退役军人工作主管部门、中央军事委员会政治工作部门会同国务院财政部门……确定，并适时调整」。增发比例分五档。获得勋章、荣誉称号增发 25%，一等战功或一级表彰 20%。二等战功、一等功或二级表彰 15%。三等战功或二等功 10%，四等战功或三等功 5%。该条例还写着：「退役军人未及时就业的，可以依法向户口所在地人力资源社会保障部门申领失业保险待遇，服现役年限视同参保缴费年限，但是以退休、供养方式安置的退役军人除外」。视同缴费年限的意思是，这几年你没交过钱，也按交过算。第二笔看《退役军人保障法》：「退役军人服现役年限计算为工龄，退役后与所在单位工作年限累计计算」。工龄就是参加工作的年数，服役这几年和退役后的年数接着往上加。该法还写着，服现役年限与入伍前、退役后的养老、医疗、失业缴费年限「依法合并计算」，「退役的军士和义务兵服现役经历视为基层工作经历」。《军人保险法》：「军人服现役年限视同职工基本医疗保险缴费年限，与入伍前和退出现役后参加职工基本医疗保险的缴费年限合并计算」。第三笔看财政部、税务总局、退役军人事务部 2023 年第 14 号公告。公告写的是自主就业退役士兵从事个体经营的情形：「在 3 年（36 个月，下同）内按每户每年 20000 元为限额依次扣减其当年实际应缴纳的增值税、城市维护建设税、教育费附加、地方教育附加和个人所得税。限额标准最高可上浮 20%」。扣减就是从当年该交的这几种税里按顺序往下减，减到限额为止，不是发给你的钱。企业招用的「定额标准为每人每年 6000 元，最高可上浮 50%」。执行期为 2023 年 1 月 1 日至 2027 年 12 月 31 日。到期未满 3 年的可继续享受至期满（全国）",
         "note": "条例只写了金额由主管部门另定。能查到的官方数字是退役军人事务部官网 2020 年刊文里的「服现役每满一年，发给4500元」，同一篇也写着「适时调整」。那篇文章里的增发比例已经和现行条例对不上，要以条例为准。贵州省退役军人事务厅 2024 年 8 月刊文，在新条例之下仍写「现在执行的标准是：士兵服现役每满一年，发给4500元」。TODO（待核实：没找到正式的标准文件，只能确认到 2024 年 8 月省级部门仍这么写）。另外别把地方的「一次性经济补助」和它混在一起。那是各地自己定、自己发的另一笔钱，比如烟台 2024 年退役的每服役一年补助 6000 元。攻略上的新数字多数没有出处，有的就是把这两笔混在了一起。义务兵服役期间，家里还能另领一笔家庭优待金。兵役法只写「标准由地方人民政府制定，中央财政给予定额补助」，具体多少问批准你入伍的那个县级人民政府。税那一笔是每年最多能少交多少税。生意没做起来就用不满，所以整条的收益量级只定「中」。2026 年 8 月 1 日起施行的《退役军人就业创业促进条例》另加了一条：服役期间考到的技能人员职业资格证书，退役后全国通用。",
+        "source": "国务院、中央军委 (2024). 退役军人安置条例（国务院、中央军委令第 787 号，第二十一、二十二、七十四、八十一、八十五条）. <https://www.gov.cn/gongbao/2024/issue_11526/202408/content_6969192.html>；退役军人事务部 (2020). 关于一次性退役金的十个问题（转载《中国退役军人》2020 年第 10 期）：「基本标准。士兵服现役每满一年，发给4500元」「退役金标准适时调整」. <https://www.mva.gov.cn/sy/zzxc/202011/t20201113_43153.html>；贵州省退役军人事务厅 (2024). 一次性退役金增发，重要变化！：「现在执行的标准是：士兵服现役每满一年，发给4500元」. <http://tyjrswt.guizhou.gov.cn/zfxxgk/fdzdgknr/zdlyxx_5621158/tyaz_5621161/202408/t20240809_85367194.html>；烟台市牟平区人民政府 (2025). 答复中引《烟台市退役军人事务局、烟台市财政局关于调整自主就业退役士兵一次性经济补助标准的通知》：「2024年退出现役的每服役一年补助6000元」. <https://www.muping.gov.cn/art/2025/11/10/art_105032_2960250.html>；全国人大常委会 (2020). 退役军人保障法（第四十二、四十四、五十条）. <http://www.mod.gov.cn/gfbw/fgwx/flfg/16048597.html>（国防部刊登）；全国人大常委会 (2012). 军人保险法（第十六、二十三条）. <https://flk.npc.gov.cn/detail?id=2c909fdd678bf17901678bf73e160645>（国家法律法规数据库）；财政部、税务总局、退役军人事务部 (2023). 关于进一步扶持自主就业退役士兵创业就业有关税收政策的公告（2023 年第 14 号）. <https://www.gov.cn/zhengce/zhengceku/202308/content_6896456.htm>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -11733,6 +12387,7 @@ module.exports = {
         "cost": "不花钱。代价是到乡镇基层服务两年。这两年拿的是财政补助，不是市场工资，难的是要耐得住这两年。",
         "gain": "第四轮「三支一扶」计划通知写着「服务期为两年」。它还写着：「各省（区、市）每年应拿出公务员考录计划的 10％左右，面向『三支一扶』计划等服务基层项目人员定向考录。各省（区、市）县乡基层事业单位公开招聘时，应根据本地区实际拿出一定数量或比例的岗位，对『三支一扶』服务期满考核合格的人员进行专项招聘……聘用后可以不再约定试用期」。定向考录和专项招聘的意思是，这部分名额只在干过基层服务项目的人里面考，别人报不了。同一份通知还写着：「期满考核合格的『三支一扶』人员，三年内参加全国硕士研究生招生考试的，初试总分加 10 分，同等条件下优先录取……高职（高专）毕业生期满且考核合格的，可免试入读成人高等学历教育专科起点本科」。免试入读就是不用再考试，直接去读专升本。通知还写着：「参加『三支一扶』计划前无工作经历的人员期满且考核合格的，两年内在参加机关和企事业单位考录（招聘）、自主创业、落户、升学等方面可同等享受应届毕业生相关政策。『三支一扶』人员在基层服务年限计算为工龄，其参加工作时间按其到基层报到之日起算」。中央财政补助标准为西部地区每人每年 3 万元、中部地区 2.4 万元、东部地区 1.2 万元。中办国办的意见写着：「参加基层服务项目前无工作经历的人员服务期满且考核合格后 2 年内，在参加机关事业单位考录（招聘）、各类企业吸纳就业、自主创业、落户、升学等方面可同等享受应届高校毕业生的相关政策」。该意见还写着：「省级以上机关录用公务员，除特殊职位外，按照有关规定一律从具有 2 年以上基层工作经历的人员中考录」。另一条路是西部计划。它由「共青团中央、教育部、财政部、人力资源社会保障部共同组织实施」。它招募高校应届毕业生或在读研究生，「到西部基层从事为期 1—3 年」的志愿服务（全国）",
         "note": "第四轮三支一扶计划管的是 2021 到 2025 年。这次没找到第五轮文件和 2026 年度通知，报名前查当年的招募公告。2025 年中央财政支持招募 34430 名。西部计划的实施方案原文在网上查不到，官网那个政策栏目打不开内容。它期满之后的优惠，按中办国办那份管所有基层服务项目的文件走。这两年拿的是财政补助，不是市场工资，这笔代价要和两年后的定向考录放在一起算。",
+        "source": "中共中央组织部、人力资源社会保障部等十部门 (2021). 关于实施第四轮高校毕业生「三支一扶」计划的通知（人社部发〔2021〕32 号，第七、八、九、十一、十二、十三条）. <https://www.gov.cn/zhengce/zhengceku/2021-06/04/content_5615404.htm>；中共中央办公厅、国务院办公厅 (2017). 关于进一步引导和鼓励高校毕业生到基层工作的意见（第五、十六、十八条）. <http://www.gov.cn/gongbao/content/2017/content_5171278.htm>；全国大学生志愿服务西部计划项目管理办公室 (2026). 2026—2027 年度大学生志愿服务西部计划招募协议书. <http://xibu.youth.cn/tzgg/202604/t20260423_16623558.htm>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -11752,6 +12407,7 @@ module.exports = {
         "cost": "不花钱。代价是三年在农村义务教育学校任教，进门前还得先考出教师资格证。难的是这三年要待得住。",
         "gain": "2024 年特岗计划通知写的招聘条件是：「要求本科及以上学历，以师范类专业为主，小学阶段可适当招聘师范高等专科学校毕业生」。「年龄不超过 30 周岁」。还须具有相应的教师资格证书。通知另写着：「参加过『大学生志愿服务西部计划』、有从教经历的志愿者和参加过半年以上实习支教的师范院校毕业生同等条件下优先录取」。「支持鼓励符合条件的退役军人到中小学任教，可综合考虑服役年限等因素对退役军人相应放宽年龄限制」。待遇和入编看这几句。「从 2024 年 1 月 1 日起，提高特岗教师工资性补助标准，中央财政……中部地区由年人均 3.52 万元提高到 3.88 万元，西部地区由 3.82 万元提高到 4.18 万元」。「同等条件下在薪酬待遇、职称评聘、评先评优、年度考核等方面享受与当地公办学校在编教师同等待遇」。「保证三年服务期满、考核合格且愿意留任的特岗教师及时入编并落实工作岗位，做好相关人事、工资关系等接转工作，连续计算工龄、教龄，不再实行试用期」（全国）",
         "note": "收益量级定「大」，是因为期满入编等于拿到一份长期的在编工作，值的钱远过万元。能查到的最新一份是 2024 年度通知，2025、2026 年度的没进政策库。具体岗位、补助标准和年龄，以当年通知和本省的实施方案为准。中央定大框架，细则由省里定。教师资格证要先考出来，不能入职以后再补。",
+        "source": "教育部办公厅、财政部办公厅 (2024). 关于做好 2024 年农村义务教育阶段学校教师特设岗位计划实施工作的通知（教师厅〔2024〕1 号）. <https://www.gov.cn/zhengce/zhengceku/202405/content_6950803.htm>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -11771,6 +12427,7 @@ module.exports = {
         "cost": "不花钱。从报名到录用要走体检、政治考核、体能测试、心理测试和面试，前后几个月。难在这几关一关一关刷人。",
         "gain": "消防员看《国家综合性消防救援队伍消防员招录办法》。第五条基本条件含「年龄为 18 周岁以上、22 周岁以下」「具有高中以上文化程度」。第六条「大学专科以上学历人员、解放军和武警部队退役士兵、具有 2 年以上灭火救援实战经验的政府专职消防队员和政府专职林业扑火队员，年龄可以放宽至 24 周岁；对消防救援工作急需的特殊专业人才，经应急管理部批准年龄可以进一步放宽，原则上不超过 28 周岁」。第七条「消防员面向社会公开招录，主要从本省级行政区域常住人口中招录，根据需要也可以面向其他省份招录」。第九条写的招录程序是「宣传动员、组织报名、资格审查、体格检查、政治考核、体能测试和岗位适应性测试、心理测试和面试、公示、录用」。军队文职看《中国人民解放军文职人员条例》第十八条「军队实行公开招考、直接引进、专项招录相结合的文职人员招录聘用制度」。这是三条线：公开考试招人，直接引进现成的人才，面向特定人群专门招。该条例第九条基本条件含「年满 18 周岁」「符合军队招录聘用文职人员的政治条件」「符合岗位要求的文化程度、专业水平和工作能力」。第十九条写明，较低职级岗位首次招录聘用最高年龄 35 周岁。该条例还写明「文职人员岗位应当优先招录聘用符合条件的退役军人」（全国）",
         "note": "2026 年 8 月 1 日起施行的《退役军人就业创业促进条例》另写明了两件事。一是消防员招录要拿出一定比例，专门招退役军士和义务兵。二是招警务辅助人员（辅警）的时候，同等条件下优先招退役军人。这两条路每年的名额、岗位和具体条件都以当年公告为准，本书只写办法里固定不变的门槛。消防员是纪律部队的岗位，进去之前把职业风险想清楚。",
+        "source": "人力资源社会保障部、应急管理部 (2021). 国家综合性消防救援队伍消防员招录办法（人社部发〔2021〕58 号，第五、六、七、九条）. <https://www.gov.cn/zhengce/zhengceku/2021-08/27/content_5633684.htm>；国务院、中央军委 (2022). 中国人民解放军文职人员条例（第二次修订，国务院、中央军委令第 757 号，2023 年 1 月 1 日施行；第九、十八、十九、二十条）. <https://flk.npc.gov.cn/detail?id=ff808181857bca5e01859ee5a6c06d62>（国家法律法规数据库）",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -11790,6 +12447,7 @@ module.exports = {
         "cost": "报名费和教材费每年几百元。代价是长期自学，或者业余去上课，非脱产（边工作边读）的专升本最短要读两年半，难在要长期坚持。",
         "gain": "自考看《高等教育自学考试暂行条例》。第三条：「中华人民共和国公民，不受性别、年龄、民族、种族和已受教育程度的限制，均可依照本条例的规定参加高等教育自学考试」。第二十条：「各级各类全日制学校的在校生不得报考」。第二十五条写了拿毕业证的三个条件：考完全部课程并合格、完成毕业论文或实践任务、思想品德鉴定合格。都做到了就可取得毕业证书。这一条还写着「获得专科（基础科）或本科毕业证书者，国家承认其学历」。第三十二条写毕业证书获得者的工资待遇：「非在职人员录用后，与普通高等学校同类毕业生相同」。《高等教育法》第二十一条「国家实行高等教育自学考试制度，经考试合格的，发给相应的学历证书或者其他学业证书」。成人高考看《2025 年全国成人高校招生办法》。报名对象是「国家承认学历的各类高、中等学校在校生以外的从业人员和社会其他人员」。「报考高起本或高起专的考生应高级中等教育学校毕业或者具有同等学力。报考专升本的考生必须是已取得……专科毕业证书、本科结业证书或以上证书的人员」。「脱产最短学习时间为：高起本四年、高起专和专升本两年，非脱产最短学习时间为：高起本五年、高起专和专升本两年半」。脱产就是离开工作全天在校读，非脱产就是不离开工作、边干边读。开放大学看《教育部关于办好开放大学的意见》。它写着：「开放大学实行注册入学，学生修完课程并获得相应学分，即可获得课程证书，修满规定的学分并达到相关要求，即可获得相应的学历与非学历证书，符合学位授予条件的应授予相应学位」（全国）",
         "note": "还有一种给应届全日制大专毕业生读的普通专升本。全国层面公开的文件是教育部 2007 年的通知，写的是专升本计划不超过当年应届专科毕业生的 5%。2020 年起教育部扩大了专升本规模，当年同比增加 32.2 万人，5% 这条线实际已经不按它执行。每年的具体安排是教育部高校学生司发的函，比如 2026 年是教学司函〔2025〕53 号。这份函不对外公布，只能从各省转发的文件里看到文号。招生对象由各省自己定，基本只收本省当届全日制专科毕业生，所以正文不写它的条件。2025 年秋季起，高等学历继续教育不再叫「函授」「业余」，统一叫「非脱产」。高等学历继续教育就是成人后来补学历的那一类，还在用旧名称的宣传要留神。补学历和「学什么技能划算」是两件事，后者见第 23 节。花钱买的「快速拿证」和山寨证书见第 23 节第 8 条。",
+        "source": "国务院 (1988, 2014 修订). 高等教育自学考试暂行条例（第三、二十、二十五、三十二条）. <https://flk.npc.gov.cn/detail?id=ff8080816f3cbb3c016f415d64e5236d>（国家法律法规数据库）；全国人大常委会 (2018). 高等教育法（第二十一条）. <https://flk.npc.gov.cn/detail?id=ff8080816f135f46016f20df64ec16c5>（国家法律法规数据库）；教育部办公厅 (2025). 关于做好 2025 年全国成人高校招生工作的通知（教学厅〔2025〕6 号）及附件《2025 年全国成人高校招生办法》. <https://www.gov.cn/zhengce/zhengceku/202509/content_7040877.htm>；教育部 (2016). 关于办好开放大学的意见（教职成〔2016〕2 号）. <http://www.gov.cn/gongbao/content/2016/content_5067956.htm>；教育部 (2007). 关于进一步做好高等学校各类招生管理工作的通知（教发〔2007〕13 号）：「普通专升本招生计划按不超过当年应届普通高职（专科）毕业生5%的比例安排」. <http://www.moe.gov.cn/s78/A03/s7050/201006/t20100607_88782.html>；中国政府网 (2020). 今年扩招硕士18.9万，专升本32.2万——毕业生就业帮扶发力，教育部副部长翁铁慧：「扩大普通高校专升本的规模，同比争取增加32.2万人」. <http://www.gov.cn/zhengce/2020-02/29/content_5484774.htm>；福建省教育考试院 (2026). 转发时引「教育部高校学生司《关于做好2026年普通高等学校专升本考试招生工作的通知》（教学司函〔2025〕53号）」. <https://www.eeafj.cn/gkzsb/20260310/14437.html>",
         "grade": "A",
         "meta": {
           "money": "少",
@@ -11808,7 +12466,8 @@ module.exports = {
         "plain": "不进单位，不等于没有社保这回事，只是没人替你交那一半。文件要求各地放开灵活就业人员在就业地参保的户籍限制，个别超大城市可以逐步放开。所以别把「自由」理解成不用管社保。断着不交，退休金和医保报销都要按断缴的规则算。",
         "cost": "养老和医疗要你全额自己缴，按当地的缴费基数算，每月上千元。缴费基数就是一个用来算保费的基准数。这是灵活就业最容易被漏算的固定支出，难在每个月都得按时交。",
         "gain": "参保看《关于维护新就业形态劳动者劳动保障权益的指导意见》。它写着：「各地要放开灵活就业人员在就业地参加基本养老、基本医疗保险的户籍限制，个别超大型城市难以一步实现的，要结合本地实际，积极创造条件逐步放开。组织未参加职工基本养老、职工基本医疗保险的灵活就业人员，按规定参加城乡居民基本养老、城乡居民基本医疗保险，做到应保尽保。督促企业依法参加社会保险。企业要引导和支持不完全符合确立劳动关系情形的新就业形态劳动者根据自身情况参加相应的社会保险」。同一份文件把用工分成三类：「符合确立劳动关系情形的，企业应当依法与劳动者订立劳动合同。不完全符合确立劳动关系情形但企业对劳动者进行劳动管理……指导企业与劳动者订立书面协议……个人依托平台自主开展经营活动、从事自由职业等，按照民事法律调整双方的权利义务」（全国，2021 年起）",
-        "note": "原文写的是「放开」户籍限制，还给超大城市留了口子，不是「全国已经取消」。到底放开到什么程度，问你要参保的那个城市。收益量级定「大」，是因为断缴丢的是养老和医疗待遇本身，值的钱远过万元。但成本也实打实，全额自缴每月上千元。社保断缴之后怎么补、年限怎么累计，见第 7 节第 18 条（社保断缴）。另外，在政府指定的地点和时间卖农副产品、日用品，或者用自己的手艺做依法不需要许可的便民活儿，不用办营业执照。这一条写在国办发〔2020〕27 号里。",
+        "note": "原文写的是「放开」户籍限制，还给超大城市留了口子，不是「全国已经取消」。到底放开到什么程度，问你要参保的那个城市。收益量级定「大」，是因为断缴丢的是养老和医疗待遇本身，值的钱远过万元。但成本也实打实，全额自缴每月上千元。社保断缴之后怎么补、年限怎么累计，见第 7 节第 18 条（社保断缴）。换城市以后养老和医保关系怎么转过去，见第 19 节第 19 条（养老和医保关系转到新参保地）。另外，在政府指定的地点和时间卖农副产品、日用品，或者用自己的手艺做依法不需要许可的便民活儿，不用办营业执照。这一条写在国办发〔2020〕27 号里。",
+        "source": "人力资源社会保障部等八部门 (2021). 关于维护新就业形态劳动者劳动保障权益的指导意见（人社部发〔2021〕56 号，第二、八条）. <https://www.gov.cn/zhengce/zhengceku/2021-07/23/content_5626761.htm>；国务院办公厅 (2020). 关于支持多渠道灵活就业的意见（国办发〔2020〕27 号）. <https://www.gov.cn/zhengce/zhengceku/2020-07/31/content_5531613.htm>",
         "grade": "A",
         "meta": {
           "money": "多",
@@ -11828,6 +12487,7 @@ module.exports = {
         "cost": "不花钱，这笔钱由平台缴。你要做的是查自己接单的平台在不在试点里。办法有两个：在 App 的保障或权益页面找「职业伤害保障」，或者打本省人社局的电话，问这家平台报没报。",
         "gain": "这项保障看《新就业形态人员职业伤害保障办法（试行）》。第二条写着：「平台企业应当依照本办法规定参加新就业形态人员职业伤害保障……为通过平台注册并接单，以平台企业名义提供出行、即时配送和同城货运等劳动并获得报酬或者收入的新就业形态人员缴纳职业伤害保障费，实现每单必保、每人必保。适用《工伤保险条例》规定的劳动者，企业应当依法为其参加工伤保险，不适用本办法」。第九条：「试行期间，出行行业按照每单 0.01 元执行；即时配送行业按照每单 0.07 元、0.25 元执行；同城货运行业按照每单 0.18 元执行」。试点怎么往外扩，看这一段：「2025 年 7 月 1 日起，在已先行试点 7 个省份和 7 个平台企业的基础上……增加天津、河北、辽宁、浙江、安徽、福建、山东、湖北、广西、宁夏等 10 个省份……2026 年，推动职业伤害保障试点在全国 31 个省份和新疆生产建设兵团实施；将出行、即时配送和同城货运三个行业的平台企业总体纳入职业伤害保障试点范围」（试点，逐年扩围）",
         "note": "这还是试点，不是全国都有的正式制度。接单前确认你所在的省份和平台在不在范围里，不在的就只剩自己买商业保险这一层。另一份文件《关于维护新就业形态劳动者劳动保障权益的指导意见》还提了几条要求。平台给正常干活的人开的报酬不低于当地最低工资，要按时足额发，不得克扣或者无故拖欠。法定节假日还要付合理报酬。这份文件的文号是人社部发〔2021〕56 号，灵活就业那条也引了它，见第 11 条。出了事先照这套走，别先跟站点私了。医保和养老那一块还得自己参保，灵活就业参保见第 11 条。",
+        "source": "人力资源社会保障部等九部门 (2025). 关于扩大新就业形态人员职业伤害保障试点的通知（人社部发〔2025〕24 号）及附件《新就业形态人员职业伤害保障办法（试行）》第二、九条. <https://www.gov.cn/zhengce/zhengceku/202507/content_7031656.htm>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -11847,6 +12507,7 @@ module.exports = {
         "cost": "学费和住宿费都不用你出，还能拿生活费补助。代价是毕业后 6 年不能自由择业，违约要退钱、交违约金、进信用记录。难在这 6 年里换不了地方。",
         "gain": "公费师范生看《教育部直属师范大学本研衔接师范生公费教育实施办法》（2024 年，2018 年办法同时废止）。第二条：由中央财政承担学生在校期间学费、住宿费并给予生活费补助。第三条：重点为中西部地区省会城市之外的地（市、州、盟）及以下培养。它还写着「不得定向到直辖市、计划单列市或省会城市主城区任教（五个自治区、陆地边境省份、海南省、贵州省、青海省除外）」。第九条：毕业后一般回生源所在省份定向地（市、州、盟）中小学任教，「承诺从事中小学教育工作 6 年以上」。到城镇学校工作的，「应到农村义务教育学校任教服务至少 1 年」。第十三条：没履约或者履约期限不够的，按协议承担责任。后果之一是「违约行为纳入信用记录，并及时与全国信用信息共享平台共享，违约相关材料归入本人人事档案」。另一句是「履约任务完成前不得到定向地（市、州、盟）之外从教，不得被招录（聘用）为其他公务人员。完成履约任务后即修复相关信用」。协议约定的服务期没干满之前，别的公职岗位报不了；干满了，信用记录才恢复。第六条：录取后经考察不适合从教的，入学 1 年内退还已享受的公费教育费用，并调整到非师范专业。第十四条：没在规定学习年限内取得教育硕士学历学位证书和教师资格证书的，按违约处理，退费并缴纳违约金。第二十一条：各地在现有事业编制总量内，解决公费师范生到中小学任教所需编制。农村订单定向免费医学生看另一份通知。录取后、获得入学通知书前，须与培养学校和定向就业所在地县级卫生健康、人社部门签署协议。协议里要「承诺毕业后到定向农村基层医疗卫生机构服务 6 年」。履约就是按协议去指定的地方干满。履约报到就业后，须参加 3 年全科专业住院医师规范化培训，简称规培。规培就是毕业后在医院按统一标准接着练本事的阶段。培训期间原人事、工资关系不变。违约记录归入个人人事档案，并作为医疗卫生机构等行政事业单位公开招录（招聘）、住院医师规范化培训招收、研究生招生录取的诚信评价依据。恶意违约的人，通过「信用中国」网站全国公示，并实行失信联合惩戒。违约的培训年限不计入服务期。没按协议退还费用和违约金的，由县级卫生健康行政部门通过法律途径追缴（全国）",
         "note": "2024 年那份办法把公费师范生改成了「本研衔接」（本科接着读教育硕士）。2018 年的老办法已经废止，网上还在传的「本科毕业直接任教」是旧说法。办法发布前已经签了协议的，按原协议走。「有编制」不等于「进去就不用管」：编制要在现有总量里腾，具体岗位由地市组织用人学校专门招聘，你和学校互相挑。定向医学生服务期满想走是可以的，文件写明「服务期满，对自主择业的应予同意」。已经违约的也有把违约记录消掉的办法，代价是按原协议、或者改到省内其他农村基层机构再干满至少 6 年，已交的费用和违约金不退。医学生还要算上 3 年规培的时间，整个周期比师范长。各省还有自己的公费师范生和定向医学生计划，条件由省里定，填志愿前看当年本省的招生文件。",
+        "source": "国务院办公厅 (2024). 关于转发教育部等部门《教育部直属师范大学本研衔接师范生公费教育实施办法》的通知（国办发〔2024〕27 号，第二、三、六、九、十三、十四、二十一条）. <https://www.gov.cn/zhengce/zhengceku/202406/content_6957261.htm>；国家卫生健康委、中央编办、国家发展改革委、教育部、财政部、人力资源社会保障部、国家中医药局 (2019). 关于做好农村订单定向免费培养医学生就业安置和履约管理工作的通知. <https://www.gov.cn/zhengce/zhengceku/2019-11/13/content_5451684.htm>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -11866,6 +12527,7 @@ module.exports = {
         "cost": "不花钱。出发前花十几分钟核一下公司资质，再把两份合同看完。",
         "gain": "《对外劳务合作管理条例》第五条：从事对外劳务合作应当经省级或者设区的市级商务主管部门批准取得经营资格。这个经营资格就是那张对外劳务合作经营资格证书，没有它就不能组织人出国干活。第七条：经营资格证书名单报国务院商务主管部门，并通报中国驻外使馆、领馆。这一条还写着「未依法取得对外劳务合作经营资格证书并办理登记，不得从事对外劳务合作」。第八条：「任何单位和个人不得以商务、旅游、留学等名义组织劳务人员赴国外工作」。第九条：企业应当自登记之日起 5 个工作日内在指定银行缴存「不低于 300 万元人民币的对外劳务合作风险处置备用金」，缴存名单向社会公布。第十条：备用金用于支付企业拒绝承担或者无力承担的应退服务费、劳动报酬和依法赔偿的损失。它还用于「因发生突发事件，劳务人员回国或者接受紧急救助所需费用」。第十一条：不得组织劳务人员赴国外从事与赌博、色情活动相关的工作。第十二条：没安排培训的不得组织出国。第十三条：应当为劳务人员购买在国外工作期间的人身意外伤害保险。第二十一、二十三条：须与国外雇主、与劳务人员分别订立书面合同，没订立的不得组织出国。第二十五条：「不得以任何名目向劳务人员收取押金或者要求劳务人员提供财产担保」。第二十六条：合同订立之日起 10 个工作日内报商务主管部门备案。第二十九条：劳务人员实际权益与合同不符的，企业应当协助索赔；没得到应有赔偿的，有权要求企业承担赔偿责任。第三十一条：有关国家或者地区安全状况难以保障人身安全的，企业不得组织劳务人员前往。第三十七条：商务主管部门建立不良信用记录和公告制度。罚则在后面几条。第三十九条：没资格从事对外劳务合作的，查处取缔，构成犯罪的追究刑事责任。第四十条：以商务、旅游、留学名义组织出国、出借资格、组织从事赌博色情相关工作的，吊销经营资格证书。第四十三条：没签合同、或者隐瞒信息、提供虚假信息组织出国的，罚 10 万元以上 20 万元以下。还要对主要负责人罚 2 万元以上 5 万元以下（全国）",
         "note": "合规的流程是这样：公司先和国外雇主签书面劳务合作合同，再和你签书面服务合同或者劳动合同。合同要写明工作内容、期限、报酬、工时、休假、社保和人身安全风险。签完 10 个工作日内，公司要报商务主管部门备案。公司还必须安排你接受技能、安全防范、外语和当地法律风俗的培训，并给你买境外工作期间的人身意外伤害保险。对方不让看合同、要押金、催你先走后补手续，就是要避开的那种公司。境外高薪招聘骗局和电诈园区见第 21 节第 5 条，出发前要查的安全提醒和 12308 在第 21 节，不重复。条例没给出去干活的人设学历或年龄门槛，门槛在公司的资质上，也在干活所在国给不给许可上。公司只能跟那个国家批准过的企业或机构签合同，不能跟国外的个人签。备用金由主管部门在公司赖账时动用，你不能自己去取。所以真出事还得先向商务主管部门投诉，第二十条给了你这个投诉权。往同一个国家或地区派超过 100 人的，要安排随行的管理人员并报使领馆备案。人少的项目没有这层保障，更要自己留好合同和转账记录。",
+        "source": "国务院 (2012). 对外劳务合作管理条例（国务院令第 620 号，第五、七、八、九、十、十一、十二、十三、二十一、二十三、二十五、二十六、二十九、三十一、三十七、三十九、四十、四十三条）. <https://www.gov.cn/zhengce/zhengceku/2012-06/11/content_1091.htm>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -11885,6 +12547,7 @@ module.exports = {
         "cost": "不花钱。每年办一次汇算清缴，时间是次年 3 月 1 日到 6 月 30 日。收汇超过年度总额的时候，还要准备一份雇佣合同和收入证明。难在这笔税得你自己记着去报。",
         "gain": "这笔钱算不算境内所得，看《个人所得税法实施条例》（国务院令第 707 号，2019 年 1 月 1 日起施行）第三条。它写着：「除国务院财政、税务主管部门另有规定外，下列所得，不论支付地点是否在中国境内，均为来源于中国境内的所得：（一）因任职、受雇、履约等在中国境内提供劳务取得的所得」。同一部条例第六条给两个税目下了定义。一个是工资薪金：「工资、薪金所得，是指个人因任职或者受雇取得的工资、薪金、奖金、年终加薪、劳动分红、津贴、补贴以及与任职或者受雇有关的其他所得」。另一个是劳务报酬：「劳务报酬所得，是指个人从事劳务取得的所得，包括从事设计、装潢、安装、制图、化验、测试、医疗、法律、会计、咨询、讲学、翻译、审稿、书画、雕刻、影视、录音、录像、演出、表演、广告、展览、技术服务、介绍服务、经纪服务、代办服务以及其他劳务取得的所得」。《个人所得税法》第六条写怎么算应纳税所得额：「居民个人的综合所得，以每一纳税年度的收入额减除费用六万元以及专项扣除、专项附加扣除和依法确定的其他扣除后的余额，为应纳税所得额」。同一条还写着「劳务报酬所得、稿酬所得、特许权使用费所得以收入减除百分之二十的费用后的余额为收入额」。减 20% 这一句只列了这三项，工资薪金不在其内。所以工资薪金按全额计入收入额，两个税目算出来的税不同。第九条：「个人所得税以所得人为纳税人，以支付所得的单位或者个人为扣缴义务人」。第十条：「有下列情形之一的，纳税人应当依法办理纳税申报：……（二）取得应税所得没有扣缴义务人；……（四）取得境外所得」。第十一条：「居民个人取得综合所得，按年计算个人所得税……需要办理汇算清缴的，应当在取得所得的次年三月一日至六月三十日内办理汇算清缴」。钱汇进来看《个人外汇管理办法》（中国人民银行令〔2006〕第 3 号，2007 年 2 月 1 日起施行）。第九条：「对个人结汇和境内个人购汇实行年度总额管理。年度总额内的，凭本人有效身份证件在银行办理；超过年度总额的，经常项目项下凭本人有效身份证件和有交易额的相关证明等材料在银行办理」。第七条：「银行和个人在办理个人外汇业务时，应当遵守本办法的相关规定，不得以分拆等方式逃避限额监管，也不得使用虚假商业单据或者凭证逃避真实性管理」。《个人外汇管理办法实施细则》（汇发〔2007〕1 号）第二条：「对个人结汇和境内个人购汇实行年度总额管理。年度总额分别为每人每年等值 5 万美元」。第十条：「境内个人经常项目项下非经营性结汇超过年度总额的，凭本人有效身份证件及以下证明材料在银行办理：……（七）职工报酬：雇佣合同及收入证明」（全国）",
         "note": "按哪个税目算，看你和对方是什么关系。签的是雇佣合同、活儿听对方安排的，算工资薪金。自己按项目接活、交付成果的，算劳务报酬。两种算出来的税不一样，报之前先弄清自己是哪一种。钱汇进来时，一年等值 5 万美元以内的，凭身份证在银行结汇就行；超过的部分，要把雇佣合同和收入证明交给银行。别为了绕过额度找人分拆收款。以上说的是人在国内、不出境的情形。真的出境到境外给境外雇主干活是另一套，见本节第 14 条（想出国打工，先查这家公司有没有对外劳务合作经营资格）。以下四项本书暂未写。它们都可能有实际成本，但目前找不到可逐字核对的依据。一是这笔收入要不要缴增值税、要不要代开发票。二是长期这样做要不要办营业执照或者登记为个体户。三是能不能按劳动法向境外雇主主张权利，比如年假、加班费、解除补偿。四是数据出境与保密",
+        "source": "国务院 (2018). 中华人民共和国个人所得税法实施条例（国务院令第 707 号，第三、六条）. <https://www.gov.cn/zhengce/zhengceku/2018-12/22/content_5351177.htm>；全国人民代表大会常务委员会 (2018). 中华人民共和国个人所得税法（2018 年第七次修正，第六、九、十、十一条）. <http://www.npc.gov.cn/zgrdw/npc/xinwen/2018-09/05/content_2060671.htm>；国家税务总局政策法规库. 中华人民共和国个人所得税法（第六条）. <https://fgk.chinatax.gov.cn/zcfgk/c100009/c5193028/content.html>；中国人民银行 (2006). 个人外汇管理办法（中国人民银行令〔2006〕第 3 号，第七、九条）. <https://www.gov.cn/gongbao/content/2007/content_786257.htm>；国家外汇管理局 (2007). 个人外汇管理办法实施细则（汇发〔2007〕1 号，第二、十条）. <https://www.safe.gov.cn/safe/2007/0105/22509.html>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -11904,6 +12567,7 @@ module.exports = {
         "cost": "咨询不花钱。先跑一次人社部门做资格审核，再到担保机构和经办银行（放贷款的银行）各办一次手续。难在借来的钱终究要还。",
         "gain": "个人申请条件写在《普惠金融发展专项资金管理办法》（财金〔2023〕75 号）第六条。第一个条件是要属于重点就业群体。文件列的是城镇登记失业人员、就业困难人员（含残疾人）、退役军人、刑满释放人员。还有高校毕业生（含大学生村官和留学回国学生）、化解过剩产能企业职工和失业人员。还有返乡创业农民工、网络商户、脱贫人口、农村自主创业农民等。第二个条件是名下不能有别的贷款：「除助学贷款、脱贫人口小额信贷、住房贷款、购车贷款、5 万元以下小额消费贷款（含信用卡消费）以外，申请人提交创业担保贷款申请时，本人及其配偶无其他贷款」。第九条：「对符合条件的创业担保贷款，财政部门给予贷款实际利率 50% 的财政贴息。对展期、逾期的创业担保贷款，财政部门原则上不予贴息」。贴息就是利息由财政替你出一半。展期是到期后再往后延，逾期是过期没还，这两种情况财政不再替你出。第十条：个人申请的 10 万元以下创业担保贷款原则上取消反担保，不必再另外找人、或者拿财产给担保机构做担保。第十一条：纳入奖补支持范围的个人创业担保贷款「额度不超过 30 万元，贷款期限不超过 3 年」。合伙创业可适当提高，最高不超过个人额度上限之和的 110%。奖补支持的贷款利率上限分三档：东部地区为 LPR+50BPs，中西部地区 LPR+150BPs，脱贫地区 LPR+250BPs。LPR 是银行贷款市场报价利率，BPs 是利率的计量单位，加得越多利息越高。「还款积极、带动就业能力强、创业项目好」的，到期后可继续申请，累计次数不超过 3 次。第八条：申请人先向当地人力资源社会保障部门申请资格审核，再向担保机构和经办银行提交申请。第十二条：经省级人民政府同意，各地可扩大支持范围、提高额度和贴息比例（全国）",
         "note": "财政替你出一半利息，不改变「借的钱要还」这件事。本书在第 12 节第 1 条的立场没变：创业只拿亏得起的钱，不动家底，不给公司贷款签个人担保，配偶更不要跟着签。如果你已经决定要借，这种政策贷款是利息最低的那一档，别去碰消费贷和民间借贷。额度和适用范围各省可以往上调，实际能批多少，以当地人社部门当年的说法为准。2020 年疫情期间那份「个人最高 20 万」的通知是临时文件，现在看这份办法。开店是办个体户还是开公司、许可证、报税和退场，见第 12 节。失业期间的培训补贴、社保补贴和就业见习，见第 7 节第 13 条（职业培训补贴）。",
+        "source": "财政部 (2023). 关于印发《普惠金融发展专项资金管理办法》的通知（财金〔2023〕75 号，第六、八、九、十、十一、十二条）. <https://www.gov.cn/zhengce/zhengceku/202309/content_6903691.htm>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -11925,6 +12589,7 @@ module.exports = {
         "cost": "不花钱。在留服中心的「认证院校查询」里输一次学校名，几分钟就查完",
         "gain": "中国（教育部）留学服务中心有一个认证院校查询入口。你可以按国家查，也可以按学校名字查。查的是这所学校发的学历学位在不在认证范围里。另外，教育部教育涉外监管信息网还公布中外合作办学和境外办学的监管信息",
         "note": "中介嘴上说「教育部认可」不算数，以你自己上网查到的结果为准。名单会变，入学时在名单里，毕业时不一定还在，所以读书期间每年复查一次。中外合作办学的项目另有一套认证注册的制度。2008 年以后入学的，可以凭姓名和身份证号，在涉外监管信息网查自己的注册序号。",
+        "source": "中国（教育部）留学服务中心. 认证院校查询. <http://yxcx.cscse.edu.cn/>；教育部教育涉外监管信息网. <https://jsj.moe.gov.cn/>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -11944,6 +12609,7 @@ module.exports = {
         "cost": "不花钱。把 I-20 上的项目结束日期抄进日历，提前 90 天提醒一次。I-20 是学校发给你的留学资格证明。另外每学期看一次学校国际学生办公室的通知，看这场官司有没有新进展",
         "gain": "国土安全部 2026 年 7 月 17 日公布了一项规则，原定 2026 年 9 月 15 日生效。内容是 F-1 学生不再按「读完为止」入境，改成固定期限，最长四年，到期要另外申请延期。读完或者实习结束后，只留 30 天准备离境。2026 年 9 月 14 日，马萨诸塞州联邦地区法院的 Saylor 法官依《行政程序法》第 705 条，推迟了这项规则的生效。暂停管全国，管整份规则。法院没有撤销这项规则，撤销的请求被驳回，但允许以后再提。案子还在继续审。按法院这道命令，F、J、I 三类签证的人仍按「读完为止」入境，60 天离境宽限期照旧，也不需要另外申请延期",
         "note": "本条截至 2026 年 9 月 25 日。政府可以向第一巡回上诉法院上诉，国土安全部也可以改好规则重新发布。所以要读好几年的人，别假定老规矩会一直不变。法院定了 2026 年 10 月 2 日再开庭听双方汇报进展，过了那天再看一次学校的通知。新规如果以后生效，要延期就得在期限到期之前另外申请，不会自动续上。老规矩下，提前不读了的，离境期限和读完的不一样，先问学校国际学生办公室。J 签证在同一份规则里，细节和 F-1 不一样，按自己的签证类别去查。",
+        "source": "DHS (2026). Establishing a Fixed Time Period of Admission and an Extension of Stay Procedure for Nonimmigrant Academic Students, Exchange Visitors（2026-07-17 公布，原定 2026-09-15 生效）. <https://www.federalregister.gov/documents/2026/07/17/2026-14439/establishing-a-fixed-time-period-of-admission-and-an-extension-of-stay-procedure-for-nonimmigrant>；Presidents' Alliance on Higher Education and Immigration v. U.S. Department of Homeland Security, No. 1:26-cv-13799-FDS (D. Mass. Sept. 14, 2026)，法院案卷. <https://www.courtlistener.com/docket/74661796/presidents-alliance-on-higher-education-and-immigration-v-united-states/>；Yale Office of International Students & Scholars (2026-09-14). Important Update: Court Action on the D/S Rule. <https://oiss.yale.edu/news/important-update-court-action-on-the-ds-rule>；AILA (2026). One Day Before Taking Effect, Federal Court Postpones the F, J, and I Fixed Admission Period Rule. <https://www.aila.org/blog/think-immigration-one-day-before-taking-effect-federal-court-postpones-the-f-j-and-i-fixed-admission-period-rule>；8 CFR 214.2(f). <https://www.ecfr.gov/current/title-8/chapter-I/subchapter-B/part-214/section-214.2>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -11963,6 +12629,7 @@ module.exports = {
         "cost": "不花钱。自己按周把工时记下来。难在雇主会说「多干几个小时没人查」，这话不能信",
         "gain": "美国的 F-1 学生，校内打工在学期中每周不得超过 20 小时。经批准的校外兼职同样是每周 20 小时。假期可以全职。依据是美国联邦移民法规 8 CFR 214.2(f)(9)。英国的学生签证，读学位及以上课程的，学期内每周 20 小时，学位以下的每周 10 小时。非全日制课程一律不得打工。还不得自雇（自己给自己干活），也不得做职业运动员或者演艺工作。依据是英国移民规则里管学生的那一部分，附录 Student ST26.1、ST26.5。加拿大符合条件的全日制学生，校外打工每周最多 24 小时，依据是加拿大移民法实施条例 IRPR 第 186(v) 条。澳大利亚的学生签证，课程进行期间每两周最多 48 小时。研究型硕士、博士和他们的家属不受这个限制",
         "note": "美国的校外打工必须先获批。申请打工许可的 I-765 还在审的时候，就不能开工。加拿大的旧许可上印的是每周 20 小时，只要还符合条件，实际可以做到 24 小时，以现行规定为准。英国不许自雇那条管得很宽：接私活、开网店、做自由职业都算。",
+        "source": "8 CFR 214.2(f)(9). <https://www.ecfr.gov/current/title-8/chapter-I/subchapter-B/part-214/section-214.2>；UK Home Office. Immigration Rules Appendix Student（ST26.1、ST26.5）. <https://www.gov.uk/guidance/immigration-rules/immigration-rules-appendix-student>；IRCC. Work off campus as an international student. <https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/work/work-off-campus.html>；Australian Government Department of Home Affairs. Student visa (subclass 500). <https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -11982,6 +12649,7 @@ module.exports = {
         "cost": "不花钱。停课、休学、换学校之前，先找学校的国际学生办公室，问清楚自己的身份状态",
         "gain": "加拿大明文规定，在获批的休学期间不得校外打工。转学期间没有在学习的，也不得校外打工。要等恢复学业以后，才能重新开始工作。美国的校内打工资格只给 SEVIS 里身份为 Active 的 F-1 学生。SEVIS 是美国的留学生身份档案系统，Active 是在读有效。这些学生还要维持全日制课业。英国的打工许可按课程类型给，非全日制课程不得打工",
         "note": "课业压力大，想减课之前先问清楚：减到多少就不算全日制了。这一条比打工更早出事。被学校开除、或者项目被终止的，身份通常当天就断。别等学校发正式信再行动。",
+        "source": "IRCC. Work off campus as an international student. <https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/work/work-off-campus.html>；U.S. Department of Homeland Security, Study in the States. Working in the United States. <https://studyinthestates.dhs.gov/students/work/working-in-the-united-states>；UK Home Office. Immigration Rules Appendix Student（ST26.1）. <https://www.gov.uk/guidance/immigration-rules/immigration-rules-appendix-student>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -12001,6 +12669,7 @@ module.exports = {
         "cost": "不花钱。在线提交一次改址，十分钟",
         "gain": "美国联邦移民法规 8 CFR 265.1 规定，按法律要登记的外国人，地址变了以后 10 日内要报告。报给 USCIS（美国移民局），按它要求的办法报，既报地址变了这件事，也报新地址",
         "note": "报了移民局，学校那边的 SEVIS 记录（你的留学生身份档案）还要另外更新。其余三个国家也都要求换了地址就通知移民局或者学校。期限和办法各国不同，按你所在国移民局的网页办。",
+        "source": "8 CFR 265.1. <https://www.ecfr.gov/current/title-8/chapter-I/subchapter-B/part-265/section-265.1>；USCIS. AR-11, Alien's Change of Address Card. <https://www.uscis.gov/ar-11>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -12020,6 +12689,7 @@ module.exports = {
         "cost": "不花钱。出发前看一次，以后每学期看一次",
         "gain": "教育部通过教育涉外监管信息网发布留学预警。2025 年一共发了 4 号。第 1 号提示美国有关州通过的高等教育法案里含有涉华消极条款（2025-04-09）。第 2 号和第 3 号两次提示菲律宾针对中国公民的案件多发、留学环境不佳（2025-07-18、2025-08-30）。第 4 号提示日本治安形势和留学环境不佳，建议谨慎规划赴日留学（2025-11-16）",
         "note": "预警不是禁令，也不是说不能去，它给你一个掂量当地风险的官方依据。预警名单随形势变，本节不长期跟着更新，以网站上当期的页面为准。境外人身安全和领事保护见第 21 节。",
+        "source": "教育部教育涉外监管信息网. 预警信息. <https://jsj.moe.gov.cn/>；教育部发布 2025 年第 4 号留学预警. <https://jsj.moe.gov.cn/n2/2/2/2060.shtml>；第 1 号. <https://jsj.moe.gov.cn/n2/2/2/2001.shtml>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -12039,6 +12709,7 @@ module.exports = {
         "cost": "数千到上万元人民币。按签证时长一次性买，读几年买几年",
         "gain": "澳大利亚内政部规定，学生签证申请人和他的家属要买海外学生医疗保险（OSHC），而且在澳大利亚停留的全程都要有，不能断。保险要由澳大利亚认可的保险机构提供。符合可以免买的豁免情形的除外。新保险和前一个签证的保险之间不得有空档。入境时拿不出已经投保的证明，可能被拒绝入境。比课程开始时间更早入境的，保险起始日要写实际抵达澳大利亚的那一天",
         "note": "学校代办的，要问清楚保险公司名称、保单起止日期和保单号，签证申请里要填这些。买短了会让续签出问题，宁可买到毕业以后再多留一点。",
+        "source": "Australian Government Department of Home Affairs. Student visa (subclass 500). <https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500>",
         "grade": "A",
         "meta": {
           "money": "多",
@@ -12058,6 +12729,7 @@ module.exports = {
         "cost": "签证费 558 英镑。医疗附加费每年 776 英镑。两笔都在申请时一次交清",
         "gain": "英国学生签证的费用是 558 英镑。在英国境外申请、在境内延期或者转换，都是这个数。另外还有医疗附加费，交了才能用英国的国民医疗服务，按签证年数在申请时一次预交。学生本人和他的家属是每年 776 英镑，比如 2 年的签证就是 1552 英镑。其他类别的申请人是每年 1035 英镑。签证超过 6 个月、不足 1 年的，按整年收取",
         "note": "金额和汇率都会变，按来源里那两个页面上的当期数字算。读学位课程、年满 18 岁的，一般最长能待 5 年，学位以下的是 2 年。按这个年数估算要交多少附加费。",
+        "source": "UK Government. Student visa. <https://www.gov.uk/student-visa>；UK Government. Pay for UK healthcare as part of your immigration application. <https://www.gov.uk/healthcare-immigration-application>",
         "grade": "A",
         "meta": {
           "money": "多",
@@ -12077,6 +12749,7 @@ module.exports = {
         "cost": "线上申请，线上缴费。准备材料加上审核，按工作日算，前后一个月上下",
         "gain": "国（境）外学历学位认证在中国（教育部）留学服务中心的网上服务大厅办。流程是四步：注册并实名认证，在线提交申请和材料，在线缴费，等评估和审核。公布的认证工作时限是 10 至 20 个工作日。工作日不含周末和节假日，这段是留服中心审核用的时间",
         "note": "要交的材料有这几样：文凭证书，护照或者通行证，居留卡或者签证签注，证件照片，授权声明。出国期间的出入境记录由系统自己调取，所以在外期间的签证页别丢。留服中心网站上还会发公告，说哪些认证书作废、暂停受理哪所学校的认证申请。办之前先看一眼有没有涉及自己的学校。",
+        "source": "中国（教育部）留学服务中心. 网上服务大厅·学历学位认证. <http://zwfw.cscse.edu.cn/>",
         "grade": "A",
         "meta": {
           "money": "少",
@@ -12096,6 +12769,7 @@ module.exports = {
         "cost": "不花钱。报名之前，在留服中心的通知公告里搜一次学校名",
         "gain": "中国（教育部）留学服务中心一直在发公告，对部分国外院校的学历学位认证加强认证审查（对这些学校的文凭单独多查一道）。最新一份是第九号（2025-10-28）。留服中心还发过暂停受理个别境外院校认证申请的公告，也发过提示，说有人借国（境）外学历学位认证实施诈骗",
         "note": "「加强审查」不等于一定认证不了，但会要求你补交更多材料，时间也更长。凡是承诺「包认证」「内部渠道加急」的中介都是骗局，留服中心专门发过防诈骗提示。跨境找人代写论文、代上网课，被查到除了学历作废，还可能影响签证记录。",
+        "source": "中国（教育部）留学服务中心. 关于对部分国外院校学历学位认证加强认证审查的公告（九）（2025-10-28）. <https://www.cscse.edu.cn/cscse/sy/tzgg/2025102809225023345/index.html>；中国（教育部）留学服务中心. <https://www.cscse.edu.cn/>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -12117,6 +12791,7 @@ module.exports = {
         "cost": "不花钱。三个动作，几十秒做完。",
         "gain": "这种发作叫自主神经反射异常。一篇系统综述检索了 Medline、CINAHL、EMBASE 和 PsycINFO 四个数据库，纳入 31 项研究，其中 6 项是随机对照试验。综述写明，发作当时的非药物处理是三步：把患者摆成直立体位、松开紧身衣物、去除诱发刺激。这三步的依据是临床共识和生理学数据，属于第 5 级证据。血压持续升高时才用降压药，其中哌唑嗪有第 1 级证据，硝苯地平和前列腺素 E2 有第 2 级证据。综述还写明，预防发作的策略主要针对泌尿生殖系统和手术这两类常见诱因，多数只有第 4 级和第 5 级证据支撑",
         "note": "定 B 是因为那三个现场动作背后没有随机对照试验，只有共识和生理学推理。综述自己也说，这些办法多数只有非对照研究支撑。用药那一段是医生的事，家里不要自己给降压药。让人躺平会让血压更高，所以要扶坐直。家属和护工也要会这三步。别把它当普通头痛扛过去。",
+        "source": "Krassioukov A, Warburton DE, Teasell R, Eng JJ; Spinal Cord Injury Rehabilitation Evidence Research Team (2009). A systematic review of the management of autonomic dysreflexia after spinal cord injury. Archives of Physical Medicine and Rehabilitation, 90(4):682-695. <https://doi.org/10.1016/j.apmr.2008.10.017>",
         "grade": "B",
         "meta": {
           "money": "0",
@@ -12136,6 +12811,7 @@ module.exports = {
         "cost": "不花钱。打一个电话，或者挂一次号。",
         "gain": "研究跟踪了 1991 到 2010 年新入院、熬过伤后第一年、出院时有神经功能缺损的 2304 例外伤性脊髓损伤患者，随访到 2014 年底。其中 63 例（2.7%）的受伤原因本身就是自杀未遂。到随访结束共 533 人死亡，其中 4.2% 死于自杀，91% 的自杀发生在受伤后的头十年。按年龄标化的自杀死亡率是每年每 10 万人 62.5 例（95% CI 36.4–88.6，可信范围），是 2014 年英格兰和威尔士普通人群自杀率（每 10 万人 12.2 例）的五倍。因自杀未遂致伤的那部分人，和其他致伤原因相比，死亡的比值比是 4.32（P<0.001），自杀的比值比是 9.46（P<0.001）",
         "note": "这项研究只看了脊髓损伤，套到失明、截肢、烧伤这些别的致残原因上属于往外推。它能说明的是时间窗：风险不是出院就过去了，要盯十年。要人陪着说话打 12356，见第 29 节第 11 条（12356）。家里别囤安眠药和农药，见第 1 节第 25 条（自杀念头）。哀伤和情绪卡住半年还在原地，去精神科或临床心理科挂号，见第 29 节第 8 条（哀伤过了半年）。",
+        "source": "Savic G, DeVivo MJ, Frankel HL, Jamous MA, Soni BM, Charlifue S (2018). Suicide and traumatic spinal cord injury - a cohort study. Spinal Cord, 56(1):2-6. <https://doi.org/10.1038/sc.2017.98>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -12155,6 +12831,7 @@ module.exports = {
         "cost": "不花钱。把两条情形记住，需要时能说出口。",
         "gain": "《精神卫生法》第三十条写明「精神障碍的住院治疗实行自愿原则」。只有诊断结论和病情评估表明就诊者是严重精神障碍患者、并且有下列情形之一的，才应当实施住院治疗。一是「已经发生伤害自身的行为，或者有伤害自身的危险的」。二是「已经发生危害他人安全的行为，或者有危害他人安全的危险的」。第三十一条：属于第一种情形的，经监护人同意医疗机构才实施住院治疗，监护人不同意的不得实施。第三十二条：属于第二种情形而本人或者监护人有异议的，可以要求再次诊断，应当自收到诊断结论之日起三日内提出，由二名初次诊断医师以外的精神科执业医师作出；对再次诊断结论仍有异议的，可以自主委托依法取得执业资质的鉴定机构做精神障碍医学鉴定。第三十五条：再次诊断结论或者鉴定报告表明不能确定为严重精神障碍患者、或者患者不需要住院治疗的，医疗机构不得对其实施住院治疗。第七十八条：将非精神障碍患者故意作为精神障碍患者送入医疗机构治疗的，依法承担赔偿责任（全国，2013 年 5 月 1 日起施行，2018 年修正）",
         "note": "反过来，也不是谁都不能送医。第二十八条规定，疑似精神障碍患者已经发生伤害自身、危害他人安全的行为，或者有这个危险的，其近亲属、所在单位、当地公安机关应当立即采取措施予以制止，并将其送往医疗机构进行精神障碍诊断。医疗机构接到送诊的，不得拒绝作出诊断。所以「送去做诊断」和「留下来住院」是两道门，前一道低，后一道高。第七十五条列了医疗机构的责任，违反规定实施约束隔离、把非精神障碍患者诊断成精神障碍患者，要被处分直至吊销执业证书。身边人有伤人冲动时怎么办，见第 8 节。",
+        "source": "中华人民共和国精神卫生法（2018 年修正，第三十条、第三十一条、第三十二条、第三十五条、第七十八条）. <https://flk.npc.gov.cn/detail?id=2c909fdd678bf17901678bf7448a066d>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -12174,6 +12851,7 @@ module.exports = {
         "cost": "不花钱。把照护的活分出去一部分，自己去做一次体检。",
         "gain": "研究是前瞻性人群队列，1993 到 1998 年，平均随访 4.5 年，在美国四个社区做。392 名照护者和 427 名非照护者，年龄 66 到 96 岁，都与配偶同住。四年内 103 人（12.6%）死亡。调整社会人口学因素、已有疾病和亚临床心血管疾病之后，一边照护一边报告有精神或情绪紧张的人，死亡风险比非照护对照高 63%（RR 1.63，95% CI 1.00–2.65，可信范围）。照护但未报告紧张的人（RR 1.08，95% CI 0.61–1.90）和配偶失能但本人不照护的人（RR 1.37，95% CI 0.73–2.58），调整后的死亡率都没有升高",
         "note": "争议：这项研究的可信范围下限正好压在 1.00 上，「没有差别」这个可能性没有被完全排除。人群是与配偶同住的美国老人，照护对象是失能的老年配偶，套到照护年轻残疾家属的人身上属于往外推。它能说明的是方向：吃力的那部分人风险更高。能分出去的照护活尽量分出去，托养和日间照料服务问当地残联和民政。照护者自己的慢性病别停药，见第 16 节第 1 条（药按医嘱吃满）。这条的受益人是你自己。",
+        "source": "Schulz R, Beach SR (1999). Caregiving as a risk factor for mortality: the Caregiver Health Effects Study. JAMA, 282(23):2215-2219. <https://doi.org/10.1001/jama.282.23.2215>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -12193,6 +12871,7 @@ module.exports = {
         "cost": "一个减压坐垫几百元到上千元。每天看一遍，一分钟。",
         "gain": "这项随机临床试验在 12 家养老院做，2004 到 2008 年招募 232 名 65 岁以上、每天坐轮椅 6 小时以上、Braden 评分 18 分以下的住户。所有人先配了合身的轮椅，再随机分成两组。一组用皮肤保护型坐垫（空气、黏性流体加泡沫、或者凝胶加泡沫），一组用 7.6 厘米厚的分段式泡沫坐垫。随访 6 个月或者到发生压疮为止。坐骨结节部位的压疮，分段泡沫组 8 例（6.7%），皮肤保护型坐垫组 1 例（0.9%），P=0.04。把坐骨和骶尾部的压疮合起来算，分段泡沫组 21 例（17.6%），皮肤保护型坐垫组 12 例（10.6%），P=0.14，没有做出差别",
         "note": "定 B 的原因有两条。一是样本只有 232 人，主要终点的 P 值 0.04 刚过线，次要终点没有做出差别。二是人群是养老院里的高龄住户，套到年轻的轮椅使用者身上属于往外推。试验里所有人都先配了合身的轮椅，所以「合身」和「坐垫」是一起起作用的，别只换坐垫。长期卧床的压疮防护，气垫床和定时翻身，见第 17 节第 8 条（压疮）。基本型辅助器具的配置补贴怎么申请，见本节第 7 条（去县级残联问全）。",
+        "source": "Brienza D, Kelsey S, Karg P, et al. (2010). A randomized clinical trial on preventing pressure ulcers with wheelchair seat cushions. Journal of the American Geriatrics Society, 58(12):2308-2314. <https://doi.org/10.1111/j.1532-5415.2010.03168.x>",
         "grade": "B",
         "meta": {
           "money": "少",
@@ -12212,6 +12891,7 @@ module.exports = {
         "cost": "不花钱，是省钱。难在家里人抱着希望，劝不住。",
         "gain": "《广告法》第十六条规定，医疗、药品、医疗器械广告不得含有下列内容：「（一）表示功效、安全性的断言或者保证；（二）说明治愈率或者有效率；（三）与其他药品、医疗器械的功效和安全性或者其他医疗机构比较；（四）利用广告代言人作推荐、证明」。第十七条规定，除医疗、药品、医疗器械广告外，「禁止其他任何广告涉及疾病治疗功能，并不得使用医疗用语或者易使推销的商品与药品、医疗器械相混淆的用语」。第四条规定，广告不得含有虚假或者引人误解的内容，不得欺骗、误导消费者，广告主应当对广告内容的真实性负责（全国，2021 年修正）",
         "note": "判断方法只有一条：看它敢不敢把话说满。正规医院的康复科不会承诺你几个疗程能站起来。碰到这类宣传，向 12315 或者当地市场监管部门举报。保健品那一套话术是同一个路子，见第 6 节第 10 条（保健品）。已经买了想退钱，按网购和预付式消费的办法走，见第 5 节第 29 条（网购认平台规则）。这条的受益人是你自己和家人。",
+        "source": "中华人民共和国广告法（2021 年修正，第四条、第十六条、第十七条）. <https://flk.npc.gov.cn/detail?id=ff8081817ab231eb017abd6bd860052d>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -12231,6 +12911,7 @@ module.exports = {
         "cost": "不花钱。去一趟县级残联，问一上午。后面要跑的部门不止一个。",
         "gain": "证接上的待遇至少六项，各有各的出处。一是困难残疾人生活补贴和重度残疾人护理补贴，见第 7 节第 8 条（两项补贴）。二是残疾儿童康复救助，见本节第 8 条（康复救助）。三是基本型辅助器具配置补贴，依据是《残疾预防和残疾人康复条例》第二十六条。四是家庭无障碍设施改造补贴，见本节第 9 条（坡道扶手和浴室改造）。五是按比例就业和就业服务，见本节第 10 条（主动说明持证）。六是个人所得税减征，见本节第 11 条（个税减征）。《残疾预防和残疾人康复条例》第二十六条还写明，国家通过实施重点康复项目为城乡贫困残疾人、重度残疾人提供基本康复服务，「按照国家有关规定对基本型辅助器具配置给予补贴」。第二十条规定，县级以上人民政府有关部门和残联应当利用社区资源，设立康复场所或者购买服务，开展康复指导、日常生活能力训练、康复护理、辅助器具配置、信息咨询和转介等社区康复工作（全国，2017 年 7 月 1 日起施行）",
         "note": "办证本身的流程见第 24 节第 10 条（残疾人证）。补贴标准和具体办法多数由省一级定，同一项在两个省能差出好几倍。问的时候把每一项的名字记下来，回家按名字在当地残联官网和政府网站上再查一遍原文件，不要只听柜台上的口头说法。别指望一次问全，隔一年再去问一次，政策会变。",
+        "source": "国务院 (2017). 残疾预防和残疾人康复条例（第二十条、第二十六条）. <https://www.gov.cn/zhengce/zhengceku/2017-02/27/content_5171308.htm>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -12250,6 +12931,7 @@ module.exports = {
         "cost": "不花钱。到县级残联交一次申请，然后在定点机构里选一家。",
         "gain": "《国务院关于建立残疾儿童康复救助制度的意见》写明，救助对象为符合条件的 0—6 岁视力、听力、言语、肢体、智力等残疾儿童和孤独症儿童。包括城乡最低生活保障家庭、建档立卡贫困户家庭的残疾儿童和儿童福利机构收留抚养的残疾儿童，残疾孤儿、纳入特困人员供养范围的残疾儿童，以及其他经济困难家庭的残疾儿童。其他经济困难家庭的具体认定办法由县级以上地方人民政府制定。文件还写明「有条件的地区，可扩大残疾儿童康复救助年龄范围，也可放宽对救助对象家庭经济条件的限制」。经费保障标准由县级以上地方人民政府依据本地财力状况、保障对象数量、残疾类别等分类确定，并建立动态调整机制。上位依据是《残疾预防和残疾人康复条例》第二十六条：国家建立残疾儿童康复救助制度，「逐步实现0—6岁视力、听力、言语、肢体、智力等残疾儿童和孤独症儿童免费得到手术、辅助器具配置和康复训练等服务」（全国，2018 年起）",
         "note": "救助标准由各省定，先在当地残联官网查「残疾儿童康复救助实施办法」。定点机构名单也在残联手上。文件要求残联会同有关部门加强定点康复机构的准入和退出监管，建立定期检查和综合评估机制，并建立黑名单制度。不在名单里的机构，钱要自己全出，出了事也难追。这条的受益人是你的孩子，属于第二档。承诺「包好」的机构按本节第 6 条（能治好瘫痪）处理。",
+        "source": "国务院 (2018). 关于建立残疾儿童康复救助制度的意见（国发〔2018〕20 号）. <https://www.gov.cn/zhengce/zhengceku/2018-07/10/content_5305296.htm>；国务院 (2017). 残疾预防和残疾人康复条例（第二十六条）. <https://www.gov.cn/zhengce/zhengceku/2017-02/27/content_5171308.htm>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -12269,6 +12951,7 @@ module.exports = {
         "cost": "申请不花钱。改造本身多数有补贴，自己可能还要补一部分。要跑残联和街道。",
         "gain": "《无障碍环境建设法》第十九条：「县级以上人民政府应当支持、指导家庭无障碍设施改造。对符合条件的残疾人、老年人家庭应当给予适当补贴。」第十八条规定，对既有的不符合无障碍设施工程建设标准的居住建筑、居住区、公共建筑、公共场所、交通运输设施、城乡道路等，县级以上人民政府应当根据实际情况制定有针对性的无障碍设施改造计划并组织实施。第六十二条规定，任何组织和个人有权向政府有关主管部门提出加强和改进无障碍环境建设的意见和建议，对违反本法规定的行为进行投诉、举报；主管部门接到投诉举报「应当及时处理并予以答复」。第六十三条规定，对违反本法规定损害社会公共利益的行为，人民检察院可以提出检察建议或者提起公益诉讼（全国，2023 年 9 月 1 日起施行）",
         "note": "定 B 是因为法律只写了「应当给予适当补贴」，补多少、谁算符合条件全交给地方，没有全国统一的数字。先在当地残联官网查「困难重度残疾人家庭无障碍改造」。名额多数按年度分配，排队要早。小区加装电梯、楼道改造是另一套流程，走住建部门。公共场所的无障碍设施不达标，按第六十二条向主管部门投诉，它要给你答复。",
+        "source": "中华人民共和国无障碍环境建设法（第十八条、第十九条、第六十二条、第六十三条）. <https://flk.npc.gov.cn/detail?id=ff80818188d7430b0189018493370940>",
         "grade": "B",
         "meta": {
           "money": "0",
@@ -12288,6 +12971,7 @@ module.exports = {
         "cost": "不花钱。面试时多说一句话。难在开口。",
         "gain": "《残疾人就业条例》第八条：「用人单位安排残疾人就业的比例不得低于本单位在职职工总数的1.5%。具体比例由省、自治区、直辖市人民政府根据本地区的实际情况规定。」第九条：达不到所在地省级人民政府规定比例的，应当缴纳残疾人就业保障金。《残疾人就业保障金征收使用管理办法》第八条给了公式：「保障金年缴纳额=（上年用人单位在职职工人数×所在地省、自治区、直辖市人民政府规定的安排残疾人就业比例-上年用人单位实际安排的残疾人就业人数）×上年用人单位在职职工年平均工资」。第十六条：自工商登记注册之日起 3 年内，对安排残疾人就业未达到规定比例、在职职工总数 20 人以下（含 20 人）的小微企业，免征保障金。《残疾人保障法》第三十六条规定，国家对安排残疾人就业达到、超过规定比例或者集中安排残疾人就业的用人单位，依法给予税收优惠（全国，残疾人就业条例 2007 年 5 月 1 日起施行）",
         "note": "对刚注册三年内、20 人以下的小微企业，这个理由不成立，别指望。保障金的减免政策这些年一直在调，具体以当年财政部的公告为准。另外，按比例就业要求的是真实用工。挂名领工资、让单位拿你去抵保障金，是骗取行为，你也会被牵进去。就业困难人员认定和社保补贴见第 7 节第 12 条（就业困难人员）。职业培训补贴见第 7 节第 13 条（职业培训补贴）。这条的受益人是你自己。",
+        "source": "国务院 (2007). 残疾人就业条例（第八条、第九条）. <https://www.gov.cn/zhengce/zhengceku/2008-03/28/content_6646.htm>；财政部、国家税务总局、中国残联 (2015). 残疾人就业保障金征收使用管理办法（财税〔2015〕72 号，第六条、第八条、第十六条）. <http://www.gov.cn/zhengce/zhengceku/2015-09/15/content_5650063.htm>；中华人民共和国残疾人保障法（第三十六条）. <https://flk.npc.gov.cn/detail?id=ff8080816f135f46016f1d134c88132b>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -12307,6 +12991,7 @@ module.exports = {
         "cost": "不花钱。申报时勾一项，或者交一次备案材料。",
         "gain": "《个人所得税法》第五条：「有下列情形之一的，可以减征个人所得税，具体幅度和期限，由省、自治区、直辖市人民政府规定，并报同级人民代表大会常务委员会备案：（一）残疾、孤老人员和烈属的所得；（二）因自然灾害遭受重大损失的。」《残疾人保障法》第三十六条另外规定，国家对从事个体经营的残疾人，依法给予税收优惠，并免除行政事业性收费（全国，个人所得税法 2019 年 1 月 1 日起施行）",
         "note": "收益量级定「小」，是因为法律本身没给数字，多数省份的减免额一年在几百到几千元这个量级。钱不算多，但办一次能长期用，值得跑。具体到你这个省减多少，只有当地税务局的公告算数，网上转的对照表常年过期。自己开小店的，行政事业性收费按《残疾人保障法》第三十六条免除，办执照时主动提。",
+        "source": "中华人民共和国个人所得税法（2018 年修正，第五条）. <https://flk.npc.gov.cn/detail?id=2c909fdd678bf17901678bf724bd0609>；中华人民共和国残疾人保障法（第三十六条）. <https://flk.npc.gov.cn/detail?id=ff8080816f135f46016f1d134c88132b>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -12326,6 +13011,7 @@ module.exports = {
         "cost": "不花钱。被拦下来时要开口引法条，可能要僵持一会儿。",
         "gain": "《无障碍环境建设法》第四十六条：「公共场所经营管理单位、交通运输设施和公共交通运输工具的运营单位应当为残疾人携带导盲犬、导听犬、辅助犬等服务犬提供便利。」第三十五条规定，政务服务便民热线和报警求助、消防应急、交通事故、医疗急救等紧急呼叫系统，应当逐步具备语音、大字、盲文、一键呼叫等无障碍功能。第六十二条规定，任何组织和个人有权对违反本法规定的行为投诉、举报，主管部门应当及时处理并予以答复。《残疾人保障法》第五十条：「盲人持有效证件免费乘坐市内公共汽车、电车、地铁、渡船等公共交通工具。盲人读物邮件免费寄递。」同条还规定，县级以上人民政府对残疾人搭乘公共交通工具应当给予便利和优惠，残疾人可以免费携带随身必备的辅助器具（全国，无障碍环境建设法 2023 年 9 月 1 日起施行）",
         "note": "法律写的是「提供便利」，没有配罚则，所以现场僵持时对方不一定立刻让步。手机里存一张法条截图，比背条号管用。当场解决不了就按第六十二条投诉，主管部门要答复。铁路和民航另有自己的规定，出行前先打客服确认。免费乘车的「有效证件」各地认的不完全一样，去当地残联问清楚认哪一种。",
+        "source": "中华人民共和国无障碍环境建设法（第三十五条、第四十六条、第六十二条）. <https://flk.npc.gov.cn/detail?id=ff80818188d7430b0189018493370940>；中华人民共和国残疾人保障法（第五十条）. <https://flk.npc.gov.cn/detail?id=ff8080816f135f46016f1d134c88132b>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -12345,6 +13031,7 @@ module.exports = {
         "cost": "不花钱。要在省里规定的时间内交一次书面申请，还要到现场确认。",
         "gain": "《残疾人参加普通高等学校招生全国统一考试管理规定》第五条列了十二项合理便利。包括为视力残疾考生提供现行盲文试卷、大字号试卷或者普通试卷；为听力残疾考生免除外语听力考试；允许视力残疾考生携带盲文笔、盲文手写板、无存储功能的盲文打字机、无存储功能的电子助视器、盲杖、光学放大镜等辅助器具；允许听力残疾考生携带助听器、人工耳蜗；允许行动不便的考生使用轮椅、助行器，有特殊需要的可以自带特殊桌椅。延长时间的幅度写在第五条第六项：「使用盲文试卷的视力残疾考生的考试时间，在该科目规定考试总时长的基础上延长50%；使用大字号试卷或普通试卷的视力残疾考生、因脑瘫或其他疾病引起的上肢无法正常书写或无上肢考生等书写特别困难考生的考试时间，在该科目规定考试总时长的基础上延长30%」。此外还有优先进入考点考场、单独标准化考场、配备引导辅助人员和手语翻译人员等。第七条规定申请程序：考生按省级教育考试机构规定的时间、地点、方式提出正式书面申请，并提供本人第二代及以上残疾人证；由专家组现场确认并综合评估，省级教育考试机构出具《告知书》。第八条规定，考生对《告知书》有异议，可以向省级教育行政部门提出书面复核申请。第九条规定，免除外语听力的，外语科成绩按「笔试成绩×外语科总分值/笔试部分总分值」计算。第十八条规定，残疾人参加其他国家教育考试需要合理便利的，可以参照本规定执行（全国，2017 年 4 月 7 日发布施行）",
         "note": "申请时间由各省定，写在当年的高考报名办法里，错过就没有了。所以高三上学期就要去省教育考试院官网确认时间。第十八条还规定，研究生考试、成人高考这些国家教育考试，也可以参照申请。上学阶段学校不得拒收那一条见本节第 14 条（学校不得拒收）。这条的受益人是你自己或者你的孩子。",
+        "source": "教育部、中国残联 (2017). 残疾人参加普通高等学校招生全国统一考试管理规定（教学〔2017〕4 号，第五条、第七条、第八条、第九条、第十八条）. <http://www.gov.cn/zhengce/zhengceku/2017-04/12/content_5650060.htm>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -12364,6 +13051,7 @@ module.exports = {
         "cost": "不花钱。要交一次申请，可能要经过一次评估。学校推脱时得往上找教育局。",
         "gain": "《残疾人教育条例》第七条：「学前教育机构、各级各类学校及其他教育机构应当依照本条例以及国家有关法律、法规的规定，实施残疾人教育；对符合法律、法规规定条件的残疾人申请入学，不得拒绝招收。」第二十九条：「普通职业学校不得拒绝招收符合国家规定的录取标准的残疾人入学，普通职业培训机构应当积极招收残疾人入学。」条例还规定，适龄残疾儿童、少年需要专人护理、不能到学校就读的，由县级人民政府教育行政部门统筹安排，通过提供送教上门或者远程教育等方式实施义务教育，并纳入学籍管理。第二十条规定，县级人民政府教育行政部门应当会同卫生行政部门、民政部门、残疾人联合会，建立由教育、心理、康复、社会工作等方面专家组成的残疾人教育专家委员会，由它评估身体状况、接受教育的能力和适应学校学习生活的能力并提出入学、转学建议；评估结果属于孩子的隐私，有关单位和工作人员负有保密义务。第二十三条规定，在普通学校随班就读的残疾学生，可以适用普通义务教育的课程设置方案、课程标准和教材，但是对其学习要求可以有适度弹性。第五十二条规定，残疾人参加国家教育考试需要必要支持条件和合理便利的，可以提出申请（全国，2017 年 5 月 1 日起施行）",
         "note": "学校口头说「我们这儿没条件」不算数。要它出书面答复，拿着书面答复去找县级教育局。评估是教育局委托专家委员会做的。第二十三条那句「学习要求可以有适度弹性」很有用，遇到学校拿成绩当理由劝退时可以引。孩子在校被欺凌怎么留证据、学校必须走哪道程序，见第 30 节第 3 条（校园欺凌）。高考的合理便利见本节第 13 条（合理便利）。这条的受益人是你的孩子。",
+        "source": "国务院 (2017). 残疾人教育条例（第七条、第二十条、第二十三条、第二十九条、第五十二条）. <https://www.gov.cn/zhengce/zhengceku/2017-02/23/content_5170264.htm>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -12383,6 +13071,7 @@ module.exports = {
         "cost": "学费和普通驾照差不多，多数地方几千元。车要改装成手动操控。每三年查一次身体。",
         "gain": "《机动车驾驶证申领和使用规定》附件 1 把身体条件写得很细。第 8 目：「右下肢、双下肢缺失或者丧失运动功能但能够自主坐立，且上肢符合本项第5目规定的，可以申请残疾人专用小型自动挡载客汽车准驾车型的机动车驾驶证。一只手掌缺失，另一只手拇指健全，其他手指有两指健全，上肢和手指运动功能正常，且下肢符合本项第6目规定的，可以申请残疾人专用小型自动挡载客汽车准驾车型的机动车驾驶证」。第 6 目：单独左下肢缺失或者丧失运动功能、但右下肢正常的，可以申请小型自动挡汽车准驾车型。视力一项：「单眼视力障碍，优眼裸视力或者矫正视力达到对数视力表5.0以上，且水平视野达到150度的」，可以申请小型汽车、小型自动挡汽车、低速载货汽车、三轮汽车、残疾人专用小型自动挡载客汽车准驾车型。听力一项：有听力障碍但佩戴助听设备能够辨别声源方向的，可以申请小型汽车、小型自动挡汽车准驾车型，驾驶时应当佩戴助听设备。第八十五条规定，办理残疾人专用小型自动挡载客汽车驾驶证业务时提交的身体条件证明，应当由经省级卫生健康行政部门认定的专门医疗机构出具。持这一准驾车型的人应当每三年进行一次身体检查，在记分周期结束后三十日内提交身体条件证明。第七十八条规定，驾驶时应当按规定在车身设置残疾人机动车专用标志（全国，公安部令第 172 号修正，2025 年 1 月 1 日起施行）",
         "note": "门槛低得多的是残疾人机动轮椅车。《道路交通安全法》第一百一十九条把它列进非机动车，所以不用驾照；第五十八条规定，残疾人机动轮椅车在非机动车道内行驶时最高时速不得超过十五公里。C5 的车要装手动油门和刹车，改装要找有资质的厂家，改完去车管所变更登记。三个记分周期结束后一年内不提交身体条件证明，驾驶证会被注销。",
+        "source": "公安部令第 172 号. 机动车驾驶证申领和使用规定（第七十八条、第八十五条、附件 1）. <https://www.gov.cn/gongbao/2025/issue_11866/202502/content_7004031.html>",
         "grade": "A",
         "meta": {
           "money": "多",
@@ -12402,6 +13091,7 @@ module.exports = {
         "cost": "住院康复每天几百元，自费的那部分因地而异。时间按月算。每天都要练，很枯燥。",
         "gain": "Cochrane 系统综述纳入 29 项试验、5902 名参与者，比较有组织的住院卒中单元照护和其他照护方式。随访到末次（中位 1 年）时，不良结局（死亡、残障或者需要机构照护）的比值比是 0.77（95% CI 0.69–0.87，可信范围），死亡的比值比是 0.76（95% CI 0.66–0.88），死亡或者依赖他人的比值比是 0.75（95% CI 0.66–0.85），证据质量中等。换算成绝对数，每 100 人接受卒中单元照护，多 2 人存活、多 6 人住在家里、多 6 人生活自理。另一方面，AVERT 试验在 5 个国家的 56 个急性卒中单元随机分配 2104 名患者，比较「常规照护」和「常规照护加超早期高强度活动」。三个月时结局良好（改良 Rankin 量表 0—2 分）的，超早期组 480 人（46%），常规组 525 人（50%），调整后比值比 0.73（95% CI 0.59–0.90，P=0.004）。死亡是 88 人比 72 人，没有做出差别（比值比 1.34，95% CI 0.93–1.93，P=0.113）",
         "note": "争议：这两项证据都来自卒中，套到脊髓损伤、截肢、烧伤这些别的致残原因上属于往外推。AVERT 那一项说明的是「越早越猛」不成立，不是「早期活动没用」。试验里两组绝大多数人都在 24 小时内下了床，差的是频次和总量。挑机构时看它有没有康复医学科、有没有专职的康复治疗师和作业治疗师，别只看招牌上「康复」两个字。基层和三级医院之间怎么转、起付线怎么算，见第 24 节第 1 条（逐级转诊）。社区康复和辅助器具配置见本节第 7 条（去县级残联问全）。",
+        "source": "Langhorne P, Ramachandra S; Stroke Unit Trialists' Collaboration (2020). Organised inpatient (stroke unit) care for stroke: network meta-analysis. Cochrane Database of Systematic Reviews, 4:CD000197. <https://doi.org/10.1002/14651858.CD000197.pub4>；AVERT Trial Collaboration group (2015). Efficacy and safety of very early mobilisation within 24 h of stroke onset (AVERT): a randomised controlled trial. Lancet, 386(9988):46-55. <https://doi.org/10.1016/S0140-6736(15)60690-0>",
         "grade": "A",
         "meta": {
           "money": "多",
@@ -12421,6 +13111,7 @@ module.exports = {
         "cost": "助听器几千到几万元，多数要自费。要验配，还要来回调试几次。",
         "gain": "ACHIEVE 试验在美国 4 个社区做，纳入 977 名 70 到 84 岁、有未经治疗的听力损失、没有明显认知障碍的人。随机分成两组，一组接受听力干预（听力咨询和配助听器），一组接受健康教育对照，每 6 个月随访一次。主要终点是 3 年的整体认知评分变化。合并两个来源人群的主要分析里，两组没有显著差别：听力干预组 −0.200（95% CI −0.256 到 −0.144），对照组 −0.202（95% CI −0.258 到 −0.145），差值 0.002（95% CI −0.077 到 0.081），P=0.96。一项预设的敏感性分析显示，干预效果在两个来源人群之间存在差异（交互作用 P=0.010）。来自那项长期心血管健康观察研究的参与者年龄更大、认知下降的危险因素更多、基线认知分更低。研究者的结论是，听力干预可能在认知下降风险较高的人群里减少 3 年的认知变化，在风险较低的人群里则不能。试验没有报告归因于研究的严重不良事件",
         "note": "争议：网上常见的「助听器让认知下降少了近一半」来自这项试验里的一个亚组，不是它的主要结果，主要结果是两组没有差别。「配助听器」和「防痴呆」要分开看：前者该做，后者别当成理由。听力残疾考生高考可以免外语听力，见本节第 13 条（合理便利）。有听力障碍的人开车应当佩戴助听设备，见本节第 15 条（C5）。",
+        "source": "Lin FR, Pike JR, Albert MS, et al.; ACHIEVE Collaborative Research Group (2023). Hearing intervention versus health education control to reduce cognitive decline in older adults with hearing loss in the USA (ACHIEVE): a multicentre, randomised controlled trial. Lancet, 402(10404):786-797. <https://doi.org/10.1016/S0140-6736(23)01406-X>",
         "grade": "A",
         "meta": {
           "money": "多",
@@ -12440,6 +13131,7 @@ module.exports = {
         "cost": "向法院申请要交诉讼费，一般几十元到一百元。鉴定费另算，通常几千元，先由申请人垫。走完要几个月。",
         "gain": "《民法典》第二十一条：「不能辨认自己行为的成年人为无民事行为能力人，由其法定代理人代理实施民事法律行为。」第二十二条：「不能完全辨认自己行为的成年人为限制民事行为能力人，实施民事法律行为由其法定代理人代理或者经其法定代理人同意、追认；但是，可以独立实施纯获利益的民事法律行为或者与其智力、精神健康状况相适应的民事法律行为。」第二十四条：「不能辨认或者不能完全辨认自己行为的成年人，其利害关系人或者有关组织，可以向人民法院申请认定该成年人为无民事行为能力人或者限制民事行为能力人。」同条还规定，被认定之后，经本人、利害关系人或者有关组织申请，人民法院可以根据其智力、精神健康恢复的状况，认定其恢复为限制民事行为能力人或者完全民事行为能力人。有关组织包括：居民委员会、村民委员会、学校、医疗机构、妇女联合会、残疾人联合会、依法设立的老年人组织、民政部门等。第二十三条规定，无民事行为能力人、限制民事行为能力人的监护人是其法定代理人（全国，2021 年 1 月 1 日起施行）",
         "note": "申请走的是法院的特别程序，比普通民事案件快，但仍要几个月。要提交医院的诊断证明，法院多数还会委托司法鉴定，鉴定费通常几千元，由申请人先垫。不经过这道程序就替人签字、处分他的财产，事后可能被认定无效，房子卖了也可能要退回来。还要记住一点：限制民事行为能力不等于什么都不能做。和他的智力、精神状况相适应的事，以及纯得好处的事，他自己就能做，别一概代办。监护人怎么定见本节第 19 条（监护人）。",
+        "source": "中华人民共和国民法典（第二十一条、第二十二条、第二十三条、第二十四条）. <https://flk.npc.gov.cn/detail?id=ff808081729d1efe01729d50b5c500bf>",
         "grade": "A",
         "meta": {
           "money": "少",
@@ -12459,6 +13151,7 @@ module.exports = {
         "cost": "不花钱。有争议时要到居委会、村委会、民政部门或者法院去解决。",
         "gain": "《民法典》第二十八条：无民事行为能力或者限制民事行为能力的成年人，由下列有监护能力的人按顺序担任监护人：「（一）配偶；（二）父母、子女；（三）其他近亲属；（四）其他愿意担任监护人的个人或者组织，但是须经被监护人住所地的居民委员会、村民委员会或者民政部门同意。」第三十一条：对监护人的确定有争议的，由被监护人住所地的居民委员会、村民委员会或者民政部门指定，对指定不服的可以向人民法院申请指定，也可以直接向人民法院申请。指定时「应当尊重被监护人的真实意愿，按照最有利于被监护人的原则」。指定之前权益处于无人保护状态的，由居民委员会、村民委员会、法律规定的有关组织或者民政部门担任临时监护人。第三十三条：「具有完全民事行为能力的成年人，可以与其近亲属、其他愿意担任监护人的个人或者组织事先协商，以书面形式确定自己的监护人」。第一千一百八十八条：「无民事行为能力人、限制民事行为能力人造成他人损害的，由监护人承担侵权责任。监护人尽到监护职责的，可以减轻其侵权责任。」有财产的，从本人财产中支付赔偿费用，不足部分由监护人赔偿。第一千一百八十九条：监护人将监护职责委托给他人的，监护人仍应当承担侵权责任，受托人有过错的承担相应的责任（全国，2021 年 1 月 1 日起施行）",
         "note": "第三十三条那条就是意定监护。趁人清醒时用书面形式把人选定下来，能省掉后面一大半争议，具体怎么写见第 17 节第 1 条（意定监护）。赔偿那一段要当心：把人交给托养机构或者亲戚照看，责任仍在监护人身上，受托人只在自己有过错时承担相应责任。所以给被监护人买一份监护人责任保险是有意义的。《精神卫生法》第七十八条还规定，监护人遗弃患者或者不履行监护职责造成损害的，依法承担赔偿责任。",
+        "source": "中华人民共和国民法典（第二十八条、第三十一条、第三十三条、第一千一百八十八条、第一千一百八十九条）. <https://flk.npc.gov.cn/detail?id=ff808081729d1efe01729d50b5c500bf>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -12478,6 +13171,7 @@ module.exports = {
         "cost": "律师费几千到几万元，自己出。一审普通程序 6 个月起，可以延长。证据要自己保存。",
         "gain": "《残疾人保障法》第三条：「禁止基于残疾的歧视。禁止侮辱、侵害残疾人。」第三十八条：「在职工的招用、转正、晋级、职称评定、劳动报酬、生活福利、休息休假、社会保险等方面，不得歧视残疾人。」同条还规定，残疾职工所在单位应当根据残疾职工的特点提供适当的劳动条件和劳动保护，并根据实际需要对劳动场所、劳动设备和生活设施进行改造。第六十四条：「违反本法规定，在职工的招用等方面歧视残疾人的，由有关主管部门责令改正；残疾人劳动者可以依法向人民法院提起诉讼。」《残疾人就业条例》第四条：「禁止在就业中歧视残疾人。」第十三条：用人单位不得在晋职、晋级、评定职称、报酬、社会保险、生活福利等方面歧视残疾职工。《法律援助法》第四十二条规定，申请人有材料证明属于「无固定生活来源的未成年人、老年人、残疾人等特定群体」的，免予核查经济困难状况。第四十五条规定，法律援助机构为老年人、残疾人提供法律援助服务的，应当根据实际情况提供无障碍设施设备和服务（全国）",
         "note": "过程成本必须先算。一审普通程序 6 个月起，可以延长；简易程序 3 个月。律师费不在《诉讼费用交纳办法》第六条列的诉讼费用里，第二十九条的「败诉方负担」不包括律师费。所以先走两条成本低的路：向人社部门或者残联投诉，由主管部门责令改正；同时申请法律援助，第四十二条对残疾人免予核查经济困难状况。取证是最难的一关。面试被拒时，对方很少留下书面理由，能录音、能留下聊天记录就留。已经入职的按劳动争议走仲裁，留证和时效见第 19 节第 8 条（离职前留证）。这条的受益人是你自己。",
+        "source": "中华人民共和国残疾人保障法（第三条、第三十八条、第六十四条）. <https://flk.npc.gov.cn/detail?id=ff8080816f135f46016f1d134c88132b>；国务院 (2007). 残疾人就业条例（第四条、第十三条）. <https://www.gov.cn/zhengce/zhengceku/2008-03/28/content_6646.htm>；中华人民共和国法律援助法（第四十二条、第四十五条）. <https://flk.npc.gov.cn/detail?id=ff8081817b6472a3017b6577820f0061>",
         "grade": "A",
         "meta": {
           "money": "多",
@@ -12499,6 +13193,7 @@ module.exports = {
         "cost": "不花钱。看一眼每盒药的成分表，一两分钟。",
         "gain": "美国 22 家医院用 6 年时间连续登记了 662 例急性肝衰竭。其中 275 例（42%）是对乙酰氨基酚造成的，吞下的剂量中位数是 24 克。这 275 人里，131 人（48%）是不小心吃多的，不是故意。不小心吃多的人里，38% 同时吃了两种以上含这个成分的药。这 275 人里，27% 没等到换肝就死了，8% 做了肝移植。国家药监局 2020 年要求非处方药说明书写明：过量使用会引起严重肝损伤，建议一日最大量不超过 2 克。说明书还要写明，尽量避免和含对乙酰氨基酚或其他解热镇痛药的药品合用。美国法规要求这类非处方药在警示第一条写明三种伤肝情形：超过一天最大量，和其他含对乙酰氨基酚的药同吃，用药期间每天喝 3 杯以上的酒。",
         "note": "对乙酰氨基酚也叫扑热息痛。复方感冒药的通用名里带「氨酚」两个字的，比如氨酚伪麻、氨咖黄敏，就含这个成分。拿不准就把几盒药都拿给药店的药师看。定 B 是因为美国那组数字是病例登记，没有对照组，算不出看了成分表能少出多少事。收益定「大」是按后果定的：急性肝衰竭里有近三成直接死亡。",
+        "source": "Larson AM, Polson J, Fontana RJ, et al.; Acute Liver Failure Study Group (2005). Acetaminophen-induced acute liver failure: results of a United States multicenter, prospective study. Hepatology, 42(6):1364-1372. <https://doi.org/10.1002/hep.20948>；国家药监局关于修订对乙酰氨基酚常释及缓释制剂说明书的公告（2020年第15号）及附件2《对乙酰氨基酚常释制剂非处方药说明书修订要求》（湖南省药品监督管理局转载）. <http://mpa.hunan.gov.cn/mpa/xxgk/tzgg/wjtz/202003/t20200311_11809335.html>；21 CFR 201.326(a)(1)(iii)(A) Liver warning. <https://www.ecfr.gov/current/title-21/chapter-I/subchapter-C/part-201/subpart-G/section-201.326>",
         "grade": "B",
         "meta": {
           "money": "0",
@@ -12518,6 +13213,7 @@ module.exports = {
         "cost": "不花钱。买退烧药时看一眼通用名和成分表。",
         "gain": "瑞氏综合征会引起脑病和肝脏脂肪变性，通常出现在流感或水痘之后。美国 1981 到 1997 年的全国监测里，18 岁以下报告了 1207 例。82% 的病孩血里测得到水杨酸，这是阿司匹林这类药的成分。总病死率 31%。1980 年开始发布水杨酸类药的警告。那一年报告了 555 例，是高峰，1987 年起每年不超过 36 例。国家食药监局 2011 年规定，尼美舒利口服制剂禁止用于 12 岁以下儿童。国家药监局 2020 年规定安乃近片禁用于 18 岁以下青少年儿童。含安乃近的复方青蒿安乃近片、重感灵片和重感灵胶囊同样禁用于 18 岁以下。",
         "note": "安乃近对成年人也不是首选药。说明书写明它可能引起粒细胞缺乏、再生障碍性贫血和过敏性休克，只在病情急重、又没有别的有效药时短期用。重感灵听名字像普通感冒药，里面就有安乃近。孩子该用什么退烧药、按体重吃多少，问儿科医生或药师。不满 3 个月的孩子发烧直接去医院，见第 20 节第 8 条（38 ℃ 就直接去医院）。定 B 是因为瑞氏综合征的数字来自监测报告，病例减少和警告发布是前后关系，不是对照试验。收益定「大」，是因为警告之后病例从每年 555 例降到 36 例以下。",
+        "source": "Belay ED, Bresee JS, Holman RC, Khan AS, Shahriari A, Schonberger LB (1999). Reye's syndrome in the United States from 1981 through 1997. New England Journal of Medicine, 340(18):1377-1382. <https://doi.org/10.1056/NEJM199905063401801>；关于加强尼美舒利口服制剂使用管理的通知（国食药监安〔2011〕209号）. <https://www.nmpa.gov.cn/xxgk/fgwj/gzwj/gzwjyp/20110515145101552.html>；国家药监局关于修订安乃近相关品种说明书的公告（2020年第34号）及附件1至3. <https://www.nmpa.gov.cn/directory/web/nmpa/xxgk/ggtg/ypggtg/ypshmshxdgg/20200317171201660.html>",
         "grade": "B",
         "meta": {
           "money": "0",
@@ -12537,6 +13233,7 @@ module.exports = {
         "cost": "不花钱。问一次医生或药师。",
         "gain": "这类药叫非甾体抗炎药，常见的有布洛芬、萘普生、双氯芬酸。一项荟萃分析汇总了 280 项这类药对安慰剂的随机试验，共 124513 人。和安慰剂比，上消化道穿孔、梗阻或出血的风险：布洛芬 RR 3.97（95% CI 2.22–7.10，约 4 倍），萘普生 4.22（2.71–6.56），双氯芬酸 1.89（1.16–3.09）。所有这类药都让心力衰竭的风险大约翻倍。美国法规要求这类非处方药写明胃出血警示。警示列出风险更高的六种人：60 岁以上，有过胃溃疡或出血，在吃抗凝药或激素，同时吃别的这类药，用药期间每天喝 3 杯以上的酒，吃得比说明书多或久。",
         "note": "论文结论讲的是大剂量用法。偶尔吃一两天、按说明书剂量吃的风险，这篇没有单独给数字。很多复方感冒药里也有这类成分，和止痛药一起吃就重复了，先看成分表。医生让你长期吃小剂量阿司匹林防血栓的，别自己停，也别自己再加一种止痛药。",
+        "source": "Coxib and traditional NSAID Trialists' (CNT) Collaboration; Bhala N, Emberson J, Merhi A, et al. (2013). Vascular and upper gastrointestinal effects of non-steroidal anti-inflammatory drugs: meta-analyses of individual participant data from randomised trials. Lancet, 382(9894):769-779. <https://doi.org/10.1016/S0140-6736(13)60900-9>；21 CFR 201.326(a)(2)(iii)(A) Stomach bleeding warning. <https://www.ecfr.gov/current/title-21/chapter-I/subchapter-C/part-201/subpart-G/section-201.326>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -12556,6 +13253,7 @@ module.exports = {
         "cost": "不花钱，还能省下买药的钱。",
         "gain": "国家药监局 2021 年第 57 号公告修订了 14 个品种的说明书，包括氨酚麻美口服溶液、小儿氨酚黄那敏颗粒、小儿氨酚烷胺颗粒等。新增警示语是「不建议家长或监护人自行给2岁以下婴幼儿使用本品，应在医师或药师的指导下使用」。注意事项加了「应严格按照药品说明书用法用量使用，避免用药过量」。还加了「应避免合并使用含有相同或相似活性成份的抗感冒药」。一篇 Cochrane 系统综述纳入 29 项随机对照试验，其中 10 项在儿童身上做。儿童试验里，这几类药都不比安慰剂好：止咳药，抗组胺药（抗过敏成分），抗组胺药加减充血剂（通鼻子的成分），止咳药加支气管扩张剂。21 项研究报告了不良反应，含抗组胺药和右美沙芬的制剂不良反应更多。",
         "note": "这 14 种里很多名字带「氨酚」，也含对乙酰氨基酚，再和退烧药一起吃就重复了，见本节第 1 条（对乙酰氨基酚）。那篇综述里有一项试验发现蜂蜜比安慰剂好，但不满 1 岁不能喂蜂蜜，见第 20 节第 6 条（蜂蜜）。定 B 是因为综述里每类药的试验都少，作者没有合并出数字。收益定「中」是判断：这类药对小孩没有证实的好处，风险主要是过量和成分重复。",
+        "source": "国家药监局关于修订氨酚麻美口服溶液等14个品种药品说明书的公告（2021年第57号）及附件. <https://www.nmpa.gov.cn/directory/web/nmpa/xxgk/ggtg/ypggtg/ypshmshxdgg/20210423105404141.html>；Smith SM, Schroeder K, Fahey T (2014). Over-the-counter (OTC) medications for acute cough in children and adults in community settings. Cochrane Database of Systematic Reviews, (11):CD001831. <https://doi.org/10.1002/14651858.CD001831.pub5>",
         "grade": "B",
         "meta": {
           "money": "0",
@@ -12575,6 +13273,7 @@ module.exports = {
         "cost": "不花钱。",
         "gain": "美国食品药品监督管理局（FDA）2020 年 10 月发布安全警示。怀孕约 20 周以后使用非甾体抗炎药，可能引起胎儿肾脏问题，导致羊水过少。警示同时管处方药和非处方药，包括阿司匹林、布洛芬、萘普生、双氯芬酸、塞来昔布。FDA 查了截至 2017 年 7 月的不良事件报告，找到 35 例羊水过少或新生儿肾功能不全，全是严重结局。其中 5 例新生儿死亡，都伴有新生儿肾衰竭。文献里，多数羊水过少在停药后 72 小时到 6 天内恢复。FDA 建议孕妇 20 周以后不要用这类药，除非医生明确这么建议。81 毫克的小剂量阿司匹林由医生开来治孕期特定问题的，不受这条限制。需要止痛退烧时，FDA 提到可以用对乙酰氨基酚等其他药，先问药师或医生。",
         "note": "FDA 提醒，很多治感冒、流感、失眠的非处方药里也含这类成分，要看成分表。美国非处方药标签原来只警告怀孕最后 3 个月，这次把界线提前到了 20 周左右。小剂量阿司匹林防子痫前期，见第 27 节第 5 条（小剂量阿司匹林）。定 B 是因为数字来自不良事件报告，有多少人吃了药却没出事不知道。收益定「中」是判断：结局严重，但发生得少。",
+        "source": "U.S. Food and Drug Administration (2020-10-15). FDA recommends avoiding use of NSAIDs in pregnancy at 20 weeks or later because they can result in low amniotic fluid. Drug Safety Communication. <https://www.fda.gov/drugs/drug-safety-and-availability/fda-recommends-avoiding-use-nsaids-pregnancy-20-weeks-or-later-because-they-can-result-low-amniotic>",
         "grade": "B",
         "meta": {
           "money": "0",
@@ -12594,6 +13293,7 @@ module.exports = {
         "cost": "不花钱。按说明书的天数吃。",
         "gain": "国家药监局 2022 年第 68 号公告把奥美拉唑肠溶片从处方药转成非处方药，同时发布说明书范本。范本写的适应症是「胃酸过多引起的烧心和反酸症状的短期缓解」。注意事项写明：使用不得超过 7 天，症状没缓解要咨询医师或药师。两个月以内不得再次服用，症状反复要立即就医。吞咽困难或疼痛、呕血、便血或黑便时请勿使用，这些可能是严重情况的征兆。出现明显消瘦、反复呕吐、吞咽困难、呕血或黑便这类报警症状时，要先排除恶性肿瘤，因为治疗可能掩盖症状、延误诊断。55 岁以上出现新的症状或症状有变化，要咨询医生。在吃氯吡格雷的人要避免同时吃奥美拉唑。",
         "note": "氯吡格雷是放过支架、得过心梗的人常吃的防血栓药。奥美拉唑会让它变弱，在吃的人先问医生。定 B 是因为这些是说明书的规定，没有研究算过照着做能少出多少事。收益定「中」是判断：它防的是把胃出血、胃癌拖晚了，但多数反酸烧心并不严重。",
+        "source": "国家药监局关于奥美拉唑肠溶片处方药转换为非处方药的公告（2022年第68号）及附件2《非处方药说明书范本》. <https://www.nmpa.gov.cn/yaopin/ypggtg/20220826171517123.html>",
         "grade": "B",
         "meta": {
           "money": "0",
@@ -12613,6 +13313,7 @@ module.exports = {
         "cost": "不花钱，还能省下药钱。",
         "gain": "一篇 Cochrane 系统综述汇总了 6 项随机试验、1147 人。感冒吃抗生素和吃安慰剂比，没好或症状持续的比例没有明显差别（RR 0.83，95% CI 0.60–1.14，差别不显著）。不良反应的风险是安慰剂组的 1.8 倍（95% CI 1.01–3.21）。其中成人 2.62 倍（1.32–5.18），儿童没有增加（0.91，0.51–1.63）。流脓鼻涕不到 10 天的急性脓性鼻炎，吃抗生素也没有明确好处（RR 0.73，0.47–1.13）。不良反应却多了（RR 1.46，1.10–1.94，高约 46%）。作者结论是：这两种情况都不推荐常规用抗生素。",
         "note": "这一版是 2025 年重新发布的，摘要写明文献检索截至 2013 年。抗生素在国内是处方药，药店要凭处方卖，家里剩的抗生素也别自己拿来吃。收益定「中」是判断：它防的是不良反应，不是死亡。",
+        "source": "Kenealy T, Arroll B (2025). Antibiotics for the common cold and acute purulent rhinitis. Cochrane Database of Systematic Reviews, 11:CD000247. <https://doi.org/10.1002/14651858.CD000247.pub4>",
         "grade": "A",
         "meta": {
           "money": "0",
@@ -12632,6 +13333,7 @@ module.exports = {
         "cost": "一盒口服补液盐几块到十几块钱，家里备一盒。",
         "gain": "世界卫生组织的腹泻治疗手册写明，「止泻」药和止吐药对儿童急性或迁延性腹泻没有实际益处。它们不能预防脱水，也不能改善营养。有些有危险的、有时致命的副作用，绝不能给 5 岁以下儿童用。洛哌丁胺这类减慢肠蠕动的药，可能引起严重的麻痹性肠梗阻，可以致命，还可能拖长感染。手册还写明，糖太多的饮料会把身体里的水吸进肠子，造成高钠性脱水，比如软饮料和市售果汁饮料。世卫手册推荐的是低渗配方，总渗透压 245 mOsm/L。和旧配方比，它让计划外的静脉输液少了 33%。一篇 Cochrane 综述汇总 8 项试验，结果相近（OR 0.59，95% CI 0.45–0.79，少约四成）。",
         "note": "买的时候看说明书上的渗透压，选低渗配方。手册写明，孩子大便带血多半是细菌性痢疾，要去看医生用抗生素，不能只在家补水。收益定「中」是判断：手里的数字比的是两种补液盐，不是喝和不喝。",
+        "source": "World Health Organization (2005). The treatment of diarrhoea: a manual for physicians and other senior health workers, 4th revision. <https://iris.who.int/handle/10665/43209>；Hahn S, Kim S, Garner P (2002). Reduced osmolarity oral rehydration solution for treating dehydration caused by acute diarrhoea in children. Cochrane Database of Systematic Reviews, (1):CD002847. <https://doi.org/10.1002/14651858.CD002847>",
         "grade": "A",
         "meta": {
           "money": "少",
@@ -12651,6 +13353,7 @@ module.exports = {
         "cost": "不花钱。要记吃药的天数，还要忍住不随手吃。",
         "gain": "国际头痛学会的《国际头痛疾病分类》第 3 版给了诊断标准。原本有头痛病的人，每月头痛 15 天以上，同时规律过量使用治头痛的药超过 3 个月。对乙酰氨基酚、阿司匹林、布洛芬这类非阿片止痛药，过量的门槛是每月 15 天及以上。复方止痛药的门槛是每月 10 天及以上。复方止痛药指两类以上有止痛作用的药合在一起，或者加了咖啡因这类辅助成分，比如对乙酰氨基酚加可待因。几种非阿片止痛药轮着吃，天数合起来算。分类说明写明，多个国家的流行病学证据显示，每月头痛 15 天以上的人里，超过一半属于这种头痛。多数病人停掉过量的药后会好转，预防头痛的治疗也更起作用。",
         "note": "药名里带「咖」字的止痛片，一般加了咖啡因，按复方算 10 天。一个月里头痛的天数越来越多，就去神经内科看，别只靠加药。定 B 是因为分类标准给的是诊断门槛，不是对照试验。收益定「中」是判断：它换回的是少头痛的日子，不涉及死亡。",
+        "source": "Headache Classification Committee of the International Headache Society (2018). The International Classification of Headache Disorders, 3rd edition. Cephalalgia, 38(1):1-211. <https://doi.org/10.1177/0333102417738202>；ICHD-3 在线版 8.2 Medication-overuse headache（含 8.2.3、8.2.5）. <https://ichd-3.org/8-headache-attributed-to-a-substance-or-its-withdrawal/8-2-medication-overuse-headache-moh/>",
         "grade": "B",
         "meta": {
           "money": "0",
@@ -12670,6 +13373,7 @@ module.exports = {
         "cost": "不花钱。每年翻一次药箱，十几分钟。",
         "gain": "美国急诊监测数据估计，2004 到 2013 年，不满 6 岁的孩子背着大人误吃药品，看了约 64 万次急诊（估计值 640161 次）。2013 年一年约 5.9 万次（59092 次）。2010 到 2013 年，最常见的是口服处方药片剂，占 45.9%。处方药里最常见的是阿片类止痛药（13.8%）和苯二氮䓬类安眠镇静药（12.7%）。美国 5 家中毒控制中心 2017 年问了打电话求助的家长。孩子误吃处方药的，30.7% 吃的是祖父母的药。一半以上（51.5%）的处方药，在孩子拿到之前已经被大人从原包装里取了出来。国内的《国家危险废物名录（2025 年版）》把家庭日常生活中产生的废药品及其包装物，列为生活垃圾中的危险废物。上海的分类投放指引把废药品归入有害垃圾，写明包括过期药物、药物胶囊、药片、药品内包装，「废弃药品宜连带包装一并投放」。上海还规定，药店收集的市民家庭过期废弃药品，由各区市场监管部门设临时中转点。美国 FDA 说，处理过期和用不上的药，最好的办法是交给回收点。",
         "note": "各地的垃圾分类目录不完全一样，以小区垃圾房贴的目录为准。上海把中药药渣归入湿垃圾，不算有害垃圾。留下来的药放在原盒里，别倒进分药盒或别的瓶子，放到孩子够不着的地方，见第 13 节第 20 条（误服）。家里剩的抗生素也别自己拿来吃，见本节第 7 条（抗生素）。美国在没有回收点时，让人把药混进咖啡渣、猫砂再封袋扔进普通垃圾，少数强效止痛药允许冲马桶。这是美国的做法，国内按当地分类投放。定 B 是因为美国那几组数字只是登记，没有研究算过清理药箱能少多少次误吃。收益定「小」：手里的数字是急诊次数，不是死亡，也算不出清理这个动作的效果。",
+        "source": "Lovegrove MC, Weidle NJ, Budnitz DS (2015). Trends in Emergency Department Visits for Unsupervised Pediatric Medication Exposures, 2004-2013. Pediatrics, 136(4):e821-e829. <https://doi.org/10.1542/peds.2015-2092>；Agarwal M, Lovegrove MC, Geller RJ, et al. (2020). Circumstances Involved in Unsupervised Solid Dose Medication Exposures among Young Children. Journal of Pediatrics, 219:188-195.e6. <https://doi.org/10.1016/j.jpeds.2019.12.027>；生态环境部等 (2024). 国家危险废物名录（2025年版），附录《危险废物豁免管理清单》第 1 项. <https://www.gov.cn/gongbao/2025/issue_11906/202503/content_7011162.html>；上海市绿化和市容管理局 (2024). 上海市生活垃圾分类投放指引（2024版）（沪绿容〔2024〕278号）. <https://www.shanghai.gov.cn/gwk/search/content/40b9feaa-53db-472f-8a6b-2c3cf0465def>；上海市绿化和市容管理局、上海市环境保护局、上海市食品药品监督管理局 (2018). 关于规范生活垃圾分类有害垃圾全程管理的通知. <https://www.shanghai.gov.cn/nw12344/20200813/0001-12344_57440.html>；U.S. Food and Drug Administration (2025). Where and How to Dispose of Unused Medicines. <https://www.fda.gov/consumers/consumer-updates/where-and-how-dispose-unused-medicines>",
         "grade": "B",
         "meta": {
           "money": "0",
@@ -12689,6 +13393,7 @@ module.exports = {
         "cost": "不花钱。一周多不喝酒，吃别的药前看一眼成分里有没有乙醇。",
         "gain": "这叫双硫仑样反应。福建省药监局 2023 年的安全用药科普说，部分头孢类药物服药前后饮酒，可能引发这种反应，「会严重损害健康甚至导致生命危险」。症状有面部潮红、出汗、心悸，甚至呼吸困难、血压下降、过敏性休克。科普按《中华人民共和国药典临床用药须知》列出的药，有头孢唑林、头孢曲松、头孢哌酮、甲硝唑、替硝唑、呋喃唑酮等。科普写明「用药后 7 天内禁止饮酒和食用含酒精的药物、食物等」，例子有酒心巧克力和藿香正气水。理由是被药抑制的那种酶，常要 4 到 5 天才能恢复。广州一家医院整理了 2 年里的 82 例病例。由头孢类引起的 57 例（69.51%），硝基咪唑类（甲硝唑、替硝唑这类）10 例（12.20%）。酒精来自酒类饮料的 40 例（48.78%），来自含乙醇药物的 31 例（37.80%）。口服的有藿香正气水、止咳糖浆、益母草流浸膏等。82 例里轻度 68 例、中度 9 例、重度 5 例，1 到 3 小时内缓解，没有死亡。美国甲硝唑说明书要求，用药期间和停药后至少 3 天不喝酒，也不用含丙二醇的产品。",
         "note": "不是每一种头孢都会这样，但普通人分不清，吃哪种都照这条做最省事。医生开头孢或甲硝唑时，主动说一句最近几天喝没喝过酒。那篇科普建议用药前 3 天也别喝，同时承认这个间隔目前没有权威说法。一旦脸红心慌，马上停掉含酒精的东西。科普说轻的能自己缓过来，重的要送医院。吃对乙酰氨基酚期间也别喝酒，见本节第 1 条（对乙酰氨基酚）。定 B 是因为证据是病例整理和说明书，没有对照。收益定「小」：那 82 例都在几小时内缓过来，没有死亡，重度的只有 5 例。",
+        "source": "福建省药品监督管理局（福建省药品科普与监管数据中心）(2023). 2023年“全国安全用药月”原创科普小知识——为什么吃头孢不能喝酒. <https://yjj.scjgj.fujian.gov.cn/ztzl/kpzl/qgaqyyy/202312/t20231215_6334595.htm>；房财富, 涂星, 刘韬, 黄红兵, 邱孟, 梁蔚婷 (2015). 我院双硫仑样反应82例分析. 中国药房, 26(29):4089-4091. <https://doi.org/10.6039/j.issn.1001-0408.2015.29.19>；Pfizer (2026). FLAGYL 375 (metronidazole) capsules, prescribing information: Contraindications, Interaction with Alcohol. DailyMed. <https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a2883ca1-5a9a-4259-9d80-46ab67274384>",
         "grade": "B",
         "meta": {
           "money": "0",

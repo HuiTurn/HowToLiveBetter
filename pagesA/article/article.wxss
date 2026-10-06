@@ -29,22 +29,29 @@
 .article-meta {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-}
-
-.meta-left {
-  display: flex;
-  align-items: center;
-}
-
-.meta-icon {
-  width: 30rpx;
-  height: 30rpx;
-  margin-right: 10rpx;
 }
 
 .article-date {
-  font-size: 24rpx;
+  display: flex;
+  align-items: center;
+  line-height: 1.7;
+}
+.date-icon {
+  width: 26rpx;
+  height: 26rpx;
+  margin-right: 8rpx;
+}
+.date-upd {
+  font-size: 22rpx;
+  color: var(--color-text-tertiary);
+}
+.date-sep {
+  font-size: 22rpx;
+  color: var(--color-text-tertiary);
+  margin: 0 8rpx;
+}
+.date-pub {
+  font-size: 22rpx;
   color: var(--color-text-tertiary);
 }
 
@@ -98,6 +105,25 @@
   font-weight: 600;
 }
 
+/* 条号上标：论文引用式，淡绿圆形底 + 品牌绿数字，点击跳到对应条目。
+   必须明显浮到文字右上角（vertical-align 抬够高），不能和正文平齐 */
+.cite-sup {
+  display: inline-block;
+  box-sizing: border-box;
+  min-width: 28rpx;
+  height: 28rpx;
+  line-height: 28rpx;
+  padding: 0 6rpx;
+  margin: 0 2rpx;
+  border-radius: 999rpx;
+  background: var(--color-primary-light);
+  color: var(--color-primary);
+  font-size: 18rpx;
+  font-weight: 600;
+  text-align: center;
+  vertical-align: 16rpx;
+}
+
 /* 步骤列表 */
 .steps-section {
   margin-top: 48rpx;
@@ -113,6 +139,20 @@
   margin-bottom: 0;
   padding-bottom: 0;
   border-bottom: none;
+}
+
+/* 条号跳转落地时的短暂高亮 */
+.step-item.flash {
+  animation: step-flash 1.4s ease;
+}
+
+@keyframes step-flash {
+  0% {
+    background: var(--color-primary-light);
+  }
+  100% {
+    background: transparent;
+  }
 }
 
 /* 标题行：序号 + 标题 + 证据等级 */
@@ -237,13 +277,6 @@
   margin: 18rpx 0 0 62rpx;
 }
 
-.step-more {
-  margin: 16rpx 0 0 62rpx;
-  padding: 22rpx 24rpx;
-  background: var(--color-surface-2);
-  border-radius: 12rpx;
-}
-
 .step-row {
   display: flex;
   margin-bottom: 12rpx;
@@ -273,35 +306,203 @@
   color: var(--color-text-secondary);
 }
 
+/* 成本/收益/备注的值：标题已在上面折叠行里，这里不再重复写「成本」二字。
+   内容直接与折叠标题左对齐（62rpx），不再额外缩进——上一轮把成本也改成
+   无标签的 row-v-only 后，原本为对齐「成本值列」的 78rpx 成了多余右移，已去掉 */
+.row-v-only {
+  padding-left: 0;
+}
+
 /* 收益/备注里上游 md 的 **加粗** 片段 */
 .row-bold {
   font-weight: 600;
 }
 
-/* 展开 / 收起收益与备注 */
-.step-toggle {
+/* 展开 / 收起（收益与备注、参考文献共用）：默认态由 js 决定 */
+.fold-toggle {
   display: flex;
   align-items: center;
-  margin: 18rpx 0 0 62rpx;
+  margin: 20rpx 0 0 62rpx;
+  padding-top: 18rpx;
+  border-top: 2rpx solid var(--color-surface-2);
   font-size: 24rpx;
-  color: var(--color-primary);
+  font-weight: 600;
+  color: var(--color-text);
 }
 
-.step-toggle-arrow {
+.fold-arrow {
   width: 0;
   height: 0;
   border-left: 9rpx solid transparent;
   border-right: 9rpx solid transparent;
-  border-top: 10rpx solid var(--color-primary);
-  margin-left: 10rpx;
+  border-top: 10rpx solid var(--color-text-tertiary);
+  margin-right: 10rpx;
   transition: transform 0.2s;
 }
 
-.step-toggle-arrow.open {
+.fold-arrow.open {
   transform: rotate(180deg);
 }
 
-/* 来源 */
+.fold-cnt {
+  color: var(--color-text-tertiary);
+}
+
+/* 每条文献独立成行，序号 + 悬挂缩进，长 URL 正常折行不糊成一段 */
+.src-body {
+  margin: 16rpx 0 0 62rpx;
+  font-size: 24rpx;
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+}
+
+.src-line {
+  display: flex;
+  align-items: flex-start;
+}
+
+.src-line + .src-line {
+  margin-top: 14rpx;
+}
+
+.src-idx {
+  flex: none;
+  width: 46rpx;
+  color: var(--color-text-tertiary);
+  font-size: 22rpx;
+  line-height: 1.85;
+}
+
+.src-line-txt {
+  flex: 1;
+  min-width: 0;
+  overflow-wrap: break-word;
+}
+
+/* 文献里的链接：品牌色提示可点，点击复制链接 */
+.src-url {
+  color: var(--color-primary);
+  word-break: break-all;
+}
+
+/* 术语表关键词：品牌色 + 虚线下划线，点一下弹解释（对齐上游检索页的 abbr.term） */
+.term {
+  color: var(--color-primary);
+  border-bottom: 2rpx dotted var(--color-primary);
+  padding-bottom: 1rpx;
+}
+
+/* 名词解释：底部小窗 */
+.term-mask {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  animation: term-mask-in 0.22s ease;
+}
+
+.term-sheet {
+  background: var(--color-surface);
+  border-radius: 32rpx 32rpx 0 0;
+  padding: 8rpx 36rpx calc(32rpx + env(safe-area-inset-bottom));
+  box-shadow: 0 -6rpx 40rpx var(--color-shadow);
+  animation: term-sheet-up 0.28s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.term-grip {
+  width: 72rpx;
+  height: 8rpx;
+  border-radius: 4rpx;
+  background: var(--color-border);
+  margin: 12rpx auto 22rpx;
+}
+
+.term-head {
+  display: flex;
+  align-items: center;
+}
+
+.term-k {
+  flex: 1;
+  min-width: 0;
+  font-size: 36rpx;
+  font-weight: 700;
+  color: var(--color-text);
+  line-height: 1.4;
+}
+
+.term-close {
+  flex: none;
+  width: 56rpx;
+  height: 56rpx;
+  margin-left: 16rpx;
+  border-radius: 50%;
+  background: var(--color-surface-2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.term-close-x {
+  font-size: 26rpx;
+  color: var(--color-text-tertiary);
+}
+
+.term-body {
+  max-height: 46vh;
+  margin-top: 22rpx;
+}
+
+.term-d {
+  font-size: 28rpx;
+  line-height: 1.85;
+  color: var(--color-text-secondary);
+}
+
+.term-foot {
+  display: flex;
+  align-items: center;
+  margin-top: 30rpx;
+}
+
+.term-from {
+  flex: 1;
+  min-width: 0;
+  font-size: 22rpx;
+  color: var(--color-text-tertiary);
+}
+
+.term-btn {
+  flex: none;
+  height: 76rpx;
+  padding: 0 44rpx;
+  border-radius: 38rpx;
+  background: var(--color-primary);
+  color: #ffffff;
+  font-size: 28rpx;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes term-mask-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes term-sheet-up {
+  from { transform: translateY(100%); }
+  to { transform: translateY(0); }
+}
+
+/* 来源 / */
 .source-section {
   margin-top: 48rpx;
   padding-top: 32rpx;

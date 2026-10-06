@@ -1,4 +1,15 @@
 const app = getApp();
+const { playAd } = require('../../utils/rewarded-ad.js');
+const { getDataStatus, refreshArticles } = require('../../utils/data.js');
+const { statusLabel } = require('../../utils/time.js');
+
+/*
+ * 「离线下载」行右侧的更新时间：三态文案，见 utils/time.js
+ *   api / cache →「更新于 2026-10-06 10:59」（接口时间或缓存里记的时间）
+ *   local       →「离线数据 · 封存于 …」（接口与缓存都没有，用的是随包基线）
+ * 本地基线的时间取自全篇 updatedAt 的最大值（同步脚本写入的上游最后提交时间）。
+ */
+const dataUpdatedLabel = () => statusLabel(getDataStatus());
 
 const DEFAULT_USER = {
   nickname: '人生探索者',
@@ -49,7 +60,9 @@ Page({
     ringLeft: 0,
     ringSize: 0,
     arrowTop: 0,
-    arrowRight: 0
+    arrowRight: 0,
+    // 「离线下载」行第三行展示的数据更新时间（三态文案，精确到时分）
+    dataUpdated: dataUpdatedLabel()
   },
 
   onLoad() {
@@ -59,6 +72,11 @@ Page({
 
   onShow() {
     this.loadData();
+    /* 启动时的刷新可能还没回来，回到本页时再取一次状态并顺带补一次刷新 */
+    this.setData({ dataUpdated: dataUpdatedLabel() });
+    refreshArticles().then((r) => {
+      if (r && r.changed) this.setData({ dataUpdated: dataUpdatedLabel() });
+    });
   },
 
   loadData() {
@@ -112,7 +130,7 @@ Page({
     }
 
     if (item.id === 'download') {
-      wx.navigateTo({ url: '/pagesA/download/download' });
+      this.openDownload();
       return;
     }
 
@@ -120,6 +138,48 @@ Page({
       wx.navigateTo({ url: `/pagesA/${item.id}/${item.id}` });
       return;
     }
+  },
+
+  /*
+   * 离线下载：点菜单就先播激励视频，看完再跳下载页。
+   *
+   * ⚠️ 视频必须挂在这次点击上（平台红线：进页面自动播放会被驳回），
+   *    所以播放放在入口页而不是 download 页的 onLoad；download 页只负责展示链接，
+   *    它自己那个按钮是给扫码 / 分享直接进页面的兜底路径。
+   */
+  openDownload() {
+    const goto = () => wx.navigateTo({ url: '/pagesA/download/download' });
+
+    // 本次启动已经看过视频，直接进页面，不重复打扰
+    if (app.globalData.downloadUnlocked) {
+      goto();
+      return;
+    }
+
+    wx.showLoading({ title: '正在准备视频…', mask: true });
+
+    playAd({
+      onStart: () => wx.hideLoading(),
+
+      onClose: (ended) => {
+        wx.hideLoading();
+        if (!ended) {
+          wx.showToast({ title: '需看完视频才能解锁', icon: 'none' });
+          return;
+        }
+        app.globalData.downloadUnlocked = true;
+        wx.showToast({ title: '已解锁下载', icon: 'success' });
+        goto();
+      },
+
+      // 广告拉不到（无填充 / 审核中 / 环境不支持）也要保证功能可用，直接放行
+      onUnavailable: () => {
+        wx.hideLoading();
+        app.globalData.downloadUnlocked = true;
+        app.globalData.downloadAdFailed = true;
+        goto();
+      }
+    });
   },
 
   // 与「分享到朋友圈」同款：高亮右上角胶囊，两步引导

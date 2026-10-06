@@ -1,3 +1,5 @@
+const { refreshArticles } = require('./utils/data.js');
+
 App({
   globalData: {
     userInfo: null,
@@ -10,6 +12,13 @@ App({
   onLaunch() {
     this.loadStorage();
     this.tryUpdate();
+    /*
+     * 后台静默刷新索引：只比对 /api/meta，版本变了才拉全量，拉到就写缓存。
+     * 页面不等它——拿不到就用缓存/本地基线渲染，下次进来自然生效。
+     */
+    refreshArticles().then((r) => {
+      if (r && r.changed) this.globalData.dataRefreshed = true;
+    });
   },
 
   onShow() {

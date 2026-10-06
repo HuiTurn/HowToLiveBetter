@@ -21,7 +21,9 @@
           hover-class="hover-press"
         >
           <image class="menu-icon" src="/assets/icons/menu-{{item.icon}}.png" mode="aspectFit" />
-          <text class="menu-label">{{item.label}}</text>
+          <view class="menu-text">
+            <text class="menu-label">{{item.label}}</text>
+          </view>
           <image class="menu-arrow" src="/assets/icons/chevron.png" mode="aspectFit" />
           <button class="contact-cover" open-type="contact"></button>
         </view>
@@ -36,6 +38,7 @@
           <view class="menu-text">
             <text class="menu-label">{{item.label}}</text>
             <text wx:if="{{item.desc}}" class="menu-desc">{{item.desc}}</text>
+            <text wx:if="{{item.id === 'download' && dataUpdated}}" class="menu-desc menu-data-updated">{{dataUpdated}}</text>
           </view>
           <image class="menu-arrow" src="/assets/icons/chevron.png" mode="aspectFit" />
         </view>
