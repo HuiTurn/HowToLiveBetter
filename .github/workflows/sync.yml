@@ -1,0 +1,110 @@
+name: 同步上游内容并发布
+
+# 上游 book/ 有任何提交，这里会在下一个整点把新内容同步到数据接口。
+# 也可以手动触发（Actions → Run workflow），force=true 时即使 SHA 没变也重新发布。
+on:
+  schedule:
+    - cron: '23 */6 * * *'
+  workflow_dispatch:
+    inputs:
+      force:
+        description: '强制重新发布（忽略 SHA 未变）'
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    env:
+      API: https://dl.aipalnet.cn
+      OUT: dist/api
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: 拉取上游
+        run: |
+          git remote add upstream https://github.com/eternity4719/HowToLiveBetter.git 2>/dev/null || true
+          git fetch upstream main --depth=0
+          UPSTREAM_SHA=$(git rev-parse upstream/main)
+          echo "UPSTREAM_SHA=$UPSTREAM_SHA" >> $GITHUB_ENV
+          echo "上游 HEAD：${UPSTREAM_SHA:0:7}"
+
+      - name: 与线上版本比对，没变就跳过
+        id: check
+        run: |
+          set -e
+          FORCE="${{ github.event.inputs.force }}"
+          # 线上还没发布过（/api/meta 404）时也必须发一次，所以拿不到就当 0 条
+          LIVE=$(curl -sS --max-time 15 "$API/api/meta" || echo '')
+          LIVE_SHA=$(echo "$LIVE" | node -e 'let s="";process.stdin.on("data",d=>s+=d).on("end",()=>{try{console.log(JSON.parse(s).sha||"")}catch{console.log("")}})')
+          LIVE_STEPS=$(echo "$LIVE" | node -e 'let s="";process.stdin.on("data",d=>s+=d).on("end",()=>{try{console.log(JSON.parse(s).counts?.steps||0)}catch{console.log(0)}})')
+          echo "线上 sha=${LIVE_SHA:-无} 条目=$LIVE_STEPS"
+          echo "LIVE_STEPS=$LIVE_STEPS" >> $GITHUB_ENV
+          echo "LIVE_SHA=$LIVE_SHA" >> $GITHUB_ENV
+          if [ "$FORCE" != "true" ] && [ "$LIVE_SHA" = "$UPSTREAM_SHA" ]; then
+            echo "上游没有新提交（${LIVE_SHA:0:7}），本次不发布"
+            echo "skip=true" >> $GITHUB_OUTPUT
+          else
+            echo "skip=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: 生成接口数据
+        if: steps.check.outputs.skip != 'true'
+        run: node tools/sync-articles.mjs --emit-json --out "$OUT"
+
+      - name: 回归闸门
+        if: steps.check.outputs.skip != 'true'
+        run: node tools/verify-payload.mjs --dir "$OUT" --prev-steps "$LIVE_STEPS"
+
+      - name: 发布到数据接口
+        if: steps.check.outputs.skip != 'true'
+        run: |
+          set -e
+          CODE=$(curl -sS -o /tmp/publish.json -w '%{http_code}' --max-time 120 \
+            -X POST "$API/api/publish" \
+            -H 'content-type: application/json' \
+            -H "x-sync-token: ${{ secrets.HTLB_SYNC_TOKEN }}" \
+            --data-binary @"$OUT/publish.json")
+          echo "发布返回 $CODE"
+          cat /tmp/publish.json
+          [ "$CODE" = "200" ] || [ "$CODE" = "201" ] || exit 1
+
+      - name: 发布后自检
+        if: steps.check.outputs.skip != 'true'
+        run: |
+          set -e
+          sleep 3
+          curl -sS --max-time 15 "$API/api/meta" | node -e '
+            let s="";process.stdin.on("data",d=>s+=d).on("end",()=>{
+              const m=JSON.parse(s);
+              if(!m.version||!m.sourceUpdatedAt) throw new Error("meta 缺少 version/sourceUpdatedAt");
+              console.log(`线上 v${m.version} · ${m.counts.steps} 条 · 更新于 ${m.sourceUpdatedAt}`);
+            })'
+          curl -sS --max-time 15 "$API/api/steps/b01" | node -e '
+            let s="";process.stdin.on("data",d=>s+=d).on("end",()=>{
+              const r=JSON.parse(s);
+              if(!Array.isArray(r.steps)||!r.steps.length) throw new Error("b01 正文为空");
+              console.log(`b01 正文 ${r.steps.length} 条 · rev ${r.rev}`);
+            })'
+
+      # 失败时开一个 issue，避免定时任务静默挂掉没人知道
+      - name: 失败告警
+        if: failure()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh label create sync-failure --color d73a4a --description "数据同步失败" 2>/dev/null || true
+          gh issue create \
+            --title "数据同步失败 $(date -u +%F' '%H:%M)Z" \
+            --body "工作流 ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }} 失败，未发布。请检查上游 md 格式是否变动或 /api/publish 是否可用。" \
+            --label "sync-failure" || echo "开 issue 失败（可能没有 sync-failure 标签），忽略"
