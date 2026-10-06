@@ -1,14 +1,15 @@
-name: 同步上游内容并发布
+name: Sync Upstream and Publish
 
-# 上游 book/ 有任何提交，这里会在下一个整点把新内容同步到数据接口。
-# 也可以手动触发（Actions → Run workflow），force=true 时即使 SHA 没变也重新发布。
+# Whenever the upstream book/ has new commits, this workflow syncs the new
+# content into the data API on the next cycle. It can also be triggered manually
+# (Actions → Run workflow); force=true republishes even if the SHA is unchanged.
 on:
   schedule:
     - cron: '23 */6 * * *'
   workflow_dispatch:
     inputs:
       force:
-        description: '强制重新发布（忽略 SHA 未变）'
+        description: 'Force republish (ignore unchanged SHA)'
         type: boolean
         default: false
 
@@ -31,42 +32,43 @@ jobs:
         with:
           node-version: '22'
 
-      - name: 拉取上游
+      - name: Fetch upstream
         run: |
           git remote add upstream https://github.com/eternity4719/HowToLiveBetter.git 2>/dev/null || true
           git fetch upstream main
           UPSTREAM_SHA=$(git rev-parse upstream/main)
           echo "UPSTREAM_SHA=$UPSTREAM_SHA" >> $GITHUB_ENV
-          echo "上游 HEAD：${UPSTREAM_SHA:0:7}"
+          echo "Upstream HEAD: ${UPSTREAM_SHA:0:7}"
 
-      - name: 与线上版本比对，没变就跳过
+      - name: Compare with live version
         id: check
         run: |
           set -e
           FORCE="${{ github.event.inputs.force }}"
-          # 线上还没发布过（/api/meta 404）时也必须发一次，所以拿不到就当 0 条
+          # If the API has never been published (/api/meta 404), we must publish
+          # once, so treat "unreachable" as 0 steps.
           LIVE=$(curl -sS --max-time 15 "$API/api/meta" || echo '')
           LIVE_SHA=$(echo "$LIVE" | node -e 'let s="";process.stdin.on("data",d=>s+=d).on("end",()=>{try{console.log(JSON.parse(s).sha||"")}catch{console.log("")}})')
           LIVE_STEPS=$(echo "$LIVE" | node -e 'let s="";process.stdin.on("data",d=>s+=d).on("end",()=>{try{console.log(JSON.parse(s).counts?.steps||0)}catch{console.log(0)}})')
-          echo "线上 sha=${LIVE_SHA:-无} 条目=$LIVE_STEPS"
+          echo "Live sha=${LIVE_SHA:-none} steps=$LIVE_STEPS"
           echo "LIVE_STEPS=$LIVE_STEPS" >> $GITHUB_ENV
           echo "LIVE_SHA=$LIVE_SHA" >> $GITHUB_ENV
           if [ "$FORCE" != "true" ] && [ "$LIVE_SHA" = "$UPSTREAM_SHA" ]; then
-            echo "上游没有新提交（${LIVE_SHA:0:7}），本次不发布"
+            echo "Upstream has no new commits (${LIVE_SHA:0:7}), skipping publish"
             echo "skip=true" >> $GITHUB_OUTPUT
           else
             echo "skip=false" >> $GITHUB_OUTPUT
           fi
 
-      - name: 生成接口数据
+      - name: Generate API data
         if: steps.check.outputs.skip != 'true'
         run: node tools/sync-articles.mjs --emit-json --out "$OUT"
 
-      - name: 回归闸门
+      - name: Regression gate
         if: steps.check.outputs.skip != 'true'
         run: node tools/verify-payload.mjs --dir "$OUT" --prev-steps "$LIVE_STEPS"
 
-      - name: 发布到数据接口
+      - name: Publish to data API
         if: steps.check.outputs.skip != 'true'
         run: |
           set -e
@@ -75,11 +77,11 @@ jobs:
             -H 'content-type: application/json' \
             -H "x-sync-token: ${{ secrets.HTLB_SYNC_TOKEN }}" \
             --data-binary @"$OUT/publish.json")
-          echo "发布返回 $CODE"
+          echo "Publish returned $CODE"
           cat /tmp/publish.json
           [ "$CODE" = "200" ] || [ "$CODE" = "201" ] || exit 1
 
-      - name: 发布后自检
+      - name: Post-publish self-check
         if: steps.check.outputs.skip != 'true'
         run: |
           set -e
@@ -87,27 +89,27 @@ jobs:
           curl -sS --max-time 15 "$API/api/meta" | node -e '
             let s="";process.stdin.on("data",d=>s+=d).on("end",()=>{
               const m=JSON.parse(s);
-              if(!m.version||!m.sourceUpdatedAt) throw new Error("meta 缺少 version/sourceUpdatedAt");
-              console.log(`线上 v${m.version} · ${m.counts.steps} 条 · 更新于 ${m.sourceUpdatedAt}`);
+              if(!m.version||!m.sourceUpdatedAt) throw new Error("meta missing version/sourceUpdatedAt");
+              console.log(`Live v${m.version} · ${m.counts.steps} steps · updated ${m.sourceUpdatedAt}`);
             })'
           curl -sS --max-time 15 "$API/api/steps/b01" | node -e '
             let s="";process.stdin.on("data",d=>s+=d).on("end",()=>{
               const r=JSON.parse(s);
-              if(!Array.isArray(r.steps)||!r.steps.length) throw new Error("b01 正文为空");
-              console.log(`b01 正文 ${r.steps.length} 条 · rev ${r.rev}`);
+              if(!Array.isArray(r.steps)||!r.steps.length) throw new Error("b01 body empty");
+              console.log(`b01 body ${r.steps.length} steps · rev ${r.rev}`);
             })'
 
-      # 失败时开一个 issue，避免定时任务静默挂掉没人知道
-      - name: 失败告警
+      # On failure, open an issue so a silent scheduled failure is not missed.
+      - name: Failure alert
         if: failure()
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          gh label create sync-failure --color d73a4a --description "数据同步失败" 2>/dev/null || true
+          gh label create sync-failure --color d73a4a --description "Data sync failed" 2>/dev/null || true
           gh issue create \
-            --title "数据同步失败 $(date -u +%F' '%H:%M)Z" \
-            --body "工作流 ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }} 失败，未发布。请检查上游 md 格式是否变动或 /api/publish 是否可用。" \
+            --title "Data sync failed $(date -u +%F' '%H:%M)Z" \
+            --body "Workflow ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }} failed, not published. Check upstream md format or /api/publish availability." \
             --label "sync-failure" 2>/dev/null || \
           gh issue create \
-            --title "数据同步失败 $(date -u +%F' '%H:%M)Z" \
-            --body "工作流 ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }} 失败，未发布。请检查上游 md 格式是否变动或 /api/publish 是否可用。"
+            --title "Data sync failed $(date -u +%F' '%H:%M)Z" \
+            --body "Workflow ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }} failed, not published. Check upstream md format or /api/publish availability."
