@@ -29,7 +29,7 @@ Page({
       { id: 'history', icon: 'clock', label: '浏览历史' },
       { id: 'desktop', icon: 'desktop', label: '添加到桌面' },
       { id: 'help', icon: 'info', label: '使用说明' },
-      { id: 'download', icon: 'download', label: '离线下载' },
+      { id: 'download', icon: 'download', label: '离线下载', desc: '观看激励视频，下载 PDF、EPUB、HTML 版本' },
       { id: 'about', icon: 'book', label: '关于我们' },
       { id: 'feedback', icon: 'chat', label: '反馈建议' }
     ],

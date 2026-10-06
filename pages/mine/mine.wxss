@@ -97,10 +97,24 @@
   flex-shrink: 0;
 }
 
-.menu-label {
+.menu-text {
   flex: 1;
+  min-width: 0;
+}
+
+.menu-label {
+  display: block;
   font-size: 30rpx;
   color: var(--color-text);
+}
+
+/* 菜单项副标题（离线下载入口的小字说明），颜色走变量保证深色模式可读 */
+.menu-desc {
+  display: block;
+  margin-top: 6rpx;
+  font-size: 22rpx;
+  line-height: 1.5;
+  color: var(--color-text-tertiary);
 }
 
 .menu-arrow {
