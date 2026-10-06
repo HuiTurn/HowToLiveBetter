@@ -1,6 +1,6 @@
 # 高性价比人生指南 · 人生指南库微信小程序
 
-基于 [HowToLiveBetter](https://github.com/eternity4719/HowToLiveBetter) 开源项目数据，把《高性价比人生指南》全书 34 章、665 条循证建议做成移动端阅读体验：每条都标注成本、收益与证据等级（A/B/C），支持分类浏览、全文搜索、收藏与每日一读。
+基于 [HowToLiveBetter](https://github.com/eternity4719/HowToLiveBetter) 开源项目数据，把《高性价比人生指南》全书 34 章、667 条循证建议做成移动端阅读体验：每条都标注成本、收益与证据等级（A/B/C），支持分类浏览、全文搜索、收藏与每日一读。
 
 ## 预览
 
