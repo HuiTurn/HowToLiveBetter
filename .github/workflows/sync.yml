@@ -14,8 +14,9 @@ on:
         default: false
 
 permissions:
-  contents: read
+  contents: write        # commit README count refresh
   issues: write
+  administration: write  # update repo About description
 
 jobs:
   sync:
@@ -98,6 +99,46 @@ jobs:
               if(!Array.isArray(r.steps)||!r.steps.length) throw new Error("b01 body empty");
               console.log(`b01 body ${r.steps.length} steps · rev ${r.rev}`);
             })'
+
+      # Keep README intro counts and the repo "About" description in sync with
+      # the live data. Runs on every cycle (even when publish was skipped) and
+      # is idempotent: writes only happen when the numbers actually changed.
+      - name: Refresh counts in README and About
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -e
+          META=$(curl -sS --max-time 15 "$API/api/meta")
+          STEPS=$(echo "$META" | node -e 'let s="";process.stdin.on("data",d=>s+=d).on("end",()=>{console.log(JSON.parse(s).counts.steps)})')
+          CHAPTERS=$(echo "$META" | node -e 'let s="";process.stdin.on("data",d=>s+=d).on("end",()=>{console.log(JSON.parse(s).counts.articles)})')
+          echo "Live counts: ${CHAPTERS} chapters / ${STEPS} steps"
+
+          # 1) README: intro line "N 章、M 条" and "全部 N 章正文"
+          if [ -f README.md ]; then
+            sed -i -E "s/[0-9]+ 章、[0-9]+ 条/${CHAPTERS} 章、${STEPS} 条/" README.md
+            sed -i -E "s/全部 [0-9]+ 章正文/全部 ${CHAPTERS} 章正文/" README.md
+            if ! git diff --quiet README.md; then
+              git config user.name "github-actions[bot]"
+              git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+              git add README.md
+              git commit -m "docs: README 条数同步为 ${CHAPTERS} 章 ${STEPS} 条"
+              git push
+              echo "README counts updated"
+            else
+              echo "README counts already up to date"
+            fi
+          fi
+
+          # 2) Repo About description: replace the stale "N 条"
+          DESC=$(gh api "repos/${{ github.repository }}" --jq .description)
+          NEW_DESC=$(printf '%s' "$DESC" | sed -E "s/[0-9]+ 条/${STEPS} 条/")
+          if [ -n "$NEW_DESC" ] && [ "$NEW_DESC" != "$DESC" ]; then
+            gh api -X PATCH "repos/${{ github.repository }}" -f description="$NEW_DESC" --jq .description
+            echo "About updated: $NEW_DESC"
+          else
+            echo "About already up to date"
+          fi
 
       # On failure, open an issue so a silent scheduled failure is not missed.
       - name: Failure alert
