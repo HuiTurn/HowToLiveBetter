@@ -1,27 +1,27 @@
-# 高性价比人生指南 · 微信小程序
+# 高性价比人生指南 · 人生指南库微信小程序
 
-基于 [HowToLiveBetter](https://github.com/eternity4719/HowToLiveBetter) 开源项目数据，提供循证生活指南的移动端阅读体验。
+基于 [HowToLiveBetter](https://github.com/eternity4719/HowToLiveBetter) 开源项目数据，把《高性价比人生指南》全书 34 章、665 条循证建议做成移动端阅读体验：每条都标注成本、收益与证据等级（A/B/C），支持分类浏览、全文搜索、收藏与每日一读。
 
 ## 预览
 
 微信扫一扫，直接使用线上小程序：
 
-<p align="left">
-  <img src="docs/images/qrcode.jpg" width="200" alt="人生指南小程序码" />
+<p align="left">  
+  <img src="docs/images/qrcode.jpg" width="200" alt="人生指南库小程序码" />  
 </p>
 
 界面截图：
 
-<p align="center">
-  <img src="docs/images/screenshots/01-index.png" width="24%" alt="启动页" />
-  <img src="docs/images/screenshots/02-home.png" width="24%" alt="首页" />
-  <img src="docs/images/screenshots/03-classify.png" width="24%" alt="分类" />
-  <img src="docs/images/screenshots/04-favorite.png" width="24%" alt="收藏" />
-</p>
-<p align="center">
-  <img src="docs/images/screenshots/05-mine.png" width="24%" alt="我的" />
-  <img src="docs/images/screenshots/06-article.png" width="24%" alt="文章详情" />
-  <img src="docs/images/screenshots/07-daily.png" width="24%" alt="每日一读" />
+<p align="center">  
+  <img src="docs/images/screenshots/01-index.png" width="24%" alt="启动页" />  
+  <img src="docs/images/screenshots/02-home.png" width="24%" alt="首页" />  
+  <img src="docs/images/screenshots/03-classify.png" width="24%" alt="分类" />  
+  <img src="docs/images/screenshots/04-favorite.png" width="24%" alt="收藏" />  
+</p>  
+<p align="center">  
+  <img src="docs/images/screenshots/05-mine.png" width="24%" alt="我的" />  
+  <img src="docs/images/screenshots/06-article.png" width="24%" alt="文章详情" />  
+  <img src="docs/images/screenshots/07-daily.png" width="24%" alt="每日一读" />  
 </p>
 
 ## 项目结构
@@ -65,17 +65,17 @@ docs/                   # 文档配图：小程序码 + 界面截图（packOptio
 
 ## 页面说明
 
-| 页面 | 路径 | 说明 |
-|---|---|---|
-| 启动页 | `pages/index/index` | 全屏背景 + 手写体标语 + 开始探索 |
-| 首页 | `pages/home/home` | 分类网格、即时搜索、推荐语录卡 |
-| 分类 | `pages/classify/classify` | 分类下划线标签 + 文章列表 |
-| 分类详情 | `pagesA/category-detail/category-detail` | 子分类标签 + 文章列表 |
-| 文章详情 | `pagesA/article/article` | 封面、正文、步骤、收藏、分享 |
-| 收藏 | `pages/favorite/favorite` | 文章/分类收藏 |
-| 每日一读 | `pagesA/daily/daily` | 日期 + 黄昏风景图 + 名言 |
-| 我的 | `pages/mine/mine` | 用户信息、菜单入口 |
-| 搜索 | `pagesA/search/search` | 完整搜索结果页 |
+| 页面   | 路径                                       | 说明                  |
+| ---- | ---------------------------------------- | ------------------- |
+| 启动页  | `pages/index/index`                      | 全屏背景 + 手写体标语 + 开始探索 |
+| 首页   | `pages/home/home`                        | 分类网格、即时搜索、推荐语录卡     |
+| 分类   | `pages/classify/classify`                | 分类下划线标签 + 文章列表      |
+| 分类详情 | `pagesA/category-detail/category-detail` | 子分类标签 + 文章列表        |
+| 文章详情 | `pagesA/article/article`                 | 封面、正文、步骤、收藏、分享      |
+| 收藏   | `pages/favorite/favorite`                | 文章/分类收藏             |
+| 每日一读 | `pagesA/daily/daily`                     | 日期 + 黄昏风景图 + 名言     |
+| 我的   | `pages/mine/mine`                        | 用户信息、菜单入口           |
+| 搜索   | `pagesA/search/search`                   | 完整搜索结果页             |
 
 ## 本地运行
 
