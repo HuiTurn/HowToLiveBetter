@@ -1,0 +1,27 @@
+# Cloudflare Workers 配置
+# 部署前把 name 和 routes 改成你自己的子域
+
+name = "mp-jump"
+main = "worker.js"
+compatibility_date = "2026-10-06"
+
+# 方式一：Workers 自定义域（推荐，域名已在 Cloudflare）
+# 在 Cloudflare 面板 Workers → mp-jump → Settings → Domains & Routes 里添加更省事；
+# 也可以直接写在这里（需域名 DNS 托管在 Cloudflare）：
+routes = [
+  { pattern = "mp.aipalnet.cn", custom_domain = true },
+  # 电子书下载反代专用子域（/pdf 、/epub 、/html）
+  { pattern = "dl.aipalnet.cn", custom_domain = true }
+]
+
+# 方式二：workers.dev 子域（先跑通再绑自己的域名）
+# workers_dev = true
+
+# 明文 scheme 兜底开关：URL Link 生成失败时改用 weixin://（需先在 MP 平台声明）
+# [vars]
+# WX_ENV_VERSION = "release"
+# WX_FALLBACK_SCHEME = "true"
+
+# 密钥用命令写入，不要写在这里：
+#   npx wrangler secret put WX_APPID
+#   npx wrangler secret put WX_SECRET
