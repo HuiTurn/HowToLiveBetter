@@ -25,3 +25,4 @@ dist/
 
 # 后端 Cloudflare Worker 源码（本地部署，不上 GitHub）
 tools/mp-jump/
+tools/vpay/

@@ -105,10 +105,10 @@ jobs:
       - name: Refresh counts in README and About
         continue-on-error: true
         env:
-          # A PAT with repo scope: PATCHing the repo About description is an
-          # admin endpoint the workflow GITHUB_TOKEN cannot reach. Git push of
-          # README uses the checkout-persisted GITHUB_TOKEN (contents: write).
-          GH_TOKEN: ${{ secrets.HTLB_SYNC_TOKEN }}
+          # A GitHub PAT (repo scope): PATCHing the repo About description is
+          # an admin endpoint the workflow GITHUB_TOKEN cannot reach. Note
+          # HTLB_SYNC_TOKEN is the data-API publish token, NOT a GitHub PAT.
+          GH_TOKEN: ${{ secrets.HTLB_ABOUT_PAT }}
         run: |
           set -e
           META=$(curl -sS --max-time 15 "$API/api/meta")

@@ -87,4 +87,6 @@
     <text class="guide-tagline">{{guideTagline}}</text>
     <view class="guide-know">我知道了</view>
   </view>
+
+  <tip-panel show="{{tipVisible}}" bind:close="onTipClose" />
 </view>

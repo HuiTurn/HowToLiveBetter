@@ -39,13 +39,15 @@ Page({
       { id: 'favorites', icon: 'star', label: '我的收藏' },
       { id: 'history', icon: 'clock', label: '浏览历史' },
       { id: 'desktop', icon: 'desktop', label: '添加到桌面' },
-      { id: 'help', icon: 'info', label: '使用说明' },
+      { id: 'sponsor', icon: 'heart', label: '赞助小程序' },
       { id: 'download', icon: 'download', label: '离线下载', desc: '观看激励视频，下载 PDF、EPUB、HTML 版本' },
       { id: 'about', icon: 'book', label: '关于我们' },
       { id: 'feedback', icon: 'chat', label: '反馈建议' }
     ],
     favoriteCount: 0,
     historyCount: 0,
+    // 赞助弹窗显隐
+    tipVisible: false,
     // 公众号关注：官方组件加载成功后隐藏兜底卡片
     accountName: OFFICIAL_ACCOUNT,
     // 能否直接打开公众号主页（需原始 ID + 基础库 3.7.10+）
@@ -134,8 +136,13 @@ Page({
       return;
     }
 
-    if (item.id === 'help' || item.id === 'about') {
-      wx.navigateTo({ url: `/pagesA/${item.id}/${item.id}` });
+    if (item.id === 'sponsor') {
+      this.setData({ tipVisible: true });
+      return;
+    }
+
+    if (item.id === 'about') {
+      wx.navigateTo({ url: '/pagesA/about/about' });
       return;
     }
   },
@@ -211,6 +218,10 @@ Page({
 
   onCloseGuide() {
     this.setData({ showGuide: false });
+  },
+
+  onTipClose() {
+    this.setData({ tipVisible: false });
   },
 
   // official-account 组件加载成功：隐藏兜底卡片，用官方关注组件

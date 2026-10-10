@@ -1,0 +1,59 @@
+<view
+  wx:if="{{Render}}"
+  class="tip-mask {{Active ? 'tip-mask-on' : ''}}"
+  bindtap="onClose"
+  catchtouchmove="noop"
+></view>
+
+<view wx:if="{{Render}}" class="tip-sheet {{Active ? 'tip-sheet-on' : ''}}" catchtouchmove="noop">
+  <view class="tip-header">
+    <text class="tip-title">赞助小程序</text>
+    <view class="tip-close" bindtap="onClose">×</view>
+  </view>
+
+  <block wx:if="{{done}}">
+    <view class="tip-done">
+      <image class="tip-done-icon" src="/assets/icons/heart.png" mode="aspectFit" />
+      <text class="tip-done-title">谢谢你的支持</text>
+      <text class="tip-done-desc" wx:if="{{tipCount > 1}}">这是你第 {{tipCount}} 次赞助，我们会继续把内容做好</text>
+      <text class="tip-done-desc" wx:else>我们会继续把内容做好</text>
+    </view>
+    <view class="tip-confirm" bindtap="onFinish">完成</view>
+  </block>
+
+  <block wx:else>
+    <text class="tip-intro">如果这个小程序帮到了你，欢迎赞助支持它继续更新与运营。</text>
+
+    <view wx:if="{{loading}}" class="tip-tiers">
+      <view class="tip-tier tip-tier-skeleton" wx:for="{{[1, 2, 3]}}" wx:key="*this"></view>
+    </view>
+
+    <view wx:elif="{{errorMessage}}" class="tip-error">
+      <text class="tip-error-text">{{errorMessage}}</text>
+      <view class="tip-retry" bindtap="loadTiers">重新加载</view>
+    </view>
+
+    <view wx:else class="tip-tiers">
+      <view
+        wx:for="{{tiers}}"
+        wx:key="id"
+        class="tip-tier {{item.id === selectedId ? 'tip-tier-on' : ''}}"
+        data-id="{{item.id}}"
+        data-amount="{{item.amount}}"
+        bindtap="onSelect"
+      >
+        <image wx:if="{{item.image}}" class="tip-tier-img" src="{{item.image}}" mode="aspectFit" />
+        <text class="tip-tier-amount">{{item.amount}} 元</text>
+        <text class="tip-tier-desc">{{item.desc}}</text>
+      </view>
+    </view>
+
+    <view
+      class="tip-confirm {{paying || !selectedId || loading || errorMessage ? 'tip-confirm-off' : ''}}"
+      bindtap="onConfirm"
+    >{{paying ? '处理中…' : (selectedAmount ? '赞助 ' + selectedAmount + ' 元' : '请选择档位')}}</view>
+
+    <text wx:if="{{payError}}" class="tip-pay-error">{{payError}}</text>
+    <text class="tip-note">支付由微信虚拟支付提供，仅支持以上固定档位；iOS 端由 Apple 处理，如需退款需向 App Store 申请。</text>
+  </block>
+</view>
