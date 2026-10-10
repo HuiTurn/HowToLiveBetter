@@ -116,9 +116,12 @@ jobs:
           CHAPTERS=$(echo "$META" | node -e 'let s="";process.stdin.on("data",d=>s+=d).on("end",()=>{console.log(JSON.parse(s).counts.articles)})')
           echo "Live counts: ${CHAPTERS} chapters / ${STEPS} steps"
 
-          # 1) README: intro line "N 章、M 条" and "全部 N 章正文"
+          # 1) README: intro line "这 N 条建议" (steps) and "全部 N 章正文" (chapters).
+          #    NOTE: the old "N 章、M 条" combined intro line was removed in
+          #    f4b4c9a, so the regex must match the current wording or the
+          #    count silently stops refreshing (step is continue-on-error).
           if [ -f README.md ]; then
-            sed -i -E "s/[0-9]+ 章、[0-9]+ 条/${CHAPTERS} 章、${STEPS} 条/" README.md
+            sed -i -E "s/这 [0-9]+ 条建议/这 ${STEPS} 条建议/" README.md
             sed -i -E "s/全部 [0-9]+ 章正文/全部 ${CHAPTERS} 章正文/" README.md
             if ! git diff --quiet README.md; then
               git config user.name "github-actions[bot]"
