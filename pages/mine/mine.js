@@ -39,7 +39,7 @@ Page({
       { id: 'favorites', icon: 'star', label: '我的收藏' },
       { id: 'history', icon: 'clock', label: '浏览历史' },
       { id: 'desktop', icon: 'desktop', label: '添加到桌面' },
-      { id: 'sponsor', icon: 'heart', label: '赞助小程序' },
+      // { id: 'sponsor', icon: 'heart', label: '赞助小程序' }, // 暂时隐藏赞助入口（tip-panel / pay 逻辑保留，取消本行注释即可恢复）
       { id: 'download', icon: 'download', label: '离线下载', desc: '观看激励视频，下载 PDF、EPUB、HTML 版本' },
       { id: 'about', icon: 'book', label: '关于我们' },
       { id: 'feedback', icon: 'chat', label: '反馈建议' }
