@@ -182,6 +182,12 @@
     </view>
   </view>
 
+  <!-- 上标跳转后：回到原文 / 返回上处 悬浮按钮 -->
+  <view wx:if="{{citeBack}}" class="cite-back" catchtap="onCiteBackTap" hover-class="hover-press">
+    <text class="cite-back-arrow">↑</text>
+    <text class="cite-back-text">{{citeBackLabel}}</text>
+  </view>
+
   <!-- 分享到朋友圈引导蒙层 -->
   <view wx:if="{{showGuide}}" class="guide-mask" catchtap="onCloseGuide"></view>
   <view wx:if="{{showGuide}}" class="guide-layer" catchtap="onCloseGuide">

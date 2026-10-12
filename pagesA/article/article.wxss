@@ -551,6 +551,31 @@
   z-index: 100;
 }
 
+/* 上标跳转后的悬浮回跳按钮：靠右下，悬在底部操作栏上方 */
+.cite-back {
+  position: fixed;
+  right: 28rpx;
+  bottom: calc(150rpx + constant(safe-area-inset-bottom));
+  bottom: calc(150rpx + env(safe-area-inset-bottom));
+  display: flex;
+  align-items: center;
+  gap: 6rpx;
+  padding: 16rpx 26rpx;
+  background: rgba(75, 162, 100, 0.95);
+  border-radius: 999rpx;
+  box-shadow: 0 8rpx 24rpx rgba(31, 41, 36, 0.22);
+  z-index: 120;
+}
+.cite-back-arrow {
+  font-size: 30rpx;
+  line-height: 1;
+  color: #ffffff;
+}
+.cite-back-text {
+  font-size: 26rpx;
+  color: #ffffff;
+}
+
 .footer-fav {
   display: flex;
   flex-direction: column;

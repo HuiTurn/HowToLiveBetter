@@ -206,7 +206,11 @@ Page({
     arrowRight: 0,
     term: null,
     termShow: false,
-    relatedArticles: []
+    relatedArticles: [],
+    /* 上标跳转后的「回到原文 / 返回上处」悬浮按钮 */
+    citeBack: false,
+    citeBackAction: 'scroll',
+    citeBackLabel: '回到原文'
   },
 
   onLoad(options) {
@@ -216,9 +220,10 @@ Page({
       return;
     }
     this.loadArticle(id);
-    /* 跨篇引用跳转进来：等首屏渲染完再定位到目标条目 */
+    /* 跨篇引用跳转进来：等首屏渲染完再定位到目标条目，并浮出「返回上处」回到来源文章 */
     if (Number(step) >= 1) {
       setTimeout(() => this.scrollToStep(Number(step)), 400);
+      this.setData({ citeBack: true, citeBackAction: 'back', citeBackLabel: '返回上处' });
     }
   },
 
@@ -353,7 +358,34 @@ Page({
       wx.navigateTo({ url: `/pagesA/article/article?id=${to}&step=${n}` });
       return;
     }
+    /* 同篇跳转：记住当前位置，跳完浮出「回到原文」 */
+    this._citeReturnTop = this._lastScrollTop || 0;
+    this._citeArmed = false;
     this.scrollToStep(n);
+    this.setData({ citeBack: true, citeBackAction: 'scroll', citeBackLabel: '回到原文' });
+    clearTimeout(this._citeArmTimer);
+    this._citeArmTimer = setTimeout(() => { this._citeArmed = true; }, 500);
+  },
+
+  /* 持续记录滚动位置；跳转类按钮在用户手动滚回原文附近时自动收起 */
+  onPageScroll(e) {
+    this._lastScrollTop = e.scrollTop;
+    if (this._citeArmed && this.data.citeBack && this.data.citeBackAction === 'scroll'
+        && this._citeReturnTop != null && Math.abs(e.scrollTop - this._citeReturnTop) < 80) {
+      this._citeArmed = false;
+      this.setData({ citeBack: false });
+    }
+  },
+
+  /* 悬浮「回到原文 / 返回上处」按钮点击 */
+  onCiteBackTap() {
+    if (this.data.citeBackAction === 'back') {
+      wx.navigateBack({ delta: 1, fail: () => this.setData({ citeBack: false }) });
+      return;
+    }
+    this._citeArmed = false;
+    wx.pageScrollTo({ scrollTop: this._citeReturnTop || 0, duration: 300 });
+    this.setData({ citeBack: false });
   },
 
   /* 滚动到目标条目并短暂高亮 */
