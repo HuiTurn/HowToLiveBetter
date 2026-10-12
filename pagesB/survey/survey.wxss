@@ -1,0 +1,158 @@
+.survey-page {
+  min-height: 100vh;
+  background: var(--color-bg);
+}
+
+.survey-content {
+  padding: 32rpx 32rpx 64rpx;
+}
+
+/* 进度 */
+.progress-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40rpx;
+}
+
+.progress-track {
+  flex: 1;
+  height: 8rpx;
+  border-radius: 999rpx;
+  background: var(--color-placeholder);
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  border-radius: 999rpx;
+  background: var(--color-primary);
+  transition: width 0.25s ease;
+}
+
+.progress-text {
+  margin-left: 20rpx;
+  font-size: var(--font-size-sm, 24rpx);
+  color: var(--color-text-secondary);
+}
+
+/* 题干 */
+.q-title {
+  display: block;
+  font-size: var(--font-size-xl, 36rpx);
+  font-weight: 700;
+  color: var(--color-text);
+  line-height: 1.45;
+}
+
+.q-hint {
+  display: block;
+  margin-top: 12rpx;
+  font-size: var(--font-size-base, 28rpx);
+  color: var(--color-text-secondary);
+}
+
+/* 选项 */
+.option-list {
+  margin-top: 40rpx;
+}
+
+.option-item {
+  display: flex;
+  align-items: center;
+  padding: 28rpx 28rpx;
+  border-radius: var(--radius-lg, 24rpx);
+  background: var(--color-surface);
+  box-shadow: 0 4rpx 16rpx var(--color-shadow, rgba(31, 41, 36, 0.04));
+  margin-bottom: 20rpx;
+  border: 2rpx solid transparent;
+}
+
+.option-item.on {
+  border-color: var(--color-primary);
+  background: var(--color-primary-light);
+}
+
+.option-main {
+  flex: 1;
+  min-width: 0;
+}
+
+.option-label {
+  display: block;
+  font-size: var(--font-size-md, 30rpx);
+  font-weight: 500;
+  color: var(--color-text);
+  line-height: 1.4;
+}
+
+.option-desc {
+  display: block;
+  margin-top: 8rpx;
+  font-size: var(--font-size-sm, 24rpx);
+  color: var(--color-text-secondary);
+}
+
+.option-check {
+  width: 40rpx;
+  height: 40rpx;
+  margin-left: 20rpx;
+  border-radius: 50%;
+  border: 2rpx solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.option-check.on {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.option-check-mark {
+  font-size: 24rpx;
+  color: #ffffff;
+}
+
+/* 底部操作 */
+.survey-footer {
+  margin-top: 48rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 交互提示：说明「选中即自动跳」或「可以留空」 */
+.footer-tip {
+  margin-bottom: 24rpx;
+  font-size: var(--font-size-sm, 24rpx);
+  color: var(--color-text-tertiary, #9aa19c);
+}
+
+.btn-primary {
+  width: 100%;
+  height: 92rpx;
+  border-radius: var(--radius-round, 999px);
+  background: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font-size-md, 30rpx);
+  font-weight: 600;
+  color: #ffffff;
+}
+
+/* 底部浏览导航：上一步 / 下一步，空格占位让两个按钮贴两边 */
+.footer-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 32rpx;
+  min-height: 56rpx;
+}
+
+.nav-btn {
+  font-size: var(--font-size-base, 28rpx);
+  color: var(--color-text-secondary);
+}

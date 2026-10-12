@@ -42,7 +42,7 @@ const SHOTS = [
   { name: '05-mine', url: '/pages/mine/mine', mode: 'switchTab', wait: 1500 },
   { name: '07-daily', url: '/pagesA/daily/daily', mode: 'navigateTo', wait: 1800 },
   { name: '06-article', url: '/pagesA/article/article?id=b01', mode: 'navigateTo', wait: 2000 },
-  { name: '01-index', url: '/pages/index/index', mode: 'reLaunch', wait: 1500 },
+  { name: '01-index', url: '/pages/index/index', mode: 'reLaunch', wait: 1500, clearSplash: true },
 ];
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
@@ -66,6 +66,10 @@ const expectPath = (url) => url.replace(/^\//, '').replace(/\?.*$/, '');
 /** 导航并确认真的到了目标页，否则重试（偶发会停在启动页 index） */
 async function goto(shot) {
   for (let attempt = 1; attempt <= 3; attempt++) {
+    /* 启动页仅在未看过时显示，否则 onLoad 会立即 switchTab 回首页，先清标记 */
+    if (shot.clearSplash) {
+      await miniProgram.callWxMethod('removeStorageSync', 'splashSeen').catch(() => {});
+    }
     if (shot.mode === 'reLaunch') await miniProgram.reLaunch(shot.url);
     else if (shot.mode === 'switchTab') await miniProgram.switchTab(shot.url);
     else await miniProgram.navigateTo(shot.url);

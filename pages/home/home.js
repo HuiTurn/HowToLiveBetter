@@ -1,4 +1,6 @@
-const { getCategories, searchAll, getCategoryById, getTotalStepCount } = require('../../utils/data.js');
+const { getCategories, searchAll, getTotalStepCount } = require('../../utils/data.js');
+const daily = require('../../utils/daily.js');
+const match = require('../../utils/match.js');
 const app = getApp();
 
 const CATEGORY_TINTS = {
@@ -18,21 +20,76 @@ Page({
     searchKeyword: '',
     searchResults: [],
     searching: false,
-    totalSteps: 0
+    totalSteps: 0,
+    summary: {},
+    updateText: '',
+    updateSubText: '',
+    latestDayText: '',
+    latest: [],
+    hasProfile: false,
+    profileText: ''
   },
 
   onLoad() {
     this.loadCategories();
+    this.loadDaily();
     /* 条目正文在分包，主包只取索引上的计数用于文案 */
     this.setData({ totalSteps: getTotalStepCount() });
   },
 
+  onShow() {
+    /* 调研完回来，hero 上要显示「已按你的处境推荐」 */
+    this.loadProfile();
+  },
+
   loadCategories() {
     const categories = getCategories().map(c => ({
-      ...c,
+      id: c.id,
+      name: c.name,
       bgColor: CATEGORY_TINTS[c.id] || '#f5f5f5'
     }));
     this.setData({ categories });
+  },
+
+  loadDaily() {
+    const summary = daily.getSummary();
+    /* 顶部状态行：「今日更新 3条」——没更新就降级成最近一次更新的日期 */
+    const updateText = summary.todayCount > 0
+      ? `今日更新 ${summary.todayCount} 条`
+      : `今日暂无更新`;
+    /* 区块副标题：日期 + 条数 */
+    const md = (s) => (s ? `${Number(s.slice(5, 7))}月${Number(s.slice(8, 10))}日` : '');
+    const updateSubText = summary.todayCount > 0
+      ? `${md(summary.today)} · ${summary.todayCount} 条新建议`
+      : `最近更新 ${md(summary.latestDate)} · ${summary.latestCount} 条`;
+
+    this.setData({
+      summary,
+      latest: daily.getLatestSteps(3, 1),
+      updateText,
+      updateSubText,
+      latestDayText: md(summary.latestDate)
+    });
+  },
+
+  loadProfile() {
+    const profile = match.getProfile();
+    if (!match.hasProfile(profile)) {
+      this.setData({ hasProfile: false, profileText: '' });
+      return;
+    }
+    const labels = (profile.concerns || [])
+      .map(cid => { const c = match.CONCERNS.find(x => x.id === cid); return c ? c.label : ''; })
+      .filter(Boolean);
+    const head = labels.slice(0, 2).join('、');
+    this.setData({
+      hasProfile: true,
+      profileText: `已按你的关注点「${head}${labels.length > 2 ? ' 等' : ''}」为你推荐，可随时重做`
+    });
+  },
+
+  onStartSurvey() {
+    wx.navigateTo({ url: '/pagesB/survey/survey' });
   },
 
   onSearchInput(e) {
@@ -86,6 +143,21 @@ Page({
     });
   },
 
+  /** 「探索分类 › 全部」：跳分类 tab */
+  onAllCategories() {
+    wx.switchTab({ url: '/pages/classify/classify' });
+  },
+
+  onArticleTap(e) {
+    const { id } = e.currentTarget.dataset;
+    const step = e.currentTarget.dataset.step;
+    /* 今日更新是条目级，点进去直接定位到那一条 */
+    const q = step ? `?id=${id}&step=${step}` : `?id=${id}`;
+    wx.navigateTo({
+      url: `/pagesA/article/article${q}`
+    });
+  },
+
   onDailyRead() {
     wx.navigateTo({
       url: '/pagesA/daily/daily'
@@ -111,6 +183,7 @@ Page({
 
   onPullDownRefresh() {
     this.loadCategories();
+    this.loadDaily();
     wx.stopPullDownRefresh();
   },
 

@@ -3,9 +3,10 @@
 import math
 import os
 
-from PIL import Image, ImageDraw
+from PIL import Image, ImageDraw, ImageFilter
 
 SIZE = 81          # 输出尺寸（微信 tabBar 建议 81x81）
+GLYPH_SIZE = 162   # 分类字形输出尺寸：显示区 48-60rpx，翻倍出图在高分屏更锐利
 SS = 4             # 超采样倍数，抗锯齿
 N = SIZE * SS
 ST = 5 * SS        # 默认描边宽度
@@ -306,44 +307,89 @@ def ic_person(color, filled=False):
     return im
 
 
+def bez(p0, p1, p2, n=24):
+    """二次贝塞尔曲线采样点。"""
+    pts = []
+    for i in range(n + 1):
+        t = i / n
+        x = (1 - t) ** 2 * p0[0] + 2 * (1 - t) * t * p1[0] + t * t * p2[0]
+        y = (1 - t) ** 2 * p0[1] + 2 * (1 - t) * t * p1[1] + t * t * p2[1]
+        pts.append((x, y))
+    return pts
+
+
 def ic_leaf(color):
-    tmp = canvas(); d = ImageDraw.Draw(tmp)
-    d.ellipse([14 * SS, 27 * SS, 66 * SS, 53 * SS], fill=color)
-    tmp = tmp.rotate(-35, resample=Image.BICUBIC, expand=False, center=(N / 2, N / 2))
-    d = ImageDraw.Draw(tmp)
-    line(d, [(40, 56), (52, 66)], color, width=int(4.5 * SS))
-    return tmp
+    """生活习惯：贝塞尔叶片 + 白色叶脉。"""
+    im = canvas(); d = ImageDraw.Draw(im)
+    base, tip = (26, 56), (58, 24)
+    side1 = bez(base, (20, 26), tip)
+    side2 = bez(tip, (62, 60), base)
+    d.polygon(P(side1 + side2), fill=color)
+    # 叶脉：沿主轴的白色细线
+    vein = bez((32, 50), (40, 40), (52, 30), n=16)
+    line(d, vein, WHITE, width=int(3 * SS), caps=False)
+    # 叶柄
+    line(d, [(24, 58), (16, 66)], color, width=int(4.5 * SS), caps=True)
+    return im
+
+
+def ic_book_open(color):
+    """学习成长：摊开的书，两页带弧度、中缝留白。"""
+    im = canvas(); d = ImageDraw.Draw(im)
+    # 左页：脊线直、外缘和底边带弧度，中缝留 4px 白缝
+    left = ([(38, 25), (33, 26)] + bez((33, 26), (23, 28), (14, 31))
+            + [(14, 57)] + bez((14, 57), (25, 56), (38, 50)))
+    right = ([(42, 25), (47, 26)] + bez((47, 26), (57, 28), (66, 31))
+             + [(66, 57)] + bez((66, 57), (55, 56), (42, 50)))
+    d.polygon(P(left), fill=color)
+    d.polygon(P(right), fill=color)
+    return im
 
 
 def ic_briefcase(color):
+    """高效工作：公文包，提手先画、箱体盖上去，加白色锁扣。"""
     im = canvas(); d = ImageDraw.Draw(im)
-    rrect_fill(d, (14, 30, 66, 62), 8, color)
-    d.rounded_rectangle([30 * SS, 18 * SS, 50 * SS, 34 * SS], radius=6 * SS, outline=color, width=ST)
+    rrect(d, (30, 16, 50, 36), 6, color)
+    rrect_fill(d, (14, 28, 66, 62), 9, color)
+    rrect_fill(d, (33, 41, 47, 51), 4, WHITE)
     return im
 
 
 def ic_people(color):
+    """人际关系：双人，前排人物带白色描边 separation。"""
     im = canvas(); d = ImageDraw.Draw(im)
-    circle_fill(d, 30, 26, 9, color)
-    im = rotate_paste(im, half_ellipse(None, (14, 38, 46, 62), color, mode='fill'))
+    # 后排人物（右）
+    circle_fill(d, 52, 24, 9, color)
+    im = rotate_paste(im, half_ellipse(None, (40, 36, 68, 60), color, mode='fill'))
     d = ImageDraw.Draw(im)
-    circle_fill(d, 53, 26, 9, color)
-    im = rotate_paste(im, half_ellipse(None, (37, 38, 69, 62), color, mode='fill'))
+    # 前排人物（左）：先用白色垫出分隔缝
+    circle_fill(d, 30, 24, 13, WHITE)
+    im = rotate_paste(im, half_ellipse(None, (12, 34, 48, 62), WHITE, mode='fill'))
+    d = ImageDraw.Draw(im)
+    circle_fill(d, 30, 24, 10, color)
+    im = rotate_paste(im, half_ellipse(None, (16, 36, 44, 60), color, mode='fill'))
     return im
 
 
-def ic_coin(color):
+def ic_coin_yen(color):
+    """财政理财：实心硬币 + 白色 ¥ 符号。"""
     im = canvas(); d = ImageDraw.Draw(im)
-    for y in (20, 34, 48):
-        d.ellipse([22 * SS, y * SS, 58 * SS, (y + 12) * SS], fill=color)
+    circle_fill(d, 40, 40, 27, color)
+    w = int(4 * SS)
+    line(d, [(31, 22), (40, 34)], WHITE, width=w, caps=False)
+    line(d, [(49, 22), (40, 34)], WHITE, width=w, caps=False)
+    line(d, [(40, 32), (40, 54)], WHITE, width=w, caps=False)
+    line(d, [(31, 38), (49, 38)], WHITE, width=w, caps=False)
+    line(d, [(31, 46), (49, 46)], WHITE, width=w, caps=False)
     return im
 
 
 def ic_coffee(color):
+    """生活方式：马克杯，把手弧线两端接到杯身 + 杯垫。"""
     im = canvas(); d = ImageDraw.Draw(im)
-    rrect_fill(d, (18, 28, 52, 56), 6, color)
-    d.arc([48 * SS, 34 * SS, 66 * SS, 50 * SS], start=-70, end=70, fill=color, width=ST)
-    line(d, [(16, 64), (54, 64)], color, width=int(4.5 * SS))
+    d.arc([50 * SS, 32 * SS, 68 * SS, 52 * SS], start=-110, end=110, fill=color, width=ST)
+    rrect_fill(d, (18, 24, 56, 58), 8, color)
+    line(d, [(14, 66), (60, 66)], color, width=int(4.5 * SS), caps=True)
     return im
 
 
@@ -450,21 +496,67 @@ ICONS = [
     ('mine.png', lambda c: ic_person(c), GRAY),
     ('mine-active.png', lambda c: ic_person(c, filled=True), GREEN),
     ('glyph-lifestyle.png', lambda c: ic_leaf(c), CATEGORY_COLORS['lifestyle']),
-    ('glyph-learning.png', lambda c: ic_book(c, filled=True), CATEGORY_COLORS['learning']),
+    ('glyph-learning.png', lambda c: ic_book_open(c), CATEGORY_COLORS['learning']),
     ('glyph-work.png', lambda c: ic_briefcase(c), CATEGORY_COLORS['work']),
     ('glyph-relationships.png', lambda c: ic_people(c), CATEGORY_COLORS['relationships']),
     ('glyph-mental.png', lambda c: ic_heart(c, filled=True), CATEGORY_COLORS['mental']),
-    ('glyph-finance.png', lambda c: ic_coin(c), CATEGORY_COLORS['finance']),
+    ('glyph-finance.png', lambda c: ic_coin_yen(c), CATEGORY_COLORS['finance']),
     ('glyph-time.png', lambda c: ic_clock(c, filled=True), CATEGORY_COLORS['time']),
     ('glyph-life.png', lambda c: ic_coffee(c), CATEGORY_COLORS['life']),
 ]
+
+
+def lighten(color, amt):
+    """把基色朝白色提亮 amt（0~1），用作渐变的高光端。"""
+    r, g, b, a = color
+    return (int(r + (255 - r) * amt), int(g + (255 - g) * amt),
+            int(b + (255 - b) * amt), a)
+
+
+def gradientize(im, base, light):
+    """给彩色剪影加自上而下（浅→深）的渐变，保留白色细节线（叶脉/锁扣/¥/指针）。"""
+    w, h = im.size
+    px = im.load()
+    br, bg, bb, _ = base
+    for y in range(h):
+        t = y / (h - 1) if h > 1 else 0
+        gr = light[0] + (br - light[0]) * t
+        gg = light[1] + (bg - light[1]) * t
+        gb = light[2] + (bb - light[2]) * t
+        for x in range(w):
+            r, g, b, a = px[x, y]
+            if a == 0:
+                continue
+            if r > 225 and g > 225 and b > 225:   # 白色细节保持原样
+                continue
+            px[x, y] = (int(gr), int(gg), int(gb), a)
+    return im
+
+
+def add_shadow(im, dy, blur, alpha=46):
+    """在图标下方叠一层柔和投影，增加立体感。"""
+    a = im.split()[3]
+    shifted = a.transform(im.size, Image.AFFINE, (1, 0, 0, 0, 1, -dy), resample=Image.BILINEAR)
+    soft = shifted.filter(ImageFilter.GaussianBlur(blur)).point(lambda v: int(v * alpha / 255))
+    layer = Image.new('RGBA', im.size, (28, 33, 38, 0))
+    layer.putalpha(soft)
+    out = Image.new('RGBA', im.size, (0, 0, 0, 0))
+    out = Image.alpha_composite(out, layer)
+    out = Image.alpha_composite(out, im)
+    return out
 
 
 def main():
     out_dir = os.path.dirname(os.path.abspath(__file__))
     for name, drawer, color in ICONS:
         im = drawer(color)
-        im = im.resize((SIZE, SIZE), Image.LANCZOS)
+        is_glyph = name.startswith('glyph-')
+        out_size = GLYPH_SIZE if is_glyph else SIZE
+        im = im.resize((out_size, out_size), Image.LANCZOS)
+        if is_glyph:
+            im = gradientize(im, color, lighten(color, 0.42))
+            im = add_shadow(im, dy=max(2, round(out_size * 0.02)),
+                            blur=max(2, round(out_size * 0.03)))
         path = os.path.join(out_dir, name)
         im.save(path)
         print('Generated:', name)

@@ -379,6 +379,13 @@ if (apply) {
   fs.writeFileSync(LOCAL_GLOSS,
     'module.exports = ' + JSON.stringify(glossary, null, 2).split('\n').map(l => '  ' + l).join('\n').trimStart() + ';\n');
 
+  /* 匹配索引：正文更新了就得重生成，否则调研会拿旧条目打分 */
+  try {
+    execSync(`"${process.execPath}" tools/build-match-index.mjs`, { cwd: REPO, stdio: 'inherit' });
+  } catch (e) {
+    console.log('\n⚠️ match-index 生成失败，请手动跑 node tools/build-match-index.mjs');
+  }
+
   const kb = (f) => (fs.statSync(f).size / 1024).toFixed(0) + ' KB';
   console.log(`\n已写入 ${LOCAL}（${kb(LOCAL)}）`);
   console.log(`已写入 ${LOCAL_STEPS}（${kb(LOCAL_STEPS)}）`);

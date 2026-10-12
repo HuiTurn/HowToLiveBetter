@@ -1,0 +1,117 @@
+<view class="page result-page">
+  <custom-nav title="你的个性化建议" back="{{true}}" bg-color="var(--color-bg, #f6f7f6)" text-color="var(--color-text, #22262b)" shadow="{{false}}" />
+
+  <view class="result-content">
+    <!-- 匹配中 -->
+    <view wx:if="{{generating}}" class="generating">
+      <view class="gen-ring"></view>
+      <text class="gen-title">正在为你匹配</text>
+      <text class="gen-desc">从 {{totalSteps}} 条建议里筛出与你相关的几条，横跨生活的多个方面</text>
+    </view>
+
+    <block wx:else>
+      <!-- 未做过问卷：不锁，直接给引导 + 今日样品 -->
+      <block wx:if="{{noProfile}}">
+        <view class="empty-guide">
+          <text class="guide-title">还没有你的基本信息</text>
+          <text class="guide-desc">回答 6 个问题（年龄、性别、身份、关注领域等），从 {{totalSteps}} 条建议里挑出横跨多个方面的几条</text>
+          <view class="btn-primary" hover-class="hover-press" bindtap="onRestart">开始调研</view>
+          <text class="guide-sub">下面是今天挑出来的高性价比建议，可以先看看</text>
+        </view>
+
+        <view wx:if="{{others.length > 0}}" class="section">
+          <text class="section-title">今日 · 推荐</text>
+          <view
+            wx:for="{{others}}"
+            wx:key="id"
+            class="minor-card"
+            hover-class="hover-press"
+            bindtap="onStepTap"
+            data-aid="{{item.aid}}"
+            data-index="{{item.index}}"
+          >
+            <view class="minor-head">
+              <text class="minor-title">{{item.title}}</text>
+            </view>
+            <text class="minor-plain">{{item.plain}}</text>
+            <view class="minor-meta">
+              <text class="minor-from">{{item.categoryName}} · 《{{item.articleTitle}}》</text>
+              <text class="minor-grade">{{item.grade}} 级 · 性价比{{item.ratio}}</text>
+            </view>
+          </view>
+        </view>
+      </block>
+
+      <!-- 已匹配：未解锁时结果打码，浮分享解锁层 -->
+      <block wx:else>
+        <view class="result-body {{locked ? 'is-locked' : ''}}">
+          <view class="summary-card">
+            <text class="summary-label">匹配依据</text>
+            <text class="summary-text">{{summary}}</text>
+          </view>
+
+          <view wx:if="{{top}}" class="section">
+            <text class="section-title">首选建议</text>
+            <view class="top-card" hover-class="hover-press" bindtap="onStepTap" data-aid="{{top.aid}}" data-index="{{top.index}}">
+              <view class="top-head">
+                <text class="top-percent">匹配度 {{top.percent}}%</text>
+                <text class="grade-badge">{{top.grade}} 级证据</text>
+              </view>
+              <text class="top-title">{{top.title}}</text>
+              <text class="top-plain">{{top.plain}}</text>
+              <view class="chip-row">
+                <text class="chip">性价比 {{top.ratio}}</text>
+                <text class="chip">花时间 {{top.time}}</text>
+                <text class="chip">{{top.money === '0' ? '不花钱' : '花钱 ' + top.money}}</text>
+              </view>
+              <view class="top-foot">
+                <text class="top-from">出自《{{top.articleTitle}}》</text>
+                <text class="top-link">查看详情 ›</text>
+              </view>
+            </view>
+          </view>
+
+          <view wx:if="{{others.length > 0}}" class="section">
+            <text class="section-title">其他适合你的建议（跨方面）</text>
+            <view
+              wx:for="{{others}}"
+              wx:key="id"
+              class="minor-card"
+              hover-class="hover-press"
+              bindtap="onStepTap"
+              data-aid="{{item.aid}}"
+              data-index="{{item.index}}"
+            >
+              <view class="minor-head">
+                <text class="minor-title">{{item.title}}</text>
+                <text wx:if="{{item.percent}}" class="minor-percent">{{item.percent}}%</text>
+              </view>
+              <text class="minor-plain">{{item.plain}}</text>
+              <view class="minor-meta">
+                <text class="minor-from">{{item.categoryName}} · 《{{item.articleTitle}}》</text>
+                <text class="minor-grade">{{item.grade}} 级 · 性价比{{item.ratio}}</text>
+              </view>
+            </view>
+          </view>
+
+          <view class="result-actions">
+            <view class="btn-ghost" hover-class="hover-press" bindtap="onRestart">重新调研</view>
+            <view class="btn-ghost" hover-class="hover-press" bindtap="onBackHome">回到首页</view>
+          </view>
+        </view>
+
+        <!-- 分享解锁浮层 -->
+        <view wx:if="{{locked}}" class="share-lock">
+          <view class="lock-card">
+            <text class="lock-title">分享给好友或群聊，即可查看</text>
+            <text class="lock-desc">这份「为我筛出的建议」还差最后一步：转发给好友或群聊，返回后即可查看完整结果。分享一次后长期可看。</text>
+            <button class="lock-share-btn" open-type="share" bindtap="onShareTap">立即分享解锁</button>
+            <text class="lock-cancel" bindtap="onCancelLock">暂不分享，返回</text>
+          </view>
+        </view>
+      </block>
+
+      <text class="disclaimer">推荐基于你的选择与条目的成本 / 收益 / 证据强度排序，仅供参考，不构成医疗或法律建议。</text>
+    </block>
+  </view>
+</view>

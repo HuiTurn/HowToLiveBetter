@@ -4,10 +4,125 @@
 }
 
 .home-content {
-  padding: 16rpx 32rpx 48rpx;
+  padding: 8rpx 32rpx 48rpx;
 }
 
-/* 搜索框 */
+/* ---------- 顶部状态行 ---------- */
+/* 色值取自设计稿原图：chip 是白底绿字绿点（#42B45B / #F3F5F4），
+   不是全局变量的浅绿底，故此处单独写 */
+.status-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24rpx;
+}
+
+.status-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 8rpx 20rpx;
+  border-radius: var(--radius-round, 999px);
+  background: #42b45b;
+}
+
+.status-dot {
+  width: 12rpx;
+  height: 12rpx;
+  border-radius: 50%;
+  background: #ffffff;
+  margin-right: 10rpx;
+}
+
+.status-chip-text {
+  font-size: var(--font-size-sm, 24rpx);
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.status-total {
+  margin-left: 20rpx;
+  font-size: var(--font-size-sm, 24rpx);
+  color: var(--color-text-secondary);
+}
+
+/* ---------- 调研入口 hero ---------- */
+.hero-card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 36rpx 0 36rpx 32rpx;
+  border-radius: var(--radius-lg, 24rpx);
+  /* 色值取自设计稿 green-life-2026-10-11 原图采样：
+     左侧纯背景 #55B162，右侧插画旁 #C2E6C0，纵向几乎无变化 → 135° 线性渐变 */
+  background: linear-gradient(135deg, #55B162 0%, #86CB8E 55%, #C2E6C0 100%);
+  /* 设计图里这张卡几乎没有投影，只有一道很淡的绿调边缘 */
+  box-shadow: 0 4rpx 16rpx rgba(85, 177, 98, 0.14);
+  margin-bottom: 44rpx;
+  overflow: hidden;
+}
+
+.hero-body {
+  flex: 1;
+  min-width: 0;
+  padding-right: 8rpx;
+}
+
+.hero-title {
+  display: block;
+  font-size: var(--font-size-xxl, 48rpx);
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 1rpx;
+  line-height: 1.25;
+  text-shadow: 0 1rpx 3rpx rgba(50, 120, 70, 0.25);
+}
+
+.hero-desc {
+  display: block;
+  margin-top: 12rpx;
+  padding-right: 16rpx;
+  font-size: var(--font-size-base, 28rpx);
+  color: rgba(255, 255, 255, 0.92);
+  line-height: 1.5;
+  /* 渐变末端已经很浅（#C2E6C0），纯白字会糊，叠一点同色系阴影 */
+  text-shadow: 0 1rpx 2rpx rgba(60, 130, 80, 0.22);
+}
+
+/* 3D 人物插画：设计稿右侧，右下贴边 */
+/* 设计图里人物从卡顶贯穿到卡底，宽约占卡宽 31%、高约 90%。
+   图片已 trim 掉透明留白（240×300 → 217×260，比例 0.835），
+   容器比例必须 ≥ 图片比例，否则 aspectFit(contain) 会裁掉两侧。 */
+.hero-art {
+  width: 246rpx;
+  height: 294rpx;
+  flex-shrink: 0;
+  margin-right: -10rpx;
+  margin-bottom: -46rpx;
+}
+
+.hero-action {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 28rpx;
+  padding: 14rpx 32rpx;
+  border-radius: var(--radius-round, 999px);
+  /* 设计图按钮是纯白底 + 品牌绿字，色值同样取自原图采样 */
+  background: #ffffff;
+}
+
+.hero-action-text {
+  font-size: var(--font-size-md, 30rpx);
+  font-weight: 600;
+  color: #288b61;
+}
+
+.hero-action-arrow {
+  margin-left: 10rpx;
+  font-size: var(--font-size-md, 30rpx);
+  font-weight: 600;
+  color: #288b61;
+}
+
+/* ---------- 搜索 ---------- */
 .search-bar {
   margin-bottom: 32rpx;
 }
@@ -16,9 +131,10 @@
   display: flex;
   align-items: center;
   height: 76rpx;
-  background: var(--color-placeholder);
-  border-radius: 999rpx;
+  background: var(--color-surface);
+  border-radius: var(--radius-round, 999px);
   padding: 0 28rpx;
+  box-shadow: 0 2rpx 12rpx var(--color-shadow, rgba(31, 41, 36, 0.04));
 }
 
 .search-icon {
@@ -77,7 +193,6 @@
   font-size: 27rpx;
 }
 
-/* 索引层只匹配篇名，底部给一个进全文检索的入口 */
 .result-more {
   display: flex;
   align-items: center;
@@ -96,109 +211,199 @@
   font-size: 30rpx;
 }
 
-/* 分类网格 */
-.category-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+/* ---------- 区块 ---------- */
+.section {
   margin-bottom: 40rpx;
 }
 
-.category-item {
-  width: 48.6%;
+.section-head {
   display: flex;
   align-items: center;
-  padding: 28rpx 24rpx;
-  border-radius: 24rpx;
-  background: var(--color-surface);
-  box-shadow: 0 4rpx 20rpx var(--color-shadow, rgba(31, 41, 36, 0.04));
-  margin-bottom: 24rpx;
+  justify-content: space-between;
+  margin-bottom: 20rpx;
 }
 
-.category-icon {
-  width: 88rpx;
-  height: 88rpx;
-  border-radius: 24rpx;
+.section-title {
+  font-size: var(--font-size-lg, 32rpx);
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.section-more {
+  font-size: var(--font-size-sm, 24rpx);
+  color: var(--color-text-secondary);
+}
+
+.section-sub {
+  display: block;
+  margin-top: -8rpx;
+  margin-bottom: 20rpx;
+  font-size: var(--font-size-xs, 22rpx);
+  color: var(--color-text-tertiary);
+}
+
+/* 探索分类：4 列宫格
+   首列图标左缘、末列图标右缘与内容边距（32rpx）对齐：
+   grid 锁死 4 列（每列 96rpx），space-between 撑开贴边；
+   不用 flex-wrap（item 变窄后一行会塞进 7 个） */
+.tile-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 120rpx);
+  justify-content: space-between;
+}
+
+.tile-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 28rpx;
+}
+
+.tile-icon {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 28rpx;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-right: 20rpx;
+  margin-bottom: 12rpx;
+}
+
+.tile-glyph {
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.tile-name {
+  font-size: var(--font-size-sm, 24rpx);
+  color: var(--color-text);
+  white-space: nowrap;
+}
+
+/* 今日更新 */
+.update-list {
+  background: var(--color-surface);
+  border-radius: var(--radius-lg, 24rpx);
+  padding: 8rpx 24rpx;
+  box-shadow: 0 4rpx 20rpx var(--color-shadow, rgba(31, 41, 36, 0.04));
+}
+
+.update-item {
+  display: flex;
+  align-items: center;
+  padding: 24rpx 0;
+  border-bottom: 1rpx solid var(--color-border);
+}
+
+.update-item:last-child {
+  border-bottom: none;
+}
+
+/* 左侧封面缩略图 */
+.update-cover {
+  width: 168rpx;
+  height: 132rpx;
+  border-radius: 16rpx;
   flex-shrink: 0;
+  margin-right: 24rpx;
+  background: var(--color-placeholder);
 }
 
-.category-glyph {
-  width: 46rpx;
-  height: 46rpx;
-}
-
-.category-info {
+.update-main {
   flex: 1;
   min-width: 0;
 }
 
-.category-name {
-  display: block;
-  font-size: 30rpx;
-  font-weight: 600;
-  color: var(--color-text);
-  margin-bottom: 8rpx;
+/* 标签 + 标题同一行 */
+.update-title-row {
+  display: flex;
+  align-items: center;
 }
 
-.category-desc {
-  display: block;
-  font-size: 22rpx;
+/* 标签底色/文字色取自设计稿原图采样（#A0DCBE / #256C49） */
+.update-tag {
+  flex-shrink: 0;
+  margin-right: 12rpx;
+  padding: 2rpx 12rpx;
+  border-radius: 6rpx;
+  background: #a0dcbe;
+  font-size: var(--font-size-xs, 22rpx);
+  line-height: 1.6;
+  color: #256c49;
+}
+
+/* 「更新」用中性灰，避免和「新增」抢眼 */
+.update-tag.update {
+  background: var(--color-placeholder);
   color: var(--color-text-secondary);
-  line-height: 1.4;
+}
+
+.update-title {
+  flex: 1;
+  min-width: 0;
+  font-size: var(--font-size-md, 30rpx);
+  font-weight: 500;
+  color: var(--color-text);
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 
-/* 语录卡片 */
-.quote-card {
-  position: relative;
-  width: 100%;
-  height: 480rpx;
-  border-radius: 24rpx;
-  overflow: hidden;
-}
-
-.quote-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.quote-mask {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 62%;
-  background: linear-gradient(180deg, rgba(250, 249, 246, 0.92) 0%, rgba(250, 249, 246, 0.55) 55%, rgba(250, 249, 246, 0) 100%);
-}
-
-.quote-body {
-  position: relative;
-  z-index: 2;
-  display: flex;
-  flex-direction: column;
-  padding: 48rpx 44rpx;
-}
-
-.quote-title {
-  font-size: 40rpx;
-  color: var(--color-text);
-  line-height: 1.55;
-  font-weight: 500;
-  letter-spacing: 2rpx;
-}
-
-.quote-author-line {
-  font-size: 26rpx;
+.update-brief {
+  display: block;
+  margin-top: 10rpx;
+  font-size: var(--font-size-sm, 24rpx);
   color: var(--color-text-secondary);
-  margin-top: 28rpx;
-  letter-spacing: 1rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.update-meta {
+  display: block;
+  margin-top: 8rpx;
+  font-size: var(--font-size-xs, 22rpx);
+  color: var(--color-text-tertiary);
+}
+
+.update-arrow {
+  margin-left: 16rpx;
+  font-size: 32rpx;
+  color: var(--color-text-tertiary);
+  flex-shrink: 0;
+}
+
+.update-empty {
+  padding: 48rpx 0;
+  text-align: center;
+}
+
+.update-empty-text {
+  font-size: var(--font-size-base, 28rpx);
+  color: var(--color-text-secondary);
+}
+
+/* ---------- 深色模式 ----------
+   上面的色值是照设计稿（浅色）采样的。深色下：
+   · hero 保持品牌绿卡不变（绿底白字本来就成立），只压一点投影免得脏
+   · chip 底色和「新增」标签的浅绿底在#15171a 上会刺眼，改成低透明度叠加 */
+@media (prefers-color-scheme: dark) {
+  .hero-card {
+    background: linear-gradient(135deg, #3f8a4d 0%, #4a9a5c 55%, #56a869 100%);
+    box-shadow: 0 4rpx 16rpx rgba(0, 0, 0, 0.36);
+  }
+
+  .hero-title,
+  .hero-desc {
+    text-shadow: 0 1rpx 3rpx rgba(0, 0, 0, 0.4);
+  }
+
+  .status-chip {
+    background: #3a9e50;
+  }
+
+  .update-tag {
+    background: rgba(92, 180, 118, 0.18);
+    color: #7cc795;
+  }
 }

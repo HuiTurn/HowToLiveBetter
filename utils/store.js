@@ -12,8 +12,8 @@
  */
 const PREFIX = 'htlb:';
 const SOFT_LIMIT = 6 * 1024 * 1024;   // 6 MB
-/* 永不淘汰：首屏必需且体积小；appVer 是版本迁移标记，也不能被淘汰 */
-const KEEP = ['meta', 'articles', 'glossary', 'appVer'];
+/* 永不淘汰：首屏必需且体积小；appVer 是版本迁移标记，surveyProfile 是调研档案、surveyShareUnlock 是结果解锁标记，都不能被淘汰 */
+const KEEP = ['meta', 'articles', 'glossary', 'appVer', 'surveyProfile', 'surveyShareUnlock'];
 
 const k = (name) => PREFIX + name;
 const stepsKey = (id) => k(`steps:${id}`);

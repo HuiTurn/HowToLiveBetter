@@ -1,0 +1,51 @@
+<view class="page survey-page">
+  <custom-nav title="适合我的建议" back="{{true}}" bg-color="var(--color-bg, #f6f7f6)" text-color="var(--color-text, #22262b)" shadow="{{false}}" />
+
+  <view class="survey-content">
+    <!-- 进度 -->
+    <view class="progress-row">
+      <view class="progress-track">
+        <view class="progress-fill" style="width: {{(step + 1) * 100 / total}}%;"></view>
+      </view>
+      <text class="progress-text">{{step + 1}}/{{total}}</text>
+    </view>
+
+    <text class="q-title">{{title}}</text>
+    <text wx:if="{{hint}}" class="q-hint">{{hint}}</text>
+
+    <view class="option-list">
+      <view
+        wx:for="{{options}}"
+        wx:key="id"
+        class="option-item {{item.on ? 'on' : ''}}"
+        hover-class="hover-press"
+        bindtap="onOptionTap"
+        data-id="{{item.id}}"
+      >
+        <view class="option-main">
+          <text class="option-label">{{item.label}}</text>
+          <text wx:if="{{item.desc}}" class="option-desc">{{item.desc}}</text>
+        </view>
+        <view class="option-check {{item.on ? 'on' : ''}}">
+          <text wx:if="{{item.on}}" class="option-check-mark">✓</text>
+        </view>
+      </view>
+    </view>
+
+    <view class="survey-footer">
+      <!-- 提示：单选说自动跳，多选说明可以留空 -->
+      <text wx:if="{{tip}}" class="footer-tip">{{tip}}</text>
+
+      <!-- 主按钮：只在多选题 / 最后一题出现 -->
+      <view wx:if="{{primaryText}}" class="btn-primary" hover-class="hover-press" bindtap="onPrimary">
+        <text>{{primaryText}}</text>
+      </view>
+
+      <!-- 底部浏览导航：没选中时用来翻看 / 跳过 -->
+      <view class="footer-nav">
+        <text wx:if="{{canPrev}}" class="nav-btn" bindtap="onPrev">‹ 上一题</text>
+        <text wx:if="{{canBrowseNext}}" class="nav-btn" bindtap="onBrowseNext">下一题 ›</text>
+      </view>
+    </view>
+  </view>
+</view>

@@ -54,10 +54,16 @@ miniprogram/
 ├── data/               # 本地数据（.js 模块，小程序 require 不支持 .json）
 │   ├── categories.js   # 8 大分类
 │   ├── articles.js     # 文章示例数据
-│   └── quotes.js       # 每日一句
+│   ├── quotes.js       # 每日一句
+│   └── match-index.js  # 条目级精简索引（脚本生成，供匹配引擎用）
+├── pagesB/             # 分包：个性化洞察
+│   ├── survey/         # 智能调研问卷
+│   └── survey-result/  # 调研结果
 ├── utils/              # 工具函数
 │   ├── util.js         # 通用工具
-│   └── data.js         # 数据读取与查询
+│   ├── data.js         # 数据读取与查询
+│   ├── match.js        # 个性化匹配引擎（问卷题目 + 打分 + 存档）
+│   └── daily.js        # 日更数据聚合
 └── assets/
     ├── icons/          # tabBar、界面与分类图标（脚本生成，见 gen_icons.py）
     └── images/         # 启动页、每日一读、头像与 24 张文章封面（本地 JPEG）
@@ -70,7 +76,9 @@ docs/                   # 文档配图：小程序码 + 界面截图（packOptio
 | 页面   | 路径                                       | 说明                  |
 | ---- | ---------------------------------------- | ------------------- |
 | 启动页  | `pages/index/index`                      | 全屏背景 + 手写体标语 + 开始探索 |
-| 首页   | `pages/home/home`                        | 分类网格、即时搜索、推荐语录卡     |
+| 首页   | `pages/home/home`                        | 调研入口、即时搜索、分类宫格、今日更新   |
+| 智能调研 | `pagesB/survey/survey`                   | 5 题问卷：方向 → 现状 → 原因 → 时间 → 期待 |
+| 调研结果 | `pagesB/survey-result/survey-result`     | 1 条首选建议 + 3 条其他建议，可跳原文定位  |
 | 分类   | `pages/classify/classify`                | 分类下划线标签 + 文章列表      |
 | 分类详情 | `pagesA/category-detail/category-detail` | 子分类标签 + 文章列表        |
 | 文章详情 | `pagesA/article/article`                 | 封面、正文、步骤、收藏、分享      |

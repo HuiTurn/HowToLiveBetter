@@ -20,12 +20,20 @@
         "about/about",
         "webview/webview"
       ]
+    },
+    {
+      "root": "pagesB",
+      "name": "insight",
+      "pages": [
+        "survey/survey",
+        "survey-result/survey-result"
+      ]
     }
   ],
   "preloadRule": {
     "pages/home/home": {
       "network": "all",
-      "packages": ["content"]
+      "packages": ["content", "insight"]
     }
   },
   "window": {

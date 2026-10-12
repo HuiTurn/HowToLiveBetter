@@ -2,6 +2,15 @@
   <custom-nav title="人生指南库" align="left" bg-color="var(--color-bg, #f6f7f6)" text-color="var(--color-text, #22262b)" shadow="{{false}}" />
 
   <view class="home-content">
+    <!-- 顶部状态行：今日更新 + 累计条数 -->
+    <view class="status-row">
+      <view class="status-chip">
+        <text class="status-dot"></text>
+        <text class="status-chip-text">{{updateText}}</text>
+      </view>
+      <text class="status-total">累计 {{totalSteps}} 条建议</text>
+    </view>
+
     <!-- 搜索框 -->
     <view class="search-bar">
       <view class="search-input-wrap">
@@ -9,7 +18,7 @@
         <input
           class="search-input"
           type="text"
-          placeholder="搜索你关心的生活问题..."
+          placeholder="搜索你关心的人生问题…"
           value="{{searchKeyword}}"
           bindinput="onSearchInput"
           bindconfirm="onSearchConfirm"
@@ -45,35 +54,76 @@
       </view>
     </view>
 
-    <!-- 分类网格 -->
-    <view wx:if="{{!searching}}" class="category-grid">
-      <view
-        wx:for="{{categories}}"
-        wx:key="id"
-        class="category-item"
-        hover-class="hover-press"
-        bindtap="onCategoryTap"
-        data-id="{{item.id}}"
-      >
-        <view class="category-icon" style="background: {{item.bgColor}};">
-          <image class="category-glyph" src="/assets/icons/glyph-{{item.id}}.png" mode="aspectFit" />
+    <block wx:if="{{!searching}}">
+      <!-- 调研入口 hero -->
+      <view class="hero-card" hover-class="hover-press" bindtap="onStartSurvey">
+        <view class="hero-body">
+          <text class="hero-title">适合我的建议</text>
+          <text class="hero-desc">回答几个问题，找到当下最适合你的建议</text>
+          <view class="hero-action">
+            <text class="hero-action-text">{{hasProfile ? '重新调研' : '开始调研'}}</text>
+            <text class="hero-action-arrow">→</text>
+          </view>
         </view>
-        <view class="category-info">
-          <text class="category-name">{{item.name}}</text>
-          <text class="category-desc">{{item.shortDesc}}</text>
-        </view>
+        <image class="hero-art" src="/assets/images/hero/survey-guide.png" mode="aspectFit" />
       </view>
-    </view>
 
-    <!-- 语录卡片 -->
-    <view wx:if="{{!searching}}" class="quote-card" hover-class="hover-press" bindtap="onDailyRead">
-      <image class="quote-bg" src="/assets/images/quote-card.jpg" mode="aspectFill" />
-      <view class="quote-mask"></view>
-      <view class="quote-body">
-        <text class="quote-title">更好的生活</text>
-        <text class="quote-title">是由一个个小的选择组成的。</text>
-        <text class="quote-author-line">—— 人生指南库</text>
+      <!-- 探索分类 -->
+      <view class="section">
+        <view class="section-head">
+          <text class="section-title">探索分类</text>
+          <text class="section-more" bindtap="onAllCategories">全部 ›</text>
+        </view>
+        <view class="tile-grid">
+          <view
+            wx:for="{{categories}}"
+            wx:key="id"
+            class="tile-item"
+            hover-class="hover-press"
+            bindtap="onCategoryTap"
+            data-id="{{item.id}}"
+          >
+            <view class="tile-icon" style="background: {{item.bgColor}};">
+              <image class="tile-glyph" src="/assets/icons/glyph-{{item.id}}.png" mode="aspectFit" />
+            </view>
+            <text class="tile-name">{{item.name}}</text>
+          </view>
+        </view>
       </view>
-    </view>
+
+      <!-- 今日更新 -->
+      <view class="section">
+        <view class="section-head">
+          <text class="section-title">今日更新</text>
+          <text class="section-more" bindtap="onDailyRead">查看全部 ›</text>
+        </view>
+        <text class="section-sub">{{updateSubText}}</text>
+        <view wx:if="{{latest.length > 0}}" class="update-list">
+          <view
+            wx:for="{{latest}}"
+            wx:key="key"
+            class="update-item"
+            hover-class="hover-press"
+            bindtap="onArticleTap"
+            data-id="{{item.aid}}"
+            data-step="{{item.index}}"
+          >
+            <image class="update-cover" src="{{item.cover}}" mode="aspectFill" />
+            <view class="update-main">
+              <view class="update-title-row">
+                <text class="update-tag {{item.isNew ? '' : 'update'}}">{{item.isNew ? '新增' : '更新'}}</text>
+                <text class="update-title">{{item.title}}</text>
+              </view>
+              <text class="update-brief">{{item.brief}}</text>
+              <text class="update-meta">{{item.categoryName}} · {{item.minutes}} 分钟阅读</text>
+            </view>
+            <text class="update-arrow">›</text>
+          </view>
+        </view>
+        <view wx:else class="update-empty">
+          <text class="update-empty-text">今天还没有内容更新</text>
+        </view>
+      </view>
+    </block>
   </view>
 </view>
