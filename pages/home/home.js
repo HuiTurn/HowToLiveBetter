@@ -63,9 +63,12 @@ Page({
       ? `${md(summary.today)} · ${summary.todayCount} 条新建议`
       : `最近更新 ${md(summary.latestDate)} · ${summary.latestCount} 条`;
 
+    /* 列表条数与文案数字保持一致：今日更新几篇就列几篇（各取首条预览），避免“说 5 条只显 3 条” */
+    const shownCount = summary.todayCount > 0 ? summary.todayCount : summary.latestCount;
+
     this.setData({
       summary,
-      latest: daily.getLatestSteps(3, 1),
+      latest: daily.getLatestSteps(shownCount, 1),
       updateText,
       updateSubText,
       latestDayText: md(summary.latestDate)

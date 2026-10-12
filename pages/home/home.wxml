@@ -95,7 +95,7 @@
       <view class="section">
         <view class="section-head">
           <text class="section-title">今日更新</text>
-          <text class="section-more" bindtap="onDailyRead">查看全部 ›</text>
+          <text class="section-more" bindtap="onDailyRead">每日一读 ›</text>
         </view>
         <text class="section-sub">{{updateSubText}}</text>
         <view wx:if="{{latest.length > 0}}" class="update-list">
